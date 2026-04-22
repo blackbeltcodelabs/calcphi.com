@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" data-region="IN">
+<head>
+<!-- GA -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94D5DND9LS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-94D5DND9LS");</script>
+<meta name="google-site-verification" content="EOSYQ9kWEpTvsQah9Do3mUA54q-1oFvyKwXG3zERx3k">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Loan Eligibility Calculator India 2026 – How Much Can I Get?</title>
+<meta name="description" content="Calculate your home loan eligibility based on salary, existing EMIs, and age. Find the maximum home loan amount you can get from SBI, HDFC, ICICI, and other Indian banks.">
+<meta name="keywords" content="home loan eligibility calculator India 2026, how much home loan can I get, home loan eligibility based on salary, maximum home loan calculator India">
+<link rel="canonical" href="https://calcphi.com/in/home-loan-eligibility.html">
+<link rel="alternate" hreflang="en-IN" href="https://calcphi.com/in/home-loan-eligibility.html">
+<link rel="alternate" hreflang="x-default" href="https://calcphi.com/in/home-loan-eligibility.html">
+<meta property="og:title" content="Home Loan Eligibility Calculator India 2026">
+<meta property="og:description" content="Calculate your home loan eligibility based on salary, existing EMIs, and age. Find the maximum home loan amount you can get from SBI, HDFC, ICICI, and other Indian banks.">
+<meta property="og:image" content="https://calcphi.com/og-image.jpg">
+<meta property="og:url" content="https://calcphi.com/in/home-loan-eligibility.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcPhi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Home Loan Eligibility Calculator India 2026">
+<meta name="twitter:description" content="Calculate your home loan eligibility based on salary, existing EMIs, and age. Find the maximum home loan amount you can get from SBI, HDFC, ICICI, and other Indian banks.">
+<meta name="twitter:image" content="https://calcphi.com/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/shared.js" defer></script>
+</head>
+<body>
+<nav><div class="nav-inner"><a href="index.html" class="nav-logo">Calc<span>Phi</span></a><div class="nav-links"><a href="index.html" class="nav-home">⌂ All Calculators</a><a href="sip-main.html">SIP</a><a href="emi-calculator.html">EMI</a><a href="income-tax.html">Tax</a><a href="in-hand-salary.html">Salary</a><a href="gst-calculator.html">GST</a><a href="fire-calculator.html">FIRE</a></div></div></nav>
+<div class="wrapper">
+<header>
+  <div class="badge">Home Loan · Bank Eligibility · 2026 Rates</div>
+  <h1>Home Loan Eligibility Calculator —<br><em>How Much Can You Borrow?</em></h1>
+  <p class="subtitle">Banks use FOIR (Fixed Obligation to Income Ratio) to determine home loan eligibility. Enter your income and existing EMIs to see the maximum loan amount you qualify for at current rates.</p>
+</header>
+<div class="info-banner">Banks allow EMI up to 40-50% of monthly income (FOIR). Maximum loan tenure is 30 years or until age 70 (whichever is earlier). Higher credit score = higher eligibility + lower rate.</div>
+
+<div class="main-grid">
+  <div class="card"><div class="card-title">Your Income Details</div>
+    <div class="field"><div class="field-header"><span class="field-label">Net Monthly Income (Take-Home)</span><div class="field-value">₹<span id="val-inc">80,000</span></div></div>
+    <input type="range" id="income" min="15000" max="1000000" step="5000" value="80000"><div class="range-labels"><span>₹15K</span><span>₹10L</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">Existing Monthly EMIs (All Loans)</span><div class="field-value">₹<span id="val-emi">0</span></div></div>
+    <input type="range" id="existing-emi" min="0" max="200000" step="1000" value="0"><div class="range-labels"><span>₹0</span><span>₹2L</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">Home Loan Interest Rate</span><div class="field-value"><span id="val-rate">8.5</span><span>% p.a.</span></div></div>
+    <input type="range" id="rate" min="7" max="14" step="0.05" value="8.5"><div class="range-labels"><span>7%</span><span>14%</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">Loan Tenure</span><div class="field-value"><span id="val-ten">20</span><span> years</span></div></div>
+    <input type="range" id="tenure" min="5" max="30" step="1" value="20"><div class="range-labels"><span>5 yrs</span><span>30 yrs</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">Current Age</span><div class="field-value"><span id="val-age">32</span><span> years</span></div></div>
+    <input type="range" id="age" min="21" max="60" step="1" value="32"><div class="range-labels"><span>21</span><span>60</span></div></div>
+  </div>
+  <div class="results-card">
+    <div class="corpus-display"><div class="corpus-label">Maximum Home Loan Eligibility</div><div class="corpus-amount" id="max-loan">₹0</div><div class="corpus-sub" id="loan-sub">at 8.5% for 20 years</div></div>
+    <div class="stats-row">
+      <div class="stat-box"><div class="stat-box-label">Max Monthly EMI</div><div class="stat-box-value green" id="max-emi">₹0</div></div>
+      <div class="stat-box"><div class="stat-box-label">FOIR Used</div><div class="stat-box-value gold" id="foir-used">0%</div></div>
+      <div class="stat-box"><div class="stat-box-label">Property Value (80% LTV)</div><div class="stat-box-value blue" id="prop-val">₹0</div></div>
+      <div class="stat-box"><div class="stat-box-label">Max Tenure</div><div class="stat-box-value" id="max-ten">0 yrs</div></div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;margin-top:12px;">
+      <div style="font-size:12px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-bottom:10px;">Bank-wise Eligibility Estimate</div>
+      <div style="display:flex;justify-content:space-between;font-size:13px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05)"><span style="color:var(--soft)">Conservative (40% FOIR)</span><span id="conservative" style="color:var(--accent2)">₹0</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:13px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05)"><span style="color:var(--soft)">Standard (45% FOIR)</span><span id="standard" style="color:var(--accent)">₹0</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:13px;padding:5px 0"><span style="color:var(--soft)">Aggressive (50% FOIR)</span><span id="aggressive" style="color:var(--gold)">₹0</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="faq-section"><h2 class="faq-heading">Home Loan Eligibility — Key Questions</h2>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do banks calculate home loan eligibility?<span class="arrow">+</span></div>
+<div class="faq-a">Banks use FOIR (Fixed Obligation to Income Ratio) — they allow total EMIs (existing + new home loan EMI) to be 40–50% of your net monthly income. For example, if you earn ₹1 lakh/month and have no existing EMIs, maximum new EMI = ₹40,000–₹50,000. At 8.5% for 20 years, ₹40,000 EMI qualifies for approximately ₹41 lakhs loan. Your credit score, employment type, and age also factor into eligibility.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What credit score is needed for home loan?<span class="arrow">+</span></div>
+<div class="faq-a">Most banks require a CIBIL score of 750+ for best home loan rates. Score 750–800: Eligible at standard rates. Score 700–750: May get approved with slightly higher rate. Score below 700: Difficult to get approval; work on improving score first. Higher score typically means lower interest rate — even 0.25% rate difference on ₹50L loan saves ₹1.5L over 20 years. Check your free CIBIL report annually.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I add a co-applicant to increase eligibility?<span class="arrow">+</span></div>
+<div class="faq-a">Yes. Adding a co-applicant (spouse, parent, sibling) whose income is also considered can significantly increase your home loan eligibility. If you earn ₹80K/month and spouse earns ₹60K/month, combined eligibility is based on ₹1.4L/month income. Both applicants share repayment responsibility. Female co-applicants also get a 0.05% rate concession from most banks.</div></div>
+</div>
+
+<script>
+function calcLoan(income, existEMI, r, yrs, foir){
+  const mr=r/100/12, n=yrs*12;
+  const maxNewEMI=income*foir-existEMI;
+  if(maxNewEMI<=0) return 0;
+  return maxNewEMI*(Math.pow(1+mr,n)-1)/(mr*Math.pow(1+mr,n));
+}
+function calculate(){
+  const income=+document.getElementById('income').value;
+  const existEMI=+document.getElementById('existing-emi').value;
+  const rate=+document.getElementById('rate').value;
+  const tenure=+document.getElementById('tenure').value;
+  const age=+document.getElementById('age').value;
+  document.getElementById('val-inc').textContent=income.toLocaleString('en-IN');
+  document.getElementById('val-emi').textContent=existEMI.toLocaleString('en-IN');
+  document.getElementById('val-rate').textContent=rate.toFixed(2);
+  document.getElementById('val-ten').textContent=tenure;
+  document.getElementById('val-age').textContent=age;
+  const maxTen=Math.min(tenure,70-age);
+  const stdLoan=calcLoan(income,existEMI,rate,maxTen,0.45);
+  const consLoan=calcLoan(income,existEMI,rate,maxTen,0.40);
+  const aggLoan=calcLoan(income,existEMI,rate,maxTen,0.50);
+  const maxEMI=income*0.45-existEMI;
+  const foirUsed=((existEMI+maxEMI)/income*100);
+  document.getElementById('max-loan').textContent=formatINR(stdLoan);
+  document.getElementById('loan-sub').textContent='at '+rate+'% for '+maxTen+' years';
+  document.getElementById('max-emi').textContent=formatINR(Math.max(0,maxEMI));
+  document.getElementById('foir-used').textContent=foirUsed.toFixed(0)+'%';
+  document.getElementById('prop-val').textContent=formatINR(stdLoan/0.80);
+  document.getElementById('max-ten').textContent=maxTen+' yrs';
+  document.getElementById('conservative').textContent=formatINR(consLoan);
+  document.getElementById('standard').textContent=formatINR(stdLoan);
+  document.getElementById('aggressive').textContent=formatINR(aggLoan);
+}
+['income','existing-emi','rate','tenure','age'].forEach(id=>document.getElementById(id).addEventListener('input',calculate));
+document.addEventListener('DOMContentLoaded',calculate);
+</script>
+</div>
+<footer><div class="footer-brand">Black Belt Code Labs</div><p>Results are indicative estimates only. Consult a qualified financial advisor before making investment decisions.</p><p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p></footer>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do banks calculate home loan eligibility?","acceptedAnswer":{"@type":"Answer","text":"Banks use FOIR — total EMIs including new home loan EMI should not exceed 40-50% of net monthly income."}},{"@type":"Question","name":"What credit score is needed for home loan?","acceptedAnswer":{"@type":"Answer","text":"Most banks require CIBIL 750+ for best rates. Below 700 makes approval difficult."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/"},{"@type":"ListItem","position":2,"name":"India","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":3,"name":"Home Loan Eligibility Calculator India 2026","item":"https://calcphi.com/in/home-loan-eligibility.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Home Loan Eligibility Calculator India 2026","url":"https://calcphi.com/in/home-loan-eligibility.html","description":"Calculate your home loan eligibility based on salary, existing EMIs, and age. Find the maximum home loan amount you can get from SBI, HDFC, ICICI, and other Indian banks.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+</body>
+</html>

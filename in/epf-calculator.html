@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-region="IN">
+<head>
+<!-- GA -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94D5DND9LS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-94D5DND9LS");</script>
+<meta name="google-site-verification" content="EOSYQ9kWEpTvsQah9Do3mUA54q-1oFvyKwXG3zERx3k">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EPF Calculator India 2026 – PF Balance & Maturity Calculator</title>
+<meta name="description" content="Calculate your EPF balance at retirement. See employer + employee PF contribution, interest earned, and total corpus at any tenure. Free EPF maturity calculator India.">
+<meta name="keywords" content="EPF calculator India 2026, PF balance calculator, EPF maturity calculator, employee provident fund calculator, EPF corpus calculator India">
+<link rel="canonical" href="https://calcphi.com/in/epf-calculator.html">
+<link rel="alternate" hreflang="en-IN" href="https://calcphi.com/in/epf-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://calcphi.com/in/epf-calculator.html">
+<meta property="og:title" content="EPF Calculator India 2026">
+<meta property="og:description" content="Calculate your EPF balance at retirement. See employer + employee PF contribution, interest earned, and total corpus at any tenure. Free EPF maturity calculator India.">
+<meta property="og:image" content="https://calcphi.com/og-image.jpg">
+<meta property="og:url" content="https://calcphi.com/in/epf-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcPhi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="EPF Calculator India 2026">
+<meta name="twitter:description" content="Calculate your EPF balance at retirement. See employer + employee PF contribution, interest earned, and total corpus at any tenure. Free EPF maturity calculator India.">
+<meta name="twitter:image" content="https://calcphi.com/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/shared.js" defer></script>
+</head>
+<body>
+<nav><div class="nav-inner"><a href="index.html" class="nav-logo">Calc<span>Phi</span></a><div class="nav-links"><a href="index.html" class="nav-home">⌂ All Calculators</a><a href="sip-main.html">SIP</a><a href="emi-calculator.html">EMI</a><a href="income-tax.html">Tax</a><a href="in-hand-salary.html">Salary</a><a href="gst-calculator.html">GST</a><a href="fire-calculator.html">FIRE</a></div></div></nav>
+<div class="wrapper">
+<header>
+  <div class="badge">Retirement · EPF · 8.15% Tax-Free</div>
+  <h1>EPF Calculator 2026 —<br><em>Your PF Corpus at Retirement</em></h1></h1>
+  <p class="subtitle">Calculate your Employee Provident Fund balance at retirement. See exactly how much your mandatory 12% PF contribution + employer's contribution grows to over your career.</p>
+</header>
+<div class="info-banner">EPF earns 8.15% annual interest (FY 2025-26), fully tax-free. Employee contributes 12% of basic+DA, employer contributes 12% (3.67% EPF + 8.33% EPS). EPS capped at ₹15,000 basic.</div>
+<div class="main-grid">
+  <div class="card"><div class="card-title">Your PF Details</div>
+    <div class="field"><div class="field-header"><span class="field-label">Current Monthly Basic + DA</span><div class="field-value">₹<span id="val-sal">30,000</span></div></div>
+    <input type="range" id="salary" min="5000" max="200000" step="1000" value="30000"><div class="range-labels"><span>₹5K</span><span>₹2L</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">Annual Salary Growth</span><div class="field-value"><span id="val-growth">8</span><span>% p.a.</span></div></div>
+    <input type="range" id="growth" min="0" max="20" step="1" value="8"><div class="range-labels"><span>0%</span><span>20%</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">Years to Retirement</span><div class="field-value"><span id="val-yrs">25</span><span> years</span></div></div>
+    <input type="range" id="years" min="1" max="35" step="1" value="25"><div class="range-labels"><span>1 yr</span><span>35 yrs</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">Current EPF Balance</span><div class="field-value">₹<span id="val-curr">0</span></div></div>
+    <input type="range" id="current" min="0" max="5000000" step="10000" value="0"><div class="range-labels"><span>₹0</span><span>₹50L</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">EPF Interest Rate</span><div class="field-value"><span id="val-int">8.15</span><span>% p.a.</span></div></div>
+    <input type="range" id="intrate" min="7" max="10" step="0.05" value="8.15"><div class="range-labels"><span>7%</span><span>10%</span></div></div>
+  </div>
+  <div class="results-card">
+    <div class="corpus-display"><div class="corpus-label">EPF Corpus at Retirement</div><div class="corpus-amount" id="corpus">₹0</div><div class="corpus-sub">at <span id="d-yrs">25</span> years</div></div>
+    <div class="stats-row">
+      <div class="stat-box"><div class="stat-box-label">Total Contribution</div><div class="stat-box-value blue" id="st-contrib">₹0</div></div>
+      <div class="stat-box"><div class="stat-box-label">Interest Earned</div><div class="stat-box-value green" id="st-int">₹0</div></div>
+      <div class="stat-box"><div class="stat-box-label">Employee Share</div><div class="stat-box-value gold" id="st-emp">₹0</div></div>
+      <div class="stat-box"><div class="stat-box-label">Employer Share</div><div class="stat-box-value" id="st-er">₹0</div></div>
+    </div>
+  </div>
+</div>
+<div class="card mb-20"><div class="card-title">Year-by-Year EPF Growth</div>
+  <div class="table-wrap"><table><thead><tr><th>Year</th><th>Basic Salary (₹)</th><th>Annual Contribution (₹)</th><th>EPF Balance (₹)</th></tr></thead><tbody id="epf-tbl"></tbody></table></div>
+</div>
+<div class="faq-section"><h2 class="faq-heading">EPF — Key Questions</h2>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the current EPF interest rate?<span class="arrow">+</span></div>
+<div class="faq-a">The EPF interest rate for FY 2025-26 is 8.15% per annum, declared by the EPFO board and approved by the Ministry of Finance. This rate is fully tax-free and compounds annually. Historically the rate has ranged from 8.1% to 8.75% over the last decade, making it one of the best guaranteed tax-free returns available to Indian salaried employees.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How is EPF contribution calculated?<span class="arrow">+</span></div>
+<div class="faq-a">Employee contribution: 12% of Basic Salary + DA per month. Employer contribution: 12% of Basic Salary + DA — of which 3.67% goes to EPF and 8.33% goes to EPS (Employee Pension Scheme). EPS contribution is capped at ₹1,250/month (8.33% of ₹15,000 ceiling). If Basic+DA exceeds ₹15,000, EPS contribution stays at ₹1,250 while EPF contribution continues on actual salary.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I withdraw EPF before retirement?<span class="arrow">+</span></div>
+<div class="faq-a">Yes, with conditions: Full withdrawal allowed on retirement (age 58), resignation with 2+ months unemployment, or permanent departure from India. Partial withdrawal allowed for: marriage (50% of employee share after 7 years), medical emergency (up to 6 months wages), home purchase/construction (up to 90% after 5 years), education (50% after 7 years). Withdrawals before 5 years of service attract TDS and lose tax exemption.</div></div>
+</div>
+<script>
+let myChart=null;
+function calculate(){
+  const sal=+document.getElementById('salary').value;
+  const growth=+document.getElementById('growth').value/100;
+  const yrs=+document.getElementById('years').value;
+  const curr=+document.getElementById('current').value;
+  const ir=+document.getElementById('intrate').value/100;
+  document.getElementById('val-sal').textContent=sal.toLocaleString('en-IN');
+  document.getElementById('val-growth').textContent=+document.getElementById('growth').value;
+  document.getElementById('val-yrs').textContent=yrs;
+  document.getElementById('d-yrs').textContent=yrs;
+  document.getElementById('val-curr').textContent=curr.toLocaleString('en-IN');
+  document.getElementById('val-int').textContent=+document.getElementById('intrate').value;
+  let balance=curr, empTotal=0, erTotal=0, contribTotal=0;
+  const rows=[];
+  for(let y=1;y<=yrs;y++){
+    const s=sal*Math.pow(1+growth,y-1);
+    const empC=s*0.12*12;
+    const erC=s*0.0367*12;
+    const annual=empC+erC;
+    empTotal+=empC; erTotal+=erC; contribTotal+=annual;
+    balance=(balance+annual)*(1+ir);
+    rows.push('<tr><td>Year '+y+'</td><td>₹'+formatNum(s)+'</td><td>₹'+formatNum(annual)+'</td><td>₹'+formatNum(balance)+'</td></tr>');
+  }
+  const interest=balance-contribTotal-curr;
+  document.getElementById('corpus').textContent=formatINR(balance);
+  document.getElementById('st-contrib').textContent=formatINR(contribTotal);
+  document.getElementById('st-int').textContent=formatINR(interest);
+  document.getElementById('st-emp').textContent=formatINR(empTotal);
+  document.getElementById('st-er').textContent=formatINR(erTotal);
+  document.getElementById('epf-tbl').innerHTML=rows.join('');
+}
+['salary','growth','years','current','intrate'].forEach(id=>document.getElementById(id).addEventListener('input',calculate));
+document.addEventListener('DOMContentLoaded',calculate);
+</script>
+</div>
+<footer><div class="footer-brand">Black Belt Code Labs</div><p>Results are indicative estimates only. Consult a qualified financial advisor before making investment decisions.</p><p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p></footer>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the current EPF interest rate?","acceptedAnswer":{"@type":"Answer","text":"The EPF interest rate for FY 2025-26 is 8.15% per annum, fully tax-free, declared by the EPFO board."}},{"@type":"Question","name":"How is EPF contribution calculated?","acceptedAnswer":{"@type":"Answer","text":"Employee: 12% of Basic+DA. Employer: 3.67% to EPF + 8.33% to EPS (capped at ₹1,250/month)."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/"},{"@type":"ListItem","position":2,"name":"India","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":3,"name":"EPF Calculator India 2026","item":"https://calcphi.com/in/epf-calculator.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"EPF Calculator India 2026","url":"https://calcphi.com/in/epf-calculator.html","description":"Calculate your EPF balance at retirement. See employer + employee PF contribution, interest earned, and total corpus at any tenure. Free EPF maturity calculator India.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-region="IN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94D5DND9LS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag("js", new Date());
+  gtag("config", "G-94D5DND9LS", {{ page_title: document.title, page_location: window.location.href }});
+</script>
+<meta name="google-site-verification" content="EOSYQ9kWEpTvsQah9Do3mUA54q-1oFvyKwXG3zERx3k">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mutual Fund Returns Calculator 2026 – CAGR | CalcPhi</title>
+<meta name="description" content="Calculate your mutual fund investment returns. Enter NAV, investment amount and duration to find CAGR, absolute return and current value.">
+<meta name="keywords" content="mutual fund returns calculator India 2026, mutual fund CAGR calculator, mutual fund profit calculator, NAV calculator India">
+<link rel="canonical" href="https://calcphi.com/in/mutual-fund-returns.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/shared.js" defer></script>
+<meta property="og:title" content="Mutual Fund Returns Calculator 2026 – CAGR">
+<meta property="og:description" content="Calculate CAGR and absolute returns from mutual fund NAV values. Enter buy and current NAV for instant results.">
+<meta property="og:image" content="https://calcphi.com/og-image.jpg">
+<meta property="og:url" content="https://calcphi.com/in/mutual-fund-returns.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcPhi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mutual Fund Returns Calculator 2026 – CAGR">
+<meta name="twitter:description" content="Calculate CAGR and absolute returns from mutual fund NAV values. Enter buy and current NAV for instant results.">
+<meta name="twitter:image" content="https://calcphi.com/og-image.jpg">
+<meta name="twitter:site" content="@calcphi">
+<link rel="alternate" hreflang="en-IN" href="https://calcphi.com/in/mutual-fund-returns.html">
+<link rel="alternate" hreflang="x-default" href="https://calcphi.com/in/mutual-fund-returns.html">
+</head>
+<body>
+<nav><div class="nav-inner"><a href="index.html" class="nav-logo">Calc<span>Phi</span></a><div class="nav-links">
+      <a href="index.html" class="nav-home">⌂ All Calculators</a>
+      <a href="sip-main.html">SIP</a>
+      <a href="target-sip.html">Target SIP</a>
+      <a href="1-crore-sip.html">1 Cr SIP</a>
+      <a href="emi-calculator.html">EMI</a>
+      <a href="income-tax.html">Tax</a>
+      <a href="fire-calculator.html">FIRE</a>
+    </div></div></nav>
+<div class="wrapper">
+<header>
+  <div class="badge">NAV Based · CAGR · Absolute Returns</div>
+  <h1>Mutual Fund Returns Calculator —<br><em>Know Your Actual Profit</em></h1>
+  <p class="subtitle">Enter the NAV when you invested and the current NAV to instantly calculate your CAGR, absolute return, and total profit on any mutual fund.</p>
+</header>
+<div class="info-banner">Works for lumpsum and SIP. For SIP, use the average purchase NAV or use our <a href="index.html" style="color:var(--accent)">SIP calculator</a> for projected returns.</div>
+<div class="main-grid">
+  <div class="card"><div class="card-title">Your Investment Details</div>
+    <div class="field"><div class="field-header"><span class="field-label">Investment Amount</span><div class="field-value">₹<span id="val-amt">1,00,000</span></div></div>
+    <input type="range" id="amt" min="1000" max="10000000" step="1000" value="100000"><div class="range-labels"><span>₹1K</span><span>₹1 Cr</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">Purchase NAV (₹)</span><div class="field-value">₹<span id="val-nav-buy">25</span></div></div>
+    <input type="range" id="nav-buy" min="1" max="1000" step="1" value="25"><div class="range-labels"><span>₹1</span><span>₹1000</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">Current NAV (₹)</span><div class="field-value">₹<span id="val-nav-now">45</span></div></div>
+    <input type="range" id="nav-now" min="1" max="2000" step="1" value="45"><div class="range-labels"><span>₹1</span><span>₹2000</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">Holding Period</span><div class="field-value"><span id="val-years">5</span><span> yrs</span></div></div>
+    <input type="range" id="years" min="1" max="30" step="1" value="5"><div class="range-labels"><span>1 yr</span><span>30 yrs</span></div></div>
+  </div>
+  <div class="results-card">
+    <div class="corpus-display"><div class="corpus-label">Current Value of Investment</div><div class="corpus-amount" id="total-corpus">₹0</div><div class="corpus-sub">based on NAV appreciation</div></div>
+    <div class="stats-row">
+      <div class="stat-box"><div class="stat-box-label">Units Held</div><div class="stat-box-value blue" id="units-held">0</div></div>
+      <div class="stat-box"><div class="stat-box-label">Profit / Loss</div><div class="stat-box-value green" id="profit">₹0</div></div>
+      <div class="stat-box"><div class="stat-box-label">CAGR</div><div class="stat-box-value gold" id="cagr">0%</div></div>
+      <div class="stat-box"><div class="stat-box-label">Absolute Return</div><div class="stat-box-value green" id="abs-return">0%</div></div>
+    </div>
+    <div class="progress-section">
+      <div class="progress-header"><span>Invested vs Returns</span><span id="returns-pct">0%</span></div>
+      <div class="progress-bar-bg"><div class="progress-bar-fill" id="progress-fill" style="width:50%"></div></div>
+      <div class="progress-legend"><span><span class="legend-dot" style="background:var(--accent2)"></span>Invested</span><span><span class="legend-dot" style="background:var(--accent)"></span>Returns</span></div>
+    </div>
+  </div>
+</div>
+<div class="chart-section">
+  <div class="chart-header"><div class="chart-title">NAV Growth Projection (at current CAGR)</div></div>
+  <div class="chart-wrap"><canvas id="growthChart"></canvas></div>
+</div>
+<div class="faq-section">
+  <h2 class="faq-heading">Mutual Fund Returns — How to Calculate & Interpret</h2>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is NAV in mutual funds?<span class="arrow">+</span></div>
+  <div class="faq-a">NAV (Net Asset Value) is the per-unit market value of a mutual fund. It is calculated as: NAV = (Total Fund Assets – Liabilities) ÷ Total Units Outstanding. NAV is published daily by AMCs after market close. When you invest ₹10,000 in a fund at NAV ₹25, you get 400 units. When the NAV rises to ₹45, your investment is worth 400 × ₹45 = ₹18,000. NAV changes daily based on the market value of the fund's underlying securities.</div></div>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is CAGR vs absolute return?<span class="arrow">+</span></div>
+  <div class="faq-a">Absolute Return measures total percentage gain without accounting for time: (Current Value – Invested Amount) ÷ Invested Amount × 100. A 50% absolute return over 1 year is excellent; over 10 years it's poor. CAGR (Compound Annual Growth Rate) normalises returns per year: CAGR = [(Current Value ÷ Invested Amount)^(1/years) – 1] × 100. Always compare mutual funds by CAGR for any period over 1 year. CAGR above 12% over 5+ years in India is considered excellent for equity funds.</div></div>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is a good CAGR for Indian mutual funds?<span class="arrow">+</span></div>
+  <div class="faq-a">Benchmark expectations for Indian mutual funds over 5+ years: Large-cap funds: 10–13% CAGR. Mid-cap funds: 13–18% CAGR. Small-cap funds: 15–20% CAGR (high volatility). Flexi/multi-cap: 12–16% CAGR. Debt funds: 6–8% CAGR. Liquid/overnight funds: 5–6% CAGR. Compare against the relevant index benchmark (Nifty 50 for large-cap, Nifty Midcap 150 for mid-cap) to assess if the fund is adding alpha over passive investing.</div></div>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I check my mutual fund returns online?<span class="arrow">+</span></div>
+  <div class="faq-a">You can check your actual mutual fund returns through: (1) AMFI website (amfiindia.com) for current NAV of all funds. (2) Your AMC's app or website for account statement. (3) CAMS/KFintech portals for consolidated statement across all AMCs. (4) Your broker app (Zerodha, Groww, Paytm Money) for real-time portfolio value. (5) Annual Consolidated Account Statement (CAS) emailed by CDSL/NSDL. Use this calculator to understand what your returns mean in CAGR terms.</div></div>
+</div>
+</div><footer>
+  <div class="footer-brand">Black Belt Code Labs</div>
+  <p>Results are indicative estimates only. Consult a SEBI-registered financial advisor before making investment decisions.</p>
+  <p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p>
+</footer>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Mutual Fund Returns Calculator","url":"https://calcphi.com/mutual-fund-returns.html","description":"Calculate mutual fund CAGR, absolute return and current value from NAV.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+<script>
+let myChart=null;
+function calculate(){
+  const amt=+document.getElementById('amt').value,navBuy=+document.getElementById('nav-buy').value,navNow=+document.getElementById('nav-now').value,years=+document.getElementById('years').value;
+  document.getElementById('val-amt').textContent=amt.toLocaleString('en-IN');document.getElementById('val-nav-buy').textContent=navBuy;document.getElementById('val-nav-now').textContent=navNow;document.getElementById('val-years').textContent=years;
+  const units=amt/navBuy,currVal=units*navNow,profit=currVal-amt,absRet=(profit/amt)*100;
+  const cagr=(Math.pow(currVal/amt,1/years)-1)*100;
+  const retPct=(profit/currVal)*100;
+  document.getElementById('total-corpus').textContent=formatINR(currVal);document.getElementById('units-held').textContent=units.toFixed(3);document.getElementById('profit').textContent=formatINR(profit);document.getElementById('cagr').textContent=cagr.toFixed(2)+'%';document.getElementById('abs-return').textContent=absRet.toFixed(2)+'%';document.getElementById('returns-pct').textContent=retPct.toFixed(0)+'% gains';document.getElementById('progress-fill').style.width=Math.max(0,retPct).toFixed(1)+'%';
+  if(myChart)myChart.destroy();const ctx=document.getElementById('growthChart').getContext('2d');
+  const labels=[],yVals=[];const cagrD=cagr/100;
+  for(let yr=0;yr<=years+5;yr++){labels.push('Yr '+yr);yVals.push(Math.round(currVal*Math.pow(1+cagrD,yr-years)));}
+  const g=ctx.createLinearGradient(0,0,0,260);g.addColorStop(0,'rgba(34,211,165,0.35)');g.addColorStop(1,'rgba(34,211,165,0)');
+  myChart=makeAreaChart(ctx,labels,[{label:'Investment Value',data:yVals,borderColor:'rgba(34,211,165,0.9)',backgroundColor:g,borderWidth:2,fill:true,tension:0.4,pointRadius:0,pointHoverRadius:5}]);
+}
+['amt','nav-buy','nav-now','years'].forEach(id=>document.getElementById(id).addEventListener('input',calculate));
+document.addEventListener('DOMContentLoaded',calculate);
+</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":2,"name":"Mutual Fund Returns","item":"https://calcphi.com/in/mutual-fund-returns.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is mutual fund return calculated?","acceptedAnswer":{"@type":"Answer","text":"Mutual fund return is calculated using CAGR: CAGR = (Current NAV / Purchase NAV)^(1/Years) - 1. Absolute return is simply (Current NAV - Purchase NAV) / Purchase NAV × 100. Our calculator computes both instantly."}},{"@type":"Question","name":"What is a good mutual fund return in India?","acceptedAnswer":{"@type":"Answer","text":"Large-cap equity funds average 10-12% CAGR. Mid-cap funds 13-16%. Flexi-cap funds 11-14%. Debt funds 6-8%. Index funds tracking Nifty 50 have averaged approximately 12% CAGR over 20 years. Compare your fund to its benchmark index."}},{"@type":"Question","name":"How do I read my mutual fund CAGR?","acceptedAnswer":{"@type":"Answer","text":"CAGR of 12% means your investment grew at an equivalent steady rate of 12% per year. A fund showing 50% absolute return over 3 years = 14.5% CAGR. CAGR is the correct measure for comparing funds held over different periods."}}]}</script>
+</body></html>

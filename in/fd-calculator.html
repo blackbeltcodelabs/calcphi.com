@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-region="IN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94D5DND9LS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag("js", new Date());
+  gtag("config", "G-94D5DND9LS", {{ page_title: document.title, page_location: window.location.href }});
+</script>
+<meta name="google-site-verification" content="EOSYQ9kWEpTvsQah9Do3mUA54q-1oFvyKwXG3zERx3k">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FD Calculator 2026 – Fixed Deposit Returns India | CalcPhi</title>
+<meta name="description" content="Calculate Fixed Deposit maturity amount and interest for any bank. Compare FD returns across tenures with our free FD calculator India 2026.">
+<meta name="keywords" content="FD calculator, fixed deposit calculator India 2026, FD maturity calculator, bank FD interest calculator">
+<link rel="canonical" href="https://calcphi.com/in/fd-calculator.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/shared.js" defer></script>
+<meta property="og:title" content="FD Calculator 2026 – Fixed Deposit Returns India">
+<meta property="og:description" content="Calculate fixed deposit maturity with quarterly compounding. FD returns for SBI, HDFC, ICICI and all banks.">
+<meta property="og:image" content="https://calcphi.com/og-image.jpg">
+<meta property="og:url" content="https://calcphi.com/in/fd-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcPhi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FD Calculator 2026 – Fixed Deposit Returns India">
+<meta name="twitter:description" content="Calculate fixed deposit maturity with quarterly compounding. FD returns for SBI, HDFC, ICICI and all banks.">
+<meta name="twitter:image" content="https://calcphi.com/og-image.jpg">
+<meta name="twitter:site" content="@calcphi">
+<link rel="alternate" hreflang="en-IN" href="https://calcphi.com/in/fd-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://calcphi.com/in/fd-calculator.html">
+</head>
+<body><nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Calc<span>Phi</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-home">⌂ All Calculators</a>
+      <a href="sip-main.html">SIP</a>
+      <a href="target-sip.html">Target SIP</a>
+      <a href="1-crore-sip.html">1 Cr SIP</a>
+      <a href="emi-calculator.html">EMI</a>
+      <a href="income-tax.html">Tax</a>
+      <a href="fire-calculator.html">FIRE</a>
+    </div>
+  </div>
+</nav>
+<div class="wrapper">
+  <header>
+    <div class="badge">Fixed Deposit · Guaranteed Returns · Safe</div>
+    <h1>FD Calculator —<br><em>Know Your Maturity Amount</em></h1>
+    <p class="subtitle">Calculate exactly how much your Fixed Deposit will be worth at maturity. Compare simple and compound interest FDs across any bank or NBFC.</p>
+  </header>
+  <div class="info-banner">FD interest is compounded quarterly by most banks. The calculator shows both simple and compound interest for comparison.</div>
+  <div class="main-grid">
+    <div class="card">
+      <div class="card-title">FD Details</div>
+      <div class="field">
+        <div class="field-header"><span class="field-label">Principal Amount</span><div class="field-value">₹<span id="val-principal">1,00,000</span></div></div>
+        <input type="range" id="principal" min="1000" max="10000000" step="1000" value="100000">
+        <div class="range-labels"><span>₹1K</span><span>₹1 Cr</span></div>
+      </div>
+      <div class="field">
+        <div class="field-header"><span class="field-label">Annual Interest Rate</span><div class="field-value"><span id="val-rate">7</span><span>% p.a.</span></div></div>
+        <input type="range" id="rate" min="3" max="12" step="0.1" value="7">
+        <div class="range-labels"><span>3%</span><span>12%</span></div>
+      </div>
+      <div class="field">
+        <div class="field-header"><span class="field-label">Tenure</span><div class="field-value"><span id="val-years">5</span><span> yrs</span></div></div>
+        <input type="range" id="years" min="1" max="20" step="1" value="5">
+        <div class="range-labels"><span>1 yr</span><span>20 yrs</span></div>
+      </div>
+      <div class="field">
+        <div class="field-header"><span class="field-label">Compounding</span><div class="field-value"><span id="val-freq">Quarterly</span></div></div>
+        <input type="range" id="freq" min="1" max="4" step="1" value="3">
+        <div class="range-labels"><span>Annual</span><span>Monthly</span></div>
+      </div>
+    </div>
+    <div class="results-card">
+      <div class="corpus-display">
+        <div class="corpus-label">Maturity Amount</div>
+        <div class="corpus-amount" id="total-corpus">₹0</div>
+        <div class="corpus-sub">at end of tenure</div>
+      </div>
+      <div class="stats-row">
+        <div class="stat-box"><div class="stat-box-label">Principal</div><div class="stat-box-value blue" id="principal-disp">₹0</div></div>
+        <div class="stat-box"><div class="stat-box-label">Interest Earned</div><div class="stat-box-value green" id="interest-earned">₹0</div></div>
+        <div class="stat-box"><div class="stat-box-label">Effective Annual Rate</div><div class="stat-box-value gold" id="ear">0%</div></div>
+        <div class="stat-box"><div class="stat-box-label">Simple Interest Alt.</div><div class="stat-box-value" id="simple-int" style="color:var(--soft)">₹0</div></div>
+      </div>
+      <div class="progress-section">
+        <div class="progress-header"><span>Principal vs Interest</span><span id="int-pct">0%</span></div>
+        <div class="progress-bar-bg"><div class="progress-bar-fill" id="progress-fill" style="width:50%"></div></div>
+        <div class="progress-legend">
+          <span><span class="legend-dot" style="background:var(--accent2)"></span>Principal</span>
+          <span><span class="legend-dot" style="background:var(--accent)"></span>Interest</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="chart-section">
+    <div class="chart-header"><div class="chart-title">FD Growth Over Tenure</div>
+    <div class="chart-tabs">
+      <button class="chart-tab active" id="tab-area" onclick="switchChart('area')">Growth</button>
+      <button class="chart-tab" id="tab-bar" onclick="switchChart('bar')">Annual</button>
+    </div></div>
+    <div class="chart-wrap"><canvas id="growthChart"></canvas></div>
+  </div>
+  <div class="card mb-20">
+    <div class="card-title">Year-by-Year FD Growth</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Year</th><th>Opening Balance (₹)</th><th>Interest (₹)</th><th>Closing Balance (₹)</th></tr></thead>
+        <tbody id="year-table"></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="faq-section">
+    <h2 class="faq-heading">FD Calculator — Common Questions</h2>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How is FD interest calculated?<span class="arrow">+</span></div>
+    <div class="faq-a">FD interest is calculated using compound interest formula: A = P(1 + r/n)^(nt), where P is principal, r is annual rate, n is compounding frequency, and t is tenure. Most banks compound quarterly (n=4). A ₹1 lakh FD at 7% for 5 years compounded quarterly gives ₹1,41,478 — interest of ₹41,478. Simple interest on the same FD would give only ₹35,000 in interest.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Which banks offer the highest FD rates in 2026?<span class="arrow">+</span></div>
+    <div class="faq-a">Small Finance Banks (SFBs) like Unity SFB, Suryoday SFB, and ESAF SFB typically offer the highest FD rates (8–9% p.a.) in India. Senior citizens get an additional 0.25–0.5% over regular rates at most banks. Large PSU banks (SBI, PNB) offer 6.5–7.5%. NBFCs like Bajaj Finance offer competitive rates. Always verify current rates directly with the bank as they change frequently.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is FD interest taxable?<span class="arrow">+</span></div>
+    <div class="faq-a">Yes. FD interest is fully taxable as "Income from Other Sources" at your income tax slab rate. Banks deduct TDS at 10% if annual interest exceeds ₹40,000 (₹50,000 for senior citizens). If you are in the 30% tax bracket, a 7% FD effectively earns only 4.9% after tax — making it a poor real return after 6% inflation. Tax-saving FDs (5-year lock-in) offer Section 80C deduction on the principal but interest remains taxable.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the difference between cumulative and non-cumulative FD?<span class="arrow">+</span></div>
+    <div class="faq-a">In a Cumulative FD, interest is compounded and paid at maturity along with the principal — ideal for wealth creation. In a Non-Cumulative FD, interest is paid out periodically (monthly, quarterly, or annually) — suitable for generating regular income, especially for retirees. Cumulative FDs always generate more total interest than non-cumulative FDs due to compounding, but non-cumulative FDs provide liquidity through periodic interest payouts.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Should I invest in FD or mutual fund SIP?<span class="arrow">+</span></div>
+    <div class="faq-a">For a 1–3 year horizon with capital protection need: FD is better. For 5+ year horizon with inflation-beating growth goal: equity SIP is significantly better. A 7% FD after 30% tax and 6% inflation gives a real return of approximately -1.1% (you actually lose purchasing power). An equity SIP averaging 12% after tax gives approximately 5–6% real return. Most financial advisors recommend FD for emergency funds and short-term goals, and SIP for long-term wealth creation.</div></div>
+  </div>
+</div><footer>
+  <div class="footer-brand">Black Belt Code Labs</div>
+  <p>Results are estimates only. Not financial advice. Consult a SEBI-registered advisor.</p>
+  <p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p>
+</footer>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"FD Calculator India","url":"https://calcphi.com/fd-calculator.html","description":"Calculate Fixed Deposit maturity amount and interest with compound interest formula.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}
+</script>
+<script>
+const FREQ_N=[1,2,4,12],FREQ_L=['Annual','Semi-Annual','Quarterly','Monthly'];
+let chartMode='area',myChart=null;
+function switchChart(m){chartMode=m;document.querySelectorAll('.chart-tab').forEach(t=>t.classList.remove('active'));document.getElementById('tab-'+m).classList.add('active');calculate();}
+function calculate(){
+  const P=+document.getElementById('principal').value;
+  const rate=+document.getElementById('rate').value/100;
+  const years=+document.getElementById('years').value;
+  const fi=+document.getElementById('freq').value-1;
+  const n=FREQ_N[fi];
+  document.getElementById('val-principal').textContent=P.toLocaleString('en-IN');
+  document.getElementById('val-rate').textContent=(+document.getElementById('rate').value).toFixed(1);
+  document.getElementById('val-years').textContent=years;
+  document.getElementById('val-freq').textContent=FREQ_L[fi];
+  const maturity=P*Math.pow(1+rate/n,n*years);
+  const interest=maturity-P;
+  const ear=(Math.pow(1+rate/n,n)-1)*100;
+  const simpleInt=P*rate*years;
+  const intPct=(interest/maturity)*100;
+  document.getElementById('total-corpus').textContent=formatINR(maturity);
+  document.getElementById('principal-disp').textContent=formatINR(P);
+  document.getElementById('interest-earned').textContent=formatINR(interest);
+  document.getElementById('ear').textContent=ear.toFixed(2)+'%';
+  document.getElementById('simple-int').textContent=formatINR(simpleInt);
+  document.getElementById('int-pct').textContent=intPct.toFixed(0)+'% interest';
+  document.getElementById('progress-fill').style.width=intPct.toFixed(1)+'%';
+  const labels=[],yBal=[],rows=[];
+  for(let yr=1;yr<=years;yr++){
+    const prev=P*Math.pow(1+rate/n,n*(yr-1));
+    const cur=P*Math.pow(1+rate/n,n*yr);
+    const int=cur-prev;
+    labels.push('Yr '+yr);yBal.push(Math.round(cur));
+    rows.push({yr,opening:Math.round(prev),int:Math.round(int),closing:Math.round(cur)});
+  }
+  if(myChart)myChart.destroy();
+  const ctx=document.getElementById('growthChart').getContext('2d');
+  if(chartMode==='area'){
+    const g=ctx.createLinearGradient(0,0,0,260);g.addColorStop(0,'rgba(34,211,165,0.35)');g.addColorStop(1,'rgba(34,211,165,0)');
+    myChart=makeAreaChart(ctx,labels,[{label:'FD Balance',data:yBal,borderColor:'rgba(34,211,165,0.9)',backgroundColor:g,borderWidth:2,fill:true,tension:0.4,pointRadius:0,pointHoverRadius:5}]);
+  } else {
+    const ints=rows.map(r=>r.int);const princs=rows.map(()=>P);
+    myChart=makeBarChart(ctx,labels,[
+      {label:'Principal',data:princs,backgroundColor:'rgba(59,130,246,0.7)',borderRadius:3},
+      {label:'Interest',data:ints,backgroundColor:'rgba(34,211,165,0.7)',borderRadius:3}
+    ]);
+  }
+  document.getElementById('year-table').innerHTML=rows.map(r=>`<tr><td>Year ${r.yr}</td><td>₹${formatNum(r.opening)}</td><td class="positive">₹${formatNum(r.int)}</td><td>₹${formatNum(r.closing)}</td></tr>`).join('');
+}
+['principal','rate','years','freq'].forEach(id=>document.getElementById(id).addEventListener('input',calculate));
+document.addEventListener('DOMContentLoaded',calculate);
+</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":2,"name":"FD Calculator","item":"https://calcphi.com/in/fd-calculator.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is FD interest calculated?","acceptedAnswer":{"@type":"Answer","text":"FD interest uses compound interest formula: A = P(1 + r/n)^(nt), where P is principal, r is annual rate, n is compounding frequency (quarterly for most Indian banks), and t is years."}},{"@type":"Question","name":"Which bank offers the highest FD rate in 2026?","acceptedAnswer":{"@type":"Answer","text":"Small finance banks like AU, Equitas, and Jana typically offer 7.5-8.5% on FDs. Among large banks, HDFC and ICICI offer around 7-7.5% on 1-3 year FDs. Always check the bank's current rate before booking."}},{"@type":"Question","name":"Is FD interest taxable?","acceptedAnswer":{"@type":"Answer","text":"Yes. FD interest is fully taxable as per your income tax slab. Banks deduct TDS at 10% if interest exceeds ₹40,000 per year (₹50,000 for senior citizens). You can submit Form 15G/15H to avoid TDS if income is below taxable limit."}}]}</script>
+</body></html>

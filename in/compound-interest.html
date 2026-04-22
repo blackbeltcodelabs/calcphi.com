@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-region="IN">
+<head>
+<!-- GA -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94D5DND9LS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-94D5DND9LS");</script>
+<meta name="google-site-verification" content="EOSYQ9kWEpTvsQah9Do3mUA54q-1oFvyKwXG3zERx3k">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compound Interest Calculator India 2026 – CI Formula</title>
+<meta name="description" content="Calculate compound interest on any amount at any rate. See maturity value, interest earned, and year-by-year growth. Free compound interest calculator India.">
+<meta name="keywords" content="compound interest calculator India 2026, CI calculator, compound interest formula India, compound vs simple interest">
+<link rel="canonical" href="https://calcphi.com/in/compound-interest.html">
+<link rel="alternate" hreflang="en-IN" href="https://calcphi.com/in/compound-interest.html">
+<link rel="alternate" hreflang="x-default" href="https://calcphi.com/in/compound-interest.html">
+<meta property="og:title" content="Compound Interest Calculator India 2026">
+<meta property="og:description" content="Calculate compound interest on any amount at any rate. See maturity value, interest earned, and year-by-year growth. Free compound interest calculator India.">
+<meta property="og:image" content="https://calcphi.com/og-image.jpg">
+<meta property="og:url" content="https://calcphi.com/in/compound-interest.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcPhi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Compound Interest Calculator India 2026">
+<meta name="twitter:description" content="Calculate compound interest on any amount at any rate. See maturity value, interest earned, and year-by-year growth. Free compound interest calculator India.">
+<meta name="twitter:image" content="https://calcphi.com/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/shared.js" defer></script>
+</head>
+<body>
+<nav><div class="nav-inner"><a href="index.html" class="nav-logo">Calc<span>Phi</span></a><div class="nav-links"><a href="index.html" class="nav-home">⌂ All Calculators</a><a href="sip-main.html">SIP</a><a href="emi-calculator.html">EMI</a><a href="income-tax.html">Tax</a><a href="in-hand-salary.html">Salary</a><a href="gst-calculator.html">GST</a><a href="fire-calculator.html">FIRE</a></div></div></nav>
+<div class="wrapper">
+<header>
+  <div class="badge">Finance Fundamentals · Most Searched</div>
+  <h1>Compound Interest Calculator —<br><em>The Engine of Wealth Creation</em></h1>
+  <p class="subtitle">Calculate exactly how your money grows through compounding. The most fundamental calculation in personal finance — see why small rate differences create massive wealth gaps over time.</p>
+</header>
+<div class="info-banner">Compound Interest Formula: A = P(1 + r/n)^(nt). At 12% annual rate compounded monthly, ₹1 lakh becomes ₹3.3 lakhs in 10 years and ₹11 lakhs in 20 years.</div>
+<div class="main-grid">
+  <div class="card"><div class="card-title">Enter Details</div>
+    <div class="field"><div class="field-header"><span class="field-label">Principal Amount</span><div class="field-value">₹<span id="val-p">1,00,000</span></div></div>
+    <input type="range" id="principal" min="1000" max="10000000" step="1000" value="100000"><div class="range-labels"><span>₹1K</span><span>₹1 Cr</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">Annual Interest Rate</span><div class="field-value"><span id="val-r">12</span><span>% p.a.</span></div></div>
+    <input type="range" id="rate" min="1" max="30" step="0.5" value="12"><div class="range-labels"><span>1%</span><span>30%</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">Time Period</span><div class="field-value"><span id="val-t">10</span><span> years</span></div></div>
+    <input type="range" id="time" min="1" max="40" step="1" value="10"><div class="range-labels"><span>1 yr</span><span>40 yrs</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">Compounding</span><div class="field-value"><span id="val-f">Monthly</span></div></div>
+    <input type="range" id="freq" min="1" max="3" step="1" value="3"><div class="range-labels"><span>Yearly</span><span>Monthly</span></div></div>
+  </div>
+  <div class="results-card">
+    <div class="corpus-display"><div class="corpus-label">Maturity Amount</div><div class="corpus-amount" id="maturity">₹0</div><div class="corpus-sub">after <span id="dt">10</span> years</div></div>
+    <div class="stats-row">
+      <div class="stat-box"><div class="stat-box-label">Principal</div><div class="stat-box-value blue" id="s-p">₹0</div></div>
+      <div class="stat-box"><div class="stat-box-label">Interest Earned</div><div class="stat-box-value green" id="s-i">₹0</div></div>
+      <div class="stat-box"><div class="stat-box-label">Total Return</div><div class="stat-box-value gold" id="s-pct">0%</div></div>
+      <div class="stat-box"><div class="stat-box-label">CAGR</div><div class="stat-box-value" id="s-cagr">0%</div></div>
+    </div>
+    <div class="progress-section">
+      <div class="progress-header"><span>Interest vs Principal</span><span id="split">0%</span></div>
+      <div class="progress-bar-bg"><div class="progress-bar-fill" id="prog" style="width:40%"></div></div>
+      <div class="progress-legend"><span><span class="legend-dot" style="background:var(--accent2)"></span>Principal</span><span><span class="legend-dot" style="background:var(--accent)"></span>Interest</span></div>
+    </div>
+  </div>
+</div>
+<div class="chart-section"><div class="chart-header"><div class="chart-title">Compound Growth Over Time</div></div><div class="chart-wrap"><canvas id="growthChart"></canvas></div></div>
+<div class="card mb-20"><div class="card-title">Year-by-Year Table</div><div class="table-wrap"><table><thead><tr><th>Year</th><th>Principal (₹)</th><th>Interest Earned (₹)</th><th>Total Value (₹)</th></tr></thead><tbody id="ci-tbl"></tbody></table></div></div>
+<div class="faq-section"><h2 class="faq-heading">Compound Interest — Key Questions</h2>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the compound interest formula?<span class="arrow">+</span></div>
+<div class="faq-a">Compound Interest formula: A = P(1 + r/n)^(nt), where A = final amount, P = principal, r = annual interest rate (decimal), n = compounding frequency per year, t = time in years. CI = A - P. For ₹1 lakh at 12% monthly for 10 years: A = 1,00,000 × (1+0.12/12)^(12×10) = ₹3,30,039. Interest earned = ₹2,30,039.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Compound interest vs simple interest — what is the difference?<span class="arrow">+</span></div>
+<div class="faq-a">Simple Interest = P × R × T / 100. It is calculated only on the original principal. Compound interest is calculated on principal plus accumulated interest — each period's interest becomes next period's principal. At 12% for 10 years on ₹1 lakh: Simple interest = ₹1.2 lakh (total ₹2.2L), Compound monthly = ₹2.3 lakh (total ₹3.3L). The difference widens dramatically over longer periods.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Which compounding frequency gives the highest return?<span class="arrow">+</span></div>
+<div class="faq-a">More frequent compounding = higher effective annual yield. At 12% nominal rate on ₹1 lakh for 10 years: Annual compounding = ₹3.10L, Quarterly = ₹3.26L, Monthly = ₹3.30L, Daily = ₹3.32L. Most Indian FDs compound quarterly. Most SIP returns behave as monthly compounding. The difference between monthly and daily is minimal — choose monthly for realistic projections.</div></div>
+</div>
+<script>
+let myChart=null;
+const freqMap={1:'Yearly',2:'Quarterly',3:'Monthly'};
+const freqN={1:1,2:4,3:12};
+function calculate(){
+  const P=+document.getElementById('principal').value;
+  const r=+document.getElementById('rate').value/100;
+  const t=+document.getElementById('time').value;
+  const fi=+document.getElementById('freq').value;
+  const n=freqN[fi];
+  document.getElementById('val-p').textContent=P.toLocaleString('en-IN');
+  document.getElementById('val-r').textContent=+document.getElementById('rate').value;
+  document.getElementById('val-t').textContent=t;
+  document.getElementById('dt').textContent=t;
+  document.getElementById('val-f').textContent=freqMap[fi];
+  const A=P*Math.pow(1+r/n,n*t);
+  const I=A-P;
+  const ip=(I/A*100);
+  document.getElementById('maturity').textContent=formatINR(A);
+  document.getElementById('s-p').textContent=formatINR(P);
+  document.getElementById('s-i').textContent=formatINR(I);
+  document.getElementById('s-pct').textContent=(I/P*100).toFixed(1)+'%';
+  document.getElementById('s-cagr').textContent=((Math.pow(A/P,1/t)-1)*100).toFixed(2)+'%';
+  document.getElementById('split').textContent=ip.toFixed(0)+'% interest';
+  document.getElementById('prog').style.width=ip.toFixed(1)+'%';
+  if(myChart)myChart.destroy();
+  const ctx=document.getElementById('growthChart').getContext('2d');
+  const labels=[],yA=[],yP=[];
+  const rows=[];
+  for(let y=1;y<=t;y++){
+    const a=P*Math.pow(1+r/n,n*y);
+    const prev=P*Math.pow(1+r/n,n*(y-1));
+    labels.push('Yr '+y);yA.push(Math.round(a));yP.push(P);
+    rows.push('<tr><td>Year '+y+'</td><td>₹'+formatNum(P)+'</td><td class="positive">₹'+formatNum(a-prev)+'</td><td>₹'+formatNum(a)+'</td></tr>');
+  }
+  const g1=ctx.createLinearGradient(0,0,0,260);g1.addColorStop(0,'rgba(59,130,246,0.3)');g1.addColorStop(1,'rgba(59,130,246,0)');
+  const g2=ctx.createLinearGradient(0,0,0,260);g2.addColorStop(0,'rgba(34,211,165,0.35)');g2.addColorStop(1,'rgba(34,211,165,0)');
+  myChart=makeAreaChart(ctx,labels,[
+    {label:'Principal',data:yP,borderColor:'rgba(59,130,246,0.7)',backgroundColor:g1,borderWidth:2,fill:true,tension:0,pointRadius:0},
+    {label:'Total Value',data:yA,borderColor:'rgba(34,211,165,0.9)',backgroundColor:g2,borderWidth:2,fill:true,tension:0.4,pointRadius:0,pointHoverRadius:5}
+  ]);
+  document.getElementById('ci-tbl').innerHTML=rows.join('');
+}
+['principal','rate','time','freq'].forEach(id=>document.getElementById(id).addEventListener('input',calculate));
+document.addEventListener('DOMContentLoaded',calculate);
+</script>
+</div>
+<footer><div class="footer-brand">Black Belt Code Labs</div><p>Results are indicative estimates only. Consult a qualified financial advisor before making investment decisions.</p><p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p></footer>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the compound interest formula?","acceptedAnswer":{"@type":"Answer","text":"A = P(1+r/n)^(nt), where P is principal, r is annual rate, n is compounding frequency, t is years. CI = A - P."}},{"@type":"Question","name":"Which is better compound or simple interest?","acceptedAnswer":{"@type":"Answer","text":"Compound interest earns significantly more over time. At 12% for 10 years on ₹1 lakh: Simple interest = ₹2.2L total, Compound monthly = ₹3.3L total."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/"},{"@type":"ListItem","position":2,"name":"India","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":3,"name":"Compound Interest Calculator India 2026","item":"https://calcphi.com/in/compound-interest.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Compound Interest Calculator India 2026","url":"https://calcphi.com/in/compound-interest.html","description":"Calculate compound interest on any amount at any rate. See maturity value, interest earned, and year-by-year growth. Free compound interest calculator India.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+</body>
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en" data-region="IN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94D5DND9LS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag("js", new Date());
+  gtag("config", "G-94D5DND9LS", {{ page_title: document.title, page_location: window.location.href }});
+</script>
+<meta name="google-site-verification" content="EOSYQ9kWEpTvsQah9Do3mUA54q-1oFvyKwXG3zERx3k">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retirement Gap Calculator 2026 – India | CalcPhi</title>
+<meta name="description" content="Find your retirement gap. Enter current savings, target corpus, and years to retirement. Get the monthly investment needed to close the gap.">
+<meta name="keywords" content="retirement gap calculator, retirement savings calculator India, am I saving enough for retirement, retirement corpus calculator 2026">
+<link rel="canonical" href="https://calcphi.com/in/retirement-gap.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/shared.js" defer></script>
+<style>
+  .gap-alert {
+    border-radius: var(--radius-sm);
+    padding: 18px 22px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .gap-alert.danger {
+    background: rgba(244,63,94,0.08);
+    border: 1px solid rgba(244,63,94,0.25);
+    color: #f43f5e;
+  }
+  .gap-alert.warning {
+    background: rgba(245,158,11,0.08);
+    border: 1px solid rgba(245,158,11,0.25);
+    color: var(--gold);
+  }
+  .gap-alert.success {
+    background: rgba(34,211,165,0.08);
+    border: 1px solid rgba(34,211,165,0.25);
+    color: var(--accent);
+  }
+  .gap-alert .icon { font-size: 22px; flex-shrink: 0; }
+
+  .action-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 600px) { .action-grid { grid-template-columns: 1fr; } }
+
+  .action-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+  }
+  .action-title {
+    font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 12px;
+  }
+  .action-value {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px; color: var(--accent); margin-bottom: 4px;
+  }
+  .action-sub { font-size: 13px; color: var(--soft); }
+</style>
+<meta property="og:title" content="Retirement Gap Calculator 2026 – Are You On Track?">
+<meta property="og:description" content="Find your retirement gap and monthly investment needed to close it. Inflation-adjusted retirement corpus calculator.">
+<meta property="og:image" content="https://calcphi.com/og-image.jpg">
+<meta property="og:url" content="https://calcphi.com/in/retirement-gap.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcPhi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Retirement Gap Calculator 2026 – Are You On Track?">
+<meta name="twitter:description" content="Find your retirement gap and monthly investment needed to close it. Inflation-adjusted retirement corpus calculator.">
+<meta name="twitter:image" content="https://calcphi.com/og-image.jpg">
+<meta name="twitter:site" content="@calcphi">
+<link rel="alternate" hreflang="en-IN" href="https://calcphi.com/in/retirement-gap.html">
+<link rel="alternate" hreflang="x-default" href="https://calcphi.com/in/retirement-gap.html">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Calc<span>Phi</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-home">⌂ All Calculators</a>
+      <a href="sip-main.html">SIP</a>
+      <a href="target-sip.html">Target SIP</a>
+      <a href="1-crore-sip.html">1 Cr SIP</a>
+      <a href="emi-calculator.html">EMI</a>
+      <a href="income-tax.html">Tax</a>
+      <a href="fire-calculator.html">FIRE</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrapper">
+
+  <header>
+    <div class="badge">Retirement Planning · Gap Analysis</div>
+    <h1>Retirement Gap Calculator —<br><em>Are You On Track?</em></h1>
+    <p class="subtitle">Discover the exact gap between where your retirement savings are heading and where they need to be — and get an action plan to close it.</p>
+  </header>
+
+  <div class="info-banner">
+    Enter your current age, retirement age, current savings, and monthly investment. The calculator shows your projected corpus vs what you actually need, with inflation factored in.
+  </div>
+
+  <div class="main-grid">
+
+    <!-- INPUTS -->
+    <div class="card">
+      <div class="card-title">Your Retirement Details</div>
+
+      <div class="field">
+        <div class="field-header">
+          <span class="field-label">Current Age</span>
+          <div class="field-value"><span id="val-age">30</span><span> yrs</span></div>
+        </div>
+        <input type="range" id="age" min="18" max="60" step="1" value="30">
+        <div class="range-labels"><span>18</span><span>60</span></div>
+      </div>
+
+      <div class="field">
+        <div class="field-header">
+          <span class="field-label">Retirement Age</span>
+          <div class="field-value"><span id="val-retire-age">60</span><span> yrs</span></div>
+        </div>
+        <input type="range" id="retire-age" min="40" max="75" step="1" value="60">
+        <div class="range-labels"><span>40</span><span>75</span></div>
+      </div>
+
+      <div class="field">
+        <div class="field-header">
+          <span class="field-label">Monthly Expenses Today</span>
+          <div class="field-value">₹<span id="val-expenses">50,000</span></div>
+        </div>
+        <input type="range" id="expenses" min="10000" max="500000" step="5000" value="50000">
+        <div class="range-labels"><span>₹10K</span><span>₹5L</span></div>
+      </div>
+
+      <div class="field">
+        <div class="field-header">
+          <span class="field-label">Current Retirement Savings</span>
+          <div class="field-value">₹<span id="val-savings">5,00,000</span></div>
+        </div>
+        <input type="range" id="savings" min="0" max="50000000" step="100000" value="500000">
+        <div class="range-labels"><span>₹0</span><span>₹5 Cr</span></div>
+      </div>
+
+      <div class="field">
+        <div class="field-header">
+          <span class="field-label">Monthly SIP / Investment</span>
+          <div class="field-value">₹<span id="val-monthly">15,000</span></div>
+        </div>
+        <input type="range" id="monthly" min="1000" max="200000" step="1000" value="15000">
+        <div class="range-labels"><span>₹1K</span><span>₹2L</span></div>
+      </div>
+
+      <div class="field">
+        <div class="field-header">
+          <span class="field-label">Expected Return / Inflation</span>
+          <div class="field-value"><span id="val-rate">10</span><span>% / </span><span id="val-inf">6</span><span>%</span></div>
+        </div>
+        <input type="range" id="rate" min="4" max="18" step="0.5" value="10">
+        <div class="range-labels"><span>Return: 4%</span><span>18%</span></div>
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="results-card">
+      <div class="corpus-display">
+        <div class="corpus-label">Retirement Corpus Needed</div>
+        <div class="corpus-amount" id="corpus-needed">₹0</div>
+        <div class="corpus-sub">inflation-adjusted at retirement</div>
+      </div>
+      <div class="stats-row">
+        <div class="stat-box">
+          <div class="stat-box-label">Projected Corpus</div>
+          <div class="stat-box-value blue" id="projected-corpus">₹0</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-label">Retirement Gap</div>
+          <div class="stat-box-value red" id="ret-gap">₹0</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-label">Years to Retire</div>
+          <div class="stat-box-value gold" id="yrs-left">—</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-label">Monthly Need at Retire</div>
+          <div class="stat-box-value green" id="monthly-at-retire">₹0</div>
+        </div>
+      </div>
+      <div class="progress-section">
+        <div class="progress-header">
+          <span>Retirement readiness</span>
+          <span id="readiness-pct">0% ready</span>
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progress-fill" style="width:0%"></div>
+        </div>
+        <div class="progress-legend">
+          <span><span class="legend-dot" style="background:var(--accent2)"></span>Projected</span>
+          <span><span class="legend-dot" style="background:var(--danger)"></span>Gap</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ALERT -->
+  <div class="gap-alert" id="gap-alert">
+    <div class="icon">⚠</div>
+    <div id="gap-message">Calculating your retirement readiness...</div>
+  </div>
+
+  <!-- ACTION PLAN -->
+  <div class="action-grid">
+    <div class="action-card">
+      <div class="action-title">Additional Monthly SIP Needed</div>
+      <div class="action-value" id="extra-sip">₹0</div>
+      <div class="action-sub">on top of your current investment to close the gap</div>
+    </div>
+    <div class="action-card">
+      <div class="action-title">Total Monthly SIP Required</div>
+      <div class="action-value" id="total-sip-needed">₹0</div>
+      <div class="action-sub">to fully fund your retirement at your target date</div>
+    </div>
+    <div class="action-card">
+      <div class="action-title">Corpus if You Retire at <span id="alt-age">65</span></div>
+      <div class="action-value" id="alt-corpus">₹0</div>
+      <div class="action-sub">projected corpus if you delay retirement by 5 years</div>
+    </div>
+    <div class="action-card">
+      <div class="action-title">Monthly Income in Retirement</div>
+      <div class="action-value" id="monthly-income">₹0</div>
+      <div class="action-sub">at 4% annual withdrawal from your projected corpus</div>
+    </div>
+  </div>
+
+  <!-- CHART -->
+  <div class="chart-section">
+    <div class="chart-header">
+      <div class="chart-title">Retirement Savings Journey</div>
+      <div class="chart-tabs">
+        <button class="chart-tab active" id="tab-area" onclick="switchChart('area')">Growth</button>
+        <button class="chart-tab" id="tab-bar" onclick="switchChart('bar')">Annual</button>
+      </div>
+    </div>
+    <div class="chart-wrap"><canvas id="growthChart"></canvas></div>
+  </div>
+
+  <!-- TABLE -->
+  <div class="card mb-20">
+    <div class="card-title">Year-by-Year Retirement Savings Progress</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Age</th><th>Portfolio Value (₹)</th><th>Target Needed (₹)</th><th>Gap (₹)</th><th>Readiness</th></tr>
+        </thead>
+        <tbody id="year-table"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <h2 class="faq-heading">Retirement Planning: Everything You Need to Know</h2>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How much do I need to retire in India?<span class="arrow">+</span></div>
+      <div class="faq-a">A common benchmark is 25–30× your annual expenses at retirement (the 4% withdrawal rule). If your inflation-adjusted monthly expenses at retirement will be ₹1 lakh, you need ₹1.2 Cr to ₹1.5 Cr. However, longer retirements (30+ years) and rising healthcare costs mean many planners now use 30× (3.3% withdrawal rate) for safety. This calculator defaults to the 4% rule with inflation adjustment.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What is a retirement gap and why does it matter?<span class="arrow">+</span></div>
+      <div class="faq-a">A retirement gap is the difference between what your current savings trajectory will produce and what you actually need to retire comfortably. Most Indians significantly underestimate this gap because they don't account for inflation. A ₹50,000/month expense today will cost over ₹1.6 lakh/month in 20 years at 6% inflation. Planning without inflation adjustment leaves dangerous gaps.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I close my retirement gap?<span class="arrow">+</span></div>
+      <div class="faq-a">You have four main levers: (1) Increase monthly SIP contributions — most effective lever. (2) Delay retirement age — even 2–3 extra years dramatically improves outcomes. (3) Increase return rate — shifting from FD to equity over long horizons. (4) Reduce planned retirement expenses — lifestyle choices. Usually a combination of levers 1 and 2 is the most practical approach.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How much should I invest for retirement each month?<span class="arrow">+</span></div>
+      <div class="faq-a">Work backwards from your goal. If you need ₹5 Cr in 25 years at 12% returns, you need approximately ₹30,000/month SIP. If you start 10 years later, that jumps to around ₹90,000/month for the same target. Starting early is by far the most powerful retirement strategy — the mathematics of compounding reward early starters disproportionately.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Should I include EPF and PPF in my retirement corpus?<span class="arrow">+</span></div>
+      <div class="faq-a">Yes, absolutely. EPF and PPF are excellent tax-efficient retirement vehicles. Add your current EPF/PPF balance to your "current savings" in this calculator, and include any regular contributions in your "monthly investment" figure. Both EPF (currently ~8.15%) and PPF (7.1%) provide stable, guaranteed, tax-free returns — a solid foundation for the debt portion of your retirement portfolio.</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-brand">Black Belt Code Labs</div>
+  <p>Results are indicative estimates only. Retirement projections depend on future returns and inflation, which cannot be predicted with certainty. Consult a SEBI-registered financial advisor.</p>
+  <p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p>
+</footer>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Retirement Gap Calculator","url":"https://calcphi.com/retirement-gap.html","description":"Calculate your retirement corpus gap — the difference between what you're projected to save and what you actually need to retire comfortably.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much do I need to retire in India?","acceptedAnswer":{"@type":"Answer","text":"A common benchmark is 25–30× your annual expenses at retirement. If monthly expenses at retirement are ₹1 lakh, you need ₹1.2–1.5 Cr minimum."}},{"@type":"Question","name":"What is a retirement gap?","acceptedAnswer":{"@type":"Answer","text":"A retirement gap is the difference between what your current savings trajectory will produce and what you need to retire comfortably."}},{"@type":"Question","name":"How do I close my retirement gap?","acceptedAnswer":{"@type":"Answer","text":"Increase SIP contributions, delay retirement, increase return rate through equity exposure, or reduce planned expenses."}}]}
+</script>
+
+<script>
+let chartMode = 'area';
+let myChart = null;
+
+function switchChart(mode) {
+  chartMode = mode;
+  document.querySelectorAll('.chart-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + mode).classList.add('active');
+  calculate();
+}
+
+function sipForCorpus(targetCorpus, existingGrowth, r, months) {
+  // SIP needed to reach (targetCorpus - existingGrowth) in 'months' months at monthly rate r
+  const needed = targetCorpus - existingGrowth;
+  if (needed <= 0) return 0;
+  const mr = r / 12;
+  return needed * mr / (Math.pow(1 + mr, months) - 1) / (1 + mr);
+}
+
+function calculate() {
+  const age        = +document.getElementById('age').value;
+  const retireAge  = +document.getElementById('retire-age').value;
+  const expenses   = +document.getElementById('expenses').value;
+  const savings    = +document.getElementById('savings').value;
+  const monthly    = +document.getElementById('monthly').value;
+  const rate       = +document.getElementById('rate').value / 100;
+  const inflation  = 0.06; // fixed at India avg
+
+  const yearsLeft  = Math.max(retireAge - age, 1);
+  const months     = yearsLeft * 12;
+  const mr         = rate / 12;
+
+  // Monthly expenses at retirement (inflation adjusted)
+  const monthlyAtRetire  = expenses * Math.pow(1 + inflation, yearsLeft);
+  const annualAtRetire   = monthlyAtRetire * 12;
+  // Corpus needed (25× annual at retirement = 4% rule)
+  const corpusNeeded     = annualAtRetire * 25;
+
+  // Projected corpus: grow existing savings + SIP
+  const savingsGrowth    = savings * Math.pow(1 + rate, yearsLeft);
+  const sipCorpus        = monthly * ((Math.pow(1 + mr, months) - 1) / mr) * (1 + mr);
+  const projectedCorpus  = savingsGrowth + sipCorpus;
+
+  const gap              = corpusNeeded - projectedCorpus;
+  const readinessPct     = Math.min(100, (projectedCorpus / corpusNeeded) * 100);
+
+  // Extra SIP needed to close gap
+  const extraSip         = Math.max(0, sipForCorpus(corpusNeeded, savingsGrowth, rate, months));
+  const totalSipNeeded   = extraSip + (gap > 0 ? monthly : monthly);
+
+  // Alt: retire 5 years later
+  const altYears         = yearsLeft + 5;
+  const altSavGrowth     = savings * Math.pow(1 + rate, altYears);
+  const altSipCorpus     = monthly * ((Math.pow(1 + mr, altYears * 12) - 1) / mr) * (1 + mr);
+  const altCorpus        = altSavGrowth + altSipCorpus;
+  const altAge           = retireAge + 5;
+
+  // Monthly income at 4% withdrawal from projected
+  const monthlyIncome    = (projectedCorpus * 0.04) / 12;
+
+  // Update DOM
+  document.getElementById('corpus-needed').textContent     = formatINR(corpusNeeded);
+  document.getElementById('projected-corpus').textContent  = formatINR(projectedCorpus);
+  document.getElementById('ret-gap').textContent           = gap > 0 ? formatINR(gap) : 'On Track ✓';
+  document.getElementById('yrs-left').textContent          = yearsLeft + ' yrs';
+  document.getElementById('monthly-at-retire').textContent = formatINR(monthlyAtRetire);
+  document.getElementById('readiness-pct').textContent     = readinessPct.toFixed(0) + '% ready';
+  document.getElementById('progress-fill').style.width     = readinessPct.toFixed(1) + '%';
+  document.getElementById('extra-sip').textContent         = gap > 0 ? formatINR(extraSip) : '₹0 (surplus!)';
+  document.getElementById('total-sip-needed').textContent  = gap > 0 ? formatINR(totalSipNeeded) : formatINR(monthly);
+  document.getElementById('alt-age').textContent           = altAge;
+  document.getElementById('alt-corpus').textContent        = formatINR(altCorpus);
+  document.getElementById('monthly-income').textContent    = formatINR(monthlyIncome);
+
+  // Alert
+  const alert = document.getElementById('gap-alert');
+  const msg   = document.getElementById('gap-message');
+  if (readinessPct >= 100) {
+    alert.className = 'gap-alert success';
+    alert.querySelector('.icon').textContent = '✅';
+    msg.textContent = `Great news! You are fully on track for retirement at ${retireAge}. Your projected corpus exceeds your retirement need by ${formatINR(-gap)}. You have a surplus!`;
+  } else if (readinessPct >= 70) {
+    alert.className = 'gap-alert warning';
+    alert.querySelector('.icon').textContent = '⚠';
+    msg.textContent = `You're ${readinessPct.toFixed(0)}% of the way there. A small increase of ${formatINR(extraSip)}/month in your SIP will close the remaining gap and fully fund your retirement.`;
+  } else {
+    alert.className = 'gap-alert danger';
+    alert.querySelector('.icon').textContent = '🚨';
+    msg.textContent = `You have a significant retirement gap of ${formatINR(gap)}. You need an additional ${formatINR(extraSip)}/month in SIP, or consider delaying retirement to age ${altAge}. Act now — time is your greatest asset.`;
+  }
+
+  document.getElementById('val-age').textContent        = age;
+  document.getElementById('val-retire-age').textContent = retireAge;
+  document.getElementById('val-expenses').textContent   = expenses.toLocaleString('en-IN');
+  document.getElementById('val-savings').textContent    = savings.toLocaleString('en-IN');
+  document.getElementById('val-monthly').textContent    = monthly.toLocaleString('en-IN');
+  document.getElementById('val-rate').textContent       = +document.getElementById('rate').value;
+
+  // Yearly data
+  const labels = [], yPortfolio = [], yTarget = [], rows = [];
+  let portfolio = savings;
+
+  for (let yr = 1; yr <= yearsLeft; yr++) {
+    for (let m = 0; m < 12; m++) {
+      portfolio = (portfolio + monthly) * (1 + mr);
+    }
+    const target    = annualAtRetire * 25;
+    const yrGap     = Math.max(0, target - portfolio);
+    const yrReady   = Math.min(100, (portfolio / target) * 100);
+    const currentAge = age + yr;
+
+    labels.push('Age ' + currentAge);
+    yPortfolio.push(Math.round(portfolio));
+    yTarget.push(Math.round(target));
+    rows.push({ age: currentAge, portfolio: Math.round(portfolio), target: Math.round(target), gap: Math.round(yrGap), ready: yrReady.toFixed(1) });
+  }
+
+  // Chart
+  if (myChart) myChart.destroy();
+  const ctx = document.getElementById('growthChart').getContext('2d');
+  if (chartMode === 'area') {
+    const gP = ctx.createLinearGradient(0,0,0,260); gP.addColorStop(0,'rgba(59,130,246,0.3)'); gP.addColorStop(1,'rgba(59,130,246,0)');
+    const gT = ctx.createLinearGradient(0,0,0,260); gT.addColorStop(0,'rgba(244,63,94,0.2)');  gT.addColorStop(1,'rgba(244,63,94,0)');
+    myChart = makeAreaChart(ctx, labels, [
+      { label:'Your Portfolio',  data:yPortfolio, borderColor:'rgba(59,130,246,0.9)', backgroundColor:gP, borderWidth:2, fill:true, tension:0.4, pointRadius:0, pointHoverRadius:5 },
+      { label:'Corpus Needed',  data:yTarget,    borderColor:'rgba(244,63,94,0.7)',  backgroundColor:gT, borderWidth:2, fill:true, tension:0.4, pointRadius:0, pointHoverRadius:5, borderDash:[6,3] }
+    ]);
+  } else {
+    const gaps = yTarget.map((t,i) => Math.max(0, t - yPortfolio[i]));
+    myChart = makeBarChart(ctx, labels, [
+      { label:'Portfolio',  data:yPortfolio, backgroundColor:'rgba(59,130,246,0.7)', borderRadius:3 },
+      { label:'Gap',        data:gaps,       backgroundColor:'rgba(244,63,94,0.5)',  borderRadius:3 }
+    ]);
+  }
+
+  // Table
+  document.getElementById('year-table').innerHTML = rows.map(r =>
+    `<tr>
+      <td>Age ${r.age}</td>
+      <td class="positive">₹${formatNum(r.portfolio)}</td>
+      <td>₹${formatNum(r.target)}</td>
+      <td class="${r.gap > 0 ? 'negative' : 'positive'}">₹${formatNum(r.gap)}</td>
+      <td class="${parseFloat(r.ready) >= 100 ? 'positive' : ''}">${r.ready}%</td>
+    </tr>`
+  ).join('');
+}
+
+['age','retire-age','expenses','savings','monthly','rate'].forEach(id => document.getElementById(id).addEventListener('input', calculate));
+document.addEventListener('DOMContentLoaded', calculate);
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":2,"name":"Retirement Gap","item":"https://calcphi.com/in/retirement-gap.html"}]}</script>
+</body>
+</html>

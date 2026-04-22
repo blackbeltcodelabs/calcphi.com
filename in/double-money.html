@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" data-region="IN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94D5DND9LS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag("js", new Date());
+  gtag("config", "G-94D5DND9LS", {{ page_title: document.title, page_location: window.location.href }});
+</script>
+<meta name="google-site-verification" content="EOSYQ9kWEpTvsQah9Do3mUA54q-1oFvyKwXG3zERx3k">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Double Your Money Calculator 2026 – Rule of 72 | CalcPhi</title>
+<meta name="description" content="How long to double your money? Rule of 72 calculator with 2x, 5x and 10x milestones at any return rate. Free compound interest tool.">
+<meta name="keywords" content="double your money calculator, rule of 72 calculator, how long to double investment, money doubling calculator 2026">
+<link rel="canonical" href="https://calcphi.com/in/double-money.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/shared.js" defer></script>
+<style>
+  /* Page-specific extras */
+  .milestones-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 600px) { .milestones-grid { grid-template-columns: 1fr 1fr; } }
+
+  .milestone-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 18px 16px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s;
+  }
+  .milestone-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  }
+  .milestone-card:nth-child(1)::before { background: var(--accent2); }
+  .milestone-card:nth-child(2)::before { background: var(--accent); }
+  .milestone-card:nth-child(3)::before { background: var(--gold); }
+  .milestone-card:nth-child(4)::before { background: var(--danger); }
+
+  .milestone-label { font-size: 12px; color: var(--muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.08em; }
+  .milestone-value { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 4px; }
+  .milestone-sub   { font-size: 11px; color: var(--muted); }
+
+  .rule72-box {
+    background: rgba(34,211,165,0.06);
+    border: 1px solid rgba(34,211,165,0.2);
+    border-radius: var(--radius-sm);
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+  }
+  .rule72-formula {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px; color: var(--accent);
+    white-space: nowrap;
+  }
+  .rule72-explain { font-size: 13px; color: var(--soft); line-height: 1.6; }
+</style>
+<meta property="og:title" content="Double Your Money Calculator – Rule of 72 India">
+<meta property="og:description" content="How long to double your money? Rule of 72 calculator with 2x, 5x and 10x milestones at any return rate.">
+<meta property="og:image" content="https://calcphi.com/og-image.jpg">
+<meta property="og:url" content="https://calcphi.com/in/double-money.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcPhi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Double Your Money Calculator – Rule of 72 India">
+<meta name="twitter:description" content="How long to double your money? Rule of 72 calculator with 2x, 5x and 10x milestones at any return rate.">
+<meta name="twitter:image" content="https://calcphi.com/og-image.jpg">
+<meta name="twitter:site" content="@calcphi">
+<link rel="alternate" hreflang="en-IN" href="https://calcphi.com/in/double-money.html">
+<link rel="alternate" hreflang="x-default" href="https://calcphi.com/in/double-money.html">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Calc<span>Phi</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-home">⌂ All Calculators</a>
+      <a href="sip-main.html">SIP</a>
+      <a href="target-sip.html">Target SIP</a>
+      <a href="1-crore-sip.html">1 Cr SIP</a>
+      <a href="emi-calculator.html">EMI</a>
+      <a href="income-tax.html">Tax</a>
+      <a href="fire-calculator.html">FIRE</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrapper">
+
+  <header>
+    <div class="badge">Rule of 72 · Compound Interest</div>
+    <h1>How Long to<br><em>Double Your Money?</em></h1>
+    <p class="subtitle">Enter your investment amount and interest rate. See exactly when your money doubles, triples, and quadruples — and compare different return rates side by side.</p>
+  </header>
+
+  <div class="info-banner">
+    The Rule of 72 says: divide 72 by your annual return rate to get the approximate years to double. Our calculator uses the exact formula for precise results.
+  </div>
+
+  <div class="main-grid">
+
+    <!-- INPUTS -->
+    <div class="card">
+      <div class="card-title">Your Investment Details</div>
+
+      <div class="field">
+        <div class="field-header">
+          <span class="field-label">Initial Investment Amount</span>
+          <div class="field-value">₹<span id="val-principal">1,00,000</span></div>
+        </div>
+        <input type="range" id="principal" min="10000" max="10000000" step="10000" value="100000">
+        <div class="range-labels"><span>₹10K</span><span>₹1 Cr</span></div>
+      </div>
+
+      <div class="field">
+        <div class="field-header">
+          <span class="field-label">Annual Return Rate</span>
+          <div class="field-value"><span id="val-rate">10</span><span>% p.a.</span></div>
+        </div>
+        <input type="range" id="rate" min="1" max="30" step="0.5" value="10">
+        <div class="range-labels"><span>1%</span><span>30%</span></div>
+      </div>
+
+      <div class="field">
+        <div class="field-header">
+          <span class="field-label">Compounding Frequency</span>
+          <div class="field-value"><span id="val-freq">Monthly</span></div>
+        </div>
+        <input type="range" id="freq" min="1" max="4" step="1" value="3">
+        <div class="range-labels"><span>Annual</span><span>Daily</span></div>
+      </div>
+
+      <div class="field">
+        <div class="field-header">
+          <span class="field-label">Show growth up to</span>
+          <div class="field-value"><span id="val-years">30</span><span> yrs</span></div>
+        </div>
+        <input type="range" id="years" min="5" max="50" step="1" value="30">
+        <div class="range-labels"><span>5 yrs</span><span>50 yrs</span></div>
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="results-card">
+      <div class="corpus-display">
+        <div class="corpus-label">Value After <span id="disp-years">30</span> Years</div>
+        <div class="corpus-amount" id="final-value">₹0</div>
+        <div class="corpus-sub">total value of your investment</div>
+      </div>
+      <div class="stats-row">
+        <div class="stat-box">
+          <div class="stat-box-label">Years to Double</div>
+          <div class="stat-box-value gold" id="yrs-double">—</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-label">Years to Triple</div>
+          <div class="stat-box-value green" id="yrs-triple">—</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-label">Rule of 72 Estimate</div>
+          <div class="stat-box-value blue" id="rule72-est">—</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-label">Total Return</div>
+          <div class="stat-box-value green" id="total-return">—</div>
+        </div>
+      </div>
+      <div class="progress-section">
+        <div class="progress-header">
+          <span>How many times your money grows</span>
+          <span id="growth-multiple">—</span>
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progress-fill" style="width:50%"></div>
+        </div>
+        <div class="progress-legend">
+          <span><span class="legend-dot" style="background:var(--accent2)"></span>Principal</span>
+          <span><span class="legend-dot" style="background:var(--accent)"></span>Returns</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RULE 72 BOX -->
+  <div class="rule72-box">
+    <div class="rule72-formula">72 ÷ <span id="r72-rate">10</span>% = <span id="r72-result">7.2</span> years</div>
+    <div class="rule72-explain">The Rule of 72 gives a quick mental estimate for doubling time. Our calculator uses the exact compound interest formula for precise results — the difference is usually less than 0.5 years.</div>
+  </div>
+
+  <!-- MILESTONES -->
+  <div class="milestones-grid">
+    <div class="milestone-card">
+      <div class="milestone-label">2× Your Money</div>
+      <div class="milestone-value blue" id="m2x">—</div>
+      <div class="milestone-sub" id="m2x-val">—</div>
+    </div>
+    <div class="milestone-card">
+      <div class="milestone-label">3× Your Money</div>
+      <div class="milestone-value green" id="m3x">—</div>
+      <div class="milestone-sub" id="m3x-val">—</div>
+    </div>
+    <div class="milestone-card">
+      <div class="milestone-label">5× Your Money</div>
+      <div class="milestone-value gold" id="m5x">—</div>
+      <div class="milestone-sub" id="m5x-val">—</div>
+    </div>
+    <div class="milestone-card">
+      <div class="milestone-label">10× Your Money</div>
+      <div class="milestone-value red" id="m10x">—</div>
+      <div class="milestone-sub" id="m10x-val">—</div>
+    </div>
+  </div>
+
+  <!-- CHART -->
+  <div class="chart-section">
+    <div class="chart-header">
+      <div class="chart-title">Investment Growth Over Time</div>
+      <div class="chart-tabs">
+        <button class="chart-tab active" id="tab-area" onclick="switchChart('area')">Growth</button>
+        <button class="chart-tab" id="tab-bar" onclick="switchChart('bar')">Annual</button>
+      </div>
+    </div>
+    <div class="chart-wrap"><canvas id="growthChart"></canvas></div>
+  </div>
+
+  <!-- TABLE -->
+  <div class="card mb-20">
+    <div class="card-title">Year-by-Year Growth Milestones</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Year</th><th>Value (₹)</th><th>Interest Earned (₹)</th><th>Multiple</th><th>Doubling Progress</th></tr>
+        </thead>
+        <tbody id="year-table"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <h2 class="faq-heading">Understanding the Rule of 72 & Compound Growth</h2>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What is the Rule of 72?<span class="arrow">+</span></div>
+      <div class="faq-a">The Rule of 72 is a mental math shortcut: divide 72 by your annual return rate to estimate how many years it takes to double your money. At 8% return, money doubles in approximately 72 ÷ 8 = 9 years. At 12%, it doubles in 6 years. The rule is approximate — our calculator uses the exact compound interest formula: A = P(1 + r/n)^(nt).</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How long does it take to double ₹1 lakh at 10%?<span class="arrow">+</span></div>
+      <div class="faq-a">At 10% annual return with annual compounding, ₹1 lakh doubles to ₹2 lakh in approximately 7.3 years. With monthly compounding at 10%, it takes slightly less — about 7.1 years. After 20 years at 10%, ₹1 lakh grows to approximately ₹6.7 lakhs.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What is compound interest vs simple interest?<span class="arrow">+</span></div>
+      <div class="faq-a">Simple interest is calculated only on your principal. Compound interest is calculated on both your principal AND your accumulated interest — meaning you earn "interest on interest." Over long periods, the difference is enormous. ₹1 lakh at 10% simple interest for 20 years = ₹3 lakh. At compound interest = ₹6.7 lakh. That's the power of compounding.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How does compounding frequency affect returns?<span class="arrow">+</span></div>
+      <div class="faq-a">The more frequently interest compounds, the faster your money grows. At 10% annual rate: annual compounding gives 10% per year. Monthly compounding gives effectively 10.47% (the Effective Annual Rate). Daily compounding gives 10.52%. The difference seems small, but over 20–30 years it adds up to lakhs on a significant corpus.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Which investments double money fastest in India?<span class="arrow">+</span></div>
+      <div class="faq-a">Based on historical data: Equity mutual funds (12–15% p.a.) double money in 5–6 years. PPF (7.1% p.a.) doubles in about 10 years. Fixed Deposits (6–7%) double in about 10–12 years. NPS (10–12% p.a.) doubles in 6–7 years. Real estate returns vary widely by location. Higher returns come with higher risk — diversification is key.</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-brand">Black Belt Code Labs</div>
+  <p>Results are indicative estimates only. Past returns do not guarantee future performance. Consult a SEBI-registered financial advisor before investing.</p>
+  <p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p>
+</footer>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Double Your Money Calculator","url":"https://calcphi.com/double-money.html","description":"Calculate how long it takes to double your money using the Rule of 72 and exact compound interest formula.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the Rule of 72?","acceptedAnswer":{"@type":"Answer","text":"Divide 72 by your annual return rate to estimate years to double money. At 8%, money doubles in ~9 years."}},{"@type":"Question","name":"How long to double ₹1 lakh at 10%?","acceptedAnswer":{"@type":"Answer","text":"At 10% annual compounding, ₹1 lakh doubles in approximately 7.3 years."}},{"@type":"Question","name":"What investments double money fastest in India?","acceptedAnswer":{"@type":"Answer","text":"Equity mutual funds (12-15% p.a.) double in 5-6 years. PPF (7.1%) doubles in ~10 years."}}]}
+</script>
+
+<script>
+const FREQ_LABELS = ['Annual','Semi-Annual','Quarterly','Monthly','Daily'];
+const FREQ_VALUES = [1, 2, 4, 12, 365];
+
+let chartMode = 'area';
+let myChart = null;
+
+function switchChart(mode) {
+  chartMode = mode;
+  document.querySelectorAll('.chart-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + mode).classList.add('active');
+  calculate();
+}
+
+function yearsToMultiple(principal, rate, n, target) {
+  // A = P(1+r/n)^(nt) => solve for t
+  // t = ln(target) / (n * ln(1 + r/n))
+  return Math.log(target) / (n * Math.log(1 + rate / n));
+}
+
+function calculate() {
+  const principal = +document.getElementById('principal').value;
+  const rate      = +document.getElementById('rate').value / 100;
+  const freqIdx   = +document.getElementById('freq').value - 1;
+  const years     = +document.getElementById('years').value;
+  const n         = FREQ_VALUES[freqIdx];
+
+  document.getElementById('val-principal').textContent = principal.toLocaleString('en-IN');
+  document.getElementById('val-rate').textContent      = +document.getElementById('rate').value;
+  document.getElementById('val-freq').textContent      = FREQ_LABELS[freqIdx];
+  document.getElementById('val-years').textContent     = years;
+  document.getElementById('disp-years').textContent    = years;
+
+  // Final value
+  const finalVal   = principal * Math.pow(1 + rate / n, n * years);
+  const totalRet   = ((finalVal - principal) / principal) * 100;
+  const multiple   = finalVal / principal;
+
+  // Rule of 72
+  const r72rate    = +document.getElementById('rate').value;
+  const r72result  = (72 / r72rate).toFixed(1);
+  document.getElementById('r72-rate').textContent   = r72rate;
+  document.getElementById('r72-result').textContent = r72result;
+
+  // Milestones
+  const mults = [2, 3, 5, 10];
+  const mIds  = ['m2x','m3x','m5x','m10x'];
+  const mVIds = ['m2x-val','m3x-val','m5x-val','m10x-val'];
+  mults.forEach((m, i) => {
+    const yrs = yearsToMultiple(principal, rate, n, m);
+    document.getElementById(mIds[i]).textContent = yrs <= 100 ? yrs.toFixed(1) + ' yrs' : '100+ yrs';
+    document.getElementById(mVIds[i]).textContent = yrs <= 100 ? formatINR(principal * m) : '—';
+  });
+
+  // Exact double
+  const yrsDouble = yearsToMultiple(principal, rate, n, 2);
+  const yrsTriple = yearsToMultiple(principal, rate, n, 3);
+
+  document.getElementById('final-value').textContent    = formatINR(finalVal);
+  document.getElementById('yrs-double').textContent     = yrsDouble.toFixed(1) + ' yrs';
+  document.getElementById('yrs-triple').textContent     = yrsTriple.toFixed(1) + ' yrs';
+  document.getElementById('rule72-est').textContent     = r72result + ' yrs';
+  document.getElementById('total-return').textContent   = totalRet.toFixed(1) + '%';
+  document.getElementById('growth-multiple').textContent = multiple.toFixed(2) + '× growth';
+
+  const retPct = ((finalVal - principal) / finalVal) * 100;
+  document.getElementById('progress-fill').style.width = Math.min(retPct, 95).toFixed(1) + '%';
+
+  // Build yearly data
+  const labels = [], yValues = [], rows = [];
+  for (let yr = 1; yr <= years; yr++) {
+    const val   = principal * Math.pow(1 + rate / n, n * yr);
+    const intEarned = val - principal;
+    const mult  = (val / principal).toFixed(2);
+    const dblPct = Math.min(100, ((val - principal) / principal) * 100 / 100 * 100).toFixed(1);
+    labels.push('Yr ' + yr);
+    yValues.push(Math.round(val));
+    rows.push({ yr, val: Math.round(val), int: Math.round(intEarned), mult, dblPct });
+  }
+
+  // Chart
+  if (myChart) myChart.destroy();
+  const ctx = document.getElementById('growthChart').getContext('2d');
+  if (chartMode === 'area') {
+    const gV = ctx.createLinearGradient(0,0,0,260); gV.addColorStop(0,'rgba(34,211,165,0.35)'); gV.addColorStop(1,'rgba(34,211,165,0)');
+    myChart = makeAreaChart(ctx, labels, [
+      { label:'Investment Value', data:yValues, borderColor:'rgba(34,211,165,0.9)', backgroundColor:gV, borderWidth:2, fill:true, tension:0.4, pointRadius:0, pointHoverRadius:5 }
+    ]);
+  } else {
+    const gains = yValues.map(v => v - principal);
+    const princ = yValues.map(() => principal);
+    myChart = makeBarChart(ctx, labels, [
+      { label:'Principal',    data:princ,  backgroundColor:'rgba(59,130,246,0.7)', borderRadius:3 },
+      { label:'Returns',      data:gains,  backgroundColor:'rgba(34,211,165,0.7)', borderRadius:3 }
+    ]);
+  }
+
+  // Table
+  document.getElementById('year-table').innerHTML = rows.map(r =>
+    `<tr>
+      <td>Year ${r.yr}</td>
+      <td>₹${formatNum(r.val)}</td>
+      <td class="positive">₹${formatNum(r.int)}</td>
+      <td class="positive">${r.mult}×</td>
+      <td>${r.yr >= Math.floor(yrsDouble) && r.yr < Math.ceil(yrsDouble) + 1 ? '<span style="color:var(--gold)">● Doubling year!</span>' : r.dblPct + '%'}</td>
+    </tr>`
+  ).join('');
+}
+
+['principal','rate','freq','years'].forEach(id => document.getElementById(id).addEventListener('input', calculate));
+document.addEventListener('DOMContentLoaded', calculate);
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":2,"name":"Double Money","item":"https://calcphi.com/in/double-money.html"}]}</script>
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" data-region="IN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94D5DND9LS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag("js", new Date());
+  gtag("config", "G-94D5DND9LS", {{ page_title: document.title, page_location: window.location.href }});
+</script>
+<meta name="google-site-verification" content="EOSYQ9kWEpTvsQah9Do3mUA54q-1oFvyKwXG3zERx3k">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inflation Calculator 2026 – Real Value of Money | CalcPhi</title>
+<meta name="description" content="Calculate real purchasing power of money after inflation. See how much ₹1 lakh today is worth in 10 or 20 years at Indian inflation rates.">
+<meta name="keywords" content="inflation calculator India, real value of money calculator, purchasing power calculator, inflation adjusted returns 2026">
+<link rel="canonical" href="https://calcphi.com/in/inflation-calculator.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/shared.js" defer></script>
+<style>
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 600px) { .comparison-grid { grid-template-columns: 1fr; } }
+
+  .compare-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .compare-card::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+  }
+  .compare-card.invested::after { background: var(--accent2); }
+  .compare-card.nominal::after  { background: var(--gold); }
+  .compare-card.real::after     { background: var(--accent); }
+
+  .compare-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; }
+  .compare-value { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 4px; }
+  .compare-sub   { font-size: 12px; color: var(--muted); }
+
+  .real-return-banner {
+    background: rgba(245,158,11,0.08);
+    border: 1px solid rgba(245,158,11,0.25);
+    border-radius: var(--radius-sm);
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: var(--soft);
+    display: flex; align-items: center; gap: 12px;
+  }
+  .real-return-banner .big { font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--gold); white-space: nowrap; }
+</style>
+<meta property="og:title" content="Inflation Calculator 2026 – Real Value of Money">
+<meta property="og:description" content="Calculate the real purchasing power of money after inflation. See nominal vs real returns on any investment.">
+<meta property="og:image" content="https://calcphi.com/og-image.jpg">
+<meta property="og:url" content="https://calcphi.com/in/inflation-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcPhi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Inflation Calculator 2026 – Real Value of Money">
+<meta name="twitter:description" content="Calculate the real purchasing power of money after inflation. See nominal vs real returns on any investment.">
+<meta name="twitter:image" content="https://calcphi.com/og-image.jpg">
+<meta name="twitter:site" content="@calcphi">
+<link rel="alternate" hreflang="en-IN" href="https://calcphi.com/in/inflation-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://calcphi.com/in/inflation-calculator.html">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Calc<span>Phi</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-home">⌂ All Calculators</a>
+      <a href="sip-main.html">SIP</a>
+      <a href="target-sip.html">Target SIP</a>
+      <a href="1-crore-sip.html">1 Cr SIP</a>
+      <a href="emi-calculator.html">EMI</a>
+      <a href="income-tax.html">Tax</a>
+      <a href="fire-calculator.html">FIRE</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrapper">
+
+  <header>
+    <div class="badge">Purchasing Power · Real Returns</div>
+    <h1>Inflation Calculator —<br><em>What Is Your Money Really Worth?</em></h1>
+    <p class="subtitle">Inflation silently erodes your wealth. See the real purchasing power of your savings today and find out how much you actually need to invest to beat inflation.</p>
+  </header>
+
+  <div class="info-banner">
+    India's average inflation (CPI) has been ~6% annually over the past decade. Your investments need to return more than inflation to actually grow your wealth in real terms.
+  </div>
+
+  <div class="main-grid">
+
+    <!-- INPUTS -->
+    <div class="card">
+      <div class="card-title">Your Money Details</div>
+
+      <div class="field">
+        <div class="field-header">
+          <span class="field-label">Current Amount / Savings</span>
+          <div class="field-value">₹<span id="val-amount">5,00,000</span></div>
+        </div>
+        <input type="range" id="amount" min="10000" max="10000000" step="10000" value="500000">
+        <div class="range-labels"><span>₹10K</span><span>₹1 Cr</span></div>
+      </div>
+
+      <div class="field">
+        <div class="field-header">
+          <span class="field-label">Annual Inflation Rate</span>
+          <div class="field-value"><span id="val-inflation">6</span><span>% p.a.</span></div>
+        </div>
+        <input type="range" id="inflation" min="1" max="15" step="0.5" value="6">
+        <div class="range-labels"><span>1%</span><span>15%</span></div>
+      </div>
+
+      <div class="field">
+        <div class="field-header">
+          <span class="field-label">Investment Return Rate</span>
+          <div class="field-value"><span id="val-rate">10</span><span>% p.a.</span></div>
+        </div>
+        <input type="range" id="rate" min="1" max="25" step="0.5" value="10">
+        <div class="range-labels"><span>1%</span><span>25%</span></div>
+      </div>
+
+      <div class="field">
+        <div class="field-header">
+          <span class="field-label">Time Period</span>
+          <div class="field-value"><span id="val-years">20</span><span> yrs</span></div>
+        </div>
+        <input type="range" id="years" min="1" max="40" step="1" value="20">
+        <div class="range-labels"><span>1 yr</span><span>40 yrs</span></div>
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="results-card">
+      <div class="corpus-display">
+        <div class="corpus-label">Real Purchasing Power After <span id="disp-years">20</span> Years</div>
+        <div class="corpus-amount" id="real-value">₹0</div>
+        <div class="corpus-sub">in today's money (inflation-adjusted)</div>
+      </div>
+      <div class="stats-row">
+        <div class="stat-box">
+          <div class="stat-box-label">Nominal Value</div>
+          <div class="stat-box-value gold" id="nominal-value">₹0</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-label">Real Return Rate</div>
+          <div class="stat-box-value green" id="real-rate">0%</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-label">Inflation Cost</div>
+          <div class="stat-box-value red" id="inflation-cost">₹0</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-label">Purchasing Power Loss</div>
+          <div class="stat-box-value red" id="pp-loss">0%</div>
+        </div>
+      </div>
+      <div class="progress-section">
+        <div class="progress-header">
+          <span>Real value vs Nominal value</span>
+          <span id="real-pct">0%</span>
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progress-fill" style="width:50%"></div>
+        </div>
+        <div class="progress-legend">
+          <span><span class="legend-dot" style="background:var(--accent)"></span>Real (inflation-adj.)</span>
+          <span><span class="legend-dot" style="background:var(--danger)"></span>Lost to inflation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REAL RETURN BANNER -->
+  <div class="real-return-banner">
+    <div class="big" id="real-rate-display">+4.0%</div>
+    <div>Your <strong>real return rate</strong> (investment return minus inflation). This is your true wealth growth rate. To beat inflation meaningfully, aim for a real return above 4% per year.</div>
+  </div>
+
+  <!-- 3-WAY COMPARISON -->
+  <div class="comparison-grid">
+    <div class="compare-card invested">
+      <div class="compare-label">Money Under Mattress</div>
+      <div class="compare-value red" id="mattress-val">₹0</div>
+      <div class="compare-sub">real value if not invested</div>
+    </div>
+    <div class="compare-card nominal">
+      <div class="compare-label">FD at 7% (nominal)</div>
+      <div class="compare-value gold" id="fd-val">₹0</div>
+      <div class="compare-sub">real value after inflation</div>
+    </div>
+    <div class="compare-card real">
+      <div class="compare-label">Equity at your rate</div>
+      <div class="compare-value green" id="equity-val">₹0</div>
+      <div class="compare-sub">real value at your return rate</div>
+    </div>
+  </div>
+
+  <!-- CHART -->
+  <div class="chart-section">
+    <div class="chart-header">
+      <div class="chart-title">Nominal vs Real Value Over Time</div>
+      <div class="chart-tabs">
+        <button class="chart-tab active" id="tab-area" onclick="switchChart('area')">Lines</button>
+        <button class="chart-tab" id="tab-bar" onclick="switchChart('bar')">Annual</button>
+      </div>
+    </div>
+    <div class="chart-wrap"><canvas id="growthChart"></canvas></div>
+  </div>
+
+  <!-- TABLE -->
+  <div class="card mb-20">
+    <div class="card-title">Year-by-Year Inflation Impact</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Year</th><th>Nominal Value (₹)</th><th>Real Value (₹)</th><th>Inflation Cost (₹)</th><th>Real Return %</th></tr>
+        </thead>
+        <tbody id="year-table"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <h2 class="faq-heading">Understanding Inflation & Real Returns</h2>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What is the difference between nominal and real returns?<span class="arrow">+</span></div>
+      <div class="faq-a">Nominal return is the stated return on your investment (e.g., 10% from an equity fund). Real return adjusts for inflation: Real Return ≈ Nominal Return – Inflation Rate. Using the Fisher Equation precisely: Real Return = ((1 + Nominal) / (1 + Inflation)) – 1. At 10% return with 6% inflation, your real return is only about 3.77% — that's your actual wealth increase.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What is India's average inflation rate?<span class="arrow">+</span></div>
+      <div class="faq-a">India's Consumer Price Inflation (CPI) has averaged approximately 5.5–6.5% per year over the past decade. Food inflation tends to be higher (7–8%), while core inflation (excluding food and fuel) is typically 4–5%. The RBI's inflation target is 4% with a band of 2–6%. For long-term planning, using 6% as your inflation assumption is a conservative and realistic benchmark.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How does inflation affect my savings?<span class="arrow">+</span></div>
+      <div class="faq-a">Every year at 6% inflation, your money loses about 6% of its purchasing power. ₹5 lakhs today will have the purchasing power of only ₹2.78 lakhs in 10 years and ₹1.55 lakhs in 20 years. Money sitting in a savings account at 3.5% is actually losing 2.5% in real terms per year. This is why investing in inflation-beating assets (equity, real estate) is not optional — it's essential.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What investments beat inflation in India?<span class="arrow">+</span></div>
+      <div class="faq-a">Historically, equity mutual funds (12–15% p.a.) provide the strongest inflation-beating returns, delivering 6–9% real returns. Real estate has varied widely. Gold has matched inflation over very long periods. PPF (7.1%) barely beats inflation in nominal terms. Fixed Deposits (6–7%) often fail to beat inflation after taxes. For inflation-beating wealth creation, equity exposure is critical.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I calculate future cost of an expense?<span class="arrow">+</span></div>
+      <div class="faq-a">To find the future cost of any expense, use: Future Cost = Present Cost × (1 + Inflation Rate)^Years. If your monthly expenses are ₹50,000 today at 6% inflation, they'll be ₹50,000 × (1.06)^20 = ₹1,60,357/month in 20 years. This is critical for retirement planning — you must plan for inflated future expenses, not today's expenses.</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-brand">Black Belt Code Labs</div>
+  <p>Results are indicative estimates only. Inflation rates are historical averages and may differ in the future. Consult a financial advisor for personalized advice.</p>
+  <p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p>
+</footer>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Inflation Calculator India","url":"https://calcphi.com/inflation-calculator.html","description":"Calculate the real purchasing power of your savings after inflation and see true inflation-adjusted investment returns.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is India's average inflation rate?","acceptedAnswer":{"@type":"Answer","text":"India's CPI inflation has averaged 5.5–6.5% per year over the past decade. Using 6% for long-term planning is a conservative benchmark."}},{"@type":"Question","name":"What investments beat inflation in India?","acceptedAnswer":{"@type":"Answer","text":"Equity mutual funds (12-15% p.a.) historically provide the strongest real returns of 6-9% above inflation."}},{"@type":"Question","name":"What is real return?","acceptedAnswer":{"@type":"Answer","text":"Real return = Nominal return minus inflation rate. At 10% return with 6% inflation, real return is approximately 3.77%."}}]}
+</script>
+
+<script>
+let chartMode = 'area';
+let myChart = null;
+
+function switchChart(mode) {
+  chartMode = mode;
+  document.querySelectorAll('.chart-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + mode).classList.add('active');
+  calculate();
+}
+
+function calculate() {
+  const amount    = +document.getElementById('amount').value;
+  const inflation = +document.getElementById('inflation').value / 100;
+  const rate      = +document.getElementById('rate').value / 100;
+  const years     = +document.getElementById('years').value;
+
+  document.getElementById('val-amount').textContent    = amount.toLocaleString('en-IN');
+  document.getElementById('val-inflation').textContent = +document.getElementById('inflation').value;
+  document.getElementById('val-rate').textContent      = +document.getElementById('rate').value;
+  document.getElementById('val-years').textContent     = years;
+  document.getElementById('disp-years').textContent    = years;
+
+  // Nominal value after investment returns
+  const nominalVal = amount * Math.pow(1 + rate, years);
+  // Real value (inflation-adjusted)
+  const realVal    = amount * Math.pow((1 + rate) / (1 + inflation), years);
+  // Inflation cost
+  const inflCost   = nominalVal - realVal;
+  // Real return rate (Fisher)
+  const realRate   = ((1 + rate) / (1 + inflation) - 1) * 100;
+  // Purchasing power loss if no investment
+  const mattress   = amount * Math.pow(1 / (1 + inflation), years);
+  const ppLoss     = ((amount - mattress) / amount) * 100;
+  // FD comparison at 7%
+  const fdNominal  = amount * Math.pow(1 + 0.07, years);
+  const fdReal     = amount * Math.pow((1.07) / (1 + inflation), years);
+
+  document.getElementById('real-value').textContent     = formatINR(realVal);
+  document.getElementById('nominal-value').textContent  = formatINR(nominalVal);
+  document.getElementById('real-rate').textContent      = realRate.toFixed(2) + '%';
+  document.getElementById('inflation-cost').textContent = formatINR(inflCost);
+  document.getElementById('pp-loss').textContent        = ppLoss.toFixed(1) + '%';
+  document.getElementById('real-rate-display').textContent = (realRate >= 0 ? '+' : '') + realRate.toFixed(1) + '%';
+  document.getElementById('real-rate-display').style.color = realRate >= 3 ? 'var(--accent)' : realRate >= 0 ? 'var(--gold)' : 'var(--danger)';
+
+  const realPct = (realVal / nominalVal) * 100;
+  document.getElementById('real-pct').textContent       = realPct.toFixed(0) + '% real';
+  document.getElementById('progress-fill').style.width  = realPct.toFixed(1) + '%';
+
+  document.getElementById('mattress-val').textContent   = formatINR(mattress);
+  document.getElementById('fd-val').textContent         = formatINR(fdReal);
+  document.getElementById('equity-val').textContent     = formatINR(realVal);
+
+  // Yearly data
+  const labels = [], yNominal = [], yReal = [], rows = [];
+  for (let yr = 1; yr <= years; yr++) {
+    const nom  = amount * Math.pow(1 + rate, yr);
+    const real = amount * Math.pow((1 + rate) / (1 + inflation), yr);
+    const iCost = nom - real;
+    const rRate = ((1 + rate) / (1 + inflation) - 1) * 100;
+    labels.push('Yr ' + yr);
+    yNominal.push(Math.round(nom));
+    yReal.push(Math.round(real));
+    rows.push({ yr, nom: Math.round(nom), real: Math.round(real), iCost: Math.round(iCost), rRate: rRate.toFixed(2) });
+  }
+
+  // Chart
+  if (myChart) myChart.destroy();
+  const ctx = document.getElementById('growthChart').getContext('2d');
+  if (chartMode === 'area') {
+    const gN = ctx.createLinearGradient(0,0,0,260); gN.addColorStop(0,'rgba(245,158,11,0.3)'); gN.addColorStop(1,'rgba(245,158,11,0)');
+    const gR = ctx.createLinearGradient(0,0,0,260); gR.addColorStop(0,'rgba(34,211,165,0.3)'); gR.addColorStop(1,'rgba(34,211,165,0)');
+    myChart = makeAreaChart(ctx, labels, [
+      { label:'Nominal Value', data:yNominal, borderColor:'rgba(245,158,11,0.9)', backgroundColor:gN, borderWidth:2, fill:true, tension:0.4, pointRadius:0, pointHoverRadius:5 },
+      { label:'Real Value',    data:yReal,    borderColor:'rgba(34,211,165,0.9)', backgroundColor:gR, borderWidth:2, fill:true, tension:0.4, pointRadius:0, pointHoverRadius:5 }
+    ]);
+  } else {
+    const infCosts = yNominal.map((v,i) => v - yReal[i]);
+    myChart = makeBarChart(ctx, labels, [
+      { label:'Real Value',      data:yReal,    backgroundColor:'rgba(34,211,165,0.7)', borderRadius:3 },
+      { label:'Lost to Inflation', data:infCosts, backgroundColor:'rgba(244,63,94,0.5)', borderRadius:3 }
+    ]);
+  }
+
+  // Table
+  document.getElementById('year-table').innerHTML = rows.map(r =>
+    `<tr>
+      <td>Year ${r.yr}</td>
+      <td class="positive">₹${formatNum(r.nom)}</td>
+      <td>₹${formatNum(r.real)}</td>
+      <td class="negative">₹${formatNum(r.iCost)}</td>
+      <td class="${parseFloat(r.rRate) > 0 ? 'positive' : 'negative'}">${r.rRate}%</td>
+    </tr>`
+  ).join('');
+}
+
+['amount','inflation','rate','years'].forEach(id => document.getElementById(id).addEventListener('input', calculate));
+document.addEventListener('DOMContentLoaded', calculate);
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":2,"name":"Inflation Calculator","item":"https://calcphi.com/in/inflation-calculator.html"}]}</script>
+</body>
+</html>

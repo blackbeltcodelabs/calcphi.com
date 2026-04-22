@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" data-region="IN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94D5DND9LS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag("js", new Date());
+  gtag("config", "G-94D5DND9LS", {{ page_title: document.title, page_location: window.location.href }});
+</script>
+<meta name="google-site-verification" content="EOSYQ9kWEpTvsQah9Do3mUA54q-1oFvyKwXG3zERx3k">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FIRE Calculator 2026 – Financial Independence | CalcPhi</title>
+<meta name="description" content="Find your FIRE number — the exact corpus to retire early and live on investment returns. 4% safe withdrawal rate calculator for India.">
+<meta name="keywords" content="FIRE number calculator, financial independence calculator, retire early calculator, how much to retire calculator 2026">
+<link rel="canonical" href="https://calcphi.com/in/fire-calculator.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/shared.js" defer></script>
+<meta property="og:title" content="FIRE Calculator 2026 – Financial Independence Number">
+<meta property="og:description" content="Find your FIRE number — the exact corpus to retire early and live off investment returns. 4% rule calculator.">
+<meta property="og:image" content="https://calcphi.com/og-image.jpg">
+<meta property="og:url" content="https://calcphi.com/in/fire-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcPhi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FIRE Calculator 2026 – Financial Independence Number">
+<meta name="twitter:description" content="Find your FIRE number — the exact corpus to retire early and live off investment returns. 4% rule calculator.">
+<meta name="twitter:image" content="https://calcphi.com/og-image.jpg">
+<meta name="twitter:site" content="@calcphi">
+<link rel="alternate" hreflang="en-IN" href="https://calcphi.com/in/fire-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://calcphi.com/in/fire-calculator.html">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Calc<span>Phi</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-home">⌂ All Calculators</a>
+      <a href="sip-main.html">SIP</a>
+      <a href="target-sip.html">Target SIP</a>
+      <a href="1-crore-sip.html">1 Cr SIP</a>
+      <a href="emi-calculator.html">EMI</a>
+      <a href="income-tax.html">Tax</a>
+      <a href="fire-calculator.html">FIRE</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrapper">
+
+  <header>
+    <div class="badge">FIRE Movement · Financial Independence</div>
+    <h1>FIRE Number Calculator —<br><em>Your Magic Retirement Target</em></h1>
+    <p class="subtitle">Find the exact corpus you need to retire early and never work for money again. Based on the 4% safe withdrawal rule used by the FIRE community worldwide.</p>
+  </header>
+
+  <div class="info-banner">
+    The FIRE Number is 25× your annual expenses (based on the 4% rule). Adjust your expenses, current savings, and return rate to see your personalized timeline.
+  </div>
+
+  <div class="main-grid">
+
+    <!-- INPUTS -->
+    <div class="card">
+      <div class="card-title">Your FIRE Inputs</div>
+
+      <div class="field">
+        <div class="field-header">
+          <span class="field-label">Annual Expenses (today)</span>
+          <div class="field-value">₹<span id="val-expenses">6,00,000</span></div>
+        </div>
+        <input type="range" id="expenses" min="100000" max="5000000" step="50000" value="600000">
+        <div class="range-labels"><span>₹1L</span><span>₹50L</span></div>
+      </div>
+
+      <div class="field">
+        <div class="field-header">
+          <span class="field-label">Current Savings / Investments</span>
+          <div class="field-value">₹<span id="val-savings">10,00,000</span></div>
+        </div>
+        <input type="range" id="savings" min="0" max="50000000" step="100000" value="1000000">
+        <div class="range-labels"><span>₹0</span><span>₹5 Cr</span></div>
+      </div>
+
+      <div class="field">
+        <div class="field-header">
+          <span class="field-label">Monthly Savings / Investment</span>
+          <div class="field-value">₹<span id="val-monthly">30,000</span></div>
+        </div>
+        <input type="range" id="monthly" min="5000" max="500000" step="5000" value="30000">
+        <div class="range-labels"><span>₹5K</span><span>₹5L</span></div>
+      </div>
+
+      <div class="field">
+        <div class="field-header">
+          <span class="field-label">Expected Annual Return</span>
+          <div class="field-value"><span id="val-rate">10</span><span>% p.a.</span></div>
+        </div>
+        <input type="range" id="rate" min="4" max="20" step="0.5" value="10">
+        <div class="range-labels"><span>4%</span><span>20%</span></div>
+      </div>
+
+      <div class="field">
+        <div class="field-header">
+          <span class="field-label">Expected Inflation Rate</span>
+          <div class="field-value"><span id="val-inflation">6</span><span>% p.a.</span></div>
+        </div>
+        <input type="range" id="inflation" min="2" max="12" step="0.5" value="6">
+        <div class="range-labels"><span>2%</span><span>12%</span></div>
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="results-card">
+      <div class="corpus-display">
+        <div class="corpus-label">Your FIRE Number</div>
+        <div class="corpus-amount" id="fire-number">₹0</div>
+        <div class="corpus-sub">total corpus needed to retire</div>
+      </div>
+      <div class="stats-row">
+        <div class="stat-box">
+          <div class="stat-box-label">Years to FIRE</div>
+          <div class="stat-box-value gold" id="years-to-fire">—</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-label">Savings Rate</div>
+          <div class="stat-box-value green" id="savings-rate">—</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-label">Inflation-Adj. FIRE</div>
+          <div class="stat-box-value blue" id="fire-inflated">₹0</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-label">Monthly Withdrawal</div>
+          <div class="stat-box-value green" id="monthly-withdrawal">₹0</div>
+        </div>
+      </div>
+      <div class="progress-section">
+        <div class="progress-header">
+          <span>Progress toward FIRE</span>
+          <span id="fire-progress-pct">0% achieved</span>
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progress-fill" style="width:0%"></div>
+        </div>
+        <div class="progress-legend">
+          <span><span class="legend-dot" style="background:var(--accent2)"></span>Current savings</span>
+          <span><span class="legend-dot" style="background:var(--accent)"></span>FIRE target</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHART -->
+  <div class="chart-section">
+    <div class="chart-header">
+      <div class="chart-title">Journey to Financial Independence</div>
+      <div class="chart-tabs">
+        <button class="chart-tab active" id="tab-area" onclick="switchChart('area')">Wealth</button>
+        <button class="chart-tab" id="tab-bar" onclick="switchChart('bar')">Annual</button>
+      </div>
+    </div>
+    <div class="chart-wrap"><canvas id="growthChart"></canvas></div>
+  </div>
+
+  <!-- TABLE -->
+  <div class="card mb-20">
+    <div class="card-title">Year-by-Year FIRE Progress</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Year</th><th>Portfolio Value (₹)</th><th>FIRE Target (₹)</th><th>Gap (₹)</th><th>% Achieved</th></tr>
+        </thead>
+        <tbody id="year-table"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <h2 class="faq-heading">Understanding FIRE & Financial Independence</h2>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What is the FIRE Number?<span class="arrow">+</span></div>
+      <div class="faq-a">Your FIRE Number is the total investment corpus you need to retire early and live purely off investment returns. It equals 25× your annual expenses, based on the 4% Safe Withdrawal Rate — the finding from the Trinity Study that withdrawing 4% of a portfolio annually has historically sustained withdrawals for 30+ years.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What is the 4% rule?<span class="arrow">+</span></div>
+      <div class="faq-a">The 4% rule, derived from the 1998 Trinity Study, states that you can safely withdraw 4% of your retirement portfolio every year, adjusted for inflation, without running out of money over a 30-year retirement. If your FIRE Number is ₹2 Crore, you can withdraw ₹8 lakh per year (₹66,667/month) indefinitely.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What are the types of FIRE?<span class="arrow">+</span></div>
+      <div class="faq-a">There are several FIRE variants: Lean FIRE (minimal expenses, smaller corpus), Fat FIRE (comfortable lifestyle, larger corpus), Barista FIRE (semi-retire with part-time income), and Coast FIRE (enough invested that growth alone reaches FIRE target without further contributions). This calculator targets traditional FIRE.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How does savings rate affect FIRE timeline?<span class="arrow">+</span></div>
+      <div class="faq-a">Savings rate is the most powerful lever in FIRE. Saving 10% of income may take 40+ years. Saving 50% can get you there in ~17 years. Saving 75% can mean FIRE in under 7 years. The math is dramatic: every extra rupee saved both grows your corpus and reduces the corpus you need (since you're spending less).</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Should I account for inflation in my FIRE number?<span class="arrow">+</span></div>
+      <div class="faq-a">Yes — always. ₹6 lakh/year today will cost far more in 15–20 years due to inflation. This calculator computes your inflation-adjusted FIRE number (the corpus needed at your future retirement date), not just your current expenses × 25. The 4% rule naturally accounts for inflation through annual withdrawals adjusting upward.</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-brand">Black Belt Code Labs</div>
+  <p>Results are indicative estimates only. Investment returns are not guaranteed. Consult a SEBI-registered financial advisor before making investment decisions.</p>
+  <p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p>
+</footer>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"FIRE Number Calculator","url":"https://calcphi.com/fire-calculator.html","description":"Calculate your FIRE number — the exact corpus needed to retire early based on the 4% safe withdrawal rule.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the FIRE Number?","acceptedAnswer":{"@type":"Answer","text":"Your FIRE Number is 25× your annual expenses — the corpus needed to retire early and live off 4% annual withdrawals indefinitely."}},{"@type":"Question","name":"What is the 4% rule?","acceptedAnswer":{"@type":"Answer","text":"The 4% rule states you can withdraw 4% of your portfolio annually, adjusted for inflation, without depleting it over 30+ years."}},{"@type":"Question","name":"How does savings rate affect FIRE?","acceptedAnswer":{"@type":"Answer","text":"Savings rate is the strongest FIRE lever. Saving 10% may take 40 years. Saving 50% can mean FIRE in ~17 years."}}]}
+</script>
+
+<script>
+let chartMode = 'area';
+let myChart = null;
+
+function switchChart(mode) {
+  chartMode = mode;
+  document.querySelectorAll('.chart-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + mode).classList.add('active');
+  calculate();
+}
+
+function calculate() {
+  const annualExp  = +document.getElementById('expenses').value;
+  const currentSav = +document.getElementById('savings').value;
+  const monthly    = +document.getElementById('monthly').value;
+  const rate       = +document.getElementById('rate').value / 100;
+  const inflation  = +document.getElementById('inflation').value / 100;
+  const monthlyRate = rate / 12;
+
+  // FIRE number: 25x today's expenses (base)
+  const fireBase = annualExp * 25;
+
+  // Project portfolio year by year until FIRE achieved (max 50 yrs)
+  let portfolio = currentSav;
+  let fireYear  = null;
+  const labels  = [], yPortfolio = [], yFireTarget = [], rows = [];
+  const MAX_YRS = 50;
+
+  for (let yr = 1; yr <= MAX_YRS; yr++) {
+    // Grow existing portfolio + monthly contributions
+    for (let m = 0; m < 12; m++) {
+      portfolio = (portfolio + monthly) * (1 + monthlyRate);
+    }
+    // Inflation-adjusted FIRE target for this year
+    const fireTarget = fireBase * Math.pow(1 + inflation, yr);
+    labels.push('Yr ' + yr);
+    yPortfolio.push(Math.round(portfolio));
+    yFireTarget.push(Math.round(fireTarget));
+
+    const gap       = Math.max(0, fireTarget - portfolio);
+    const achieved  = Math.min(100, (portfolio / fireTarget) * 100);
+    rows.push({ yr, portfolio: Math.round(portfolio), fireTarget: Math.round(fireTarget), gap: Math.round(gap), achieved: achieved.toFixed(1) });
+
+    if (fireYear === null && portfolio >= fireTarget) fireYear = yr;
+  }
+
+  // Monthly savings rate estimate (assume income = expenses/0.5 placeholder — user-driven)
+  const annualSavings = monthly * 12;
+  const estIncome     = annualExp + annualSavings;
+  const savingsRate   = (annualSavings / estIncome) * 100;
+
+  // Inflation-adj FIRE at target year
+  const fireAtYear    = fireYear ? fireBase * Math.pow(1 + inflation, fireYear) : fireBase * Math.pow(1 + inflation, MAX_YRS);
+  const monthlyWithdraw = (fireAtYear * 0.04) / 12;
+  const progressPct   = Math.min(100, (currentSav / fireBase) * 100);
+
+  document.getElementById('fire-number').textContent        = formatINR(fireBase);
+  document.getElementById('years-to-fire').textContent      = fireYear ? fireYear + ' yrs' : '50+ yrs';
+  document.getElementById('savings-rate').textContent       = savingsRate.toFixed(0) + '%';
+  document.getElementById('fire-inflated').textContent      = formatINR(fireAtYear);
+  document.getElementById('monthly-withdrawal').textContent = formatINR(monthlyWithdraw);
+  document.getElementById('fire-progress-pct').textContent  = progressPct.toFixed(0) + '% achieved';
+  document.getElementById('progress-fill').style.width      = progressPct.toFixed(1) + '%';
+
+  document.getElementById('val-expenses').textContent = annualExp.toLocaleString('en-IN');
+  document.getElementById('val-savings').textContent  = currentSav.toLocaleString('en-IN');
+  document.getElementById('val-monthly').textContent  = monthly.toLocaleString('en-IN');
+  document.getElementById('val-rate').textContent     = +document.getElementById('rate').value;
+  document.getElementById('val-inflation').textContent = +document.getElementById('inflation').value;
+
+  // Chart
+  if (myChart) myChart.destroy();
+  const ctx = document.getElementById('growthChart').getContext('2d');
+  // Limit chart to fireYear + 5 or 30 yrs max for readability
+  const showYrs = Math.min(fireYear ? fireYear + 3 : MAX_YRS, MAX_YRS);
+  const slicedLabels    = labels.slice(0, showYrs);
+  const slicedPortfolio = yPortfolio.slice(0, showYrs);
+  const slicedFire      = yFireTarget.slice(0, showYrs);
+
+  if (chartMode === 'area') {
+    const gP = ctx.createLinearGradient(0,0,0,260); gP.addColorStop(0,'rgba(59,130,246,0.3)'); gP.addColorStop(1,'rgba(59,130,246,0)');
+    const gF = ctx.createLinearGradient(0,0,0,260); gF.addColorStop(0,'rgba(245,158,11,0.25)'); gF.addColorStop(1,'rgba(245,158,11,0)');
+    myChart = makeAreaChart(ctx, slicedLabels, [
+      { label:'Your Portfolio', data:slicedPortfolio, borderColor:'rgba(59,130,246,0.9)', backgroundColor:gP, borderWidth:2, fill:true, tension:0.4, pointRadius:0, pointHoverRadius:5 },
+      { label:'FIRE Target',   data:slicedFire,      borderColor:'rgba(245,158,11,0.9)', backgroundColor:gF, borderWidth:2, fill:true, tension:0.4, pointRadius:0, pointHoverRadius:5, borderDash:[6,3] }
+    ]);
+  } else {
+    myChart = makeBarChart(ctx, slicedLabels, [
+      { label:'Portfolio Value', data:slicedPortfolio, backgroundColor:'rgba(59,130,246,0.7)', borderRadius:3 }
+    ]);
+  }
+
+  // Table (show up to 25 years)
+  document.getElementById('year-table').innerHTML = rows.slice(0, 25).map(r =>
+    `<tr>
+      <td>Year ${r.yr}</td>
+      <td>₹${formatNum(r.portfolio)}</td>
+      <td>₹${formatNum(r.fireTarget)}</td>
+      <td class="${r.gap > 0 ? 'negative' : 'positive'}">₹${formatNum(r.gap)}</td>
+      <td class="${parseFloat(r.achieved) >= 100 ? 'positive' : ''}">${r.achieved}%</td>
+    </tr>`
+  ).join('');
+}
+
+['expenses','savings','monthly','rate','inflation'].forEach(id => document.getElementById(id).addEventListener('input', calculate));
+document.addEventListener('DOMContentLoaded', calculate);
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":2,"name":"FIRE Calculator","item":"https://calcphi.com/in/fire-calculator.html"}]}</script>
+</body>
+</html>

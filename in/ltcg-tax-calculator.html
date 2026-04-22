@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-region="IN">
+<head>
+<!-- GA -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94D5DND9LS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-94D5DND9LS");</script>
+<meta name="google-site-verification" content="EOSYQ9kWEpTvsQah9Do3mUA54q-1oFvyKwXG3zERx3k">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LTCG Tax Calculator India 2026 – Long Term Capital Gains</title>
+<meta name="description" content="Calculate Long Term Capital Gains tax on equity shares, mutual funds, and property in India. LTCG rates for FY 2025-26. Free LTCG tax calculator India.">
+<meta name="keywords" content="LTCG calculator India 2026, long term capital gains tax calculator, LTCG on mutual fund India, LTCG on shares India 2026, capital gains tax calculator India">
+<link rel="canonical" href="https://calcphi.com/in/ltcg-tax-calculator.html">
+<link rel="alternate" hreflang="en-IN" href="https://calcphi.com/in/ltcg-tax-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://calcphi.com/in/ltcg-tax-calculator.html">
+<meta property="og:title" content="LTCG Tax Calculator India 2026 – Long Term Capital Gains">
+<meta property="og:description" content="Calculate Long Term Capital Gains tax on equity shares, mutual funds, and property in India. LTCG rates for FY 2025-26. Free LTCG tax calculator India.">
+<meta property="og:image" content="https://calcphi.com/og-image.jpg">
+<meta property="og:url" content="https://calcphi.com/in/ltcg-tax-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcPhi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LTCG Tax Calculator India 2026 – Long Term Capital Gains">
+<meta name="twitter:description" content="Calculate Long Term Capital Gains tax on equity shares, mutual funds, and property in India. LTCG rates for FY 2025-26. Free LTCG tax calculator India.">
+<meta name="twitter:image" content="https://calcphi.com/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/shared.js" defer></script>
+</head>
+<body>
+<nav><div class="nav-inner"><a href="index.html" class="nav-logo">Calc<span>Phi</span></a><div class="nav-links"><a href="index.html" class="nav-home">⌂ All Calculators</a><a href="sip-main.html">SIP</a><a href="emi-calculator.html">EMI</a><a href="income-tax.html">Tax</a><a href="in-hand-salary.html">Salary</a><a href="gst-calculator.html">GST</a><a href="fire-calculator.html">FIRE</a></div></div></nav>
+<div class="wrapper">
+<header>
+  <div class="badge">Capital Gains · FY 2025-26 Rates</div>
+  <h1>LTCG Tax Calculator 2026 —<br><em>Calculate Your Capital Gains Tax</em></h1>
+  <p class="subtitle">Calculate Long Term Capital Gains (LTCG) tax on equity, mutual funds, and property. Updated with FY 2025-26 Budget rates — 12.5% on equity LTCG above ₹1.25 lakh exemption.</p>
+</header>
+<div class="info-banner">Budget 2024 changed LTCG rates: Equity LTCG now taxed at 12.5% (was 10%) with ₹1.25 lakh exemption (was ₹1 lakh). Effective FY 2024-25 onwards. Property LTCG at 20% with indexation or 12.5% without indexation.</div>
+
+<div class="main-grid">
+  <div class="card"><div class="card-title">Capital Gains Details</div>
+    <div style="display:flex;gap:10px;margin-bottom:16px;">
+      <button class="rate-pill active" onclick="setAsset('equity',this)">Equity / Mutual Fund</button>
+      <button class="rate-pill" onclick="setAsset('property',this)">Property / Real Estate</button>
+      <button class="rate-pill" onclick="setAsset('debt',this)">Debt Funds</button>
+    </div>
+    <div class="field"><div class="field-header"><span class="field-label">Purchase Price (Cost of Acquisition)</span><div class="field-value">₹<span id="v-buy">5,00,000</span></div></div>
+    <input type="range" id="buy-price" min="10000" max="50000000" step="10000" value="500000"><div class="range-labels"><span>₹10K</span><span>₹5 Cr</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">Sale Price (Current Value)</span><div class="field-value">₹<span id="v-sell">8,00,000</span></div></div>
+    <input type="range" id="sell-price" min="10000" max="100000000" step="10000" value="800000"><div class="range-labels"><span>₹10K</span><span>₹10 Cr</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">Holding Period</span><div class="field-value"><span id="v-hold">2</span><span> years</span></div></div>
+    <input type="range" id="hold" min="1" max="30" step="1" value="2"><div class="range-labels"><span>1 yr</span><span>30 yrs</span></div></div>
+    <div id="other-ltcg-wrap" class="field"><div class="field-header"><span class="field-label">Other LTCG This Year (Equity)</span><div class="field-value">₹<span id="v-other">0</span></div></div>
+    <input type="range" id="other-gains" min="0" max="1000000" step="5000" value="0"><div class="range-labels"><span>₹0</span><span>₹10L</span></div></div>
+  </div>
+  <div class="results-card">
+    <div class="corpus-display"><div class="corpus-label">Capital Gains Tax</div><div class="corpus-amount" id="cg-tax">₹0</div><div class="corpus-sub" id="cg-sub">LTCG tax payable</div></div>
+    <div class="stats-row">
+      <div class="stat-box"><div class="stat-box-label">Capital Gain</div><div class="stat-box-value green" id="s-gain">₹0</div></div>
+      <div class="stat-box"><div class="stat-box-label">Exemption</div><div class="stat-box-value blue" id="s-exempt">₹0</div></div>
+      <div class="stat-box"><div class="stat-box-label">Taxable Gain</div><div class="stat-box-value gold" id="s-taxable">₹0</div></div>
+      <div class="stat-box"><div class="stat-box-label">Tax Rate</div><div class="stat-box-value" id="s-rate">12.5%</div></div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;margin-top:12px;">
+      <div style="display:flex;justify-content:space-between;font-size:13px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05)"><span style="color:var(--soft)">Profit (before tax)</span><span id="r-profit" style="color:var(--text)">₹0</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:13px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05)"><span style="color:var(--soft)">LTCG Tax</span><span id="r-tax" style="color:var(--danger)">₹0</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:13px;padding:5px 0"><span style="color:var(--soft);font-weight:600">Net Profit After Tax</span><span id="r-net" style="color:var(--accent);font-weight:600">₹0</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="faq-section"><h2 class="faq-heading">LTCG Tax — Key Questions</h2>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the LTCG tax rate on equity mutual funds in 2026?<span class="arrow">+</span></div>
+<div class="faq-a">After Budget 2024, LTCG on equity and equity mutual funds is taxed at 12.5% (increased from 10%) for gains above ₹1.25 lakh in a financial year (increased from ₹1 lakh). Holding period must be 12+ months to qualify for LTCG. Gains below ₹1.25 lakh are tax-free. These changes apply from FY 2024-25 onwards. STCG (held less than 12 months) is taxed at 20% (increased from 15%).</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I use tax harvesting to avoid LTCG?<span class="arrow">+</span></div>
+<div class="faq-a">Yes. Tax harvesting (also called tax-loss harvesting or gain harvesting) involves selling equity investments every year to book gains up to ₹1.25 lakh — which is tax-free under LTCG exemption. Then immediately re-purchasing the same units. This resets your cost basis to current price. Over 10 years, this can save lakhs of rupees in LTCG tax. Works best for long-term equity investors with unrealised gains.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the LTCG tax on property sale in India?<span class="arrow">+</span></div>
+<div class="faq-a">After Budget 2024, property sellers have two options: (1) 20% LTCG with indexation benefit (cost adjusted for inflation), or (2) 12.5% LTCG without indexation. For properties purchased before 2001, the Fair Market Value as of April 1, 2001 is used as cost. Gains from property sale can be reinvested in another residential property (Section 54) or in Capital Gains bonds (Section 54EC) to avoid LTCG tax.</div></div>
+</div>
+
+<script>
+let assetType='equity';
+function setAsset(type, btn){
+  assetType=type;
+  document.querySelectorAll('.rate-pill').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');
+  calculate();
+}
+function calculate(){
+  const buy=+document.getElementById('buy-price').value;
+  const sell=+document.getElementById('sell-price').value;
+  const hold=+document.getElementById('hold').value;
+  const other=+document.getElementById('other-gains').value;
+  document.getElementById('v-buy').textContent=buy.toLocaleString('en-IN');
+  document.getElementById('v-sell').textContent=sell.toLocaleString('en-IN');
+  document.getElementById('v-hold').textContent=hold;
+  document.getElementById('v-other').textContent=other.toLocaleString('en-IN');
+  const gain=Math.max(0,sell-buy);
+  let tax=0, rate='', exemption=0, taxableGain=gain;
+  if(assetType==='equity'){
+    exemption=Math.max(0,125000-other);
+    taxableGain=Math.max(0,gain-exemption);
+    tax=taxableGain*0.125;
+    rate='12.5% (LTCG)';
+  } else if(assetType==='property'){
+    taxableGain=gain;
+    tax=gain*0.125;
+    rate='12.5% without indexation';
+  } else {
+    tax=gain; taxableGain=gain; rate='Slab rate';
+    document.getElementById('cg-sub').textContent='Added to income — taxed at slab';
+  }
+  document.getElementById('cg-tax').textContent=formatINR(tax);
+  document.getElementById('cg-sub').textContent=rate+' on gains';
+  document.getElementById('s-gain').textContent=formatINR(gain);
+  document.getElementById('s-exempt').textContent=formatINR(exemption);
+  document.getElementById('s-taxable').textContent=formatINR(taxableGain);
+  document.getElementById('s-rate').textContent=rate;
+  document.getElementById('r-profit').textContent=formatINR(gain);
+  document.getElementById('r-tax').textContent=formatINR(tax);
+  document.getElementById('r-net').textContent=formatINR(gain-tax);
+}
+['buy-price','sell-price','hold','other-gains'].forEach(id=>document.getElementById(id).addEventListener('input',calculate));
+document.addEventListener('DOMContentLoaded',calculate);
+</script>
+</div>
+<footer><div class="footer-brand">Black Belt Code Labs</div><p>Results are indicative estimates only. Consult a qualified financial advisor before making investment decisions.</p><p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p></footer>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the LTCG tax rate on equity in 2026?","acceptedAnswer":{"@type":"Answer","text":"After Budget 2024, LTCG on equity is 12.5% on gains above ₹1.25 lakh exemption per year (holding period 12+ months)."}},{"@type":"Question","name":"How to avoid LTCG tax in India?","acceptedAnswer":{"@type":"Answer","text":"Book gains up to ₹1.25 lakh annually (tax harvesting) and immediately reinvest. For property, use Section 54 to reinvest in another property."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/"},{"@type":"ListItem","position":2,"name":"India","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":3,"name":"LTCG Tax Calculator India 2026","item":"https://calcphi.com/in/ltcg-tax-calculator.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"LTCG Tax Calculator India 2026","url":"https://calcphi.com/in/ltcg-tax-calculator.html","description":"Calculate Long Term Capital Gains tax on equity shares, mutual funds, and property in India. LTCG rates for FY 2025-26. Free LTCG tax calculator India.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+</body>
+</html>

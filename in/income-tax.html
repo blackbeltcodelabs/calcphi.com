@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" data-region="IN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94D5DND9LS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag("js", new Date());
+  gtag("config", "G-94D5DND9LS", {{ page_title: document.title, page_location: window.location.href }});
+</script>
+<meta name="google-site-verification" content="EOSYQ9kWEpTvsQah9Do3mUA54q-1oFvyKwXG3zERx3k">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Income Tax Calculator 2026 – Old vs New Regime | CalcPhi</title>
+<meta name="description" content="Calculate your India income tax for FY 2025-26. Compare old vs new tax regime, see your take-home salary, and find which regime saves more tax.">
+<meta name="keywords" content="income tax calculator 2026 India, old vs new tax regime calculator, income tax FY 2025-26, tax calculator India salary, how much tax on salary India 2026">
+<link rel="canonical" href="https://calcphi.com/in/income-tax.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/shared.js" defer></script>
+<style>
+.regime-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px;}
+@media(max-width:600px){.regime-grid{grid-template-columns:1fr;}}
+.regime-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;position:relative;overflow:hidden;}
+.regime-card.winner{border-color:var(--accent);}
+.regime-card.winner::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);}
+.regime-name{font-family:'DM Serif Display',serif;font-size:18px;margin-bottom:4px;}
+.regime-tax{font-family:'DM Serif Display',serif;font-size:32px;margin:12px 0 4px;}
+.regime-tax.red{color:var(--danger);}
+.regime-row{display:flex;justify-content:space-between;font-size:13px;color:var(--soft);padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.05);}
+.regime-row:last-child{border-bottom:none;}
+.regime-row strong{color:var(--text);}
+.winner-tag{display:inline-block;background:rgba(34,211,165,0.15);color:var(--accent);border:1px solid rgba(34,211,165,0.3);font-size:11px;padding:2px 8px;border-radius:100px;margin-left:8px;}
+.slab-table{width:100%;font-size:13px;margin-top:8px;}
+.slab-table th{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);padding:8px 12px;text-align:left;border-bottom:1px solid var(--border);}
+.slab-table td{padding:8px 12px;color:var(--soft);border-bottom:1px solid rgba(255,255,255,0.04);}
+.slab-table tr:last-child td{border-bottom:none;}
+</style>
+<meta property="og:title" content="Income Tax Calculator 2026 – Old vs New Regime">
+<meta property="og:description" content="Compare old and new tax regime for FY 2025-26. See tax under both regimes and which saves you more money.">
+<meta property="og:image" content="https://calcphi.com/og-image.jpg">
+<meta property="og:url" content="https://calcphi.com/in/income-tax.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcPhi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Income Tax Calculator 2026 – Old vs New Regime">
+<meta name="twitter:description" content="Compare old and new tax regime for FY 2025-26. See tax under both regimes and which saves you more money.">
+<meta name="twitter:image" content="https://calcphi.com/og-image.jpg">
+<meta name="twitter:site" content="@calcphi">
+<link rel="alternate" hreflang="en-IN" href="https://calcphi.com/in/income-tax.html">
+<link rel="alternate" hreflang="x-default" href="https://calcphi.com/in/income-tax.html">
+</head>
+<body>
+<nav><div class="nav-inner">
+  <a href="index.html" class="nav-logo">Calc<span>Phi</span></a>
+  <div class="nav-links">
+      <a href="index.html" class="nav-home">⌂ All Calculators</a>
+      <a href="sip-main.html">SIP</a>
+      <a href="target-sip.html">Target SIP</a>
+      <a href="1-crore-sip.html">1 Cr SIP</a>
+      <a href="emi-calculator.html">EMI</a>
+      <a href="income-tax.html">Tax</a>
+      <a href="fire-calculator.html">FIRE</a>
+    </div>
+</div></nav>
+<div class="wrapper">
+<header>
+  <div class="badge">FY 2025-26 · Old vs New Regime</div>
+  <h1>Income Tax Calculator —<br><em>Old vs New Regime Comparison</em></h1>
+  <p class="subtitle">Calculate your exact income tax for FY 2025-26. Compare both regimes side by side and find out which one saves you more money.</p>
+</header>
+<div class="info-banner">New Regime is now the default. Old Regime benefits from deductions (80C, HRA, home loan interest). This calculator shows the tax under both and highlights the winner.</div>
+
+<div class="card mb-20"><div class="card-title">Your Income Details (FY 2025-26)</div>
+  <div class="main-grid">
+    <div>
+      <div class="field"><div class="field-header"><span class="field-label">Annual Gross Salary / Income</span><div class="field-value">₹<span id="val-income">12,00,000</span></div></div>
+      <input type="range" id="income" min="300000" max="10000000" step="50000" value="1200000"><div class="range-labels"><span>₹3L</span><span>₹1 Cr</span></div></div>
+      <div class="field"><div class="field-header"><span class="field-label">80C Deductions (ELSS/PPF/EPF)</span><div class="field-value">₹<span id="val-80c">1,50,000</span></div></div>
+      <input type="range" id="c80c" min="0" max="150000" step="5000" value="150000"><div class="range-labels"><span>₹0</span><span>₹1.5L (max)</span></div></div>
+      <div class="field"><div class="field-header"><span class="field-label">HRA Exemption</span><div class="field-value">₹<span id="val-hra">0</span></div></div>
+      <input type="range" id="hra" min="0" max="600000" step="5000" value="0"><div class="range-labels"><span>₹0</span><span>₹6L</span></div></div>
+    </div>
+    <div>
+      <div class="field"><div class="field-header"><span class="field-label">Home Loan Interest (Sec 24b)</span><div class="field-value">₹<span id="val-homeloan">0</span></div></div>
+      <input type="range" id="homeloan" min="0" max="200000" step="5000" value="0"><div class="range-labels"><span>₹0</span><span>₹2L (max)</span></div></div>
+      <div class="field"><div class="field-header"><span class="field-label">NPS 80CCD(1B)</span><div class="field-value">₹<span id="val-nps">0</span></div></div>
+      <input type="range" id="nps" min="0" max="50000" step="1000" value="0"><div class="range-labels"><span>₹0</span><span>₹50K (max)</span></div></div>
+      <div class="field"><div class="field-header"><span class="field-label">Other Deductions (80D, etc.)</span><div class="field-value">₹<span id="val-other">0</span></div></div>
+      <input type="range" id="other" min="0" max="200000" step="5000" value="0"><div class="range-labels"><span>₹0</span><span>₹2L</span></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="regime-grid">
+  <div class="regime-card" id="new-card">
+    <div class="regime-name">New Tax Regime <span id="new-winner-tag"></span></div>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:8px;">Default from FY 2024-25 · No deductions</div>
+    <div class="regime-tax red" id="new-tax">₹0</div>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:16px;">total tax + cess</div>
+    <div class="regime-row"><span>Taxable Income</span><strong id="new-taxable">₹0</strong></div>
+    <div class="regime-row"><span>Basic Tax</span><strong id="new-basic-tax">₹0</strong></div>
+    <div class="regime-row"><span>Surcharge</span><strong id="new-surcharge">₹0</strong></div>
+    <div class="regime-row"><span>Health &amp; Ed. Cess (4%)</span><strong id="new-cess">₹0</strong></div>
+    <div class="regime-row"><span>Effective Tax Rate</span><strong id="new-eff-rate">0%</strong></div>
+    <div class="regime-row"><span>Monthly Take-Home</span><strong id="new-takehome" style="color:var(--accent)">₹0</strong></div>
+  </div>
+  <div class="regime-card" id="old-card">
+    <div class="regime-name">Old Tax Regime <span id="old-winner-tag"></span></div>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:8px;">With deductions &amp; exemptions</div>
+    <div class="regime-tax red" id="old-tax">₹0</div>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:16px;">total tax + cess</div>
+    <div class="regime-row"><span>Taxable Income</span><strong id="old-taxable">₹0</strong></div>
+    <div class="regime-row"><span>Basic Tax</span><strong id="old-basic-tax">₹0</strong></div>
+    <div class="regime-row"><span>Surcharge</span><strong id="old-surcharge">₹0</strong></div>
+    <div class="regime-row"><span>Health &amp; Ed. Cess (4%)</span><strong id="old-cess">₹0</strong></div>
+    <div class="regime-row"><span>Effective Tax Rate</span><strong id="old-eff-rate">0%</strong></div>
+    <div class="regime-row"><span>Monthly Take-Home</span><strong id="old-takehome" style="color:var(--accent)">₹0</strong></div>
+  </div>
+</div>
+
+<div class="card mb-20">
+  <div class="card-title">Tax Slab Breakdown</div>
+  <div class="main-grid">
+    <div>
+      <div style="font-size:13px;font-weight:500;color:var(--soft);margin-bottom:10px;">New Regime Slabs (FY 2025-26)</div>
+      <table class="slab-table"><thead><tr><th>Income Slab</th><th>Tax Rate</th></tr></thead>
+      <tbody>
+        <tr><td>Up to ₹3,00,000</td><td>Nil</td></tr>
+        <tr><td>₹3,00,001 – ₹7,00,000</td><td>5%</td></tr>
+        <tr><td>₹7,00,001 – ₹10,00,000</td><td>10%</td></tr>
+        <tr><td>₹10,00,001 – ₹12,00,000</td><td>15%</td></tr>
+        <tr><td>₹12,00,001 – ₹15,00,000</td><td>20%</td></tr>
+        <tr><td>Above ₹15,00,000</td><td>30%</td></tr>
+      </tbody></table>
+      <div style="font-size:11px;color:var(--muted);margin-top:8px;">Rebate u/s 87A: Tax nil if income ≤ ₹7L (New) / ≤ ₹5L (Old)</div>
+    </div>
+    <div>
+      <div style="font-size:13px;font-weight:500;color:var(--soft);margin-bottom:10px;">Old Regime Slabs (FY 2025-26)</div>
+      <table class="slab-table"><thead><tr><th>Income Slab</th><th>Tax Rate</th></tr></thead>
+      <tbody>
+        <tr><td>Up to ₹2,50,000</td><td>Nil</td></tr>
+        <tr><td>₹2,50,001 – ₹5,00,000</td><td>5%</td></tr>
+        <tr><td>₹5,00,001 – ₹10,00,000</td><td>20%</td></tr>
+        <tr><td>Above ₹10,00,000</td><td>30%</td></tr>
+      </tbody></table>
+      <div style="font-size:11px;color:var(--muted);margin-top:8px;">Standard Deduction: ₹50,000 for salaried employees in Old Regime</div>
+    </div>
+  </div>
+</div>
+
+<div class="chart-section">
+  <div class="chart-header"><div class="chart-title">Old vs New Regime Tax Comparison</div></div>
+  <div class="chart-wrap"><canvas id="growthChart"></canvas></div>
+</div>
+
+<div class="faq-section">
+  <h2 class="faq-heading">Old vs New Tax Regime — Decision Guide</h2>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Which tax regime is better — old or new in 2026?<span class="arrow">+</span></div>
+  <div class="faq-a">Generally: New Regime wins if your deductions are low. Old Regime wins if you have high deductions (HRA, home loan interest, 80C). The break-even point varies by income. At ₹12 lakh salary: if you can claim deductions above ₹3.75 lakh, Old Regime saves tax. Below ₹3.75 lakh in deductions, New Regime is better. Use this calculator to find your personal break-even based on your actual deductions.</div></div>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What deductions are available in Old Regime?<span class="arrow">+</span></div>
+  <div class="faq-a">Old Regime key deductions: Section 80C (₹1.5L) — ELSS, PPF, EPF, NSC, LIC, home loan principal. Section 80D — health insurance premium (₹25K self, ₹25K parents). Section 24(b) — home loan interest (₹2L). HRA — house rent allowance (40–50% of basic). Section 80CCD(1B) — NPS extra ₹50K. Standard Deduction — ₹50K for salaried. Section 80TTA/TTB — savings interest (₹10K/₹50K senior citizens). LTA — leave travel allowance (2 journeys in 4 years).</div></div>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the Section 87A tax rebate?<span class="arrow">+</span></div>
+  <div class="faq-a">Section 87A provides a full tax rebate if your net taxable income is below a threshold: Old Regime — rebate up to ₹12,500 if taxable income ≤ ₹5 lakh (meaning zero tax). New Regime — rebate up to ₹25,000 if taxable income ≤ ₹7 lakh (zero tax). This means: if your taxable income after deductions (Old) or gross income (New) is within these limits, you pay zero income tax. This is a crucial consideration for optimising your tax filing.</div></div>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I switch between old and new tax regime every year?<span class="arrow">+</span></div>
+  <div class="faq-a">For salaried employees: Yes, you can switch between Old and New Regime every financial year when filing ITR. Inform your employer at the start of the year for TDS purposes; if you don't inform them, they default to New Regime. For business income taxpayers: You can only switch once — after switching to Old Regime, you cannot go back to New Regime (with exceptions). File Form 10-IE before your ITR due date to opt for the Old Regime for that year.</div></div>
+</div>
+</div>
+
+<footer>
+  <div class="footer-brand">Black Belt Code Labs</div>
+  <p>Tax calculations are based on FY 2025-26 rates. This is for educational purposes only — consult a CA for your actual tax filing.</p>
+  <p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p>
+</footer>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Income Tax Calculator India 2026","url":"https://calcphi.com/income-tax.html","description":"Calculate income tax for FY 2025-26 under old and new tax regime with deduction comparison.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+<script>
+let myChart = null;
+function calcTax(income, regime) {
+  let tax = 0;
+  if (regime === 'new') {
+    const slabs = [[300000,0],[700000,0.05],[1000000,0.10],[1200000,0.15],[1500000,0.20],[Infinity,0.30]];
+    let prev = 0;
+    for (const [limit, rate] of slabs) {
+      if (income <= prev) break;
+      tax += (Math.min(income, limit) - prev) * rate;
+      prev = limit;
+    }
+    if (income <= 700000) tax = 0; // 87A rebate
+  } else {
+    const slabs = [[250000,0],[500000,0.05],[1000000,0.20],[Infinity,0.30]];
+    let prev = 0;
+    for (const [limit, rate] of slabs) {
+      if (income <= prev) break;
+      tax += (Math.min(income, limit) - prev) * rate;
+      prev = limit;
+    }
+    if (income <= 500000) tax = 0;
+  }
+  // Surcharge
+  let surcharge = 0;
+  if (income > 5000000 && income <= 10000000) surcharge = tax * 0.10;
+  else if (income > 10000000 && income <= 20000000) surcharge = tax * 0.15;
+  else if (income > 20000000) surcharge = tax * 0.25;
+  const cess = (tax + surcharge) * 0.04;
+  return { basic: Math.round(tax), surcharge: Math.round(surcharge), cess: Math.round(cess), total: Math.round(tax + surcharge + cess) };
+}
+function calculate() {
+  const grossIncome = +document.getElementById('income').value;
+  const c80c = +document.getElementById('c80c').value;
+  const hra = +document.getElementById('hra').value;
+  const homeloan = +document.getElementById('homeloan').value;
+  const nps = +document.getElementById('nps').value;
+  const other = +document.getElementById('other').value;
+  document.getElementById('val-income').textContent = grossIncome.toLocaleString('en-IN');
+  document.getElementById('val-80c').textContent = c80c.toLocaleString('en-IN');
+  document.getElementById('val-hra').textContent = hra.toLocaleString('en-IN');
+  document.getElementById('val-homeloan').textContent = homeloan.toLocaleString('en-IN');
+  document.getElementById('val-nps').textContent = nps.toLocaleString('en-IN');
+  document.getElementById('val-other').textContent = other.toLocaleString('en-IN');
+  // New Regime: only standard deduction ₹50K
+  const newTaxable = Math.max(0, grossIncome - 50000);
+  const newResult = calcTax(newTaxable, 'new');
+  // Old Regime
+  const oldDeductions = 50000 + c80c + hra + Math.min(homeloan, 200000) + nps + other;
+  const oldTaxable = Math.max(0, grossIncome - oldDeductions);
+  const oldResult = calcTax(oldTaxable, 'old');
+  const newWins = newResult.total <= oldResult.total;
+  document.getElementById('new-card').className = 'regime-card' + (newWins ? ' winner' : '');
+  document.getElementById('old-card').className = 'regime-card' + (!newWins ? ' winner' : '');
+  document.getElementById('new-winner-tag').innerHTML = newWins ? '<span class="winner-tag">✓ Better for you</span>' : '';
+  document.getElementById('old-winner-tag').innerHTML = !newWins ? '<span class="winner-tag">✓ Better for you</span>' : '';
+  const fill = (id, val) => { document.getElementById(id).textContent = val; };
+  fill('new-tax', formatINR(newResult.total)); fill('new-taxable', formatINR(newTaxable)); fill('new-basic-tax', formatINR(newResult.basic)); fill('new-surcharge', formatINR(newResult.surcharge)); fill('new-cess', formatINR(newResult.cess));
+  fill('new-eff-rate', ((newResult.total / grossIncome) * 100).toFixed(2) + '%');
+  fill('new-takehome', formatINR((grossIncome - newResult.total) / 12) + '/mo');
+  fill('old-tax', formatINR(oldResult.total)); fill('old-taxable', formatINR(oldTaxable)); fill('old-basic-tax', formatINR(oldResult.basic)); fill('old-surcharge', formatINR(oldResult.surcharge)); fill('old-cess', formatINR(oldResult.cess));
+  fill('old-eff-rate', ((oldResult.total / grossIncome) * 100).toFixed(2) + '%');
+  fill('old-takehome', formatINR((grossIncome - oldResult.total) / 12) + '/mo');
+  // Chart
+  if (myChart) myChart.destroy();
+  const ctx = document.getElementById('growthChart').getContext('2d');
+  const incomes = [500000, 750000, 1000000, 1200000, 1500000, 2000000, 3000000, 5000000];
+  const labels = incomes.map(i => '₹' + (i / 100000).toFixed(0) + 'L');
+  const newTaxes = incomes.map(i => calcTax(Math.max(0, i - 50000), 'new').total);
+  const oldTaxes = incomes.map(i => calcTax(Math.max(0, i - oldDeductions + c80c + hra + Math.min(homeloan,200000) + nps + other - (grossIncome - oldTaxable - 50000)), 'old').total);
+  myChart = makeBarChart(ctx, labels, [
+    { label: 'New Regime Tax', data: newTaxes, backgroundColor: 'rgba(59,130,246,0.7)', borderRadius: 3 },
+    { label: 'Old Regime Tax', data: oldTaxes, backgroundColor: 'rgba(34,211,165,0.7)', borderRadius: 3 }
+  ]);
+}
+['income', 'c80c', 'hra', 'homeloan', 'nps', 'other'].forEach(id => document.getElementById(id).addEventListener('input', calculate));
+document.addEventListener('DOMContentLoaded', calculate);
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":2,"name":"Income Tax","item":"https://calcphi.com/in/income-tax.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which tax regime is better in 2026 — old or new?","acceptedAnswer":{"@type":"Answer","text":"New regime is better when total deductions are below ₹3-3.75 lakhs depending on income. Old regime is better when you have home loan interest, HRA, full 80C, and NPS together. Use our calculator to find your specific break-even point."}},{"@type":"Question","name":"What is the Section 87A tax rebate?","acceptedAnswer":{"@type":"Answer","text":"Section 87A gives full tax rebate if net taxable income is ₹7 lakh or below under the new regime, or ₹5 lakh under the old regime. This means zero income tax if your taxable income stays within these limits."}},{"@type":"Question","name":"Can salaried employees switch tax regime every year?","acceptedAnswer":{"@type":"Answer","text":"Yes. Salaried employees can switch between old and new regime every financial year. Inform your employer at the start of the year. If you don't inform them, new regime is the default for TDS calculation."}}]}</script>
+</body></html>

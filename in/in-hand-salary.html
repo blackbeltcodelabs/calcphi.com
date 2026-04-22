@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" data-region="IN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94D5DND9LS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag("js", new Date());
+  gtag("config", "G-94D5DND9LS", {{ page_title: document.title, page_location: window.location.href }});
+</script>
+<meta name="google-site-verification" content="EOSYQ9kWEpTvsQah9Do3mUA54q-1oFvyKwXG3zERx3k">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>In-Hand Salary Calculator – CTC to Take-Home | CalcPhi</title>
+<meta name="description" content="Calculate your monthly in-hand salary from CTC. See PF deduction, income tax, professional tax, and exact take-home pay for any CTC amount in India 2026.">
+<meta name="keywords" content="in-hand salary calculator India 2026, CTC to in-hand salary calculator, take home salary calculator India, salary breakup calculator, monthly salary from CTC">
+<link rel="canonical" href="https://calcphi.com/in/in-hand-salary.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/shared.js" defer></script>
+<style>
+.breakup-table{width:100%;font-size:14px;border-collapse:collapse;}
+.breakup-table tr{border-bottom:1px solid rgba(255,255,255,0.05);}
+.breakup-table tr:last-child{border-bottom:2px solid var(--accent);font-weight:600;}
+.breakup-table td{padding:10px 14px;color:var(--soft);}
+.breakup-table td:last-child{text-align:right;color:var(--text);}
+.breakup-table .section-head{background:rgba(255,255,255,0.03);}
+.breakup-table .section-head td{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;padding:8px 14px;}
+.breakup-table .deduction td:last-child{color:var(--danger);}
+.breakup-table .takehome td{color:var(--text);font-size:16px;}
+.breakup-table .takehome td:last-child{color:var(--accent);font-size:16px;}
+</style>
+<meta property="og:title" content="In-Hand Salary Calculator – CTC to Take-Home Pay">
+<meta property="og:description" content="Calculate monthly in-hand salary from CTC. See PF, TDS and professional tax deduction breakdown.">
+<meta property="og:image" content="https://calcphi.com/og-image.jpg">
+<meta property="og:url" content="https://calcphi.com/in/in-hand-salary.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcPhi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="In-Hand Salary Calculator – CTC to Take-Home Pay">
+<meta name="twitter:description" content="Calculate monthly in-hand salary from CTC. See PF, TDS and professional tax deduction breakdown.">
+<meta name="twitter:image" content="https://calcphi.com/og-image.jpg">
+<meta name="twitter:site" content="@calcphi">
+<link rel="alternate" hreflang="en-IN" href="https://calcphi.com/in/in-hand-salary.html">
+<link rel="alternate" hreflang="x-default" href="https://calcphi.com/in/in-hand-salary.html">
+</head>
+<body>
+<nav><div class="nav-inner">
+  <a href="index.html" class="nav-logo">Calc<span>Phi</span></a>
+  <div class="nav-links">
+      <a href="index.html" class="nav-home">⌂ All Calculators</a>
+      <a href="sip-main.html">SIP</a>
+      <a href="target-sip.html">Target SIP</a>
+      <a href="1-crore-sip.html">1 Cr SIP</a>
+      <a href="emi-calculator.html">EMI</a>
+      <a href="income-tax.html">Tax</a>
+      <a href="fire-calculator.html">FIRE</a>
+    </div>
+</div></nav>
+<div class="wrapper">
+<header>
+  <div class="badge">CTC Breakup · Take-Home Pay · PF · Tax</div>
+  <h1>In-Hand Salary Calculator —<br><em>From CTC to Real Take-Home</em></h1>
+  <p class="subtitle">Enter your CTC and see your exact monthly in-hand salary after PF deduction, income tax, and professional tax. No surprises on your first salary day.</p>
+</header>
+<div class="info-banner">CTC ≠ In-Hand Salary. Typical deductions: Employee PF (12% of basic), income tax TDS, professional tax (₹200/mo in most states), and sometimes health insurance premium.</div>
+
+<div class="main-grid">
+  <div class="card"><div class="card-title">Your CTC Details</div>
+    <div class="field"><div class="field-header"><span class="field-label">Annual CTC</span><div class="field-value">₹<span id="val-ctc">12,00,000</span></div></div>
+    <input type="range" id="ctc" min="300000" max="10000000" step="50000" value="1200000"><div class="range-labels"><span>₹3L</span><span>₹1 Cr</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">Basic Salary (% of CTC)</span><div class="field-value"><span id="val-basic-pct">40</span><span>%</span></div></div>
+    <input type="range" id="basic-pct" min="30" max="60" step="5" value="40"><div class="range-labels"><span>30%</span><span>60%</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">Tax Regime</span><div class="field-value"><span id="val-regime">New</span></div></div>
+    <input type="range" id="regime" min="0" max="1" step="1" value="0"><div class="range-labels"><span>New Regime</span><span>Old Regime</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">80C Deductions (Old Regime)</span><div class="field-value">₹<span id="val-80c">1,50,000</span></div></div>
+    <input type="range" id="deductions" min="0" max="150000" step="5000" value="150000"><div class="range-labels"><span>₹0</span><span>₹1.5L</span></div></div>
+  </div>
+
+  <div class="results-card">
+    <div class="corpus-display">
+      <div class="corpus-label">Monthly In-Hand Salary</div>
+      <div class="corpus-amount" id="in-hand">₹0</div>
+      <div class="corpus-sub">after all deductions</div>
+    </div>
+    <div class="stats-row">
+      <div class="stat-box"><div class="stat-box-label">Monthly Gross</div><div class="stat-box-value blue" id="monthly-gross">₹0</div></div>
+      <div class="stat-box"><div class="stat-box-label">Monthly PF</div><div class="stat-box-value red" id="monthly-pf" style="color:var(--danger)">₹0</div></div>
+      <div class="stat-box"><div class="stat-box-label">Monthly Tax (TDS)</div><div class="stat-box-value red" id="monthly-tax" style="color:var(--danger)">₹0</div></div>
+      <div class="stat-box"><div class="stat-box-label">Annual Take-Home</div><div class="stat-box-value gold" id="annual-takehome">₹0</div></div>
+    </div>
+    <div class="progress-section">
+      <div class="progress-header"><span>Take-Home vs Deductions</span><span id="returns-pct">0% take-home</span></div>
+      <div class="progress-bar-bg"><div class="progress-bar-fill" id="progress-fill" style="width:75%"></div></div>
+      <div class="progress-legend"><span><span class="legend-dot" style="background:var(--accent)"></span>Take-home</span><span><span class="legend-dot" style="background:var(--danger)"></span>Deductions</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-20"><div class="card-title">Detailed Monthly Salary Breakup</div>
+  <table class="breakup-table">
+    <tbody>
+      <tr class="section-head"><td colspan="2">EARNINGS</td></tr>
+      <tr><td>Basic Salary</td><td id="b-basic">₹0</td></tr>
+      <tr><td>HRA (50% of basic)</td><td id="b-hra">₹0</td></tr>
+      <tr><td>Special Allowance</td><td id="b-special">₹0</td></tr>
+      <tr><td>Other Allowances</td><td id="b-other">₹0</td></tr>
+      <tr style="font-weight:600;border-top:1px solid var(--border)"><td>Gross Monthly Salary</td><td id="b-gross" style="color:var(--accent2)">₹0</td></tr>
+      <tr class="section-head"><td colspan="2">DEDUCTIONS</td></tr>
+      <tr class="deduction"><td>Employee PF (12% of basic)</td><td id="b-pf">₹0</td></tr>
+      <tr class="deduction"><td>Income Tax (TDS / month)</td><td id="b-tds">₹0</td></tr>
+      <tr class="deduction"><td>Professional Tax</td><td id="b-pt">₹0</td></tr>
+      <tr class="deduction" style="font-weight:600;border-top:1px solid var(--border)"><td>Total Deductions</td><td id="b-total-ded" style="color:var(--danger)">₹0</td></tr>
+      <tr class="takehome"><td>💰 Monthly In-Hand Salary</td><td id="b-takehome">₹0</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="chart-section">
+  <div class="chart-header"><div class="chart-title">CTC Composition</div></div>
+  <div class="chart-wrap"><canvas id="growthChart"></canvas></div>
+</div>
+
+<div class="faq-section">
+  <h2 class="faq-heading">CTC vs In-Hand Salary — Everything Explained</h2>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the difference between CTC and in-hand salary?<span class="arrow">+</span></div>
+  <div class="faq-a">CTC (Cost to Company) is the total annual cost an employer bears for an employee — including salary, PF contributions, gratuity, insurance premiums, and other benefits. In-Hand Salary (take-home) is what actually gets credited to your bank account after all deductions: employee PF (12% of basic), income tax TDS, professional tax, and any other deductions. Typically, in-hand salary is 65–80% of CTC for most Indian salaried professionals.</div></div>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How is basic salary calculated from CTC?<span class="arrow">+</span></div>
+  <div class="faq-a">Basic salary is typically 40–50% of CTC in most Indian companies, though this varies by employer and industry. Basic salary is important because PF (12% of basic), gratuity (4.81% of basic), and HRA (usually 40–50% of basic) are all derived from it. Higher basic means more PF savings but also higher income tax (since it's fully taxable). Some companies keep basic low to reduce PF and increase take-home, while others maintain higher basic for better retirement savings.</div></div>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is PF deduction and can I opt out?<span class="arrow">+</span></div>
+  <div class="faq-a">PF (Provident Fund) deduction is mandatory for all employees earning up to ₹15,000/month in basic salary. For higher earners, PF is still typically deducted on actual basic (or ₹15,000 minimum). The employee contributes 12% of basic, and the employer also contributes 12% (of which 8.33% goes to EPS pension scheme). Employees earning above ₹15,000 basic can opt out of PF at joining. PF is a long-term retirement benefit — while it reduces take-home, it earns 8.15% tax-free interest and builds significant retirement corpus.</div></div>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is professional tax and who pays it?<span class="arrow">+</span></div>
+  <div class="faq-a">Professional tax (PT) is a state government tax on employment income, deducted by the employer monthly. Not all states have PT — it's applicable in: Maharashtra (max ₹2,500/year), Karnataka (max ₹2,400/year), West Bengal, Andhra Pradesh, Telangana, Gujarat, Tamil Nadu, Kerala. States without PT include Delhi, Rajasthan, UP, and Haryana. The maximum PT deductible is ₹2,500/year nationally. PT paid is deductible from income for tax purposes.</div></div>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is my entire CTC guaranteed as cash salary?<span class="arrow">+</span></div>
+  <div class="faq-a">No. CTC includes several non-cash components that aren't paid directly: Employer PF contribution (12% of basic) — goes to your PF account, not salary. Gratuity (4.81% of basic) — accrues and paid only after 5 years of service. Medical insurance premium — paid to insurer, you get coverage. ESOP value, if included. The actual "fixed cash" salary component is usually 80–85% of CTC for most IT and corporate employees. Always ask HR for the specific salary breakup before accepting an offer.</div></div>
+</div>
+</div>
+
+<footer>
+  <div class="footer-brand">Black Belt Code Labs</div>
+  <p>Salary calculations are indicative. Actual in-hand salary depends on your company's specific structure and applicable state laws.</p>
+  <p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p>
+</footer>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"In-Hand Salary Calculator India","url":"https://calcphi.com/in-hand-salary.html","description":"Calculate monthly in-hand salary from CTC with PF, income tax TDS, and professional tax deduction breakdown.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+<script>
+let myChart = null;
+function calcIncomeTax(taxableIncome, isNew) {
+  let tax = 0;
+  if (isNew) {
+    const slabs = [[300000,0],[700000,0.05],[1000000,0.10],[1200000,0.15],[1500000,0.20],[Infinity,0.30]];
+    let prev = 0;
+    for (const [lim, rate] of slabs) { if (taxableIncome <= prev) break; tax += (Math.min(taxableIncome, lim) - prev) * rate; prev = lim; }
+    if (taxableIncome <= 700000) tax = 0;
+  } else {
+    const slabs = [[250000,0],[500000,0.05],[1000000,0.20],[Infinity,0.30]];
+    let prev = 0;
+    for (const [lim, rate] of slabs) { if (taxableIncome <= prev) break; tax += (Math.min(taxableIncome, lim) - prev) * rate; prev = lim; }
+    if (taxableIncome <= 500000) tax = 0;
+  }
+  return Math.round(tax * 1.04); // with cess
+}
+function calculate() {
+  const ctc = +document.getElementById('ctc').value;
+  const basicPct = +document.getElementById('basic-pct').value / 100;
+  const isNew = +document.getElementById('regime').value === 0;
+  const deductions = +document.getElementById('deductions').value;
+  document.getElementById('val-ctc').textContent = ctc.toLocaleString('en-IN');
+  document.getElementById('val-basic-pct').textContent = +document.getElementById('basic-pct').value;
+  document.getElementById('val-regime').textContent = isNew ? 'New' : 'Old';
+  document.getElementById('val-80c').textContent = deductions.toLocaleString('en-IN');
+  const annualBasic = ctc * basicPct;
+  const annualHRA = annualBasic * 0.5;
+  const annualSpecial = ctc * 0.1;
+  const annualOther = ctc - annualBasic - annualHRA - annualSpecial - (annualBasic * 0.12 * 2); // rough employer PF
+  const annualGross = annualBasic + annualHRA + annualSpecial + Math.max(0, annualOther);
+  const empPF = annualBasic * 0.12;
+  const stdDed = isNew ? 50000 : 50000;
+  const taxableIncome = isNew
+    ? Math.max(0, annualGross - stdDed)
+    : Math.max(0, annualGross - stdDed - deductions);
+  const annualTax = calcIncomeTax(taxableIncome, isNew);
+  const pt = 2400; // avg
+  const totalDed = empPF + annualTax + pt;
+  const annualTakeHome = annualGross - totalDed;
+  const monthlyGross = annualGross / 12, monthlyPF = empPF / 12, monthlyTax = annualTax / 12, monthlyPT = pt / 12;
+  const monthlyTakeHome = annualTakeHome / 12;
+  const takeHomePct = (annualTakeHome / annualGross) * 100;
+  document.getElementById('in-hand').textContent = formatINR(monthlyTakeHome);
+  document.getElementById('monthly-gross').textContent = formatINR(monthlyGross);
+  document.getElementById('monthly-pf').textContent = formatINR(monthlyPF);
+  document.getElementById('monthly-tax').textContent = formatINR(monthlyTax);
+  document.getElementById('annual-takehome').textContent = formatINR(annualTakeHome);
+  document.getElementById('returns-pct').textContent = takeHomePct.toFixed(0) + '% take-home';
+  document.getElementById('progress-fill').style.width = takeHomePct.toFixed(1) + '%';
+  const f = (id, v) => document.getElementById(id).textContent = v;
+  f('b-basic', '₹' + formatNum(annualBasic / 12)); f('b-hra', '₹' + formatNum(annualHRA / 12));
+  f('b-special', '₹' + formatNum(annualSpecial / 12)); f('b-other', '₹' + formatNum(Math.max(0, annualOther / 12)));
+  f('b-gross', '₹' + formatNum(monthlyGross)); f('b-pf', '-₹' + formatNum(monthlyPF));
+  f('b-tds', '-₹' + formatNum(monthlyTax)); f('b-pt', '-₹' + formatNum(monthlyPT));
+  f('b-total-ded', '-₹' + formatNum(totalDed / 12)); f('b-takehome', '₹' + formatNum(monthlyTakeHome));
+  if (myChart) myChart.destroy();
+  const ctx = document.getElementById('growthChart').getContext('2d');
+  myChart = new Chart(ctx, { type: 'doughnut',
+    data: { labels: ['Take-Home', 'Employee PF', 'Income Tax', 'Prof. Tax'], datasets: [{ data: [Math.round(annualTakeHome), Math.round(empPF), Math.round(annualTax), Math.round(pt)], backgroundColor: ['rgba(34,211,165,0.8)', 'rgba(59,130,246,0.8)', 'rgba(244,63,94,0.7)', 'rgba(100,116,139,0.6)'], borderColor: '#161f35', borderWidth: 2 }] },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: true, position: 'bottom', labels: { color: '#94a3b8', font: { size: 12 }, boxWidth: 12, padding: 16 } }, tooltip: { backgroundColor: '#161f35', bodyColor: '#94a3b8', callbacks: { label: c => ` ${c.label}: ${formatINR(c.raw)}` } } } }
+  });
+}
+['ctc', 'basic-pct', 'regime', 'deductions'].forEach(id => document.getElementById(id).addEventListener('input', calculate));
+document.addEventListener('DOMContentLoaded', calculate);
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":2,"name":"In-Hand Salary","item":"https://calcphi.com/in/in-hand-salary.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between CTC and in-hand salary?","acceptedAnswer":{"@type":"Answer","text":"CTC (Cost to Company) includes employer PF contribution, gratuity, insurance premiums and all benefits. In-hand salary is what gets credited to your bank after deducting employee PF (12% of basic), income tax TDS, and professional tax. Typically 65-80% of CTC."}},{"@type":"Question","name":"How is PF deducted from salary?","acceptedAnswer":{"@type":"Answer","text":"Employee PF deduction is 12% of basic salary. The employer also contributes 12% (3.67% to EPF, 8.33% to EPS). For employees earning above ₹15,000 basic, PF is still typically deducted on actual basic salary by most companies."}},{"@type":"Question","name":"What is professional tax in India?","acceptedAnswer":{"@type":"Answer","text":"Professional tax is a state government tax on employment income, maximum ₹2,500 per year. It applies in states like Maharashtra, Karnataka, West Bengal, and Tamil Nadu. States like Delhi, UP, and Rajasthan do not have professional tax."}}]}</script>
+</body></html>

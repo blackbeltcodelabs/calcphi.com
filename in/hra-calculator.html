@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-region="IN">
+<head>
+<!-- GA -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94D5DND9LS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-94D5DND9LS");</script>
+<meta name="google-site-verification" content="EOSYQ9kWEpTvsQah9Do3mUA54q-1oFvyKwXG3zERx3k">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HRA Calculator 2026 – HRA Exemption Calculator India</title>
+<meta name="description" content="Calculate your HRA exemption under Section 10(13A) for FY 2025-26. Find the tax-exempt HRA amount and save income tax. Free HRA calculator India 2026.">
+<meta name="keywords" content="HRA calculator India 2026, HRA exemption calculator, HRA tax exemption calculator, Section 10(13A) HRA calculator India, how to calculate HRA exemption">
+<link rel="canonical" href="https://calcphi.com/in/hra-calculator.html">
+<link rel="alternate" hreflang="en-IN" href="https://calcphi.com/in/hra-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://calcphi.com/in/hra-calculator.html">
+<meta property="og:title" content="HRA Calculator 2026">
+<meta property="og:description" content="Calculate your HRA exemption under Section 10(13A) for FY 2025-26. Find the tax-exempt HRA amount and save income tax. Free HRA calculator India 2026.">
+<meta property="og:image" content="https://calcphi.com/og-image.jpg">
+<meta property="og:url" content="https://calcphi.com/in/hra-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcPhi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HRA Calculator 2026">
+<meta name="twitter:description" content="Calculate your HRA exemption under Section 10(13A) for FY 2025-26. Find the tax-exempt HRA amount and save income tax. Free HRA calculator India 2026.">
+<meta name="twitter:image" content="https://calcphi.com/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/shared.js" defer></script>
+</head>
+<body>
+<nav><div class="nav-inner"><a href="index.html" class="nav-logo">Calc<span>Phi</span></a><div class="nav-links"><a href="index.html" class="nav-home">⌂ All Calculators</a><a href="sip-main.html">SIP</a><a href="emi-calculator.html">EMI</a><a href="income-tax.html">Tax</a><a href="in-hand-salary.html">Salary</a><a href="gst-calculator.html">GST</a><a href="fire-calculator.html">FIRE</a></div></div></nav>
+<div class="wrapper">
+<header>
+  <div class="badge">Income Tax Saving · Section 10(13A)</div>
+  <h1>HRA Calculator 2026 —<br><em>How Much HRA is Tax-Free?</em></h1>
+  <p class="subtitle">House Rent Allowance (HRA) is one of the biggest tax-saving opportunities for salaried Indians who live in rented accommodation. Calculate your exact exempt HRA under Section 10(13A).</p>
+</header>
+<div class="info-banner">HRA exemption = Minimum of (1) Actual HRA received, (2) 50% of basic (metro) or 40% (non-metro), (3) Rent paid minus 10% of basic salary.</div>
+<div class="main-grid">
+  <div class="card"><div class="card-title">Your HRA Details (Monthly)</div>
+    <div class="field"><div class="field-header"><span class="field-label">Basic Salary (Monthly)</span><div class="field-value">₹<span id="val-basic">40,000</span></div></div>
+    <input type="range" id="basic" min="5000" max="500000" step="1000" value="40000"><div class="range-labels"><span>₹5K</span><span>₹5L</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">HRA Received (Monthly)</span><div class="field-value">₹<span id="val-hra">20,000</span></div></div>
+    <input type="range" id="hra" min="1000" max="300000" step="500" value="20000"><div class="range-labels"><span>₹1K</span><span>₹3L</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">Rent Paid (Monthly)</span><div class="field-value">₹<span id="val-rent">22,000</span></div></div>
+    <input type="range" id="rent" min="1000" max="300000" step="500" value="22000"><div class="range-labels"><span>₹1K</span><span>₹3L</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">City Type</span><div class="field-value"><span id="val-city">Metro (50%)</span></div></div>
+    <input type="range" id="city" min="0" max="1" step="1" value="1"><div class="range-labels"><span>Non-Metro (40%)</span><span>Metro (50%)</span></div></div>
+  </div>
+  <div class="results-card">
+    <div class="corpus-display"><div class="corpus-label">Annual HRA Exemption</div><div class="corpus-amount" id="hra-exempt">₹0</div><div class="corpus-sub">tax-free under Section 10(13A)</div></div>
+    <div class="stats-row">
+      <div class="stat-box"><div class="stat-box-label">Limit 1 (Actual HRA)</div><div class="stat-box-value blue" id="l1">₹0</div></div>
+      <div class="stat-box"><div class="stat-box-label">Limit 2 (50%/40% Basic)</div><div class="stat-box-value gold" id="l2">₹0</div></div>
+      <div class="stat-box"><div class="stat-box-label">Limit 3 (Rent − 10%)</div><div class="stat-box-value" id="l3">₹0</div></div>
+      <div class="stat-box"><div class="stat-box-label">Tax Saved (30% slab)</div><div class="stat-box-value green" id="tax-saved">₹0</div></div>
+    </div>
+    <div style="background:rgba(34,211,165,0.06);border:1px solid rgba(34,211,165,0.2);border-radius:10px;padding:16px;margin-top:12px;">
+      <div style="font-size:12px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-bottom:10px;">Annual Breakdown</div>
+      <div style="display:flex;justify-content:space-between;font-size:14px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05)"><span style="color:var(--soft)">HRA Received (Annual)</span><span id="a-hra" style="color:var(--text)">₹0</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:14px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05)"><span style="color:var(--soft)">HRA Exempt (Annual)</span><span id="a-exempt" style="color:var(--accent)">₹0</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:14px;padding:5px 0"><span style="color:var(--soft)">Taxable HRA (Annual)</span><span id="a-taxable" style="color:var(--danger)">₹0</span></div>
+    </div>
+  </div>
+</div>
+<div class="faq-section"><h2 class="faq-heading">HRA Exemption — Everything Explained</h2>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How is HRA exemption calculated?<span class="arrow">+</span></div>
+<div class="faq-a">HRA exemption is the MINIMUM of three limits: (1) Actual HRA received from employer, (2) 50% of Basic Salary for metro cities (Delhi, Mumbai, Chennai, Kolkata) or 40% for non-metro, (3) Rent paid minus 10% of Basic Salary. The lowest of these three is your tax-exempt HRA. The remaining HRA above this exemption is taxable as salary income.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I claim HRA if I pay rent to my parents?<span class="arrow">+</span></div>
+<div class="faq-a">Yes, you can pay rent to parents and claim HRA exemption — but with conditions: (1) Your parents must own the property, (2) A proper rent agreement must exist, (3) Your parents must show rental income in their ITR, (4) TDS applies if rent exceeds ₹50,000/month. This is legal and widely used for tax planning, but must be genuine and documented.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is HRA available under the new tax regime?<span class="arrow">+</span></div>
+<div class="faq-a">No. HRA exemption is available only under the old tax regime. Under the new tax regime (which is now the default), HRA is fully taxable. This is one of the biggest reasons why the old regime may be better for employees paying high rent. Use our Income Tax Calculator to compare both regimes for your specific situation.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Do I need to submit rent receipts to claim HRA?<span class="arrow">+</span></div>
+<div class="faq-a">Rent receipts are required when rent exceeds ₹1 lakh per year (₹8,333/month). The landlord's PAN is mandatory if annual rent exceeds ₹1 lakh. For rent below ₹1 lakh/year, self-declaration to your employer is sufficient. Keep rent receipts for 6 years in case of tax scrutiny.</div></div>
+</div>
+<script>
+function calculate(){
+  const basic=+document.getElementById('basic').value;
+  const hra=+document.getElementById('hra').value;
+  const rent=+document.getElementById('rent').value;
+  const isMetro=+document.getElementById('city').value===1;
+  document.getElementById('val-basic').textContent=basic.toLocaleString('en-IN');
+  document.getElementById('val-hra').textContent=hra.toLocaleString('en-IN');
+  document.getElementById('val-rent').textContent=rent.toLocaleString('en-IN');
+  document.getElementById('val-city').textContent=isMetro?'Metro (50%)':'Non-Metro (40%)';
+  const pct=isMetro?0.5:0.4;
+  const limit1=hra*12;
+  const limit2=basic*pct*12;
+  const limit3=Math.max(0,(rent-basic*0.1)*12);
+  const exempt=Math.min(limit1,limit2,limit3);
+  const taxable=(hra*12)-exempt;
+  const taxSaved=exempt*0.312;
+  document.getElementById('hra-exempt').textContent=formatINR(exempt);
+  document.getElementById('l1').textContent=formatINR(limit1);
+  document.getElementById('l2').textContent=formatINR(limit2);
+  document.getElementById('l3').textContent=formatINR(limit3);
+  document.getElementById('tax-saved').textContent=formatINR(taxSaved);
+  document.getElementById('a-hra').textContent=formatINR(hra*12);
+  document.getElementById('a-exempt').textContent=formatINR(exempt);
+  document.getElementById('a-taxable').textContent=formatINR(taxable);
+}
+['basic','hra','rent','city'].forEach(id=>document.getElementById(id).addEventListener('input',calculate));
+document.addEventListener('DOMContentLoaded',calculate);
+</script>
+</div>
+<footer><div class="footer-brand">Black Belt Code Labs</div><p>Results are indicative estimates only. Consult a qualified financial advisor before making investment decisions.</p><p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p></footer>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is HRA exemption calculated?","acceptedAnswer":{"@type":"Answer","text":"HRA exemption = Minimum of (1) Actual HRA received, (2) 50% of basic salary for metro or 40% for non-metro, (3) Rent paid minus 10% of basic salary."}},{"@type":"Question","name":"Is HRA available under new tax regime?","acceptedAnswer":{"@type":"Answer","text":"No. HRA exemption is only available under the old tax regime. Under the new tax regime, HRA is fully taxable as salary income."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/"},{"@type":"ListItem","position":2,"name":"India","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":3,"name":"HRA Calculator 2026","item":"https://calcphi.com/in/hra-calculator.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"HRA Calculator 2026","url":"https://calcphi.com/in/hra-calculator.html","description":"Calculate your HRA exemption under Section 10(13A) for FY 2025-26. Find the tax-exempt HRA amount and save income tax. Free HRA calculator India 2026.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+</body>
+</html>

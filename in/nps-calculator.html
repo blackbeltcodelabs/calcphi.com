@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" data-region="IN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94D5DND9LS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag("js", new Date());
+  gtag("config", "G-94D5DND9LS", {{ page_title: document.title, page_location: window.location.href }});
+</script>
+<meta name="google-site-verification" content="EOSYQ9kWEpTvsQah9Do3mUA54q-1oFvyKwXG3zERx3k">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NPS Calculator 2026 – National Pension Scheme | CalcPhi</title>
+<meta name="description" content="Calculate your NPS (National Pension Scheme) corpus and monthly pension at retirement. Free NPS calculator with Tier 1, tax benefits and annuity breakdown.">
+<meta name="keywords" content="NPS calculator 2026, national pension scheme calculator India, NPS retirement corpus calculator, NPS monthly pension calculator">
+<link rel="canonical" href="https://calcphi.com/in/nps-calculator.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/shared.js" defer></script>
+<style>
+.nps-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:20px;}
+@media(max-width:600px){.nps-grid{grid-template-columns:1fr;}}
+.nps-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px;text-align:center;}
+.nps-card-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;}
+.nps-card-value{font-family:'DM Serif Display',serif;font-size:20px;}
+.nps-card-sub{font-size:12px;color:var(--soft);margin-top:4px;}
+</style>
+<meta property="og:title" content="NPS Calculator 2026 – National Pension Scheme">
+<meta property="og:description" content="Calculate NPS corpus and monthly pension at retirement. Includes 80CCD tax benefit breakdown.">
+<meta property="og:image" content="https://calcphi.com/og-image.jpg">
+<meta property="og:url" content="https://calcphi.com/in/nps-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcPhi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NPS Calculator 2026 – National Pension Scheme">
+<meta name="twitter:description" content="Calculate NPS corpus and monthly pension at retirement. Includes 80CCD tax benefit breakdown.">
+<meta name="twitter:image" content="https://calcphi.com/og-image.jpg">
+<meta name="twitter:site" content="@calcphi">
+<link rel="alternate" hreflang="en-IN" href="https://calcphi.com/in/nps-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://calcphi.com/in/nps-calculator.html">
+</head>
+<body>
+<nav><div class="nav-inner">
+  <a href="index.html" class="nav-logo">Calc<span>Phi</span></a>
+  <div class="nav-links">
+      <a href="index.html" class="nav-home">⌂ All Calculators</a>
+      <a href="sip-main.html">SIP</a>
+      <a href="target-sip.html">Target SIP</a>
+      <a href="1-crore-sip.html">1 Cr SIP</a>
+      <a href="emi-calculator.html">EMI</a>
+      <a href="income-tax.html">Tax</a>
+      <a href="fire-calculator.html">FIRE</a>
+    </div>
+</div></nav>
+<div class="wrapper">
+<header>
+  <div class="badge">Government Pension Scheme · Tax Efficient</div>
+  <h1>NPS Calculator —<br><em>Your Retirement Pension Estimate</em></h1>
+  <p class="subtitle">Calculate your National Pension Scheme corpus and monthly pension income at retirement. See the tax-free lumpsum and annuity breakdown.</p>
+</header>
+<div class="info-banner">NPS at maturity: 60% corpus can be withdrawn tax-free. 40% minimum must be used to buy annuity for monthly pension. This calculator models both components.</div>
+<div class="main-grid">
+  <div class="card"><div class="card-title">Your NPS Details</div>
+    <div class="field"><div class="field-header"><span class="field-label">Current Age</span><div class="field-value"><span id="val-age">30</span><span> yrs</span></div></div>
+    <input type="range" id="age" min="18" max="60" step="1" value="30"><div class="range-labels"><span>18</span><span>60</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">Monthly Contribution</span><div class="field-value">₹<span id="val-monthly">5,000</span></div></div>
+    <input type="range" id="monthly" min="500" max="100000" step="500" value="5000"><div class="range-labels"><span>₹500</span><span>₹1L</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">Expected Annual Return</span><div class="field-value"><span id="val-rate">10</span><span>% p.a.</span></div></div>
+    <input type="range" id="rate" min="6" max="15" step="0.5" value="10"><div class="range-labels"><span>6%</span><span>15%</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">Annuity Rate (on 40%)</span><div class="field-value"><span id="val-annuity">6</span><span>% p.a.</span></div></div>
+    <input type="range" id="annuity" min="4" max="10" step="0.5" value="6"><div class="range-labels"><span>4%</span><span>10%</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">Annuity Percentage</span><div class="field-value"><span id="val-annpct">40</span><span>%</span></div></div>
+    <input type="range" id="annpct" min="40" max="100" step="5" value="40"><div class="range-labels"><span>40% (min)</span><span>100%</span></div></div>
+  </div>
+  <div class="results-card">
+    <div class="corpus-display"><div class="corpus-label">Total NPS Corpus at 60</div><div class="corpus-amount" id="total-corpus">₹0</div><div class="corpus-sub">after <span id="disp-years">30</span> years of contributions</div></div>
+    <div class="stats-row">
+      <div class="stat-box"><div class="stat-box-label">Tax-Free Withdrawal</div><div class="stat-box-value green" id="tax-free">₹0</div></div>
+      <div class="stat-box"><div class="stat-box-label">Annuity Corpus</div><div class="stat-box-value blue" id="annuity-corpus">₹0</div></div>
+      <div class="stat-box"><div class="stat-box-label">Monthly Pension</div><div class="stat-box-value gold" id="monthly-pension">₹0</div></div>
+      <div class="stat-box"><div class="stat-box-label">Total Invested</div><div class="stat-box-value" id="total-invested" style="color:var(--soft)">₹0</div></div>
+    </div>
+    <div class="progress-section">
+      <div class="progress-header"><span>Withdrawal vs Annuity split</span><span id="returns-pct">0%</span></div>
+      <div class="progress-bar-bg"><div class="progress-bar-fill" id="progress-fill" style="width:60%"></div></div>
+      <div class="progress-legend"><span><span class="legend-dot" style="background:var(--accent)"></span>Tax-free withdrawal</span><span><span class="legend-dot" style="background:var(--accent2)"></span>Annuity</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="nps-grid">
+  <div class="nps-card"><div class="nps-card-label">Retirement Age</div><div class="nps-card-value" style="color:var(--accent)">60 Years</div><div class="nps-card-sub">NPS matures at 60</div></div>
+  <div class="nps-card"><div class="nps-card-label">Years to Retire</div><div class="nps-card-value" style="color:var(--gold)" id="yrs-left">0 yrs</div><div class="nps-card-sub">investment horizon</div></div>
+  <div class="nps-card"><div class="nps-card-label">80C + 80CCD(1B) Benefit</div><div class="nps-card-value" style="color:var(--accent2)" id="tax-benefit">₹0</div><div class="nps-card-sub">annual tax deduction</div></div>
+</div>
+
+<div class="chart-section">
+  <div class="chart-header"><div class="chart-title">NPS Corpus Growth</div>
+  <div class="chart-tabs"><button class="chart-tab active" id="tab-area" onclick="switchChart('area')">Growth</button><button class="chart-tab" id="tab-bar" onclick="switchChart('bar')">Breakdown</button></div></div>
+  <div class="chart-wrap"><canvas id="growthChart"></canvas></div>
+</div>
+
+<div class="card mb-20"><div class="card-title">Year-by-Year NPS Growth</div>
+  <div class="table-wrap"><table><thead><tr><th>Age</th><th>Total Invested (₹)</th><th>Returns (₹)</th><th>NPS Corpus (₹)</th><th>Growth %</th></tr></thead><tbody id="year-table"></tbody></table></div>
+</div>
+
+<div class="faq-section">
+  <h2 class="faq-heading">NPS Calculator — All Your Questions Answered</h2>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is NPS and how does it work?<span class="arrow">+</span></div>
+  <div class="faq-a">The National Pension Scheme (NPS) is a voluntary, long-term retirement savings scheme regulated by the Pension Fund Regulatory and Development Authority (PFRDA). You contribute monthly to a pension account (Tier 1), which is invested across equity (up to 75%), corporate bonds, and government securities based on your chosen allocation. At age 60, you can withdraw 60% as a tax-free lumpsum and must use the remaining 40% to purchase an annuity for monthly pension income.</div></div>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What are NPS tax benefits?<span class="arrow">+</span></div>
+  <div class="faq-a">NPS offers triple tax benefits: (1) Section 80C: ₹1.5 lakh deduction on employee contributions. (2) Section 80CCD(1B): Additional ₹50,000 deduction exclusive to NPS (over and above 80C limit). (3) Section 80CCD(2): Employer contributions up to 10% of salary are tax-free (14% for government employees). At maturity, 60% withdrawal is completely tax-free. The 40% annuity income is taxed as regular income. NPS is one of the most tax-efficient retirement instruments in India.</div></div>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What returns can I expect from NPS?<span class="arrow">+</span></div>
+  <div class="faq-a">NPS returns depend on your asset allocation. With 75% equity allocation (maximum allowed), historical NPS equity fund returns have been 10–12% p.a. over 10+ years. A balanced 50% equity, 50% debt allocation typically returns 8–10% p.a. Conservative portfolios (25% equity) return 7–9% p.a. The default Auto Choice (Life Cycle Fund) gradually reduces equity as you age — starting at 75% equity at age 18 and reducing to 15% at age 55.</div></div>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">NPS vs PPF vs ELSS — which is best for retirement?<span class="arrow">+</span></div>
+  <div class="faq-a">Each serves a different purpose: NPS gives the highest extra tax benefit (₹50,000 via 80CCD(1B)) and equity growth potential but locks money till 60. PPF is completely tax-free (EEE) — contributions, interest, and maturity — but returns are fixed at 7.1% p.a. currently. ELSS gives 80C deduction with only 3-year lock-in and equity-level returns (12–15%). Ideal strategy: max out ELSS (₹1.5L in 80C) + add ₹50,000 to NPS for the extra deduction + EPF through employer. This maximises tax savings and growth.</div></div>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I withdraw from NPS before 60?<span class="arrow">+</span></div>
+  <div class="faq-a">Partial withdrawal from NPS Tier 1 is allowed after 3 years for specific purposes: higher education, marriage of children, home purchase, or critical illness treatment. You can withdraw up to 25% of your own contributions. Premature exit before 60 (after 10 years) requires 80% of corpus to go into annuity and only 20% can be withdrawn. NPS Tier 2 is a flexible, voluntary account with no lock-in — but Tier 2 contributions don't get tax benefits (except for government employees).</div></div>
+</div>
+</div>
+<footer>
+  <div class="footer-brand">Black Belt Code Labs</div>
+  <p>Results are estimates. NPS returns are not guaranteed. Consult a PFRDA-registered Point of Presence (PoP) for NPS advice.</p>
+  <p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p>
+</footer>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"NPS Calculator India","url":"https://calcphi.com/nps-calculator.html","description":"Calculate NPS corpus and monthly pension at retirement with tax benefit breakdown.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+<script>
+let chartMode='area',myChart=null;
+function switchChart(m){chartMode=m;document.querySelectorAll('.chart-tab').forEach(t=>t.classList.remove('active'));document.getElementById('tab-'+m).classList.add('active');calculate();}
+function calculate(){
+  const age=+document.getElementById('age').value,monthly=+document.getElementById('monthly').value,rate=+document.getElementById('rate').value/100,annuityRate=+document.getElementById('annuity').value/100,annuityPct=+document.getElementById('annpct').value/100;
+  const yrsLeft=Math.max(60-age,1),mr=rate/12,totalMonths=yrsLeft*12;
+  document.getElementById('val-age').textContent=age;document.getElementById('val-monthly').textContent=monthly.toLocaleString('en-IN');document.getElementById('val-rate').textContent=+document.getElementById('rate').value;document.getElementById('val-annuity').textContent=+document.getElementById('annuity').value;document.getElementById('val-annpct').textContent=+document.getElementById('annpct').value;
+  document.getElementById('disp-years').textContent=yrsLeft;document.getElementById('yrs-left').textContent=yrsLeft+' yrs';
+  const annualContrib=monthly*12,taxBenefit=Math.min(annualContrib,150000)+Math.min(annualContrib,50000);
+  document.getElementById('tax-benefit').textContent=formatINR(taxBenefit);
+  let corpus=0,invested=0;const labels=[],yInv=[],yCorp=[],rows=[];
+  for(let m=1;m<=totalMonths;m++){corpus=(corpus+monthly)*(1+mr);invested+=monthly;
+    if(m%12===0){const yr=m/12,curAge=age+yr;labels.push('Age '+curAge);yInv.push(Math.round(invested));yCorp.push(Math.round(corpus));const prev=yr>1?yCorp[yr-2]:0;rows.push({age:curAge,inv:Math.round(invested),ret:Math.round(corpus-invested),corp:Math.round(corpus),g:prev>0?((corpus-prev)/prev*100).toFixed(1):'—'});}
+  }
+  const annuityCorpus=corpus*annuityPct,withdrawCorpus=corpus*(1-annuityPct),monthlyPension=(annuityCorpus*annuityRate)/12;
+  document.getElementById('total-corpus').textContent=formatINR(corpus);document.getElementById('total-invested').textContent=formatINR(invested);document.getElementById('tax-free').textContent=formatINR(withdrawCorpus);document.getElementById('annuity-corpus').textContent=formatINR(annuityCorpus);document.getElementById('monthly-pension').textContent=formatINR(monthlyPension);
+  const withdrawPct=((1-annuityPct)*100);document.getElementById('returns-pct').textContent=withdrawPct.toFixed(0)+'% withdrawal';document.getElementById('progress-fill').style.width=withdrawPct.toFixed(1)+'%';
+  if(myChart)myChart.destroy();const ctx=document.getElementById('growthChart').getContext('2d');
+  if(chartMode==='area'){const g1=ctx.createLinearGradient(0,0,0,260);g1.addColorStop(0,'rgba(59,130,246,0.35)');g1.addColorStop(1,'rgba(59,130,246,0)');const g2=ctx.createLinearGradient(0,0,0,260);g2.addColorStop(0,'rgba(34,211,165,0.35)');g2.addColorStop(1,'rgba(34,211,165,0)');myChart=makeAreaChart(ctx,labels,[{label:'Invested',data:yInv,borderColor:'rgba(59,130,246,0.9)',backgroundColor:g1,borderWidth:2,fill:true,tension:0.4,pointRadius:0,pointHoverRadius:5},{label:'NPS Corpus',data:yCorp,borderColor:'rgba(34,211,165,0.9)',backgroundColor:g2,borderWidth:2,fill:true,tension:0.4,pointRadius:0,pointHoverRadius:5}]);}
+  else{myChart=makeBarChart(ctx,labels,[{label:'Invested',data:yInv,backgroundColor:'rgba(59,130,246,0.7)',borderRadius:3},{label:'Returns',data:yCorp.map((v,i)=>v-yInv[i]),backgroundColor:'rgba(34,211,165,0.7)',borderRadius:3}]);}
+  document.getElementById('year-table').innerHTML=rows.map(r=>`<tr><td>Age ${r.age}</td><td>₹${formatNum(r.inv)}</td><td class="positive">₹${formatNum(r.ret)}</td><td>₹${formatNum(r.corp)}</td><td class="positive">${r.g}%</td></tr>`).join('');
+}
+['age','monthly','rate','annuity','annpct'].forEach(id=>document.getElementById(id).addEventListener('input',calculate));
+document.addEventListener('DOMContentLoaded',calculate);
+</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":2,"name":"NPS Calculator","item":"https://calcphi.com/in/nps-calculator.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is NPS and how does it work?","acceptedAnswer":{"@type":"Answer","text":"NPS (National Pension Scheme) is a government-backed retirement savings scheme. You invest monthly, choose equity/debt allocation, and at 60 can withdraw 60% tax-free as lump sum. The remaining 40% must be used to buy an annuity for monthly pension."}},{"@type":"Question","name":"How much extra tax can I save through NPS?","acceptedAnswer":{"@type":"Answer","text":"NPS gives an additional ₹50,000 deduction under Section 80CCD(1B) over and above the ₹1.5 lakh 80C limit. At 30% tax slab, this saves ₹15,600 extra tax per year — on top of 80C savings."}},{"@type":"Question","name":"What returns does NPS give?","acceptedAnswer":{"@type":"Answer","text":"NPS equity funds (Tier 1) have historically delivered 10-12% CAGR over 10+ years. Debt funds within NPS deliver 8-9%. You can choose allocation between equity, corporate bonds, and government securities based on your risk profile."}}]}</script>
+</body></html>
