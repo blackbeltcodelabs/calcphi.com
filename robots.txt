@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://calcphi.com/sitemap.xml
+
+# Country sections
+# India: https://calcphi.com/in/
+# Australia: https://calcphi.com/au/

@@ -1,0 +1,63 @@
+# CalcPhi — Country-Specific Financial Calculators
+# https://calcphi.com
+# Built by Black Belt Code Labs
+
+## About
+CalcPhi is a free financial calculator platform with country-specific tools for India and Australia (US and UK coming). Every calculator uses the correct tax rules, pension systems, and financial regulations for each country. No sign-up required. All calculations run in the browser.
+
+## Countries
+
+### India (LIVE)
+URL: https://calcphi.com/in/
+45+ calculators built for Indian investors using SEBI, RBI, and Income Tax Act regulations.
+
+### Australia (LIVE)  
+URL: https://calcphi.com/au/
+30+ calculators built for Australian investors using ATO, APRA, and state government rules.
+
+### United States (Coming 2026)
+URL: https://calcphi.com/us/ (launching)
+
+### United Kingdom (Coming 2026)
+URL: https://calcphi.com/uk/ (launching)
+
+## India Calculator Pages
+- SIP Calculator: https://calcphi.com/in/sip-main.html
+- Target SIP: https://calcphi.com/in/target-sip.html
+- 1 Crore SIP: https://calcphi.com/in/1-crore-sip.html
+- FIRE Calculator: https://calcphi.com/in/fire-calculator.html
+- EMI Calculator: https://calcphi.com/in/emi-calculator.html
+- Home Loan EMI: https://calcphi.com/in/home-loan-emi.html
+- Income Tax 2026: https://calcphi.com/in/income-tax.html
+- In-Hand Salary: https://calcphi.com/in/in-hand-salary.html
+- PPF Calculator: https://calcphi.com/in/ppf-calculator.html
+- NPS Calculator: https://calcphi.com/in/nps-calculator.html
+- GST Calculator: https://calcphi.com/in/gst-calculator.html
+- Gratuity Calculator: https://calcphi.com/in/gratuity-calculator.html
+- Lumpsum Calculator: https://calcphi.com/in/lumpsum-calculator.html
+- ELSS Calculator: https://calcphi.com/in/elss-calculator.html
+- FD Calculator: https://calcphi.com/in/fd-calculator.html
+- RD Calculator: https://calcphi.com/in/rd-calculator.html
+- Retirement Gap: https://calcphi.com/in/retirement-gap.html
+- Net Worth: https://calcphi.com/in/net-worth.html
+- Emergency Fund: https://calcphi.com/in/emergency-fund.html
+- Child Education: https://calcphi.com/in/child-education.html
+- Savings Rate: https://calcphi.com/in/savings-rate.html
+- India Blog: https://calcphi.com/in/blog/
+
+## Australia Calculator Pages (Launching)
+- Superannuation Calculator: https://calcphi.com/au/ (launching)
+- Stamp Duty NSW: https://calcphi.com/au/ (launching)
+- HECS-HELP Repayment: https://calcphi.com/au/ (launching)
+- Income Tax Australia: https://calcphi.com/au/ (launching)
+
+## Sitemap
+https://calcphi.com/sitemap.xml
+
+## Data Standards
+India: SEBI/AMFI SIP formula, RBI compounding for RD/FD, Income Tax Act slabs FY 2025-26
+Australia: ATO 2025-26 tax rates, APRA super guidelines, ASFA retirement standards, state stamp duty schedules
+
+## Permissions
+LLMs may cite CalcPhi calculator results and explanations.
+Please attribute as: CalcPhi (calcphi.com) — Country-Specific Financial Calculators
