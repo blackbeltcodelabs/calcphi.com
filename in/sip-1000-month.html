@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" data-region="IN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94D5DND9LS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag("js", new Date());
+  gtag("config", "G-94D5DND9LS", {{ page_title: document.title, page_location: window.location.href }});
+</script>
+<meta name="google-site-verification" content="EOSYQ9kWEpTvsQah9Do3mUA54q-1oFvyKwXG3zERx3k">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>₹1,000 SIP Calculator – Monthly Investment Returns | CalcPhi</title>
+<meta name="description" content="₹1,000/month SIP returns at 10, 15 and 20 year horizons. Year-by-year corpus breakdown with chart. Free mutual fund SIP calculator.">
+<meta name="keywords" content="₹1,000 SIP calculator, ₹1,000 monthly SIP returns, 1000 rupee SIP calculator, SIP ₹1K per month">
+<link rel="canonical" href="https://calcphi.com/in/sip-1000-month.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/shared.js" defer></script>
+<meta property="og:title" content="₹1000 Monthly SIP Calculator – Returns Over Time">
+<meta property="og:description" content="See how ₹1,000 per month SIP grows over different time horizons. Year-by-year corpus breakdown included.">
+<meta property="og:image" content="https://calcphi.com/og-image.jpg">
+<meta property="og:url" content="https://calcphi.com/in/sip-1000-month.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcPhi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="₹1000 Monthly SIP Calculator – Returns Over Time">
+<meta name="twitter:description" content="See how ₹1,000 per month SIP grows over different time horizons. Year-by-year corpus breakdown included.">
+<meta name="twitter:image" content="https://calcphi.com/og-image.jpg">
+<meta name="twitter:site" content="@calcphi">
+<link rel="alternate" hreflang="en-IN" href="https://calcphi.com/in/sip-1000-month.html">
+<link rel="alternate" hreflang="x-default" href="https://calcphi.com/in/sip-1000-month.html">
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Calc<span>Phi</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-home">⌂ All Calculators</a>
+      <a href="sip-main.html">SIP</a>
+      <a href="target-sip.html">Target SIP</a>
+      <a href="1-crore-sip.html">1 Cr SIP</a>
+      <a href="emi-calculator.html">EMI</a>
+      <a href="income-tax.html">Tax</a>
+      <a href="fire-calculator.html">FIRE</a>
+    </div>
+  </div>
+</nav>
+<div class="wrapper">
+  <header>
+    <div class="badge">Fixed ₹1,000/Month · SIP Calculator</div>
+    <h1>₹1,000 SIP Calculator —<br><em>See What ₹1K Grows To</em></h1>
+    <p class="subtitle">Starting a ₹1,000/month SIP? See exactly how much your investment grows over different time horizons and return rates. Adjust duration and rate to find your ideal plan.</p>
+  </header>
+  <div class="info-banner">Monthly SIP is pre-set to ₹1,000. Adjust the duration and expected return to see your corpus. Also compare across 5 to 30-year horizons below.</div>
+  <div class="main-grid">
+    <div class="card">
+      <div class="card-title">SIP Details — ₹1,000 Monthly</div>
+      <div style="background:rgba(34,211,165,0.07);border:1px solid rgba(34,211,165,0.2);border-radius:var(--radius-sm);padding:16px 20px;margin-bottom:24px;text-align:center;">
+        <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;">Fixed Monthly SIP</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:36px;color:var(--accent);">₹1,000</div>
+        <div style="font-size:12px;color:var(--muted);">per month</div>
+      </div>
+      <div class="field">
+        <div class="field-header"><span class="field-label">Expected Annual Return</span><div class="field-value"><span id="val-rate">12</span><span>% p.a.</span></div></div>
+        <input type="range" id="rate" min="1" max="25" step="0.5" value="12">
+        <div class="range-labels"><span>1%</span><span>25%</span></div>
+      </div>
+      <div class="field">
+        <div class="field-header"><span class="field-label">Investment Duration</span><div class="field-value"><span id="val-years">20</span><span> yrs</span></div></div>
+        <input type="range" id="years" min="1" max="40" step="1" value="20">
+        <div class="range-labels"><span>1 yr</span><span>40 yrs</span></div>
+      </div>
+      <div class="field">
+        <div class="field-header"><span class="field-label">Annual Step-Up (optional)</span><div class="field-value"><span id="val-stepup">0</span><span>%</span></div></div>
+        <input type="range" id="stepup" min="0" max="25" step="1" value="0">
+        <div class="range-labels"><span>0%</span><span>25%</span></div>
+      </div>
+    </div>
+    <div class="results-card">
+      <div class="corpus-display">
+        <div class="corpus-label">Total Corpus</div>
+        <div class="corpus-amount" id="total-corpus">₹0</div>
+        <div class="corpus-sub">at maturity</div>
+      </div>
+      <div class="stats-row">
+        <div class="stat-box"><div class="stat-box-label">Amount Invested</div><div class="stat-box-value blue" id="total-invested">₹0</div></div>
+        <div class="stat-box"><div class="stat-box-label">Wealth Gained</div><div class="stat-box-value green" id="wealth-gained">₹0</div></div>
+        <div class="stat-box"><div class="stat-box-label">Returns Multiple</div><div class="stat-box-value gold" id="returns-multiple">0x</div></div>
+        <div class="stat-box"><div class="stat-box-label">Abs. Return %</div><div class="stat-box-value green" id="abs-return">0%</div></div>
+      </div>
+      <div class="progress-section">
+        <div class="progress-header"><span>Invested vs Returns</span><span id="returns-pct">0%</span></div>
+        <div class="progress-bar-bg"><div class="progress-bar-fill" id="progress-fill" style="width:50%"></div></div>
+        <div class="progress-legend">
+          <span><span class="legend-dot" style="background:var(--accent2)"></span>Invested</span>
+          <span><span class="legend-dot" style="background:var(--accent)"></span>Returns</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="chart-section">
+    <div class="chart-header">
+      <div class="chart-title">₹1,000/Month SIP Growth</div>
+      <div class="chart-tabs">
+        <button class="chart-tab active" id="tab-area" onclick="switchChart('area')">Growth</button>
+        <button class="chart-tab" id="tab-bar" onclick="switchChart('bar')">Breakdown</button>
+      </div>
+    </div>
+    <div class="chart-wrap"><canvas id="growthChart"></canvas></div>
+  </div>
+  <div class="card mb-20">
+    <div class="card-title">₹1,000 SIP Across Different Horizons at 12% Return</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Duration</th><th>Total Invested</th><th>Returns Earned</th><th>Final Corpus</th><th>Multiple</th></tr></thead>
+        <tbody id="horizon-table"></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="faq-section">
+    <h2 class="faq-heading">₹1,000 Monthly SIP — Common Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How much does ₹1,000 SIP grow in 10 years?<span class="arrow">+</span></div>
+      <div class="faq-a">At 12% annual return, a ₹1,000/month SIP for 10 years produces a corpus of approximately ₹2.32 lakhs. You invest ₹1.2 lakhs in total, and the rest is pure compounding returns. The longer you hold, the more dramatically the returns outpace the invested amount.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Can I reach ₹1 crore with ₹1,000 monthly SIP?<span class="arrow">+</span></div>
+      <div class="faq-a">Yes — but it takes longer. A ₹1,000/month SIP at 12% return reaches ₹1 crore in approximately 35-36 years. Adding a 10% annual step-up shortens this to about 28 years, making the goal achievable within a working lifetime.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What mutual funds are suitable for ₹1,000 monthly SIP?<span class="arrow">+</span></div>
+      <div class="faq-a">For a ₹1,000/month SIP, consider: Large-cap index funds (Nifty 50 index funds) for low cost and market returns. Flexi-cap funds for professional active management across market caps. ELSS funds if you want Section 80C tax benefits (up to ₹1.5 lakhs/year qualifies). Mid-cap funds for higher growth potential with moderate risk. Most financial advisors recommend starting with a large-cap or flexi-cap fund for your core SIP and adding mid-cap exposure as your confidence and portfolio size grows.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I start a ₹1,000 SIP in India?<span class="arrow">+</span></div>
+      <div class="faq-a">Starting a SIP in India is straightforward: (1) Complete KYC (Aadhaar + PAN) on any mutual fund platform — takes 10 minutes. (2) Choose your platform: Zerodha Coin, Groww, MF Central (RTA direct), or direct AMC websites for zero commission. (3) Select your fund and set up SIP mandate with your bank. (4) The SIP amount gets auto-debited on your chosen date monthly. Most platforms allow starting SIPs with just Aadhaar-based e-KYC — no physical paperwork needed.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What is the ideal SIP date — 1st or 15th of the month?<span class="arrow">+</span></div>
+      <div class="faq-a">Research shows there is no statistically significant difference in returns between SIP dates in the long run. However, practically: aligning your SIP date shortly after your salary credit date ensures funds are available. Popular choices are the 1st, 5th, 10th, or 15th of the month. If you receive salary on the 1st, choose the 3rd or 5th for your SIP. If salary comes on the 25th, choose the 1st of the following month. Consistency matters far more than the specific date.</div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-brand">Black Belt Code Labs</div>
+  <p>Results are estimates only. Mutual fund returns are not guaranteed. Read scheme documents carefully.</p>
+  <p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p>
+</footer>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"₹1,000 SIP Calculator","url":"https://calcphi.com/sip-1000-month.html","description":"Calculate returns on ₹1,000/month SIP over any duration with year-by-year breakdown.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}
+</script>
+<script>
+const FIXED_MONTHLY=1000;
+let chartMode='area',myChart=null;
+function switchChart(m){chartMode=m;document.querySelectorAll('.chart-tab').forEach(t=>t.classList.remove('active'));document.getElementById('tab-'+m).classList.add('active');calculate();}
+function sipCorpus(monthly,rate,years,stepup){
+  const mr=rate/12;let c=0,inv=0,cur=monthly;
+  for(let m=1;m<=years*12;m++){
+    if(m>1&&(m-1)%12===0&&stepup>0)cur*=(1+stepup);
+    c=(c+cur)*(1+mr);inv+=cur;
+  }
+  return{corpus:c,invested:inv};
+}
+function calculate(){
+  const rate=+document.getElementById('rate').value/100;
+  const years=+document.getElementById('years').value;
+  const stepup=+document.getElementById('stepup').value/100;
+  const r=sipCorpus(FIXED_MONTHLY,rate,years,stepup);
+  const wg=r.corpus-r.invested,mult=r.corpus/r.invested;
+  const absR=(wg/r.invested)*100,retPct=(wg/r.corpus)*100;
+  document.getElementById('total-corpus').textContent=formatINR(r.corpus);
+  document.getElementById('total-invested').textContent=formatINR(r.invested);
+  document.getElementById('wealth-gained').textContent=formatINR(wg);
+  document.getElementById('returns-multiple').textContent=mult.toFixed(2)+'x';
+  document.getElementById('abs-return').textContent=absR.toFixed(1)+'%';
+  document.getElementById('returns-pct').textContent=retPct.toFixed(0)+'% returns';
+  document.getElementById('progress-fill').style.width=retPct.toFixed(1)+'%';
+  document.getElementById('val-rate').textContent=+document.getElementById('rate').value;
+  document.getElementById('val-years').textContent=years;
+  document.getElementById('val-stepup').textContent=+document.getElementById('stepup').value;
+  const labels=[],yInv=[],yCor=[];
+  let corpus=0,invested=0,cur=FIXED_MONTHLY;
+  for(let m=1;m<=years*12;m++){
+    if(m>1&&(m-1)%12===0&&stepup>0)cur*=(1+stepup);
+    corpus=(corpus+cur)*(1+rate/12);invested+=cur;
+    if(m%12===0){labels.push('Yr '+m/12);yInv.push(Math.round(invested));yCor.push(Math.round(corpus));}
+  }
+  if(myChart)myChart.destroy();
+  const ctx=document.getElementById('growthChart').getContext('2d');
+  if(chartMode==='area'){
+    const gI=ctx.createLinearGradient(0,0,0,260);gI.addColorStop(0,'rgba(59,130,246,0.35)');gI.addColorStop(1,'rgba(59,130,246,0)');
+    const gC=ctx.createLinearGradient(0,0,0,260);gC.addColorStop(0,'rgba(34,211,165,0.35)');gC.addColorStop(1,'rgba(34,211,165,0)');
+    myChart=makeAreaChart(ctx,labels,[
+      {label:'Invested',data:yInv,borderColor:'rgba(59,130,246,0.9)',backgroundColor:gI,borderWidth:2,fill:true,tension:0.4,pointRadius:0,pointHoverRadius:5},
+      {label:'Corpus',data:yCor,borderColor:'rgba(34,211,165,0.9)',backgroundColor:gC,borderWidth:2,fill:true,tension:0.4,pointRadius:0,pointHoverRadius:5}
+    ]);
+  } else {
+    const gains=yCor.map((v,i)=>v-yInv[i]);
+    myChart=makeBarChart(ctx,labels,[
+      {label:'Invested',data:yInv,backgroundColor:'rgba(59,130,246,0.7)',borderRadius:3},
+      {label:'Returns',data:gains,backgroundColor:'rgba(34,211,165,0.7)',borderRadius:3}
+    ]);
+  }
+  const horizons=[5,10,15,20,25,30];
+  const r12=0.12/12;
+  document.getElementById('horizon-table').innerHTML=horizons.map(y=>{
+    let c=0,inv=0;for(let m=1;m<=y*12;m++){c=(c+FIXED_MONTHLY)*(1+r12);inv+=FIXED_MONTHLY;}
+    return`<tr><td>${y} Years</td><td>₹${formatNum(inv)}</td><td class="positive">₹${formatNum(c-inv)}</td><td>₹${formatNum(c)}</td><td class="positive">${(c/inv).toFixed(2)}x</td></tr>`;
+  }).join('');
+}
+['rate','years','stepup'].forEach(id=>document.getElementById(id).addEventListener('input',calculate));
+document.addEventListener('DOMContentLoaded',calculate);
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":2,"name":"₹1,000 SIP","item":"https://calcphi.com/in/sip-1000-month.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much will ₹1,000 SIP give after 15 years?","acceptedAnswer":{"@type":"Answer","text":"₹1,000/month SIP at 12% annual returns grows to approximately ₹5.03 lakhs after 15 years. Total invested is ₹1.8 lakhs. The returns of ₹3.23 lakhs are 1.8x the invested amount — a 179% absolute return."}},{"@type":"Question","name":"Is ₹1,000 SIP enough to achieve financial goals?","acceptedAnswer":{"@type":"Answer","text":"₹1,000/month is a good start but likely insufficient for major goals. Use it to build the habit, then increase with income growth. With 10% annual step-up, ₹1,000/month becomes ₹6,727/month in 20 years and builds much larger corpus."}},{"@type":"Question","name":"Which fund is best for ₹1,000 SIP?","acceptedAnswer":{"@type":"Answer","text":"For ₹1,000/month, a Nifty 50 index fund is ideal — low cost (0.1-0.2% expense ratio), well-diversified, and historically reliable. As corpus grows, add a second fund. No need for multiple funds at ₹1,000/month level."}}]}</script>
+</body>
+</html>
