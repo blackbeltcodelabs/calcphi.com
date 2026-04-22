@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" data-region="IN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94D5DND9LS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag("js", new Date());
+  gtag("config", "G-94D5DND9LS", {{ page_title: document.title, page_location: window.location.href }});
+</script>
+<meta name="google-site-verification" content="EOSYQ9kWEpTvsQah9Do3mUA54q-1oFvyKwXG3zERx3k">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>₹50,000 SIP Calculator 2026 – Returns | CalcPhi</title>
+<meta name="description" content="Calculate exact returns on ₹50,000 monthly SIP. See your corpus after 10, 15, 20 years with year-by-year breakdown and step-up SIP option.">
+<meta name="keywords" content="50000 SIP calculator, 50000 monthly SIP returns, SIP 50000 per month India 2026, 50k SIP corpus">
+<link rel="canonical" href="https://calcphi.com/in/sip-50000-month.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/shared.js" defer></script>
+<meta property="og:title" content="₹50000 Monthly SIP – Returns & Corpus Calculator">
+<meta property="og:description" content="₹50,000/month SIP builds ₹5 Crore in 20 years at 12% returns. Full breakdown with step-up option.">
+<meta property="og:image" content="https://calcphi.com/og-image.jpg">
+<meta property="og:url" content="https://calcphi.com/in/sip-50000-month.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcPhi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="₹50000 Monthly SIP – Returns & Corpus Calculator">
+<meta name="twitter:description" content="₹50,000/month SIP builds ₹5 Crore in 20 years at 12% returns. Full breakdown with step-up option.">
+<meta name="twitter:image" content="https://calcphi.com/og-image.jpg">
+<meta name="twitter:site" content="@calcphi">
+<link rel="alternate" hreflang="en-IN" href="https://calcphi.com/in/sip-50000-month.html">
+<link rel="alternate" hreflang="x-default" href="https://calcphi.com/in/sip-50000-month.html">
+</head>
+<body>
+<nav><div class="nav-inner">
+  <a href="index.html" class="nav-logo">Calc<span>Phi</span></a>
+  <div class="nav-links">
+      <a href="index.html" class="nav-home">⌂ All Calculators</a>
+      <a href="sip-main.html">SIP</a>
+      <a href="target-sip.html">Target SIP</a>
+      <a href="1-crore-sip.html">1 Cr SIP</a>
+      <a href="emi-calculator.html">EMI</a>
+      <a href="income-tax.html">Tax</a>
+      <a href="fire-calculator.html">FIRE</a>
+    </div>
+</div></nav>
+<div class="wrapper">
+<header>
+  <div class="badge">₹50,000 Monthly · High-Income SIP</div>
+  <h1>₹50,000 SIP Calculator —<br><em>Build Crore-Level Wealth</em></h1>
+  <p class="subtitle">₹50,000/month consistently invested can build extraordinary wealth. See exactly how much your corpus will be at every milestone.</p>
+</header>
+<div class="info-banner">At 12% return, ₹50,000/month for 20 years builds ₹4.99 Crore. Adjust sliders to model your exact scenario.</div>
+<div class="main-grid">
+  <div class="card"><div class="card-title">Investment Details</div>
+    <div class="field"><div class="field-header"><span class="field-label">Monthly SIP</span><div class="field-value">₹<span id="val-monthly">50,000</span></div></div>
+    <input type="range" id="monthly" min="10000" max="200000" step="5000" value="50000"><div class="range-labels"><span>₹10K</span><span>₹2L</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">Annual Return</span><div class="field-value"><span id="val-rate">12</span><span>% p.a.</span></div></div>
+    <input type="range" id="rate" min="4" max="25" step="0.5" value="12"><div class="range-labels"><span>4%</span><span>25%</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">Duration</span><div class="field-value"><span id="val-years">20</span><span> yrs</span></div></div>
+    <input type="range" id="years" min="1" max="40" step="1" value="20"><div class="range-labels"><span>1 yr</span><span>40 yrs</span></div></div>
+    <div class="field"><div class="field-header"><span class="field-label">Annual Step-Up</span><div class="field-value"><span id="val-stepup">0</span><span>%</span></div></div>
+    <input type="range" id="stepup" min="0" max="20" step="1" value="0"><div class="range-labels"><span>0%</span><span>20%</span></div></div>
+  </div>
+  <div class="results-card">
+    <div class="corpus-display"><div class="corpus-label">Total Corpus</div><div class="corpus-amount" id="total-corpus">₹0</div><div class="corpus-sub">at maturity</div></div>
+    <div class="stats-row">
+      <div class="stat-box"><div class="stat-box-label">Amount Invested</div><div class="stat-box-value blue" id="total-invested">₹0</div></div>
+      <div class="stat-box"><div class="stat-box-label">Wealth Gained</div><div class="stat-box-value green" id="wealth-gained">₹0</div></div>
+      <div class="stat-box"><div class="stat-box-label">Return Multiple</div><div class="stat-box-value gold" id="returns-multiple">0x</div></div>
+      <div class="stat-box"><div class="stat-box-label">Abs. Return</div><div class="stat-box-value green" id="abs-return">0%</div></div>
+    </div>
+    <div class="progress-section">
+      <div class="progress-header"><span>Invested vs Returns</span><span id="returns-pct">0%</span></div>
+      <div class="progress-bar-bg"><div class="progress-bar-fill" id="progress-fill" style="width:50%"></div></div>
+      <div class="progress-legend"><span><span class="legend-dot" style="background:var(--accent2)"></span>Invested</span><span><span class="legend-dot" style="background:var(--accent)"></span>Returns</span></div>
+    </div>
+  </div>
+</div>
+<div class="chart-section">
+  <div class="chart-header"><div class="chart-title">Year-by-Year Growth</div>
+  <div class="chart-tabs"><button class="chart-tab active" id="tab-area" onclick="switchChart('area')">Growth</button><button class="chart-tab" id="tab-bar" onclick="switchChart('bar')">Breakdown</button></div></div>
+  <div class="chart-wrap"><canvas id="growthChart"></canvas></div>
+</div>
+<div class="card mb-20"><div class="card-title">Year-by-Year Breakdown</div>
+  <div class="table-wrap"><table><thead><tr><th>Year</th><th>Invested (₹)</th><th>Returns (₹)</th><th>Corpus (₹)</th><th>Growth %</th></tr></thead><tbody id="year-table"></tbody></table></div>
+</div>
+<div class="faq-section">
+  <h2 class="faq-heading">₹50,000 SIP — Wealth Building at Scale</h2>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How much will ₹50,000 SIP give in 20 years?<span class="arrow">+</span></div>
+  <div class="faq-a">At 12% annual return, ₹50,000/month SIP for 20 years gives approximately ₹4.99 Crore. You invest ₹1.2 Crore (₹50,000 × 240 months) and earn ₹3.79 Crore in returns — a 316% absolute return. This is true wealth creation through disciplined long-term SIP.</div></div>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What corpus does ₹50,000 SIP build in 10 years?<span class="arrow">+</span></div>
+  <div class="faq-a">At 12% annual return, ₹50,000/month SIP for 10 years gives approximately ₹1.15 Crore. You invest ₹60 lakhs and earn ₹55 lakhs in returns. At 15%, the corpus grows to ₹1.37 Crore. The 10-year SIP still shows significant compounding despite the shorter horizon.</div></div>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How should I split ₹50,000 SIP across funds?<span class="arrow">+</span></div>
+  <div class="faq-a">For ₹50,000 monthly SIP, a diversified allocation: ₹20,000 in Nifty 50 index fund, ₹10,000 in Nifty Next 50 index fund, ₹10,000 in flexi-cap active fund, ₹7,500 in international/US index fund, ₹2,500 in gold fund (as a hedge). This gives domestic + international diversification with low overall expense ratio.</div></div>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can ₹50,000 SIP help me retire early?<span class="arrow">+</span></div>
+  <div class="faq-a">Yes. ₹50,000/month SIP at 12% for 15 years builds approximately ₹2.5 Crore. Using the 4% safe withdrawal rate, this generates ₹1 lakh/month in retirement income. For most Indians under 45 starting this SIP, FIRE (Financial Independence Retire Early) is achievable by 55–60 with this level of commitment and discipline.</div></div>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the LTCG tax impact on ₹50,000 SIP?<span class="arrow">+</span></div>
+  <div class="faq-a">For equity mutual funds held over 1 year, LTCG tax is 10% on gains above ₹1 lakh per financial year. At ₹50,000/month SIP with 12% returns, annual gains after year 5 can be ₹8–15 lakhs. Strategic SWP (Systematic Withdrawal Plan) can manage LTCG liability — withdraw up to ₹1 lakh in gains per year tax-free. Consult a tax advisor for optimal withdrawal planning.</div></div>
+</div>
+</div>
+<footer>
+  <div class="footer-brand">Black Belt Code Labs</div>
+  <p>Results are indicative estimates only. Mutual fund investments are subject to market risks.</p>
+  <p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p>
+</footer>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"₹50000 SIP Calculator","url":"https://calcphi.com/sip-50000-month.html","description":"Calculate returns on ₹50,000 monthly SIP with year-by-year corpus breakdown.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+<script>
+let chartMode='area',myChart=null;
+function switchChart(m){chartMode=m;document.querySelectorAll('.chart-tab').forEach(t=>t.classList.remove('active'));document.getElementById('tab-'+m).classList.add('active');calculate();}
+function calculate(){
+  const monthly=+document.getElementById('monthly').value,rate=+document.getElementById('rate').value/100,years=+document.getElementById('years').value,stepup=+document.getElementById('stepup').value/100;
+  const mr=rate/12;let corpus=0,invested=0,cur=monthly;const labels=[],yInv=[],yCorp=[],rows=[];
+  for(let m=1;m<=years*12;m++){if(m>1&&(m-1)%12===0&&stepup>0)cur*=(1+stepup);corpus=(corpus+cur)*(1+mr);invested+=cur;
+    if(m%12===0){const yr=m/12;labels.push('Yr '+yr);yInv.push(Math.round(invested));yCorp.push(Math.round(corpus));const prev=yr>1?yCorp[yr-2]:0;rows.push({yr,inv:Math.round(invested),ret:Math.round(corpus-invested),corp:Math.round(corpus),g:prev>0?((corpus-prev)/prev*100).toFixed(1):'—'});}}
+  const wg=corpus-invested,mult=corpus/invested,abs=(wg/invested)*100,rp=(wg/corpus)*100;
+  document.getElementById('total-corpus').textContent=formatINR(corpus);document.getElementById('total-invested').textContent=formatINR(invested);document.getElementById('wealth-gained').textContent=formatINR(wg);document.getElementById('returns-multiple').textContent=mult.toFixed(2)+'x';document.getElementById('abs-return').textContent=abs.toFixed(1)+'%';document.getElementById('returns-pct').textContent=rp.toFixed(0)+'% returns';document.getElementById('progress-fill').style.width=rp.toFixed(1)+'%';
+  document.getElementById('val-monthly').textContent=monthly.toLocaleString('en-IN');document.getElementById('val-rate').textContent=+document.getElementById('rate').value;document.getElementById('val-years').textContent=years;document.getElementById('val-stepup').textContent=+document.getElementById('stepup').value;
+  if(myChart)myChart.destroy();const ctx=document.getElementById('growthChart').getContext('2d');
+  if(chartMode==='area'){const g1=ctx.createLinearGradient(0,0,0,260);g1.addColorStop(0,'rgba(59,130,246,0.35)');g1.addColorStop(1,'rgba(59,130,246,0)');const g2=ctx.createLinearGradient(0,0,0,260);g2.addColorStop(0,'rgba(34,211,165,0.35)');g2.addColorStop(1,'rgba(34,211,165,0)');myChart=makeAreaChart(ctx,labels,[{label:'Invested',data:yInv,borderColor:'rgba(59,130,246,0.9)',backgroundColor:g1,borderWidth:2,fill:true,tension:0.4,pointRadius:0,pointHoverRadius:5},{label:'Corpus',data:yCorp,borderColor:'rgba(34,211,165,0.9)',backgroundColor:g2,borderWidth:2,fill:true,tension:0.4,pointRadius:0,pointHoverRadius:5}]);}
+  else{myChart=makeBarChart(ctx,labels,[{label:'Invested',data:yInv,backgroundColor:'rgba(59,130,246,0.7)',borderRadius:3},{label:'Gains',data:yCorp.map((v,i)=>v-yInv[i]),backgroundColor:'rgba(34,211,165,0.7)',borderRadius:3}]);}
+  document.getElementById('year-table').innerHTML=rows.map(r=>`<tr><td>Year ${r.yr}</td><td>₹${formatNum(r.inv)}</td><td class="positive">₹${formatNum(r.ret)}</td><td>₹${formatNum(r.corp)}</td><td class="positive">${r.g}%</td></tr>`).join('');
+}
+['monthly','rate','years','stepup'].forEach(id=>document.getElementById(id).addEventListener('input',calculate));
+document.addEventListener('DOMContentLoaded',calculate);
+</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":2,"name":"₹50,000 SIP","item":"https://calcphi.com/in/sip-50000-month.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does ₹50,000 SIP build in 20 years?","acceptedAnswer":{"@type":"Answer","text":"₹50,000/month SIP at 12% annual returns builds approximately ₹4.99 Crore in 20 years. Total invested is ₹1.2 Crore with compounding adding ₹3.79 Crore. At 15% returns, corpus reaches ₹6.3 Crore in 20 years."}},{"@type":"Question","name":"What is the best allocation for ₹50,000 SIP?","acceptedAnswer":{"@type":"Answer","text":"For ₹50,000/month: ₹20,000 Nifty 50 index, ₹12,000 Nifty Next 50, ₹10,000 mid-cap index, ₹5,000 international fund, ₹3,000 gold ETF. This gives broad diversification at low cost with global exposure."}},{"@type":"Question","name":"At ₹50,000 SIP, when can I retire?","acceptedAnswer":{"@type":"Answer","text":"With 10% annual step-up starting at age 30, ₹50,000/month SIP can build ₹8-10 Crore by age 48-50. This typically enables Fat FIRE for most Indian professionals — complete financial independence well before traditional retirement age."}}]}</script>
+</body></html>
