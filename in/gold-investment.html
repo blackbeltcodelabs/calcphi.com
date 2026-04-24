@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-region="IN">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94D5DND9LS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-94D5DND9LS');</script>
+<meta name="google-site-verification" content="EOSYQ9kWEpTvsQah9Do3mUA54q-1oFvyKwXG3zERx3k">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gold Investment Returns Calculator India 2026 | CalcPhi</title>
+<meta name="description" content="Calculate gold investment returns for any amount and period. Compare Sovereign Gold Bond vs physical gold vs Gold ETF. Historical gold CAGR analysis India 2026.">
+<meta name="keywords" content="gold investment calculator India 2026, gold returns calculator, SGB vs physical gold, gold CAGR India, gold vs equity returns">
+<link rel="canonical" href="https://calcphi.com/in/gold-investment.html">
+<link rel="alternate" hreflang="en-IN" href="https://calcphi.com/in/gold-investment.html">
+<link rel="alternate" hreflang="x-default" href="https://calcphi.com/in/gold-investment.html">
+<meta property="og:title" content="Gold Investment Returns Calculator India 2026"><meta property="og:description" content="Calculate gold investment returns for any amount and period. Compare Sovereign Gold Bond vs physical gold vs Gold ETF. Historical gold CAGR analysis India ">
+<meta property="og:image" content="https://calcphi.com/og-image.jpg">
+<meta property="og:url" content="https://calcphi.com/in/gold-investment.html"><meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcPhi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gold Investment Returns Calculator India 2026"><meta name="twitter:description" content="Calculate gold investment returns for any amount and period. Compare Sovereign Gold Bond vs physical gold vs Gold ETF. Historical gold CAGR analysis India ">
+<meta name="twitter:image" content="https://calcphi.com/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/shared.js" defer></script>
+</head>
+<body>
+<nav><div class="nav-inner">
+<a href="../index.html" class="nav-logo">Calc<span>Phi</span></a>
+<div class="nav-links">
+<a href="index.html" class="nav-home">⌂ All Calculators</a>
+<a href="sip-main.html">SIP</a><a href="emi-calculator.html">EMI</a>
+<a href="income-tax.html">Tax</a><a href="in-hand-salary.html">Salary</a>
+<a href="fire-calculator.html">FIRE</a><a href="blog/">Blog</a>
+<a href="../index.html" style="font-size:11px;opacity:0.5;padding:4px 8px;color:var(--muted);">🌍 Change Region</a></div></div></nav>
+<div class="wrapper">
+<header>
+<div class="badge">Investment · Gold · SGB vs Physical vs ETF</div>
+<h1>Gold Investment Calculator —<br><em>SGB vs Physical vs ETF</em></h1>
+<p class="subtitle">Gold has delivered 11.5% CAGR in India over 20 years. Calculate returns on any gold investment and compare SGB (with 2.5% interest bonus), Gold ETF, and physical gold.</p>
+</header>
+<div class="info-banner">Sovereign Gold Bonds (SGB) are the best way to invest in gold in India — you get gold price appreciation PLUS 2.5% annual interest, with no storage or purity risk.</div>
+<div class="main-grid">
+<div class="card"><div class="card-title">Investment Details</div>
+<div style="display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+<button class="rate-pill active" onclick="setType('sgb',this)">SGB (Best)</button>
+<button class="rate-pill" onclick="setType('etf',this)">Gold ETF</button>
+<button class="rate-pill" onclick="setType('physical',this)">Physical Gold</button>
+</div>
+<div class="field"><div class="field-header"><span class="field-label">Investment Amount</span><div class="field-value">₹<span id="v-amt">1,00,000</span></div></div>
+<input type="range" id="amt" min="5000" max="10000000" step="5000" value="100000"><div class="range-labels"><span>₹5K</span><span>₹1Cr</span></div></div>
+<div class="field"><div class="field-header"><span class="field-label">Investment Period</span><div class="field-value"><span id="v-yr">8</span><span> years</span></div></div>
+<input type="range" id="years" min="1" max="30" step="1" value="8"><div class="range-labels"><span>1 yr</span><span>30 yrs</span></div></div>
+<div class="field"><div class="field-header"><span class="field-label">Gold Price CAGR (Historical: 11.5%)</span><div class="field-value"><span id="v-rate">11.5</span><span>% p.a.</span></div></div>
+<input type="range" id="rate" min="5" max="18" step="0.5" value="11.5"><div class="range-labels"><span>5%</span><span>18%</span></div></div>
+</div>
+<div class="results-card">
+<div class="corpus-display"><div class="corpus-label">Estimated Value</div><div class="corpus-amount" id="result">₹0</div><div class="corpus-sub" id="sub-type">SGB (with 2.5% interest)</div></div>
+<div class="stats-row">
+<div class="stat-box"><div class="stat-box-label">Invested</div><div class="stat-box-value blue" id="s-inv">₹0</div></div>
+<div class="stat-box"><div class="stat-box-label">Returns</div><div class="stat-box-value green" id="s-ret">₹0</div></div>
+<div class="stat-box"><div class="stat-box-label">Effective CAGR</div><div class="stat-box-value gold" id="s-cagr">0%</div></div>
+<div class="stat-box"><div class="stat-box-label">Type</div><div class="stat-box-value" id="s-type">SGB</div></div>
+</div></div></div>
+<div class="card mb-20"><div class="card-title">Gold Investment Options Compared</div>
+<div class="table-wrap"><table><thead><tr><th>Feature</th><th>SGB</th><th>Gold ETF</th><th>Physical Gold</th></tr></thead>
+<tbody>
+<tr><td>Return</td><td class="positive">Gold price + 2.5% interest</td><td>Gold price only</td><td>Gold price - making charges</td></tr>
+<tr><td>Storage risk</td><td class="positive">None (RBI)</td><td class="positive">None (Demat)</td><td>High</td></tr>
+<tr><td>Purity risk</td><td class="positive">None</td><td class="positive">None</td><td>High</td></tr>
+<tr><td>Tax (on maturity)</td><td class="positive">Fully exempt after 8 yrs</td><td>12.5% LTCG after 1 yr</td><td>12.5% LTCG after 3 yrs</td></tr>
+<tr><td>Liquidity</td><td>Medium (5yr lock-in exit)</td><td class="positive">High (exchange traded)</td><td>Medium</td></tr>
+<tr><td>Minimum</td><td>1 gram</td><td>0.01 gram</td><td>1 gram</td></tr>
+</tbody></table></div></div>
+<div class="faq-section"><h2 class="faq-heading">Gold Investment — Key Questions</h2>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Should I invest in SGB, Gold ETF, or physical gold?<span class="arrow">+</span></div>
+<div class="faq-a">For most investors, SGB is the best choice: it gives gold price returns PLUS 2.5% annual interest, has no storage cost, no purity risk, and if held to 8-year maturity, gains are completely tax-free. Gold ETF is better if you need high liquidity. Physical gold only makes sense for jewellery with emotional value — as an investment, it's the worst option due to making charges and storage costs.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What has been gold's CAGR in India over 20 years?<span class="arrow">+</span></div>
+<div class="faq-a">Gold has delivered approximately 11-12% CAGR in India over the past 20 years (2004-2024), outperforming FD and beating inflation significantly. However, gold returns are highly lumpy — it can be flat for 3-5 years and then spike 30-40% in a single year. This makes gold an excellent portfolio diversifier but a poor primary wealth creator compared to equity over long periods.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How much of my portfolio should be in gold?<span class="arrow">+</span></div>
+<div class="faq-a">Most financial planners recommend 5-15% of your portfolio in gold as a hedge against inflation, currency depreciation, and geopolitical risk. Gold and equity have low correlation — gold often rises when equity falls — making it a valuable diversifier. Avoid more than 15-20% in gold as it generates no cash flow and has lower long-term returns than equity.</div></div>
+</div>
+<script>
+let gtype='sgb';
+function setType(t,btn){gtype=t;document.querySelectorAll('.rate-pill').forEach(p=>p.classList.remove('active'));btn.classList.add('active');calculate();}
+function calculate(){
+  const amt=+document.getElementById('amt').value;
+  const yr=+document.getElementById('years').value;
+  const r=+document.getElementById('rate').value/100;
+  document.getElementById('v-amt').textContent=amt.toLocaleString('en-IN');
+  document.getElementById('v-yr').textContent=yr;
+  document.getElementById('v-rate').textContent=+document.getElementById('rate').value;
+  let result,cagr,label;
+  if(gtype==='sgb'){const total=(1+r+0.025);result=amt*Math.pow(1+r+0.025,yr);cagr=((r+0.025)*100).toFixed(1);label='SGB (Gold + 2.5% interest)';}
+  else if(gtype==='etf'){result=amt*Math.pow(1+r-0.005,yr);cagr=((r-0.005)*100).toFixed(1);label='Gold ETF (after 0.5% expense)';}
+  else{result=amt*Math.pow(1+r-0.03,yr);cagr=((r-0.03)*100).toFixed(1);label='Physical Gold (after 3% charges)';}
+  document.getElementById('result').textContent=formatINR(result);
+  document.getElementById('sub-type').textContent=label;
+  document.getElementById('s-inv').textContent=formatINR(amt);
+  document.getElementById('s-ret').textContent=formatINR(result-amt);
+  document.getElementById('s-cagr').textContent=cagr+'%';
+  document.getElementById('s-type').textContent=gtype.toUpperCase();
+}
+['amt','years','rate'].forEach(id=>document.getElementById(id).addEventListener('input',calculate));
+document.addEventListener('DOMContentLoaded',calculate);
+</script>
+</div>
+<footer>
+<div class="footer-brand">Black Belt Code Labs</div>
+  <div class="trust-seal">🇮🇳 Made for India by Indians</div>
+<p>Results are indicative estimates only. Consult a qualified financial advisor before making investment decisions.</p>
+<p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p>
+</footer>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"SGB vs Gold ETF vs physical gold — which is best?","acceptedAnswer":{"@type":"Answer","text":"SGB is best: gold price + 2.5% interest + tax-free at 8-year maturity. Gold ETF is good for liquidity. Physical gold is the worst investment option due to making charges and storage."}},{"@type":"Question","name":"What has gold CAGR been in India?","acceptedAnswer":{"@type":"Answer","text":"Gold has delivered ~11-12% CAGR in India over the past 20 years — solid returns but equity has outperformed over the same period."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/"},{"@type":"ListItem","position":2,"name":"India","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":3,"name":"Gold Investment Returns Calculator India 2026","item":"https://calcphi.com/in/gold-investment.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Gold Investment Returns Calculator India 2026","url":"https://calcphi.com/in/gold-investment.html","description":"Calculate gold investment returns for any amount and period. Compare Sovereign Gold Bond vs physical gold vs Gold ETF. Historical gold CAGR analysis I","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+</body></html>
