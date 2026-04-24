@@ -233,11 +233,7 @@
 </footer>
 
 <!-- GEO BANNER -->
-<div id="geo-banner">
-  <span id="geo-text" style="font-size:14px;color:var(--soft);"></span>
-  <a id="geo-link" href="#">Go there →</a>
-  <button onclick="document.getElementById('geo-banner').classList.remove('show');sessionStorage.setItem('cp_geo_dismissed','1')">×</button>
-</div>
+<div id="geo-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(10,15,30,0.97);border-top:1px solid rgba(34,211,165,0.3);padding:18px 24px;backdrop-filter:blur(16px);"><div style="max-width:760px;margin:0 auto;display:flex;align-items:center;gap:18px;flex-wrap:wrap;"><div style="font-size:2rem;flex-shrink:0;" id="geo-flag">🌍</div><div style="flex:1;min-width:180px;"><div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:3px;" id="geo-text"></div><div style="font-size:13px;color:var(--muted);" id="geo-sub"></div></div><div style="display:flex;gap:10px;align-items:center;flex-shrink:0;"><a id="geo-btn" href="#" style="display:none;background:var(--accent);color:#000!important;font-weight:700;font-size:13px;padding:10px 20px;border-radius:100px;text-decoration:none!important;white-space:nowrap;align-items:center;gap:6px;"></a><button onclick="document.getElementById('geo-banner').style.display='none';sessionStorage.setItem('cp_geo_dismissed','1');" style="background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--muted);cursor:pointer;font-size:13px;padding:10px 16px;border-radius:100px;font-family:inherit;">Stay here</button></div></div></div>
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"CalcPhi","url":"https://calcphi.com","description":"Country-specific free financial calculators for India and Australia. SIP, superannuation, mortgage, income tax and 75+ tools.","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://calcphi.com/in/?q={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Black Belt Code Labs","alternateName":"CalcPhi","url":"https://calcphi.com","logo":{"@type":"ImageObject","url":"https://calcphi.com/og-image.jpg","width":1200,"height":630},"description":"Free country-specific financial calculators for India, Australia, and more.","areaServed":[{"@type":"Country","name":"India"},{"@type":"Country","name":"Australia"}],"knowsAbout":["Financial Calculators","SIP","Superannuation","Income Tax","Mortgage","Retirement Planning"],"foundingDate":"2026"}</script>
@@ -245,24 +241,41 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"CalcPhi Countries","itemListElement":[{"@type":"ListItem","position":1,"name":"India Financial Calculators","url":"https://calcphi.com/in/"},{"@type":"ListItem","position":2,"name":"Australia Financial Calculators","url":"https://calcphi.com/au/"}]}</script>
 
 <script>
-// Non-intrusive geolocation banner
+// Smart geo-detection
 (function(){
   try {
     if (sessionStorage.getItem('cp_geo_dismissed')) return;
-    var tz = (Intl.DateTimeFormat().resolvedOptions().timeZone)||'';
-    var lang = navigator.language||'';
+    var tz = (Intl.DateTimeFormat().resolvedOptions().timeZone) || '';
+    var lang = (navigator.language || '');
     var detected = null;
-    if (tz.indexOf('Australia')>-1 || lang.indexOf('en-AU')>-1) detected='AU';
-    else if (tz.indexOf('Kolkata')>-1||tz.indexOf('Calcutta')>-1||lang.indexOf('en-IN')>-1) detected='IN';
+    if (tz.indexOf('Kolkata')>-1||tz.indexOf('Calcutta')>-1||lang.indexOf('en-IN')>-1) detected='IN';
+    else if (tz.indexOf('Australia')>-1||lang.indexOf('en-AU')>-1) detected='AU';
+    else if (tz.indexOf('America/New_York')>-1||tz.indexOf('America/Chicago')>-1||tz.indexOf('America/Denver')>-1||tz.indexOf('America/Los_Angeles')>-1||lang.indexOf('en-US')>-1) detected='US';
+    else if (tz.indexOf('Europe/London')>-1||lang.indexOf('en-GB')>-1) detected='GB';
+    else if (tz.indexOf('America/Toronto')>-1||tz.indexOf('America/Vancouver')>-1||tz.indexOf('America/Edmonton')>-1||lang.indexOf('en-CA')>-1) detected='CA';
     if (!detected) return;
-    var map={IN:{label:'🇮🇳 India calculators',url:'/in/'},AU:{label:'🇦🇺 Australia calculators',url:'/au/'}};
+    var regions={'IN':{flag:'🇮🇳',name:'India',url:'/in/',live:true},'AU':{flag:'🇦🇺',name:'Australia',url:'/au/',live:true},'US':{flag:'🇺🇸',name:'United States',url:null,live:false},'GB':{flag:'🇬🇧',name:'United Kingdom',url:null,live:false},'CA':{flag:'🇨🇦',name:'Canada',url:null,live:false}};
+    var r=regions[detected];
     var banner=document.getElementById('geo-banner');
-    document.getElementById('geo-text').textContent='We detected your location: ';
-    document.getElementById('geo-link').href=map[detected].url;
-    document.getElementById('geo-link').textContent='Go to '+map[detected].label+' →';
-    banner.classList.add('show');
+    var flagEl=document.getElementById('geo-flag');
+    var textEl=document.getElementById('geo-text');
+    var btnEl=document.getElementById('geo-btn');
+    var subEl=document.getElementById('geo-sub');
+    if(!banner) return;
+    flagEl.textContent=r.flag;
+    textEl.textContent='You appear to be in '+r.name+'.';
+    if(r.live){
+      subEl.textContent='We have calculators built for '+r.name+'. Take you there?';
+      btnEl.textContent='Yes, take me to '+r.flag+' '+r.name+' →';
+      btnEl.href=r.url;
+      btnEl.style.display='inline-flex';
+    } else {
+      subEl.textContent=r.name+' calculators are coming soon. Staying on global page.';
+      btnEl.style.display='none';
+    }
+    banner.style.display='flex';
   } catch(e){}
-})();
+})();;
 </script>
 </body>
 </html>
