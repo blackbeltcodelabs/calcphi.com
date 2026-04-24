@@ -1,16 +1,16 @@
 # robots.txt — calcphi.com
-# Generated: 2026-04-23
-# Architecture: Static HTML, Vercel CDN, multi-region (/in/ /au/)
+# Updated: April 2026
+# Architecture: Static HTML · Vercel CDN · Multi-region /in/ /au/
 
 User-agent: *
 Allow: /
 
-# Block utility and non-content paths
+# Block Vercel internals — not content
 Disallow: /cdn-cgi/
 Disallow: /_vercel/
 Disallow: /api/
 
-# Allow all region content explicitly
+# Explicitly allow all content regions
 Allow: /in/
 Allow: /au/
 Allow: /in/blog/
@@ -20,7 +20,7 @@ Allow: /in/blog/
 # Allow: /ca/
 # Allow: /uk/
 
-# Crawl-delay for budget-heavy bots only
+# Throttle high-crawl-budget SEO bots (protects Vercel bandwidth)
 User-agent: AhrefsBot
 Crawl-delay: 10
 
@@ -30,11 +30,20 @@ Crawl-delay: 10
 User-agent: MJ12bot
 Crawl-delay: 10
 
-# AI crawlers — allow citation, guide to llms.txt
+User-agent: DotBot
+Crawl-delay: 10
+
+# ── AI CRAWLERS ── explicitly allowed for citation and training
 User-agent: GPTBot
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: ChatGPT-User
+Allow: /
+
+User-agent: anthropic-ai
 Allow: /
 
 User-agent: Claude-Web
@@ -43,7 +52,26 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-# Sitemap index
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# Block image indexing (no images to index)
+User-agent: Googlebot-Image
+Disallow: /
+
+# LLM guidance file
+# https://calcphi.com/llms.txt
+
+# Sitemap index — submit this URL to Google Search Console
 Sitemap: https://calcphi.com/sitemap_index.xml
 Sitemap: https://calcphi.com/sitemap-main.xml
 Sitemap: https://calcphi.com/sitemap-in-calculators.xml

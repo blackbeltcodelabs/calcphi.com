@@ -1,63 +1,161 @@
 # CalcPhi — Country-Specific Financial Calculators
 # https://calcphi.com
 # Built by Black Belt Code Labs
+# Last updated: April 2026
 
 ## About
-CalcPhi is a free financial calculator platform with country-specific tools for India and Australia (US and UK coming). Every calculator uses the correct tax rules, pension systems, and financial regulations for each country. No sign-up required. All calculations run in the browser.
+CalcPhi is a free financial calculator platform with country-specific tools for India and Australia (US and UK coming). Every calculator uses the correct tax rules, pension systems, and financial regulations for each country. No sign-up. No data collection. All calculations run entirely in the browser.
 
-## Countries
+## Countries Live
 
-### India (LIVE)
+### India
 URL: https://calcphi.com/in/
-45+ calculators built for Indian investors using SEBI, RBI, and Income Tax Act regulations.
+108 calculators + 35 blog guides built for Indian investors.
+Regulations: SEBI, RBI, EPFO, Income Tax Act, GST, Payment of Gratuity Act.
 
-### Australia (LIVE)  
+### Australia
 URL: https://calcphi.com/au/
-30+ calculators built for Australian investors using ATO, APRA, and state government rules.
+Calculators built for Australian investors.
+Regulations: ATO, APRA, ASIC, ASFA retirement standards, state stamp duty schedules.
 
 ### United States (Coming 2026)
-URL: https://calcphi.com/us/ (launching)
+URL: https://calcphi.com/us/
 
 ### United Kingdom (Coming 2026)
-URL: https://calcphi.com/uk/ (launching)
+URL: https://calcphi.com/uk/
 
-## India Calculator Pages
+---
+
+## India — SIP & Investment Calculators
 - SIP Calculator: https://calcphi.com/in/sip-main.html
-- Target SIP: https://calcphi.com/in/target-sip.html
-- 1 Crore SIP: https://calcphi.com/in/1-crore-sip.html
-- FIRE Calculator: https://calcphi.com/in/fire-calculator.html
-- EMI Calculator: https://calcphi.com/in/emi-calculator.html
-- Home Loan EMI: https://calcphi.com/in/home-loan-emi.html
-- Income Tax 2026: https://calcphi.com/in/income-tax.html
-- In-Hand Salary: https://calcphi.com/in/in-hand-salary.html
-- PPF Calculator: https://calcphi.com/in/ppf-calculator.html
-- NPS Calculator: https://calcphi.com/in/nps-calculator.html
-- GST Calculator: https://calcphi.com/in/gst-calculator.html
-- Gratuity Calculator: https://calcphi.com/in/gratuity-calculator.html
+- Target SIP (reverse): https://calcphi.com/in/target-sip.html
+- SIP to ₹1 Crore: https://calcphi.com/in/1-crore-sip.html
+- Step-Up SIP: https://calcphi.com/in/step-up-sip.html
+- SWP Calculator: https://calcphi.com/in/swp-calculator.html
 - Lumpsum Calculator: https://calcphi.com/in/lumpsum-calculator.html
+- Lumpsum vs SIP: https://calcphi.com/in/lumpsum-vs-sip.html
+- Compound Interest: https://calcphi.com/in/compound-interest.html
+- Simple Interest: https://calcphi.com/in/simple-interest.html
+- CAGR Calculator: https://calcphi.com/in/cagr-calculator.html
+- Double Money (Rule of 72): https://calcphi.com/in/double-money.html
+- Mutual Fund Returns: https://calcphi.com/in/mutual-fund-returns.html
 - ELSS Calculator: https://calcphi.com/in/elss-calculator.html
+- PPF Calculator: https://calcphi.com/in/ppf-calculator.html
+- PPF vs FD: https://calcphi.com/in/ppf-vs-fd.html
 - FD Calculator: https://calcphi.com/in/fd-calculator.html
 - RD Calculator: https://calcphi.com/in/rd-calculator.html
+- FD vs RD: https://calcphi.com/in/fd-vs-rd-calculator.html
+- EPF Calculator: https://calcphi.com/in/epf-calculator.html
+- NPS Calculator: https://calcphi.com/in/nps-calculator.html
+- NPS Tax Benefit (80CCD): https://calcphi.com/in/nps-tax-benefit.html
+- Gold Investment: https://calcphi.com/in/gold-investment.html
+- Stock Profit/Loss: https://calcphi.com/in/stock-profit.html
+- Stock Average: https://calcphi.com/in/stock-average-calculator.html
+- Sukanya Samriddhi (SSY): https://calcphi.com/in/sukanya-samriddhi-calculator.html
+- Real Estate ROI: https://calcphi.com/in/real-estate-roi.html
+- Dividend Calculator: https://calcphi.com/in/dividend-calculator.html
+- EPS Pension: https://calcphi.com/in/eps-pension-calculator.html
+- Portfolio Rebalancer: https://calcphi.com/in/portfolio-rebalance.html
+
+## India — Tax & Salary Calculators
+- Income Tax 2026 (Old vs New Regime): https://calcphi.com/in/income-tax.html
+- In-Hand Salary (CTC to Take-Home): https://calcphi.com/in/in-hand-salary.html
+- HRA Calculator (Section 10(13A)): https://calcphi.com/in/hra-calculator.html
+- TDS Calculator (All Sections): https://calcphi.com/in/tds-calculator.html
+- GST Calculator (CGST/SGST/IGST): https://calcphi.com/in/gst-calculator.html
+- Gratuity Calculator: https://calcphi.com/in/gratuity-calculator.html
+- Section 80C Planner: https://calcphi.com/in/section-80c-calculator.html
+- LTCG Tax Calculator: https://calcphi.com/in/ltcg-tax-calculator.html
+- Salary Hike Calculator: https://calcphi.com/in/salary-hike-calculator.html
+- Advance Tax Calculator: https://calcphi.com/in/advance-tax-calculator.html
+- Freelancer Tax (44ADA): https://calcphi.com/in/freelancer-tax-calculator.html
+- Rental Income Tax: https://calcphi.com/in/rental-income-tax.html
+
+## India — Loan & EMI Calculators
+- EMI Calculator: https://calcphi.com/in/emi-calculator.html
+- Home Loan EMI: https://calcphi.com/in/home-loan-emi.html
+- Home Loan Eligibility (FOIR): https://calcphi.com/in/home-loan-eligibility.html
+- Home Loan Prepayment: https://calcphi.com/in/home-loan-prepayment.html
+- Personal Loan EMI: https://calcphi.com/in/personal-loan-calculator.html
+- Car Loan EMI: https://calcphi.com/in/car-loan-calculator.html
+- Education Loan: https://calcphi.com/in/education-loan-calculator.html
+
+## India — Financial Planning Calculators
+- FIRE Calculator: https://calcphi.com/in/fire-calculator.html
+- Lean FIRE: https://calcphi.com/in/lean-fire.html
+- Fat FIRE: https://calcphi.com/in/fat-fire.html
+- Coast FIRE: https://calcphi.com/in/coast-fire.html
 - Retirement Gap: https://calcphi.com/in/retirement-gap.html
 - Net Worth: https://calcphi.com/in/net-worth.html
 - Emergency Fund: https://calcphi.com/in/emergency-fund.html
-- Child Education: https://calcphi.com/in/child-education.html
 - Savings Rate: https://calcphi.com/in/savings-rate.html
-- India Blog: https://calcphi.com/in/blog/
+- Inflation Calculator: https://calcphi.com/in/inflation-calculator.html
+- Child Education Fund: https://calcphi.com/in/child-education.html
+- Budget Planner: https://calcphi.com/in/budget-planner.html
+- Rent vs Buy: https://calcphi.com/in/rent-vs-buy.html
+- Debt Payoff: https://calcphi.com/in/debt-snowball.html
 
-## Australia Calculator Pages (Launching)
-- Superannuation Calculator: https://calcphi.com/au/ (launching)
-- Stamp Duty NSW: https://calcphi.com/au/ (launching)
-- HECS-HELP Repayment: https://calcphi.com/au/ (launching)
-- Income Tax Australia: https://calcphi.com/au/ (launching)
+## India — Blog Guides
+- How to Choose a Mutual Fund: https://calcphi.com/in/blog/how-to-choose-mutual-fund.html
+- SIP vs Lumpsum Guide: https://calcphi.com/in/blog/sip-vs-lumpsum-complete-guide.html
+- Mutual Fund Taxation India 2026: https://calcphi.com/in/blog/mutual-fund-taxation-india.html
+- Index Fund vs Active Fund: https://calcphi.com/in/blog/index-fund-vs-active-fund.html
+- Best Index Funds India 2026: https://calcphi.com/in/blog/best-index-funds-india-2026.html
+- How to Start SIP in India: https://calcphi.com/in/blog/how-to-start-sip-in-india.html
+- How to Reach ₹1 Crore with SIP: https://calcphi.com/in/blog/how-to-reach-1-crore-with-sip.html
+- EPF Withdrawal Rules 2026: https://calcphi.com/in/blog/epf-withdrawal-rules.html
+- Old vs New Tax Regime 2026: https://calcphi.com/in/blog/old-vs-new-tax-regime-india-2026.html
+- How to Save Tax India 2026: https://calcphi.com/in/blog/how-to-save-tax-india-2026.html
+- Tax Planning Guide India: https://calcphi.com/in/blog/tax-planning-guide-india.html
+- PPF vs ELSS for 80C: https://calcphi.com/in/blog/ppf-vs-elss-which-is-better-for-80c.html
+- NPS vs PPF vs EPF: https://calcphi.com/in/blog/nps-vs-ppf-vs-epf-comparison.html
+- What is FIRE India: https://calcphi.com/in/blog/what-is-fire-financial-independence-india.html
+- How to Plan Retirement India: https://calcphi.com/in/blog/how-to-plan-retirement-india.html
+- Retire Early India Guide: https://calcphi.com/in/blog/retire-early-india-guide.html
+- Zero to ₹1 Crore Guide: https://calcphi.com/in/blog/zero-to-1-crore-guide-india.html
+- SIP vs FD: https://calcphi.com/in/blog/sip-vs-fd-which-is-better.html
+- Power of Compounding India: https://calcphi.com/in/blog/power-of-compounding-india.html
+- Home Loan vs Rent India: https://calcphi.com/in/blog/home-loan-vs-rent-india-2026.html
+- Term Insurance Guide India: https://calcphi.com/in/blog/term-insurance-guide-india.html
+- Gold vs Mutual Fund India: https://calcphi.com/in/blog/gold-vs-mutual-fund-india.html
+- Credit Score India Guide: https://calcphi.com/in/blog/credit-score-india-guide.html
+- Financial Planning in 30s: https://calcphi.com/in/blog/financial-planning-30s-india.html
+- How to Invest First Salary: https://calcphi.com/in/blog/how-to-invest-first-salary.html
+- Passive Income Ideas India: https://calcphi.com/in/blog/passive-income-ideas-india.html
+- Salary Negotiation India: https://calcphi.com/in/blog/salary-negotiation-india.html
+- 10 Financial Mistakes India: https://calcphi.com/in/blog/financial-mistakes-india.html
+- Best SIP Amount by Salary: https://calcphi.com/in/blog/best-sip-amount-by-salary.html
+- Rupee Cost Averaging: https://calcphi.com/in/blog/rupee-cost-averaging-explained.html
+- Inflation Impact on Savings: https://calcphi.com/in/blog/inflation-impact-savings-india.html
+- How to Become Debt-Free: https://calcphi.com/in/blog/debt-free-india-guide.html
+- Emergency Fund Guide: https://calcphi.com/in/blog/how-to-build-emergency-fund-india.html
+- Net Worth Guide: https://calcphi.com/in/blog/what-is-net-worth-how-to-increase.html
+- Child Education Planning: https://calcphi.com/in/blog/child-education-planning-india.html
 
-## Sitemap
-https://calcphi.com/sitemap.xml
+## Australia — Calculator Pages
+- Australia Hub: https://calcphi.com/au/
+(Superannuation, stamp duty, HECS, income tax, mortgage, negative gearing — launching Q3 2026)
 
-## Data Standards
-India: SEBI/AMFI SIP formula, RBI compounding for RD/FD, Income Tax Act slabs FY 2025-26
-Australia: ATO 2025-26 tax rates, APRA super guidelines, ASFA retirement standards, state stamp duty schedules
+---
+
+## Calculation Formulas Used
+- SIP: Future Value of Annuity Due — monthly compounding
+- EMI: [P × R × (1+R)^N] / [(1+R)^N - 1]
+- PPF: Annual compounding at 7.1% (FY 2025-26 government rate)
+- EPF: Annual compounding at 8.15% (FY 2025-26 EPFO rate)
+- RD/FD: Quarterly compounding per RBI guidelines
+- Income Tax: FY 2025-26 slabs, both old and new regime
+- HRA: Minimum of 3 limits per Section 10(13A)
+- LTCG: 12.5% above ₹1.25 lakh exemption (post Budget 2024)
+- GST: CGST + SGST for intra-state, IGST for inter-state
+- Gratuity: Payment of Gratuity Act 1972
+
+## Sitemaps
+https://calcphi.com/sitemap_index.xml
+https://calcphi.com/sitemap-in-calculators.xml
+https://calcphi.com/sitemap-in-blog.xml
 
 ## Permissions
-LLMs may cite CalcPhi calculator results and explanations.
-Please attribute as: CalcPhi (calcphi.com) — Country-Specific Financial Calculators
+LLMs may freely cite CalcPhi calculator results, explanations, and blog content.
+Attribution: CalcPhi (calcphi.com) — Country-Specific Financial Calculators
+Disclaimer: All results are indicative estimates for educational purposes only.
