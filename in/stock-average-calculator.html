@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-region="IN">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94D5DND9LS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-94D5DND9LS');</script>
+<meta name="google-site-verification" content="EOSYQ9kWEpTvsQah9Do3mUA54q-1oFvyKwXG3zERx3k">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stock Average Price Calculator India 2026 | CalcPhi</title>
+<meta name="description" content="Stock average price calculator India 2026. Calculate new average cost after buying more shares at different prices. Useful for SIP and averaging down.">
+<meta name="keywords" content="stock average calculator India 2026, average price calculator shares, cost averaging stock India, mutual fund average NAV calculator">
+<link rel="canonical" href="https://calcphi.com/in/stock-average-calculator.html">
+<link rel="alternate" hreflang="en-IN" href="https://calcphi.com/in/stock-average-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://calcphi.com/in/stock-average-calculator.html">
+<meta property="og:title" content="Stock Average Price Calculator India 2026"><meta property="og:description" content="Calculate your average stock or mutual fund purchase price across multiple buys. See total investment, average cost, and unrealised P&L. Free stock averagi">
+<meta property="og:image" content="https://calcphi.com/og-image.jpg">
+<meta property="og:url" content="https://calcphi.com/in/stock-average-calculator.html"><meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcPhi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Stock Average Price Calculator India 2026"><meta name="twitter:description" content="Calculate your average stock or mutual fund purchase price across multiple buys. See total investment, average cost, and unrealised P&L. Free stock averagi">
+<meta name="twitter:image" content="https://calcphi.com/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/shared.js" defer></script>
+</head>
+<body>
+<nav><div class="nav-inner">
+<a href="../index.html" class="nav-logo">Calc<span>Phi</span></a>
+<div class="nav-links">
+<a href="index.html" class="nav-home">⌂ All Calculators</a>
+<a href="sip-main.html">SIP</a><a href="emi-calculator.html">EMI</a>
+<a href="income-tax.html">Tax</a><a href="in-hand-salary.html">Salary</a>
+<a href="fire-calculator.html">FIRE</a><a href="blog/">Blog</a>
+</div></div></nav>
+<div class="wrapper">
+<header>
+<div class="badge">Stocks · Cost Averaging · Unrealised P&L</div>
+<h1>Stock Average Calculator —<br><em>Your True Cost Basis</em></h1>
+<p class="subtitle">Add up to 5 purchase lots — different quantities and prices — to see your exact average cost per share and current profit or loss.</p>
+</header>
+<div class="info-banner">Average Cost = Total Amount Invested ÷ Total Shares Bought. Use this to decide whether buying more at a lower price actually improves your average meaningfully.</div>
+<div id="lots-container">
+<div class="card mb-20"><div class="card-title">Purchase Lots</div>
+<div id="lots">
+<div class="lot-row" style="display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:10px;margin-bottom:10px;align-items:end;">
+<div><div style="font-size:12px;color:var(--muted);margin-bottom:4px;">Qty / Units</div><input type="number" class="qty" style="background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:8px;padding:10px;color:var(--text);width:100%;font-size:14px;" value="100" min="0" oninput="calculate()"></div>
+<div><div style="font-size:12px;color:var(--muted);margin-bottom:4px;">Buy Price (₹)</div><input type="number" class="price" style="background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:8px;padding:10px;color:var(--text);width:100%;font-size:14px;" value="500" min="0" oninput="calculate()"></div>
+<div><div style="font-size:12px;color:var(--muted);margin-bottom:4px;">Amount (₹)</div><div class="amt" style="padding:10px;font-size:14px;color:var(--accent);font-weight:600;">₹50,000</div></div>
+<button onclick="removeLot(this)" style="background:rgba(244,63,94,0.1);border:1px solid rgba(244,63,94,0.2);border-radius:8px;padding:10px;color:var(--danger);cursor:pointer;font-size:16px;align-self:end;">×</button>
+</div>
+<div class="lot-row" style="display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:10px;margin-bottom:10px;align-items:end;">
+<div><input type="number" class="qty" style="background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:8px;padding:10px;color:var(--text);width:100%;font-size:14px;" value="50" min="0" oninput="calculate()"></div>
+<div><input type="number" class="price" style="background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:8px;padding:10px;color:var(--text);width:100%;font-size:14px;" value="430" min="0" oninput="calculate()"></div>
+<div><div class="amt" style="padding:10px;font-size:14px;color:var(--accent);font-weight:600;">₹21,500</div></div>
+<button onclick="removeLot(this)" style="background:rgba(244,63,94,0.1);border:1px solid rgba(244,63,94,0.2);border-radius:8px;padding:10px;color:var(--danger);cursor:pointer;font-size:16px;align-self:end;">×</button>
+</div>
+</div>
+<button onclick="addLot()" style="background:rgba(34,211,165,0.1);border:1px solid rgba(34,211,165,0.25);border-radius:8px;padding:10px 20px;color:var(--accent);cursor:pointer;font-size:14px;font-weight:600;margin-top:4px;">+ Add Purchase Lot</button>
+</div>
+<div class="field" style="margin-top:20px;"><div class="field-header"><span class="field-label">Current Market Price (₹)</span><div class="field-value">₹<span id="v-cmp">480</span></div></div>
+<input type="range" id="cmp" min="1" max="10000" step="1" value="480" oninput="document.getElementById('v-cmp').textContent=this.value;calculate()"><div class="range-labels"><span>₹1</span><span>₹10,000</span></div></div>
+</div>
+<div class="results-card" style="margin-bottom:20px;">
+<div class="corpus-display"><div class="corpus-label">Average Buy Price</div><div class="corpus-amount" id="avg-price">₹0</div><div class="corpus-sub" id="sub-res">across all purchases</div></div>
+<div class="stats-row">
+<div class="stat-box"><div class="stat-box-label">Total Shares</div><div class="stat-box-value blue" id="total-qty">0</div></div>
+<div class="stat-box"><div class="stat-box-label">Total Invested</div><div class="stat-box-value" id="total-inv">₹0</div></div>
+<div class="stat-box"><div class="stat-box-label">Current Value</div><div class="stat-box-value gold" id="curr-val">₹0</div></div>
+<div class="stat-box"><div class="stat-box-label">Unrealised P&L</div><div class="stat-box-value" id="pnl">₹0</div></div>
+</div></div>
+<div class="faq-section"><h2 class="faq-heading">Stock Averaging — Key Questions</h2>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is cost averaging in stocks?<span class="arrow">+</span></div>
+<div class="faq-a">Cost averaging (or rupee cost averaging in SIP context) means buying more shares at different prices so your average purchase price is lower than the peak. Example: Buy 100 shares at ₹500 = ₹50,000. Buy 100 more at ₹400 = ₹40,000. Average cost = ₹90,000/200 = ₹450/share. You now break even when the stock recovers to ₹450 instead of ₹500.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Should I average down on a falling stock?<span class="arrow">+</span></div>
+<div class="faq-a">Averaging down is only sensible if you have conviction that the business fundamentals are intact and the price fall is temporary due to market sentiment rather than business deterioration. Never average down on a stock where the business itself is struggling — you risk catching a falling knife. Always assess why the stock fell before buying more.</div></div>
+</div>
+<script>
+function addLot(){
+  const d=document.createElement('div');
+  d.className='lot-row';d.style.cssText='display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:10px;margin-bottom:10px;align-items:end;';
+  d.innerHTML=`<div><input type="number" class="qty" style="background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:8px;padding:10px;color:var(--text);width:100%;font-size:14px;" value="0" min="0" oninput="calculate()"></div><div><input type="number" class="price" style="background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:8px;padding:10px;color:var(--text);width:100%;font-size:14px;" value="0" min="0" oninput="calculate()"></div><div><div class="amt" style="padding:10px;font-size:14px;color:var(--accent);font-weight:600;">₹0</div></div><button onclick="removeLot(this)" style="background:rgba(244,63,94,0.1);border:1px solid rgba(244,63,94,0.2);border-radius:8px;padding:10px;color:var(--danger);cursor:pointer;font-size:16px;align-self:end;">×</button>`;
+  document.getElementById('lots').appendChild(d);
+  calculate();
+}
+function removeLot(btn){if(document.querySelectorAll('.lot-row').length>1){btn.closest('.lot-row').remove();calculate();}}
+function calculate(){
+  let totalQty=0,totalAmt=0;
+  document.querySelectorAll('.lot-row').forEach(row=>{
+    const q=+row.querySelector('.qty').value||0;
+    const p=+row.querySelector('.price').value||0;
+    const a=q*p;
+    row.querySelector('.amt').textContent='₹'+formatNum(a);
+    totalQty+=q;totalAmt+=a;
+  });
+  const avg=totalQty?totalAmt/totalQty:0;
+  const cmp=+document.getElementById('cmp').value;
+  const cv=totalQty*cmp;
+  const pnl=cv-totalAmt;
+  document.getElementById('avg-price').textContent='₹'+formatNum(avg);
+  document.getElementById('total-qty').textContent=formatNum(totalQty)+' shares';
+  document.getElementById('total-inv').textContent=formatINR(totalAmt);
+  document.getElementById('curr-val').textContent=formatINR(cv);
+  const pnlEl=document.getElementById('pnl');
+  pnlEl.textContent=(pnl>=0?'+':'')+formatINR(pnl)+' ('+(totalAmt?((pnl/totalAmt)*100).toFixed(1):0)+'%)';
+  pnlEl.style.color=pnl>=0?'var(--accent)':'var(--danger)';
+}
+document.getElementById('cmp').addEventListener('input',calculate);
+document.addEventListener('DOMContentLoaded',calculate);
+</script>
+</div>
+<footer>
+<div class="footer-brand">Black Belt Code Labs</div>
+<p>Results are indicative estimates only. Consult a qualified financial advisor before making investment decisions.</p>
+<p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p>
+</footer>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is cost averaging?","acceptedAnswer":{"@type":"Answer","text":"Cost averaging means buying shares at multiple prices so your average cost is lower. Average = Total Invested ÷ Total Shares."}},{"@type":"Question","name":"Should I average down?","acceptedAnswer":{"@type":"Answer","text":"Only if business fundamentals are intact. Never average down when the business itself is deteriorating — assess the reason for the fall first."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/"},{"@type":"ListItem","position":2,"name":"India","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":3,"name":"Stock Average Price Calculator India 2026","item":"https://calcphi.com/in/stock-average-calculator.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Stock Average Price Calculator India 2026","url":"https://calcphi.com/in/stock-average-calculator.html","description":"Calculate your average stock or mutual fund purchase price across multiple buys. See total investment, average cost, and unrealised P&L. Free stock av","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+</body></html>

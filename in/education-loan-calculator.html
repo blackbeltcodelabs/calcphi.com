@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-region="IN">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94D5DND9LS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-94D5DND9LS');</script>
+<meta name="google-site-verification" content="EOSYQ9kWEpTvsQah9Do3mUA54q-1oFvyKwXG3zERx3k">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Education Loan EMI Calculator India 2026 | CalcPhi</title>
+<meta name="description" content="Education loan EMI calculator India 2026. Calculate monthly payment with moratorium period, interest during study, and total repayment amount.">
+<meta name="keywords" content="education loan EMI calculator India 2026, student loan calculator India, education loan repayment calculator, study abroad loan EMI">
+<link rel="canonical" href="https://calcphi.com/in/education-loan-calculator.html">
+<link rel="alternate" hreflang="en-IN" href="https://calcphi.com/in/education-loan-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://calcphi.com/in/education-loan-calculator.html">
+<meta property="og:title" content="Education Loan EMI Calculator India 2026"><meta property="og:description" content="Calculate education loan EMI for studying in India or abroad. See repayment schedule, moratorium period impact, and total interest cost. Free education loa">
+<meta property="og:image" content="https://calcphi.com/og-image.jpg">
+<meta property="og:url" content="https://calcphi.com/in/education-loan-calculator.html"><meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcPhi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Education Loan EMI Calculator India 2026"><meta name="twitter:description" content="Calculate education loan EMI for studying in India or abroad. See repayment schedule, moratorium period impact, and total interest cost. Free education loa">
+<meta name="twitter:image" content="https://calcphi.com/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/shared.js" defer></script>
+</head>
+<body>
+<nav><div class="nav-inner">
+<a href="../index.html" class="nav-logo">Calc<span>Phi</span></a>
+<div class="nav-links">
+<a href="index.html" class="nav-home">⌂ All Calculators</a>
+<a href="sip-main.html">SIP</a><a href="emi-calculator.html">EMI</a>
+<a href="income-tax.html">Tax</a><a href="in-hand-salary.html">Salary</a>
+<a href="fire-calculator.html">FIRE</a><a href="blog/">Blog</a>
+</div></div></nav>
+<div class="wrapper">
+<header>
+<div class="badge">Education Loan · India & Abroad · 2026</div>
+<h1>Education Loan Calculator —<br><em>Plan Your Repayment Before You Borrow</em></h1>
+<p class="subtitle">Education loans have a moratorium period (course + 6-12 months) during which no EMI is paid. Interest still accrues. Know your true burden before you borrow ₹20-50 lakhs.</p>
+</header>
+<div class="info-banner">EMI = [P × R × (1+R)^N] / [(1+R)^N-1]. Moratorium: typically course duration + 6 months. Interest accrues during moratorium and is capitalised — increasing your effective loan amount.</div>
+<div class="main-grid">
+<div class="card"><div class="card-title">Education Loan Details</div>
+<div class="field"><div class="field-header"><span class="field-label">Loan Amount</span><div class="field-value">₹<span id="v-p">2,000,000</span></div></div>
+<input type="range" id="principal" min="10000" max="10000000" step="10000" value="2000000"><div class="range-labels"><span>₹10K</span><span>₹1Cr</span></div></div>
+<div class="field"><div class="field-header"><span class="field-label">Interest Rate</span><div class="field-value"><span id="v-r">9</span><span>% p.a.</span></div></div>
+<input type="range" id="rate" min="5" max="36" step="0.25" value="9"><div class="range-labels"><span>5%</span><span>36%</span></div></div>
+<div class="field"><div class="field-header"><span class="field-label">Loan Tenure</span><div class="field-value"><span id="v-t">10</span><span> years</span></div></div>
+<input type="range" id="tenure" min="1" max="30" step="1" value="10"><div class="range-labels"><span>1 yr</span><span>30 yrs</span></div></div>
+</div>
+<div class="results-card">
+<div class="corpus-display"><div class="corpus-label">Monthly EMI</div><div class="corpus-amount" id="emi">₹0</div><div class="corpus-sub" id="sub-emi">total interest: ₹0</div></div>
+<div class="stats-row">
+<div class="stat-box"><div class="stat-box-label">Principal</div><div class="stat-box-value blue" id="s-p">₹0</div></div>
+<div class="stat-box"><div class="stat-box-label">Total Interest</div><div class="stat-box-value" style="color:var(--danger)" id="s-i">₹0</div></div>
+<div class="stat-box"><div class="stat-box-label">Total Payment</div><div class="stat-box-value gold" id="s-t">₹0</div></div>
+<div class="stat-box"><div class="stat-box-label">Interest %</div><div class="stat-box-value" id="s-pct">0%</div></div>
+</div></div></div>
+<div class="card mb-20"><div class="card-title">Amortization Schedule (First 12 Months)</div>
+<div class="table-wrap"><table><thead><tr><th>Month</th><th>EMI (₹)</th><th>Principal (₹)</th><th>Interest (₹)</th><th>Balance (₹)</th></tr></thead><tbody id="amort-table"></tbody></table></div></div>
+<script>
+function calculate(){
+  const P=+document.getElementById('principal').value;
+  const r=+document.getElementById('rate').value/100/12;
+  const n=+document.getElementById('tenure').value*12;
+  document.getElementById('v-p').textContent=P.toLocaleString('en-IN');
+  document.getElementById('v-r').textContent=+document.getElementById('rate').value;
+  document.getElementById('v-t').textContent=+document.getElementById('tenure').value;
+  const emi=P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+  const totalPay=emi*n;
+  const totalInt=totalPay-P;
+  document.getElementById('emi').textContent=formatINR(emi);
+  document.getElementById('sub-emi').textContent='total interest: '+formatINR(totalInt);
+  document.getElementById('s-p').textContent=formatINR(P);
+  document.getElementById('s-i').textContent=formatINR(totalInt);
+  document.getElementById('s-t').textContent=formatINR(totalPay);
+  document.getElementById('s-pct').textContent=((totalInt/P)*100).toFixed(0)+'%';
+  let bal=P,rows='';
+  for(let m=1;m<=Math.min(12,n);m++){
+    const int=bal*r;const prin=emi-int;bal-=prin;
+    rows+=`<tr><td>Month ${m}</td><td>₹${formatNum(emi)}</td><td class="positive">₹${formatNum(prin)}</td><td style="color:var(--danger)">₹${formatNum(int)}</td><td>₹${formatNum(Math.max(0,bal))}</td></tr>`;
+  }
+  document.getElementById('amort-table').innerHTML=rows;
+}
+['principal','rate','tenure'].forEach(id=>document.getElementById(id).addEventListener('input',calculate));
+document.addEventListener('DOMContentLoaded',calculate);
+</script>
+</div>
+<footer>
+<div class="footer-brand">Black Belt Code Labs</div>
+<p>Results are indicative estimates only. Consult a qualified financial advisor before making investment decisions.</p>
+<p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p>
+</footer>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What education loan interest rate is charged in India?","acceptedAnswer":{"@type":"Answer","text":"Government bank rates: 8.5-11% for India, 11-13% for abroad. Private banks: 12-15%. Vidya Lakshmi portal lists all government-backed education loans with subsidies for economically weaker sections."}},{"@type":"Question","name":"Is education loan interest tax deductible?","acceptedAnswer":{"@type":"Answer","text":"Yes — Section 80E allows full deduction of interest paid on education loans for 8 years from the year repayment starts. There is no upper limit on this deduction. Principal repayment is NOT deductible."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/"},{"@type":"ListItem","position":2,"name":"India","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":3,"name":"Education Loan EMI Calculator India 2026","item":"https://calcphi.com/in/education-loan-calculator.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Education Loan EMI Calculator India 2026","url":"https://calcphi.com/in/education-loan-calculator.html","description":"Calculate education loan EMI for studying in India or abroad. See repayment schedule, moratorium period impact, and total interest cost. Free educatio","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+</body></html>

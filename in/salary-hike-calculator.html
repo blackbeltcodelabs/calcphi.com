@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" data-region="IN">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94D5DND9LS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-94D5DND9LS');</script>
+<meta name="google-site-verification" content="EOSYQ9kWEpTvsQah9Do3mUA54q-1oFvyKwXG3zERx3k">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salary Hike Calculator India 2026 | CalcPhi</title>
+<meta name="description" content="Calculate your new salary after any percentage hike. See new CTC, in-hand pay increase, and month-wise comparison. Free salary increment calculator India 2026.">
+<meta name="keywords" content="salary hike calculator India 2026, salary increment calculator, new salary after hike, percentage hike calculator India">
+<link rel="canonical" href="https://calcphi.com/in/salary-hike-calculator.html">
+<link rel="alternate" hreflang="en-IN" href="https://calcphi.com/in/salary-hike-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://calcphi.com/in/salary-hike-calculator.html">
+<meta property="og:title" content="Salary Hike Calculator India 2026"><meta property="og:description" content="Calculate your new salary after any percentage hike. See new CTC, in-hand pay increase, and month-wise comparison. Free salary increment calculator India 2">
+<meta property="og:image" content="https://calcphi.com/og-image.jpg">
+<meta property="og:url" content="https://calcphi.com/in/salary-hike-calculator.html"><meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcPhi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Salary Hike Calculator India 2026"><meta name="twitter:description" content="Calculate your new salary after any percentage hike. See new CTC, in-hand pay increase, and month-wise comparison. Free salary increment calculator India 2">
+<meta name="twitter:image" content="https://calcphi.com/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/shared.js" defer></script>
+</head>
+<body>
+<nav><div class="nav-inner">
+<a href="../index.html" class="nav-logo">Calc<span>Phi</span></a>
+<div class="nav-links">
+<a href="index.html" class="nav-home">⌂ All Calculators</a>
+<a href="sip-main.html">SIP</a><a href="emi-calculator.html">EMI</a>
+<a href="income-tax.html">Tax</a><a href="in-hand-salary.html">Salary</a>
+<a href="fire-calculator.html">FIRE</a><a href="blog/">Blog</a>
+</div></div></nav>
+<div class="wrapper">
+<header>
+<div class="badge">Salary · Increment · Take-Home Impact</div>
+<h1>Salary Hike Calculator —<br><em>What Does Your Increment Actually Mean?</em></h1>
+<p class="subtitle">Enter your current salary and hike percentage to see your exact new CTC, new in-hand pay, and the real monthly difference after taxes.</p>
+</header>
+<div class="info-banner">A 20% hike on ₹10 LPA looks great — but after TDS and PF, your actual monthly take-home increase is significantly lower. Know the real number.</div>
+<div class="main-grid">
+<div class="card"><div class="card-title">Salary Details</div>
+<div class="field"><div class="field-header"><span class="field-label">Current Annual CTC</span><div class="field-value">₹<span id="v-ctc">10,00,000</span></div></div>
+<input type="range" id="ctc" min="200000" max="10000000" step="50000" value="1000000"><div class="range-labels"><span>₹2L</span><span>₹1 Cr</span></div></div>
+<div class="field"><div class="field-header"><span class="field-label">Hike Percentage</span><div class="field-value"><span id="v-hike">15</span><span>%</span></div></div>
+<input type="range" id="hike" min="1" max="100" step="1" value="15"><div class="range-labels"><span>1%</span><span>100%</span></div></div>
+<div class="field"><div class="field-header"><span class="field-label">Basic Salary %</span><div class="field-value"><span id="v-basic">40</span><span>% of CTC</span></div></div>
+<input type="range" id="basic-pct" min="30" max="60" step="5" value="40"><div class="range-labels"><span>30%</span><span>60%</span></div></div>
+</div>
+<div class="results-card">
+<div class="corpus-display"><div class="corpus-label">New Annual CTC</div><div class="corpus-amount" id="new-ctc">₹0</div><div class="corpus-sub" id="hike-sub">after 15% hike</div></div>
+<div class="stats-row">
+<div class="stat-box"><div class="stat-box-label">Current Monthly In-Hand</div><div class="stat-box-value blue" id="old-inhand">₹0</div></div>
+<div class="stat-box"><div class="stat-box-label">New Monthly In-Hand</div><div class="stat-box-value green" id="new-inhand">₹0</div></div>
+<div class="stat-box"><div class="stat-box-label">Monthly Increase</div><div class="stat-box-value gold" id="monthly-inc">₹0</div></div>
+<div class="stat-box"><div class="stat-box-label">Annual Increase</div><div class="stat-box-value" id="annual-inc">₹0</div></div>
+</div></div></div>
+<div class="card mb-20"><div class="card-title">Salary Comparison</div>
+<div class="table-wrap"><table><thead><tr><th>Component</th><th>Current (₹)</th><th>After Hike (₹)</th><th>Increase (₹)</th></tr></thead>
+<tbody id="comp-table"></tbody></table></div></div>
+<div class="faq-section"><h2 class="faq-heading">Salary Hike — Key Questions</h2>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How is salary hike percentage calculated?<span class="arrow">+</span></div>
+<div class="faq-a">Hike % = ((New CTC - Old CTC) / Old CTC) × 100. For example, moving from ₹10 LPA to ₹12 LPA is a 20% hike. To calculate your new salary: New CTC = Current CTC × (1 + Hike%/100). The actual take-home increase is lower because PF contributions and income tax both increase with salary.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is a good salary hike in India 2026?<span class="arrow">+</span></div>
+<div class="faq-a">Average salary hikes in India in 2026 are 8-10% for average performers, 12-15% for good performers, and 20-30%+ for exceptional or promoted employees. IT sector averages 10-12%, BFSI 8-10%, FMCG 8-9%. A hike below inflation (currently 5-6%) is effectively a pay cut in real terms. Anything above 15% is considered above-market in most sectors.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Why is my actual take-home increase less than the hike percentage?<span class="arrow">+</span></div>
+<div class="faq-a">Because both PF contributions (12% of basic) and income tax increase proportionally with your salary. A 20% CTC hike translates to roughly 13-17% actual take-home increase depending on your tax slab. Higher tax slab = smaller real take-home hike. This is the illusion of gross salary hike — always calculate net in-hand impact.</div></div>
+</div>
+<script>
+function calcInhand(ctc, basicPct){
+  const basic=ctc*basicPct/100;
+  const pf=Math.min(basic*0.12,21600);
+  const taxableGross=ctc-pf*2;
+  let tax=0;
+  if(taxableGross>1500000) tax=140000+(taxableGross-1500000)*0.30;
+  else if(taxableGross>1200000) tax=80000+(taxableGross-1200000)*0.20;
+  else if(taxableGross>1000000) tax=50000+(taxableGross-1000000)*0.15;
+  else if(taxableGross>700000) tax=20000+(taxableGross-700000)*0.10;
+  else if(taxableGross>300000) tax=(taxableGross-300000)*0.05;
+  tax*=1.04;
+  return (ctc-pf-tax)/12;
+}
+function calculate(){
+  const ctc=+document.getElementById('ctc').value;
+  const hike=+document.getElementById('hike').value;
+  const bp=+document.getElementById('basic-pct').value;
+  document.getElementById('v-ctc').textContent=ctc.toLocaleString('en-IN');
+  document.getElementById('v-hike').textContent=hike;
+  document.getElementById('v-basic').textContent=bp;
+  const newCtc=ctc*(1+hike/100);
+  const oldIH=calcInhand(ctc,bp);
+  const newIH=calcInhand(newCtc,bp);
+  const diff=newIH-oldIH;
+  document.getElementById('new-ctc').textContent=formatINR(newCtc);
+  document.getElementById('hike-sub').textContent='after '+hike+'% hike';
+  document.getElementById('old-inhand').textContent=formatINR(oldIH);
+  document.getElementById('new-inhand').textContent=formatINR(newIH);
+  document.getElementById('monthly-inc').textContent=formatINR(diff);
+  document.getElementById('annual-inc').textContent=formatINR(diff*12);
+  const rows=[
+    ['Annual CTC',ctc,newCtc],
+    ['Basic Salary',ctc*bp/100,newCtc*bp/100],
+    ['PF Contribution',Math.min(ctc*bp/100*0.12,21600),Math.min(newCtc*bp/100*0.12,21600)],
+    ['Monthly In-Hand',oldIH,newIH],
+  ];
+  document.getElementById('comp-table').innerHTML=rows.map(([l,o,n])=>
+    `<tr><td>${l}</td><td>₹${formatNum(o)}</td><td>₹${formatNum(n)}</td><td class="positive">₹${formatNum(n-o)}</td></tr>`
+  ).join('');
+}
+['ctc','hike','basic-pct'].forEach(id=>document.getElementById(id).addEventListener('input',calculate));
+document.addEventListener('DOMContentLoaded',calculate);
+</script>
+</div>
+<footer>
+<div class="footer-brand">Black Belt Code Labs</div>
+<p>Results are indicative estimates only. Consult a qualified financial advisor before making investment decisions.</p>
+<p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p>
+</footer>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is salary hike calculated?","acceptedAnswer":{"@type":"Answer","text":"Hike % = ((New CTC - Old CTC) / Old CTC) × 100. New Salary = Current CTC × (1 + Hike%/100)."}},{"@type":"Question","name":"What is a good salary hike in India 2026?","acceptedAnswer":{"@type":"Answer","text":"8-10% for average performers, 12-15% for good, 20-30%+ for exceptional/promoted. Anything below 6% is effectively a real pay cut after inflation."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/"},{"@type":"ListItem","position":2,"name":"India","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":3,"name":"Salary Hike Calculator India 2026","item":"https://calcphi.com/in/salary-hike-calculator.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Salary Hike Calculator India 2026","url":"https://calcphi.com/in/salary-hike-calculator.html","description":"Calculate your new salary after any percentage hike. See new CTC, in-hand pay increase, and month-wise comparison. Free salary increment calculator In","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+</body></html>

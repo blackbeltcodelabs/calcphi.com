@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-region="IN">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94D5DND9LS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-94D5DND9LS');</script>
+<meta name="google-site-verification" content="EOSYQ9kWEpTvsQah9Do3mUA54q-1oFvyKwXG3zERx3k">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Loan EMI Calculator India 2026 – Any Bank | CalcPhi</title>
+<meta name="description" content="Personal loan EMI calculator India 2026. Calculate monthly payment, total interest and amortization schedule for any loan amount and rate.">
+<meta name="keywords" content="personal loan EMI calculator India 2026, personal loan calculator, personal loan monthly payment India, SBI HDFC ICICI personal loan EMI">
+<link rel="canonical" href="https://calcphi.com/in/personal-loan-calculator.html">
+<link rel="alternate" hreflang="en-IN" href="https://calcphi.com/in/personal-loan-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://calcphi.com/in/personal-loan-calculator.html">
+<meta property="og:title" content="Personal Loan EMI Calculator India 2026"><meta property="og:description" content="Calculate personal loan EMI for any amount, rate, and tenure. Full amortization schedule. Compare SBI, HDFC, ICICI personal loan EMIs. Free calculator Indi">
+<meta property="og:image" content="https://calcphi.com/og-image.jpg">
+<meta property="og:url" content="https://calcphi.com/in/personal-loan-calculator.html"><meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcPhi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Personal Loan EMI Calculator India 2026"><meta name="twitter:description" content="Calculate personal loan EMI for any amount, rate, and tenure. Full amortization schedule. Compare SBI, HDFC, ICICI personal loan EMIs. Free calculator Indi">
+<meta name="twitter:image" content="https://calcphi.com/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/shared.js" defer></script>
+</head>
+<body>
+<nav><div class="nav-inner">
+<a href="../index.html" class="nav-logo">Calc<span>Phi</span></a>
+<div class="nav-links">
+<a href="index.html" class="nav-home">⌂ All Calculators</a>
+<a href="sip-main.html">SIP</a><a href="emi-calculator.html">EMI</a>
+<a href="income-tax.html">Tax</a><a href="in-hand-salary.html">Salary</a>
+<a href="fire-calculator.html">FIRE</a><a href="blog/">Blog</a>
+</div></div></nav>
+<div class="wrapper">
+<header>
+<div class="badge">Personal Loan · EMI · Amortization</div>
+<h1>Personal Loan EMI Calculator —<br><em>Know Your Monthly Obligation</em></h1>
+<p class="subtitle">Personal loans in India range from 10.5% to 24% p.a. Even a 2% rate difference on ₹5 lakhs over 5 years costs ₹28,000 extra. Calculate and compare before you borrow.</p>
+</header>
+<div class="info-banner">EMI = [P × R × (1+R)^N] / [(1+R)^N-1]. Personal loan rates range from 10.5% (SBI) to 24% (NBFCs). Always compare total cost, not just EMI.</div>
+<div class="main-grid">
+<div class="card"><div class="card-title">Personal Loan Details</div>
+<div class="field"><div class="field-header"><span class="field-label">Loan Amount</span><div class="field-value">₹<span id="v-p">500,000</span></div></div>
+<input type="range" id="principal" min="10000" max="10000000" step="10000" value="500000"><div class="range-labels"><span>₹10K</span><span>₹1Cr</span></div></div>
+<div class="field"><div class="field-header"><span class="field-label">Interest Rate</span><div class="field-value"><span id="v-r">12</span><span>% p.a.</span></div></div>
+<input type="range" id="rate" min="5" max="36" step="0.25" value="12"><div class="range-labels"><span>5%</span><span>36%</span></div></div>
+<div class="field"><div class="field-header"><span class="field-label">Loan Tenure</span><div class="field-value"><span id="v-t">5</span><span> years</span></div></div>
+<input type="range" id="tenure" min="1" max="30" step="1" value="5"><div class="range-labels"><span>1 yr</span><span>30 yrs</span></div></div>
+</div>
+<div class="results-card">
+<div class="corpus-display"><div class="corpus-label">Monthly EMI</div><div class="corpus-amount" id="emi">₹0</div><div class="corpus-sub" id="sub-emi">total interest: ₹0</div></div>
+<div class="stats-row">
+<div class="stat-box"><div class="stat-box-label">Principal</div><div class="stat-box-value blue" id="s-p">₹0</div></div>
+<div class="stat-box"><div class="stat-box-label">Total Interest</div><div class="stat-box-value" style="color:var(--danger)" id="s-i">₹0</div></div>
+<div class="stat-box"><div class="stat-box-label">Total Payment</div><div class="stat-box-value gold" id="s-t">₹0</div></div>
+<div class="stat-box"><div class="stat-box-label">Interest %</div><div class="stat-box-value" id="s-pct">0%</div></div>
+</div></div></div>
+<div class="card mb-20"><div class="card-title">Amortization Schedule (First 12 Months)</div>
+<div class="table-wrap"><table><thead><tr><th>Month</th><th>EMI (₹)</th><th>Principal (₹)</th><th>Interest (₹)</th><th>Balance (₹)</th></tr></thead><tbody id="amort-table"></tbody></table></div></div>
+<script>
+function calculate(){
+  const P=+document.getElementById('principal').value;
+  const r=+document.getElementById('rate').value/100/12;
+  const n=+document.getElementById('tenure').value*12;
+  document.getElementById('v-p').textContent=P.toLocaleString('en-IN');
+  document.getElementById('v-r').textContent=+document.getElementById('rate').value;
+  document.getElementById('v-t').textContent=+document.getElementById('tenure').value;
+  const emi=P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+  const totalPay=emi*n;
+  const totalInt=totalPay-P;
+  document.getElementById('emi').textContent=formatINR(emi);
+  document.getElementById('sub-emi').textContent='total interest: '+formatINR(totalInt);
+  document.getElementById('s-p').textContent=formatINR(P);
+  document.getElementById('s-i').textContent=formatINR(totalInt);
+  document.getElementById('s-t').textContent=formatINR(totalPay);
+  document.getElementById('s-pct').textContent=((totalInt/P)*100).toFixed(0)+'%';
+  let bal=P,rows='';
+  for(let m=1;m<=Math.min(12,n);m++){
+    const int=bal*r;const prin=emi-int;bal-=prin;
+    rows+=`<tr><td>Month ${m}</td><td>₹${formatNum(emi)}</td><td class="positive">₹${formatNum(prin)}</td><td style="color:var(--danger)">₹${formatNum(int)}</td><td>₹${formatNum(Math.max(0,bal))}</td></tr>`;
+  }
+  document.getElementById('amort-table').innerHTML=rows;
+}
+['principal','rate','tenure'].forEach(id=>document.getElementById(id).addEventListener('input',calculate));
+document.addEventListener('DOMContentLoaded',calculate);
+</script>
+</div>
+<footer>
+<div class="footer-brand">Black Belt Code Labs</div>
+<p>Results are indicative estimates only. Consult a qualified financial advisor before making investment decisions.</p>
+<p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p>
+</footer>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a good personal loan interest rate in India?","acceptedAnswer":{"@type":"Answer","text":"SBI and nationalised banks offer 10.5-14%. HDFC, ICICI, Kotak offer 10.5-22%. NBFCs and fintech lenders charge 15-36%. Always compare the APR (Annual Percentage Rate) which includes processing fees."}},{"@type":"Question","name":"How is personal loan EMI calculated?","acceptedAnswer":{"@type":"Answer","text":"EMI = [P × R × (1+R)^N] / [(1+R)^N-1] where P=principal, R=monthly rate, N=months. A ₹5L loan at 12% for 5 years has EMI of ₹11,122/month."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/"},{"@type":"ListItem","position":2,"name":"India","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":3,"name":"Personal Loan EMI Calculator India 2026","item":"https://calcphi.com/in/personal-loan-calculator.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Personal Loan EMI Calculator India 2026","url":"https://calcphi.com/in/personal-loan-calculator.html","description":"Calculate personal loan EMI for any amount, rate, and tenure. Full amortization schedule. Compare SBI, HDFC, ICICI personal loan EMIs. Free calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+</body></html>

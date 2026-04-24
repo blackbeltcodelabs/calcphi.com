@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-region="IN">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94D5DND9LS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-94D5DND9LS');</script>
+<meta name="google-site-verification" content="EOSYQ9kWEpTvsQah9Do3mUA54q-1oFvyKwXG3zERx3k">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loan Prepayment Calculator India 2026 | CalcPhi</title>
+<meta name="description" content="Loan prepayment calculator India 2026. Interest saved and tenure reduced by any prepayment amount on home loan, personal loan or car loan.">
+<meta name="keywords" content="loan prepayment calculator India 2026, home loan prepayment savings, should I prepay loan or invest, loan foreclosure calculator India">
+<link rel="canonical" href="https://calcphi.com/in/loan-prepayment.html">
+<link rel="alternate" hreflang="en-IN" href="https://calcphi.com/in/loan-prepayment.html">
+<link rel="alternate" hreflang="x-default" href="https://calcphi.com/in/loan-prepayment.html">
+<meta property="og:title" content="Loan Prepayment Calculator India 2026"><meta property="og:description" content="Calculate how much interest you save by prepaying your home loan. See reduced tenure vs reduced EMI options. Loan prepayment vs investment comparison India">
+<meta property="og:image" content="https://calcphi.com/og-image.jpg">
+<meta property="og:url" content="https://calcphi.com/in/loan-prepayment.html"><meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcPhi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Loan Prepayment Calculator India 2026"><meta name="twitter:description" content="Calculate how much interest you save by prepaying your home loan. See reduced tenure vs reduced EMI options. Loan prepayment vs investment comparison India">
+<meta name="twitter:image" content="https://calcphi.com/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/shared.js" defer></script>
+</head>
+<body>
+<nav><div class="nav-inner">
+<a href="../index.html" class="nav-logo">Calc<span>Phi</span></a>
+<div class="nav-links">
+<a href="index.html" class="nav-home">⌂ All Calculators</a>
+<a href="sip-main.html">SIP</a><a href="emi-calculator.html">EMI</a>
+<a href="income-tax.html">Tax</a><a href="in-hand-salary.html">Salary</a>
+<a href="fire-calculator.html">FIRE</a><a href="blog/">Blog</a>
+</div></div></nav>
+<div class="wrapper">
+<header>
+<div class="badge">Loan · Prepayment · Interest Savings</div>
+<h1>Loan Prepayment Calculator —<br><em>Pay Off Early or Invest?</em></h1>
+<p class="subtitle">Prepaying your home loan saves guaranteed interest at 8-9%. But the same money in equity SIP could earn 12%+. Calculate both and make the right decision for your situation.</p>
+</header>
+<div class="info-banner">The classic dilemma: Prepay loan (guaranteed 8-9% saving) vs invest in equity (potential 12%+ return). The answer depends on your loan rate, tax bracket, and risk appetite.</div>
+<div class="main-grid">
+<div class="card"><div class="card-title">Your Loan Details</div>
+<div class="field"><div class="field-header"><span class="field-label">Outstanding Loan</span><div class="field-value">₹<span id="v-loan">30,00,000</span></div></div>
+<input type="range" id="loan" min="100000" max="50000000" step="100000" value="3000000"><div class="range-labels"><span>₹1L</span><span>₹5Cr</span></div></div>
+<div class="field"><div class="field-header"><span class="field-label">Interest Rate</span><div class="field-value"><span id="v-rate">8.5</span><span>% p.a.</span></div></div>
+<input type="range" id="rate" min="6" max="16" step="0.25" value="8.5"><div class="range-labels"><span>6%</span><span>16%</span></div></div>
+<div class="field"><div class="field-header"><span class="field-label">Remaining Tenure</span><div class="field-value"><span id="v-ten">15</span><span> years</span></div></div>
+<input type="range" id="tenure" min="1" max="30" step="1" value="15"><div class="range-labels"><span>1 yr</span><span>30 yrs</span></div></div>
+<div class="field"><div class="field-header"><span class="field-label">Prepayment Amount</span><div class="field-value">₹<span id="v-prep">5,00,000</span></div></div>
+<input type="range" id="prepay" min="10000" max="10000000" step="10000" value="500000"><div class="range-labels"><span>₹10K</span><span>₹1Cr</span></div></div>
+</div>
+<div class="results-card">
+<div class="corpus-display"><div class="corpus-label">Interest Saved</div><div class="corpus-amount" id="int-saved">₹0</div><div class="corpus-sub" id="sub-res">by prepaying now</div></div>
+<div class="stats-row">
+<div class="stat-box"><div class="stat-box-label">Months Saved</div><div class="stat-box-value green" id="months-saved">0</div></div>
+<div class="stat-box"><div class="stat-box-label">Old Total Interest</div><div class="stat-box-value" style="color:var(--danger)" id="old-int">₹0</div></div>
+<div class="stat-box"><div class="stat-box-label">New Total Interest</div><div class="stat-box-value gold" id="new-int">₹0</div></div>
+<div class="stat-box"><div class="stat-box-label">Investment Return (12%)</div><div class="stat-box-value blue" id="inv-return">₹0</div></div>
+</div></div></div>
+<div class="faq-section"><h2 class="faq-heading">Prepayment vs Investment</h2>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Should I prepay my home loan or invest in SIP?<span class="arrow">+</span></div>
+<div class="faq-a">If your home loan rate is above 8.5% and you're in the 30% tax bracket (effective after-tax cost ~6%), equity SIP at 12% CAGR wins mathematically. But prepayment gives guaranteed, risk-free return equal to your loan rate. Rule of thumb: prepay if loan rate > 9%, invest if loan rate < 8.5% and you have 7+ years horizon. Psychologically, many prefer being debt-free — that has real value too.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Which is better — reduce EMI or reduce tenure after prepayment?<span class="arrow">+</span></div>
+<div class="faq-a">Reduce tenure, not EMI — always. Reducing tenure saves significantly more total interest because the loan is paid off faster. Same prepayment amount: reducing tenure saves 2-3x more interest than reducing EMI. The only exception is if cash flow is very tight — then reducing EMI gives monthly breathing room.</div></div>
+</div>
+<script>
+function calculate(){
+  const P=+document.getElementById('loan').value;
+  const r=+document.getElementById('rate').value/100/12;
+  const n=+document.getElementById('tenure').value*12;
+  const prep=+document.getElementById('prepay').value;
+  document.getElementById('v-loan').textContent=P.toLocaleString('en-IN');
+  document.getElementById('v-rate').textContent=+document.getElementById('rate').value;
+  document.getElementById('v-ten').textContent=+document.getElementById('tenure').value;
+  document.getElementById('v-prep').textContent=prep.toLocaleString('en-IN');
+  const emi=P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+  const oldInt=emi*n-P;
+  const newP=P-prep;
+  const newN=newP>0?Math.log(emi/(emi-newP*r))/Math.log(1+r):0;
+  const newInt=emi*newN-newP;
+  const saved=oldInt-newInt;
+  const mSaved=n-Math.ceil(newN);
+  const invReturn=prep*Math.pow(1.01,n)-prep;
+  document.getElementById('int-saved').textContent=formatINR(Math.max(0,saved));
+  document.getElementById('months-saved').textContent=Math.max(0,mSaved)+' months';
+  document.getElementById('old-int').textContent=formatINR(oldInt);
+  document.getElementById('new-int').textContent=formatINR(Math.max(0,newInt));
+  document.getElementById('inv-return').textContent=formatINR(invReturn);
+}
+['loan','rate','tenure','prepay'].forEach(id=>document.getElementById(id).addEventListener('input',calculate));
+document.addEventListener('DOMContentLoaded',calculate);
+</script>
+</div>
+<footer>
+<div class="footer-brand">Black Belt Code Labs</div>
+<p>Results are indicative estimates only. Consult a qualified financial advisor before making investment decisions.</p>
+<p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p>
+</footer>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Should I prepay loan or invest in SIP?","acceptedAnswer":{"@type":"Answer","text":"If loan rate > 9%, prepay. If < 8.5% and you have 7+ years, SIP at 12% wins mathematically. But debt-free peace of mind has real value too."}},{"@type":"Question","name":"Reduce EMI or reduce tenure after prepayment?","acceptedAnswer":{"@type":"Answer","text":"Always reduce tenure — it saves 2-3x more interest than reducing EMI."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/"},{"@type":"ListItem","position":2,"name":"India","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":3,"name":"Loan Prepayment Calculator India 2026","item":"https://calcphi.com/in/loan-prepayment.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Loan Prepayment Calculator India 2026","url":"https://calcphi.com/in/loan-prepayment.html","description":"Calculate how much interest you save by prepaying your home loan. See reduced tenure vs reduced EMI options. Loan prepayment vs investment comparison ","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+</body></html>
