@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Core pages: homepage + region roots -->
+  <sitemap>
+    <loc>https://calcphi.com/sitemap-main.xml</loc>
+    <lastmod>2026-04-23</lastmod>
+  </sitemap>
+
+  <!-- India: all /in/ calculators -->
+  <sitemap>
+    <loc>https://calcphi.com/sitemap-in-calculators.xml</loc>
+    <lastmod>2026-04-23</lastmod>
+  </sitemap>
+
+  <!-- India: blog articles -->
+  <sitemap>
+    <loc>https://calcphi.com/sitemap-in-blog.xml</loc>
+    <lastmod>2026-04-23</lastmod>
+  </sitemap>
+
+  <!-- Australia: all /au/ pages -->
+  <sitemap>
+    <loc>https://calcphi.com/sitemap-au.xml</loc>
+    <lastmod>2026-04-23</lastmod>
+  </sitemap>
+
+  <!--
+    FUTURE — uncomment when live:
+    <sitemap><loc>https://calcphi.com/sitemap-us.xml</loc></sitemap>
+    <sitemap><loc>https://calcphi.com/sitemap-ca.xml</loc></sitemap>
+    <sitemap><loc>https://calcphi.com/sitemap-uk.xml</loc></sitemap>
+  -->
+
+</sitemapindex>

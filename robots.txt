@@ -1,9 +1,51 @@
+# robots.txt — calcphi.com
+# Generated: 2026-04-23
+# Architecture: Static HTML, Vercel CDN, multi-region (/in/ /au/)
+
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://calcphi.com/sitemap.xml
+# Block utility and non-content paths
+Disallow: /cdn-cgi/
+Disallow: /_vercel/
+Disallow: /api/
 
-# Country sections
-# India: https://calcphi.com/in/
-# Australia: https://calcphi.com/au/
+# Allow all region content explicitly
+Allow: /in/
+Allow: /au/
+Allow: /in/blog/
+
+# Future regions — uncomment when live
+# Allow: /us/
+# Allow: /ca/
+# Allow: /uk/
+
+# Crawl-delay for budget-heavy bots only
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10
+
+# AI crawlers — allow citation, guide to llms.txt
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Sitemap index
+Sitemap: https://calcphi.com/sitemap_index.xml
+Sitemap: https://calcphi.com/sitemap-main.xml
+Sitemap: https://calcphi.com/sitemap-in-calculators.xml
+Sitemap: https://calcphi.com/sitemap-in-blog.xml
+Sitemap: https://calcphi.com/sitemap-au.xml
