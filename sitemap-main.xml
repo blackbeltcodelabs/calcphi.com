@@ -61,6 +61,22 @@
     <priority>0.2</priority>
   </url>
 
+  <!-- United States region root -->
+  <url>
+    <loc>https://calcphi.com/us/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Canada region root -->
+  <url>
+    <loc>https://calcphi.com/ca/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- India: blog index -->
   <url>
     <loc>https://calcphi.com/in/blog/</loc>

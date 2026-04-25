@@ -15,9 +15,8 @@ Allow: /in/
 Allow: /au/
 Allow: /in/blog/
 
-# Future regions — uncomment when live
-# Allow: /us/
-# Allow: /ca/
+Allow: /us/
+Allow: /ca/
 # Allow: /uk/
 
 # Throttle high-crawl-budget SEO bots (protects Vercel bandwidth)
