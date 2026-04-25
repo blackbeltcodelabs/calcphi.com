@@ -51,7 +51,7 @@
     </div>
   </div>
 </nav>
-<div class="wrapper">
+<div class="wrapper"><div class="has-sidebar"><div class="wrapper-content">
   <header>
     <div class="badge">Fixed Deposit · Guaranteed Returns · Safe</div>
     <h1>FD Calculator —<br><em>Know Your Maturity Amount</em></h1>
@@ -99,6 +99,16 @@
         <div class="range-labels"><span>Annual</span><span>Monthly</span></div>
       </div>
     </div>
+  <!-- Ad Slot 2: Mid-calculator — mobile only -->
+  <div class="ad-slot ad-mid-calc" style="display:none;">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_MID_CALC"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
     <div class="results-card">
       <div class="corpus-display">
         <div class="corpus-label">Maturity Amount</div>
@@ -166,8 +176,7 @@
          data-ad-slot="SLOT_ID_CONTENT"
          data-ad-layout="in-article"
          data-ad-format="fluid"></ins>
-  </div>
-  <div class="faq-section">
+  </div><div class="faq-section">
     <h2 class="faq-heading">FD Calculator — Common Questions</h2>
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How is FD interest calculated?<span class="arrow">+</span></div>
     <div class="faq-a">FD interest is calculated using compound interest formula: A = P(1 + r/n)^(nt), where P is principal, r is annual rate, n is compounding frequency, and t is tenure. Most banks compound quarterly (n=4). A ₹1 lakh FD at 7% for 5 years compounded quarterly gives ₹1,41,478 — interest of ₹41,478. Simple interest on the same FD would give only ₹35,000 in interest.</div></div>
@@ -272,4 +281,39 @@ document.addEventListener('DOMContentLoaded',calculate);
 </div>
 
   <script src="../js/ads.js" defer></script>
+
+<!-- Mobile Anchor Ad (sticky bottom) -->
+
+</div>
+    <!-- Desktop Sticky Sidebar (300x600) — visible only on screens > 1200px -->
+    <aside class="ad-sidebar-wrap">
+      <span class="ad-label" style="display:block;text-align:center;margin-bottom:4px;">Advertisement</span>
+      <ins class="adsbygoogle"
+           style="display:block;width:300px;height:600px;"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+           data-ad-slot="SLOT_ID_SIDEBAR"
+           data-ad-format="auto"></ins>
+    </aside>
+</div>
+<div id="anchor-ad" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:8888;background:var(--surface);border-top:1px solid var(--border);padding:6px 16px 8px;text-align:center;">
+  <div style="font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:3px;">Advertisement</div>
+  <ins class="adsbygoogle anchor-adsbygoogle"
+       style="display:block;width:100%;max-width:320px;margin:0 auto;"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+       data-ad-slot="SLOT_ID_ANCHOR"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <button onclick="document.getElementById('anchor-ad').style.display='none';" 
+          style="position:absolute;top:6px;right:10px;background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;line-height:1;">×</button>
+</div>
+<script>
+// Show anchor ad on mobile only (< 768px)
+if (window.innerWidth < 768) {
+  var anchor = document.getElementById('anchor-ad');
+  // Show after 3 seconds or first scroll
+  setTimeout(function() {
+    if (anchor) anchor.style.display = 'block';
+  }, 3000);
+}
+</script>
 </body></html>

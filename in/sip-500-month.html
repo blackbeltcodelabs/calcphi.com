@@ -100,6 +100,16 @@
         <div class="range-labels"><span>0%</span><span>25%</span></div>
       </div>
     </div>
+  <!-- Ad Slot 2: Mid-calculator — mobile only -->
+  <div class="ad-slot ad-mid-calc" style="display:none;">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_MID_CALC"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
     <div class="results-card">
       <div class="corpus-display">
         <div class="corpus-label">Total Corpus</div>
@@ -169,8 +179,7 @@
          data-ad-slot="SLOT_ID_CONTENT"
          data-ad-layout="in-article"
          data-ad-format="fluid"></ins>
-  </div>
-  <div class="faq-section">
+  </div><div class="faq-section">
     <h2 class="faq-heading">₹500 Monthly SIP — Common Questions</h2>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">How much does ₹500 SIP grow in 10 years?<span class="arrow">+</span></div>
@@ -284,5 +293,28 @@ document.addEventListener('DOMContentLoaded',calculate);
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can ₹500 SIP make a difference over time?","acceptedAnswer":{"@type":"Answer","text":"Yes. ₹500/month SIP at 12% returns grows to ₹2.3 lakhs in 10 years and ₹9.95 lakhs in 20 years. The key lesson: starting small is infinitely better than not starting. You can always increase the amount later."}},{"@type":"Question","name":"What is the minimum SIP amount in India?","acceptedAnswer":{"@type":"Answer","text":"The minimum SIP in India starts at ₹100/month on some platforms and ₹500/month on most. Groww, Zerodha Coin, and Paytm Money all accept ₹500 SIPs. Some Nifty 50 index funds accept SIPs as low as ₹100/month."}},{"@type":"Question","name":"When should I increase my SIP from ₹500?","acceptedAnswer":{"@type":"Answer","text":"Increase your SIP whenever your income increases — ideally investing 50-100% of any salary hike. Even going from ₹500 to ₹1,000/month doubles your wealth trajectory. A 10% annual step-up is the most disciplined approach."}}]}</script>
 
   <script src="../js/ads.js" defer></script>
+
+<!-- Mobile Anchor Ad (sticky bottom) -->
+<div id="anchor-ad" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:8888;background:var(--surface);border-top:1px solid var(--border);padding:6px 16px 8px;text-align:center;">
+  <div style="font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:3px;">Advertisement</div>
+  <ins class="adsbygoogle anchor-adsbygoogle"
+       style="display:block;width:100%;max-width:320px;margin:0 auto;"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+       data-ad-slot="SLOT_ID_ANCHOR"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <button onclick="document.getElementById('anchor-ad').style.display='none';" 
+          style="position:absolute;top:6px;right:10px;background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;line-height:1;">×</button>
+</div>
+<script>
+// Show anchor ad on mobile only (< 768px)
+if (window.innerWidth < 768) {
+  var anchor = document.getElementById('anchor-ad');
+  // Show after 3 seconds or first scroll
+  setTimeout(function() {
+    if (anchor) anchor.style.display = 'block';
+  }, 3000);
+}
+</script>
 </body>
 </html>

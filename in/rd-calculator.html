@@ -83,6 +83,16 @@
     <div class="field"><div class="field-header"><span class="field-label">Tenure</span><div class="field-value"><span id="val-months">24</span><span> months</span></div></div>
     <input type="range" id="months" min="6" max="120" step="6" value="24"><div class="range-labels"><span>6 mo</span><span>10 yrs</span></div></div>
   </div>
+  <!-- Ad Slot 2: Mid-calculator — mobile engagement trigger (hidden desktop) -->
+  <div class="ad-slot ad-mid-calc" style="display:none;">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_MID_CALC"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
   <div class="results-card">
     <div class="corpus-display"><div class="corpus-label">Maturity Amount</div><div class="corpus-amount" id="total-corpus">₹0</div><div class="corpus-sub">at end of RD tenure</div></div>
     <div class="stats-row">
@@ -208,4 +218,27 @@ document.addEventListener('DOMContentLoaded',calculate);
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is RD maturity amount calculated?","acceptedAnswer":{"@type":"Answer","text":"RD uses quarterly compounding: Maturity = P × (1 + r/4)^(4n) per instalment, summed for all instalments where P is monthly deposit, r is annual rate, and n is remaining tenure in years. Most Indian banks compound RD quarterly."}},{"@type":"Question","name":"RD vs FD — which is better?","acceptedAnswer":{"@type":"Answer","text":"FD is better if you have a lump sum to invest. RD is better for building savings gradually from monthly income. FD typically offers slightly higher returns than RD at the same tenor. Both are safe with similar tax treatment."}},{"@type":"Question","name":"Is RD interest taxable?","acceptedAnswer":{"@type":"Answer","text":"Yes. RD interest is taxable as income at your applicable slab rate. TDS is deducted at 10% if total interest across all RDs at a bank exceeds ₹40,000 per year. Submit Form 15G/15H if your income is below the taxable threshold."}}]}</script>
 
   <script src="../js/ads.js" defer></script>
+
+<!-- Mobile Anchor Ad (sticky bottom) -->
+<div id="anchor-ad" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:8888;background:var(--surface);border-top:1px solid var(--border);padding:6px 16px 8px;text-align:center;">
+  <div style="font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:3px;">Advertisement</div>
+  <ins class="adsbygoogle anchor-adsbygoogle"
+       style="display:block;width:100%;max-width:320px;margin:0 auto;"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+       data-ad-slot="SLOT_ID_ANCHOR"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <button onclick="document.getElementById('anchor-ad').style.display='none';" 
+          style="position:absolute;top:6px;right:10px;background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;line-height:1;">×</button>
+</div>
+<script>
+// Show anchor ad on mobile only (< 768px)
+if (window.innerWidth < 768) {
+  var anchor = document.getElementById('anchor-ad');
+  // Show after 3 seconds or first scroll
+  setTimeout(function() {
+    if (anchor) anchor.style.display = 'block';
+  }, 3000);
+}
+</script>
 </body></html>

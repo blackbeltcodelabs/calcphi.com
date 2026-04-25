@@ -86,6 +86,17 @@
 <tr><td>4th (Final)</td><td>15 March 2026</td><td>25%</td><td>100%</td></tr>
 </tbody></table></div></div>
 
+  <!-- Ad Slot 2: Mid-calculator — mobile engagement trigger -->
+  <div class="ad-slot ad-mid-calc" style="display:none;">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_MID_CALC"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
+
   <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
   <div class="ad-slot ad-after-results">
     <span class="ad-label">Advertisement</span>
@@ -107,6 +118,31 @@
          data-ad-layout="in-article"
          data-ad-format="fluid"></ins>
   </div>
+<div class="content-section">
+<h2>About the Advance Tax Calculator</h2>
+<p>This calculator is designed specifically for Indian investors and taxpayers using 2026 rules and regulations. All formulas follow official government guidelines and are updated annually. Results are instant and no data leaves your browser.</p>
+<h3>How the Calculation Works</h3>
+<p>The Advance Tax calculator uses the exact mathematical formula prescribed for this financial product in India. Enter your inputs and the result updates instantly. All calculations account for the current rates applicable for FY 2025-26.</p>
+<h3>How to Use This Calculator Effectively</h3>
+<p>Start with your base scenario — your current numbers. Then adjust variables to see how changes affect the outcome. For investment calculators, try different return rates to understand the range of possible outcomes. For tax calculators, compare old vs new regime to find your optimal strategy. For loan calculators, adjust tenure and down payment to find the affordable EMI range for your income.</p>
+<h3>Why Accurate Calculation Matters</h3>
+<p>Most financial mistakes in India stem from not calculating the true cost or benefit of a decision. An EMI that seems affordable often becomes a trap when combined with other obligations. A tax saving that sounds large may be smaller after accounting for lock-in. A return that appears impressive may be eroded by inflation. Using accurate calculators before committing to financial decisions is the single highest-return habit of financially successful Indians.</p>
+</div>
+
+
+<div class="content-section" style="margin-top:24px;">
+<h2>Frequently Asked Questions — Explained</h2>
+<p>The most common questions we get about this calculator, answered in plain language without jargon. Understanding these answers will help you use the result in your actual financial decisions.</p>
+<h3>How accurate are these results?</h3>
+<p>Results use the exact mathematical formulas prescribed by relevant Indian regulatory bodies — RBI for banking products, SEBI for market instruments, Income Tax Act for tax calculations, and EPFO for provident fund calculations. The calculated output matches what your bank or government portal would show for the same inputs. The caveat is that real-world outcomes depend on many factors not captured in a calculator — market returns vary, tax laws change, and personal circumstances differ.</p>
+<h3>Why does the result differ from my bank's calculation?</h3>
+<p>Minor differences can arise from rounding methods and compounding frequency. Banks may use daily compounding for savings accounts, quarterly compounding for FD/RD (as per RBI mandate), and monthly reducing balance for EMI loans. This calculator uses the standard formula for each product type. If you see a significant difference, check the compounding frequency and whether the bank is including processing fees or insurance in the stated rate.</p>
+<h3>How should I use this result for planning?</h3>
+<p>Use the output as a planning baseline, not a guarantee. For investment calculators, calculate at three return scenarios — conservative (8%), moderate (12%), and optimistic (15%) — and plan for the conservative case. For tax calculators, the result shows your liability before TDS credits. For loan calculators, the EMI shown is the mathematical minimum — your actual EMI may include insurance premium or processing fee EMI.</p>
+<h3>Can I share or save this calculation?</h3>
+<p>Take a screenshot of the result page. All CalcPhi calculators run entirely in your browser — no data is stored on our servers. Refreshing the page resets the inputs. There is no account or login required, and your financial data is never transmitted anywhere.</p>
+</div>
+
 <div class="faq-section"><h2 class="faq-heading">Advance Tax — Key Questions</h2>
 <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Who must pay advance tax in India?<span class="arrow">+</span></div>
 <div class="faq-a">Any individual whose estimated total tax liability for the year exceeds ₹10,000 must pay advance tax. This includes self-employed individuals, freelancers, consultants, investors with capital gains, rental income earners, and salaried employees with large other income. TDS deducted by employers counts toward advance tax — only the shortfall needs separate payment.</div></div>
@@ -160,4 +196,27 @@ document.addEventListener('DOMContentLoaded',calculate);
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Advance Tax Calculator India FY 2025-26","url":"https://calcphi.com/in/advance-tax-calculator.html","description":"Calculate advance tax instalments for FY 2025-26. Find how much to pay by June 15, September 15, December 15, and March 15. Free advance tax calculato","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
 
   <script src="../js/ads.js" defer></script>
+
+<!-- Mobile Anchor Ad (sticky bottom) -->
+<div id="anchor-ad" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:8888;background:var(--surface);border-top:1px solid var(--border);padding:6px 16px 8px;text-align:center;">
+  <div style="font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:3px;">Advertisement</div>
+  <ins class="adsbygoogle anchor-adsbygoogle"
+       style="display:block;width:100%;max-width:320px;margin:0 auto;"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+       data-ad-slot="SLOT_ID_ANCHOR"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <button onclick="document.getElementById('anchor-ad').style.display='none';" 
+          style="position:absolute;top:6px;right:10px;background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;line-height:1;">×</button>
+</div>
+<script>
+// Show anchor ad on mobile only (< 768px)
+if (window.innerWidth < 768) {
+  var anchor = document.getElementById('anchor-ad');
+  // Show after 3 seconds or first scroll
+  setTimeout(function() {
+    if (anchor) anchor.style.display = 'block';
+  }, 3000);
+}
+</script>
 </body></html>

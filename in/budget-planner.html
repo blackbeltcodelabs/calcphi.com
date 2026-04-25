@@ -79,6 +79,16 @@
 <div class="stat-box"><div class="stat-box-label">CAGR</div><div class="stat-box-value" id="s-d">0%</div></div>
 </div></div></div>
 
+  <!-- Ad Slot 2: Mid-calculator — mobile engagement trigger -->
+  <div class="ad-slot ad-mid-calc" style="display:none;">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_MID_CALC"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
   <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
   <div class="ad-slot ad-after-results">
     <span class="ad-label">Advertisement</span>
@@ -100,6 +110,31 @@
          data-ad-layout="in-article"
          data-ad-format="fluid"></ins>
   </div>
+<div class="content-section">
+<h2>How to Budget Using the 50/30/20 Rule in India</h2>
+<p>The 50/30/20 rule is the most widely used personal budgeting framework in the world. Allocate 50% of take-home income to needs (rent, food, utilities, EMIs), 30% to wants (dining, entertainment, shopping, vacations), and 20% to savings and investments. In India, the targets often need adjustment — especially in metro cities where rent alone can eat 30–40% of income.</p>
+<h3>Real-Life Indian Budgets by Income Level</h3>
+<p>Take-home ₹50,000/month: Needs = ₹25,000 (rent ₹12,000, food ₹6,000, transport ₹3,000, utilities ₹2,000, phone ₹2,000). Wants = ₹15,000. Savings = ₹10,000 (SIP ₹5,000, emergency fund ₹3,000, goals ₹2,000). Take-home ₹1,00,000/month: Needs = ₹50,000. Wants = ₹30,000. Savings = ₹20,000 minimum — ideally ₹30,000 if rent is below 30%.</p>
+<h3>The Indian Modification to 50/30/20</h3>
+<p>For high-cost metros (Mumbai, Bangalore, Delhi NCR), rent easily exceeds 30% of income for most renters. A more practical adaptation is 60/20/20 — where needs are 60%, wants are trimmed to 20%, and savings remain at 20% as non-negotiable. Never sacrifice the savings percentage — instead, reduce wants to compensate for high rent costs.</p>
+<h3>Zero-Based Budgeting as an Alternative</h3>
+<p>Zero-based budgeting assigns every rupee a purpose before the month begins. Income - All Expenses - All Savings = 0. This forces explicit allocation decisions and works better for people who struggle with impulse spending. Apps like Walnut, Money Manager, or simple Google Sheets work well for tracking. The best budget is the one you actually review each month.</p>
+</div>
+
+
+<div class="content-section" style="margin-top:24px;">
+<h2>Frequently Asked Questions — Explained</h2>
+<p>The most common questions we get about this calculator, answered in plain language without jargon. Understanding these answers will help you use the result in your actual financial decisions.</p>
+<h3>How accurate are these results?</h3>
+<p>Results use the exact mathematical formulas prescribed by relevant Indian regulatory bodies — RBI for banking products, SEBI for market instruments, Income Tax Act for tax calculations, and EPFO for provident fund calculations. The calculated output matches what your bank or government portal would show for the same inputs. The caveat is that real-world outcomes depend on many factors not captured in a calculator — market returns vary, tax laws change, and personal circumstances differ.</p>
+<h3>Why does the result differ from my bank's calculation?</h3>
+<p>Minor differences can arise from rounding methods and compounding frequency. Banks may use daily compounding for savings accounts, quarterly compounding for FD/RD (as per RBI mandate), and monthly reducing balance for EMI loans. This calculator uses the standard formula for each product type. If you see a significant difference, check the compounding frequency and whether the bank is including processing fees or insurance in the stated rate.</p>
+<h3>How should I use this result for planning?</h3>
+<p>Use the output as a planning baseline, not a guarantee. For investment calculators, calculate at three return scenarios — conservative (8%), moderate (12%), and optimistic (15%) — and plan for the conservative case. For tax calculators, the result shows your liability before TDS credits. For loan calculators, the EMI shown is the mathematical minimum — your actual EMI may include insurance premium or processing fee EMI.</p>
+<h3>Can I share or save this calculation?</h3>
+<p>Take a screenshot of the result page. All CalcPhi calculators run entirely in your browser — no data is stored on our servers. Refreshing the page resets the inputs. There is no account or login required, and your financial data is never transmitted anywhere.</p>
+</div>
+
 <div class="faq-section"><h2 class="faq-heading">Frequently Asked Questions</h2>
 <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How is this calculated?<span class="arrow">+</span></div>
 <div class="faq-a">This calculator uses standard financial formulas specific to the planning calculation. All computations run in your browser — no data is sent to any server. Results are indicative estimates based on the inputs provided and assumed growth rates.</div></div>
@@ -141,4 +176,27 @@ document.addEventListener('DOMContentLoaded',calculate);
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is this calculated?","acceptedAnswer":{"@type":"Answer","text":"This calculator uses standard financial formulas specific to the planning calculation. All computations run in your browser — no data is sent to any server. Results are indicative estimates based on the inputs provided and assumed growth rates."}},{"@type":"Question","name":"Are these results accurate?","acceptedAnswer":{"@type":"Answer","text":"Results are based on the inputs you provide and mathematical formulas. Past returns are not guaranteed. Consult a SEBI-registered investment advisor for personalised financial advice before making investment decisions."}}]}</script>
 
   <script src="../js/ads.js" defer></script>
+
+<!-- Mobile Anchor Ad (sticky bottom) -->
+<div id="anchor-ad" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:8888;background:var(--surface);border-top:1px solid var(--border);padding:6px 16px 8px;text-align:center;">
+  <div style="font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:3px;">Advertisement</div>
+  <ins class="adsbygoogle anchor-adsbygoogle"
+       style="display:block;width:100%;max-width:320px;margin:0 auto;"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+       data-ad-slot="SLOT_ID_ANCHOR"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <button onclick="document.getElementById('anchor-ad').style.display='none';" 
+          style="position:absolute;top:6px;right:10px;background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;line-height:1;">×</button>
+</div>
+<script>
+// Show anchor ad on mobile only (< 768px)
+if (window.innerWidth < 768) {
+  var anchor = document.getElementById('anchor-ad');
+  // Show after 3 seconds or first scroll
+  setTimeout(function() {
+    if (anchor) anchor.style.display = 'block';
+  }, 3000);
+}
+</script>
 </body></html>
