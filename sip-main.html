@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" data-region="IN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94D5DND9LS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag("js", new Date());
+  gtag("config", "G-94D5DND9LS", {{ page_title: document.title, page_location: window.location.href }});
+</script>
+<meta name="google-site-verification" content="EOSYQ9kWEpTvsQah9Do3mUA54q-1oFvyKwXG3zERx3k">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIP Calculator 2026 – Mutual Fund Returns | CalcPhi</title>
+<meta name="description" content="Calculate SIP returns on any monthly amount. See corpus, wealth gained, and year-by-year growth with interactive chart. Free tool.">
+<meta name="keywords" content="SIP calculator, systematic investment plan calculator, SIP returns 2026, mutual fund SIP calculator India, SIP maturity calculator">
+<link rel="canonical" href="https://calcphi.com/in/sip-main.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
+<script src="../js/shared.js" defer></script>
+<meta property="og:title" content="SIP Calculator 2026 – Mutual Fund Returns India">
+<meta property="og:description" content="Calculate monthly SIP returns instantly. See corpus, wealth gained, and year-by-year growth. Free SIP calculator for Indian investors.">
+<meta property="og:image" content="https://calcphi.com/og-image.jpg">
+<meta property="og:url" content="https://calcphi.com/in/sip-main.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcPhi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SIP Calculator 2026 – Mutual Fund Returns India">
+<meta name="twitter:description" content="Calculate monthly SIP returns instantly. See corpus, wealth gained, and year-by-year growth. Free SIP calculator for Indian investors.">
+<meta name="twitter:image" content="https://calcphi.com/og-image.jpg">
+<meta name="twitter:site" content="@calcphi">
+<link rel="alternate" hreflang="en-IN" href="https://calcphi.com/in/sip-main.html">
+<link rel="alternate" hreflang="x-default" href="https://calcphi.com/in/sip-main.html">
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Calc<span>Phi</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-home">⌂ All Calculators</a>
+      <a href="sip-main.html">SIP</a>
+      <a href="target-sip.html">Target SIP</a>
+      <a href="1-crore-sip.html">1 Cr SIP</a>
+      <a href="emi-calculator.html">EMI</a>
+      <a href="income-tax.html">Tax</a>
+      <a href="fire-calculator.html">FIRE</a>
+      <a href="../index.html" style="font-size:11px;opacity:0.5;padding:4px 8px;color:var(--muted);">🌍 Change Region</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrapper"><div class="has-sidebar"><div class="wrapper-content">
+  <header>
+    <div class="badge">Free Calculator · No Sign-Up Required</div>
+    <h1>SIP Calculator —<br><em>Watch Your Money Grow</em></h1>
+    <p class="subtitle">Find out exactly how much your monthly SIP investments will be worth. Adjust the sliders and see your wealth build in real time.</p>
+  </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <div class="info-banner">Results update instantly as you move sliders. Add a Step-Up % to simulate increasing your SIP every year as your income grows.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
+
+  <div class="main-grid">
+    <div class="card">
+      <div class="card-title">Your Investment Details</div>
+      <div class="field">
+        <div class="field-header"><span class="field-label">Monthly Investment</span><div class="field-value">₹<span id="val-monthly">10,000</span></div></div>
+        <input type="range" id="monthly" min="500" max="100000" step="500" value="10000">
+        <div class="range-labels"><span>₹500</span><span>₹1 Lac</span></div>
+      </div>
+      <div class="field">
+        <div class="field-header"><span class="field-label">Expected Annual Return</span><div class="field-value"><span id="val-rate">12</span><span>% p.a.</span></div></div>
+        <input type="range" id="rate" min="1" max="30" step="0.5" value="12">
+        <div class="range-labels"><span>1%</span><span>30%</span></div>
+      </div>
+      <div class="field">
+        <div class="field-header"><span class="field-label">Investment Duration</span><div class="field-value"><span id="val-years">10</span><span> yrs</span></div></div>
+        <input type="range" id="years" min="1" max="40" step="1" value="10">
+        <div class="range-labels"><span>1 yr</span><span>40 yrs</span></div>
+      </div>
+      <div class="field">
+        <div class="field-header"><span class="field-label">Annual Step-Up (optional)</span><div class="field-value"><span id="val-stepup">0</span><span>% p.a.</span></div></div>
+        <input type="range" id="stepup" min="0" max="25" step="1" value="0">
+        <div class="range-labels"><span>0%</span><span>25%</span></div>
+      </div>
+    </div>
+
+  <!-- Ad Slot 2: Mid-calculator — mobile only -->
+  <div class="ad-slot ad-mid-calc" style="display:none;">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_MID_CALC"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
+    <div class="results-card">
+      <div class="corpus-display">
+        <div class="corpus-label">Estimated Total Corpus</div>
+        <div class="corpus-amount" id="total-corpus">₹0</div>
+        <div class="corpus-sub">at maturity</div>
+      </div>
+      <div class="stats-row">
+        <div class="stat-box"><div class="stat-box-label">Amount Invested</div><div class="stat-box-value blue" id="total-invested">₹0</div></div>
+        <div class="stat-box"><div class="stat-box-label">Wealth Gained</div><div class="stat-box-value green" id="wealth-gained">₹0</div></div>
+        <div class="stat-box"><div class="stat-box-label">Returns Multiple</div><div class="stat-box-value gold" id="returns-multiple">0x</div></div>
+        <div class="stat-box"><div class="stat-box-label">Abs. Return %</div><div class="stat-box-value green" id="abs-return">0%</div></div>
+      </div>
+      <div class="progress-section">
+        <div class="progress-header"><span>Invested vs Returns split</span><span id="returns-pct">0% returns</span></div>
+        <div class="progress-bar-bg"><div class="progress-bar-fill" id="progress-fill" style="width:50%"></div></div>
+        <div class="progress-legend">
+          <span><span class="legend-dot" style="background:var(--accent2)"></span>Invested</span>
+          <span><span class="legend-dot" style="background:var(--accent)"></span>Returns</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Ad Slot 3: Post-result (HIGHEST REVENUE SLOT) -->
+<div class="ad-slot ad-slot-result" id="ad-result">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-result','POST_RESULT');});</script>
+
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM — user just received value -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
+  <div class="chart-section">
+    <div class="chart-header">
+      <div class="chart-title">Year-by-Year Growth</div>
+      <div class="chart-tabs">
+        <button class="chart-tab active" id="tab-area" onclick="switchChart('area')">Growth</button>
+        <button class="chart-tab" id="tab-bar" onclick="switchChart('bar')">Breakdown</button>
+      </div>
+    </div>
+    <div class="chart-wrap"><canvas id="growthChart"></canvas></div>
+  </div>
+
+  <div class="card mb-20">
+    <div class="card-title">Year-by-Year Breakdown</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Year</th><th>Invested (₹)</th><th>Returns (₹)</th><th>Total Corpus (₹)</th><th>Growth %</th></tr></thead>
+        <tbody id="year-table"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Related calculators -->
+  <div class="card mb-20" style="border-color:rgba(34,211,165,0.2);">
+    <div class="card-title">Related SIP Calculators</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-top:8px;">
+      <a href="target-sip.html" style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:8px;padding:12px;text-decoration:none;display:block;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:3px;">Target SIP →</div>
+        <div style="font-size:11px;color:var(--muted);">Work backwards from your goal</div>
+      </a>
+      <a href="1-crore-sip.html" style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:8px;padding:12px;text-decoration:none;display:block;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:3px;">₹1 Crore SIP →</div>
+        <div style="font-size:11px;color:var(--muted);">SIP needed to reach 1 Crore</div>
+      </a>
+      <a href="step-up-sip.html" style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:8px;padding:12px;text-decoration:none;display:block;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:3px;">Step-Up SIP →</div>
+        <div style="font-size:11px;color:var(--muted);">Increase SIP every year</div>
+      </a>
+      <a href="lumpsum-vs-sip.html" style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:8px;padding:12px;text-decoration:none;display:block;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:3px;">Lumpsum vs SIP →</div>
+        <div style="font-size:11px;color:var(--muted);">Which strategy wins?</div>
+      </a>
+    </div>
+  </div>
+
+
+  <!-- Ad Slot 4: Before FAQ — in-article contextual -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div><div class="faq-section">
+    <h2 class="faq-heading">SIP Calculator — Everything You Need to Know</h2>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What is a SIP and how does it work?<span class="arrow">+</span></div>
+      <div class="faq-a">A Systematic Investment Plan (SIP) lets you invest a fixed amount in a mutual fund every month automatically. It uses rupee cost averaging — buying more units when markets fall and fewer when they rise. Over 10+ years, SIP in equity funds has historically delivered 10–15% annualized returns in India.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How is SIP return calculated?<span class="arrow">+</span></div>
+      <div class="faq-a">SIP uses the future value of annuity formula: FV = P × [(1 + r)ⁿ – 1] / r × (1 + r), where P is monthly investment, r is monthly rate (annual ÷ 12), and n is total months. This calculator applies exact monthly compounding.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What is a Step-Up SIP?<span class="arrow">+</span></div>
+      <div class="faq-a">A Step-Up SIP automatically increases your monthly investment by a fixed percentage every year. Starting at ₹10,000 with 10% step-up means ₹11,000 next year, ₹12,100 the year after. This aligns with natural income growth and dramatically improves your final corpus.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What is a realistic SIP return rate?<span class="arrow">+</span></div>
+      <div class="faq-a">For large-cap equity funds, 10–12% p.a. is a realistic long-term benchmark. Mid/small-cap funds may return 13–15% with higher volatility. Debt funds return 6–8%. The default 12% represents a conservative historical average for diversified equity funds in India.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How much should I invest in SIP per month?<span class="arrow">+</span></div>
+      <div class="faq-a">Invest at least 20% of your monthly income. Use our <a href="target-sip.html" style="color:var(--accent)">Target SIP Calculator</a> to work backwards from your goal — enter your target corpus, timeline, and expected return to find the exact monthly SIP needed.</div>
+    </div>
+  
+
+<!-- Ad Slot 4: In-content (after FAQ) -->
+<div class="ad-slot ad-slot-content" id="ad-content">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-content','IN_CONTENT');});</script>
+
+</div>
+</div>
+
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
+
+<footer>
+  <div class="footer-brand">Black Belt Code Labs</div>
+  <div class="trust-seal">🇮🇳 Made for India by Indians</div>
+  <p>Results are indicative estimates only. Mutual fund investments are subject to market risks. Read all scheme-related documents carefully.</p>
+  <p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p>
+</footer>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"SIP Calculator","url":"https://calcphi.com/sip-main.html","description":"Free SIP calculator to estimate systematic investment plan returns with step-up option and year-by-year breakdown.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a SIP?","acceptedAnswer":{"@type":"Answer","text":"A Systematic Investment Plan (SIP) lets you invest a fixed amount monthly in a mutual fund, using rupee cost averaging to build wealth."}},{"@type":"Question","name":"What is a realistic SIP return rate?","acceptedAnswer":{"@type":"Answer","text":"For large-cap equity funds, 10-12% p.a. is a realistic long-term benchmark in India."}}]}</script>
+
+<script>
+let chartMode = 'area', myChart = null;
+function switchChart(m) { chartMode = m; document.querySelectorAll('.chart-tab').forEach(t => t.classList.remove('active')); document.getElementById('tab-' + m).classList.add('active'); calculate(); }
+function calculate() {
+  const monthly = +document.getElementById('monthly').value;
+  const rate = +document.getElementById('rate').value / 100;
+  const years = +document.getElementById('years').value;
+  const stepup = +document.getElementById('stepup').value / 100;
+  const mr = rate / 12;
+  let corpus = 0, invested = 0, cur = monthly;
+  const labels = [], yInv = [], yCorp = [], rows = [];
+  for (let m = 1; m <= years * 12; m++) {
+    if (m > 1 && (m - 1) % 12 === 0 && stepup > 0) cur *= (1 + stepup);
+    corpus = (corpus + cur) * (1 + mr); invested += cur;
+    if (m % 12 === 0) {
+      const yr = m / 12; labels.push('Yr ' + yr); yInv.push(Math.round(invested)); yCorp.push(Math.round(corpus));
+      const prev = yr > 1 ? yCorp[yr - 2] : 0;
+      rows.push({ yr, inv: Math.round(invested), ret: Math.round(corpus - invested), corp: Math.round(corpus), g: prev > 0 ? ((corpus - prev) / prev * 100).toFixed(1) : '—' });
+    }
+  }
+  const wg = corpus - invested, mult = corpus / invested, abs = (wg / invested) * 100, rp = (wg / corpus) * 100;
+  document.getElementById('total-corpus').textContent = formatINR(corpus);
+  document.getElementById('total-invested').textContent = formatINR(invested);
+  document.getElementById('wealth-gained').textContent = formatINR(wg);
+  document.getElementById('returns-multiple').textContent = mult.toFixed(2) + 'x';
+  document.getElementById('abs-return').textContent = abs.toFixed(1) + '%';
+  document.getElementById('returns-pct').textContent = rp.toFixed(0) + '% returns';
+  document.getElementById('progress-fill').style.width = rp.toFixed(1) + '%';
+  document.getElementById('val-monthly').textContent = monthly.toLocaleString('en-IN');
+  document.getElementById('val-rate').textContent = +document.getElementById('rate').value;
+  document.getElementById('val-years').textContent = years;
+  document.getElementById('val-stepup').textContent = +document.getElementById('stepup').value;
+  if (myChart) myChart.destroy();
+  const ctx = document.getElementById('growthChart').getContext('2d');
+  if (chartMode === 'area') {
+    const g1 = ctx.createLinearGradient(0,0,0,260); g1.addColorStop(0,'rgba(59,130,246,0.35)'); g1.addColorStop(1,'rgba(59,130,246,0)');
+    const g2 = ctx.createLinearGradient(0,0,0,260); g2.addColorStop(0,'rgba(34,211,165,0.35)'); g2.addColorStop(1,'rgba(34,211,165,0)');
+    myChart = makeAreaChart(ctx, labels, [
+      { label:'Invested', data:yInv, borderColor:'rgba(59,130,246,0.9)', backgroundColor:g1, borderWidth:2, fill:true, tension:0.4, pointRadius:0, pointHoverRadius:5 },
+      { label:'Corpus', data:yCorp, borderColor:'rgba(34,211,165,0.9)', backgroundColor:g2, borderWidth:2, fill:true, tension:0.4, pointRadius:0, pointHoverRadius:5 }
+    ]);
+  } else {
+    myChart = makeBarChart(ctx, labels, [
+      { label:'Invested', data:yInv, backgroundColor:'rgba(59,130,246,0.7)', borderRadius:3 },
+      { label:'Gains', data:yCorp.map((v,i)=>v-yInv[i]), backgroundColor:'rgba(34,211,165,0.7)', borderRadius:3 }
+    ]);
+  }
+  document.getElementById('year-table').innerHTML = rows.map(r =>
+    `<tr><td>Year ${r.yr}</td><td>₹${formatNum(r.inv)}</td><td class="positive">₹${formatNum(r.ret)}</td><td>₹${formatNum(r.corp)}</td><td class="positive">${r.g}%</td></tr>`
+  ).join('');
+}
+['monthly','rate','years','stepup'].forEach(id => document.getElementById(id).addEventListener('input', calculate));
+document.addEventListener('DOMContentLoaded', calculate);
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":2,"name":"SIP Calculator","item":"https://calcphi.com/in/sip-main.html"}]}</script>
+
+<div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 24px;margin:24px 0;max-width:600px;margin-left:auto;margin-right:auto;">
+  <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-bottom:10px;">Related Reading</div>
+  <a href="blog/how-to-start-sip-in-india.html" style="text-decoration:none;display:flex;align-items:center;justify-content:space-between;gap:16px;">
+    <div>
+      <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:4px;">How to Start SIP in India</div>
+      <div style="font-size:12px;color:var(--muted);">CalcPhi Blog →</div>
+    </div>
+    <div style="color:var(--accent);font-size:20px;flex-shrink:0;">→</div>
+  </a>
+</div>
+
+  <script src="../js/ads.js" defer></script>
+
+<!-- Mobile Anchor Ad (sticky bottom) -->
+
+</div>
+    <!-- Desktop Sticky Sidebar (300x600) — visible only on screens > 1200px -->
+    <aside class="ad-sidebar-wrap">
+      <span class="ad-label" style="display:block;text-align:center;margin-bottom:4px;">Advertisement</span>
+      <ins class="adsbygoogle"
+           style="display:block;width:300px;height:600px;"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+           data-ad-slot="SLOT_ID_SIDEBAR"
+           data-ad-format="auto"></ins>
+    </aside>
+</div>
+<div id="anchor-ad" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:8888;background:var(--surface);border-top:1px solid var(--border);padding:6px 16px 8px;text-align:center;">
+  <div style="font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:3px;">Advertisement</div>
+  <ins class="adsbygoogle anchor-adsbygoogle"
+       style="display:block;width:100%;max-width:320px;margin:0 auto;"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+       data-ad-slot="SLOT_ID_ANCHOR"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <button onclick="document.getElementById('anchor-ad').style.display='none';" 
+          style="position:absolute;top:6px;right:10px;background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;line-height:1;">×</button>
+</div>
+<script>
+// Show anchor ad on mobile only (< 768px)
+if (window.innerWidth < 768) {
+  var anchor = document.getElementById('anchor-ad');
+  // Show after 3 seconds or first scroll
+  setTimeout(function() {
+    if (anchor) anchor.style.display = 'block';
+  }, 3000);
+}
+</script>
+</body>
+</html>
