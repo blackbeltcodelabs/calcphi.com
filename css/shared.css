@@ -373,3 +373,195 @@ a.cta-btn:hover {
   color: #000 !important;
   text-decoration: none !important;
 }
+
+/* =========================================================
+   AD SLOTS — AdSense Monetization
+   Replace ca-pub-XXXXXXXXXXXXXXXXX with your Publisher ID
+   Replace slot IDs with your actual Ad Unit IDs
+   ========================================================= */
+
+.ad-slot {
+  width: 100%;
+  overflow: hidden;
+  margin: 16px auto;
+  text-align: center;
+  min-height: 90px;
+  background: transparent;
+}
+
+/* Above fold — leaderboard */
+.ad-slot-top {
+  max-width: 728px;
+  min-height: 90px;
+}
+
+/* Mid + post-result — large rectangle */
+.ad-slot-mid,
+.ad-slot-result {
+  max-width: 336px;
+  min-height: 280px;
+}
+
+/* In-content responsive */
+.ad-slot-content {
+  max-width: 100%;
+  min-height: 250px;
+}
+
+/* Sticky sidebar desktop only */
+.ad-sidebar-wrap {
+  display: none;
+}
+@media (min-width: 1100px) {
+  .ad-sidebar-wrap {
+    display: block;
+    position: sticky;
+    top: 80px;
+    width: 300px;
+    min-height: 600px;
+    flex-shrink: 0;
+  }
+  .wrapper-with-sidebar {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    max-width: 1380px;
+  }
+  .wrapper-with-sidebar .wrapper-inner {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+/* Multiplex at bottom */
+.ad-slot-multiplex {
+  width: 100%;
+  min-height: 300px;
+  margin: 24px 0;
+}
+
+/* AdSense compliance — label */
+.ad-label {
+  font-size: 10px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: center;
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* Hide empty ad slots */
+.ad-slot:empty { display: none; }
+ins.adsbygoogle[data-ad-status="unfilled"] {
+  display: none !important;
+}
+
+/* =========================================================
+   CalcPhi Ad Slots — AdSense Ready
+   Replace data-ad-slot values with real AdSense slot IDs
+   All slots are policy-compliant — no mimicking UI elements
+   ========================================================= */
+
+/* Ad container base */
+.ad-slot {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.ad-slot::before {
+  content: 'Advertisement';
+  position: absolute;
+  top: 0; left: 50%; transform: translateX(-50%);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* Slot 1 — Above fold (below H1, before calculator) */
+.ad-above-fold {
+  min-height: 90px;
+  margin: 0 0 24px;
+  background: transparent;
+}
+
+/* Slot 2 — Mid calculator (between inputs and results, mobile only) */
+.ad-mid-calc {
+  min-height: 100px;
+  margin: 16px 0;
+  display: none; /* shown only on mobile via JS */
+}
+
+/* Slot 3 — After results (★ highest RPM slot) */
+.ad-after-results {
+  min-height: 280px;
+  margin: 28px 0 8px;
+  background: transparent;
+}
+@media (max-width: 600px) {
+  .ad-after-results { min-height: 250px; }
+}
+
+/* Slot 4 — In-content (blog articles, after 2nd paragraph) */
+.ad-in-content {
+  min-height: 250px;
+  margin: 28px 0;
+}
+
+/* Slot 5 — Before FAQ / end of calculator content */
+.ad-pre-faq {
+  min-height: 90px;
+  margin: 8px 0 28px;
+}
+
+/* Slot 6 — Multiplex footer */
+.ad-multiplex {
+  min-height: 400px;
+  margin: 24px 0 0;
+}
+
+/* Sticky sidebar (desktop only) */
+.ad-sidebar-wrap {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .page-with-sidebar {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 28px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    align-items: start;
+  }
+  .ad-sidebar-wrap {
+    display: block;
+    position: sticky;
+    top: 80px;
+  }
+  .ad-sidebar {
+    width: 300px;
+    min-height: 600px;
+  }
+  /* Compensate — on smaller screens use normal wrapper */
+  .page-with-sidebar .wrapper-inner { max-width: 100%; }
+}
+
+/* Label all ad zones clearly (policy compliance) */
+.ad-label {
+  display: block;
+  font-size: 9px;
+  text-align: center;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.4;
+  margin-bottom: 2px;
+}
