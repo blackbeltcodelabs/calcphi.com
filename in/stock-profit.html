@@ -22,6 +22,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 </head>
 <body>
@@ -32,14 +33,31 @@
 <a href="sip-main.html">SIP</a><a href="emi-calculator.html">EMI</a>
 <a href="income-tax.html">Tax</a><a href="in-hand-salary.html">Salary</a>
 <a href="fire-calculator.html">FIRE</a><a href="blog/">Blog</a>
-</div></div></nav>
+<a href="../index.html" style="font-size:11px;opacity:0.5;padding:4px 8px;color:var(--muted);">🌍 Change Region</a></div></div></nav>
 <div class="wrapper">
 <header>
 <div class="badge">Stocks · P&L · Brokerage and Tax</div>
 <h1>Stock P&L Calculator —<br><em>Profit After ALL Charges</em></h1>
 <p class="subtitle">Your real stock profit = sell price - buy price - brokerage - STT - GST - stamp duty - capital gains tax. Calculate the true net before celebrating.</p>
 </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 <div class="info-banner">Your real stock profit = sell price - buy price - brokerage - STT - GST - stamp duty - capital gains tax. Calculate the true net before celebrating.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
 <div class="main-grid">
 <div class="card"><div class="card-title">Enter Details</div>
 <div class="field"><div class="field-header"><span class="field-label">Amount</span><div class="field-value">₹<span id="v-a">500,000</span></div></div>
@@ -57,6 +75,28 @@
 <div class="stat-box"><div class="stat-box-label">Return %</div><div class="stat-box-value gold" id="s-c">0%</div></div>
 <div class="stat-box"><div class="stat-box-label">Rate</div><div class="stat-box-value" id="s-d">0%</div></div>
 </div></div></div>
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
 <div class="faq-section"><h2 class="faq-heading">Frequently Asked Questions</h2>
 <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What charges apply on stock trading in India?<span class="arrow">+</span></div><div class="faq-a">Delivery trades: STT 0.1% buy+sell, brokerage 0-0.5%, GST 18% on brokerage, SEBI 0.0001%, stamp duty 0.015% on buy. Intraday: STT 0.025% on sell only. These charges matter most for short-term traders where margins are thin.</div></div>
 <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is STCG and LTCG on stocks India?<span class="arrow">+</span></div><div class="faq-a">STCG (under 12 months): 20% flat. LTCG (over 12 months): 12.5% on gains above ₹1.25L exemption/year. F&O gains: taxed as business income at slab rate.</div></div>
@@ -77,12 +117,22 @@ function calculate(){
 document.addEventListener('DOMContentLoaded',calculate);
 </script>
 </div>
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
+
 <footer>
 <div class="footer-brand">Black Belt Code Labs</div>
+  <div class="trust-seal">🇮🇳 Made for India by Indians</div>
 <p>Results are indicative estimates only. Consult a qualified financial advisor before making investment decisions.</p>
 <p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p>
 </footer>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What charges apply on stock trading in India?","acceptedAnswer":{"@type":"Answer","text":"Delivery trades: STT 0.1% buy+sell, brokerage 0-0.5%, GST 18% on brokerage, SEBI 0.0001%, stamp duty 0.015% on buy. Intraday: STT 0.025% on sell only. These charges matter most for short-term traders where margins are thin."}},{"@type":"Question","name":"What is STCG and LTCG on stocks India?","acceptedAnswer":{"@type":"Answer","text":"STCG (under 12 months): 20% flat. LTCG (over 12 months): 12.5% on gains above ₹1.25L exemption/year. F&O gains: taxed as business income at slab rate."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/"},{"@type":"ListItem","position":2,"name":"India","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":3,"name":"Stock Profit Loss Calculator India 2026","item":"https://calcphi.com/in/stock-profit.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Stock Profit Loss Calculator India 2026","url":"https://calcphi.com/in/stock-profit.html","description":"Calculate stock trading P&L including brokerage, STT, GST, and capital gains tax. Net profit after all charges. India stock market P&L calculator 2026","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+
+  <script src="../js/ads.js" defer></script>
 </body></html>

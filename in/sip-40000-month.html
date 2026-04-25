@@ -20,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 <meta property="og:title" content="₹40000 Monthly SIP – Returns & Corpus Calculator">
 <meta property="og:description" content="₹40,000/month SIP builds ₹5 Crore in 20 years at 12% returns. Full breakdown with step-up option.">
@@ -46,7 +47,8 @@
       <a href="emi-calculator.html">EMI</a>
       <a href="income-tax.html">Tax</a>
       <a href="fire-calculator.html">FIRE</a>
-    </div>
+        <a href="../index.html" style="font-size:11px;opacity:0.5;padding:4px 8px;color:var(--muted);">🌍 Change Region</a>
+  </div>
 </div></nav>
 <div class="wrapper">
 <header>
@@ -54,7 +56,24 @@
   <h1>₹40,000 SIP Calculator —<br><em>Build Crore-Level Wealth</em></h1>
   <p class="subtitle">₹40,000/month represents 20% savings on a ₹2 lakh monthly take-home — the allocation discipline of serious wealth builders. Over 20 years at 12% returns, this becomes ₹3.99 crore. With a 10% annual step-up started at 30, this builds over ₹7 crore by age 50.</p>
 </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 <div class="info-banner">At 12% return, ₹40,000/month for 20 years builds ₹4.99 Crore. Adjust sliders to model your exact scenario.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
 <div class="main-grid">
   <div class="card"><div class="card-title">Investment Details</div>
     <div class="field"><div class="field-header"><span class="field-label">Monthly SIP</span><div class="field-value">₹<span id="val-monthly">40,000</span></div></div>
@@ -81,6 +100,13 @@
     </div>
   </div>
 </div>
+
+<!-- Ad Slot 3: Post-result (HIGHEST REVENUE SLOT) -->
+<div class="ad-slot ad-slot-result" id="ad-result">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-result','POST_RESULT');});</script>
+
 <div class="chart-section">
   <div class="chart-header"><div class="chart-title">Year-by-Year Growth</div>
   <div class="chart-tabs"><button class="chart-tab active" id="tab-area" onclick="switchChart('area')">Growth</button><button class="chart-tab" id="tab-bar" onclick="switchChart('bar')">Breakdown</button></div></div>
@@ -89,6 +115,28 @@
 <div class="card mb-20"><div class="card-title">Year-by-Year Breakdown</div>
   <div class="table-wrap"><table><thead><tr><th>Year</th><th>Invested (₹)</th><th>Returns (₹)</th><th>Corpus (₹)</th><th>Growth %</th></tr></thead><tbody id="year-table"></tbody></table></div>
 </div>
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
 <div class="faq-section">
   <h2 class="faq-heading">₹40,000 SIP — Wealth Building at Scale</h2>
   <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How much will ₹40,000 SIP give in 20 years?<span class="arrow">+</span></div>
@@ -101,10 +149,26 @@
   <div class="faq-a">Yes. ₹40,000/month SIP at 12% for 15 years builds approximately ₹2.5 Crore. Using the 4% safe withdrawal rate, this generates ₹1 lakh/month in retirement income. For most Indians under 45 starting this SIP, FIRE (Financial Independence Retire Early) is achievable by 55–60 with this level of commitment and discipline.</div></div>
   <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the LTCG tax impact on ₹40,000 SIP?<span class="arrow">+</span></div>
   <div class="faq-a">For equity mutual funds held over 1 year, LTCG tax is 10% on gains above ₹1 lakh per financial year. At ₹40,000/month SIP with 12% returns, annual gains after year 5 can be ₹8–15 lakhs. Strategic SWP (Systematic Withdrawal Plan) can manage LTCG liability — withdraw up to ₹1 lakh in gains per year tax-free. Consult a tax advisor for optimal withdrawal planning.</div></div>
+
+
+<!-- Ad Slot 4: In-content (after FAQ) -->
+<div class="ad-slot ad-slot-content" id="ad-content">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-content','IN_CONTENT');});</script>
+
 </div>
 </div>
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
+
 <footer>
   <div class="footer-brand">Black Belt Code Labs</div>
+  <div class="trust-seal">🇮🇳 Made for India by Indians</div>
   <p>Results are indicative estimates only. Mutual fund investments are subject to market risks.</p>
   <p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p>
 </footer>
@@ -140,4 +204,6 @@ document.addEventListener('DOMContentLoaded',calculate);
     <div style="color:var(--accent);font-size:20px;flex-shrink:0;">→</div>
   </a>
 </div>
+
+  <script src="../js/ads.js" defer></script>
 </body></html>

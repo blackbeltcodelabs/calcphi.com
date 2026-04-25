@@ -20,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 <meta property="og:title" content="SWP Calculator 2026 – Systematic Withdrawal Plan">
 <meta property="og:description" content="Calculate monthly income from your invested corpus using Systematic Withdrawal Plan. See how long your money lasts.">
@@ -47,6 +48,7 @@
       <a href="emi-calculator.html">EMI</a>
       <a href="income-tax.html">Tax</a>
       <a href="fire-calculator.html">FIRE</a>
+      <a href="../index.html" style="font-size:11px;opacity:0.5;padding:4px 8px;color:var(--muted);">🌍 Change Region</a>
     </div>
   </div>
 </nav>
@@ -56,7 +58,24 @@
     <h1>SWP Calculator —<br><em>Make Your Corpus Last Forever</em></h1>
     <p class="subtitle">A Systematic Withdrawal Plan lets you withdraw a fixed amount monthly from your mutual fund corpus. See how long your retirement savings will last — and find the right withdrawal amount.</p>
   </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
   <div class="info-banner">The goal: withdraw as much as you need while keeping the corpus growing. If your corpus return rate exceeds your withdrawal rate, your money lasts forever.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
   <div class="main-grid">
     <div class="card">
       <div class="card-title">SWP Details</div>
@@ -103,6 +122,24 @@
       </div>
     </div>
   </div>
+
+<!-- Ad Slot 3: Post-result (HIGHEST REVENUE SLOT) -->
+<div class="ad-slot ad-slot-result" id="ad-result">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-result','POST_RESULT');});</script>
+
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM — user just received value -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
   <div class="chart-section">
     <div class="chart-header">
       <div class="chart-title">Corpus Depletion Over Time</div>
@@ -121,6 +158,17 @@
         <tbody id="year-table"></tbody>
       </table>
     </div>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ — in-article contextual -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
   </div>
   <div class="faq-section">
     <h2 class="faq-heading">SWP — Systematic Withdrawal Plan Questions</h2>
@@ -144,10 +192,26 @@
       <div class="faq-q" onclick="toggleFaq(this)">How is SWP taxed in India?<span class="arrow">+</span></div>
       <div class="faq-a">Each SWP redemption is treated as a mutual fund redemption for tax purposes. Equity funds held for less than 12 months: STCG at 20%. Equity funds held for more than 12 months: LTCG above ₹1.25 lakh annually at 12.5%. Debt funds (post April 2023): gains taxed at your income slab rate regardless of holding period. For retirees in lower tax brackets, LTCG from equity fund SWP is extremely tax-efficient. Setting SWP to start after 12 months from investment maximises LTCG eligibility.</div>
     </div>
-  </div>
+  
+
+<!-- Ad Slot 4: In-content (after FAQ) -->
+<div class="ad-slot ad-slot-content" id="ad-content">
+  <span class="ad-label">Advertisement</span>
 </div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-content','IN_CONTENT');});</script>
+
+</div>
+</div>
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
+
 <footer>
   <div class="footer-brand">Black Belt Code Labs</div>
+  <div class="trust-seal">🇮🇳 Made for India by Indians</div>
   <p>Results are estimates only. Actual returns and corpus longevity depend on market performance. Consult a SEBI-registered advisor.</p>
   <p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p>
 </footer>
@@ -215,5 +279,7 @@ document.addEventListener('DOMContentLoaded',calculate);
 </script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":2,"name":"SWP Calculator","item":"https://calcphi.com/in/swp-calculator.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is SWP and how does it work?","acceptedAnswer":{"@type":"Answer","text":"SWP (Systematic Withdrawal Plan) lets you withdraw a fixed amount from a mutual fund every month while the remaining corpus continues to earn returns. It is the retirement income equivalent of SIP — instead of investing monthly, you withdraw monthly."}},{"@type":"Question","name":"How long will my corpus last with SWP?","acceptedAnswer":{"@type":"Answer","text":"Corpus longevity depends on withdrawal amount relative to returns. If your withdrawal rate is below the annual return rate, corpus grows even while withdrawing. At 4% annual withdrawal on a 10% return portfolio, corpus can last indefinitely."}},{"@type":"Question","name":"Is SWP better than FD for retirement income?","acceptedAnswer":{"@type":"Answer","text":"For most retirees, SWP from a balanced or hybrid fund offers higher monthly income than FD at the same corpus, with better inflation protection over long periods. However, SWP from equity funds carries market risk that FD does not."}}]}</script>
+
+  <script src="../js/ads.js" defer></script>
 </body>
 </html>

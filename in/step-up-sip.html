@@ -20,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 <meta property="og:title" content="Step-Up SIP Calculator 2026 – Annual SIP Increase">
 <meta property="og:description" content="Model SIP with annual step-up. See how 10% yearly increase on your SIP dramatically grows your final corpus.">
@@ -47,6 +48,7 @@
       <a href="emi-calculator.html">EMI</a>
       <a href="income-tax.html">Tax</a>
       <a href="fire-calculator.html">FIRE</a>
+      <a href="../index.html" style="font-size:11px;opacity:0.5;padding:4px 8px;color:var(--muted);">🌍 Change Region</a>
     </div>
   </div>
 </nav>
@@ -56,7 +58,24 @@
     <h1>Step-Up SIP Calculator —<br><em>Grow Your SIP Every Year</em></h1>
     <p class="subtitle">A Step-Up SIP automatically increases your monthly investment every year. See how even a small annual increase dramatically multiplies your final corpus.</p>
   </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
   <div class="info-banner">Compare your Step-Up SIP corpus vs a flat SIP with the same starting amount. The difference will surprise you.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
   <div class="main-grid">
     <div class="card">
       <div class="card-title">Step-Up SIP Details</div>
@@ -103,6 +122,24 @@
       </div>
     </div>
   </div>
+
+<!-- Ad Slot 3: Post-result (HIGHEST REVENUE SLOT) -->
+<div class="ad-slot ad-slot-result" id="ad-result">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-result','POST_RESULT');});</script>
+
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM — user just received value -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
   <div class="chart-section">
     <div class="chart-header">
       <div class="chart-title">Step-Up vs Flat SIP Comparison</div>
@@ -121,6 +158,17 @@
         <tbody id="year-table"></tbody>
       </table>
     </div>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ — in-article contextual -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
   </div>
   <div class="faq-section">
     <h2 class="faq-heading">Step-Up SIP — Everything You Need to Know</h2>
@@ -144,10 +192,26 @@
       <div class="faq-q" onclick="toggleFaq(this)">Can I pause or reduce a Step-Up SIP?<span class="arrow">+</span></div>
       <div class="faq-a">Yes. Most mutual fund platforms allow you to pause SIP for 1–3 months, modify the step-up percentage, or reduce the SIP amount at any time. If you face financial difficulty, reducing the step-up percentage to 0% (effectively converting to flat SIP) is far better than stopping the SIP entirely. Stopping a long-term SIP early is one of the most costly mistakes investors make — compounding is disrupted and cannot be recovered.</div>
     </div>
-  </div>
+  
+
+<!-- Ad Slot 4: In-content (after FAQ) -->
+<div class="ad-slot ad-slot-content" id="ad-content">
+  <span class="ad-label">Advertisement</span>
 </div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-content','IN_CONTENT');});</script>
+
+</div>
+</div>
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
+
 <footer>
   <div class="footer-brand">Black Belt Code Labs</div>
+  <div class="trust-seal">🇮🇳 Made for India by Indians</div>
   <p>Results are estimates only. Mutual fund returns are not guaranteed.</p>
   <p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p>
 </footer>
@@ -222,5 +286,7 @@ document.addEventListener('DOMContentLoaded',calculate);
 </script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":2,"name":"Step-Up SIP","item":"https://calcphi.com/in/step-up-sip.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a step-up SIP?","acceptedAnswer":{"@type":"Answer","text":"A step-up SIP automatically increases your monthly investment by a fixed percentage every year. Starting at ₹10,000 with 10% annual step-up means ₹11,000 next year, ₹12,100 the year after. It aligns with natural salary growth."}},{"@type":"Question","name":"How much more does step-up SIP give vs regular SIP?","acceptedAnswer":{"@type":"Answer","text":"A 10% annual step-up on ₹10,000/month for 20 years at 12% returns gives approximately ₹2 Crore vs ₹1 Crore from a flat SIP. The step-up nearly doubles your final corpus without requiring you to find extra money upfront."}},{"@type":"Question","name":"Is step-up SIP available on all platforms?","acceptedAnswer":{"@type":"Answer","text":"Yes. Most major platforms including Groww, Zerodha Coin, Paytm Money, and direct AMC websites support step-up SIP. It's called top-up SIP on some platforms. You can set annual increase as a fixed amount or percentage."}}]}</script>
+
+  <script src="../js/ads.js" defer></script>
 </body>
 </html>
