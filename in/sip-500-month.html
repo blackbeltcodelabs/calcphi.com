@@ -20,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 <meta property="og:title" content="₹500 Monthly SIP Calculator – Returns Over Time">
 <meta property="og:description" content="Calculate how ₹500 per month grows over 5, 10, 15 and 20 years. Even small SIPs build significant wealth.">
@@ -57,7 +58,24 @@
     <h1>₹500 SIP Calculator —<br><em>See What ₹500 Grows To</em></h1>
     <p class="subtitle">Starting a ₹500/month SIP? See exactly how much your investment grows over different time horizons and return rates. Adjust duration and rate to find your ideal plan.</p>
   </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
   <div class="info-banner">Monthly SIP is pre-set to ₹500. Adjust the duration and expected return to see your corpus. Also compare across 5 to 30-year horizons below.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
   <div class="main-grid">
     <div class="card">
       <div class="card-title">SIP Details — ₹500 Monthly</div>
@@ -104,6 +122,24 @@
       </div>
     </div>
   </div>
+
+<!-- Ad Slot 3: Post-result (HIGHEST REVENUE SLOT) -->
+<div class="ad-slot ad-slot-result" id="ad-result">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-result','POST_RESULT');});</script>
+
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM — user just received value -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
   <div class="chart-section">
     <div class="chart-header">
       <div class="chart-title">₹500/Month SIP Growth</div>
@@ -122,6 +158,17 @@
         <tbody id="horizon-table"></tbody>
       </table>
     </div>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ — in-article contextual -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
   </div>
   <div class="faq-section">
     <h2 class="faq-heading">₹500 Monthly SIP — Common Questions</h2>
@@ -145,8 +192,23 @@
       <div class="faq-q" onclick="toggleFaq(this)">What is the ideal SIP date — 1st or 15th of the month?<span class="arrow">+</span></div>
       <div class="faq-a">Research shows there is no statistically significant difference in returns between SIP dates in the long run. However, practically: aligning your SIP date shortly after your salary credit date ensures funds are available. Popular choices are the 1st, 5th, 10th, or 15th of the month. If you receive salary on the 1st, choose the 3rd or 5th for your SIP. If salary comes on the 25th, choose the 1st of the following month. Consistency matters far more than the specific date.</div>
     </div>
-  </div>
+  
+
+<!-- Ad Slot 4: In-content (after FAQ) -->
+<div class="ad-slot ad-slot-content" id="ad-content">
+  <span class="ad-label">Advertisement</span>
 </div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-content','IN_CONTENT');});</script>
+
+</div>
+</div>
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
+
 <footer>
   <div class="footer-brand">Black Belt Code Labs</div>
   <div class="trust-seal">🇮🇳 Made for India by Indians</div>
@@ -220,5 +282,7 @@ document.addEventListener('DOMContentLoaded',calculate);
 </script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":2,"name":"₹500 SIP","item":"https://calcphi.com/in/sip-500-month.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can ₹500 SIP make a difference over time?","acceptedAnswer":{"@type":"Answer","text":"Yes. ₹500/month SIP at 12% returns grows to ₹2.3 lakhs in 10 years and ₹9.95 lakhs in 20 years. The key lesson: starting small is infinitely better than not starting. You can always increase the amount later."}},{"@type":"Question","name":"What is the minimum SIP amount in India?","acceptedAnswer":{"@type":"Answer","text":"The minimum SIP in India starts at ₹100/month on some platforms and ₹500/month on most. Groww, Zerodha Coin, and Paytm Money all accept ₹500 SIPs. Some Nifty 50 index funds accept SIPs as low as ₹100/month."}},{"@type":"Question","name":"When should I increase my SIP from ₹500?","acceptedAnswer":{"@type":"Answer","text":"Increase your SIP whenever your income increases — ideally investing 50-100% of any salary hike. Even going from ₹500 to ₹1,000/month doubles your wealth trajectory. A 10% annual step-up is the most disciplined approach."}}]}</script>
+
+  <script src="../js/ads.js" defer></script>
 </body>
 </html>

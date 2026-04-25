@@ -20,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 <meta property="og:title" content="SIP for 5 Years – Returns & Corpus Calculator">
 <meta property="og:description" content="Calculate your SIP corpus after 5 years. See month-by-month growth for any monthly investment at any return rate.">
@@ -57,7 +58,24 @@
     <h1>SIP Calculator —<br><em>5 Year Returns</em></h1>
     <p class="subtitle">Find out exactly how much your monthly SIP will be worth after 5 years. Compare different investment amounts side by side.</p>
   </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
   <div class="info-banner">Duration is fixed at 5 years. Adjust your monthly investment and expected return rate to see your corpus.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
   <div class="main-grid">
     <div class="card">
       <div class="card-title">Investment Details · 5 Year Plan</div>
@@ -104,6 +122,24 @@
       </div>
     </div>
   </div>
+
+<!-- Ad Slot 3: Post-result (HIGHEST REVENUE SLOT) -->
+<div class="ad-slot ad-slot-result" id="ad-result">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-result','POST_RESULT');});</script>
+
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM — user just received value -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
   <div class="chart-section">
     <div class="chart-header">
       <div class="chart-title">Month-by-Month Growth</div>
@@ -122,6 +158,17 @@
         <tbody id="comparison-table"></tbody>
       </table>
     </div>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ — in-article contextual -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
   </div>
   <div class="faq-section">
     <h2 class="faq-heading">SIP for 5 Years — Common Questions</h2>
@@ -145,8 +192,23 @@
       <div class="faq-q" onclick="toggleFaq(this)">How does a Step-Up SIP improve 5-year returns?<span class="arrow">+</span></div>
       <div class="faq-a">A Step-Up SIP increases your monthly investment by a fixed percentage annually. Starting at ₹10,000/month with 10% annual step-up: Year 1 = ₹10,000/mo, Year 2 = ₹11,000/mo, Year 3 = ₹12,100/mo, and so on. Over 5 years at 12% return, this step-up strategy yields approximately ₹9.5 lakhs vs ₹8.2 lakhs without step-up — a 16% improvement in corpus from just incrementally increasing contributions as your income grows.</div>
     </div>
-  </div>
+  
+
+<!-- Ad Slot 4: In-content (after FAQ) -->
+<div class="ad-slot ad-slot-content" id="ad-content">
+  <span class="ad-label">Advertisement</span>
 </div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-content','IN_CONTENT');});</script>
+
+</div>
+</div>
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
+
 <footer>
   <div class="footer-brand">Black Belt Code Labs</div>
   <div class="trust-seal">🇮🇳 Made for India by Indians</div>
@@ -225,5 +287,7 @@ document.addEventListener('DOMContentLoaded',calculate);
     <div style="color:var(--accent);font-size:20px;flex-shrink:0;">→</div>
   </a>
 </div>
+
+  <script src="../js/ads.js" defer></script>
 </body>
 </html>

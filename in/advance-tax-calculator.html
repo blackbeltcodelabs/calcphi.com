@@ -22,6 +22,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 </head>
 <body>
@@ -39,7 +40,24 @@
 <h1>Advance Tax Calculator —<br><em>Pay on Time, Avoid Penalties</em></h1>
 <p class="subtitle">If your total tax liability exceeds ₹10,000 in a year, you must pay advance tax in 4 instalments. Missing deadlines attracts 1% monthly interest under Section 234B and 234C.</p>
 </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 <div class="info-banner">Advance tax applies if annual tax liability exceeds ₹10,000. Senior citizens (75+) with only pension and interest income are exempt. Self-employed, freelancers, and investors must pay advance tax.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
 <div class="main-grid">
 <div class="card"><div class="card-title">Income Details (FY 2025-26)</div>
 <div class="field"><div class="field-header"><span class="field-label">Salary Income (Annual)</span><div class="field-value">₹<span id="v-sal">0</span></div></div>
@@ -67,6 +85,28 @@
 <tr><td>3rd</td><td>15 December 2025</td><td>30%</td><td>75%</td></tr>
 <tr><td>4th (Final)</td><td>15 March 2026</td><td>25%</td><td>100%</td></tr>
 </tbody></table></div></div>
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
 <div class="faq-section"><h2 class="faq-heading">Advance Tax — Key Questions</h2>
 <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Who must pay advance tax in India?<span class="arrow">+</span></div>
 <div class="faq-a">Any individual whose estimated total tax liability for the year exceeds ₹10,000 must pay advance tax. This includes self-employed individuals, freelancers, consultants, investors with capital gains, rental income earners, and salaried employees with large other income. TDS deducted by employers counts toward advance tax — only the shortfall needs separate payment.</div></div>
@@ -102,6 +142,13 @@ function calculate(){
 document.addEventListener('DOMContentLoaded',calculate);
 </script>
 </div>
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
+
 <footer>
 <div class="footer-brand">Black Belt Code Labs</div>
   <div class="trust-seal">🇮🇳 Made for India by Indians</div>
@@ -111,4 +158,6 @@ document.addEventListener('DOMContentLoaded',calculate);
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Who must pay advance tax?","acceptedAnswer":{"@type":"Answer","text":"Anyone with tax liability > ₹10,000/year. Salaried TDS counts toward advance tax — only shortfall needs separate payment."}},{"@type":"Question","name":"What penalty for late advance tax?","acceptedAnswer":{"@type":"Answer","text":"Section 234C: 1%/month on each instalment shortfall. Section 234B: 1%/month if total advance tax < 90% of liability."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/"},{"@type":"ListItem","position":2,"name":"India","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":3,"name":"Advance Tax Calculator India FY 2025-26","item":"https://calcphi.com/in/advance-tax-calculator.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Advance Tax Calculator India FY 2025-26","url":"https://calcphi.com/in/advance-tax-calculator.html","description":"Calculate advance tax instalments for FY 2025-26. Find how much to pay by June 15, September 15, December 15, and March 15. Free advance tax calculato","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+
+  <script src="../js/ads.js" defer></script>
 </body></html>

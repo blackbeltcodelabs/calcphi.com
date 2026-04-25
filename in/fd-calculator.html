@@ -20,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 <meta property="og:title" content="FD Calculator 2026 – Fixed Deposit Returns India">
 <meta property="og:description" content="Calculate fixed deposit maturity with quarterly compounding. FD returns for SBI, HDFC, ICICI and all banks.">
@@ -56,7 +57,24 @@
     <h1>FD Calculator —<br><em>Know Your Maturity Amount</em></h1>
     <p class="subtitle">Calculate exactly how much your Fixed Deposit will be worth at maturity. Compare simple and compound interest FDs across any bank or NBFC.</p>
   </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
   <div class="info-banner">FD interest is compounded quarterly by most banks. The calculator shows both simple and compound interest for comparison.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
   <div class="main-grid">
     <div class="card">
       <div class="card-title">FD Details</div>
@@ -103,6 +121,24 @@
       </div>
     </div>
   </div>
+
+<!-- Ad Slot 3: Post-result (HIGHEST REVENUE SLOT) -->
+<div class="ad-slot ad-slot-result" id="ad-result">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-result','POST_RESULT');});</script>
+
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM — user just received value -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
   <div class="chart-section">
     <div class="chart-header"><div class="chart-title">FD Growth Over Tenure</div>
     <div class="chart-tabs">
@@ -120,6 +156,17 @@
       </table>
     </div>
   </div>
+
+  <!-- Ad Slot 4: Before FAQ — in-article contextual -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
   <div class="faq-section">
     <h2 class="faq-heading">FD Calculator — Common Questions</h2>
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How is FD interest calculated?<span class="arrow">+</span></div>
@@ -132,8 +179,26 @@
     <div class="faq-a">In a Cumulative FD, interest is compounded and paid at maturity along with the principal — ideal for wealth creation. In a Non-Cumulative FD, interest is paid out periodically (monthly, quarterly, or annually) — suitable for generating regular income, especially for retirees. Cumulative FDs always generate more total interest than non-cumulative FDs due to compounding, but non-cumulative FDs provide liquidity through periodic interest payouts.</div></div>
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Should I invest in FD or mutual fund SIP?<span class="arrow">+</span></div>
     <div class="faq-a">For a 1–3 year horizon with capital protection need: FD is better. For 5+ year horizon with inflation-beating growth goal: equity SIP is significantly better. A 7% FD after 30% tax and 6% inflation gives a real return of approximately -1.1% (you actually lose purchasing power). An equity SIP averaging 12% after tax gives approximately 5–6% real return. Most financial advisors recommend FD for emergency funds and short-term goals, and SIP for long-term wealth creation.</div></div>
+  
+
+<!-- Ad Slot 4: In-content (after FAQ) -->
+<div class="ad-slot ad-slot-content" id="ad-content">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-content','IN_CONTENT');});</script>
+
+</div>
+</div>
+  <!-- Ad Slot 5: Multiplex footer -->
+  <div class="ad-slot ad-multiplex">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_MULTIPLEX"
+         data-ad-format="autorelaxed"></ins>
   </div>
-</div><footer>
+<footer>
   <div class="footer-brand">Black Belt Code Labs</div>
   <div class="trust-seal">🇮🇳 Made for India by Indians</div>
   <p>Results are estimates only. Not financial advice. Consult a SEBI-registered advisor.</p>
@@ -205,4 +270,6 @@ document.addEventListener('DOMContentLoaded',calculate);
     <div style="color:var(--accent);font-size:20px;flex-shrink:0;">→</div>
   </a>
 </div>
+
+  <script src="../js/ads.js" defer></script>
 </body></html>

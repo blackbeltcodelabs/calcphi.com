@@ -22,6 +22,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 </head>
 <body>
@@ -39,7 +40,24 @@
 <h1>₹7,500/Month SIP Calculator —<br><em>See Your Wealth Grow</em></h1>
 <p class="subtitle">₹7,500/month typically suits a salaried professional earning ₹40,000–50,000 take-home following the 15–20% savings rule. Over 20 years at 12% returns, this builds ₹74.9 lakhs — approaching the crore milestone with discipline alone.</p>
 </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 <div class="info-banner">At 12% annual returns, ₹7,500/month SIP grows to ₹87L in 10 yrs at 12%. The longer you stay invested, the more compounding works in your favour.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
 <div class="main-grid">
 <div class="card"><div class="card-title">SIP Details</div>
 <div class="field"><div class="field-header"><span class="field-label">Monthly SIP Amount</span><div class="field-value">₹<span id="sip-disp">7,500</span></div></div>
@@ -65,8 +83,37 @@
 <div class="progress-bar-bg"><div class="progress-bar-fill" id="prog" style="width:40%"></div></div>
 <div class="progress-legend"><span><span class="legend-dot" style="background:var(--accent2)"></span>Invested</span><span><span class="legend-dot" style="background:var(--accent)"></span>Returns</span></div>
 </div></div></div>
+
+<!-- Ad Slot 3: Post-result (HIGHEST REVENUE SLOT) -->
+<div class="ad-slot ad-slot-result" id="ad-result">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-result','POST_RESULT');});</script>
+
 <div class="chart-section"><div class="chart-header"><div class="chart-title">Corpus Growth Over Time</div></div>
 <div class="chart-wrap"><canvas id="growthChart"></canvas></div></div>
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
 <div class="faq-section"><h2 class="faq-heading">₹7,500 SIP — Key Questions</h2>
 <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How much does ₹7,500/month SIP give in 20 years?<span class="arrow">+</span></div>
 <div class="faq-a">At 12% annual returns, ₹7,500/month SIP for 20 years builds a corpus of approximately ₹87L  over 20 years. The power of compounding means that your returns in the last 5 years often exceed your entire first 15 years of accumulated wealth.</div></div>
@@ -109,6 +156,13 @@ function calculate(){
 document.addEventListener('DOMContentLoaded',calculate);
 </script>
 </div>
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
+
 <footer>
 <div class="footer-brand">Black Belt Code Labs</div>
   <div class="trust-seal">🇮🇳 Made for India by Indians</div>
@@ -118,4 +172,6 @@ document.addEventListener('DOMContentLoaded',calculate);
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much will ₹7,500 SIP give in 15 years?","acceptedAnswer":{"@type":"Answer","text":"At 12% annual returns, ₹7,500/month SIP for 15 years builds a corpus of approximately ₹37.0 lakhs. Total invested is ₹13.0 lakhs — the rest is pure compounding returns."}},{"@type":"Question","name":"When should I start a ₹7,500 SIP?","acceptedAnswer":{"@type":"Answer","text":"The best time to start a SIP is today. Every month you delay costs you compounding. Starting at 25 vs 30 with the same ₹{fmt}/month gives roughly 50-60% more corpus by retirement age."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/"},{"@type":"ListItem","position":2,"name":"India","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":3,"name":"₹7,500 Monthly SIP Calculator India 2026","item":"https://calcphi.com/in/sip-7500-month.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"₹7,500 Monthly SIP Calculator India 2026","url":"https://calcphi.com/in/sip-7500-month.html","description":"Calculate ₹7,500/month SIP returns over 10, 15, 20 and 30 years. See corpus, wealth gained, and year-by-year growth at any return rate. Free India SIP","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+
+  <script src="../js/ads.js" defer></script>
 </body></html>

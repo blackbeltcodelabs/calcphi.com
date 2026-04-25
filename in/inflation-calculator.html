@@ -20,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 <style>
   .comparison-grid {
@@ -102,121 +103,41 @@
     <h1>Inflation Calculator —<br><em>What Is Your Money Really Worth?</em></h1>
     <p class="subtitle">Inflation silently erodes your wealth. See the real purchasing power of your savings today and find out how much you actually need to invest to beat inflation.</p>
   </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 
   <div class="info-banner">
     India's average inflation (CPI) has been ~6% annually over the past decade. Your investments need to return more than inflation to actually grow your wealth in real terms.
   </div>
 
-  <div class="main-grid">
 
-    <!-- INPUTS -->
-    <div class="card">
-      <div class="card-title">Your Money Details</div>
 
-      <div class="field">
-        <div class="field-header">
-          <span class="field-label">Current Amount / Savings</span>
-          <div class="field-value">₹<span id="val-amount">5,00,000</span></div>
-        </div>
-        <input type="range" id="amount" min="10000" max="10000000" step="10000" value="500000">
-        <div class="range-labels"><span>₹10K</span><span>₹1 Cr</span></div>
-      </div>
+<!-- Ad Slot 3: Post-result (HIGHEST REVENUE SLOT) -->
+<div class="ad-slot ad-slot-result" id="ad-result">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-result','POST_RESULT');});</script>
 
-      <div class="field">
-        <div class="field-header">
-          <span class="field-label">Annual Inflation Rate</span>
-          <div class="field-value"><span id="val-inflation">6</span><span>% p.a.</span></div>
-        </div>
-        <input type="range" id="inflation" min="1" max="15" step="0.5" value="6">
-        <div class="range-labels"><span>1%</span><span>15%</span></div>
-      </div>
 
-      <div class="field">
-        <div class="field-header">
-          <span class="field-label">Investment Return Rate</span>
-          <div class="field-value"><span id="val-rate">10</span><span>% p.a.</span></div>
-        </div>
-        <input type="range" id="rate" min="1" max="25" step="0.5" value="10">
-        <div class="range-labels"><span>1%</span><span>25%</span></div>
-      </div>
 
-      <div class="field">
-        <div class="field-header">
-          <span class="field-label">Time Period</span>
-          <div class="field-value"><span id="val-years">20</span><span> yrs</span></div>
-        </div>
-        <input type="range" id="years" min="1" max="40" step="1" value="20">
-        <div class="range-labels"><span>1 yr</span><span>40 yrs</span></div>
-      </div>
-    </div>
-
-    <!-- RESULTS -->
-    <div class="results-card">
-      <div class="corpus-display">
-        <div class="corpus-label">Real Purchasing Power After <span id="disp-years">20</span> Years</div>
-        <div class="corpus-amount" id="real-value">₹0</div>
-        <div class="corpus-sub">in today's money (inflation-adjusted)</div>
-      </div>
-      <div class="stats-row">
-        <div class="stat-box">
-          <div class="stat-box-label">Nominal Value</div>
-          <div class="stat-box-value gold" id="nominal-value">₹0</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-box-label">Real Return Rate</div>
-          <div class="stat-box-value green" id="real-rate">0%</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-box-label">Inflation Cost</div>
-          <div class="stat-box-value red" id="inflation-cost">₹0</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-box-label">Purchasing Power Loss</div>
-          <div class="stat-box-value red" id="pp-loss">0%</div>
-        </div>
-      </div>
-      <div class="progress-section">
-        <div class="progress-header">
-          <span>Real value vs Nominal value</span>
-          <span id="real-pct">0%</span>
-        </div>
-        <div class="progress-bar-bg">
-          <div class="progress-bar-fill" id="progress-fill" style="width:50%"></div>
-        </div>
-        <div class="progress-legend">
-          <span><span class="legend-dot" style="background:var(--accent)"></span>Real (inflation-adj.)</span>
-          <span><span class="legend-dot" style="background:var(--danger)"></span>Lost to inflation</span>
-        </div>
-      </div>
-    </div>
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM — user just received value -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
   </div>
-
-  <!-- REAL RETURN BANNER -->
-  <div class="real-return-banner">
-    <div class="big" id="real-rate-display">+4.0%</div>
-    <div>Your <strong>real return rate</strong> (investment return minus inflation). This is your true wealth growth rate. To beat inflation meaningfully, aim for a real return above 4% per year.</div>
-  </div>
-
-  <!-- 3-WAY COMPARISON -->
-  <div class="comparison-grid">
-    <div class="compare-card invested">
-      <div class="compare-label">Money Under Mattress</div>
-      <div class="compare-value red" id="mattress-val">₹0</div>
-      <div class="compare-sub">real value if not invested</div>
-    </div>
-    <div class="compare-card nominal">
-      <div class="compare-label">FD at 7% (nominal)</div>
-      <div class="compare-value gold" id="fd-val">₹0</div>
-      <div class="compare-sub">real value after inflation</div>
-    </div>
-    <div class="compare-card real">
-      <div class="compare-label">Equity at your rate</div>
-      <div class="compare-value green" id="equity-val">₹0</div>
-      <div class="compare-sub">real value at your return rate</div>
-    </div>
-  </div>
-
-  <!-- CHART -->
   <div class="chart-section">
     <div class="chart-header">
       <div class="chart-title">Nominal vs Real Value Over Time</div>
@@ -242,6 +163,17 @@
   </div>
 
   <!-- FAQ -->
+
+  <!-- Ad Slot 4: Before FAQ — in-article contextual -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
   <div class="faq-section">
     <h2 class="faq-heading">Understanding Inflation & Real Returns</h2>
     <div class="faq-item">
@@ -264,9 +196,24 @@
       <div class="faq-q" onclick="toggleFaq(this)">How do I calculate future cost of an expense?<span class="arrow">+</span></div>
       <div class="faq-a">To find the future cost of any expense, use: Future Cost = Present Cost × (1 + Inflation Rate)^Years. If your monthly expenses are ₹50,000 today at 6% inflation, they'll be ₹50,000 × (1.06)^20 = ₹1,60,357/month in 20 years. This is critical for retirement planning — you must plan for inflated future expenses, not today's expenses.</div>
     </div>
-  </div>
+  
+
+<!-- Ad Slot 4: In-content (after FAQ) -->
+<div class="ad-slot ad-slot-content" id="ad-content">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-content','IN_CONTENT');});</script>
 
 </div>
+
+</div>
+
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
 
 <footer>
   <div class="footer-brand">Black Belt Code Labs</div>
@@ -394,5 +341,7 @@ document.addEventListener('DOMContentLoaded', calculate);
     <div style="color:var(--accent);font-size:20px;flex-shrink:0;">→</div>
   </a>
 </div>
+
+  <script src="../js/ads.js" defer></script>
 </body>
 </html>

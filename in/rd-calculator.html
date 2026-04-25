@@ -20,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 <meta property="og:title" content="RD Calculator 2026 – Recurring Deposit Returns">
 <meta property="og:description" content="Calculate recurring deposit maturity with RBI quarterly compounding formula. RD returns for all Indian banks.">
@@ -55,7 +56,24 @@
   <h1>RD Calculator —<br><em>Recurring Deposit Maturity Value</em></h1>
   <p class="subtitle">Calculate exactly how much your monthly Recurring Deposit will grow to. Get the precise maturity amount and total interest earned for any Indian bank RD.</p>
 </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 <div class="info-banner">RD uses quarterly compounding in India. Formula: M = R × [(1 + i)^n – 1] / (1 – (1 + i)^(–1/3)) where i = rate/400, n = quarters. This calculator uses the exact RBI-approved formula.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
 <div class="main-grid">
   <div class="card"><div class="card-title">RD Details</div>
     <div class="field"><div class="field-header"><span class="field-label">Monthly Deposit Amount</span><div class="field-value">₹<span id="val-monthly">5,000</span></div></div>
@@ -80,6 +98,13 @@
     </div>
   </div>
 </div>
+
+<!-- Ad Slot 3: Post-result (HIGHEST REVENUE SLOT) -->
+<div class="ad-slot ad-slot-result" id="ad-result">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-result','POST_RESULT');});</script>
+
 <div class="chart-section">
   <div class="chart-header"><div class="chart-title">RD Growth Over Time</div>
   <div class="chart-tabs"><button class="chart-tab active" id="tab-area" onclick="switchChart('area')">Growth</button><button class="chart-tab" id="tab-bar" onclick="switchChart('bar')">Breakdown</button></div></div>
@@ -88,6 +113,28 @@
 <div class="card mb-20"><div class="card-title">Month-by-Month RD Progress</div>
   <div class="table-wrap"><table><thead><tr><th>Month</th><th>Deposited (₹)</th><th>Interest Accrued (₹)</th><th>Balance (₹)</th></tr></thead><tbody id="year-table"></tbody></table></div>
 </div>
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
 <div class="faq-section">
   <h2 class="faq-heading">RD Calculator — Recurring Deposit Explained</h2>
   <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is a Recurring Deposit (RD)?<span class="arrow">+</span></div>
@@ -100,8 +147,23 @@
   <div class="faq-a">Yes. RD interest is fully taxable as "Income from Other Sources" at your applicable income tax slab rate. If annual interest exceeds ₹40,000 (₹50,000 for senior citizens), TDS at 10% is deducted by the bank. You must include RD interest in your ITR every year on an accrual basis (not just at maturity). Submit Form 15G/15H to avoid TDS if your total income is below the taxable limit. Unlike PPF or ELSS, RD has no tax exemption on interest.</div></div>
   <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I break an RD before maturity?<span class="arrow">+</span></div>
   <div class="faq-a">Yes, but with a penalty. Banks typically charge 0.5–1% penalty on the applicable interest rate for premature closure. For example, if your RD is at 7% for 2 years and you break it at 1 year, you'll receive interest at the 1-year RD rate minus 0.5–1%. Some banks allow RD premature closure without penalty after a minimum period. Post Office RD has stricter premature withdrawal rules — not allowed before 3 years (except for death of account holder). Always read the terms before opening an RD.</div></div>
+
+
+<!-- Ad Slot 4: In-content (after FAQ) -->
+<div class="ad-slot ad-slot-content" id="ad-content">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-content','IN_CONTENT');});</script>
+
 </div>
 </div>
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
+
 <footer>
   <div class="footer-brand">Black Belt Code Labs</div>
   <div class="trust-seal">🇮🇳 Made for India by Indians</div>
@@ -144,4 +206,6 @@ function calculate(){
 document.addEventListener('DOMContentLoaded',calculate);
 </script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":2,"name":"RD Calculator","item":"https://calcphi.com/in/rd-calculator.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is RD maturity amount calculated?","acceptedAnswer":{"@type":"Answer","text":"RD uses quarterly compounding: Maturity = P × (1 + r/4)^(4n) per instalment, summed for all instalments where P is monthly deposit, r is annual rate, and n is remaining tenure in years. Most Indian banks compound RD quarterly."}},{"@type":"Question","name":"RD vs FD — which is better?","acceptedAnswer":{"@type":"Answer","text":"FD is better if you have a lump sum to invest. RD is better for building savings gradually from monthly income. FD typically offers slightly higher returns than RD at the same tenor. Both are safe with similar tax treatment."}},{"@type":"Question","name":"Is RD interest taxable?","acceptedAnswer":{"@type":"Answer","text":"Yes. RD interest is taxable as income at your applicable slab rate. TDS is deducted at 10% if total interest across all RDs at a bank exceeds ₹40,000 per year. Submit Form 15G/15H if your income is below the taxable threshold."}}]}</script>
+
+  <script src="../js/ads.js" defer></script>
 </body></html>

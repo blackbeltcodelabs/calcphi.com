@@ -20,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 <style>
 .sr-badge{display:inline-block;padding:6px 18px;border-radius:100px;font-size:13px;font-weight:600;margin-bottom:16px;}
@@ -68,7 +69,24 @@
   <h1>Savings Rate Calculator —<br><em>The One Number That Rules All</em></h1>
   <p class="subtitle">Your savings rate is the single most powerful lever in personal finance. It determines how fast you build wealth and how soon you can achieve financial independence.</p>
 </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 <div class="info-banner">Savings Rate = (Income – Expenses) ÷ Income × 100. Even a 1% increase in savings rate meaningfully shortens your path to financial freedom.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
 
 <div class="main-grid">
   <div class="card"><div class="card-title">Your Monthly Finances</div>
@@ -109,11 +127,39 @@
   <div class="fire-card"><div class="fire-label">60% Savings</div><div class="fire-value" id="fire-60">— yrs</div><div class="fire-sub">to FIRE</div></div>
 </div>
 
+<!-- Ad Slot 3: Post-result (HIGHEST REVENUE SLOT) -->
+<div class="ad-slot ad-slot-result" id="ad-result">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-result','POST_RESULT');});</script>
+
 <div class="chart-section">
   <div class="chart-header"><div class="chart-title">Savings Growth Over 20 Years</div></div>
   <div class="chart-wrap"><canvas id="growthChart"></canvas></div>
 </div>
 
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
 <div class="faq-section">
   <h2 class="faq-heading">Savings Rate — Why It's the Most Important Number</h2>
   <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is a good savings rate in India?<span class="arrow">+</span></div>
@@ -124,8 +170,23 @@
   <div class="faq-a">The optimal savings priority order for Indians: (1) Emergency fund — 6 months expenses in liquid FD/savings account. (2) Employer EPF — contribute at least the statutory minimum; take any employer match offered. (3) 80C tax savings — ELSS/PPF up to ₹1.5 lakh. (4) Health insurance premium — non-negotiable protection. (5) Term life insurance — essential if you have dependents. (6) NPS for extra ₹50K deduction. (7) Remaining savings into diversified equity SIP. Follow this sequence before any discretionary spending.</div></div>
   <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I increase my savings rate?<span class="arrow">+</span></div>
   <div class="faq-a">Proven strategies to raise savings rate: (1) Pay yourself first — automate SIP on salary day before spending. (2) Track all expenses — awareness creates accountability. (3) Avoid lifestyle inflation — don't upgrade lifestyle every time salary increases. (4) Cut fixed costs — EMIs, subscriptions, rent all limit savings flexibility. (5) Create a no-spend challenge once a month. (6) The 50/30/20 rule: 50% needs, 30% wants, 20% minimum savings. Best lever: whenever you get a salary hike, save 100% of the increase for 6 months.</div></div>
+
+
+<!-- Ad Slot 4: In-content (after FAQ) -->
+<div class="ad-slot ad-slot-content" id="ad-content">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-content','IN_CONTENT');});</script>
+
 </div>
 </div>
+
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
 
 <footer>
   <div class="footer-brand">Black Belt Code Labs</div>
@@ -206,4 +267,6 @@ document.addEventListener('DOMContentLoaded', calculate);
     <div style="color:var(--accent);font-size:20px;flex-shrink:0;">→</div>
   </a>
 </div>
+
+  <script src="../js/ads.js" defer></script>
 </body></html>

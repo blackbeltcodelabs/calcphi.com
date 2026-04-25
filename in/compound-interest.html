@@ -27,6 +27,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 </head>
 <body>
@@ -37,7 +38,24 @@
   <h1>Compound Interest Calculator —<br><em>The Engine of Wealth Creation</em></h1>
   <p class="subtitle">Calculate exactly how your money grows through compounding. The most fundamental calculation in personal finance — see why small rate differences create massive wealth gaps over time.</p>
 </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 <div class="info-banner">Compound Interest Formula: A = P(1 + r/n)^(nt). At 12% annual rate compounded monthly, ₹1 lakh becomes ₹3.3 lakhs in 10 years and ₹11 lakhs in 20 years.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
 <div class="main-grid">
   <div class="card"><div class="card-title">Enter Details</div>
     <div class="field"><div class="field-header"><span class="field-label">Principal Amount</span><div class="field-value">₹<span id="val-p">1,00,000</span></div></div>
@@ -64,8 +82,37 @@
     </div>
   </div>
 </div>
+
+<!-- Ad Slot 3: Post-result (HIGHEST REVENUE SLOT) -->
+<div class="ad-slot ad-slot-result" id="ad-result">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-result','POST_RESULT');});</script>
+
 <div class="chart-section"><div class="chart-header"><div class="chart-title">Compound Growth Over Time</div></div><div class="chart-wrap"><canvas id="growthChart"></canvas></div></div>
 <div class="card mb-20"><div class="card-title">Year-by-Year Table</div><div class="table-wrap"><table><thead><tr><th>Year</th><th>Principal (₹)</th><th>Interest Earned (₹)</th><th>Total Value (₹)</th></tr></thead><tbody id="ci-tbl"></tbody></table></div></div>
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
 <div class="faq-section"><h2 class="faq-heading">Compound Interest — Key Questions</h2>
 <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the compound interest formula?<span class="arrow">+</span></div>
 <div class="faq-a">Compound Interest formula: A = P(1 + r/n)^(nt), where A = final amount, P = principal, r = annual interest rate (decimal), n = compounding frequency per year, t = time in years. CI = A - P. For ₹1 lakh at 12% monthly for 10 years: A = 1,00,000 × (1+0.12/12)^(12×10) = ₹3,30,039. Interest earned = ₹2,30,039.</div></div>
@@ -121,6 +168,13 @@ function calculate(){
 document.addEventListener('DOMContentLoaded',calculate);
 </script>
 </div>
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
+
 <footer><div class="footer-brand">Black Belt Code Labs</div>
   <div class="trust-seal">🇮🇳 Made for India by Indians</div><p>Results are indicative estimates only. Consult a qualified financial advisor before making investment decisions.</p><p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p></footer>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the compound interest formula?","acceptedAnswer":{"@type":"Answer","text":"A = P(1+r/n)^(nt), where P is principal, r is annual rate, n is compounding frequency, t is years. CI = A - P."}},{"@type":"Question","name":"Which is better compound or simple interest?","acceptedAnswer":{"@type":"Answer","text":"Compound interest earns significantly more over time. At 12% for 10 years on ₹1 lakh: Simple interest = ₹2.2L total, Compound monthly = ₹3.3L total."}}]}</script>
@@ -137,5 +191,7 @@ document.addEventListener('DOMContentLoaded',calculate);
     <div style="color:var(--accent);font-size:20px;flex-shrink:0;">→</div>
   </a>
 </div>
+
+  <script src="../js/ads.js" defer></script>
 </body>
 </html>

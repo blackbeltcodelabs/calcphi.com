@@ -20,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 <style>
 .ef-status{border-radius:var(--radius-sm);padding:18px 22px;margin-bottom:20px;display:flex;align-items:center;gap:14px;}
@@ -70,7 +71,24 @@
   <h1>Emergency Fund Calculator —<br><em>How Much Buffer Do You Need?</em></h1>
   <p class="subtitle">An emergency fund is the foundation of all personal finance. Calculate your exact target, see how long it will take to build, and find out where to keep it.</p>
 </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 <div class="info-banner">Rule of thumb: 3–6 months of expenses for salaried employees. 6–12 months for self-employed, freelancers, or single-income households. Build this before any investment.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
 
 <div class="main-grid">
   <div class="card"><div class="card-title">Your Monthly Expenses</div>
@@ -130,11 +148,39 @@
   </div>
 </div>
 
+<!-- Ad Slot 3: Post-result (HIGHEST REVENUE SLOT) -->
+<div class="ad-slot ad-slot-result" id="ad-result">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-result','POST_RESULT');});</script>
+
 <div class="chart-section">
   <div class="chart-header"><div class="chart-title">Emergency Fund Building Timeline</div></div>
   <div class="chart-wrap"><canvas id="growthChart"></canvas></div>
 </div>
 
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
 <div class="faq-section">
   <h2 class="faq-heading">Emergency Fund — Building Your Financial Shield</h2>
   <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How much emergency fund should I have in India?<span class="arrow">+</span></div>
@@ -145,8 +191,23 @@
   <div class="faq-a">Emergency fund always comes first. Investing without an emergency fund forces you to redeem investments at the worst time (market crashes coincide with economic slowdowns and job losses). The sequence: (1) Build ₹50,000–₹1 lakh starter emergency fund immediately. (2) Then start SIP for ELSS (tax saving). (3) While running SIP, simultaneously build emergency fund to target over 6–12 months. (4) Once emergency fund is complete, redirect that monthly saving to investments. Never skip step 1.</div></div>
   <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What counts as an emergency?<span class="arrow">+</span></div>
   <div class="faq-a">Legitimate emergencies for using your emergency fund: Job loss or income disruption. Medical emergency not covered by insurance. Critical home repair (water damage, electrical failure). Family emergency requiring travel. Car repair essential for work commute. NOT emergencies: Planned vacations. Festival shopping. Gadget upgrades. Investment opportunities. Sales on consumer goods. The discipline to only use the fund for real emergencies — and rebuild it immediately afterward — is what makes it effective. Create a separate "sinking fund" for planned large expenses.</div></div>
+
+
+<!-- Ad Slot 4: In-content (after FAQ) -->
+<div class="ad-slot ad-slot-content" id="ad-content">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-content','IN_CONTENT');});</script>
+
 </div>
 </div>
+
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
 
 <footer>
   <div class="footer-brand">Black Belt Code Labs</div>
@@ -230,4 +291,6 @@ document.addEventListener('DOMContentLoaded', calculate);
     <div style="color:var(--accent);font-size:20px;flex-shrink:0;">→</div>
   </a>
 </div>
+
+  <script src="../js/ads.js" defer></script>
 </body></html>

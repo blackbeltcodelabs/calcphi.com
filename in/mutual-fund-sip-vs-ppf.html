@@ -22,6 +22,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 </head>
 <body>
@@ -39,7 +40,24 @@
 <h1>SIP vs PPF Calculator —<br><em>Equity Returns vs Guaranteed Safety</em></h1>
 <p class="subtitle">PPF: 7.1% guaranteed, tax-free (EEE). SIP in equity: 12%+ potential, market-linked. Same ₹1.5L/year: PPF gives ₹40L in 15 years. SIP at 12% gives ₹63L. The gap widens over time.</p>
 </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 <div class="info-banner">PPF: 7.1% guaranteed, tax-free (EEE). SIP in equity: 12%+ potential, market-linked. Same ₹1.5L/year: PPF gives ₹40L in 15 years. SIP at 12% gives ₹63L. The gap widens over time.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
 <div class="main-grid">
 <div class="card"><div class="card-title">Enter Details</div>
 <div class="field"><div class="field-header"><span class="field-label">Amount</span><div class="field-value">₹<span id="v-a">150,000</span></div></div>
@@ -57,6 +75,28 @@
 <div class="stat-box"><div class="stat-box-label">Return %</div><div class="stat-box-value gold" id="s-c">0%</div></div>
 <div class="stat-box"><div class="stat-box-label">Rate</div><div class="stat-box-value" id="s-d">0%</div></div>
 </div></div></div>
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
 <div class="faq-section"><h2 class="faq-heading">Frequently Asked Questions</h2>
 <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">SIP vs PPF — which is better for long term?<span class="arrow">+</span></div><div class="faq-a">PPF wins for: risk-averse investors, guaranteed returns needed, short 5-7 year horizon, conservative retirement. SIP wins for: long 10+ year horizon, higher risk tolerance, wealth creation goal. For most investors: max PPF first (80C + safety), then SIP with remaining investable surplus.</div></div>
 <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is PPF return taxable?<span class="arrow">+</span></div><div class="faq-a">PPF is EEE — Exempt at contribution (80C), Exempt on interest, Exempt at maturity. Fully tax-free throughout. Mutual fund LTCG is taxed at 12.5% above ₹1.25L — so PPF has a tax advantage, but equity's higher returns still win over 10+ years in most scenarios.</div></div>
@@ -77,6 +117,13 @@ function calculate(){
 document.addEventListener('DOMContentLoaded',calculate);
 </script>
 </div>
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
+
 <footer>
 <div class="footer-brand">Black Belt Code Labs</div>
   <div class="trust-seal">🇮🇳 Made for India by Indians</div>
@@ -86,4 +133,6 @@ document.addEventListener('DOMContentLoaded',calculate);
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"SIP vs PPF — which is better for long term?","acceptedAnswer":{"@type":"Answer","text":"PPF wins for: risk-averse investors, guaranteed returns needed, short 5-7 year horizon, conservative retirement. SIP wins for: long 10+ year horizon, higher risk tolerance, wealth creation goal. For most investors: max PPF first (80C + safety), then SIP with remaining investable surplus."}},{"@type":"Question","name":"Is PPF return taxable?","acceptedAnswer":{"@type":"Answer","text":"PPF is EEE — Exempt at contribution (80C), Exempt on interest, Exempt at maturity. Fully tax-free throughout. Mutual fund LTCG is taxed at 12.5% above ₹1.25L — so PPF has a tax advantage, but equity's higher returns still win over 10+ years in most scenarios."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/"},{"@type":"ListItem","position":2,"name":"India","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":3,"name":"SIP vs PPF Calculator India 2026","item":"https://calcphi.com/in/mutual-fund-sip-vs-ppf.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"SIP vs PPF Calculator India 2026","url":"https://calcphi.com/in/mutual-fund-sip-vs-ppf.html","description":"Compare mutual fund SIP returns vs PPF at current 7.1% rate. See which builds more wealth over 15 years. SIP vs PPF calculator India 2026.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+
+  <script src="../js/ads.js" defer></script>
 </body></html>

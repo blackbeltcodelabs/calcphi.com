@@ -20,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 <meta property="og:title" content="FIRE Calculator 2026 – Financial Independence Number">
 <meta property="og:description" content="Find your FIRE number — the exact corpus to retire early and live off investment returns. 4% rule calculator.">
@@ -60,105 +61,41 @@
     <h1>FIRE Number Calculator —<br><em>Your Magic Retirement Target</em></h1>
     <p class="subtitle">Find the exact corpus you need to retire early and never work for money again. Based on the 4% safe withdrawal rule used by the FIRE community worldwide.</p>
   </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 
   <div class="info-banner">
     The FIRE Number is 25× your annual expenses (based on the 4% rule). Adjust your expenses, current savings, and return rate to see your personalized timeline.
   </div>
 
-  <div class="main-grid">
 
-    <!-- INPUTS -->
-    <div class="card">
-      <div class="card-title">Your FIRE Inputs</div>
 
-      <div class="field">
-        <div class="field-header">
-          <span class="field-label">Annual Expenses (today)</span>
-          <div class="field-value">₹<span id="val-expenses">6,00,000</span></div>
-        </div>
-        <input type="range" id="expenses" min="100000" max="5000000" step="50000" value="600000">
-        <div class="range-labels"><span>₹1L</span><span>₹50L</span></div>
-      </div>
+<!-- Ad Slot 3: Post-result (HIGHEST REVENUE SLOT) -->
+<div class="ad-slot ad-slot-result" id="ad-result">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-result','POST_RESULT');});</script>
 
-      <div class="field">
-        <div class="field-header">
-          <span class="field-label">Current Savings / Investments</span>
-          <div class="field-value">₹<span id="val-savings">10,00,000</span></div>
-        </div>
-        <input type="range" id="savings" min="0" max="50000000" step="100000" value="1000000">
-        <div class="range-labels"><span>₹0</span><span>₹5 Cr</span></div>
-      </div>
 
-      <div class="field">
-        <div class="field-header">
-          <span class="field-label">Monthly Savings / Investment</span>
-          <div class="field-value">₹<span id="val-monthly">30,000</span></div>
-        </div>
-        <input type="range" id="monthly" min="5000" max="500000" step="5000" value="30000">
-        <div class="range-labels"><span>₹5K</span><span>₹5L</span></div>
-      </div>
 
-      <div class="field">
-        <div class="field-header">
-          <span class="field-label">Expected Annual Return</span>
-          <div class="field-value"><span id="val-rate">10</span><span>% p.a.</span></div>
-        </div>
-        <input type="range" id="rate" min="4" max="20" step="0.5" value="10">
-        <div class="range-labels"><span>4%</span><span>20%</span></div>
-      </div>
-
-      <div class="field">
-        <div class="field-header">
-          <span class="field-label">Expected Inflation Rate</span>
-          <div class="field-value"><span id="val-inflation">6</span><span>% p.a.</span></div>
-        </div>
-        <input type="range" id="inflation" min="2" max="12" step="0.5" value="6">
-        <div class="range-labels"><span>2%</span><span>12%</span></div>
-      </div>
-    </div>
-
-    <!-- RESULTS -->
-    <div class="results-card">
-      <div class="corpus-display">
-        <div class="corpus-label">Your FIRE Number</div>
-        <div class="corpus-amount" id="fire-number">₹0</div>
-        <div class="corpus-sub">total corpus needed to retire</div>
-      </div>
-      <div class="stats-row">
-        <div class="stat-box">
-          <div class="stat-box-label">Years to FIRE</div>
-          <div class="stat-box-value gold" id="years-to-fire">—</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-box-label">Savings Rate</div>
-          <div class="stat-box-value green" id="savings-rate">—</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-box-label">Inflation-Adj. FIRE</div>
-          <div class="stat-box-value blue" id="fire-inflated">₹0</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-box-label">Monthly Withdrawal</div>
-          <div class="stat-box-value green" id="monthly-withdrawal">₹0</div>
-        </div>
-      </div>
-      <div class="progress-section">
-        <div class="progress-header">
-          <span>Progress toward FIRE</span>
-          <span id="fire-progress-pct">0% achieved</span>
-        </div>
-        <div class="progress-bar-bg">
-          <div class="progress-bar-fill" id="progress-fill" style="width:0%"></div>
-        </div>
-        <div class="progress-legend">
-          <span><span class="legend-dot" style="background:var(--accent2)"></span>Current savings</span>
-          <span><span class="legend-dot" style="background:var(--accent)"></span>FIRE target</span>
-        </div>
-      </div>
-    </div>
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM — user just received value -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
   </div>
-
-  <!-- CHART -->
   <div class="chart-section">
     <div class="chart-header">
       <div class="chart-title">Journey to Financial Independence</div>
@@ -184,6 +121,17 @@
   </div>
 
   <!-- FAQ -->
+
+  <!-- Ad Slot 4: Before FAQ — in-article contextual -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
   <div class="faq-section">
     <h2 class="faq-heading">Understanding FIRE & Financial Independence</h2>
     <div class="faq-item">
@@ -206,9 +154,24 @@
       <div class="faq-q" onclick="toggleFaq(this)">Should I account for inflation in my FIRE number?<span class="arrow">+</span></div>
       <div class="faq-a">Yes — always. ₹6 lakh/year today will cost far more in 15–20 years due to inflation. This calculator computes your inflation-adjusted FIRE number (the corpus needed at your future retirement date), not just your current expenses × 25. The 4% rule naturally accounts for inflation through annual withdrawals adjusting upward.</div>
     </div>
-  </div>
+  
+
+<!-- Ad Slot 4: In-content (after FAQ) -->
+<div class="ad-slot ad-slot-content" id="ad-content">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-content','IN_CONTENT');});</script>
 
 </div>
+
+</div>
+
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
 
 <footer>
   <div class="footer-brand">Black Belt Code Labs</div>
@@ -343,5 +306,7 @@ document.addEventListener('DOMContentLoaded', calculate);
     <div style="color:var(--accent);font-size:20px;flex-shrink:0;">→</div>
   </a>
 </div>
+
+  <script src="../js/ads.js" defer></script>
 </body>
 </html>

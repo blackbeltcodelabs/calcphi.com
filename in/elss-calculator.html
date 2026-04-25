@@ -20,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 <meta property="og:title" content="ELSS Calculator 2026 – Tax Saving Mutual Fund">
 <meta property="og:description" content="Calculate ELSS returns and 80C tax savings. See post-tax corpus from your tax-saving SIP investment.">
@@ -51,7 +52,24 @@
   <h1>ELSS Calculator —<br><em>Tax Saving + Wealth Creation</em></h1>
   <p class="subtitle">Calculate ELSS returns and tax savings. ELSS (Equity Linked Savings Scheme) offers 80C deduction up to ₹1.5 lakh with the shortest lock-in of any tax-saving instrument.</p>
 </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 <div class="info-banner">ELSS has the shortest lock-in (3 years) among all 80C instruments, offers equity-level returns, and only ₹1 lakh LTCG is tax-free per year. This calculator shows your post-tax real gain.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
 <div class="main-grid">
   <div class="card"><div class="card-title">ELSS Investment Details</div>
     <div class="field"><div class="field-header"><span class="field-label">Annual ELSS Investment</span><div class="field-value">₹<span id="val-annual">1,50,000</span></div></div>
@@ -78,6 +96,13 @@
     </div>
   </div>
 </div>
+
+<!-- Ad Slot 3: Post-result (HIGHEST REVENUE SLOT) -->
+<div class="ad-slot ad-slot-result" id="ad-result">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-result','POST_RESULT');});</script>
+
 <div class="chart-section">
   <div class="chart-header"><div class="chart-title">ELSS Corpus Growth</div>
   <div class="chart-tabs"><button class="chart-tab active" id="tab-area" onclick="switchChart('area')">Growth</button><button class="chart-tab" id="tab-bar" onclick="switchChart('bar')">Breakdown</button></div></div>
@@ -86,6 +111,28 @@
 <div class="card mb-20"><div class="card-title">Year-by-Year ELSS Growth</div>
   <div class="table-wrap"><table><thead><tr><th>Year</th><th>Invested (₹)</th><th>Returns (₹)</th><th>Corpus (₹)</th><th>Tax Saved (₹)</th></tr></thead><tbody id="year-table"></tbody></table></div>
 </div>
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
 <div class="faq-section">
   <h2 class="faq-heading">ELSS — Tax Saving Mutual Fund Explained</h2>
   <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is ELSS and how does it save tax?<span class="arrow">+</span></div>
@@ -98,8 +145,26 @@
   <div class="faq-a">Top ELSS funds based on consistent long-term performance (not a recommendation, verify before investing): Mirae Asset Tax Saver, Axis Long Term Equity, Quant Tax Plan, Canara Robeco Equity Tax Saver, DSP Tax Saver. Evaluate funds by 5-year and 10-year CAGR, consistency with benchmark, and expense ratio. Prefer direct plans over regular plans (0.5–1% lower expense ratio). Use an index-based ELSS if available in your platform for lower cost.</div></div>
   <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Should I invest lumpsum or SIP in ELSS?<span class="arrow">+</span></div>
   <div class="faq-a">SIP is recommended for ELSS for two reasons: (1) Rupee cost averaging reduces timing risk. (2) Each SIP instalment starts its own 3-year lock-in, giving you rolling liquidity (SIPs from 3 years ago are always unlocked). Lumpsum in ELSS makes sense in January–March (tax season) if you haven't invested earlier — but be aware the full lumpsum is locked for 3 years. For maximum flexibility and rupee cost averaging, monthly SIP is the preferred approach.</div></div>
+
+
+<!-- Ad Slot 4: In-content (after FAQ) -->
+<div class="ad-slot ad-slot-content" id="ad-content">
+  <span class="ad-label">Advertisement</span>
 </div>
-</div><footer>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-content','IN_CONTENT');});</script>
+
+</div>
+</div>
+  <!-- Ad Slot 5: Multiplex footer -->
+  <div class="ad-slot ad-multiplex">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_MULTIPLEX"
+         data-ad-format="autorelaxed"></ins>
+  </div>
+<footer>
   <div class="footer-brand">Black Belt Code Labs</div>
   <div class="trust-seal">🇮🇳 Made for India by Indians</div>
   <p>Results are indicative estimates only. Consult a SEBI-registered financial advisor before making investment decisions.</p>
@@ -139,4 +204,6 @@ document.addEventListener('DOMContentLoaded',calculate);
     <div style="color:var(--accent);font-size:20px;flex-shrink:0;">→</div>
   </a>
 </div>
+
+  <script src="../js/ads.js" defer></script>
 </body></html>

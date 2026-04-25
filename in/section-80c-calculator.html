@@ -27,6 +27,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 </head>
 <body>
@@ -37,7 +38,24 @@
   <h1>Section 80C Calculator —<br><em>Plan ₹1.5 Lakh Tax Saving</em></h1>
   <p class="subtitle">Section 80C allows up to ₹1.5 lakh deduction per year — saving up to ₹46,800 in tax at the 30% slab. Plan your 80C investments intelligently across ELSS, PPF, EPF, and LIC.</p>
 </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 <div class="info-banner">Section 80C limit: ₹1,50,000 per financial year. This is a shared limit across all 80C instruments combined. Invest in any combination — but the total deduction cap is ₹1.5 lakh.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
 
 <div class="card mb-20"><div class="card-title">Your 80C Investment Planner (FY 2025-26)</div>
   <div class="main-grid">
@@ -90,6 +108,28 @@
   </tbody></table></div>
 </div>
 
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
 <div class="faq-section"><h2 class="faq-heading">Section 80C — Key Questions</h2>
 <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the 80C limit for FY 2025-26?<span class="arrow">+</span></div>
 <div class="faq-a">Section 80C allows a maximum deduction of ₹1,50,000 per financial year. This is the combined limit across ALL 80C instruments — ELSS, PPF, EPF, LIC, NSC, tax-saving FD, home loan principal repayment, children's tuition fees, and Sukanya Samriddhi. You cannot claim more than ₹1.5 lakh even if you invest more. Invest up to the limit for maximum tax benefit.</div></div>
@@ -126,10 +166,19 @@ function update(){
 document.addEventListener('DOMContentLoaded',update);
 </script>
 </div>
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
+
 <footer><div class="footer-brand">Black Belt Code Labs</div>
   <div class="trust-seal">🇮🇳 Made for India by Indians</div><p>Results are indicative estimates only. Consult a qualified financial advisor before making investment decisions.</p><p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p></footer>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the Section 80C limit?","acceptedAnswer":{"@type":"Answer","text":"₹1,50,000 per financial year — shared across all 80C instruments combined. Only available under the old tax regime."}},{"@type":"Question","name":"Which 80C investment gives best returns?","acceptedAnswer":{"@type":"Answer","text":"ELSS gives best returns (12-15% CAGR) for long-term investors. PPF gives best guaranteed tax-free return (7.1% EEE status)."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/"},{"@type":"ListItem","position":2,"name":"India","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":3,"name":"Section 80C Calculator 2026","item":"https://calcphi.com/in/section-80c-calculator.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Section 80C Calculator 2026","url":"https://calcphi.com/in/section-80c-calculator.html","description":"Plan your Section 80C investments for FY 2025-26. See how much tax you save with ELSS, PPF, EPF, LIC, NSC. Free 80C tax saving calculator India 2026.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+
+  <script src="../js/ads.js" defer></script>
 </body>
 </html>

@@ -27,6 +27,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 </head>
 <body>
@@ -37,7 +38,24 @@
   <h1>LTCG Tax Calculator 2026 —<br><em>Calculate Your Capital Gains Tax</em></h1>
   <p class="subtitle">Calculate Long Term Capital Gains (LTCG) tax on equity, mutual funds, and property. Updated with FY 2025-26 Budget rates — 12.5% on equity LTCG above ₹1.25 lakh exemption.</p>
 </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 <div class="info-banner">Budget 2024 changed LTCG rates: Equity LTCG now taxed at 12.5% (was 10%) with ₹1.25 lakh exemption (was ₹1 lakh). Effective FY 2024-25 onwards. Property LTCG at 20% with indexation or 12.5% without indexation.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
 
 <div class="main-grid">
   <div class="card"><div class="card-title">Capital Gains Details</div>
@@ -71,6 +89,28 @@
   </div>
 </div>
 
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
 <div class="faq-section"><h2 class="faq-heading">LTCG Tax — Key Questions</h2>
 <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the LTCG tax rate on equity mutual funds in 2026?<span class="arrow">+</span></div>
 <div class="faq-a">After Budget 2024, LTCG on equity and equity mutual funds is taxed at 12.5% (increased from 10%) for gains above ₹1.25 lakh in a financial year (increased from ₹1 lakh). Holding period must be 12+ months to qualify for LTCG. Gains below ₹1.25 lakh are tax-free. These changes apply from FY 2024-25 onwards. STCG (held less than 12 months) is taxed at 20% (increased from 15%).</div></div>
@@ -126,6 +166,13 @@ function calculate(){
 document.addEventListener('DOMContentLoaded',calculate);
 </script>
 </div>
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
+
 <footer><div class="footer-brand">Black Belt Code Labs</div>
   <div class="trust-seal">🇮🇳 Made for India by Indians</div><p>Results are indicative estimates only. Consult a qualified financial advisor before making investment decisions.</p><p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p></footer>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the LTCG tax rate on equity in 2026?","acceptedAnswer":{"@type":"Answer","text":"After Budget 2024, LTCG on equity is 12.5% on gains above ₹1.25 lakh exemption per year (holding period 12+ months)."}},{"@type":"Question","name":"How to avoid LTCG tax in India?","acceptedAnswer":{"@type":"Answer","text":"Book gains up to ₹1.25 lakh annually (tax harvesting) and immediately reinvest. For property, use Section 54 to reinvest in another property."}}]}</script>
@@ -142,5 +189,7 @@ document.addEventListener('DOMContentLoaded',calculate);
     <div style="color:var(--accent);font-size:20px;flex-shrink:0;">→</div>
   </a>
 </div>
+
+  <script src="../js/ads.js" defer></script>
 </body>
 </html>

@@ -22,6 +22,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 </head>
 <body>
@@ -39,7 +40,24 @@
 <h1>Gold Investment Calculator —<br><em>SGB vs Physical vs ETF</em></h1>
 <p class="subtitle">Gold has delivered 11.5% CAGR in India over 20 years. Calculate returns on any gold investment and compare SGB (with 2.5% interest bonus), Gold ETF, and physical gold.</p>
 </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 <div class="info-banner">Sovereign Gold Bonds (SGB) are the best way to invest in gold in India — you get gold price appreciation PLUS 2.5% annual interest, with no storage or purity risk.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
 <div class="main-grid">
 <div class="card"><div class="card-title">Investment Details</div>
 <div style="display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
@@ -72,6 +90,28 @@
 <tr><td>Liquidity</td><td>Medium (5yr lock-in exit)</td><td class="positive">High (exchange traded)</td><td>Medium</td></tr>
 <tr><td>Minimum</td><td>1 gram</td><td>0.01 gram</td><td>1 gram</td></tr>
 </tbody></table></div></div>
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
 <div class="faq-section"><h2 class="faq-heading">Gold Investment — Key Questions</h2>
 <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Should I invest in SGB, Gold ETF, or physical gold?<span class="arrow">+</span></div>
 <div class="faq-a">For most investors, SGB is the best choice: it gives gold price returns PLUS 2.5% annual interest, has no storage cost, no purity risk, and if held to 8-year maturity, gains are completely tax-free. Gold ETF is better if you need high liquidity. Physical gold only makes sense for jewellery with emotional value — as an investment, it's the worst option due to making charges and storage costs.</div></div>
@@ -105,6 +145,13 @@ function calculate(){
 document.addEventListener('DOMContentLoaded',calculate);
 </script>
 </div>
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
+
 <footer>
 <div class="footer-brand">Black Belt Code Labs</div>
   <div class="trust-seal">🇮🇳 Made for India by Indians</div>
@@ -114,4 +161,6 @@ document.addEventListener('DOMContentLoaded',calculate);
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"SGB vs Gold ETF vs physical gold — which is best?","acceptedAnswer":{"@type":"Answer","text":"SGB is best: gold price + 2.5% interest + tax-free at 8-year maturity. Gold ETF is good for liquidity. Physical gold is the worst investment option due to making charges and storage."}},{"@type":"Question","name":"What has gold CAGR been in India?","acceptedAnswer":{"@type":"Answer","text":"Gold has delivered ~11-12% CAGR in India over the past 20 years — solid returns but equity has outperformed over the same period."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/"},{"@type":"ListItem","position":2,"name":"India","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":3,"name":"Gold Investment Returns Calculator India 2026","item":"https://calcphi.com/in/gold-investment.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Gold Investment Returns Calculator India 2026","url":"https://calcphi.com/in/gold-investment.html","description":"Calculate gold investment returns for any amount and period. Compare Sovereign Gold Bond vs physical gold vs Gold ETF. Historical gold CAGR analysis I","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+
+  <script src="../js/ads.js" defer></script>
 </body></html>

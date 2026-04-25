@@ -68,7 +68,24 @@
   <h1>Gratuity Calculator India 2026 —<br><em>Know What You're Owed</em></h1>
   <p class="subtitle">Calculate your exact gratuity amount as per the Payment of Gratuity Act 1972. Works for both employees covered under the Act and those not covered.</p>
 </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 <div class="info-banner">Gratuity is mandatory for employees who have completed 5+ years of continuous service. The formula differs for covered vs non-covered employees.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
 
 <div style="font-size:12px;color:var(--muted);margin-bottom:8px;">Employee Category:</div>
 <div class="covered-toggle">
@@ -116,6 +133,28 @@
   <tbody id="year-table"></tbody></table></div>
 </div>
 
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
 <div class="faq-section">
   <h2 class="faq-heading">Gratuity — Everything You Need to Know</h2>
   <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is gratuity and who is eligible?<span class="arrow">+</span></div>
@@ -130,8 +169,23 @@
   <div class="faq-a">Normally, gratuity is not payable if service is less than 5 years. However, two exceptions: (1) If employee dies or is permanently disabled — gratuity is paid even before 5 years, calculated proportionally. (2) Some companies have their own more generous gratuity policies that may pay before 5 years as a goodwill gesture. Check your appointment letter or HR policy for your company's specific terms.</div></div>
   <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Does 4 years 8 months count as 5 years for gratuity?<span class="arrow">+</span></div>
   <div class="faq-a">Yes. As per a Supreme Court ruling and the Payment of Gratuity Act, if an employee has completed 4 years and 240 days (approximately 4 years and 8 months), it is rounded up to 5 years for gratuity purposes. This makes them eligible for gratuity. Similarly, 10 years and 240+ days counts as 11 years.</div></div>
+
+
+<!-- Ad Slot 4: In-content (after FAQ) -->
+<div class="ad-slot ad-slot-content" id="ad-content">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-content','IN_CONTENT');});</script>
+
 </div>
 </div>
+
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
 
 <footer>
   <div class="footer-brand">Black Belt Code Labs</div>
@@ -144,6 +198,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the gratuity calculation formula in India?","acceptedAnswer":{"@type":"Answer","text":"For covered employees: Gratuity = (Last Drawn Salary × 15 × Years of Service) / 26. Last Drawn Salary includes Basic + DA only. For non-covered employees, the divisor is 30 instead of 26."}},{"@type":"Question","name":"Who is eligible for gratuity in India?","acceptedAnswer":{"@type":"Answer","text":"Employees who have completed 5 or more years of continuous service are eligible for gratuity under the Payment of Gratuity Act 1972. It applies to establishments with 10 or more employees."}},{"@type":"Question","name":"Is gratuity taxable?","acceptedAnswer":{"@type":"Answer","text":"For private sector employees, gratuity up to ₹20 lakhs is tax-exempt. Government employees receive fully tax-exempt gratuity. Gratuity above ₹20 lakhs is taxable at your applicable income tax slab."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":2,"name":"Gratuity Calculator","item":"https://calcphi.com/in/gratuity-calculator.html"}]}</script>
 
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 <script>
 let isCovered = true;
@@ -218,5 +273,7 @@ document.addEventListener('DOMContentLoaded', calculate);
     <div style="color:var(--accent);font-size:20px;flex-shrink:0;">→</div>
   </a>
 </div>
+
+  <script src="../js/ads.js" defer></script>
 </body>
 </html>

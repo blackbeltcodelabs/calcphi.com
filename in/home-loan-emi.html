@@ -20,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 <style>
 .rate-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
@@ -60,7 +61,24 @@
   <h1>Home Loan EMI Calculator —<br><em>Know Your Monthly Commitment</em></h1>
   <p class="subtitle">Calculate your exact home loan EMI, total interest payable, and year-by-year amortization. Compare different loan amounts and tenures instantly.</p>
 </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 <div class="info-banner">Quick-set current bank rates below. SBI: 8.50% · HDFC: 8.75% · ICICI: 8.75% · Axis: 8.75% · LIC HFL: 8.65% — rates as of 2026, verify with bank.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
 
 <div style="font-size:12px;color:var(--muted);margin-bottom:8px;">Quick-set rate:</div>
 <div class="rate-pills">
@@ -97,6 +115,12 @@
   </div>
 </div>
 
+<!-- Ad Slot 3: Post-result (HIGHEST REVENUE SLOT) -->
+<div class="ad-slot ad-slot-result" id="ad-result">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-result','POST_RESULT');});</script>
+
 <div class="chart-section">
   <div class="chart-header"><div class="chart-title">Loan Balance Over Time</div>
   <div class="chart-tabs"><button class="chart-tab active" id="tab-area" onclick="switchChart('area')">Balance</button><button class="chart-tab" id="tab-bar" onclick="switchChart('bar')">Principal vs Interest</button></div></div>
@@ -107,6 +131,28 @@
   <div class="table-wrap"><table><thead><tr><th>Year</th><th>Principal Paid (₹)</th><th>Interest Paid (₹)</th><th>Total Paid (₹)</th><th>Balance (₹)</th></tr></thead><tbody id="year-table"></tbody></table></div>
 </div>
 
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
 <div class="faq-section">
   <h2 class="faq-heading">Home Loan EMI — Key Questions Answered</h2>
   <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How is home loan EMI calculated?<span class="arrow">+</span></div>
@@ -119,8 +165,23 @@
   <div class="faq-a">On a ₹50 lakh home loan for 20 years: 8.75% → EMI ₹44,493, Total interest ₹56.8L. 8.50% → EMI ₹43,391, Total interest ₹54.1L. Saving from 0.25% rate cut: ₹1,102/month, ₹2.7 lakhs total. On a ₹1 Crore loan, this doubles to ₹5.4 lakhs saved. This is why negotiating your rate and comparing banks matters enormously. Even after loan disbursement, you can do a balance transfer to a lower-rate lender — often saving lakhs on large loans.</div></div>
   <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What are the tax benefits on home loan?<span class="arrow">+</span></div>
   <div class="faq-a">Home loan offers two tax deductions in the Old Tax Regime: (1) Section 24(b): Deduction on interest paid — up to ₹2 lakh per year for self-occupied property. No limit for let-out property. (2) Section 80C: Deduction on principal repaid — up to ₹1.5 lakh per year (shared with other 80C investments). For a ₹50L loan at 8.5%, annual interest in initial years is ₹4–5 lakhs, but only ₹2L is deductible. Note: These deductions are not available under the New Tax Regime. Calculate which regime saves more tax before choosing.</div></div>
+
+
+<!-- Ad Slot 4: In-content (after FAQ) -->
+<div class="ad-slot ad-slot-content" id="ad-content">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-content','IN_CONTENT');});</script>
+
 </div>
 </div>
+
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
 
 <footer>
   <div class="footer-brand">Black Belt Code Labs</div>
@@ -187,4 +248,6 @@ document.addEventListener('DOMContentLoaded', calculate);
     <div style="color:var(--accent);font-size:20px;flex-shrink:0;">→</div>
   </a>
 </div>
+
+  <script src="../js/ads.js" defer></script>
 </body></html>

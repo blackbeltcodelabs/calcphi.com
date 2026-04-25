@@ -22,6 +22,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 </head>
 <body>
@@ -39,7 +40,24 @@
 <h1>Home Loan Prepayment Calculator —<br><em>Save Lakhs in Interest</em></h1>
 <p class="subtitle">On ₹50L at 8.5% for 20 years, a ₹5L prepayment saves ₹14L in interest and reduces tenure by 3+ years.</p>
 </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 <div class="info-banner">On ₹50L at 8.5% for 20 years, a ₹5L prepayment saves ₹14L in interest and reduces tenure by 3+ years.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
 <div class="main-grid">
 <div class="card"><div class="card-title">Enter Details</div>
 <div class="field"><div class="field-header"><span class="field-label">Amount</span><div class="field-value">₹<span id="v-a">3,000,000</span></div></div>
@@ -57,6 +75,28 @@
 <div class="stat-box"><div class="stat-box-label">Return %</div><div class="stat-box-value gold" id="s-c">0%</div></div>
 <div class="stat-box"><div class="stat-box-label">Rate</div><div class="stat-box-value" id="s-d">0%</div></div>
 </div></div></div>
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
 <div class="faq-section"><h2 class="faq-heading">Frequently Asked Questions</h2>
 <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">When is the best time to prepay a home loan?<span class="arrow">+</span></div><div class="faq-a">The first 5 years are most impactful — when most of your EMI goes to interest. Prepaying in years 1-7 saves significantly more than prepaying in year 15-18. Floating rate home loans have zero prepayment penalty by RBI regulation.</div></div>
 <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Does prepayment affect Section 24 tax deduction?<span class="arrow">+</span></div><div class="faq-a">Yes — less loan outstanding means less interest paid, so your Section 24 deduction (up to ₹2L for self-occupied) reduces. At 30% slab, factor this in when calculating net savings from prepayment.</div></div>
@@ -77,6 +117,13 @@ function calculate(){
 document.addEventListener('DOMContentLoaded',calculate);
 </script>
 </div>
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
+
 <footer>
 <div class="footer-brand">Black Belt Code Labs</div>
   <div class="trust-seal">🇮🇳 Made for India by Indians</div>
@@ -86,4 +133,6 @@ document.addEventListener('DOMContentLoaded',calculate);
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"When is the best time to prepay a home loan?","acceptedAnswer":{"@type":"Answer","text":"The first 5 years are most impactful — when most of your EMI goes to interest. Prepaying in years 1-7 saves significantly more than prepaying in year 15-18. Floating rate home loans have zero prepayment penalty by RBI regulation."}},{"@type":"Question","name":"Does prepayment affect Section 24 tax deduction?","acceptedAnswer":{"@type":"Answer","text":"Yes — less loan outstanding means less interest paid, so your Section 24 deduction (up to ₹2L for self-occupied) reduces. At 30% slab, factor this in when calculating net savings from prepayment."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/"},{"@type":"ListItem","position":2,"name":"India","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":3,"name":"Home Loan Prepayment Calculator India 2026","item":"https://calcphi.com/in/home-loan-prepayment.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Home Loan Prepayment Calculator India 2026","url":"https://calcphi.com/in/home-loan-prepayment.html","description":"Calculate interest savings from home loan prepayment. See reduced tenure and total interest saved. Home loan prepayment calculator India 2026.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+
+  <script src="../js/ads.js" defer></script>
 </body></html>

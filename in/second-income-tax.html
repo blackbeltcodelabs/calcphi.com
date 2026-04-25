@@ -22,6 +22,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 </head>
 <body>
@@ -39,7 +40,24 @@
 <h1>Second Income Tax Calculator —<br><em>What Does Moonlighting Really Cost?</em></h1>
 <p class="subtitle">Every rupee of freelance income earned by a 30% slab salaried professional costs 31.2% in tax. Know your real hourly rate before taking on a second job.</p>
 </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 <div class="info-banner">Every rupee of freelance income earned by a 30% slab salaried professional costs 31.2% in tax. Know your real hourly rate before taking on a second job.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
 <div class="main-grid">
 <div class="card"><div class="card-title">Enter Details</div>
 <div class="field"><div class="field-header"><span class="field-label">Amount</span><div class="field-value">₹<span id="v-a">500,000</span></div></div>
@@ -57,6 +75,28 @@
 <div class="stat-box"><div class="stat-box-label">Return %</div><div class="stat-box-value gold" id="s-c">0%</div></div>
 <div class="stat-box"><div class="stat-box-label">Rate</div><div class="stat-box-value" id="s-d">0%</div></div>
 </div></div></div>
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
 <div class="faq-section"><h2 class="faq-heading">Frequently Asked Questions</h2>
 <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How is freelance income taxed for salaried employees?<span class="arrow">+</span></div><div class="faq-a">Freelance added to salary, taxed at marginal rate. In 30% bracket, all freelance taxed at 31.2%. Must pay advance tax if freelance tax liability exceeds ₹10,000/year. Business expenses can be deducted.</div></div>
 <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I use 44ADA for side income?<span class="arrow">+</span></div><div class="faq-a">Yes — professionals earning under ₹75L can declare 50% of gross receipts as income under 44ADA. No detailed books needed. ₹10L freelance income → ₹5L taxable → ₹1.56L tax at 30% vs ₹3.12L if fully taxed.</div></div>
@@ -77,6 +117,13 @@ function calculate(){
 document.addEventListener('DOMContentLoaded',calculate);
 </script>
 </div>
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
+
 <footer>
 <div class="footer-brand">Black Belt Code Labs</div>
   <div class="trust-seal">🇮🇳 Made for India by Indians</div>
@@ -86,4 +133,6 @@ document.addEventListener('DOMContentLoaded',calculate);
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is freelance income taxed for salaried employees?","acceptedAnswer":{"@type":"Answer","text":"Freelance added to salary, taxed at marginal rate. In 30% bracket, all freelance taxed at 31.2%. Must pay advance tax if freelance tax liability exceeds ₹10,000/year. Business expenses can be deducted."}},{"@type":"Question","name":"Can I use 44ADA for side income?","acceptedAnswer":{"@type":"Answer","text":"Yes — professionals earning under ₹75L can declare 50% of gross receipts as income under 44ADA. No detailed books needed. ₹10L freelance income → ₹5L taxable → ₹1.56L tax at 30% vs ₹3.12L if fully taxed."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/"},{"@type":"ListItem","position":2,"name":"India","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":3,"name":"Moonlighting Tax Calculator India 2026","item":"https://calcphi.com/in/second-income-tax.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Moonlighting Tax Calculator India 2026","url":"https://calcphi.com/in/second-income-tax.html","description":"Calculate income tax on freelance income while salaried. Net second income after tax, advance tax requirements India 2026.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+
+  <script src="../js/ads.js" defer></script>
 </body></html>

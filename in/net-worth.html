@@ -20,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 <style>
 .nw-section{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-bottom:16px;}
@@ -71,7 +72,24 @@
   <h1>Net Worth Calculator —<br><em>Know What You're Really Worth</em></h1>
   <p class="subtitle">Net worth is the foundation of personal finance. Enter your assets and liabilities to see your exact financial position — and track it growing every year.</p>
 </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 <div class="info-banner">Net Worth = Total Assets – Total Liabilities. Type amounts directly into any field. Your net worth updates instantly as you type.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
 
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px;">
 
@@ -130,11 +148,39 @@
   <div class="stat-box"><div class="stat-box-label">Liquid Net Worth</div><div class="stat-box-value blue" id="liquid-nw">₹0</div></div>
 </div>
 
+<!-- Ad Slot 3: Post-result (HIGHEST REVENUE SLOT) -->
+<div class="ad-slot ad-slot-result" id="ad-result">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-result','POST_RESULT');});</script>
+
 <div class="chart-section">
   <div class="chart-header"><div class="chart-title">Assets vs Liabilities Breakdown</div></div>
   <div class="chart-wrap"><canvas id="growthChart"></canvas></div>
 </div>
 
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
 <div class="faq-section">
   <h2 class="faq-heading">Net Worth — Your Financial Report Card</h2>
   <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is a good net worth at different ages in India?<span class="arrow">+</span></div>
@@ -145,8 +191,23 @@
   <div class="faq-a">Debt-to-Asset Ratio = Total Liabilities ÷ Total Assets × 100. Below 30% — excellent financial health. 30–50% — acceptable, manageable. 50–70% — concerning, focus on debt reduction. Above 70% — critical, debt may be unsustainable. For most Indians with a home loan, this ratio is naturally 40–60% in early career years and should decline as the loan is repaid and investments grow. Credit card debt should always be zero — it's the most expensive debt at 30–42% annual interest.</div></div>
   <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How often should I calculate my net worth?<span class="arrow">+</span></div>
   <div class="faq-a">Track net worth quarterly or at minimum annually (financial year end). The trend matters more than the absolute number. If net worth grows 10–15% per year, you're on a wealth-building track. Record your numbers in a spreadsheet each time — this gives you a 5–10 year history that reveals patterns, progress, and areas needing attention. Many personal finance apps (Kuvera, Coin, INDmoney) track this automatically if you link your accounts.</div></div>
+
+
+<!-- Ad Slot 4: In-content (after FAQ) -->
+<div class="ad-slot ad-slot-content" id="ad-content">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-content','IN_CONTENT');});</script>
+
 </div>
 </div>
+
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
 
 <footer>
   <div class="footer-brand">Black Belt Code Labs</div>
@@ -211,4 +272,6 @@ document.addEventListener('DOMContentLoaded', calculate);
     <div style="color:var(--accent);font-size:20px;flex-shrink:0;">→</div>
   </a>
 </div>
+
+  <script src="../js/ads.js" defer></script>
 </body></html>

@@ -20,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 <style>
 .breakup-table{width:100%;font-size:14px;border-collapse:collapse;}
@@ -67,7 +68,24 @@
   <h1>In-Hand Salary Calculator —<br><em>From CTC to Real Take-Home</em></h1>
   <p class="subtitle">Enter your CTC and see your exact monthly in-hand salary after PF deduction, income tax, and professional tax. No surprises on your first salary day.</p>
 </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 <div class="info-banner">CTC ≠ In-Hand Salary. Typical deductions: Employee PF (12% of basic), income tax TDS, professional tax (₹200/mo in most states), and sometimes health insurance premium.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
 
 <div class="main-grid">
   <div class="card"><div class="card-title">Your CTC Details</div>
@@ -120,11 +138,40 @@
   </table>
 </div>
 
+
+<!-- Ad Slot 3: Post-result (HIGHEST REVENUE SLOT) -->
+<div class="ad-slot ad-slot-result" id="ad-result">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-result','POST_RESULT');});</script>
+
 <div class="chart-section">
   <div class="chart-header"><div class="chart-title">CTC Composition</div></div>
   <div class="chart-wrap"><canvas id="growthChart"></canvas></div>
 </div>
 
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
 <div class="faq-section">
   <h2 class="faq-heading">CTC vs In-Hand Salary — Everything Explained</h2>
   <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the difference between CTC and in-hand salary?<span class="arrow">+</span></div>
@@ -137,8 +184,23 @@
   <div class="faq-a">Professional tax (PT) is a state government tax on employment income, deducted by the employer monthly. Not all states have PT — it's applicable in: Maharashtra (max ₹2,500/year), Karnataka (max ₹2,400/year), West Bengal, Andhra Pradesh, Telangana, Gujarat, Tamil Nadu, Kerala. States without PT include Delhi, Rajasthan, UP, and Haryana. The maximum PT deductible is ₹2,500/year nationally. PT paid is deductible from income for tax purposes.</div></div>
   <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is my entire CTC guaranteed as cash salary?<span class="arrow">+</span></div>
   <div class="faq-a">No. CTC includes several non-cash components that aren't paid directly: Employer PF contribution (12% of basic) — goes to your PF account, not salary. Gratuity (4.81% of basic) — accrues and paid only after 5 years of service. Medical insurance premium — paid to insurer, you get coverage. ESOP value, if included. The actual "fixed cash" salary component is usually 80–85% of CTC for most IT and corporate employees. Always ask HR for the specific salary breakup before accepting an offer.</div></div>
+
+
+<!-- Ad Slot 4: In-content (after FAQ) -->
+<div class="ad-slot ad-slot-content" id="ad-content">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-content','IN_CONTENT');});</script>
+
 </div>
 </div>
+
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
 
 <footer>
   <div class="footer-brand">Black Belt Code Labs</div>
@@ -226,4 +288,6 @@ document.addEventListener('DOMContentLoaded', calculate);
     <div style="color:var(--accent);font-size:20px;flex-shrink:0;">→</div>
   </a>
 </div>
+
+  <script src="../js/ads.js" defer></script>
 </body></html>

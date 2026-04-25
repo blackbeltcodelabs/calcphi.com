@@ -22,6 +22,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 </head>
 <body>
@@ -39,7 +40,24 @@
 <h1>Debt Snowball Calculator —<br><em>Your Path to Being Debt-Free</em></h1>
 <p class="subtitle">The debt snowball method: pay minimums on all debts, throw every extra rupee at the smallest debt first. Each debt cleared frees up cash to attack the next. Psychologically powerful.</p>
 </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 <div class="info-banner">The debt snowball method: pay minimums on all debts, throw every extra rupee at the smallest debt first. Each debt cleared frees up cash to attack the next. Psychologically powerful.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
 <div class="main-grid">
 <div class="card"><div class="card-title">Enter Your Details</div>
 <div class="field"><div class="field-header"><span class="field-label">Primary Amount / Value</span><div class="field-value">₹<span id="v-a">1,00,000</span></div></div>
@@ -60,6 +78,28 @@
 <div class="stat-box"><div class="stat-box-label">Return %</div><div class="stat-box-value gold" id="s-c">0%</div></div>
 <div class="stat-box"><div class="stat-box-label">CAGR</div><div class="stat-box-value" id="s-d">0%</div></div>
 </div></div></div>
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
 <div class="faq-section"><h2 class="faq-heading">Frequently Asked Questions</h2>
 <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How is this calculated?<span class="arrow">+</span></div>
 <div class="faq-a">This calculator uses standard financial formulas specific to the planning calculation. All computations run in your browser — no data is sent to any server. Results are indicative estimates based on the inputs provided and assumed growth rates.</div></div>
@@ -82,6 +122,13 @@ function calculate(){
 document.addEventListener('DOMContentLoaded',calculate);
 </script>
 </div>
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
+
 <footer>
 <div class="footer-brand">Black Belt Code Labs</div>
   <div class="trust-seal">🇮🇳 Made for India by Indians</div>
@@ -92,4 +139,6 @@ document.addEventListener('DOMContentLoaded',calculate);
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/"},{"@type":"ListItem","position":2,"name":"India","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":3,"name":"Debt Snowball Calculator India 2026","item":"https://calcphi.com/in/debt-snowball.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Debt Snowball Calculator India 2026","url":"https://calcphi.com/in/debt-snowball.html","description":"Calculate your debt snowball payoff plan. Enter multiple debts, get a month-by-month payoff schedule. See interest saved and debt-free date. Free Indi","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is this calculated?","acceptedAnswer":{"@type":"Answer","text":"This calculator uses standard financial formulas specific to the planning calculation. All computations run in your browser — no data is sent to any server. Results are indicative estimates based on the inputs provided and assumed growth rates."}},{"@type":"Question","name":"Are these results accurate?","acceptedAnswer":{"@type":"Answer","text":"Results are based on the inputs you provide and mathematical formulas. Past returns are not guaranteed. Consult a SEBI-registered investment advisor for personalised financial advice before making investment decisions."}}]}</script>
+
+  <script src="../js/ads.js" defer></script>
 </body></html>

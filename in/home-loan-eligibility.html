@@ -27,6 +27,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 </head>
 <body>
@@ -37,7 +38,24 @@
   <h1>Home Loan Eligibility Calculator —<br><em>How Much Can You Borrow?</em></h1>
   <p class="subtitle">Banks use FOIR (Fixed Obligation to Income Ratio) to determine home loan eligibility. Enter your income and existing EMIs to see the maximum loan amount you qualify for at current rates.</p>
 </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 <div class="info-banner">Banks allow EMI up to 40-50% of monthly income (FOIR). Maximum loan tenure is 30 years or until age 70 (whichever is earlier). Higher credit score = higher eligibility + lower rate.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
 
 <div class="main-grid">
   <div class="card"><div class="card-title">Your Income Details</div>
@@ -69,6 +87,28 @@
   </div>
 </div>
 
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
 <div class="faq-section"><h2 class="faq-heading">Home Loan Eligibility — Key Questions</h2>
 <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do banks calculate home loan eligibility?<span class="arrow">+</span></div>
 <div class="faq-a">Banks use FOIR (Fixed Obligation to Income Ratio) — they allow total EMIs (existing + new home loan EMI) to be 40–50% of your net monthly income. For example, if you earn ₹1 lakh/month and have no existing EMIs, maximum new EMI = ₹40,000–₹50,000. At 8.5% for 20 years, ₹40,000 EMI qualifies for approximately ₹41 lakhs loan. Your credit score, employment type, and age also factor into eligibility.</div></div>
@@ -116,6 +156,13 @@ function calculate(){
 document.addEventListener('DOMContentLoaded',calculate);
 </script>
 </div>
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
+
 <footer><div class="footer-brand">Black Belt Code Labs</div>
   <div class="trust-seal">🇮🇳 Made for India by Indians</div><p>Results are indicative estimates only. Consult a qualified financial advisor before making investment decisions.</p><p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p></footer>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do banks calculate home loan eligibility?","acceptedAnswer":{"@type":"Answer","text":"Banks use FOIR — total EMIs including new home loan EMI should not exceed 40-50% of net monthly income."}},{"@type":"Question","name":"What credit score is needed for home loan?","acceptedAnswer":{"@type":"Answer","text":"Most banks require CIBIL 750+ for best rates. Below 700 makes approval difficult."}}]}</script>
@@ -132,5 +179,7 @@ document.addEventListener('DOMContentLoaded',calculate);
     <div style="color:var(--accent);font-size:20px;flex-shrink:0;">→</div>
   </a>
 </div>
+
+  <script src="../js/ads.js" defer></script>
 </body>
 </html>

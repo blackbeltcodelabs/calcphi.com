@@ -22,6 +22,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 </head>
 <body>
@@ -39,7 +40,24 @@
 <h1>Bonus Tax Calculator —<br><em>Your Bonus After TDS</em></h1>
 <p class="subtitle">Bonus is added to annual income and taxed at your marginal slab. A ₹5L bonus for someone in the 30% bracket means only ₹3.44L reaches your bank after TDS.</p>
 </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 <div class="info-banner">Bonus is added to annual income and taxed at your marginal slab. A ₹5L bonus for someone in the 30% bracket means only ₹3.44L reaches your bank after TDS.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
 <div class="main-grid">
 <div class="card"><div class="card-title">Enter Details</div>
 <div class="field"><div class="field-header"><span class="field-label">Amount</span><div class="field-value">₹<span id="v-a">500,000</span></div></div>
@@ -57,6 +75,28 @@
 <div class="stat-box"><div class="stat-box-label">Return %</div><div class="stat-box-value gold" id="s-c">0%</div></div>
 <div class="stat-box"><div class="stat-box-label">Rate</div><div class="stat-box-value" id="s-d">0%</div></div>
 </div></div></div>
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
 <div class="faq-section"><h2 class="faq-heading">Frequently Asked Questions</h2>
 <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How is bonus taxed in India?<span class="arrow">+</span></div><div class="faq-a">Bonus is added to total annual taxable income and taxed at marginal slab rate. In 30% slab: 30% + 4% cess = 31.2% tax. Employers deduct TDS in the month bonus is paid, often at 30.9% regardless of your actual slab.</div></div>
 <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I reduce tax on my bonus?<span class="arrow">+</span></div><div class="faq-a">Yes — maximise 80C, NPS 80CCD(1B), HRA, and other deductions in the year you receive the bonus. If your salary already uses most deductions, consider timing bonus receipt toward year-end when remaining deduction space is clear.</div></div>
@@ -77,6 +117,13 @@ function calculate(){
 document.addEventListener('DOMContentLoaded',calculate);
 </script>
 </div>
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
+
 <footer>
 <div class="footer-brand">Black Belt Code Labs</div>
   <div class="trust-seal">🇮🇳 Made for India by Indians</div>
@@ -86,4 +133,6 @@ document.addEventListener('DOMContentLoaded',calculate);
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is bonus taxed in India?","acceptedAnswer":{"@type":"Answer","text":"Bonus is added to total annual taxable income and taxed at marginal slab rate. In 30% slab: 30% + 4% cess = 31.2% tax. Employers deduct TDS in the month bonus is paid, often at 30.9% regardless of your actual slab."}},{"@type":"Question","name":"Can I reduce tax on my bonus?","acceptedAnswer":{"@type":"Answer","text":"Yes — maximise 80C, NPS 80CCD(1B), HRA, and other deductions in the year you receive the bonus. If your salary already uses most deductions, consider timing bonus receipt toward year-end when remaining deduction space is clear."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/"},{"@type":"ListItem","position":2,"name":"India","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":3,"name":"Bonus Tax Calculator India 2026","item":"https://calcphi.com/in/bonus-calculator.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Bonus Tax Calculator India 2026","url":"https://calcphi.com/in/bonus-calculator.html","description":"Calculate income tax on your annual bonus. See effective tax rate and net bonus received after TDS deduction. Bonus and incentive tax calculator India","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+
+  <script src="../js/ads.js" defer></script>
 </body></html>

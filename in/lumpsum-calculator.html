@@ -20,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 <style>
 .compare-banner{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px 28px;margin-bottom:20px;}
@@ -66,7 +67,24 @@
     <h1>Lumpsum Calculator —<br><em>Grow One Investment Forever</em></h1>
     <p class="subtitle">See how a single one-time investment compounds over years. Compare lumpsum vs equivalent SIP to choose your optimal investment strategy.</p>
   </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
   <div class="info-banner">Enter your one-time investment amount, expected return rate, and duration. The calculator also shows what an equivalent monthly SIP would produce for comparison.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
   <div class="main-grid">
     <div class="card">
       <div class="card-title">Lumpsum Investment Details</div>
@@ -127,6 +145,24 @@
       <div class="compare-sub" id="sip-sub">same total amount, spread monthly</div>
     </div>
   </div>
+
+<!-- Ad Slot 3: Post-result (HIGHEST REVENUE SLOT) -->
+<div class="ad-slot ad-slot-result" id="ad-result">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-result','POST_RESULT');});</script>
+
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM — user just received value -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
   <div class="chart-section">
     <div class="chart-header">
       <div class="chart-title">Lumpsum Growth Over Time</div>
@@ -145,6 +181,17 @@
         <tbody id="year-table"></tbody>
       </table>
     </div>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ — in-article contextual -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
   </div>
   <div class="faq-section">
     <h2 class="faq-heading">Lumpsum Investment — Everything You Need to Know</h2>
@@ -168,8 +215,23 @@
       <div class="faq-q" onclick="toggleFaq(this)">What is the minimum lumpsum investment in mutual funds?<span class="arrow">+</span></div>
       <div class="faq-a">Most mutual funds allow lumpsum investments starting from ₹1,000 to ₹5,000 as the minimum. For direct plans (investing without a distributor), the minimum is typically the same. Some premium funds or PMS (Portfolio Management Services) require minimums of ₹50 lakhs. For retail investors, ₹5,000–₹10,000 is a practical minimum to make a meaningful lumpsum investment in a quality mutual fund.</div>
     </div>
-  </div>
+  
+
+<!-- Ad Slot 4: In-content (after FAQ) -->
+<div class="ad-slot ad-slot-content" id="ad-content">
+  <span class="ad-label">Advertisement</span>
 </div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-content','IN_CONTENT');});</script>
+
+</div>
+</div>
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
+
 <footer>
   <div class="footer-brand">Black Belt Code Labs</div>
   <div class="trust-seal">🇮🇳 Made for India by Indians</div>
@@ -245,5 +307,7 @@ function calculate(){
 document.addEventListener('DOMContentLoaded',calculate);
 </script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":2,"name":"Lumpsum Calculator","item":"https://calcphi.com/in/lumpsum-calculator.html"}]}</script>
+
+  <script src="../js/ads.js" defer></script>
 </body>
 </html>

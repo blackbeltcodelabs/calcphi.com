@@ -20,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 <style>
 .nps-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:20px;}
@@ -63,7 +64,24 @@
   <h1>NPS Calculator —<br><em>Your Retirement Pension Estimate</em></h1>
   <p class="subtitle">Calculate your National Pension Scheme corpus and monthly pension income at retirement. See the tax-free lumpsum and annuity breakdown.</p>
 </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 <div class="info-banner">NPS at maturity: 60% corpus can be withdrawn tax-free. 40% minimum must be used to buy annuity for monthly pension. This calculator models both components.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
 <div class="main-grid">
   <div class="card"><div class="card-title">Your NPS Details</div>
     <div class="field"><div class="field-header"><span class="field-label">Current Age</span><div class="field-value"><span id="val-age">30</span><span> yrs</span></div></div>
@@ -99,6 +117,12 @@
   <div class="nps-card"><div class="nps-card-label">80C + 80CCD(1B) Benefit</div><div class="nps-card-value" style="color:var(--accent2)" id="tax-benefit">₹0</div><div class="nps-card-sub">annual tax deduction</div></div>
 </div>
 
+<!-- Ad Slot 3: Post-result (HIGHEST REVENUE SLOT) -->
+<div class="ad-slot ad-slot-result" id="ad-result">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-result','POST_RESULT');});</script>
+
 <div class="chart-section">
   <div class="chart-header"><div class="chart-title">NPS Corpus Growth</div>
   <div class="chart-tabs"><button class="chart-tab active" id="tab-area" onclick="switchChart('area')">Growth</button><button class="chart-tab" id="tab-bar" onclick="switchChart('bar')">Breakdown</button></div></div>
@@ -109,6 +133,28 @@
   <div class="table-wrap"><table><thead><tr><th>Age</th><th>Total Invested (₹)</th><th>Returns (₹)</th><th>NPS Corpus (₹)</th><th>Growth %</th></tr></thead><tbody id="year-table"></tbody></table></div>
 </div>
 
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
 <div class="faq-section">
   <h2 class="faq-heading">NPS Calculator — All Your Questions Answered</h2>
   <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is NPS and how does it work?<span class="arrow">+</span></div>
@@ -121,8 +167,23 @@
   <div class="faq-a">Each serves a different purpose: NPS gives the highest extra tax benefit (₹50,000 via 80CCD(1B)) and equity growth potential but locks money till 60. PPF is completely tax-free (EEE) — contributions, interest, and maturity — but returns are fixed at 7.1% p.a. currently. ELSS gives 80C deduction with only 3-year lock-in and equity-level returns (12–15%). Ideal strategy: max out ELSS (₹1.5L in 80C) + add ₹50,000 to NPS for the extra deduction + EPF through employer. This maximises tax savings and growth.</div></div>
   <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I withdraw from NPS before 60?<span class="arrow">+</span></div>
   <div class="faq-a">Partial withdrawal from NPS Tier 1 is allowed after 3 years for specific purposes: higher education, marriage of children, home purchase, or critical illness treatment. You can withdraw up to 25% of your own contributions. Premature exit before 60 (after 10 years) requires 80% of corpus to go into annuity and only 20% can be withdrawn. NPS Tier 2 is a flexible, voluntary account with no lock-in — but Tier 2 contributions don't get tax benefits (except for government employees).</div></div>
+
+
+<!-- Ad Slot 4: In-content (after FAQ) -->
+<div class="ad-slot ad-slot-content" id="ad-content">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-content','IN_CONTENT');});</script>
+
 </div>
 </div>
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
+
 <footer>
   <div class="footer-brand">Black Belt Code Labs</div>
   <div class="trust-seal">🇮🇳 Made for India by Indians</div>
@@ -167,4 +228,6 @@ document.addEventListener('DOMContentLoaded',calculate);
     <div style="color:var(--accent);font-size:20px;flex-shrink:0;">→</div>
   </a>
 </div>
+
+  <script src="../js/ads.js" defer></script>
 </body></html>

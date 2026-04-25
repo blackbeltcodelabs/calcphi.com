@@ -77,7 +77,24 @@
   <h1>GST Calculator India 2026 —<br><em>Add or Remove GST Instantly</em></h1>
   <p class="subtitle">Calculate GST for any amount at any rate. Get the full CGST, SGST, and IGST breakdown in one click. Works for all GST slabs.</p>
 </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 <div class="info-banner">India has 4 GST rates: 5%, 12%, 18%, and 28%. Select Add GST to find the total price, or Remove GST to find the base price from an MRP.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
 
 <!-- MODE TOGGLE -->
 <div class="gst-mode">
@@ -162,6 +179,28 @@
   </tbody></table>
 </div>
 
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
 <div class="faq-section">
   <h2 class="faq-heading">GST Calculator — Frequently Asked Questions</h2>
   <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is GST and how does it work in India?<span class="arrow">+</span></div>
@@ -174,8 +213,23 @@
   <div class="faq-a">CGST (Central GST) and SGST (State GST) are both charged on intra-state (within same state) transactions, each at half the total GST rate. IGST (Integrated GST) is charged on inter-state transactions at the full GST rate and is later split between centre and state. For example, an 18% GST intra-state transaction has 9% CGST + 9% SGST. The same transaction inter-state has 18% IGST.</div></div>
   <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What GST rate applies to services in India?<span class="arrow">+</span></div>
   <div class="faq-a">Most services in India are taxed at 18% GST. Key exceptions: AC restaurants charge 5% (no ITC), non-AC restaurants 5%, hotels below ₹7,500/night 12%, hotels ₹7,500+ per night 18%. Financial services (banking, insurance) generally 18%. Health and education services are typically exempt. IT/software services: 18%. Consulting and professional services: 18%.</div></div>
+
+
+<!-- Ad Slot 4: In-content (after FAQ) -->
+<div class="ad-slot ad-slot-content" id="ad-content">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-content','IN_CONTENT');});</script>
+
 </div>
 </div>
+
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
 
 <footer>
   <div class="footer-brand">Black Belt Code Labs</div>
@@ -188,6 +242,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I add GST to a price?","acceptedAnswer":{"@type":"Answer","text":"Total Price = Base Price × (1 + GST Rate/100). For ₹10,000 at 18% GST: Total = ₹10,000 × 1.18 = ₹11,800. GST amount = ₹1,800."}},{"@type":"Question","name":"How do I remove GST from an MRP?","acceptedAnswer":{"@type":"Answer","text":"Base Price = MRP / (1 + GST Rate/100). For ₹11,800 MRP at 18%: Base = ₹11,800 / 1.18 = ₹10,000."}},{"@type":"Question","name":"What is the difference between CGST, SGST and IGST?","acceptedAnswer":{"@type":"Answer","text":"CGST and SGST are each half the GST rate for intra-state transactions. IGST at full rate applies to inter-state transactions."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":2,"name":"GST Calculator","item":"https://calcphi.com/in/gst-calculator.html"}]}</script>
 
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 <script>
 let mode = 'add', rate = 5, txn = 'intra';
@@ -281,5 +336,7 @@ document.addEventListener('DOMContentLoaded', calculate);
     <div style="color:var(--accent);font-size:20px;flex-shrink:0;">→</div>
   </a>
 </div>
+
+  <script src="../js/ads.js" defer></script>
 </body>
 </html>

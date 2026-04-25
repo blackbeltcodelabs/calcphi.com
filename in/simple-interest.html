@@ -27,6 +27,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 </head>
 <body>
@@ -37,7 +38,24 @@
   <h1>Simple Interest Calculator —<br><em>Fast, Clear, Accurate</em></h1>
   <p class="subtitle">Calculate Simple Interest instantly using SI = P × R × T / 100. See total amount payable and compare with compound interest to understand the real cost of borrowing.</p>
 </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 <div class="info-banner">Simple Interest = P × R × T / 100. Total Amount = Principal + SI. Used in personal loans, short-term borrowing, and basic financial planning.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
 <div class="main-grid">
   <div class="card"><div class="card-title">Enter Details</div>
     <div class="field"><div class="field-header"><span class="field-label">Principal Amount</span><div class="field-value">₹<span id="val-p">1,00,000</span></div></div>
@@ -65,6 +83,28 @@
 <div class="card mb-20"><div class="card-title">SI vs CI Comparison (at same rate)</div>
   <div class="table-wrap"><table><thead><tr><th>Year</th><th>Simple Interest (₹)</th><th>Total (SI) (₹)</th><th>Compound Interest (₹)</th><th>Total (CI) (₹)</th></tr></thead><tbody id="si-tbl"></tbody></table></div>
 </div>
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
 <div class="faq-section"><h2 class="faq-heading">Simple Interest — Key Questions</h2>
 <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the simple interest formula?<span class="arrow">+</span></div>
 <div class="faq-a">Simple Interest (SI) = P × R × T / 100, where P = Principal amount, R = Annual rate of interest (%), T = Time period in years. Total Amount = P + SI. Example: For ₹50,000 at 10% per year for 3 years: SI = 50,000 × 10 × 3 / 100 = ₹15,000. Total = ₹65,000.</div></div>
@@ -106,10 +146,19 @@ function calculate(){
 document.addEventListener('DOMContentLoaded',calculate);
 </script>
 </div>
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
+
 <footer><div class="footer-brand">Black Belt Code Labs</div>
   <div class="trust-seal">🇮🇳 Made for India by Indians</div><p>Results are indicative estimates only. Consult a qualified financial advisor before making investment decisions.</p><p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="privacy.html">Privacy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p></footer>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the simple interest formula?","acceptedAnswer":{"@type":"Answer","text":"SI = P × R × T / 100. Total Amount = P + SI. For ₹50,000 at 10% for 3 years: SI = ₹15,000, Total = ₹65,000."}},{"@type":"Question","name":"When is simple interest used?","acceptedAnswer":{"@type":"Answer","text":"Simple interest is used in personal loans, gold loans, agricultural loans, and short-term borrowing. Bank products like FDs and home loans use compound interest."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/"},{"@type":"ListItem","position":2,"name":"India","item":"https://calcphi.com/in/"},{"@type":"ListItem","position":3,"name":"Simple Interest Calculator India 2026","item":"https://calcphi.com/in/simple-interest.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Simple Interest Calculator India 2026","url":"https://calcphi.com/in/simple-interest.html","description":"Calculate simple interest for any principal, rate, and time period. Get SI amount, total amount, and compare with compound interest. Free India SI calculator.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+
+  <script src="../js/ads.js" defer></script>
 </body>
 </html>

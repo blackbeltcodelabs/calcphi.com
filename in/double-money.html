@@ -20,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 <style>
   /* Page-specific extras */
@@ -107,126 +108,41 @@
     <h1>How Long to<br><em>Double Your Money?</em></h1>
     <p class="subtitle">Enter your investment amount and interest rate. See exactly when your money doubles, triples, and quadruples — and compare different return rates side by side.</p>
   </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 
   <div class="info-banner">
     The Rule of 72 says: divide 72 by your annual return rate to get the approximate years to double. Our calculator uses the exact formula for precise results.
   </div>
 
-  <div class="main-grid">
 
-    <!-- INPUTS -->
-    <div class="card">
-      <div class="card-title">Your Investment Details</div>
 
-      <div class="field">
-        <div class="field-header">
-          <span class="field-label">Initial Investment Amount</span>
-          <div class="field-value">₹<span id="val-principal">1,00,000</span></div>
-        </div>
-        <input type="range" id="principal" min="10000" max="10000000" step="10000" value="100000">
-        <div class="range-labels"><span>₹10K</span><span>₹1 Cr</span></div>
-      </div>
+<!-- Ad Slot 3: Post-result (HIGHEST REVENUE SLOT) -->
+<div class="ad-slot ad-slot-result" id="ad-result">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-result','POST_RESULT');});</script>
 
-      <div class="field">
-        <div class="field-header">
-          <span class="field-label">Annual Return Rate</span>
-          <div class="field-value"><span id="val-rate">10</span><span>% p.a.</span></div>
-        </div>
-        <input type="range" id="rate" min="1" max="30" step="0.5" value="10">
-        <div class="range-labels"><span>1%</span><span>30%</span></div>
-      </div>
 
-      <div class="field">
-        <div class="field-header">
-          <span class="field-label">Compounding Frequency</span>
-          <div class="field-value"><span id="val-freq">Monthly</span></div>
-        </div>
-        <input type="range" id="freq" min="1" max="4" step="1" value="3">
-        <div class="range-labels"><span>Annual</span><span>Daily</span></div>
-      </div>
 
-      <div class="field">
-        <div class="field-header">
-          <span class="field-label">Show growth up to</span>
-          <div class="field-value"><span id="val-years">30</span><span> yrs</span></div>
-        </div>
-        <input type="range" id="years" min="5" max="50" step="1" value="30">
-        <div class="range-labels"><span>5 yrs</span><span>50 yrs</span></div>
-      </div>
-    </div>
-
-    <!-- RESULTS -->
-    <div class="results-card">
-      <div class="corpus-display">
-        <div class="corpus-label">Value After <span id="disp-years">30</span> Years</div>
-        <div class="corpus-amount" id="final-value">₹0</div>
-        <div class="corpus-sub">total value of your investment</div>
-      </div>
-      <div class="stats-row">
-        <div class="stat-box">
-          <div class="stat-box-label">Years to Double</div>
-          <div class="stat-box-value gold" id="yrs-double">—</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-box-label">Years to Triple</div>
-          <div class="stat-box-value green" id="yrs-triple">—</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-box-label">Rule of 72 Estimate</div>
-          <div class="stat-box-value blue" id="rule72-est">—</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-box-label">Total Return</div>
-          <div class="stat-box-value green" id="total-return">—</div>
-        </div>
-      </div>
-      <div class="progress-section">
-        <div class="progress-header">
-          <span>How many times your money grows</span>
-          <span id="growth-multiple">—</span>
-        </div>
-        <div class="progress-bar-bg">
-          <div class="progress-bar-fill" id="progress-fill" style="width:50%"></div>
-        </div>
-        <div class="progress-legend">
-          <span><span class="legend-dot" style="background:var(--accent2)"></span>Principal</span>
-          <span><span class="legend-dot" style="background:var(--accent)"></span>Returns</span>
-        </div>
-      </div>
-    </div>
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM — user just received value -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
   </div>
-
-  <!-- RULE 72 BOX -->
-  <div class="rule72-box">
-    <div class="rule72-formula">72 ÷ <span id="r72-rate">10</span>% = <span id="r72-result">7.2</span> years</div>
-    <div class="rule72-explain">The Rule of 72 gives a quick mental estimate for doubling time. Our calculator uses the exact compound interest formula for precise results — the difference is usually less than 0.5 years.</div>
-  </div>
-
-  <!-- MILESTONES -->
-  <div class="milestones-grid">
-    <div class="milestone-card">
-      <div class="milestone-label">2× Your Money</div>
-      <div class="milestone-value blue" id="m2x">—</div>
-      <div class="milestone-sub" id="m2x-val">—</div>
-    </div>
-    <div class="milestone-card">
-      <div class="milestone-label">3× Your Money</div>
-      <div class="milestone-value green" id="m3x">—</div>
-      <div class="milestone-sub" id="m3x-val">—</div>
-    </div>
-    <div class="milestone-card">
-      <div class="milestone-label">5× Your Money</div>
-      <div class="milestone-value gold" id="m5x">—</div>
-      <div class="milestone-sub" id="m5x-val">—</div>
-    </div>
-    <div class="milestone-card">
-      <div class="milestone-label">10× Your Money</div>
-      <div class="milestone-value red" id="m10x">—</div>
-      <div class="milestone-sub" id="m10x-val">—</div>
-    </div>
-  </div>
-
-  <!-- CHART -->
   <div class="chart-section">
     <div class="chart-header">
       <div class="chart-title">Investment Growth Over Time</div>
@@ -252,6 +168,17 @@
   </div>
 
   <!-- FAQ -->
+
+  <!-- Ad Slot 4: Before FAQ — in-article contextual -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
   <div class="faq-section">
     <h2 class="faq-heading">Understanding the Rule of 72 & Compound Growth</h2>
     <div class="faq-item">
@@ -274,9 +201,24 @@
       <div class="faq-q" onclick="toggleFaq(this)">Which investments double money fastest in India?<span class="arrow">+</span></div>
       <div class="faq-a">Based on historical data: Equity mutual funds (12–15% p.a.) double money in 5–6 years. PPF (7.1% p.a.) doubles in about 10 years. Fixed Deposits (6–7%) double in about 10–12 years. NPS (10–12% p.a.) doubles in 6–7 years. Real estate returns vary widely by location. Higher returns come with higher risk — diversification is key.</div>
     </div>
-  </div>
+  
+
+<!-- Ad Slot 4: In-content (after FAQ) -->
+<div class="ad-slot ad-slot-content" id="ad-content">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-content','IN_CONTENT');});</script>
 
 </div>
+
+</div>
+
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
 
 <footer>
   <div class="footer-brand">Black Belt Code Labs</div>
@@ -416,5 +358,7 @@ document.addEventListener('DOMContentLoaded', calculate);
     <div style="color:var(--accent);font-size:20px;flex-shrink:0;">→</div>
   </a>
 </div>
+
+  <script src="../js/ads.js" defer></script>
 </body>
 </html>

@@ -20,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 <meta property="og:title" content="SIP for 30 Years – Returns & Corpus Calculator">
 <meta property="og:description" content="30-year SIP calculator. See the full power of compounding over three decades of consistent investing.">
@@ -57,7 +58,24 @@
     <h1>SIP Calculator —<br><em>30 Year Returns</em></h1>
     <p class="subtitle">Find out exactly how much your monthly SIP will be worth after 30 years. Adjust your monthly amount and expected return to see the power of long-term compounding.</p>
   </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
   <div class="info-banner">Duration is fixed at 30 years (360 monthly instalments). Adjust your monthly SIP and return rate to see your projected corpus.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
   <div class="main-grid">
     <div class="card">
       <div class="card-title">Investment Details · 30 Year Plan</div>
@@ -104,6 +122,24 @@
       </div>
     </div>
   </div>
+
+<!-- Ad Slot 3: Post-result (HIGHEST REVENUE SLOT) -->
+<div class="ad-slot ad-slot-result" id="ad-result">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-result','POST_RESULT');});</script>
+
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM — user just received value -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
   <div class="chart-section">
     <div class="chart-header">
       <div class="chart-title">Year-by-Year Growth</div>
@@ -122,6 +158,17 @@
         <tbody id="comparison-table"></tbody>
       </table>
     </div>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ — in-article contextual -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
   </div>
   <div class="faq-section">
     <h2 class="faq-heading">SIP for 30 Years — Common Questions</h2>
@@ -145,8 +192,23 @@
       <div class="faq-q" onclick="toggleFaq(this)">What is the tax treatment of SIP returns after 30 years?<span class="arrow">+</span></div>
       <div class="faq-a">For equity mutual fund SIP redemptions after 1 year per instalment: Long-Term Capital Gains (LTCG) above ₹1 lakh annually are taxed at 10% without indexation. For a 30-year SIP, each monthly instalment becomes LTCG-eligible after 12 months. When you redeem after 30 years, each unit's gain is calculated from its purchase date. Tax harvesting — redeeming up to ₹1 lakh in gains annually — can significantly reduce the overall tax burden.</div>
     </div>
-  </div>
+  
+
+<!-- Ad Slot 4: In-content (after FAQ) -->
+<div class="ad-slot ad-slot-content" id="ad-content">
+  <span class="ad-label">Advertisement</span>
 </div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-content','IN_CONTENT');});</script>
+
+</div>
+</div>
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
+
 <footer>
   <div class="footer-brand">Black Belt Code Labs</div>
   <div class="trust-seal">🇮🇳 Made for India by Indians</div>
@@ -224,5 +286,7 @@ document.addEventListener('DOMContentLoaded',calculate);
     <div style="color:var(--accent);font-size:20px;flex-shrink:0;">→</div>
   </a>
 </div>
+
+  <script src="../js/ads.js" defer></script>
 </body>
 </html>

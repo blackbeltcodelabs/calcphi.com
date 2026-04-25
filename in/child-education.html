@@ -20,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="../js/ad-config.js" defer></script>
 <script src="../js/shared.js" defer></script>
 <style>
 .edu-presets{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
@@ -65,7 +66,24 @@
   <h1>Child Education Fund Calculator —<br><em>Be Ready for the Biggest Goal</em></h1>
   <p class="subtitle">Education costs in India are rising at 10–12% per year. Calculate exactly how much you need to save today to fund your child's higher education — fully and comfortably.</p>
 </header>
+  <!-- Ad Slot 1: Above fold — leaderboard/responsive — HIGHEST VISIBILITY -->
+  <div class="ad-slot ad-above-fold">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:90px;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_ABOVE"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 <div class="info-banner">Education inflation in India runs at 10–12% annually — far higher than general inflation. A ₹10 lakh course today costs ₹26 lakhs in 10 years. Plan early, invest aggressively.</div>
+
+<!-- Ad Slot 1: Above fold (below title, before calculator) -->
+<div class="ad-slot ad-slot-top" id="ad-top">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-top','TOP_BANNER');});</script>
+
 
 <div style="font-size:12px;color:var(--muted);margin-bottom:8px;">Quick-select education type:</div>
 <div class="edu-presets">
@@ -117,6 +135,12 @@
   <div class="edu-card"><div class="edu-card-label">Monthly SIP (8% returns)</div><div class="edu-card-value" style="color:var(--accent2)" id="sip-8">₹0</div><div style="font-size:11px;color:var(--soft);margin-top:4px;">conservative — debt/hybrid funds</div></div>
 </div>
 
+<!-- Ad Slot 3: Post-result (HIGHEST REVENUE SLOT) -->
+<div class="ad-slot ad-slot-result" id="ad-result">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-result','POST_RESULT');});</script>
+
 <div class="chart-section">
   <div class="chart-header"><div class="chart-title">Education Fund Growth vs Education Cost</div>
   <div class="chart-tabs"><button class="chart-tab active" id="tab-area" onclick="switchChart('area')">Growth</button><button class="chart-tab" id="tab-bar" onclick="switchChart('bar')">Breakdown</button></div></div>
@@ -127,6 +151,28 @@
   <div class="table-wrap"><table><thead><tr><th>Child's Age</th><th>SIP Invested (₹)</th><th>Corpus (₹)</th><th>Target Cost (₹)</th><th>% Funded</th></tr></thead><tbody id="year-table"></tbody></table></div>
 </div>
 
+
+  <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
+  <div class="ad-slot ad-after-results">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_RESULTS"
+         data-ad-format="rectangle"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Ad Slot 4: Before FAQ -->
+  <div class="ad-slot ad-pre-faq">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_CONTENT"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"></ins>
+  </div>
 <div class="faq-section">
   <h2 class="faq-heading">Child Education Planning — Critical Questions</h2>
   <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How much does engineering / MBBS / MBA cost in India today?<span class="arrow">+</span></div>
@@ -139,8 +185,23 @@
   <div class="faq-a">Both strategies have merit. Saving separately gives peace of mind, no interest burden, and complete flexibility. Education loans (8.5–11% interest) have Section 80E tax benefit — the entire interest is deductible for 8 years. For high-cost courses (IIMs, abroad), a combination works best: save 50–70% of projected cost via SIP, and take an education loan for the balance. The loan teaches financial responsibility and the 80E deduction reduces tax burden. Never borrow 100% — partial savings reduce the loan burden significantly.</div></div>
   <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is Sukanya Samriddhi Yojana and is it good for education?<span class="arrow">+</span></div>
   <div class="faq-a">Sukanya Samriddhi Yojana (SSY) is a government scheme exclusively for girl children below 10 years old. Current rate: 8.2% p.a. (Q1 FY26), fully tax-free (EEE status — investment deductible under 80C, interest tax-free, maturity tax-free). Maximum investment: ₹1.5 lakh/year. Maturity at 21 years from account opening; 50% withdrawal allowed at age 18 for education. SSY is an excellent, risk-free foundation for girl child education planning. Pair it with equity mutual fund SIP for the remaining corpus needed beyond SSY maturity value.</div></div>
+
+
+<!-- Ad Slot 4: In-content (after FAQ) -->
+<div class="ad-slot ad-slot-content" id="ad-content">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-content','IN_CONTENT');});</script>
+
 </div>
 </div>
+
+
+<!-- Ad Slot 5: Multiplex exit-intent -->
+<div class="ad-slot ad-slot-multiplex" id="ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){renderAd('ad-multiplex','MULTIPLEX');});</script>
 
 <footer>
   <div class="footer-brand">Black Belt Code Labs</div>
@@ -244,4 +305,6 @@ document.addEventListener('DOMContentLoaded', calculate);
     <div style="color:var(--accent);font-size:20px;flex-shrink:0;">→</div>
   </a>
 </div>
+
+  <script src="../js/ads.js" defer></script>
 </body></html>
