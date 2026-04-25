@@ -100,6 +100,16 @@
         <div class="range-labels"><span>1 yr</span><span>40 yrs</span></div>
       </div>
     </div>
+  <!-- Ad Slot 2: Mid-calculator — mobile only -->
+  <div class="ad-slot ad-mid-calc" style="display:none;">
+    <span class="ad-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block;"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+         data-ad-slot="SLOT_ID_MID_CALC"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
     <div class="results-card">
       <div class="corpus-display">
         <div class="corpus-label">Remaining Corpus After <span id="disp-years">20</span> Years</div>
@@ -169,8 +179,7 @@
          data-ad-slot="SLOT_ID_CONTENT"
          data-ad-layout="in-article"
          data-ad-format="fluid"></ins>
-  </div>
-  <div class="faq-section">
+  </div><div class="faq-section">
     <h2 class="faq-heading">SWP — Systematic Withdrawal Plan Questions</h2>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">What is SWP and how does it work?<span class="arrow">+</span></div>
@@ -281,5 +290,28 @@ document.addEventListener('DOMContentLoaded',calculate);
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is SWP and how does it work?","acceptedAnswer":{"@type":"Answer","text":"SWP (Systematic Withdrawal Plan) lets you withdraw a fixed amount from a mutual fund every month while the remaining corpus continues to earn returns. It is the retirement income equivalent of SIP — instead of investing monthly, you withdraw monthly."}},{"@type":"Question","name":"How long will my corpus last with SWP?","acceptedAnswer":{"@type":"Answer","text":"Corpus longevity depends on withdrawal amount relative to returns. If your withdrawal rate is below the annual return rate, corpus grows even while withdrawing. At 4% annual withdrawal on a 10% return portfolio, corpus can last indefinitely."}},{"@type":"Question","name":"Is SWP better than FD for retirement income?","acceptedAnswer":{"@type":"Answer","text":"For most retirees, SWP from a balanced or hybrid fund offers higher monthly income than FD at the same corpus, with better inflation protection over long periods. However, SWP from equity funds carries market risk that FD does not."}}]}</script>
 
   <script src="../js/ads.js" defer></script>
+
+<!-- Mobile Anchor Ad (sticky bottom) -->
+<div id="anchor-ad" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:8888;background:var(--surface);border-top:1px solid var(--border);padding:6px 16px 8px;text-align:center;">
+  <div style="font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:3px;">Advertisement</div>
+  <ins class="adsbygoogle anchor-adsbygoogle"
+       style="display:block;width:100%;max-width:320px;margin:0 auto;"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+       data-ad-slot="SLOT_ID_ANCHOR"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <button onclick="document.getElementById('anchor-ad').style.display='none';" 
+          style="position:absolute;top:6px;right:10px;background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;line-height:1;">×</button>
+</div>
+<script>
+// Show anchor ad on mobile only (< 768px)
+if (window.innerWidth < 768) {
+  var anchor = document.getElementById('anchor-ad');
+  // Show after 3 seconds or first scroll
+  setTimeout(function() {
+    if (anchor) anchor.style.display = 'block';
+  }, 3000);
+}
+</script>
 </body>
 </html>
