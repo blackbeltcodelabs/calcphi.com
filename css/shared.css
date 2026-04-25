@@ -565,3 +565,26 @@ ins.adsbygoogle[data-ad-status="unfilled"] {
   opacity: 0.4;
   margin-bottom: 2px;
 }
+
+/* Desktop sticky sidebar — ad-sidebar-wrap */
+@media (min-width: 1200px) {
+  .has-sidebar {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 28px;
+    align-items: start;
+  }
+  .has-sidebar .wrapper-content { min-width: 0; }
+  .ad-sidebar-wrap {
+    display: block !important;
+    position: sticky;
+    top: 76px;
+    width: 300px;
+  }
+  .ad-sidebar-sticky {
+    width: 300px;
+  }
+}
+@media (max-width: 1199px) {
+  .ad-sidebar-wrap { display: none !important; }
+}
