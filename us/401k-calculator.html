@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" data-region="US">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94D5DND9LS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-94D5DND9LS');</script>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>401(k) Calculator 2026 – With Employer Match | CalcPhi</title>
+<meta name="description" content="Free 401(k) calculator 2026. See your retirement balance with employer match, salary growth, and compound returns. Uses 2026 IRS contribution limit of $23,500.">
+<link rel="canonical" href="https://calcphi.com/us/401k-calculator.html">
+<link rel="alternate" hreflang="en-US" href="https://calcphi.com/us/401k-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://calcphi.com/us/401k-calculator.html">
+<meta property="og:title" content="401(k) Calculator 2026 – With Employer Match | CalcPhi">
+<meta property="og:description" content="Calculate your 401(k) balance at retirement with employer match. 2026 contribution limit $23,500.">
+<meta property="og:image" content="https://calcphi.com/og-image.jpg">
+<meta property="og:url" content="https://calcphi.com/us/401k-calculator.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="CalcPhi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="401(k) Calculator 2026 | CalcPhi">
+<meta name="twitter:description" content="Calculate your 401(k) with employer match. 2026 IRS limits.">
+<meta name="twitter:image" content="https://calcphi.com/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<style>
+.header{text-align:center;padding:40px 0 28px;}
+.header h1{font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:10px;}
+.header .subtitle{font-size:15px;color:var(--soft);max-width:540px;margin:0 auto;}
+.main-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:20px 0;}
+@media(max-width:700px){.main-grid{grid-template-columns:1fr;}}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;}
+.card-title{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:18px;}
+.field{margin-bottom:16px;}
+.field label{display:block;font-size:13px;font-weight:500;color:var(--text);margin-bottom:6px;}
+.field .hint{font-size:11px;color:var(--muted);margin-bottom:6px;}
+.field input[type=range]{width:100%;accent-color:var(--accent);}
+.val-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;}
+.val-badge{background:rgba(34,211,165,0.12);border:1px solid rgba(34,211,165,0.25);border-radius:6px;padding:3px 10px;font-size:13px;font-weight:600;color:var(--accent);}
+.results-card{background:linear-gradient(135deg,rgba(34,211,165,0.08),rgba(59,130,246,0.08));border:1px solid rgba(34,211,165,0.2);border-radius:var(--radius);padding:24px;}
+.corpus-display{text-align:center;padding:16px 0 20px;}
+.corpus-label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;}
+.corpus-value{font-family:'DM Serif Display',serif;font-size:clamp(2rem,5vw,3.2rem);color:var(--accent);font-weight:400;}
+.stats-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:16px 0;}
+.stat-box{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:12px;text-align:center;}
+.stat-box-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;}
+.stat-box-value{font-size:15px;font-weight:600;color:var(--text);}
+.stat-box-value.blue{color:#3b82f6;}
+.stat-box-value.green{color:var(--accent);}
+.progress-bar{height:8px;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden;margin:6px 0;}
+.progress-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--accent2),var(--accent));transition:width 0.3s;}
+.limit-note{font-size:11px;color:var(--muted);background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);border-radius:8px;padding:10px 14px;margin-top:12px;}
+.content-section{margin:32px 0;}
+.content-section h2{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--text);margin:28px 0 12px;}
+.content-section h3{font-size:1rem;font-weight:600;color:var(--text);margin:20px 0 8px;}
+.content-section p{font-size:15px;color:var(--soft);line-height:1.85;margin-bottom:14px;}
+.content-section ul,.content-section ol{padding-left:20px;margin-bottom:14px;}
+.content-section li{font-size:15px;color:var(--soft);line-height:1.8;margin-bottom:5px;}
+.content-section strong{color:var(--text);}
+.data-table{width:100%;border-collapse:collapse;font-size:13px;margin:14px 0;}
+.data-table th{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);padding:8px 12px;text-align:left;border-bottom:1px solid var(--border);}
+.data-table td{padding:9px 12px;color:var(--soft);border-bottom:1px solid rgba(255,255,255,0.04);}
+.data-table .hl{color:var(--accent);font-weight:600;}
+.trust-seal{display:inline-block;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.25);border-radius:100px;padding:5px 16px;font-size:12px;font-weight:600;color:#3b82f6;margin:8px 0 12px;letter-spacing:0.03em;}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-top:12px;}
+.related-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 14px;text-decoration:none;display:block;transition:border-color 0.2s;}
+.related-card:hover{border-color:var(--accent);}
+.related-card-name{font-size:13px;font-weight:600;color:var(--text);margin-bottom:2px;}
+.related-card-desc{font-size:11px;color:var(--muted);}
+.ad-slot{width:100%;display:flex;justify-content:center;align-items:center;margin:0 auto;overflow:hidden;position:relative;}
+.ad-slot::before{content:'Advertisement';position:absolute;top:0;left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);opacity:0.4;pointer-events:none;}
+.ad-above-fold{min-height:90px;margin:0 0 24px;background:transparent;}
+.ad-mid-calc{min-height:100px;margin:16px 0;display:none;}
+.ad-after-results{min-height:280px;margin:28px 0 8px;}
+.ad-pre-faq{min-height:90px;margin:8px 0 28px;}
+.ad-multiplex{min-height:400px;margin:24px 0 0;}
+.ad-label{display:block;font-size:9px;text-align:center;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;opacity:0.4;margin-bottom:2px;}
+</style>
+</head>
+<body>
+<nav><div class="nav-inner">
+  <a href="../index.html" class="nav-logo">Calc<span>Phi</span></a>
+  <div class="nav-links">
+    <a href="index.html">🇺🇸 All Calculators</a>
+    <a href="mortgage-calculator.html">Mortgage</a>
+    <a href="roth-ira-calculator.html">Roth IRA</a>
+    <a href="income-tax-calculator-usa.html">Tax</a>
+    <a href="../index.html" style="font-size:11px;opacity:0.5;padding:4px 8px;color:var(--muted);">🌍 Change Region</a>
+  </div>
+</div></nav>
+
+<div class="wrapper">
+<div class="header">
+  <div class="badge">🇺🇸 Built for America · 2026 IRS Limits · Free</div>
+  <h1>401(k) Calculator 2026</h1>
+  <p class="subtitle">Calculate your 401(k) balance at retirement with employer match, salary growth, and compound returns. Uses 2026 IRS contribution limit of $23,500.</p>
+</div>
+
+<!-- Ad Slot 1: Above fold -->
+<div class="ad-slot ad-above-fold">
+  <span class="ad-label">Advertisement</span>
+  <ins class="adsbygoogle" style="display:block;width:100%;min-height:90px;" data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX" data-ad-slot="SLOT_ID_ABOVE" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+
+<div class="main-grid">
+  <div class="card">
+    <div class="card-title">Your 401(k) Inputs</div>
+
+    <div class="field">
+      <div class="val-row"><label>Current Age</label><span class="val-badge" id="age-val">30</span></div>
+      <input type="range" id="age" min="20" max="65" value="30" oninput="calc()">
+    </div>
+    <div class="field">
+      <div class="val-row"><label>Retirement Age</label><span class="val-badge" id="ret-val">65</span></div>
+      <input type="range" id="ret" min="55" max="75" value="65" oninput="calc()">
+    </div>
+    <div class="field">
+      <div class="val-row"><label>Annual Salary</label><span class="val-badge" id="sal-val">$75,000</span></div>
+      <input type="range" id="sal" min="30000" max="400000" step="5000" value="75000" oninput="calc()">
+    </div>
+    <div class="field">
+      <div class="val-row"><label>Your Contribution (%)</label><span class="val-badge" id="contrib-val">10%</span></div>
+      <input type="range" id="contrib" min="1" max="23" value="10" oninput="calc()">
+      <div class="hint">2026 IRS limit: $23,500/year ($31,000 if 50+)</div>
+    </div>
+    <div class="field">
+      <div class="val-row"><label>Employer Match (%)</label><span class="val-badge" id="match-val">5%</span></div>
+      <input type="range" id="match" min="0" max="10" step="0.5" value="5" oninput="calc()">
+      <div class="hint">Typical: 3–6% of salary (always contribute at least this much)</div>
+    </div>
+    <div class="field">
+      <div class="val-row"><label>Current 401(k) Balance</label><span class="val-badge" id="bal-val">$25,000</span></div>
+      <input type="range" id="bal" min="0" max="500000" step="5000" value="25000" oninput="calc()">
+    </div>
+    <div class="field">
+      <div class="val-row"><label>Expected Annual Return</label><span class="val-badge" id="ret-rate-val">7%</span></div>
+      <input type="range" id="ret-rate" min="4" max="12" step="0.5" value="7" oninput="calc()">
+      <div class="hint">S&P 500 historical average: ~10% (7% inflation-adjusted)</div>
+    </div>
+    <div class="field">
+      <div class="val-row"><label>Annual Salary Growth</label><span class="val-badge" id="sal-growth-val">3%</span></div>
+      <input type="range" id="sal-growth" min="0" max="8" step="0.5" value="3" oninput="calc()">
+    </div>
+  </div>
+
+  <div>
+    <!-- Ad Slot 2: Mid calc (mobile only) -->
+    <div class="ad-slot ad-mid-calc" style="display:none;">
+      <span class="ad-label">Advertisement</span>
+      <ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX" data-ad-slot="SLOT_ID_MID_CALC" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    </div>
+
+    <div class="results-card">
+      <div class="card-title">Your 401(k) at Retirement</div>
+      <div class="corpus-display">
+        <div class="corpus-label">Estimated Balance at Age <span id="ret-age-label">65</span></div>
+        <div class="corpus-value" id="total-balance">$1,234,567</div>
+      </div>
+      <div class="stats-row">
+        <div class="stat-box">
+          <div class="stat-box-label">Your Contributions</div>
+          <div class="stat-box-value blue" id="your-contrib">$262,500</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-label">Employer Match</div>
+          <div class="stat-box-value blue" id="employer-contrib">$131,250</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-label">Investment Growth</div>
+          <div class="stat-box-value green" id="growth">$840,817</div>
+        </div>
+      </div>
+      <div class="stat-box" style="margin-top:8px;">
+        <div class="stat-box-label">Monthly Retirement Income (4% Rule)</div>
+        <div class="stat-box-value green" id="monthly-income" style="font-size:20px;">$4,115</div>
+      </div>
+      <div class="limit-note">
+        ⚡ <strong>2026 IRS Limits:</strong> Under 50: $23,500/year · Age 50+: $31,000/year (includes $7,500 catch-up). Always contribute at least enough to get the full employer match — it's free money.
+      </div>
+    </div>
+
+    <!-- Ad Slot 3: After results ★ HIGHEST RPM -->
+    <div class="ad-slot ad-after-results" style="margin-top:20px;">
+      <span class="ad-label">Advertisement</span>
+      <ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX" data-ad-slot="SLOT_ID_RESULTS" data-ad-format="rectangle" data-full-width-responsive="true"></ins>
+    </div>
+  </div>
+</div>
+
+<div class="content-section">
+<h2>What is a 401(k) and How Does It Work?</h2>
+<p>A 401(k) is an employer-sponsored retirement savings plan that lets you invest pre-tax dollars directly from your paycheck. The money grows tax-deferred — meaning you pay no income tax on contributions or investment gains until you withdraw in retirement. This makes it one of the most powerful wealth-building tools available to American workers.</p>
+<p>In 2026, the IRS allows employees to contribute up to <strong>$23,500 per year</strong> (up from $23,000 in 2024). Workers aged 50 or older can contribute an additional $7,500 "catch-up" contribution, bringing the total to $31,000. These limits apply to your contributions only — employer match does not count toward this limit.</p>
+
+<h3>How Employer Match Works — Free Money You Should Never Leave Behind</h3>
+<p>Most employers match a percentage of your contributions up to a certain limit. The most common structure is <strong>"100% match on the first 3–6% of salary."</strong> If your employer matches 100% on the first 5% and you earn $75,000, contributing 5% ($3,750) gets you another $3,750 from your employer — a 100% instant return on that money before any market gains.</p>
+<p>Not contributing enough to get the full match is the single most expensive financial mistake American workers make. At $75,000 salary with a 5% match, failing to contribute 5% costs you $3,750 per year — or approximately $450,000 in lost wealth over 30 years at 7% returns.</p>
+
+<h3>401(k) vs Roth 401(k) — Which is Better?</h3>
+<table class="data-table">
+  <thead><tr><th>Feature</th><th>Traditional 401(k)</th><th>Roth 401(k)</th></tr></thead>
+  <tbody>
+    <tr><td>Contributions</td><td>Pre-tax (reduces taxable income now)</td><td>After-tax (no deduction now)</td></tr>
+    <tr><td>Growth</td><td>Tax-deferred</td><td>Tax-free</td></tr>
+    <tr><td>Withdrawals in retirement</td><td class="hl">Taxed as ordinary income</td><td class="hl">Tax-free</td></tr>
+    <tr><td>Required Minimum Distributions</td><td>Yes, starting at age 73</td><td>No RMDs (starting 2024)</td></tr>
+    <tr><td>Best for</td><td>High income now, lower in retirement</td><td>Lower income now, higher in retirement</td></tr>
+  </tbody>
+</table>
+<p>General rule: choose Traditional 401(k) if you expect to be in a lower tax bracket in retirement. Choose Roth 401(k) if you expect to be in the same or higher bracket, or if you are early in your career.</p>
+
+<h2>401(k) Contribution Strategy — What the Numbers Say</h2>
+<table class="data-table">
+  <thead><tr><th>Salary</th><th>5% Contribution</th><th>10% Contribution</th><th>Max ($23,500)</th><th>Balance at 65 (7%)</th></tr></thead>
+  <tbody>
+    <tr><td>$50,000</td><td>$2,500/yr</td><td>$5,000/yr</td><td>$23,500/yr</td><td>$1.04M (at max)</td></tr>
+    <tr><td>$75,000</td><td>$3,750/yr</td><td>$7,500/yr</td><td>$23,500/yr</td><td>$1.04M (at max)</td></tr>
+    <tr><td>$100,000</td><td>$5,000/yr</td><td>$10,000/yr</td><td>$23,500/yr</td><td>$1.04M (at max)</td></tr>
+    <tr><td>$150,000</td><td>$7,500/yr</td><td>$15,000/yr</td><td class="hl">$23,500/yr</td><td class="hl">$1.04M (at max)</td></tr>
+  </tbody>
+</table>
+
+<h2>The 4% Rule — Converting Your Balance to Monthly Income</h2>
+<p>The 4% Rule states that you can withdraw 4% of your retirement portfolio in year one, then adjust for inflation annually, and your money will last at least 30 years with high probability. On a $1 million 401(k) balance, this equals $40,000/year or <strong>$3,333/month</strong> in sustainable income.</p>
+<p>This calculator uses the 4% rule to show your estimated monthly retirement income. Add your expected Social Security benefit (average $1,907/month in 2026) for a more complete picture of retirement income.</p>
+
+<h3>401(k) Early Withdrawal Penalty</h3>
+<p>Withdrawing from your 401(k) before age 59½ results in a 10% penalty plus ordinary income tax on the full amount. On a $50,000 early withdrawal in the 22% tax bracket, you'd pay $11,000 in tax + $5,000 penalty = you keep only $34,000. Early withdrawal is almost never the right financial decision.</p>
+</div>
+
+<!-- Ad Slot 4: Pre-FAQ -->
+<div class="ad-slot ad-pre-faq">
+  <span class="ad-label">Advertisement</span>
+  <ins class="adsbygoogle" style="display:block;text-align:center;" data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX" data-ad-slot="SLOT_ID_CONTENT" data-ad-layout="in-article" data-ad-format="fluid"></ins>
+</div>
+
+<div class="faq-section">
+  <h2 class="faq-heading">Frequently Asked Questions</h2>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How much should I contribute to my 401(k)?<span class="arrow">+</span></div>
+  <div class="faq-a">At minimum, contribute enough to get the full employer match — this is a 50–100% instant return. Beyond that, aim for 15% of gross income including employer match. If you cannot reach 15% immediately, increase by 1% each year when you get a raise. The best time to start maximizing contributions is always now.</div></div>
+
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What happens to my 401(k) if I leave my job?<span class="arrow">+</span></div>
+  <div class="faq-a">You have four options: leave it with your former employer (if allowed), roll it into your new employer's 401(k), roll it into an IRA (most flexible option), or cash it out (not recommended — triggers taxes and 10% penalty). Rolling to an IRA gives you the most investment choices and often lower fees.</div></div>
+
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the 2026 401(k) contribution limit?<span class="arrow">+</span></div>
+  <div class="faq-a">In 2026, the employee contribution limit is $23,500 per year. Workers aged 50 or older can make an additional catch-up contribution of $7,500, bringing their total to $31,000. These limits do not include employer contributions. The combined limit (employee + employer) is $70,000 in 2026.</div></div>
+
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">When can I withdraw from my 401(k) penalty-free?<span class="arrow">+</span></div>
+  <div class="faq-a">Penalty-free withdrawals begin at age 59½. Required Minimum Distributions (RMDs) must begin at age 73 for Traditional 401(k) accounts. Roth 401(k) accounts are not subject to RMDs starting in 2024. Some exceptions to the 10% early withdrawal penalty apply — including first-home purchase, disability, and certain medical expenses.</div></div>
+</div>
+
+<div class="card" style="margin-top:28px;">
+  <div class="card-title">Related US Calculators</div>
+  <div class="related-grid">
+    <a href="roth-ira-calculator.html" class="related-card"><div class="related-card-name">Roth IRA Calculator</div><div class="related-card-desc">Tax-free retirement growth</div></a>
+    <a href="social-security-calculator.html" class="related-card"><div class="related-card-name">Social Security</div><div class="related-card-desc">Estimate monthly benefit</div></a>
+    <a href="mortgage-calculator.html" class="related-card"><div class="related-card-name">Mortgage Calculator</div><div class="related-card-desc">Monthly payment + PITI</div></a>
+    <a href="income-tax-calculator-usa.html" class="related-card"><div class="related-card-name">Income Tax 2026</div><div class="related-card-desc">Federal tax calculator</div></a>
+    <a href="index.html" class="related-card"><div class="related-card-name">All US Calculators</div><div class="related-card-desc">50 free tools</div></a>
+  </div>
+</div>
+
+<!-- Ad Slot 5: Multiplex -->
+<div class="ad-slot ad-multiplex">
+  <span class="ad-label">Advertisement</span>
+  <ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX" data-ad-slot="SLOT_ID_MULTIPLEX" data-ad-format="autorelaxed"></ins>
+</div>
+
+</div>
+
+<footer style="text-align:center;padding:32px 20px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);margin-top:20px;">
+  <div style="font-family:'DM Sans',sans-serif;color:var(--muted);font-size:11px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;">Black Belt Code Labs</div>
+  <div class="trust-seal">🇺🇸 Made for America by Americans</div>
+  <p>Results are estimates for planning purposes only. Consult a certified financial planner (CFP) before making retirement decisions. Past market performance does not guarantee future returns.</p>
+  <p style="margin-top:8px;">© 2026 Black Belt Code Labs · <a href="../us/privacy.html" style="color:var(--accent);text-decoration:none;">Privacy</a> · <a href="../us/about.html" style="color:var(--accent);text-decoration:none;">About</a></p>
+</footer>
+
+<!-- Mobile Anchor Ad -->
+<div id="anchor-ad" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:8888;background:var(--surface);border-top:1px solid var(--border);padding:6px 16px 8px;text-align:center;">
+  <div style="font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:3px;">Advertisement</div>
+  <ins class="adsbygoogle anchor-adsbygoogle" style="display:block;width:100%;max-width:320px;margin:0 auto;" data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX" data-ad-slot="SLOT_ID_ANCHOR" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <button onclick="document.getElementById('anchor-ad').style.display='none';" style="position:absolute;top:6px;right:10px;background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;line-height:1;">×</button>
+</div>
+<script>if(window.innerWidth<768){setTimeout(function(){var a=document.getElementById('anchor-ad');if(a)a.style.display='block';},3000);}</script>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"401(k) Calculator 2026","description":"Calculate your 401(k) balance at retirement with employer match, salary growth, and compound returns. Uses 2026 IRS contribution limits.","url":"https://calcphi.com/us/401k-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Black Belt Code Labs"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much should I contribute to my 401(k)?","acceptedAnswer":{"@type":"Answer","text":"At minimum, contribute enough to get the full employer match. Beyond that, aim for 15% of gross income including employer match. Increase by 1% each year when you get a raise."}},{"@type":"Question","name":"What is the 2026 401(k) contribution limit?","acceptedAnswer":{"@type":"Answer","text":"In 2026, the employee contribution limit is $23,500 per year. Workers aged 50+ can contribute an additional $7,500 catch-up, bringing their total to $31,000."}},{"@type":"Question","name":"When can I withdraw from my 401(k) penalty-free?","acceptedAnswer":{"@type":"Answer","text":"Penalty-free withdrawals begin at age 59½. Required Minimum Distributions must begin at age 73 for Traditional 401(k) accounts."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CalcPhi","item":"https://calcphi.com/"},{"@type":"ListItem","position":2,"name":"United States","item":"https://calcphi.com/us/"},{"@type":"ListItem","position":3,"name":"401(k) Calculator","item":"https://calcphi.com/us/401k-calculator.html"}]}</script>
+
+<script>
+function fmt(n){if(n>=1000000)return'$'+( n/1000000).toFixed(2)+'M';if(n>=1000)return'$'+(n/1000).toFixed(0)+'K';return'$'+Math.round(n);}
+function fmtFull(n){return'$'+Math.round(n).toLocaleString();}
+
+function calc(){
+  const age=+document.getElementById('age').value;
+  const ret=+document.getElementById('ret').value;
+  const sal=+document.getElementById('sal').value;
+  const contrib=+document.getElementById('contrib').value/100;
+  const match=+document.getElementById('match').value/100;
+  const bal=+document.getElementById('bal').value;
+  const rate=+document.getElementById('ret-rate').value/100;
+  const salGrow=+document.getElementById('sal-growth').value/100;
+
+  document.getElementById('age-val').textContent=age;
+  document.getElementById('ret-val').textContent=ret;
+  document.getElementById('sal-val').textContent='$'+sal.toLocaleString();
+  document.getElementById('contrib-val').textContent=Math.round(contrib*100)+'%';
+  document.getElementById('match-val').textContent=Math.round(match*100)+'%';
+  document.getElementById('bal-val').textContent='$'+bal.toLocaleString();
+  document.getElementById('ret-rate-val').textContent=Math.round(rate*100)+'%';
+  document.getElementById('sal-growth-val').textContent=Math.round(salGrow*100)+'%';
+  document.getElementById('ret-age-label').textContent=ret;
+
+  const years=ret-age;
+  if(years<=0){return;}
+
+  const IRS_LIMIT=23500;
+  let balance=bal;
+  let yourTotal=0;
+  let empTotal=0;
+  let currentSal=sal;
+  const monthly=rate/12;
+
+  for(let y=0;y<years;y++){
+    const yourAnnual=Math.min(currentSal*contrib,IRS_LIMIT);
+    const empAnnual=Math.min(currentSal*match,currentSal*contrib);
+    const totalAnnual=yourAnnual+empAnnual;
+    yourTotal+=yourAnnual;
+    empTotal+=empAnnual;
+    // Monthly compounding
+    for(let m=0;m<12;m++){
+      balance=balance*(1+monthly)+totalAnnual/12;
+    }
+    currentSal*=(1+salGrow);
+  }
+
+  const growth=balance-yourTotal-empTotal-bal;
+  const monthly4pct=balance*0.04/12;
+
+  document.getElementById('total-balance').textContent=fmtFull(balance);
+  document.getElementById('your-contrib').textContent=fmtFull(yourTotal);
+  document.getElementById('employer-contrib').textContent=fmtFull(empTotal);
+  document.getElementById('growth').textContent=fmtFull(Math.max(0,growth));
+  document.getElementById('monthly-income').textContent=fmtFull(monthly4pct)+'/mo';
+}
+
+calc();
+</script>
+<script src="../js/shared.js" defer></script>
+<script src="../js/ads.js" defer></script>
+</body>
+</html>
