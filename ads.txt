@@ -1,1 +1,63 @@
+# ads.txt for CalcPhi.com
+# Authorised Digital Sellers file
+# Last updated: 2026-04-26
+# Publisher: Black Belt Code Labs
+#
+# HOW TO USE:
+# 1. Replace ca-pub-XXXXXXXXXXXXXXXXX with your real AdSense Publisher ID
+# 2. Upload this file to the ROOT of your domain: https://calcphi.com/ads.txt
+# 3. Google will crawl and verify it within 24-48 hours
+# 4. Check status at: https://adstransparency.google.com/
+#
+# IMPORTANT: This file MUST be at the root domain (calcphi.com/ads.txt)
+# NOT at calcphi.com/us/ads.txt or any subdirectory
+#
+# ── GOOGLE ADSENSE (Primary) ─────────────────────────────
 google.com, ca-pub-XXXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+
+# ── GOOGLE AD MANAGER (if you upgrade later) ─────────────
+# google.com, pub-XXXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+
+# ── COMMON HEADER BIDDING PARTNERS (add after AdSense approval) ──
+# These increase competition for your ad slots → higher RPM
+# Uncomment each line only AFTER signing up with that partner
+
+# AppNexus / Xandr
+# appnexus.com, XXXXXXX, DIRECT, f5879b08853b6f3a
+# appnexus.com, XXXXXXX, RESELLER, f5879b08853b6f3a
+
+# Rubicon Project / Magnite
+# rubiconproject.com, XXXXXX, DIRECT, 0bfd66d529a55807
+# rubiconproject.com, XXXXXX, RESELLER, 0bfd66d529a55807
+
+# Index Exchange
+# indexexchange.com, XXXXXX, DIRECT
+# indexexchange.com, XXXXXX, RESELLER
+
+# OpenX
+# openx.com, XXXXXXX, DIRECT, 6a698e965929070a
+# openx.com, XXXXXXX, RESELLER, 6a698e965929070a
+
+# PubMatic
+# pubmatic.com, XXXXXX, DIRECT, 5d62403b186f2ace
+# pubmatic.com, XXXXXX, RESELLER, 5d62403b186f2ace
+
+# TripleLift
+# triplelift.com, XXXXXX, DIRECT, 6c33edb13117fd86
+# triplelift.com, XXXXXX, RESELLER, 6c33edb13117fd86
+
+# Criteo
+# criteo.com, XXXXXXXXX, DIRECT
+# criteo.com, XXXXXXXXX, RESELLER
+
+# Sovrn / Lijit
+# lijit.com, XXXXXXX, DIRECT, fafdf38b16bf6b2b
+# lijit.com, XXXXXXX, RESELLER, fafdf38b16bf6b2b
+# sovrn.com, XXXXXXX, DIRECT
+# sovrn.com, XXXXXXX, RESELLER
+
+# Amazon Publisher Services
+# amazon-adsystem.com, XXXXXXXXXXXXXXXX, DIRECT
+
+# Media.net (good for finance content, high CPC)
+# media.net, XXXXXXX, DIRECT

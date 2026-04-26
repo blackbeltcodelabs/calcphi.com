@@ -6,23 +6,23 @@
     /au/ root is listed in sitemap-main.xml — do not duplicate it here.
 
     SUPERANNUATION:
-    <url><loc>https://calcphi.com/au/super-calculator.html</loc><lastmod>YYYY-MM-DD</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-    <url><loc>https://calcphi.com/au/super-contribution-calculator.html</loc><lastmod>YYYY-MM-DD</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://calcphi.com/australia/super-calculator.html</loc><lastmod>YYYY-MM-DD</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://calcphi.com/australia/super-contribution-calculator.html</loc><lastmod>YYYY-MM-DD</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
     TAX & INCOME:
-    <url><loc>https://calcphi.com/au/income-tax-calculator-australia.html</loc><lastmod>YYYY-MM-DD</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-    <url><loc>https://calcphi.com/au/salary-calculator-australia.html</loc><lastmod>YYYY-MM-DD</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-    <url><loc>https://calcphi.com/au/medicare-levy-calculator.html</loc><lastmod>YYYY-MM-DD</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://calcphi.com/au/hecs-repayment-calculator.html</loc><lastmod>YYYY-MM-DD</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://calcphi.com/australia/income-tax-calculator-australia.html</loc><lastmod>YYYY-MM-DD</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://calcphi.com/australia/salary-calculator-australia.html</loc><lastmod>YYYY-MM-DD</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://calcphi.com/australia/medicare-levy-calculator.html</loc><lastmod>YYYY-MM-DD</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://calcphi.com/australia/hecs-repayment-calculator.html</loc><lastmod>YYYY-MM-DD</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
 
     PROPERTY:
-    <url><loc>https://calcphi.com/au/stamp-duty-calculator-nsw.html</loc><lastmod>YYYY-MM-DD</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-    <url><loc>https://calcphi.com/au/stamp-duty-calculator-vic.html</loc><lastmod>YYYY-MM-DD</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-    <url><loc>https://calcphi.com/au/mortgage-calculator-australia.html</loc><lastmod>YYYY-MM-DD</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-    <url><loc>https://calcphi.com/au/negative-gearing-calculator.html</loc><lastmod>YYYY-MM-DD</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://calcphi.com/australia/stamp-duty-calculator-nsw.html</loc><lastmod>YYYY-MM-DD</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://calcphi.com/australia/stamp-duty-calculator-vic.html</loc><lastmod>YYYY-MM-DD</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://calcphi.com/australia/mortgage-calculator-australia.html</loc><lastmod>YYYY-MM-DD</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://calcphi.com/australia/negative-gearing-calculator.html</loc><lastmod>YYYY-MM-DD</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
     PENSION:
-    <url><loc>https://calcphi.com/au/age-pension-calculator.html</loc><lastmod>YYYY-MM-DD</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://calcphi.com/australia/age-pension-calculator.html</loc><lastmod>YYYY-MM-DD</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   -->
 
 </urlset>

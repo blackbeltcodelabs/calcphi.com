@@ -1,6 +1,6 @@
 # robots.txt — calcphi.com
 # Updated: April 2026
-# Architecture: Static HTML · Vercel CDN · Multi-region /in/ /au/
+# Architecture: Static HTML · Vercel CDN · Multi-region /india/ /australia/
 
 User-agent: *
 Allow: /
@@ -11,12 +11,12 @@ Disallow: /_vercel/
 Disallow: /api/
 
 # Explicitly allow all content regions
-Allow: /in/
-Allow: /au/
-Allow: /in/blog/
+Allow: /india/
+Allow: /australia/
+Allow: /india/blog/
 
-Allow: /us/
-Allow: /ca/
+Allow: /usa/
+Allow: /canada/
 # Allow: /uk/
 
 # Throttle high-crawl-budget SEO bots (protects Vercel bandwidth)
@@ -73,6 +73,6 @@ Disallow: /
 # Sitemap index — submit this URL to Google Search Console
 Sitemap: https://calcphi.com/sitemap_index.xml
 Sitemap: https://calcphi.com/sitemap-main.xml
-Sitemap: https://calcphi.com/sitemap-in-calculators.xml
-Sitemap: https://calcphi.com/sitemap-in-blog.xml
-Sitemap: https://calcphi.com/sitemap-au.xml
+Sitemap: https://calcphi.com/sitemap-india-calculators.xml
+Sitemap: https://calcphi.com/sitemap-india-blog.xml
+Sitemap: https://calcphi.com/sitemap-australia.xml

@@ -1,67 +1,349 @@
 {
   "version": 2,
   "name": "calcphi",
-  "alias": ["calcphi.com", "www.calcphi.com"],
+  "alias": [
+    "calcphi.com",
+    "www.calcphi.com"
+  ],
   "buildCommand": null,
   "outputDirectory": ".",
   "routes": [
-    { "src": "/", "dest": "/index.html" },
-    { "src": "/in/?$", "dest": "/in/index.html" },
-    { "src": "/au/?$", "dest": "/au/index.html" },
-    { "src": "/in/blog/?$", "dest": "/in/blog/index.html" },
-    { "src": "/sip-main\\.html", "status": 301, "headers": { "Location": "/in/sip-main.html" } },
-    { "src": "/fire-calculator\\.html", "status": 301, "headers": { "Location": "/in/fire-calculator.html" } },
-    { "src": "/emi-calculator\\.html", "status": 301, "headers": { "Location": "/in/emi-calculator.html" } },
-    { "src": "/income-tax\\.html", "status": 301, "headers": { "Location": "/in/income-tax.html" } },
-    { "src": "/ppf-calculator\\.html", "status": 301, "headers": { "Location": "/in/ppf-calculator.html" } },
-    { "src": "/nps-calculator\\.html", "status": 301, "headers": { "Location": "/in/nps-calculator.html" } },
-    { "src": "/fd-calculator\\.html", "status": 301, "headers": { "Location": "/in/fd-calculator.html" } },
-    { "src": "/rd-calculator\\.html", "status": 301, "headers": { "Location": "/in/rd-calculator.html" } },
-    { "src": "/gst-calculator\\.html", "status": 301, "headers": { "Location": "/in/gst-calculator.html" } },
-    { "src": "/gratuity-calculator\\.html", "status": 301, "headers": { "Location": "/in/gratuity-calculator.html" } },
-    { "src": "/target-sip\\.html", "status": 301, "headers": { "Location": "/in/target-sip.html" } },
-    { "src": "/1-crore-sip\\.html", "status": 301, "headers": { "Location": "/in/1-crore-sip.html" } },
-    { "src": "/home-loan-emi\\.html", "status": 301, "headers": { "Location": "/in/home-loan-emi.html" } },
-    { "src": "/in-hand-salary\\.html", "status": 301, "headers": { "Location": "/in/in-hand-salary.html" } },
-    { "src": "/lumpsum-calculator\\.html", "status": 301, "headers": { "Location": "/in/lumpsum-calculator.html" } },
-    { "src": "/lumpsum-vs-sip\\.html", "status": 301, "headers": { "Location": "/in/lumpsum-vs-sip.html" } },
-    { "src": "/step-up-sip\\.html", "status": 301, "headers": { "Location": "/in/step-up-sip.html" } },
-    { "src": "/swp-calculator\\.html", "status": 301, "headers": { "Location": "/in/swp-calculator.html" } },
-    { "src": "/elss-calculator\\.html", "status": 301, "headers": { "Location": "/in/elss-calculator.html" } },
-    { "src": "/savings-rate\\.html", "status": 301, "headers": { "Location": "/in/savings-rate.html" } },
-    { "src": "/net-worth\\.html", "status": 301, "headers": { "Location": "/in/net-worth.html" } },
-    { "src": "/emergency-fund\\.html", "status": 301, "headers": { "Location": "/in/emergency-fund.html" } },
-    { "src": "/child-education\\.html", "status": 301, "headers": { "Location": "/in/child-education.html" } },
-    { "src": "/retirement-gap\\.html", "status": 301, "headers": { "Location": "/in/retirement-gap.html" } },
-    { "src": "/inflation-calculator\\.html", "status": 301, "headers": { "Location": "/in/inflation-calculator.html" } },
-    { "src": "/cagr-calculator\\.html", "status": 301, "headers": { "Location": "/in/cagr-calculator.html" } },
-    { "src": "/double-money\\.html", "status": 301, "headers": { "Location": "/in/double-money.html" } },
-    { "src": "/mutual-fund-returns\\.html", "status": 301, "headers": { "Location": "/in/mutual-fund-returns.html" } },
-    { "src": "/about\\.html", "status": 301, "headers": { "Location": "/in/about.html" } },
-    { "src": "/contact\\.html", "status": 301, "headers": { "Location": "/in/contact.html" } },
-    { "src": "/privacy\\.html", "status": 301, "headers": { "Location": "/in/privacy.html" } },
-    { "src": "/sip-(.*)\\.html", "status": 301, "headers": { "Location": "/in/sip-$1.html" } },
-    { "src": "/blog/(.*)", "status": 301, "headers": { "Location": "/in/blog/$1" } },
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/india/?$",
+      "dest": "/india/index.html"
+    },
+    {
+      "src": "/australia/?$",
+      "dest": "/australia/index.html"
+    },
+    {
+      "src": "/india/blog/?$",
+      "dest": "/india/blog/index.html"
+    },
+    {
+      "src": "/sip-main\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/sip-main.html"
+      }
+    },
+    {
+      "src": "/fire-calculator\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/fire-calculator.html"
+      }
+    },
+    {
+      "src": "/emi-calculator\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/emi-calculator.html"
+      }
+    },
+    {
+      "src": "/income-tax\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/income-tax.html"
+      }
+    },
+    {
+      "src": "/ppf-calculator\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/ppf-calculator.html"
+      }
+    },
+    {
+      "src": "/nps-calculator\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/nps-calculator.html"
+      }
+    },
+    {
+      "src": "/fd-calculator\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/fd-calculator.html"
+      }
+    },
+    {
+      "src": "/rd-calculator\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/rd-calculator.html"
+      }
+    },
+    {
+      "src": "/gst-calculator\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/gst-calculator.html"
+      }
+    },
+    {
+      "src": "/gratuity-calculator\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/gratuity-calculator.html"
+      }
+    },
+    {
+      "src": "/target-sip\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/target-sip.html"
+      }
+    },
+    {
+      "src": "/1-crore-sip\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/1-crore-sip.html"
+      }
+    },
+    {
+      "src": "/home-loan-emi\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/home-loan-emi.html"
+      }
+    },
+    {
+      "src": "/in-hand-salary\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/in-hand-salary.html"
+      }
+    },
+    {
+      "src": "/lumpsum-calculator\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/lumpsum-calculator.html"
+      }
+    },
+    {
+      "src": "/lumpsum-vs-sip\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/lumpsum-vs-sip.html"
+      }
+    },
+    {
+      "src": "/step-up-sip\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/step-up-sip.html"
+      }
+    },
+    {
+      "src": "/swp-calculator\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/swp-calculator.html"
+      }
+    },
+    {
+      "src": "/elss-calculator\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/elss-calculator.html"
+      }
+    },
+    {
+      "src": "/savings-rate\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/savings-rate.html"
+      }
+    },
+    {
+      "src": "/net-worth\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/net-worth.html"
+      }
+    },
+    {
+      "src": "/emergency-fund\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/emergency-fund.html"
+      }
+    },
+    {
+      "src": "/child-education\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/child-education.html"
+      }
+    },
+    {
+      "src": "/retirement-gap\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/retirement-gap.html"
+      }
+    },
+    {
+      "src": "/inflation-calculator\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/inflation-calculator.html"
+      }
+    },
+    {
+      "src": "/cagr-calculator\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/cagr-calculator.html"
+      }
+    },
+    {
+      "src": "/double-money\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/double-money.html"
+      }
+    },
+    {
+      "src": "/mutual-fund-returns\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/mutual-fund-returns.html"
+      }
+    },
+    {
+      "src": "/about\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/about.html"
+      }
+    },
+    {
+      "src": "/contact\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/contact.html"
+      }
+    },
+    {
+      "src": "/privacy\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/privacy.html"
+      }
+    },
+    {
+      "src": "/sip-(.*)\\.html",
+      "status": 301,
+      "headers": {
+        "Location": "/india/sip-$1.html"
+      }
+    },
+    {
+      "src": "/blog/(.*)",
+      "status": 301,
+      "headers": {
+        "Location": "/india/blog/$1"
+      }
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "X-XSS-Protection", "value": "1; mode=block" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
       ]
     },
     {
       "source": "/css/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     },
     {
       "source": "/js/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/in",
+      "destination": "/india",
+      "permanent": true
+    },
+    {
+      "source": "/us",
+      "destination": "/usa",
+      "permanent": true
+    },
+    {
+      "source": "/ca",
+      "destination": "/canada",
+      "permanent": true
+    },
+    {
+      "source": "/au",
+      "destination": "/australia",
+      "permanent": true
+    },
+    {
+      "source": "/in/:path*",
+      "destination": "/india/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/us/:path*",
+      "destination": "/usa/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/ca/:path*",
+      "destination": "/canada/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/au/:path*",
+      "destination": "/australia/:path*",
+      "permanent": true
     }
   ]
 }

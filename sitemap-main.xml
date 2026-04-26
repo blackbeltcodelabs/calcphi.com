@@ -15,47 +15,47 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcphi.com/"/>
-    <xhtml:link rel="alternate" hreflang="en-IN"     href="https://calcphi.com/in/"/>
-    <xhtml:link rel="alternate" hreflang="en-AU"     href="https://calcphi.com/au/"/>
+    <xhtml:link rel="alternate" hreflang="en-IN"     href="https://calcphi.com/india/"/>
+    <xhtml:link rel="alternate" hreflang="en-AU"     href="https://calcphi.com/australia/"/>
   </url>
 
   <!-- India region root -->
   <url>
-    <loc>https://calcphi.com/in/</loc>
+    <loc>https://calcphi.com/india/</loc>
     <lastmod>2026-04-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcphi.com/"/>
-    <xhtml:link rel="alternate" hreflang="en-IN"     href="https://calcphi.com/in/"/>
-    <xhtml:link rel="alternate" hreflang="en-AU"     href="https://calcphi.com/au/"/>
+    <xhtml:link rel="alternate" hreflang="en-IN"     href="https://calcphi.com/india/"/>
+    <xhtml:link rel="alternate" hreflang="en-AU"     href="https://calcphi.com/australia/"/>
   </url>
 
   <!-- Australia region root -->
   <url>
-    <loc>https://calcphi.com/au/</loc>
+    <loc>https://calcphi.com/australia/</loc>
     <lastmod>2026-04-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calcphi.com/"/>
-    <xhtml:link rel="alternate" hreflang="en-IN"     href="https://calcphi.com/in/"/>
-    <xhtml:link rel="alternate" hreflang="en-AU"     href="https://calcphi.com/au/"/>
+    <xhtml:link rel="alternate" hreflang="en-IN"     href="https://calcphi.com/india/"/>
+    <xhtml:link rel="alternate" hreflang="en-AU"     href="https://calcphi.com/australia/"/>
   </url>
 
   <!-- India: informational pages -->
   <url>
-    <loc>https://calcphi.com/in/about.html</loc>
+    <loc>https://calcphi.com/india/about.html</loc>
     <lastmod>2026-04-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://calcphi.com/in/contact.html</loc>
+    <loc>https://calcphi.com/india/contact.html</loc>
     <lastmod>2026-04-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://calcphi.com/in/privacy.html</loc>
+    <loc>https://calcphi.com/india/privacy.html</loc>
     <lastmod>2026-04-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
@@ -63,7 +63,7 @@
 
   <!-- United States region root -->
   <url>
-    <loc>https://calcphi.com/us/</loc>
+    <loc>https://calcphi.com/usa/</loc>
     <lastmod>2026-04-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -71,7 +71,7 @@
 
   <!-- Canada region root -->
   <url>
-    <loc>https://calcphi.com/ca/</loc>
+    <loc>https://calcphi.com/canada/</loc>
     <lastmod>2026-04-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -79,7 +79,7 @@
 
   <!-- India: blog index -->
   <url>
-    <loc>https://calcphi.com/in/blog/</loc>
+    <loc>https://calcphi.com/india/blog/</loc>
     <lastmod>2026-04-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

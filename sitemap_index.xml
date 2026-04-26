@@ -1,35 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Core pages: homepage + region roots -->
+  <!-- Core pages: homepage + all region roots -->
   <sitemap>
     <loc>https://calcphi.com/sitemap-main.xml</loc>
-    <lastmod>2026-04-23</lastmod>
+    <lastmod>2026-04-26</lastmod>
   </sitemap>
 
-  <!-- India: all /in/ calculators -->
+  <!-- India: all /india/ calculators -->
   <sitemap>
-    <loc>https://calcphi.com/sitemap-in-calculators.xml</loc>
-    <lastmod>2026-04-23</lastmod>
+    <loc>https://calcphi.com/sitemap-india-calculators.xml</loc>
+    <lastmod>2026-04-26</lastmod>
   </sitemap>
 
   <!-- India: blog articles -->
   <sitemap>
-    <loc>https://calcphi.com/sitemap-in-blog.xml</loc>
-    <lastmod>2026-04-23</lastmod>
+    <loc>https://calcphi.com/sitemap-india-blog.xml</loc>
+    <lastmod>2026-04-26</lastmod>
   </sitemap>
 
-  <!-- Australia: all /au/ pages -->
+  <!-- United States: /usa/ pages -->
   <sitemap>
-    <loc>https://calcphi.com/sitemap-au.xml</loc>
-    <lastmod>2026-04-23</lastmod>
+    <loc>https://calcphi.com/sitemap-usa.xml</loc>
+    <lastmod>2026-04-26</lastmod>
   </sitemap>
 
-  <!--
-    FUTURE — uncomment when live:
-    <sitemap><loc>https://calcphi.com/sitemap-us.xml</loc></sitemap>
-    <sitemap><loc>https://calcphi.com/sitemap-ca.xml</loc></sitemap>
-    <sitemap><loc>https://calcphi.com/sitemap-uk.xml</loc></sitemap>
-  -->
+  <!-- Canada: /canada/ pages -->
+  <sitemap>
+    <loc>https://calcphi.com/sitemap-canada.xml</loc>
+    <lastmod>2026-04-26</lastmod>
+  </sitemap>
+
+  <!-- Australia: /australia/ pages -->
+  <sitemap>
+    <loc>https://calcphi.com/sitemap-australia.xml</loc>
+    <lastmod>2026-04-26</lastmod>
+  </sitemap>
 
 </sitemapindex>
