@@ -487,6 +487,27 @@
   color: var(--color-primary);
 }
 .market-flag { font-size: 2.5rem; }
+.market-card--disabled {
+  opacity: 0.45;
+  cursor: default;
+  pointer-events: none;
+  position: relative;
+}
+.market-card--disabled:hover {
+  border-color: var(--color-border);
+  background: transparent;
+  color: var(--color-text);
+}
+.coming-soon-badge {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  background: var(--color-border);
+  color: var(--color-text-secondary);
+  padding: 2px 8px;
+  border-radius: 999px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
 
 .trust-grid {
   display: grid;
