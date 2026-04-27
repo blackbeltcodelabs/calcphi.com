@@ -27,7 +27,7 @@ module.exports = function (eleventyConfig) {
     return "₹" + num.toLocaleString("en-IN", { maximumFractionDigits: 0 });
   });
 
-  // Date filter
+  // Date filter — human-readable (used in page content)
   eleventyConfig.addFilter("dateDisplay", function (dateStr) {
     const d = new Date(dateStr);
     return d.toLocaleDateString("en-IN", {
@@ -35,6 +35,12 @@ module.exports = function (eleventyConfig) {
       month: "long",
       day: "numeric",
     });
+  });
+
+  // Date filter — ISO 8601 YYYY-MM-DD (required by sitemap protocol)
+  eleventyConfig.addFilter("dateIso", function (dateStr) {
+    const d = new Date(dateStr);
+    return d.toISOString().split("T")[0];
   });
 
   // Collections: India calculators
