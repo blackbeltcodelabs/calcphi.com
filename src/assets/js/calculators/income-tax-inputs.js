@@ -1,0 +1,1 @@
+/* Income tax has custom inputs injected directly in the page template */

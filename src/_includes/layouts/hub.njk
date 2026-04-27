@@ -1,0 +1,40 @@
+---
+layout: layouts/base.njk
+---
+<main id="main-content">
+
+  <div class="hub-hero">
+    <div class="hub-hero__inner">
+      <h1>{{ h1 }}</h1>
+      {% if heroSubtitle %}<p>{{ heroSubtitle }}</p>{% endif %}
+    </div>
+  </div>
+
+  <div class="hub-content">
+    {{ content | safe }}
+
+    {% set categories = [] %}
+    {% for calc in india.calculators %}
+      {% if calc.category not in categories %}
+        {% set categories = categories.concat(calc.category) %}
+      {% endif %}
+    {% endfor %}
+
+    {% for cat in ["Mutual Funds", "Tax", "Government Schemes", "Banking", "Retirement", "Loans"] %}
+    <div class="hub-category">
+      <h2>{{ cat }}</h2>
+      <div class="hub-grid">
+        {% for calc in india.calculators %}
+        {% if calc.category == cat %}
+        <a href="{{ calc.url }}" class="related-card">
+          <h3>{{ calc.title }}</h3>
+          <p>{{ calc.shortDescription }}</p>
+        </a>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+</main>

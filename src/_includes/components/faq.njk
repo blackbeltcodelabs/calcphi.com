@@ -1,0 +1,19 @@
+{% if calcData.faq %}
+<section id="faq" class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+
+  {% for item in calcData.faq %}
+  <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+    <h3 class="visually-hidden" itemprop="name">{{ item.q }}</h3>
+    <button class="faq-question" aria-expanded="false">
+      {{ item.q }}
+    </button>
+    <div class="faq-a" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+      <div itemprop="text">
+        <p>{{ item.a }}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+{% endif %}

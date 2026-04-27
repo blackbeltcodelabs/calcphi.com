@@ -1,0 +1,26 @@
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="/" class="site-logo" aria-label="CalcPhi — Financial Calculators">
+      <img src="/assets/images/logo.svg" alt="CalcPhi" width="120" height="32" loading="eager">
+    </a>
+
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+      <ul>
+        {% for item in site.nav %}
+        <li>
+          <a href="{{ item.url }}"
+             {% if page.url.startsWith(item.url) and item.url != "/" %}aria-current="page"{% endif %}>
+            {{ item.label }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

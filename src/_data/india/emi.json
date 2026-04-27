@@ -1,0 +1,102 @@
+{
+  "id": "emi",
+  "defaults": { "principal": 3000000, "rate": 8.5, "tenure": 20 },
+  "inputs": [
+    { "id": "loan-amount", "label": "Loan Amount (₹)", "min": 10000, "max": 100000000, "step": 10000, "value": 3000000, "hint": "Enter total loan amount" },
+    { "id": "interest-rate", "label": "Annual Interest Rate (%)", "min": 1, "max": 30, "step": 0.05, "value": 8.5, "hint": "Current home loan rates: 8.25–9.5%" },
+    { "id": "loan-tenure", "label": "Loan Tenure (Years)", "min": 1, "max": 30, "step": 1, "value": 20, "hint": "Maximum home loan tenure: 30 years" }
+  ],
+  "outputs": [
+    { "id": "monthly-emi", "label": "Monthly EMI", "highlight": true },
+    { "id": "total-interest", "label": "Total Interest Payable" },
+    { "id": "total-payment", "label": "Total Payment" }
+  ],
+  "staticTable": {
+    "caption": "EMI comparison for ₹30 lakh home loan at 8.5% interest",
+    "headers": ["Loan Tenure", "Monthly EMI", "Total Interest", "Total Payment"],
+    "rows": [
+      ["10 years", "₹37,168", "₹14,60,160", "₹44,60,160"],
+      ["15 years", "₹29,535", "₹23,16,300", "₹53,16,300"],
+      ["20 years", "₹26,035", "₹32,48,400", "₹62,48,400"],
+      ["25 years", "₹24,189", "₹42,56,700", "₹72,56,700"],
+      ["30 years", "₹23,072", "₹53,05,920", "₹83,05,920"]
+    ]
+  },
+  "examples": [
+    {
+      "heading": "Home loan — ₹50 lakh at 8.75%, 20 years",
+      "text": "A ₹50 lakh home loan at 8.75% annual interest for 20 years results in a monthly EMI of approximately ₹44,107. Total interest paid over 20 years is approximately ₹55.86 lakhs — more than the principal itself. Increasing the EMI by ₹5,000/month can reduce the tenure by nearly 4 years."
+    },
+    {
+      "heading": "Car loan — ₹8 lakh at 9%, 5 years",
+      "text": "A ₹8 lakh car loan at 9% annual interest over 5 years gives a monthly EMI of approximately ₹16,603. Total interest paid is approximately ₹1.96 lakhs. Prepaying the loan in year 3 saves significant interest."
+    },
+    {
+      "heading": "Personal loan — ₹3 lakh at 14%, 3 years",
+      "text": "A ₹3 lakh personal loan at 14% for 36 months costs approximately ₹10,255/month. Total interest outgo is approximately ₹69,180. Personal loans are expensive — reserve them for genuine emergencies.",
+      "table": {
+        "headers": ["Loan Type", "Amount", "Rate", "Tenure", "Monthly EMI"],
+        "rows": [
+          ["Home Loan", "₹50,00,000", "8.75%", "20 years", "₹44,107"],
+          ["Car Loan", "₹8,00,000", "9%", "5 years", "₹16,603"],
+          ["Personal Loan", "₹3,00,000", "14%", "3 years", "₹10,255"]
+        ]
+      }
+    }
+  ],
+  "decisionGuide": [
+    {
+      "question": "What is a safe EMI-to-income ratio?",
+      "answer": "Keep your total EMI obligations below 40% of your monthly take-home salary. For a ₹1 lakh/month salary, this means total EMIs (home loan + car + personal) should not exceed ₹40,000/month. Lenders typically reject applications where the ratio exceeds 50%."
+    },
+    {
+      "question": "Should you choose a longer or shorter loan tenure?",
+      "answer": "Longer tenure reduces monthly EMI but dramatically increases total interest paid. A 20-year home loan pays nearly 2x the principal in interest. Choose the shortest tenure your cash flow can comfortably support, and make prepayments whenever possible."
+    },
+    {
+      "question": "When does a balance transfer make sense?",
+      "answer": "A home loan balance transfer is worth considering if the interest rate difference is at least 0.5% and you have more than 10 years of tenure remaining. The savings from the lower rate must outweigh processing fees (typically 0.5–1% of outstanding loan)."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How is EMI calculated for a home loan?",
+      "a": "EMI = P × r × (1+r)^n / ((1+r)^n − 1), where P is the loan principal, r is the monthly interest rate (annual rate ÷ 12 ÷ 100), and n is the total number of monthly instalments. This formula gives the fixed monthly payment that amortises the loan completely over the tenure."
+    },
+    {
+      "q": "What is the current home loan interest rate in India in 2026?",
+      "a": "As of 2026, home loan interest rates in India range from 8.25% to 9.5% per annum for salaried borrowers with good credit scores. Rates vary by lender, loan amount, tenure, and credit profile. Public sector banks like SBI and Bank of Baroda tend to offer lower rates than private banks."
+    },
+    {
+      "q": "What happens if I pay one extra EMI per year?",
+      "a": "Paying one extra EMI per year on a 20-year home loan can reduce the tenure by approximately 2–3 years and save several lakhs in interest. The impact is highest in the early years when the interest component of each EMI is largest."
+    },
+    {
+      "q": "Is it better to increase EMI or make a lump sum prepayment?",
+      "a": "Both reduce interest burden, but lump sum prepayments in the early years of a loan have a significantly higher impact because the outstanding principal — and therefore interest — is larger. If you receive a bonus or windfall, applying it to prepayment in years 1–5 of a home loan is highly effective."
+    },
+    {
+      "q": "What is the maximum home loan tenure in India?",
+      "a": "Most Indian banks offer home loans for up to 30 years. The tenure must end before the borrower turns 70 (for salaried) or 75 (for self-employed). A 25–30 year tenure lowers monthly EMI but significantly increases total interest paid."
+    },
+    {
+      "q": "Does part prepayment reduce EMI or tenure?",
+      "a": "Most banks in India apply part prepayments to reduce the loan tenure while keeping the EMI constant, which is the mathematically optimal choice for minimising total interest. Some lenders allow you to choose — reducing tenure saves more interest than reducing EMI."
+    }
+  ],
+  "related": [
+    { "title": "Home Loan Affordability Calculator", "url": "/india/emi-calculator/", "desc": "How much home loan can you afford?" },
+    { "title": "SIP Calculator", "url": "/india/sip-calculator/", "desc": "Build wealth while repaying your loan" },
+    { "title": "Income Tax Calculator", "url": "/india/income-tax-calculator/", "desc": "Calculate Section 24 home loan interest deduction" }
+  ],
+  "howToSteps": [
+    { "name": "Enter Loan Amount", "text": "Enter the total loan amount you need — for home loans, this is the loan sanctioned (not the property value)." },
+    { "name": "Set Interest Rate", "text": "Enter the annual interest rate quoted by your bank. Check your loan offer letter for the exact rate." },
+    { "name": "Choose Loan Tenure", "text": "Enter the loan repayment period in years. Home loans go up to 30 years; personal loans typically up to 5 years." },
+    { "name": "View EMI and Amortization", "text": "The calculator shows your monthly EMI, total interest payable, and a year-by-year breakdown of principal vs interest components." }
+  ],
+  "schema": {
+    "appName": "EMI Calculator India",
+    "appDescription": "Calculate loan EMI, total interest payable and amortization schedule for home loans, car loans and personal loans in India"
+  }
+}

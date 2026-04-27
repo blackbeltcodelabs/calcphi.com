@@ -1,0 +1,102 @@
+{
+  "id": "lumpsum",
+  "defaults": { "principal": 500000, "rate": 12, "years": 10 },
+  "inputs": [
+    { "id": "ls-principal", "label": "Investment Amount (₹)", "min": 1000, "max": 100000000, "step": 1000, "value": 500000, "hint": "One-time investment amount" },
+    { "id": "ls-rate", "label": "Expected Annual Return (%)", "min": 1, "max": 30, "step": 0.5, "value": 12, "hint": "Use 10–12% for equity mutual funds" },
+    { "id": "ls-years", "label": "Investment Period (Years)", "min": 1, "max": 40, "step": 1, "value": 10, "hint": "" }
+  ],
+  "outputs": [
+    { "id": "ls-maturity", "label": "Maturity Value", "highlight": true },
+    { "id": "ls-gains", "label": "Total Gains" },
+    { "id": "ls-cagr", "label": "CAGR" }
+  ],
+  "staticTable": {
+    "caption": "Lumpsum investment growth at 12% annual return",
+    "headers": ["Investment (₹)", "5 Years", "10 Years", "15 Years", "20 Years"],
+    "rows": [
+      ["₹1,00,000", "₹1,76,234", "₹3,10,585", "₹5,47,357", "₹9,64,629"],
+      ["₹5,00,000", "₹8,81,171", "₹15,52,924", "₹27,36,789", "₹48,23,146"],
+      ["₹10,00,000", "₹17,62,342", "₹31,05,848", "₹54,73,566", "₹96,46,293"],
+      ["₹25,00,000", "₹44,05,856", "₹77,64,620", "₹1,36,83,916", "₹2,41,15,732"]
+    ]
+  },
+  "examples": [
+    {
+      "heading": "₹5 lakh lumpsum vs ₹5,000/month SIP — 10 years at 12%",
+      "text": "A ₹5 lakh lumpsum investment at 12% for 10 years grows to approximately ₹15.53 lakhs — a 3.1x return on capital. The equivalent ₹5,000/month SIP (same total investment over 10 years: ₹6 lakhs) grows to ₹11.6 lakhs. The lumpsum wins here because the full capital compounds from day one."
+    },
+    {
+      "heading": "Power of compounding — ₹10 lakh invested at different ages",
+      "text": "Investing ₹10 lakhs at age 30 at 12% grows to ₹96.46 lakhs by age 50 (20 years). The same investment at age 40 grows to only ₹31.06 lakhs by age 50 (10 years). Starting a decade earlier gives 3x more wealth."
+    },
+    {
+      "heading": "Lumpsum vs SIP for different market conditions",
+      "text": "Lumpsum outperforms SIP in consistently rising markets. SIP outperforms lumpsum when markets are volatile or declining, as lower prices allow more units at cheaper NAV.",
+      "table": {
+        "headers": ["Scenario", "Winner", "Reason"],
+        "rows": [
+          ["Bull market (steady rise)", "Lumpsum", "Full capital deployed from start"],
+          ["Bear-then-bull market", "SIP", "Cheaper units during fall phase"],
+          ["Volatile sideways market", "SIP", "Rupee cost averaging benefits"],
+          ["Uncertain market", "Split 50/50", "Reduces timing risk"]
+        ]
+      }
+    }
+  ],
+  "decisionGuide": [
+    {
+      "question": "When should you invest as a lumpsum vs SIP?",
+      "answer": "Choose lumpsum when you have received a large amount (bonus, inheritance, asset sale) and markets are not at a peak. Choose SIP for regular monthly income. If uncertain about market timing, invest lumpsum in a liquid fund and set up a Systematic Transfer Plan (STP) to equity over 6–12 months."
+    },
+    {
+      "question": "What return rate should you use for lumpsum projection?",
+      "answer": "Use 10–12% for large-cap equity funds, 12–15% for mid-cap funds, and 7–8% for debt funds. Never use more than 15% for any projection regardless of historical performance — equity markets have extended periods of poor returns even across long horizons."
+    },
+    {
+      "question": "What are the tax implications of lumpsum mutual fund investments?",
+      "answer": "Equity mutual fund gains held over 1 year are taxed as Long-Term Capital Gains (LTCG) at 12.5% above ₹1.25 lakh/year. Gains under 1 year attract Short-Term Capital Gains (STCG) tax at 20%. Debt fund gains are taxed at your applicable income slab rate regardless of holding period."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is a lumpsum investment in mutual funds?",
+      "a": "A lumpsum investment is a one-time investment of a fixed amount into a mutual fund, as opposed to a Systematic Investment Plan (SIP) which invests a fixed amount monthly. Lumpsum investments work best when you have a large corpus to deploy and want to maximise compounding time."
+    },
+    {
+      "q": "Is lumpsum or SIP better for long-term wealth creation?",
+      "a": "Mathematically, lumpsum investing outperforms SIP when markets trend upward, because the full corpus compounds from day one. However, SIP reduces timing risk in volatile markets through rupee cost averaging. For most retail investors, SIP is more practical due to monthly income constraints."
+    },
+    {
+      "q": "What is the minimum lumpsum investment in a mutual fund?",
+      "a": "Most mutual funds in India accept lumpsum investments starting from ₹1,000. Some fund categories (like direct equity schemes) may have higher minimums. There is no maximum limit on lumpsum investments."
+    },
+    {
+      "q": "How is lumpsum return calculated?",
+      "a": "Lumpsum return uses the compound interest formula: A = P × (1 + r)^t, where P is the principal, r is the annual return rate (as decimal), and t is the number of years. For ₹5 lakhs at 12% for 10 years: 500000 × (1.12)^10 = ₹15,52,924."
+    },
+    {
+      "q": "What is CAGR and how is it calculated for lumpsum?",
+      "a": "CAGR (Compound Annual Growth Rate) is the annualised rate of return that converts an initial investment to a final value over a period. CAGR = (Final Value / Initial Value)^(1/years) − 1. A ₹1 lakh investment that grows to ₹3 lakhs in 10 years has a CAGR of (3)^(1/10) − 1 = 11.6%."
+    },
+    {
+      "q": "What is a Systematic Transfer Plan (STP) in mutual funds?",
+      "a": "An STP allows you to invest a lumpsum in a liquid or debt fund and systematically transfer a fixed amount to an equity fund every month. This combines the lumpsum deployment advantage (full corpus working from day one) with the SIP advantage (averaging into equity gradually over 6–12 months)."
+    }
+  ],
+  "related": [
+    { "title": "SIP Calculator", "url": "/india/sip-calculator/", "desc": "Monthly investment alternative to lumpsum" },
+    { "title": "Step-Up SIP Calculator", "url": "/india/step-up-sip-calculator/", "desc": "SIP with annual increases" },
+    { "title": "FD Calculator", "url": "/india/fd-calculator/", "desc": "Compare with guaranteed fixed deposit returns" }
+  ],
+  "howToSteps": [
+    { "name": "Enter Investment Amount", "text": "Enter the one-time amount you plan to invest." },
+    { "name": "Set Expected Return Rate", "text": "Enter the expected annual return. Use 10–12% for large-cap equity funds." },
+    { "name": "Choose Investment Duration", "text": "Enter how many years you plan to stay invested." },
+    { "name": "View Growth", "text": "See the maturity value, total gains, and CAGR for your investment." }
+  ],
+  "schema": {
+    "appName": "Lumpsum Calculator India",
+    "appDescription": "Calculate lumpsum mutual fund investment returns, maturity value and CAGR for Indian investors"
+  }
+}

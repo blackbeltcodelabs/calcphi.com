@@ -1,0 +1,13 @@
+{% if calcData.related %}
+<section id="related" class="related-section">
+  <h2>Related Calculators</h2>
+  <div class="related-grid">
+    {% for item in calcData.related %}
+    <a href="{{ item.url }}" class="related-card">
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.desc }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

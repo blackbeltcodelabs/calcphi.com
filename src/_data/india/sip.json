@@ -1,0 +1,101 @@
+{
+  "id": "sip",
+  "defaults": { "monthly": 5000, "rate": 12, "years": 10 },
+  "inputs": [
+    { "id": "monthly-investment", "label": "Monthly Investment (₹)", "min": 500, "max": 1000000, "step": 500, "value": 5000, "hint": "Minimum SIP: ₹500/month" },
+    { "id": "return-rate", "label": "Expected Annual Return (%)", "min": 1, "max": 30, "step": 0.5, "value": 12, "hint": "Use 10–12% for large-cap funds" },
+    { "id": "tenure", "label": "Investment Period (Years)", "min": 1, "max": 40, "step": 1, "value": 10, "hint": "" }
+  ],
+  "outputs": [
+    { "id": "total-invested", "label": "Total Invested" },
+    { "id": "estimated-returns", "label": "Estimated Returns", "highlight": true },
+    { "id": "total-wealth", "label": "Total Wealth" }
+  ],
+  "staticTable": {
+    "caption": "Estimated SIP maturity values at 12% annual return, 10-year tenure",
+    "headers": ["Monthly SIP (₹)", "Total Invested (₹)", "Est. Returns (₹)", "Maturity Value (₹)"],
+    "rows": [
+      ["₹1,000", "₹1,20,000", "₹1,11,615", "₹2,32,339"],
+      ["₹5,000", "₹6,00,000", "₹5,61,695", "₹11,61,695"],
+      ["₹10,000", "₹12,00,000", "₹11,23,391", "₹23,23,391"],
+      ["₹25,000", "₹30,00,000", "₹28,08,477", "₹58,08,477"],
+      ["₹50,000", "₹60,00,000", "₹56,16,955", "₹1,16,16,955"]
+    ]
+  },
+  "examples": [
+    {
+      "heading": "Salaried professional, Mumbai — ₹10,000/month, 25 years",
+      "text": "A 30-year-old starting a ₹10,000/month SIP in a large-cap index fund at an assumed 12% annual return for 25 years accumulates approximately ₹1.89 crore at maturity, having invested only ₹30 lakhs. Compounding over 25 years generates over ₹1.59 crore in returns alone."
+    },
+    {
+      "heading": "Early career, Tier 2 city — ₹2,000/month, 20 years",
+      "text": "Starting small is still powerful. A ₹2,000/month SIP at 12% for 20 years grows to approximately ₹19.8 lakhs on a total investment of ₹4.8 lakhs — a 4x return on invested capital."
+    },
+    {
+      "heading": "10 years vs 20 years (same ₹5,000/month at 12%)",
+      "text": "Doubling the investment period from 10 to 20 years — while keeping the monthly SIP identical — multiplies the final wealth by 4.3x. Total invested doubles, but returns grow by 7x.",
+      "table": {
+        "headers": ["Duration", "Total Invested", "Maturity Value", "Returns"],
+        "rows": [
+          ["10 years", "₹6,00,000", "₹11,61,695", "₹5,61,695"],
+          ["20 years", "₹12,00,000", "₹49,95,740", "₹37,95,740"]
+        ]
+      }
+    }
+  ],
+  "decisionGuide": [
+    {
+      "question": "How much should you invest in SIP each month?",
+      "answer": "A common guideline is the 50-30-20 rule: allocate 20% of your monthly take-home salary toward investments. For a ₹50,000/month salary, that is ₹10,000 — split between SIP, PPF, and emergency fund depending on your existing coverage."
+    },
+    {
+      "question": "Which return rate should you use?",
+      "answer": "Use 10–12% for large-cap or index funds (conservative), 12–15% for mid-cap funds (moderate), and no more than 15% for any long-term projection regardless of fund type. Past returns do not guarantee future performance."
+    },
+    {
+      "question": "When should you increase your SIP amount?",
+      "answer": "Increase your SIP amount by 10% each year as your income grows — this is called a step-up SIP. Use our Step-Up SIP Calculator to see how this compounds your final returns significantly."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the return on a ₹5,000 SIP for 10 years?",
+      "a": "A ₹5,000/month SIP at 12% annual return over 10 years grows to approximately ₹11.6 lakhs. Your total investment is ₹6 lakhs and the estimated returns are approximately ₹5.6 lakhs. At a more conservative 10% return, the maturity value is approximately ₹10.3 lakhs."
+    },
+    {
+      "q": "Is SIP better than a fixed deposit in India?",
+      "a": "SIP in equity mutual funds historically outperforms fixed deposits over 10+ year horizons. FDs offer guaranteed returns (currently 6.5–7.5% in 2026) with no risk, while equity SIP carries market risk but has delivered 11–14% annual returns over most 10-year periods. SIP suits long-term goals; FD suits short-term safety."
+    },
+    {
+      "q": "What is the minimum amount for a SIP in India?",
+      "a": "Most mutual fund houses in India allow SIPs starting from ₹500 per month. Some funds accept ₹100/month for micro-SIP schemes. There is no maximum limit — you can invest any amount depending on your financial goals."
+    },
+    {
+      "q": "Can I stop or pause a SIP anytime?",
+      "a": "Yes. SIPs in India can be paused or stopped at any time without penalty. You can also reduce or increase the SIP amount. Stopping a SIP does not redeem your existing investment — the units you hold remain invested and continue to grow."
+    },
+    {
+      "q": "How is SIP return calculated?",
+      "a": "The SIP calculator uses the future value of a recurring investment formula: M = P × [{(1 + r)^n − 1} / r] × (1 + r), where P is the monthly SIP, r is the monthly return rate (annual rate ÷ 12 ÷ 100), and n is the total number of months."
+    },
+    {
+      "q": "What is the best SIP duration for maximum returns?",
+      "a": "Longer durations always produce higher returns due to compounding. A 20-year SIP generates 4–5x more wealth than a 10-year SIP at the same monthly amount and return rate. Start as early as possible and stay invested through market cycles for best results."
+    }
+  ],
+  "related": [
+    { "title": "Step-Up SIP Calculator", "url": "/india/step-up-sip-calculator/", "desc": "Calculate returns with annual SIP amount increases" },
+    { "title": "Lumpsum Calculator", "url": "/india/lumpsum-calculator/", "desc": "One-time investment growth estimate" },
+    { "title": "NPS Calculator", "url": "/india/nps-calculator/", "desc": "National Pension Scheme corpus calculator" }
+  ],
+  "howToSteps": [
+    { "name": "Enter Monthly Investment", "text": "Enter the amount you plan to invest every month. The minimum SIP is ₹500." },
+    { "name": "Set Expected Return Rate", "text": "Enter the expected annual return rate. Use 10–12% for conservative large-cap or index fund estimates." },
+    { "name": "Choose Investment Duration", "text": "Select how many years you plan to continue the SIP. Longer duration increases returns significantly due to compounding." },
+    { "name": "Read Your Results", "text": "The calculator shows your total invested amount, estimated returns earned, and final maturity value instantly." }
+  ],
+  "schema": {
+    "appName": "SIP Calculator India",
+    "appDescription": "Calculate SIP returns, maturity value and year-by-year growth for Indian mutual fund investments"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "id": "fd",
+  "defaults": { "principal": 100000, "rate": 7.0, "years": 3, "compounding": "quarterly" },
+  "inputs": [
+    { "id": "fd-principal", "label": "Principal Amount (₹)", "min": 1000, "max": 100000000, "step": 1000, "value": 100000, "hint": "" },
+    { "id": "fd-rate", "label": "Annual Interest Rate (%)", "min": 1, "max": 15, "step": 0.05, "value": 7.0, "hint": "Check your bank's current FD rates" },
+    { "id": "fd-tenure-years", "label": "Tenure (Years)", "min": 0, "max": 10, "step": 1, "value": 3, "hint": "" },
+    { "id": "fd-tenure-months", "label": "Tenure (Months)", "min": 0, "max": 11, "step": 1, "value": 0, "hint": "" }
+  ],
+  "compoundingOptions": [
+    { "value": "monthly", "label": "Monthly" },
+    { "value": "quarterly", "label": "Quarterly (Standard)" },
+    { "value": "annually", "label": "Annually" },
+    { "value": "simple", "label": "Simple Interest" }
+  ],
+  "outputs": [
+    { "id": "maturity-amount", "label": "Maturity Amount", "highlight": true },
+    { "id": "interest-earned", "label": "Interest Earned" },
+    { "id": "effective-rate", "label": "Effective Annual Yield" }
+  ],
+  "bankRates": {
+    "caption": "Current FD interest rates — major Indian banks (2026)",
+    "note": "Rates for general public, 1–3 year tenure. Senior citizens typically get 0.25–0.5% extra.",
+    "rows": [
+      { "bank": "SBI", "general": "6.80%", "senior": "7.30%" },
+      { "bank": "HDFC Bank", "general": "7.00%", "senior": "7.50%" },
+      { "bank": "ICICI Bank", "general": "7.00%", "senior": "7.50%" },
+      { "bank": "Axis Bank", "general": "7.10%", "senior": "7.75%" },
+      { "bank": "Kotak Bank", "general": "7.10%", "senior": "7.60%" },
+      { "bank": "Bank of Baroda", "general": "7.15%", "senior": "7.65%" }
+    ]
+  },
+  "examples": [
+    {
+      "heading": "₹1 lakh FD at 7% — 3 years (quarterly compounding)",
+      "text": "A ₹1 lakh FD at 7% annual interest with quarterly compounding for 3 years yields a maturity value of approximately ₹1,23,145. Total interest earned is ₹23,145. The effective annual yield with quarterly compounding is 7.19% — slightly higher than the nominal rate."
+    },
+    {
+      "heading": "Senior citizen FD — ₹5 lakh at 7.5%, 2 years",
+      "text": "Senior citizens in India typically receive 0.25–0.5% higher FD rates. A ₹5 lakh FD at 7.5% for 2 years yields approximately ₹5,80,932 at maturity. Interest income above ₹50,000/year (for senior citizens) is taxable at the applicable slab rate."
+    },
+    {
+      "heading": "Compound vs simple interest comparison",
+      "text": "The difference between simple and quarterly compound interest becomes significant over longer tenures.",
+      "table": {
+        "headers": ["Method", "₹1L at 7%, 1 year", "₹1L at 7%, 3 years", "₹1L at 7%, 5 years"],
+        "rows": [
+          ["Simple", "₹1,07,000", "₹1,21,000", "₹1,35,000"],
+          ["Quarterly Compound", "₹1,07,186", "₹1,23,145", "₹1,41,478"]
+        ]
+      }
+    }
+  ],
+  "decisionGuide": [
+    {
+      "question": "Should you choose monthly or quarterly interest payout?",
+      "answer": "If you need regular income from the FD, choose monthly payout. For wealth accumulation, choose cumulative (compound) — the bank reinvests interest, resulting in a higher maturity value. Cumulative FDs always pay more than payout FDs at the same interest rate."
+    },
+    {
+      "question": "Is TDS applicable on FD interest?",
+      "answer": "Yes. Banks deduct TDS (Tax Deducted at Source) at 10% if total FD interest income exceeds ₹40,000 in a financial year (₹50,000 for senior citizens). If your total income is below the taxable limit, submit Form 15G (or 15H for seniors) to your bank to avoid TDS deduction."
+    },
+    {
+      "question": "Are small finance bank FDs safe?",
+      "answer": "All bank FDs in India are insured up to ₹5 lakh per depositor per bank under the DICGC (Deposit Insurance and Credit Guarantee Corporation). Small finance banks often offer 0.5–1% higher rates than major banks. Keep individual FDs below ₹5 lakh per bank to maximise insurance coverage."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the FD interest rate in India in 2026?",
+      "a": "FD interest rates in India in 2026 range from 6.8% to 7.5% for general depositors (1–3 year tenure) at major banks. Small finance banks like AU Small Finance Bank and ESAF offer rates up to 8.5%. Senior citizens receive an additional 0.25–0.5% over the general rate."
+    },
+    {
+      "q": "Is FD interest taxable?",
+      "a": "Yes. FD interest is fully taxable as 'Income from Other Sources' at your applicable income tax slab rate. It is not tax-exempt like PPF interest. If interest income exceeds ₹40,000 per year (₹50,000 for senior citizens), the bank deducts TDS at 10%."
+    },
+    {
+      "q": "What is the maximum FD tenure?",
+      "a": "Most banks in India offer FDs for tenures ranging from 7 days to 10 years. The 5-year tax-saving FD qualifies for Section 80C deduction (up to ₹1.5 lakh) but has a 5-year lock-in period with no premature withdrawal allowed."
+    },
+    {
+      "q": "Can you break a FD before maturity?",
+      "a": "Yes, most bank FDs can be broken prematurely. The bank typically charges a penalty of 0.5–1% on the applicable rate for the period held. This reduces the effective interest earned. Some FDs (particularly 5-year tax-saving FDs) cannot be broken before maturity."
+    },
+    {
+      "q": "How is FD interest calculated with quarterly compounding?",
+      "a": "For quarterly compounding: Maturity = P × (1 + r/4)^(4×t), where P is principal, r is annual rate (decimal), and t is tenure in years. For a ₹1 lakh FD at 7% for 3 years: 100000 × (1.0175)^12 = ₹1,23,145."
+    },
+    {
+      "q": "What is the difference between FD and RD?",
+      "a": "An FD (Fixed Deposit) is a one-time lump sum investment. An RD (Recurring Deposit) allows you to invest a fixed amount every month. FD is better when you have a large amount to invest. RD is better for regular monthly savings. Both are bank deposits with DICGC insurance up to ₹5 lakh."
+    }
+  ],
+  "related": [
+    { "title": "RD Calculator", "url": "/india/rd-calculator/", "desc": "Recurring deposit — invest monthly instead of lumpsum" },
+    { "title": "PPF Calculator", "url": "/india/ppf-calculator/", "desc": "Tax-free alternative to FD for long-term savings" },
+    { "title": "Lumpsum Calculator", "url": "/india/lumpsum-calculator/", "desc": "Compare FD returns with mutual fund lumpsum" }
+  ],
+  "howToSteps": [
+    { "name": "Enter Principal Amount", "text": "Enter the amount you want to invest in the fixed deposit." },
+    { "name": "Set Interest Rate", "text": "Enter your bank's FD interest rate. Check the bank rates table below for current rates." },
+    { "name": "Enter Tenure", "text": "Enter the FD tenure in years and months." },
+    { "name": "Choose Compounding Frequency", "text": "Select how often interest is compounded. Quarterly is standard for Indian bank FDs." }
+  ],
+  "schema": {
+    "appName": "FD Calculator India",
+    "appDescription": "Calculate fixed deposit maturity value, interest earned and effective yield with quarterly, monthly or annual compounding"
+  }
+}

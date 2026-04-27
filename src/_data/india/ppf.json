@@ -1,0 +1,103 @@
+{
+  "id": "ppf",
+  "currentRate": 7.1,
+  "rateLastRevised": "October 2023",
+  "defaults": { "annual": 150000, "years": 15 },
+  "inputs": [
+    { "id": "annual-investment", "label": "Annual Investment (₹)", "min": 500, "max": 150000, "step": 500, "value": 150000, "hint": "Maximum: ₹1,50,000 per year" },
+    { "id": "ppf-rate", "label": "Interest Rate (%)", "min": 1, "max": 15, "step": 0.1, "value": 7.1, "hint": "Current PPF rate: 7.1% p.a. (Oct 2023)" },
+    { "id": "ppf-tenure", "label": "Tenure (Years)", "min": 15, "max": 50, "step": 5, "value": 15, "hint": "Minimum: 15 years. Extendable in 5-year blocks." }
+  ],
+  "outputs": [
+    { "id": "total-invested", "label": "Total Invested" },
+    { "id": "total-interest", "label": "Interest Earned", "highlight": true },
+    { "id": "maturity-value", "label": "Maturity Value" }
+  ],
+  "staticTable": {
+    "caption": "PPF maturity values at 7.1% for maximum annual investment of ₹1.5 lakh",
+    "headers": ["Tenure", "Total Invested (₹)", "Interest Earned (₹)", "Maturity Value (₹)"],
+    "rows": [
+      ["15 years", "₹22,50,000", "₹18,18,209", "₹40,68,209"],
+      ["20 years", "₹30,00,000", "₹36,58,288", "₹66,58,288"],
+      ["25 years", "₹37,50,000", "₹65,58,290", "₹1,03,08,290"],
+      ["30 years", "₹45,00,000", "₹1,09,50,911", "₹1,54,50,911"]
+    ]
+  },
+  "examples": [
+    {
+      "heading": "Maximum investment — ₹1.5 lakh/year, 15 years",
+      "text": "Investing the maximum ₹1.5 lakh every year in PPF at 7.1% for 15 years yields a maturity value of approximately ₹40.68 lakhs on a total investment of ₹22.5 lakhs. The interest earned (₹18.18 lakhs) is completely tax-free under Section 10(11)."
+    },
+    {
+      "heading": "Power of extension — 15 years vs 25 years",
+      "text": "Extending PPF by one 5-year block to 20 years grows the corpus to ₹66.58 lakhs. At 25 years, it crosses ₹1 crore. Compounding in PPF accelerates dramatically in the final years — the last 5 years of a 25-year PPF account add more interest than the first 15 years combined."
+    },
+    {
+      "heading": "Smaller monthly contribution — ₹12,500/month (₹1.5 lakh/year)",
+      "text": "To invest the maximum ₹1.5 lakh per year, invest ₹12,500/month or ₹1,50,000 as a lump sum before April 5 of each year. Investing before April 5 ensures you earn interest for the full year — investing after the 5th means you miss April's interest.",
+      "table": {
+        "headers": ["Annual Investment", "15Y Corpus", "20Y Corpus", "25Y Corpus"],
+        "rows": [
+          ["₹50,000", "₹13,56,070", "₹22,19,429", "₹34,36,097"],
+          ["₹1,00,000", "₹27,12,139", "₹44,38,858", "₹68,72,193"],
+          ["₹1,50,000", "₹40,68,209", "₹66,58,288", "₹1,03,08,290"]
+        ]
+      }
+    }
+  ],
+  "decisionGuide": [
+    {
+      "question": "Should you invest the maximum ₹1.5 lakh in PPF every year?",
+      "answer": "If your marginal tax rate is 20% or 30%, maxing out PPF is almost always worth it. You get a Section 80C deduction on the investment, tax-free interest accumulation, and tax-free maturity. The effective post-tax return is significantly higher than the stated 7.1%."
+    },
+    {
+      "question": "When should you deposit in PPF each year?",
+      "answer": "Deposit before April 5 of each financial year. PPF interest is calculated on the lowest balance between the 5th and the last day of each month. Depositing after the 5th means you lose one month of interest on that year's investment."
+    },
+    {
+      "question": "Is PPF better than ELSS for 80C investment?",
+      "answer": "PPF offers guaranteed, tax-free returns with zero risk — ideal for the fixed income portion of your portfolio. ELSS (Equity Linked Savings Scheme) has a shorter 3-year lock-in and higher expected returns but with market risk. Most financial planners recommend splitting 80C investments between both."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the current PPF interest rate in 2026?",
+      "a": "The PPF interest rate as of 2026 is 7.1% per annum, compounded annually. The rate has remained at 7.1% since October 2023. The Government of India reviews PPF rates quarterly — it is not guaranteed to remain at this level."
+    },
+    {
+      "q": "What is the maximum investment in PPF per year?",
+      "a": "The maximum investment in a PPF account is ₹1,50,000 per financial year (April to March). The minimum annual investment is ₹500. Investing more than ₹1.5 lakh does not earn interest on the excess and is returned without benefit."
+    },
+    {
+      "q": "Is PPF maturity amount tax free?",
+      "a": "Yes. PPF enjoys EEE (Exempt-Exempt-Exempt) status. Investment qualifies for Section 80C deduction (up to ₹1.5 lakh), interest earned is fully tax-free, and the maturity amount is completely exempt from income tax."
+    },
+    {
+      "q": "Can you withdraw money from PPF before maturity?",
+      "a": "Partial withdrawals are allowed from the 7th financial year onwards. You can withdraw up to 50% of the balance at the end of the 4th year or the year preceding the withdrawal, whichever is lower. Full premature closure is only allowed after 5 years and only for specific reasons."
+    },
+    {
+      "q": "What happens to PPF after 15 years?",
+      "a": "After the 15-year maturity, you can: (1) close the account and withdraw the full amount; (2) extend without contribution — money continues earning 7.1% interest; (3) extend with contributions for 5-year blocks. Extension is usually the best choice as the corpus grows rapidly in the extended period."
+    },
+    {
+      "q": "Can you have two PPF accounts?",
+      "a": "No. An individual can hold only one PPF account. A separate PPF account can be opened for a minor child, but the combined contribution to the adult's account and the minor's account cannot exceed ₹1.5 lakh per year."
+    }
+  ],
+  "related": [
+    { "title": "NPS Calculator", "url": "/india/nps-calculator/", "desc": "National Pension Scheme — another 80C + 80CCD option" },
+    { "title": "FD Calculator", "url": "/india/fd-calculator/", "desc": "Compare PPF with bank fixed deposits" },
+    { "title": "Income Tax Calculator", "url": "/india/income-tax-calculator/", "desc": "Calculate your 80C tax saving from PPF" }
+  ],
+  "howToSteps": [
+    { "name": "Enter Annual Investment", "text": "Enter the amount you plan to invest in PPF each year, up to the maximum of ₹1,50,000." },
+    { "name": "Verify Interest Rate", "text": "The current PPF rate (7.1%) is pre-filled. You can adjust this to model different scenarios." },
+    { "name": "Select Tenure", "text": "PPF has a minimum tenure of 15 years, extendable in 5-year blocks. Select your expected holding period." },
+    { "name": "View Maturity Value", "text": "See your total invested amount, interest earned, and tax-free maturity value." }
+  ],
+  "schema": {
+    "appName": "PPF Calculator India",
+    "appDescription": "Calculate PPF maturity value, interest earned and tax savings at current 7.1% interest rate"
+  }
+}

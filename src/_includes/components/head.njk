@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>{{ title }} | CalcPhi</title>
+<meta name="description" content="{{ description }}">
+
+<link rel="canonical" href="{{ site.url }}{{ permalink }}">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ site.url }}{{ permalink }}">
+<meta property="og:image" content="{{ site.url }}{{ ogImage if ogImage else site.defaultOgImage }}">
+<meta property="og:site_name" content="CalcPhi">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="{{ site.url }}{{ ogImage if ogImage else site.defaultOgImage }}">
+
+<!-- Hreflang -->
+{% if hreflang %}
+  {% for h in hreflang %}
+  <link rel="alternate" hreflang="{{ h.lang }}" href="{{ site.url }}{{ h.url }}">
+  {% endfor %}
+{% endif %}
+
+<!-- Language -->
+<meta name="language" content="en">
+
+<!-- Preload critical assets -->
+<link rel="preload" href="/assets/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/assets/css/main.css"></noscript>
+
+<!-- Critical CSS inlined -->
+{% inlineCss "critical.css" %}
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+
+<!-- Per-page schema is injected by the layout into <body> -->

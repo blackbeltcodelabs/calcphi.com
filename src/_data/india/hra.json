@@ -1,0 +1,104 @@
+{
+  "id": "hra",
+  "defaults": { "basic": 50000, "hraReceived": 20000, "rentPaid": 25000, "city": "metro" },
+  "inputs": [
+    { "id": "basic-salary", "label": "Basic Salary per Month (₹)", "min": 1000, "max": 10000000, "step": 1000, "value": 50000, "hint": "Monthly basic salary (excluding allowances)" },
+    { "id": "hra-received", "label": "HRA Received per Month (₹)", "min": 0, "max": 5000000, "step": 500, "value": 20000, "hint": "HRA component on your payslip" },
+    { "id": "rent-paid", "label": "Actual Rent Paid per Month (₹)", "min": 0, "max": 5000000, "step": 500, "value": 25000, "hint": "Actual rent as per rent agreement" },
+    { "id": "city-type", "label": "City", "type": "select", "options": [
+      { "value": "metro", "label": "Metro (Mumbai, Delhi, Kolkata, Chennai)" },
+      { "value": "non-metro", "label": "Non-Metro" }
+    ], "hint": "Metro cities qualify for 50% basic; non-metro for 40%" }
+  ],
+  "outputs": [
+    { "id": "hra-exemption", "label": "HRA Exemption", "highlight": true },
+    { "id": "taxable-hra", "label": "Taxable HRA" },
+    { "id": "calculation-breakdown", "label": "Calculation Breakdown" }
+  ],
+  "formula": {
+    "description": "HRA exemption = Minimum of three values",
+    "components": [
+      { "label": "a) Actual HRA received", "formula": "HRA received per month × 12" },
+      { "label": "b) 50% (metro) / 40% (non-metro) of annual basic salary", "formula": "Basic × 12 × 0.50 or 0.40" },
+      { "label": "c) Actual rent paid minus 10% of annual basic salary", "formula": "(Rent × 12) − (Basic × 12 × 0.10)" }
+    ]
+  },
+  "examples": [
+    {
+      "heading": "Mumbai salaried employee — ₹50,000 basic, ₹20,000 HRA, ₹25,000 rent",
+      "text": "Annual basic: ₹6L. HRA received: ₹2.4L. Minimum of: (a) ₹2.4L, (b) ₹3L (50% of basic in metro), (c) ₹1.8L (₹3L rent minus ₹60K = ₹2.4L; wait, ₹3L − ₹0.6L = ₹2.4L). HRA exemption = ₹2.4L. Taxable HRA = ₹0 (since HRA received = exemption)."
+    },
+    {
+      "heading": "Pune (non-metro) — ₹80,000 basic, ₹30,000 HRA, ₹25,000 rent",
+      "text": "Annual basic: ₹9.6L. HRA received: ₹3.6L. Minimum of: (a) ₹3.6L, (b) ₹3.84L (40% × ₹9.6L), (c) ₹2.04L (₹3L rent − ₹0.96L = ₹2.04L). HRA exemption = ₹2.04L. Taxable HRA = ₹3.6L − ₹2.04L = ₹1.56L."
+    },
+    {
+      "heading": "When is HRA fully taxable?",
+      "text": "HRA is fully taxable if you live in your own house, live rent-free with parents (no rent agreement), or if actual rent paid minus 10% of basic salary is negative (i.e., rent paid < 10% of basic salary). Always maintain a formal rent agreement and pay rent via bank transfer for audit trail.",
+      "table": {
+        "headers": ["Situation", "HRA Status"],
+        "rows": [
+          ["Own house, paying home loan", "HRA fully taxable (but claim Section 24b)"],
+          ["Living with parents, no rent agreement", "HRA fully taxable"],
+          ["Rent paid < 10% of basic salary", "Very low or zero exemption"],
+          ["Paying rent above 10% of basic", "Partial or full exemption applies"]
+        ]
+      }
+    }
+  ],
+  "decisionGuide": [
+    {
+      "question": "Do you need rent receipts to claim HRA exemption?",
+      "answer": "If annual rent exceeds ₹1 lakh (₹8,333/month), you must submit the landlord's PAN to your employer. Rent receipts are required for any HRA exemption claim. The employer will include the claimed HRA exemption in your Form 16. Always maintain 12 monthly rent receipts and a formal rent agreement."
+    },
+    {
+      "question": "Can you claim both HRA exemption and home loan interest deduction?",
+      "answer": "Yes, but only if your rented residence and the home loan property are in different cities. If you live in a rented house in Mumbai and have a home loan on a property in your home city, you can claim both HRA exemption and Section 24b home loan interest deduction simultaneously."
+    },
+    {
+      "question": "Can you pay rent to parents and claim HRA?",
+      "answer": "Yes. You can pay rent to your parents, get a formal rent agreement, and claim HRA exemption. However, your parents must declare this rent as income in their ITR. If their income is below the taxable limit or they are in a lower tax bracket, the family's combined tax liability reduces. The rent must be paid via bank transfer, not cash."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How is HRA exemption calculated in India?",
+      "a": "HRA exemption is the minimum of three values: (a) Actual HRA received; (b) 50% of basic salary for metro cities (Mumbai, Delhi, Kolkata, Chennai) or 40% for non-metro cities; (c) Actual rent paid minus 10% of basic salary. The lowest of these three is the exempt amount."
+    },
+    {
+      "q": "What cities are considered metro for HRA calculation?",
+      "a": "Only four cities qualify as 'metro' for HRA calculation in India: Mumbai, Delhi (NCR), Kolkata, and Chennai. For these cities, 50% of basic salary is used in the HRA formula. All other cities — including Bangalore, Hyderabad, Pune, Ahmedabad — are treated as non-metro, where 40% of basic salary is used."
+    },
+    {
+      "q": "Is HRA available in the new tax regime?",
+      "a": "No. HRA exemption is not available under the new tax regime introduced in FY 2020-21. Under the new regime, you get a flat ₹75,000 standard deduction but cannot claim HRA, home loan interest, 80C investments, or other deductions. If your HRA and other deductions are substantial, the old regime may save more tax."
+    },
+    {
+      "q": "What is the maximum HRA exemption?",
+      "a": "There is no fixed maximum. The HRA exemption is capped by the minimum of the three formula values — actual HRA received being one of them. In practice, the exemption cannot exceed the HRA received from your employer. For high earners in metro cities with large HRA components, the third formula (rent minus 10% basic) is typically the binding constraint."
+    },
+    {
+      "q": "Can I claim HRA without rent receipts?",
+      "a": "You cannot legally claim HRA exemption without rent receipts. For rent up to ₹8,333/month (₹1 lakh/year), receipts are sufficient. For rent above ₹1 lakh/year, you must also provide the landlord's PAN card number to your employer. Without these, your employer will not process the HRA exemption."
+    },
+    {
+      "q": "What if I live in my own house but my employer gives HRA?",
+      "a": "If you live in your own house (whether you own it outright or are paying a home loan on it), you cannot claim HRA exemption — the entire HRA received is taxable. However, you can claim the home loan principal under Section 80C and interest under Section 24b."
+    }
+  ],
+  "related": [
+    { "title": "Income Tax Calculator", "url": "/india/income-tax-calculator/", "desc": "Calculate total tax with HRA exemption applied" },
+    { "title": "EMI Calculator", "url": "/india/emi-calculator/", "desc": "If buying instead of renting — home loan EMI" },
+    { "title": "PPF Calculator", "url": "/india/ppf-calculator/", "desc": "80C investment to reduce taxable income further" }
+  ],
+  "howToSteps": [
+    { "name": "Enter Basic Salary", "text": "Enter your monthly basic salary — this is the base pay component on your payslip, not the total CTC." },
+    { "name": "Enter HRA Received", "text": "Enter the monthly HRA component from your payslip." },
+    { "name": "Enter Rent Paid", "text": "Enter the actual monthly rent you pay as per your rent agreement." },
+    { "name": "Select City Type", "text": "Select metro (Mumbai, Delhi, Kolkata, Chennai) or non-metro for your place of residence." }
+  ],
+  "schema": {
+    "appName": "HRA Calculator India",
+    "appDescription": "Calculate HRA exemption amount and taxable HRA for salaried employees in India. Applicable for old tax regime only."
+  }
+}

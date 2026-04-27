@@ -1,0 +1,133 @@
+{
+  "id": "income-tax",
+  "fy": "2026-27",
+  "ay": "2027-28",
+  "inputs": [
+    { "id": "gross-income", "label": "Annual Gross Income (₹)", "min": 0, "max": 100000000, "step": 10000, "value": 1200000, "hint": "Total salary / income before any deductions" },
+    { "id": "section80c", "label": "Section 80C Investments (₹)", "min": 0, "max": 150000, "step": 1000, "value": 150000, "hint": "PPF, ELSS, LIC, EPF, tuition fees — max ₹1.5L" },
+    { "id": "section80d", "label": "Health Insurance Premium (₹)", "min": 0, "max": 50000, "step": 500, "value": 25000, "hint": "Section 80D — self + family (max ₹25K) + parents (max ₹25K)" },
+    { "id": "hra-exemption", "label": "HRA Exemption (₹)", "min": 0, "max": 10000000, "step": 1000, "value": 0, "hint": "Use HRA Calculator to compute this amount" },
+    { "id": "home-loan-interest", "label": "Home Loan Interest (₹)", "min": 0, "max": 200000, "step": 1000, "value": 0, "hint": "Section 24b — max ₹2L for self-occupied property" },
+    { "id": "nps-80ccd1b", "label": "NPS Contribution (₹)", "min": 0, "max": 50000, "step": 500, "value": 0, "hint": "Section 80CCD(1B) — max ₹50,000 (extra over 80C)" }
+  ],
+  "outputs": [
+    { "id": "new-regime-tax", "label": "Tax — New Regime", "highlight": true },
+    { "id": "old-regime-tax", "label": "Tax — Old Regime" },
+    { "id": "tax-savings", "label": "You Save" }
+  ],
+  "newRegimeSlabs": [
+    { "from": 0, "to": 400000, "rate": 0 },
+    { "from": 400000, "to": 800000, "rate": 5 },
+    { "from": 800000, "to": 1200000, "rate": 10 },
+    { "from": 1200000, "to": 1600000, "rate": 15 },
+    { "from": 1600000, "to": 2000000, "rate": 20 },
+    { "from": 2000000, "to": 2400000, "rate": 25 },
+    { "from": 2400000, "to": null, "rate": 30 }
+  ],
+  "newRegimeRebate": { "limit": 1200000, "note": "Full rebate u/s 87A — zero tax for income up to ₹12 lakh" },
+  "newRegimeStandardDeduction": 75000,
+  "oldRegimeSlabs": [
+    { "from": 0, "to": 250000, "rate": 0 },
+    { "from": 250000, "to": 500000, "rate": 5 },
+    { "from": 500000, "to": 1000000, "rate": 20 },
+    { "from": 1000000, "to": null, "rate": 30 }
+  ],
+  "oldRegimeRebate": { "limit": 500000, "note": "Rebate u/s 87A for income up to ₹5 lakh" },
+  "oldRegimeStandardDeduction": 50000,
+  "surcharge": [
+    { "from": 5000000, "to": 10000000, "rate": 10 },
+    { "from": 10000000, "to": 20000000, "rate": 15 },
+    { "from": 20000000, "to": 50000000, "rate": 25 },
+    { "from": 50000000, "to": null, "rate": 37 }
+  ],
+  "cess": 4,
+  "deductions": [
+    { "id": "section80c", "label": "Section 80C (PPF, ELSS, LIC, EPF, tuition fees)", "max": 150000 },
+    { "id": "section80d", "label": "Section 80D (Health insurance premium)", "max": 25000 },
+    { "id": "section80d-parents", "label": "Section 80D — Parents' health insurance", "max": 25000 },
+    { "id": "hra-exemption", "label": "HRA Exemption (enter exempt amount)", "max": null },
+    { "id": "home-loan-interest", "label": "Section 24b (Home loan interest)", "max": 200000 },
+    { "id": "nps-80ccd1b", "label": "Section 80CCD(1B) — NPS contribution", "max": 50000 },
+    { "id": "lta", "label": "LTA (Leave Travel Allowance)", "max": null },
+    { "id": "section80tta", "label": "Section 80TTA (Savings account interest)", "max": 10000 }
+  ],
+  "examples": [
+    {
+      "heading": "₹12 lakh annual income — old vs new regime (FY 2026-27)",
+      "text": "Under the new regime, a ₹12 lakh income qualifies for the full Section 87A rebate — zero tax is payable. Under the old regime with ₹1.5 lakh in 80C deductions, taxable income is ₹10 lakhs and tax payable is approximately ₹1,12,500 plus cess. The new regime saves ₹1.17 lakhs at this income level with no deductions required."
+    },
+    {
+      "heading": "₹20 lakh income — which regime saves more?",
+      "text": "At ₹20 lakhs, the decision depends on deductions. Old regime with maximum 80C (₹1.5L), 80D (₹25K), HRA (₹2L), home loan interest (₹2L), and NPS (₹50K): total deductions ₹6.25 lakhs, taxable income ₹13.75 lakhs, tax ₹2.78 lakhs. New regime: standard deduction ₹75K only, taxable income ₹19.25 lakhs, tax ₹2.39 lakhs. New regime wins here."
+    },
+    {
+      "heading": "Break-even deduction point — old vs new regime",
+      "text": "The new regime is generally better when total deductions are below ₹3.75 lakhs at ₹15 lakh income. If your 80C, HRA, home loan interest, and 80D total more than ₹3.75–4 lakhs, the old regime may save more tax. Use this calculator to check your specific situation.",
+      "table": {
+        "headers": ["Income", "New Regime Tax", "Old Regime (with ₹4L deductions)"],
+        "rows": [
+          ["₹8 lakh", "₹0 (rebate)", "₹25,000"],
+          ["₹12 lakh", "₹0 (rebate)", "₹1,12,500"],
+          ["₹15 lakh", "₹1,50,000", "₹1,95,000"],
+          ["₹20 lakh", "₹2,96,400", "₹3,51,800"],
+          ["₹30 lakh", "₹6,20,400", "₹6,51,000"]
+        ]
+      }
+    }
+  ],
+  "decisionGuide": [
+    {
+      "question": "Which income tax regime is better in India in 2026?",
+      "answer": "The new regime is the default from FY 2023-24 and is now better for most salaried employees. If your total deductions (80C + HRA + home loan interest + 80D + NPS) exceed ₹3.75 lakhs at ₹15 lakh income, the old regime may save more tax. Use the calculator above to find your personal break-even point."
+    },
+    {
+      "question": "What is the Section 87A rebate under the new regime?",
+      "answer": "Under the new tax regime, individuals with annual income up to ₹12 lakhs (after standard deduction) are entitled to a full rebate under Section 87A — effectively paying zero income tax. This ₹12 lakh zero-tax limit (plus ₹75,000 standard deduction = ₹12.75 lakh gross salary) makes the new regime very attractive for salaries below ₹12 lakh."
+    },
+    {
+      "question": "Can you switch between old and new tax regimes each year?",
+      "answer": "Salaried individuals can switch between old and new tax regimes each financial year when filing their ITR. Self-employed individuals can switch only once — from old to new — and cannot switch back. Choosing the regime that saves more tax each year (with this calculator) is a legitimate and recommended strategy."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What are the income tax slabs for FY 2026-27 (new regime)?",
+      "a": "New regime tax slabs for FY 2026-27: 0–₹4L: 0%; ₹4L–₹8L: 5%; ₹8L–₹12L: 10%; ₹12L–₹16L: 15%; ₹16L–₹20L: 20%; ₹20L–₹24L: 25%; above ₹24L: 30%. Additionally, income up to ₹12 lakh is fully exempt via the Section 87A rebate. A standard deduction of ₹75,000 applies."
+    },
+    {
+      "q": "What is the income tax limit for 2026-27 in India?",
+      "a": "Under the new tax regime for FY 2026-27, income up to ₹12 lakh is effectively tax-free due to the Section 87A rebate. For salaried individuals, this extends to ₹12.75 lakh (including the ₹75,000 standard deduction) with zero tax payable."
+    },
+    {
+      "q": "How much income tax do I pay on ₹10 lakh income?",
+      "a": "Under the new tax regime for FY 2026-27, ₹10 lakh income is below the ₹12 lakh rebate limit — tax payable is zero. Under the old regime with no deductions: taxable income ₹10L minus ₹50K standard deduction = ₹9.5L, tax = ₹1,12,500 + cess = ₹1,17,000. The new regime saves more here."
+    },
+    {
+      "q": "What deductions are allowed in the old tax regime?",
+      "a": "The old tax regime allows: Section 80C (up to ₹1.5 lakh — EPF, PPF, ELSS, LIC, tuition fees); Section 80D (health insurance ₹25,000 + parents ₹25,000); HRA exemption; Section 24b home loan interest (up to ₹2 lakh); NPS 80CCD(1B) extra ₹50,000; LTA; Section 80TTA savings interest (₹10,000)."
+    },
+    {
+      "q": "Is standard deduction available in the new tax regime?",
+      "a": "Yes. A standard deduction of ₹75,000 is available to salaried employees under the new tax regime from FY 2024-25 onwards. This was increased from ₹50,000. No other deductions (80C, HRA, etc.) are applicable in the new regime."
+    },
+    {
+      "q": "What is the surcharge on income tax in India?",
+      "a": "Surcharge applies on income above ₹50 lakh: ₹50L–₹1Cr: 10% surcharge on tax; ₹1Cr–₹2Cr: 15%; ₹2Cr–₹5Cr: 25%; above ₹5Cr: 37%. A health and education cess of 4% applies on (tax + surcharge) for all taxpayers."
+    }
+  ],
+  "related": [
+    { "title": "HRA Calculator", "url": "/india/hra-calculator/", "desc": "Calculate HRA exemption for old regime" },
+    { "title": "NPS Calculator", "url": "/india/nps-calculator/", "desc": "Extra ₹50,000 deduction under 80CCD(1B)" },
+    { "title": "PPF Calculator", "url": "/india/ppf-calculator/", "desc": "80C investment with tax-free returns" }
+  ],
+  "howToSteps": [
+    { "name": "Enter Annual Income", "text": "Enter your gross annual salary or income for FY 2026-27." },
+    { "name": "Add Deductions (Old Regime)", "text": "Enter your eligible deductions: 80C investments, health insurance, HRA exemption, home loan interest, NPS contributions." },
+    { "name": "View Both Regimes", "text": "The calculator computes tax under both old and new regimes side by side." },
+    { "name": "Choose the Better Regime", "text": "The calculator recommends which regime saves more tax for your specific income and deduction profile." }
+  ],
+  "schema": {
+    "appName": "Income Tax Calculator India FY 2026-27",
+    "appDescription": "Calculate and compare income tax under old and new tax regime for FY 2026-27 (AY 2027-28). Includes Section 87A rebate and all deductions."
+  }
+}

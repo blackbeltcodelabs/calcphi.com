@@ -1,0 +1,102 @@
+{
+  "id": "nps",
+  "defaults": { "monthly": 5000, "currentAge": 30, "retirementAge": 60, "returnRate": 10, "annuityRate": 6 },
+  "inputs": [
+    { "id": "nps-monthly", "label": "Monthly Contribution (₹)", "min": 500, "max": 500000, "step": 500, "value": 5000, "hint": "Minimum NPS contribution: ₹500/month" },
+    { "id": "current-age", "label": "Your Current Age", "min": 18, "max": 59, "step": 1, "value": 30, "hint": "" },
+    { "id": "retirement-age", "label": "Retirement Age", "min": 40, "max": 70, "step": 1, "value": 60, "hint": "NPS allows exit at 60 (Tier I)" },
+    { "id": "nps-return", "label": "Expected Annual Return (%)", "min": 4, "max": 18, "step": 0.5, "value": 10, "hint": "Historical NPS equity return: 10–12%" },
+    { "id": "annuity-rate", "label": "Annuity Rate (%)", "min": 3, "max": 10, "step": 0.25, "value": 6, "hint": "Rate at which annuity corpus generates pension" }
+  ],
+  "outputs": [
+    { "id": "nps-total-corpus", "label": "Total NPS Corpus at Retirement", "highlight": true },
+    { "id": "nps-lumpsum", "label": "Lump Sum Withdrawal (60%)" },
+    { "id": "nps-annuity-corpus", "label": "Annuity Purchase Amount (40%)" },
+    { "id": "nps-monthly-pension", "label": "Estimated Monthly Pension" }
+  ],
+  "taxBenefits": [
+    "Contributions up to ₹1.5 lakh deductible under Section 80C",
+    "Additional ₹50,000 deductible under Section 80CCD(1B) — exclusive to NPS",
+    "Employer contributions up to 10% of salary deductible under Section 80CCD(2)",
+    "60% lump sum withdrawal at retirement is completely tax-free"
+  ],
+  "examples": [
+    {
+      "heading": "₹5,000/month NPS — started at 30, retired at 60",
+      "text": "A 30-year-old investing ₹5,000/month in NPS at 10% annual return accumulates approximately ₹1.13 crore at age 60. At retirement: ₹67.6 lakhs (60%) is withdrawn tax-free; ₹45.1 lakhs (40%) buys an annuity. At 6% annuity rate, the estimated monthly pension is approximately ₹22,560."
+    },
+    {
+      "heading": "Tax saving impact — ₹50,000 under 80CCD(1B)",
+      "text": "For a 30% tax bracket employee, the additional ₹50,000 NPS deduction under Section 80CCD(1B) saves ₹15,000 in taxes every year. Over 30 years, this tax saving itself — invested in mutual funds at 12% — would grow to over ₹45 lakhs."
+    },
+    {
+      "heading": "NPS vs EPF for retirement planning",
+      "text": "NPS and EPF are complementary, not competing options.",
+      "table": {
+        "headers": ["Feature", "NPS", "EPF"],
+        "rows": [
+          ["Return", "Market-linked (8–12%)", "Guaranteed (8.15% in 2026)"],
+          ["80C deduction", "Yes (up to ₹1.5L)", "Yes (up to ₹1.5L)"],
+          ["Extra deduction", "₹50K extra (80CCD1B)", "None"],
+          ["Withdrawal tax", "40% goes to annuity", "Fully tax-free after 5Y"],
+          ["Equity allocation", "Up to 75%", "Not applicable"]
+        ]
+      }
+    }
+  ],
+  "decisionGuide": [
+    {
+      "question": "How much should you contribute to NPS each month?",
+      "answer": "At minimum, contribute enough to claim the full ₹50,000 Section 80CCD(1B) deduction — that is ₹4,167/month. Beyond that, increase contributions if you want to supplement EPF for retirement. NPS works best as part of a diversified retirement strategy alongside EPF, PPF, and equity SIPs."
+    },
+    {
+      "question": "What asset allocation should you choose in NPS?",
+      "answer": "The Aggressive Life Cycle Fund (LC75) allocates 75% to equity until age 35, then gradually reduces. For investors under 40, the higher equity allocation significantly improves long-term returns. The NPS Active Choice allows you to manually set allocation up to 75% equity."
+    },
+    {
+      "question": "Can you exit NPS before retirement?",
+      "answer": "Premature exit from NPS (Tier I) before age 60 requires at least 80% of the corpus to be used for annuity purchase — only 20% can be withdrawn as lump sum. This is less favourable than normal exit. After age 60, you can withdraw 60% tax-free. Full premature exit is allowed only for specific medical reasons."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the NPS scheme in India?",
+      "a": "NPS (National Pension System) is a government-regulated retirement savings scheme in India. Open to all Indian citizens aged 18–70, it allows market-linked investments across equity, corporate bonds, and government securities. At retirement (age 60), 60% of the corpus can be withdrawn tax-free; 40% must be used to buy an annuity for regular pension."
+    },
+    {
+      "q": "What is the additional NPS tax benefit under 80CCD(1B)?",
+      "a": "Section 80CCD(1B) allows an additional deduction of up to ₹50,000 for NPS contributions, over and above the ₹1.5 lakh limit of Section 80C. This is exclusive to NPS — no other investment qualifies for this extra ₹50,000 deduction. For a 30% tax bracket individual, this saves up to ₹15,600 in taxes annually."
+    },
+    {
+      "q": "What is the expected return on NPS?",
+      "a": "NPS returns depend on the asset allocation chosen. The equity component (Tier I, LC75 Aggressive Fund) has historically returned 10–12% annually over 10-year periods. The mixed fund with bonds and government securities returns 8–10%. NPS does not guarantee returns — they are market-linked."
+    },
+    {
+      "q": "How much pension will I get from NPS?",
+      "a": "Pension from NPS depends on: (1) total corpus accumulated at retirement; (2) 40% of the corpus used for annuity; (3) annuity rate at the time of purchase (typically 5–7%). A ₹50 lakh annuity corpus at 6% annuity rate generates approximately ₹25,000/month in pension."
+    },
+    {
+      "q": "Is NPS better than PPF for retirement?",
+      "a": "NPS offers higher potential returns (market-linked, up to 12%+ from equity) and an exclusive additional ₹50,000 tax deduction. PPF offers guaranteed, tax-free returns (7.1%) with full liquidity at maturity. For retirement planning under 30, NPS's equity upside is worth considering. For risk-averse investors, PPF is safer."
+    },
+    {
+      "q": "Can I have both EPF and NPS?",
+      "a": "Yes. EPF and NPS are complementary retirement savings tools. EPF contributions are mandatory for most salaried employees. NPS is voluntary and provides an additional tax deduction under 80CCD(1B) not available through EPF. Most financial planners recommend both."
+    }
+  ],
+  "related": [
+    { "title": "PPF Calculator", "url": "/india/ppf-calculator/", "desc": "Tax-free alternative for retirement savings" },
+    { "title": "Income Tax Calculator", "url": "/india/income-tax-calculator/", "desc": "Calculate 80CCD(1B) tax saving from NPS" },
+    { "title": "SIP Calculator", "url": "/india/sip-calculator/", "desc": "Equity SIP for additional retirement corpus" }
+  ],
+  "howToSteps": [
+    { "name": "Enter Monthly Contribution", "text": "Enter how much you plan to contribute to NPS every month. ₹4,167/month claims the full ₹50,000 Section 80CCD(1B) deduction." },
+    { "name": "Set Your Age Details", "text": "Enter your current age and planned retirement age. More years = significantly more corpus due to compounding." },
+    { "name": "Set Return and Annuity Rates", "text": "Enter expected annual return (10% is reasonable for an equity-heavy allocation). Annuity rate of 6% is a realistic current estimate." },
+    { "name": "View Corpus and Pension", "text": "The calculator shows total corpus, the 60% lump sum withdrawal, annuity corpus (40%), and estimated monthly pension." }
+  ],
+  "schema": {
+    "appName": "NPS Calculator India",
+    "appDescription": "Calculate National Pension System corpus, lump sum withdrawal, annuity amount and estimated monthly pension for Indian investors"
+  }
+}

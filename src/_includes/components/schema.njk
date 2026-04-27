@@ -1,0 +1,75 @@
+{#
+  Renders the full ld+json @graph for a calculator page.
+  Expects: calcData (the calculator's data object), title, description,
+           permalink, breadcrumbs, site
+#}
+{% if calcData %}
+{% set schemaGraph = [] %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "{{ calcData.schema.appName }}",
+      "url": "{{ site.url }}{{ permalink }}",
+      "description": "{{ calcData.schema.appDescription }}",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "featureList": "Free, accurate, no login required"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {% for item in calcData.faq %}
+        {
+          "@type": "Question",
+          "name": {{ item.q | dump | safe }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ item.a | dump | safe }}
+          }
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {% for crumb in breadcrumbs %}
+        {
+          "@type": "ListItem",
+          "position": {{ loop.index }},
+          "name": {{ crumb.name | dump | safe }}
+          {% if crumb.url %}, "item": "{{ site.url }}{{ crumb.url }}"{% endif %}
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    },
+    {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".definition-block", ".faq-a"]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Use the {{ calcData.schema.appName }}",
+      "step": [
+        {% for step in calcData.howToSteps %}
+        {
+          "@type": "HowToStep",
+          "position": {{ loop.index }},
+          "name": {{ step.name | dump | safe }},
+          "text": {{ step.text | dump | safe }}
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    }
+  ]
+}
+</script>
+{% endif %}

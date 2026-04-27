@@ -1,0 +1,306 @@
+---
+layout: layouts/base.njk
+---
+{#
+  Universal calculator page layout.
+  Frontmatter provides: market, calculatorId, title, description,
+  h1, dateModified, author, authorUrl, permalink.
+  Data files provide all content via calcData (injected by the page).
+#}
+
+{% set calcData = india[calculatorId] if market == "india" else {} %}
+
+<!-- Schema markup — ld+json in body is valid and parsed by Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": {{ calcData.schema.appName | dump | safe }},
+      "url": "{{ site.url }}{{ permalink }}",
+      "description": {{ calcData.schema.appDescription | dump | safe }},
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [{% for item in calcData.faq %}{"@type":"Question","name":{{ item.q | dump | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ item.a | dump | safe }}}}{% if not loop.last %},{% endif %}{% endfor %}]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [{% for crumb in breadcrumbs %}{"@type":"ListItem","position":{{ loop.index }},"name":{{ crumb.name | dump | safe }}{% if crumb.url %},"item":"{{ site.url }}{{ crumb.url }}"{% endif %}}{% if not loop.last %},{% endif %}{% endfor %}]
+    },
+    {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".definition-block", ".faq-a"]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Use the {{ calcData.schema.appName }}",
+      "step": [{% for step in calcData.howToSteps %}{"@type":"HowToStep","position":{{ loop.index }},"name":{{ step.name | dump | safe }},"text":{{ step.text | dump | safe }}}{% if not loop.last %},{% endif %}{% endfor %}]
+    }
+  ]
+}
+</script>
+
+<main id="main-content">
+  <div class="page-layout">
+    <article class="page-content">
+
+      <!-- H1 + page meta -->
+      <h1>{{ h1 }}</h1>
+      <div class="page-meta">
+        <span>Last updated: <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        {% if author %}
+        <span>Reviewed by <a href="{{ authorUrl }}">{{ author }}</a></span>
+        {% endif %}
+      </div>
+
+      <!-- Definition block -->
+      <section class="definition-block" id="what-is-{{ calculatorId }}">
+        {{ content | safe }}
+      </section>
+
+      <!-- Calculator tool -->
+      <section id="calculator" aria-label="{{ calcData.schema.appName }}">
+        <div class="calculator-widget">
+          <div class="calculator-widget__header">{{ calcData.schema.appName }}</div>
+          <div class="calculator-body">
+
+            <!-- Inputs -->
+            {% for input in calcData.inputs %}
+            <div class="input-group">
+              <label for="{{ input.id }}">{{ input.label }}</label>
+              {% if input.type == "select" %}
+              <select id="{{ input.id }}" name="{{ input.id }}">
+                {% for opt in input.options %}
+                <option value="{{ opt.value }}">{{ opt.label }}</option>
+                {% endfor %}
+              </select>
+              {% else %}
+              <input type="number"
+                     id="{{ input.id }}"
+                     name="{{ input.id }}"
+                     min="{{ input.min }}"
+                     max="{{ input.max }}"
+                     step="{{ input.step }}"
+                     value="{{ input.value }}"
+                     aria-describedby="{% if input.hint %}hint-{{ input.id }}{% endif %}">
+              {% endif %}
+              {% if input.hint %}
+              <span id="hint-{{ input.id }}" class="input-hint">{{ input.hint }}</span>
+              {% endif %}
+            </div>
+            {% endfor %}
+
+            <!-- Results -->
+            <div class="calculator-results" aria-live="polite" aria-atomic="true">
+              {% for output in calcData.outputs %}
+              <div class="result-card{% if output.highlight %} result-card--highlight{% endif %}">
+                <span class="result-label">{{ output.label }}</span>
+                <span class="result-value" id="{{ output.id }}">—</span>
+              </div>
+              {% endfor %}
+            </div>
+
+          </div><!-- /.calculator-body -->
+
+          <!-- Year-by-year breakdown (populated by JS) -->
+          <details class="breakdown-details" id="breakdown-details">
+            <summary>View Year-by-Year Breakdown</summary>
+            <div class="table-scroll">
+              <table class="data-table" id="breakdown-table">
+                <caption>Year-by-year growth breakdown</caption>
+                <thead id="breakdown-head"></thead>
+                <tbody id="breakdown-body"></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- Formula section + static data table -->
+      {% if calcData.staticTable %}
+      <section id="formula">
+        <h2>How the {{ calcData.schema.appName }} Works</h2>
+        {% block formulaContent %}{% endblock %}
+
+        <h3>{{ calcData.staticTable.caption }}</h3>
+        <div class="table-scroll">
+          <table class="data-table">
+            <caption>{{ calcData.staticTable.caption }}</caption>
+            <thead>
+              <tr>
+                {% for h in calcData.staticTable.headers %}
+                <th scope="col">{{ h }}</th>
+                {% endfor %}
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in calcData.staticTable.rows %}
+              <tr>
+                {% for cell in row %}
+                <td>{{ cell }}</td>
+                {% endfor %}
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </section>
+      {% endif %}
+
+      <!-- Bank rates (FD only) -->
+      {% if calcData.bankRates %}
+      <section id="bank-rates">
+        <h2>Current FD Interest Rates — India 2026</h2>
+        <p class="bank-rates-note">{{ calcData.bankRates.note }}</p>
+        <div class="table-scroll">
+          <table class="data-table">
+            <caption>{{ calcData.bankRates.caption }}</caption>
+            <thead>
+              <tr>
+                <th scope="col">Bank</th>
+                <th scope="col">General Public</th>
+                <th scope="col">Senior Citizens</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in calcData.bankRates.rows %}
+              <tr>
+                <td>{{ row.bank }}</td>
+                <td>{{ row.general }}</td>
+                <td>{{ row.senior }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </section>
+      {% endif %}
+
+      <!-- NPS tax benefits -->
+      {% if calcData.taxBenefits %}
+      <section id="tax-benefits">
+        <h2>NPS Tax Benefits 2026</h2>
+        <ul class="benefit-list">
+          {% for benefit in calcData.taxBenefits %}
+          <li>{{ benefit }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
+      <!-- Real-world examples -->
+      {% if calcData.examples %}
+      <section id="examples">
+        <h2>Real-World Examples — {{ site.year }}</h2>
+        {% for example in calcData.examples %}
+        <div class="example-item">
+          <h3>{{ example.heading }}</h3>
+          <p>{{ example.text }}</p>
+          {% if example.table %}
+          <div class="table-scroll">
+            <table class="data-table">
+              <thead>
+                <tr>{% for h in example.table.headers %}<th scope="col">{{ h }}</th>{% endfor %}</tr>
+              </thead>
+              <tbody>
+                {% for row in example.table.rows %}
+                <tr>{% for cell in row %}<td>{{ cell }}</td>{% endfor %}</tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </section>
+      {% endif %}
+
+      <!-- Decision guide -->
+      {% if calcData.decisionGuide %}
+      <section id="guide">
+        <h2>How to Use These Results</h2>
+        <div class="decision-guide">
+          {% for item in calcData.decisionGuide %}
+          <div class="decision-item">
+            <h3>{{ item.question }}</h3>
+            <p>{{ item.answer }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+
+      <!-- HRA formula breakdown (HRA specific) -->
+      {% if calcData.formula %}
+      <section id="formula-breakdown">
+        <h2>HRA Exemption Formula Explained</h2>
+        <p>{{ calcData.formula.description }}:</p>
+        <ul>
+          {% for comp in calcData.formula.components %}
+          <li><strong>{{ comp.label }}:</strong> {{ comp.formula }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
+      <!-- Income tax slabs (income tax specific) -->
+      {% if calcData.newRegimeSlabs %}
+      <section id="tax-slabs">
+        <h2>Income Tax Slabs FY 2026-27 (New Regime)</h2>
+        <div class="table-scroll">
+          <table class="data-table">
+            <caption>New tax regime slabs for FY 2026-27 (AY 2027-28)</caption>
+            <thead>
+              <tr><th scope="col">Income Range</th><th scope="col">Tax Rate</th></tr>
+            </thead>
+            <tbody>
+              {% for slab in calcData.newRegimeSlabs %}
+              <tr>
+                <td>
+                  {% if slab.from == 0 %}Up to {% else %}₹{{ (slab.from / 100000) }}L – {% endif %}
+                  {% if slab.to %}₹{{ (slab.to / 100000) }}L{% else %}Above{% endif %}
+                </td>
+                <td>{{ slab.rate }}%</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Rebate u/s 87A:</strong> {{ calcData.newRegimeRebate.note }}. Standard deduction: ₹75,000.</p>
+      </section>
+      {% endif %}
+
+      <!-- FAQ -->
+      {% include "components/faq.njk" %}
+
+      <!-- Related -->
+      {% include "components/related.njk" %}
+
+    </article>
+
+    <!-- Sidebar -->
+    <aside class="page-sidebar" aria-label="India Calculators navigation">
+      <nav class="sidebar-nav">
+        <h2>India Calculators</h2>
+        <ul>
+          {% for calc in india.calculators %}
+          <li>
+            <a href="{{ calc.url }}"
+               {% if calc.id == calculatorId %}aria-current="page"{% endif %}>
+              {{ calc.title }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</main>
+
+<!-- Calculator JS -->
+<script type="module" src="/assets/js/calculators/{{ calculatorId }}.js" defer></script>

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "sip",
+    "title": "SIP Calculator",
+    "shortDescription": "Calculate monthly SIP returns and final wealth estimate",
+    "url": "/india/sip-calculator/",
+    "category": "Mutual Funds",
+    "featured": true
+  },
+  {
+    "id": "emi",
+    "title": "EMI Calculator",
+    "shortDescription": "Calculate loan EMI, total interest and amortization schedule",
+    "url": "/india/emi-calculator/",
+    "category": "Loans",
+    "featured": true
+  },
+  {
+    "id": "ppf",
+    "title": "PPF Calculator",
+    "shortDescription": "Calculate PPF maturity value at current 7.1% interest rate",
+    "url": "/india/ppf-calculator/",
+    "category": "Government Schemes",
+    "featured": true
+  },
+  {
+    "id": "fd",
+    "title": "FD Calculator",
+    "shortDescription": "Calculate fixed deposit maturity with compound or simple interest",
+    "url": "/india/fd-calculator/",
+    "category": "Banking",
+    "featured": true
+  },
+  {
+    "id": "nps",
+    "title": "NPS Calculator",
+    "shortDescription": "Calculate National Pension Scheme corpus and monthly pension",
+    "url": "/india/nps-calculator/",
+    "category": "Retirement",
+    "featured": false
+  },
+  {
+    "id": "step-up-sip",
+    "title": "Step-Up SIP Calculator",
+    "shortDescription": "Calculate SIP returns with annual investment increase",
+    "url": "/india/step-up-sip-calculator/",
+    "category": "Mutual Funds",
+    "featured": false
+  },
+  {
+    "id": "lumpsum",
+    "title": "Lumpsum Calculator",
+    "shortDescription": "Calculate one-time mutual fund investment returns",
+    "url": "/india/lumpsum-calculator/",
+    "category": "Mutual Funds",
+    "featured": false
+  },
+  {
+    "id": "income-tax",
+    "title": "Income Tax Calculator",
+    "shortDescription": "Compare old vs new tax regime for FY 2026-27",
+    "url": "/india/income-tax-calculator/",
+    "category": "Tax",
+    "featured": true
+  },
+  {
+    "id": "hra",
+    "title": "HRA Calculator",
+    "shortDescription": "Calculate House Rent Allowance exemption and tax saving",
+    "url": "/india/hra-calculator/",
+    "category": "Tax",
+    "featured": false
+  },
+  {
+    "id": "rd",
+    "title": "RD Calculator",
+    "shortDescription": "Calculate recurring deposit maturity value and interest",
+    "url": "/india/rd-calculator/",
+    "category": "Banking",
+    "featured": false
+  }
+]

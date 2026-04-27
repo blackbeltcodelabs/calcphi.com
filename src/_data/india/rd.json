@@ -1,0 +1,101 @@
+{
+  "id": "rd",
+  "defaults": { "monthly": 5000, "rate": 7.0, "months": 36 },
+  "inputs": [
+    { "id": "monthly-deposit", "label": "Monthly Deposit (₹)", "min": 100, "max": 1000000, "step": 100, "value": 5000, "hint": "Minimum: ₹100/month" },
+    { "id": "rd-rate", "label": "Annual Interest Rate (%)", "min": 1, "max": 15, "step": 0.05, "value": 7.0, "hint": "Current SBI RD rate: 6.5–7.0%" },
+    { "id": "rd-tenure", "label": "Tenure (Months)", "min": 6, "max": 120, "step": 1, "value": 36, "hint": "Minimum 6 months, maximum 10 years" }
+  ],
+  "outputs": [
+    { "id": "total-deposited", "label": "Total Deposited" },
+    { "id": "rd-interest", "label": "Interest Earned", "highlight": true },
+    { "id": "rd-maturity", "label": "Maturity Value" }
+  ],
+  "staticTable": {
+    "caption": "RD maturity values at 7% — for ₹5,000 monthly deposit",
+    "headers": ["Tenure", "Total Deposited (₹)", "Interest Earned (₹)", "Maturity Value (₹)"],
+    "rows": [
+      ["1 year (12 months)", "₹60,000", "₹2,284", "₹62,284"],
+      ["2 years (24 months)", "₹1,20,000", "₹9,264", "₹1,29,264"],
+      ["3 years (36 months)", "₹1,80,000", "₹21,340", "₹2,01,340"],
+      ["5 years (60 months)", "₹3,00,000", "₹63,122", "₹3,63,122"]
+    ]
+  },
+  "examples": [
+    {
+      "heading": "Goal-based RD — saving for a vacation in 2 years",
+      "text": "To accumulate ₹1.3 lakhs for a vacation in 2 years, start a ₹5,000/month RD at 7% interest. After 24 months you will have deposited ₹1.2 lakhs and earned approximately ₹9,264 in interest, giving a maturity value of ₹1.29 lakhs."
+    },
+    {
+      "heading": "Child education fund — ₹10,000/month for 5 years",
+      "text": "A ₹10,000/month RD at 7% for 5 years accumulates ₹7.26 lakhs on a total investment of ₹6 lakhs. The ₹1.26 lakh interest earned is taxable. For longer horizons, a SIP in a balanced fund may provide better post-tax returns."
+    },
+    {
+      "heading": "RD vs SIP for short-term goals (3 years)",
+      "text": "For goals under 3 years, RD provides safety and guaranteed returns. SIP in equity funds is volatile over 3 years.",
+      "table": {
+        "headers": ["Option", "Monthly", "3Y Invested", "3Y Maturity", "Risk"],
+        "rows": [
+          ["RD @ 7%", "₹5,000", "₹1,80,000", "₹2,01,340", "None"],
+          ["Debt Fund SIP", "₹5,000", "₹1,80,000", "~₹2,06,000", "Low"],
+          ["Equity SIP @ 12%", "₹5,000", "₹1,80,000", "~₹2,42,000", "High"]
+        ]
+      }
+    }
+  ],
+  "decisionGuide": [
+    {
+      "question": "When should you choose RD over SIP?",
+      "answer": "Choose RD over SIP when your goal is within 1–3 years and you cannot afford any risk. RDs provide guaranteed returns. For goals beyond 5 years, a SIP in equity mutual funds almost always generates higher post-tax returns despite short-term volatility."
+    },
+    {
+      "question": "Is RD interest taxable?",
+      "answer": "Yes. RD interest is fully taxable as 'Income from Other Sources' at your applicable income tax slab rate. Banks deduct TDS at 10% if total interest income (FD + RD combined) exceeds ₹40,000 in a financial year. Submit Form 15G/15H if your income is below the taxable limit."
+    },
+    {
+      "question": "Can you withdraw RD before maturity?",
+      "answer": "Most banks allow premature RD closure with a penalty of 0.5–1% on the applicable rate for the period held. Some banks charge a flat penalty. Missing monthly RD installments typically attracts a small fine (₹1.5–2 per ₹100 per month of delay)."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the current RD interest rate in India in 2026?",
+      "a": "RD interest rates in India in 2026 range from 6.5% to 7.5% at major public and private sector banks. SBI offers 6.5–7.0% depending on tenure. Small finance banks offer higher rates up to 8.5%. Senior citizens receive 0.25–0.5% additional interest."
+    },
+    {
+      "q": "How is RD interest calculated?",
+      "a": "Indian bank RDs use quarterly compounding with a specific formula: M = R × [(1+r)^n − 1] / [1−(1+r)^(−1/3)], where R is monthly deposit, r is quarterly rate, and n is total quarters. This differs from SIP formula as each installment earns interest for a different duration."
+    },
+    {
+      "q": "What is the minimum amount for an RD?",
+      "a": "Most banks allow RDs starting from ₹100/month. Post offices accept ₹100/month as the minimum. There is no maximum limit on RD deposits, though tax rules apply to interest income above ₹40,000/year."
+    },
+    {
+      "q": "What is the difference between an FD and an RD?",
+      "a": "An FD requires a one-time lump sum investment. An RD allows you to deposit a fixed amount every month, making it suitable for regular savers. FD is better for investing a large sum at once; RD is better for building savings from monthly income."
+    },
+    {
+      "q": "Can you take a loan against an RD?",
+      "a": "Yes. Most banks allow loans up to 90% of the RD balance at any point. The loan interest rate is typically 1–2% above the RD rate. This is useful if you need funds urgently without breaking the RD and losing interest."
+    },
+    {
+      "q": "Is RD better than a savings account?",
+      "a": "Yes, significantly. Savings accounts offer 2.5–4% interest, while RDs offer 6.5–7.5%. If you have money sitting in a savings account for more than 1 month, moving it to an RD or FD earns substantially more interest."
+    }
+  ],
+  "related": [
+    { "title": "FD Calculator", "url": "/india/fd-calculator/", "desc": "Compare with lump sum fixed deposit" },
+    { "title": "SIP Calculator", "url": "/india/sip-calculator/", "desc": "Equity alternative for longer goals" },
+    { "title": "PPF Calculator", "url": "/india/ppf-calculator/", "desc": "Tax-free option for long-term monthly savings" }
+  ],
+  "howToSteps": [
+    { "name": "Enter Monthly Deposit", "text": "Enter the fixed amount you will deposit every month into the RD." },
+    { "name": "Set Interest Rate", "text": "Enter your bank's RD interest rate. Indian bank RDs use quarterly compounding." },
+    { "name": "Choose Tenure", "text": "Enter the RD tenure in months. Minimum is 6 months." },
+    { "name": "View Maturity Value", "text": "The calculator shows total deposited, interest earned, and the final maturity amount." }
+  ],
+  "schema": {
+    "appName": "RD Calculator India",
+    "appDescription": "Calculate recurring deposit maturity value and interest earned with quarterly compounding for Indian bank RDs"
+  }
+}

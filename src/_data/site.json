@@ -1,0 +1,21 @@
+{
+  "name": "CalcPhi",
+  "url": "https://calcphi.com",
+  "description": "Free financial calculators for India, USA, Canada, Australia and UK. Accurate formulas, current rates, educational content.",
+  "defaultOgImage": "/assets/images/og/calcphi-default.png",
+  "twitterHandle": "@calcphi",
+  "year": 2026,
+  "markets": [
+    { "id": "india", "label": "India", "url": "/india/", "currency": "INR", "currencySymbol": "₹" },
+    { "id": "usa", "label": "USA", "url": "/usa/", "currency": "USD", "currencySymbol": "$" },
+    { "id": "canada", "label": "Canada", "url": "/canada/", "currency": "CAD", "currencySymbol": "CA$" },
+    { "id": "australia", "label": "Australia", "url": "/australia/", "currency": "AUD", "currencySymbol": "A$" }
+  ],
+  "nav": [
+    { "label": "India", "url": "/india/" },
+    { "label": "USA", "url": "/usa/" },
+    { "label": "Canada", "url": "/canada/" },
+    { "label": "Australia", "url": "/australia/" },
+    { "label": "Blog", "url": "/blog/" }
+  ]
+}

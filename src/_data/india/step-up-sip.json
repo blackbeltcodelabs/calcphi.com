@@ -1,0 +1,93 @@
+{
+  "id": "step-up-sip",
+  "defaults": { "monthly": 5000, "stepup": 10, "rate": 12, "years": 10 },
+  "inputs": [
+    { "id": "sus-monthly", "label": "Initial Monthly SIP (₹)", "min": 500, "max": 500000, "step": 500, "value": 5000, "hint": "SIP amount in year 1" },
+    { "id": "sus-stepup", "label": "Annual Step-Up (%)", "min": 1, "max": 50, "step": 1, "value": 10, "hint": "Increase SIP by this % each year" },
+    { "id": "sus-rate", "label": "Expected Annual Return (%)", "min": 1, "max": 30, "step": 0.5, "value": 12, "hint": "" },
+    { "id": "sus-years", "label": "Investment Period (Years)", "min": 1, "max": 40, "step": 1, "value": 10, "hint": "" }
+  ],
+  "outputs": [
+    { "id": "sus-final-corpus", "label": "Final Corpus", "highlight": true },
+    { "id": "sus-total-invested", "label": "Total Invested" },
+    { "id": "sus-flat-sip-corpus", "label": "Flat SIP Corpus (comparison)" },
+    { "id": "sus-extra-wealth", "label": "Extra Wealth from Step-Up" }
+  ],
+  "examples": [
+    {
+      "heading": "₹5,000/month with 10% annual step-up vs flat SIP — 10 years",
+      "text": "Starting with ₹5,000/month and increasing by 10% every year, total investment over 10 years is ₹9.56 lakhs. The corpus at 12% return is approximately ₹17.38 lakhs. The equivalent flat ₹5,000/month SIP (same starting amount, no step-up) produces ₹11.61 lakhs. Step-up adds ₹5.77 lakhs in extra wealth."
+    },
+    {
+      "heading": "Matching salary increments to SIP increases",
+      "text": "If your salary grows 10–12% annually, step up your SIP by the same percentage. A ₹10,000/month SIP in year 1 growing at 10%/year becomes ₹25,937/month by year 10 — but the exponential corpus growth means the final year's SIP amount contributes disproportionately to total wealth."
+    },
+    {
+      "heading": "Step-up impact at different rates",
+      "text": "The effect of step-up percentage is dramatic over 20 years.",
+      "table": {
+        "headers": ["Step-Up %", "20Y Total Invested", "20Y Corpus (12%)", "vs Flat SIP"],
+        "rows": [
+          ["5%/year", "₹39.9L", "₹1.23Cr", "+₹24L"],
+          ["10%/year", "₹57.3L", "₹1.76Cr", "+₹77L"],
+          ["15%/year", "₹84.4L", "₹2.57Cr", "+₹1.58Cr"]
+        ]
+      }
+    }
+  ],
+  "decisionGuide": [
+    {
+      "question": "By what percentage should you step up your SIP each year?",
+      "answer": "A common rule of thumb is to step up SIP by 10% per year, which roughly matches average salary growth for Indian professionals. A more conservative 5% step-up still adds significantly more wealth over 15–20 years than a flat SIP. Never step up by more than your salary increment percentage."
+    },
+    {
+      "question": "Is a step-up SIP better than starting a new SIP with a higher amount?",
+      "answer": "Starting a step-up SIP early with a lower amount and increasing annually produces similar or better results than waiting to accumulate a larger amount to start with. The early years of compounding matter more than the exact starting amount."
+    },
+    {
+      "question": "When should you not use a step-up SIP?",
+      "answer": "Avoid step-up SIPs if your income is highly variable or if the higher future installments might strain your finances. A consistent flat SIP is better than a step-up SIP you might stop during a difficult year. Consistency beats optimisation."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is a step-up SIP?",
+      "a": "A step-up SIP (also called a top-up SIP or increasing SIP) allows you to automatically increase your monthly investment by a fixed percentage each year. If you start with ₹5,000/month and choose a 10% step-up, your SIP becomes ₹5,500 in year 2, ₹6,050 in year 3, and so on."
+    },
+    {
+      "q": "How much extra wealth does a 10% annual step-up generate?",
+      "a": "A ₹5,000/month flat SIP at 12% for 10 years gives ₹11.61 lakhs. A ₹5,000/month SIP with 10% annual step-up at 12% for 10 years gives approximately ₹17.38 lakhs — nearly 50% more wealth for approximately 60% more total investment."
+    },
+    {
+      "q": "Is a step-up SIP available in all mutual funds?",
+      "a": "Most major mutual fund houses in India — including Zerodha Coin, Groww, Kuvera, and direct fund portals — support step-up SIPs. Some AMCs call it a 'top-up SIP' or 'booster SIP'. You can typically set the step-up percentage and review annually."
+    },
+    {
+      "q": "Can you change the step-up percentage mid-way?",
+      "a": "Policies vary by AMC and platform. Most platforms allow you to modify or cancel the step-up instructions for future years while keeping existing SIP installments intact. Some require cancelling and restarting the SIP with new step-up terms."
+    },
+    {
+      "q": "What is the difference between step-up SIP and flexi SIP?",
+      "a": "A step-up SIP increases by a fixed percentage each year automatically. A flexi SIP allows you to manually vary the amount each month between a defined minimum and maximum. Step-up SIP is better for automated long-term wealth building; flexi SIP suits variable income earners."
+    },
+    {
+      "q": "Should I increase SIP annually or invest the increment as a new SIP?",
+      "a": "Both achieve similar results mathematically. However, increasing an existing SIP keeps everything consolidated in one fund, which simplifies tracking and reduces transaction complexity. Starting a new SIP with the increment amount gives you flexibility to invest in a different fund."
+    }
+  ],
+  "related": [
+    { "title": "SIP Calculator", "url": "/india/sip-calculator/", "desc": "Calculate flat SIP returns for comparison" },
+    { "title": "Lumpsum Calculator", "url": "/india/lumpsum-calculator/", "desc": "One-time investment growth estimate" },
+    { "title": "NPS Calculator", "url": "/india/nps-calculator/", "desc": "Retirement corpus with step-up contributions" }
+  ],
+  "howToSteps": [
+    { "name": "Enter Initial Monthly SIP", "text": "Enter the SIP amount you will invest in year 1." },
+    { "name": "Set Annual Step-Up Percentage", "text": "Enter the percentage by which you will increase your SIP each year. 10% is a common choice matching average salary growth." },
+    { "name": "Set Return Rate and Duration", "text": "Enter expected annual return rate and total investment period in years." },
+    { "name": "Compare with Flat SIP", "text": "The calculator shows your step-up corpus alongside the flat SIP corpus, so you can see exactly how much extra wealth the annual increases generate." }
+  ],
+  "schema": {
+    "appName": "Step-Up SIP Calculator India",
+    "appDescription": "Calculate SIP returns with annual investment increases. Compare step-up SIP corpus against flat SIP to see the extra wealth generated."
+  }
+}
