@@ -1,0 +1,76 @@
+---
+layout: layouts/base.njk
+---
+{% set author = authors[authorId] %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ author.name }}",
+  "jobTitle": "{{ author.title }}",
+  "description": {{ author.shortBio | dump | safe }},
+  "url": "{{ site.url }}{{ author.url }}",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "CalcPhi",
+    "url": "{{ site.url }}"
+  },
+  "knowsAbout": {{ author.expertise | dump | safe }},
+  "sameAs": ["{{ author.linkedin }}"]
+}
+</script>
+
+<main id="main-content">
+  <div class="author-page">
+
+    <div class="author-page__header">
+      <div class="author-avatar author-avatar--lg" style="--avatar-bg: {{ author.avatarColor }}">
+        {{ author.initials }}
+      </div>
+      <div class="author-page__intro">
+        <p class="author-page__credentials">{{ author.credentials }}</p>
+        <h1>{{ author.name }}</h1>
+        <p class="author-page__title">{{ author.title }}</p>
+        {% if author.linkedin %}
+        <a href="{{ author.linkedin }}" class="author-page__linkedin" rel="noopener noreferrer nofollow" target="_blank">
+          LinkedIn Profile →
+        </a>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="author-page__body">
+      <section class="author-page__section">
+        <h2>About {{ author.name }}</h2>
+        <p>{{ author.fullBio }}</p>
+      </section>
+
+      <section class="author-page__section">
+        <h2>Areas of Expertise</h2>
+        <ul class="author-expertise-list">
+          {% for skill in author.expertise %}
+          <li>{{ skill }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+
+      {% if author.articles and author.articles.length %}
+      <section class="author-page__section">
+        <h2>Articles by {{ author.name }}</h2>
+        <ul class="author-articles-list">
+          {% for article in author.articles %}
+          <li><a href="{{ article.url }}">{{ article.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
+      <section class="author-page__section author-page__disclaimer">
+        <h2>Editorial Independence</h2>
+        <p>All content produced by {{ author.name }} for CalcPhi is editorially independent. Calculator results and educational content are never influenced by advertising relationships or affiliate commissions. Figures are sourced directly from authoritative government and regulatory publications. See our <a href="/about/">editorial standards</a> for full details.</p>
+      </section>
+    </div>
+
+  </div>
+</main>

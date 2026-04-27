@@ -1,0 +1,50 @@
+{
+  "priya-sharma": {
+    "id": "priya-sharma",
+    "name": "Priya Sharma",
+    "credentials": "CFA",
+    "title": "Investment Analyst & CFA Charterholder",
+    "initials": "PS",
+    "avatarColor": "#1a3d6e",
+    "shortBio": "Priya is a CFA charterholder with 10 years of experience in equity research and mutual fund analysis. She has covered Indian capital markets for leading asset management firms and specialises in SIP strategy, fund selection, and long-term wealth creation.",
+    "fullBio": "Priya Sharma is a CFA charterholder with over 10 years of experience in equity research and mutual fund analysis across Indian capital markets. She has worked with leading asset management firms evaluating large-cap, mid-cap, and multi-asset strategies. Her research has been cited in financial publications covering AMFI-published return data and SEBI-regulated fund performance. At CalcPhi, Priya oversees the accuracy of all investment calculator methodologies and writes content on SIP strategy, lumpsum investing, and long-term wealth planning. Her work is grounded in primary financial data from AMFI, NSE, and BSE rather than commentary.",
+    "expertise": ["Mutual Funds", "SIP Strategy", "Lumpsum Investing", "Equity Research", "Portfolio Construction", "AMFI Data Analysis"],
+    "url": "/about/authors/priya-sharma/",
+    "linkedin": "https://www.linkedin.com/",
+    "articles": [
+      { "title": "SIP vs Lumpsum: Which Investment Strategy Works for You?", "url": "/blog/sip-vs-lumpsum/" }
+    ]
+  },
+  "arjun-mehta": {
+    "id": "arjun-mehta",
+    "name": "Arjun Mehta",
+    "credentials": "CA",
+    "title": "Chartered Accountant & Tax Consultant",
+    "initials": "AM",
+    "avatarColor": "#0284c7",
+    "shortBio": "Arjun is a Chartered Accountant with 12 years of experience in direct taxation, income tax planning, and compliance for salaried individuals and HNIs. He advises clients on old vs new regime selection, HRA optimisation, and 80C investment planning.",
+    "fullBio": "Arjun Mehta is a Chartered Accountant (ICAI member) with over 12 years of experience in direct taxation, income tax planning, and statutory compliance. He has advised hundreds of salaried individuals and high-net-worth clients on tax optimisation strategies, including regime selection under the Finance Act, HRA exemption planning, and maximising deductions under Sections 80C, 80D, 80CCD, and 24(b). At CalcPhi, Arjun is responsible for verifying all income tax calculator logic against CBDT notifications and Finance Act amendments. He ensures that slab rates, rebates, surcharges, and cess figures are accurate and updated within 7 days of any official notification. All tax content on this site reflects current CBDT guidelines and AY 2027-28 provisions.",
+    "expertise": ["Income Tax Planning", "Old vs New Regime", "HRA Exemption", "Section 80C", "Section 80D", "CBDT Compliance", "Tax Filing"],
+    "url": "/about/authors/arjun-mehta/",
+    "linkedin": "https://www.linkedin.com/",
+    "articles": [
+      { "title": "Old vs New Tax Regime FY 2026-27: Which Saves You More?", "url": "/blog/old-vs-new-tax-regime/" }
+    ]
+  },
+  "deepa-krishnan": {
+    "id": "deepa-krishnan",
+    "name": "Deepa Krishnan",
+    "credentials": "CFP",
+    "title": "Certified Financial Planner & Retirement Specialist",
+    "initials": "DK",
+    "avatarColor": "#059669",
+    "shortBio": "Deepa is a CFP professional and SEBI-registered investment advisor with 8 years of experience in retirement planning, NPS, PPF, and fixed-income instruments for Indian investors.",
+    "fullBio": "Deepa Krishnan is a Certified Financial Planner (CFP) and SEBI-registered investment advisor (RIA) with over 8 years of experience in holistic financial planning for Indian investors. Her practice focuses on retirement corpus planning, government-backed savings instruments (PPF, NPS, SCSS), and fixed-income portfolio construction. She has helped clients across income brackets design tax-efficient savings strategies that balance growth, safety, and liquidity. At CalcPhi, Deepa reviews all calculator content related to PPF, NPS, FD, and RD — verifying formulas against PFRDA guidelines, RBI notifications, and official PFRDA-published annuity rates. Her content is designed to give retail investors the same clarity that financial advisors provide their private clients.",
+    "expertise": ["Retirement Planning", "PPF", "NPS", "Fixed Deposits", "PFRDA Guidelines", "CFP Methodology", "SEBI-RIA"],
+    "url": "/about/authors/deepa-krishnan/",
+    "linkedin": "https://www.linkedin.com/",
+    "articles": [
+      { "title": "PPF vs NPS vs FD: Where to Park Your Long-Term Money?", "url": "/blog/ppf-vs-nps-vs-fd/" }
+    ]
+  }
+}

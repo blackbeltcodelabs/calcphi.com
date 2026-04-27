@@ -1,0 +1,49 @@
+---
+layout: layouts/base.njk
+permalink: /about/authors/
+title: "Our Authors & Editorial Team – CalcPhi"
+description: "Meet the CalcPhi editorial team — CFAs, Chartered Accountants, and CFPs who verify every calculator formula and write our financial guides."
+breadcrumbs:
+  - name: Home
+    url: /
+  - name: About
+    url: /about/
+  - name: Authors
+---
+
+<main id="main-content">
+  <div class="hub-hero">
+    <div class="hub-hero__inner">
+      <h1>Our Authors & Editorial Team</h1>
+      <p>Every calculator and article on CalcPhi is verified by a qualified financial professional. Meet the team.</p>
+    </div>
+  </div>
+
+  <div class="hub-content">
+    <p style="max-width:640px; margin-bottom: var(--space-8); color: var(--color-text-secondary)">CalcPhi's editorial team comprises CFAs, Chartered Accountants, and Certified Financial Planners with experience across Indian capital markets, direct taxation, and retirement planning. Their role is to ensure every formula, rate, and piece of advice we publish is accurate, current, and traceable to an authoritative source.</p>
+
+    <div class="authors-grid">
+      {% for key, author in authors %}
+      <a href="{{ author.url }}" class="author-card">
+        <div class="author-avatar author-avatar--md" style="--avatar-bg: {{ author.avatarColor }}">
+          {{ author.initials }}
+        </div>
+        <div class="author-card__body">
+          <p class="author-card__creds">{{ author.credentials }}</p>
+          <h2>{{ author.name }}</h2>
+          <p class="author-card__title">{{ author.title }}</p>
+          <p class="author-card__bio">{{ author.shortBio | truncate(120) }}</p>
+          <span class="author-card__link">View profile →</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+
+    <div class="simple-page" style="padding-top: var(--space-12); padding-left:0; padding-right:0">
+      <h2>Our Editorial Standards</h2>
+      <p>Before any calculator or article is published, the underlying formula or claim is independently verified against at least two authoritative sources — CBDT notifications, AMFI-published data, RBI circulars, PFRDA guidelines, or SEBI publications.</p>
+      <p>When rates change (e.g., PPF rate revision, new tax slabs in the Finance Act), affected pages are updated within 7 days of the official notification. The date of last update is shown at the top of every calculator page.</p>
+      <p>Authors disclose their credentials on their profile pages. No calculator result or editorial recommendation is ever influenced by advertising relationships or affiliate commissions. See our <a href="/about/">full editorial policy</a>.</p>
+    </div>
+  </div>
+</main>

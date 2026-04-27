@@ -1,0 +1,16 @@
+{% if authorId %}
+{% set author = authors[authorId] %}
+<div class="author-bio-card">
+  <div class="author-avatar" style="--avatar-bg: {{ author.avatarColor }}">
+    {{ author.initials }}
+  </div>
+  <div class="author-bio-card__body">
+    <p class="author-bio-card__label">Written by</p>
+    <p class="author-bio-card__name">
+      <a href="{{ author.url }}">{{ author.name }}</a>
+      <span class="author-bio-card__creds">{{ author.credentials }}</span>
+    </p>
+    <p class="author-bio-card__bio">{{ author.shortBio }}</p>
+  </div>
+</div>
+{% endif %}
