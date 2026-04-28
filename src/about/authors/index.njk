@@ -13,68 +13,117 @@ breadcrumbs:
 
 <main id="main-content">
 
-  <div class="hub-hero">
-    <div class="hub-hero__inner">
-      <h1>Our Authors & Editorial Team</h1>
-      <p>Every calculator and article on CalcPhi is verified by a qualified financial professional.</p>
-    </div>
-  </div>
+  <!-- Page header -->
+  <div class="authors-page-header">
+    <div class="authors-page-header__inner">
+      <p class="authors-page-header__eyebrow">Editorial Team</p>
+      <h1>Meet Our Financial Experts</h1>
+      <p class="authors-page-header__sub">Every calculator and article on CalcPhi is written and independently verified by a qualified financial professional. No rate, formula, or recommendation goes live without sign-off from a credentialed expert.</p>
 
-  <div class="authors-index">
-
-    <p class="authors-index__intro">CalcPhi's editorial team comprises CFAs, Chartered Accountants, and Certified Financial Planners with hands-on experience in Indian capital markets, direct taxation, and retirement planning. Their role is to ensure every formula, rate, and piece of guidance we publish is accurate, current, and traceable to an authoritative source.</p>
-
-    <div class="authors-profile-grid">
-      {% for key, author in authors %}
-      <a href="{{ author.url }}" class="author-profile-card">
-        <div class="author-profile-card__img-wrap">
-          <img src="{{ author.image }}"
-               alt="{{ author.name }}, {{ author.credentials }}"
-               width="200" height="200"
-               loading="lazy">
+      <div class="authors-trust-bar">
+        <div class="authors-trust-badge">
+          <span class="authors-trust-badge__icon">◆</span>
+          CFA Institute
         </div>
-        <div class="author-profile-card__body">
-          <span class="author-profile-card__cred">{{ author.credentials }}</span>
-          <h2>{{ author.name }}</h2>
-          <p class="author-profile-card__title">{{ author.title }}</p>
-          <p class="author-profile-card__bio">{{ author.shortBio }}</p>
-          <ul class="author-profile-card__tags">
-            {% for skill in author.expertise | slice(0, 3) %}
-            <li>{{ skill }}</li>
-            {% endfor %}
-          </ul>
-          <span class="author-profile-card__cta">View full profile →</span>
+        <div class="authors-trust-badge">
+          <span class="authors-trust-badge__icon">◆</span>
+          ICAI Certified CA
         </div>
-      </a>
-      {% endfor %}
-    </div>
-
-    <div class="authors-index__standards">
-      <h2>Editorial Standards</h2>
-      <div class="authors-standards-grid">
-        <div class="authors-standard-item">
-          <div class="authors-standard-item__icon">✓</div>
-          <h3>Credential Verification</h3>
-          <p>All authors hold recognised professional qualifications — CFA, CA (ICAI), CFP, or SEBI-RIA registration. Credentials are verified before publishing.</p>
+        <div class="authors-trust-badge">
+          <span class="authors-trust-badge__icon">◆</span>
+          SEBI-Registered RIA
         </div>
-        <div class="authors-standard-item">
-          <div class="authors-standard-item__icon">⟳</div>
-          <h3>Rate Updates Within 7 Days</h3>
-          <p>When government rates or tax slabs change, affected calculator pages are updated within 7 days of the official notification. Authors track CBDT, RBI, and AMFI publications continuously.</p>
-        </div>
-        <div class="authors-standard-item">
-          <div class="authors-standard-item__icon">⊘</div>
-          <h3>Editorial Independence</h3>
-          <p>No calculator result or article recommendation is ever influenced by our advertising or affiliate relationships. Content is written and reviewed on accuracy alone.</p>
-        </div>
-        <div class="authors-standard-item">
-          <div class="authors-standard-item__icon">≥2</div>
-          <h3>Dual Source Verification</h3>
-          <p>Every formula and regulatory figure is verified against at least two authoritative sources before publication — CBDT, AMFI, RBI, PFRDA, or SEBI.</p>
+        <div class="authors-trust-badge">
+          <span class="authors-trust-badge__icon">◆</span>
+          CFP Board
         </div>
       </div>
     </div>
+  </div>
 
+  <!-- Author list -->
+  <div class="authors-list-wrap">
+    <div class="authors-list">
+
+      {% for key, author in authors %}
+      <article class="author-row">
+        <a href="{{ author.url }}" class="author-row__photo-link">
+          <img src="{{ author.image }}"
+               alt="{{ author.name }}, {{ author.credentials }}"
+               class="author-row__photo"
+               width="160" height="160"
+               loading="lazy">
+          <span class="author-row__cred-badge">{{ author.credentials }}</span>
+        </a>
+
+        <div class="author-row__content">
+          <div class="author-row__header">
+            <div class="author-row__identity">
+              <h2><a href="{{ author.url }}">{{ author.name }}</a></h2>
+              <p class="author-row__title">{{ author.title }}</p>
+            </div>
+            <a href="{{ author.url }}" class="author-row__btn">View Profile →</a>
+          </div>
+
+          <p class="author-row__bio">{{ author.shortBio }}</p>
+
+          <div class="author-row__footer">
+            <div class="author-row__tags">
+              {% for skill in author.expertise | slice(0, 4) %}
+              <span class="author-row__tag">{{ skill }}</span>
+              {% endfor %}
+            </div>
+            <div class="author-row__articles-count">
+              <span>{{ author.articles | length }} article{% if author.articles | length != 1 %}s{% endif %} published</span>
+            </div>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+
+    </div>
+  </div>
+
+  <!-- Editorial pledge -->
+  <div class="editorial-pledge">
+    <div class="editorial-pledge__inner">
+      <div class="editorial-pledge__heading">
+        <p class="authors-page-header__eyebrow">Our Standards</p>
+        <h2>The CalcPhi Editorial Pledge</h2>
+        <p>We hold ourselves to the same standards as regulated financial publications — with every fact sourced, every formula verified, and every rate kept current.</p>
+      </div>
+
+      <div class="editorial-pledge__grid">
+        <div class="editorial-pledge__item">
+          <span class="editorial-pledge__num">01</span>
+          <h3>Credential Verification</h3>
+          <p>All authors hold recognised professional qualifications — CFA, CA (ICAI), CFP, or SEBI-RIA registration. Credentials are confirmed before any content is published under their name.</p>
+        </div>
+        <div class="editorial-pledge__item">
+          <span class="editorial-pledge__num">02</span>
+          <h3>Dual Source Verification</h3>
+          <p>Every formula and regulatory figure is cross-checked against at least two authoritative sources — CBDT notifications, AMFI data, RBI circulars, PFRDA guidelines, or SEBI publications.</p>
+        </div>
+        <div class="editorial-pledge__item">
+          <span class="editorial-pledge__num">03</span>
+          <h3>Rate Updates Within 7 Days</h3>
+          <p>When government rates or tax slabs change, affected pages are updated within 7 days of the official notification. The date of last update is displayed on every calculator page.</p>
+        </div>
+        <div class="editorial-pledge__item">
+          <span class="editorial-pledge__num">04</span>
+          <h3>Editorial Independence</h3>
+          <p>No calculator result or written recommendation is influenced by advertising or affiliate relationships. All content is evaluated and approved on accuracy alone — nothing else.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom CTA -->
+  <div class="authors-bottom-cta">
+    <div class="authors-bottom-cta__inner">
+      <p>Have a correction or found an error in our content?</p>
+      <a href="/contact/" class="cta-link">Contact the Editorial Team →</a>
+    </div>
   </div>
 
 </main>
