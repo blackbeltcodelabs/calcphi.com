@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
   {% include "components/head.njk" %}
+  {% if breadcrumbs and breadcrumbs | length > 0 %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{% for crumb in breadcrumbs %}{"@type":"ListItem","position":{{ loop.index }},"name":{{ crumb.name | dump | safe }}{% if crumb.url %},"item":"{{ site.url }}{{ crumb.url }}"{% endif %}}{% if not loop.last %},{% endif %}{% endfor %}]
+  }
+  </script>
+  {% endif %}
 </head>
 <body>
   {% include "components/header.njk" %}
