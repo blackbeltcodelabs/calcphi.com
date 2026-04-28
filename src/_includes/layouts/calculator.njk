@@ -8,7 +8,7 @@ layout: layouts/base.njk
   Data files provide all content via calcData (injected by the page).
 #}
 
-{% set calcData = india[calculatorId] if market == "india" else {} %}
+{% if market == "usa" %}{% set calcData = usa[calculatorId] %}{% else %}{% set calcData = india[calculatorId] %}{% endif %}
 
 <!-- Schema markup — ld+json in body is valid and parsed by Google -->
 <script type="application/ld+json">
@@ -22,7 +22,7 @@ layout: layouts/base.njk
       "description": {{ calcData.schema.appDescription | dump | safe }},
       "applicationCategory": "FinanceApplication",
       "operatingSystem": "All",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "{{ 'USD' if market == 'usa' else 'INR' }}" }
     },
     {
       "@type": "FAQPage",
@@ -284,6 +284,23 @@ layout: layouts/base.njk
     </article>
 
     <!-- Sidebar -->
+    {% if market == "usa" %}
+    <aside class="page-sidebar" aria-label="USA Calculators navigation">
+      <nav class="sidebar-nav">
+        <h2>USA Calculators</h2>
+        <ul>
+          {% for calc in usa.calculators %}
+          <li>
+            <a href="{{ calc.url }}"
+               {% if calc.id == calculatorId %}aria-current="page"{% endif %}>
+              {{ calc.title }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </aside>
+    {% else %}
     <aside class="page-sidebar" aria-label="India Calculators navigation">
       <nav class="sidebar-nav">
         <h2>India Calculators</h2>
@@ -299,6 +316,7 @@ layout: layouts/base.njk
         </ul>
       </nav>
     </aside>
+    {% endif %}
   </div>
 </main>
 

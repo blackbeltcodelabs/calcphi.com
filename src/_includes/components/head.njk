@@ -1,7 +1,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>{{ title }} | CalcPhi</title>
+<title>{{ title }}{% if "CalcPhi" not in title %} | CalcPhi{% endif %}</title>
 <meta name="description" content="{{ description }}">
 
 <link rel="canonical" href="{{ site.url }}{{ permalink }}">

@@ -6,6 +6,18 @@ export function formatINR(value) {
   return '₹' + num.toLocaleString('en-IN');
 }
 
+export function formatUSD(value) {
+  const num = Math.round(Number(value));
+  if (isNaN(num)) return '—';
+  return '$' + num.toLocaleString('en-US');
+}
+
+export function formatUSDCents(value) {
+  const num = Number(value);
+  if (isNaN(num)) return '—';
+  return '$' + num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+
 export function formatNumber(value, decimals = 0) {
   const num = Number(value);
   if (isNaN(num)) return '—';

@@ -5,13 +5,14 @@
     { "id": "fd-principal", "label": "Principal Amount (₹)", "min": 1000, "max": 100000000, "step": 1000, "value": 100000, "hint": "" },
     { "id": "fd-rate", "label": "Annual Interest Rate (%)", "min": 1, "max": 15, "step": 0.05, "value": 7.0, "hint": "Check your bank's current FD rates" },
     { "id": "fd-tenure-years", "label": "Tenure (Years)", "min": 0, "max": 10, "step": 1, "value": 3, "hint": "" },
-    { "id": "fd-tenure-months", "label": "Tenure (Months)", "min": 0, "max": 11, "step": 1, "value": 0, "hint": "" }
-  ],
-  "compoundingOptions": [
-    { "value": "monthly", "label": "Monthly" },
-    { "value": "quarterly", "label": "Quarterly (Standard)" },
-    { "value": "annually", "label": "Annually" },
-    { "value": "simple", "label": "Simple Interest" }
+    { "id": "fd-tenure-months", "label": "Tenure (Months)", "min": 0, "max": 11, "step": 1, "value": 0, "hint": "" },
+    { "id": "fd-compounding", "label": "Compounding Frequency", "type": "select", "options": [
+        { "value": "quarterly", "label": "Quarterly (Standard)" },
+        { "value": "monthly", "label": "Monthly" },
+        { "value": "annually", "label": "Annually" },
+        { "value": "simple", "label": "Simple Interest" }
+      ]
+    }
   ],
   "outputs": [
     { "id": "maturity-amount", "label": "Maturity Amount", "highlight": true },

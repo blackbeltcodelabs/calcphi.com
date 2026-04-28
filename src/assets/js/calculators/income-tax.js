@@ -58,7 +58,7 @@ function update() {
   const dHRA = getInputValue('hra-exemption');
   const dHomeLoan = getInputValue('home-loan-interest');
   const dNPS = getInputValue('nps-80ccd1b');
-  const totalDeductions = Math.min(d80c, 150000) + Math.min(d80d, 50000) + dHRA + Math.min(dHomeLoan, 200000) + Math.min(dNPS, 50000);
+  const totalDeductions = Math.min(d80c, 150000) + Math.min(d80d, 25000) + dHRA + Math.min(dHomeLoan, 200000) + Math.min(dNPS, 50000);
 
   const newTax = calculateNewRegime(income);
   const oldTax = calculateOldRegime(income, totalDeductions);
