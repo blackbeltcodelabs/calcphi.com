@@ -35,12 +35,11 @@
 <!-- Language -->
 <meta name="language" content="en">
 
-<!-- Preload critical assets -->
-<link rel="preload" href="/assets/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="/assets/css/main.css"></noscript>
-
 <!-- Critical CSS inlined -->
 {% inlineCss "critical.css" %}
+
+<!-- Main stylesheet -->
+<link rel="stylesheet" href="/assets/css/main.css">
 
 <!-- Favicon (inline SVG data URI) -->
 <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
