@@ -42,10 +42,24 @@ breadcrumbs:
 
     <div class="blog-article__meta">
       <span class="blog-card__tag">Tax</span>
-      <span class="blog-card__date">April 2026</span>
     </div>
 
     <h1>Old vs New Tax Regime FY 2026-27: Which Saves You More?</h1>
+
+    <div class="article-dateline">
+      <span class="article-dateline__item">
+        <span class="article-dateline__label">Published:</span> 28 April 2026
+      </span>
+      <span class="article-dateline__sep">·</span>
+      <span class="article-dateline__item">
+        <span class="article-dateline__label">Last updated:</span> 28 April 2026
+      </span>
+      <span class="article-dateline__sep">·</span>
+      <span class="article-dateline__item">
+        {% set author = authors[authorId] %}
+        By <a href="{{ author.url }}">{{ author.name }}</a>, {{ author.credentials }}
+      </span>
+    </div>
     <p class="blog-article__intro">From FY 2024-25, the new tax regime became the default. If you do nothing, your employer files your taxes under the new regime. But "default" does not mean "better" — for many salaried Indians with HRA, home loans, and 80C investments, the old regime still wins. Here is exactly how to tell.</p>
 
     <h2>The Key Difference in One Line</h2>

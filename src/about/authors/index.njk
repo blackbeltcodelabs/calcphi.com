@@ -8,42 +8,73 @@ breadcrumbs:
     url: /
   - name: About
     url: /about/
-  - name: Authors
+  - name: Our Authors
 ---
 
 <main id="main-content">
+
   <div class="hub-hero">
     <div class="hub-hero__inner">
       <h1>Our Authors & Editorial Team</h1>
-      <p>Every calculator and article on CalcPhi is verified by a qualified financial professional. Meet the team.</p>
+      <p>Every calculator and article on CalcPhi is verified by a qualified financial professional.</p>
     </div>
   </div>
 
-  <div class="hub-content">
-    <p style="max-width:640px; margin-bottom: var(--space-8); color: var(--color-text-secondary)">CalcPhi's editorial team comprises CFAs, Chartered Accountants, and Certified Financial Planners with experience across Indian capital markets, direct taxation, and retirement planning. Their role is to ensure every formula, rate, and piece of advice we publish is accurate, current, and traceable to an authoritative source.</p>
+  <div class="authors-index">
 
-    <div class="authors-grid">
+    <p class="authors-index__intro">CalcPhi's editorial team comprises CFAs, Chartered Accountants, and Certified Financial Planners with hands-on experience in Indian capital markets, direct taxation, and retirement planning. Their role is to ensure every formula, rate, and piece of guidance we publish is accurate, current, and traceable to an authoritative source.</p>
+
+    <div class="authors-profile-grid">
       {% for key, author in authors %}
-      <a href="{{ author.url }}" class="author-card">
-        <div class="author-avatar author-avatar--md" style="--avatar-bg: {{ author.avatarColor }}">
-          {{ author.initials }}
+      <a href="{{ author.url }}" class="author-profile-card">
+        <div class="author-profile-card__img-wrap">
+          <img src="{{ author.image }}"
+               alt="{{ author.name }}, {{ author.credentials }}"
+               width="200" height="200"
+               loading="lazy">
         </div>
-        <div class="author-card__body">
-          <p class="author-card__creds">{{ author.credentials }}</p>
+        <div class="author-profile-card__body">
+          <span class="author-profile-card__cred">{{ author.credentials }}</span>
           <h2>{{ author.name }}</h2>
-          <p class="author-card__title">{{ author.title }}</p>
-          <p class="author-card__bio">{{ author.shortBio | truncate(120) }}</p>
-          <span class="author-card__link">View profile →</span>
+          <p class="author-profile-card__title">{{ author.title }}</p>
+          <p class="author-profile-card__bio">{{ author.shortBio }}</p>
+          <ul class="author-profile-card__tags">
+            {% for skill in author.expertise | slice(0, 3) %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+          </ul>
+          <span class="author-profile-card__cta">View full profile →</span>
         </div>
       </a>
       {% endfor %}
     </div>
 
-    <div class="simple-page" style="padding-top: var(--space-12); padding-left:0; padding-right:0">
-      <h2>Our Editorial Standards</h2>
-      <p>Before any calculator or article is published, the underlying formula or claim is independently verified against at least two authoritative sources — CBDT notifications, AMFI-published data, RBI circulars, PFRDA guidelines, or SEBI publications.</p>
-      <p>When rates change (e.g., PPF rate revision, new tax slabs in the Finance Act), affected pages are updated within 7 days of the official notification. The date of last update is shown at the top of every calculator page.</p>
-      <p>Authors disclose their credentials on their profile pages. No calculator result or editorial recommendation is ever influenced by advertising relationships or affiliate commissions. See our <a href="/about/">full editorial policy</a>.</p>
+    <div class="authors-index__standards">
+      <h2>Editorial Standards</h2>
+      <div class="authors-standards-grid">
+        <div class="authors-standard-item">
+          <div class="authors-standard-item__icon">✓</div>
+          <h3>Credential Verification</h3>
+          <p>All authors hold recognised professional qualifications — CFA, CA (ICAI), CFP, or SEBI-RIA registration. Credentials are verified before publishing.</p>
+        </div>
+        <div class="authors-standard-item">
+          <div class="authors-standard-item__icon">⟳</div>
+          <h3>Rate Updates Within 7 Days</h3>
+          <p>When government rates or tax slabs change, affected calculator pages are updated within 7 days of the official notification. Authors track CBDT, RBI, and AMFI publications continuously.</p>
+        </div>
+        <div class="authors-standard-item">
+          <div class="authors-standard-item__icon">⊘</div>
+          <h3>Editorial Independence</h3>
+          <p>No calculator result or article recommendation is ever influenced by our advertising or affiliate relationships. Content is written and reviewed on accuracy alone.</p>
+        </div>
+        <div class="authors-standard-item">
+          <div class="authors-standard-item__icon">≥2</div>
+          <h3>Dual Source Verification</h3>
+          <p>Every formula and regulatory figure is verified against at least two authoritative sources before publication — CBDT, AMFI, RBI, PFRDA, or SEBI.</p>
+        </div>
+      </div>
     </div>
+
   </div>
+
 </main>

@@ -1,16 +1,22 @@
 {% if authorId %}
 {% set author = authors[authorId] %}
 <div class="author-bio-card">
-  <div class="author-avatar" style="--avatar-bg: {{ author.avatarColor }}">
-    {{ author.initials }}
-  </div>
+  <a href="{{ author.url }}" class="author-bio-card__img-link">
+    <img src="{{ author.image }}"
+         alt="{{ author.name }}, {{ author.credentials }}"
+         class="author-bio-card__photo"
+         width="80" height="80"
+         loading="lazy">
+  </a>
   <div class="author-bio-card__body">
     <p class="author-bio-card__label">Written by</p>
     <p class="author-bio-card__name">
       <a href="{{ author.url }}">{{ author.name }}</a>
       <span class="author-bio-card__creds">{{ author.credentials }}</span>
     </p>
+    <p class="author-bio-card__title">{{ author.title }}</p>
     <p class="author-bio-card__bio">{{ author.shortBio }}</p>
+    <a href="{{ author.url }}" class="author-bio-card__profile-link">View full profile →</a>
   </div>
 </div>
 {% endif %}
