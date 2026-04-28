@@ -35,6 +35,8 @@
     { "source": "/india/step-up-sip.html", "destination": "/india/step-up-sip-calculator/", "permanent": true },
     { "source": "/india/income-tax-calculator.html", "destination": "/india/income-tax-calculator/", "permanent": true },
     { "source": "/india/hra-calculator.html", "destination": "/india/hra-calculator/", "permanent": true },
+    { "source": "/india/blog/retire-early-india-guide.html", "destination": "/blog/retire-early-india-guide/", "permanent": true },
+    { "source": "/india/blog/:path*", "destination": "/blog/:path*", "permanent": true },
     { "source": "/india/about.html", "destination": "/about/", "permanent": true },
     { "source": "/india/contact.html", "destination": "/contact/", "permanent": true },
     { "source": "/india/privacy.html", "destination": "/privacy/", "permanent": true },
