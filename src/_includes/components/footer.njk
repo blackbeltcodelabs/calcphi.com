@@ -1,54 +1,76 @@
-<footer class="site-footer">
-  <div class="footer-inner">
-    <nav class="footer-nav" aria-label="Footer navigation">
-      <div class="footer-column">
-        <h3>India Calculators</h3>
-        <ul>
-          <li><a href="/india/sip-calculator/">SIP Calculator</a></li>
-          <li><a href="/india/emi-calculator/">EMI Calculator</a></li>
-          <li><a href="/india/ppf-calculator/">PPF Calculator</a></li>
-          <li><a href="/india/fd-calculator/">FD Calculator</a></li>
-          <li><a href="/india/income-tax-calculator/">Income Tax Calculator</a></li>
-          <li><a href="/india/nps-calculator/">NPS Calculator</a></li>
-          <li><a href="/india/">All India Calculators</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h3>More India Tools</h3>
-        <ul>
-          <li><a href="/india/step-up-sip-calculator/">Step-Up SIP Calculator</a></li>
-          <li><a href="/india/lumpsum-calculator/">Lumpsum Calculator</a></li>
-          <li><a href="/india/hra-calculator/">HRA Calculator</a></li>
-          <li><a href="/india/rd-calculator/">RD Calculator</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h3>Other Markets</h3>
-        <ul>
-          <li><a href="/usa/">USA Calculators</a></li>
-          <li><a href="/canada/">Canada Calculators</a></li>
-          <li><a href="/australia/">Australia Calculators</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h3>Company</h3>
-        <ul>
-          <li><a href="/about/">About CalcPhi</a></li>
-          <li><a href="/about/authors/">Our Authors</a></li>
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/contact/">Contact</a></li>
-          <li><a href="/help/">Help & FAQs</a></li>
-          <li><a href="/privacy/">Privacy Policy</a></li>
-        </ul>
-      </div>
-    </nav>
+<footer class="cp-footer">
+  <div class="container">
+    <div class="cp-footer__grid">
 
-    <div class="footer-bottom">
-      <div class="footer-disclaimer">
-        <p>CalcPhi calculators are for educational and estimation purposes only. Results are not financial advice. Consult a SEBI-registered financial advisor before making investment decisions.</p>
-        <p>Mutual fund investments are subject to market risks. Past returns do not guarantee future performance.</p>
+      <!-- Col 1: Brand -->
+      <div class="cp-footer__brand">
+        <a href="/" class="cp-logo" aria-label="CalcPhi">
+          <span class="cp-logo-tile">φ</span>
+          <span class="cp-logo-wm">Calc<em>Phi</em></span>
+        </a>
+        <p class="cp-footer__desc">
+          Free financial calculators for India, USA, Canada &amp; Australia.
+          No login. Just maths.
+        </p>
+        <div class="cp-footer__markets">
+          <a href="/india/" class="cp-footer__mchip">🇮🇳 India</a>
+          <a href="/usa/" class="cp-footer__mchip">🇺🇸 USA</a>
+          <a href="/canada/" class="cp-footer__mchip">🇨🇦 Canada</a>
+          <a href="/australia/" class="cp-footer__mchip">🇦🇺 Australia</a>
+        </div>
       </div>
-      <p class="footer-copy">&copy; {{ site.year }} CalcPhi. All rights reserved.</p>
+
+      <!-- Col 2: SIP & MF -->
+      <div class="cp-footer__col">
+        <div class="cp-footer__head">SIP &amp; MF</div>
+        <a href="/india/sip-calculator/">SIP Calculator</a>
+        <a href="/india/step-up-sip-calculator/">Step-up SIP</a>
+        <a href="/india/lumpsum-calculator/">Lumpsum</a>
+        <a href="/india/nps-calculator/">NPS Calculator</a>
+        <a href="/india/ppf-calculator/">PPF Calculator</a>
+        <a href="/india/rd-calculator/">RD Calculator</a>
+      </div>
+
+      <!-- Col 3: Loans & EMI -->
+      <div class="cp-footer__col">
+        <div class="cp-footer__head">Loans &amp; EMI</div>
+        <a href="/india/emi-calculator/">Home Loan EMI</a>
+        <a href="/india/emi-calculator/">Car Loan EMI</a>
+        <a href="/india/emi-calculator/">Personal Loan</a>
+        <a href="/india/fd-calculator/">FD Calculator</a>
+      </div>
+
+      <!-- Col 4: Tax & Salary -->
+      <div class="cp-footer__col">
+        <div class="cp-footer__head">Tax &amp; Salary</div>
+        <a href="/india/income-tax-calculator/">Income Tax</a>
+        <a href="/india/hra-calculator/">HRA Calculator</a>
+        <a href="/india/income-tax-calculator/">New vs Old Regime</a>
+        <a href="/india/">All India Tools</a>
+      </div>
+
+      <!-- Col 5: Company -->
+      <div class="cp-footer__col">
+        <div class="cp-footer__head">Company</div>
+        <a href="/about/">About</a>
+        <a href="/about/authors/">Our Authors</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/">Contact</a>
+        <a href="/help/">Help &amp; FAQs</a>
+        <a href="/privacy/">Privacy</a>
+      </div>
+
+    </div>
+
+    <div class="cp-footer__divider"></div>
+
+    <div class="cp-footer__bottom">
+      <p class="cp-footer__disclaimer">
+        CalcPhi calculators are for educational and estimation purposes only.
+        Results are not financial advice. Mutual fund investments are subject to
+        market risks. Consult a SEBI-registered advisor before investing.
+      </p>
+      <p class="cp-footer__copy">&copy; {{ site.year }} CalcPhi. All rights reserved.</p>
     </div>
   </div>
 </footer>

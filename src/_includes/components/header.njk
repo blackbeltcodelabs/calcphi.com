@@ -1,26 +1,104 @@
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<header class="site-header">
-  <div class="site-header__inner">
-    <a href="/" class="site-logo" aria-label="CalcPhi — Financial Calculators">
-      <img src="/assets/images/logo.svg" alt="CalcPhi" width="120" height="32" loading="eager">
-    </a>
-
-    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-      <ul>
-        {% for item in site.nav %}
-        <li>
-          <a href="{{ item.url }}"
-             {% if page.url.startsWith(item.url) and item.url != "/" %}aria-current="page"{% endif %}>
-            {{ item.label }}
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
-    </nav>
+<div class="cp-header-wrap">
+  <!-- Announcement strip -->
+  <div class="cp-announce">
+    <span class="hide-mobile">All calculations run in your browser.</span>
+    No login required.
+    <span class="cp-announce-sep">·</span>
+    Updated for AY 2026-27
   </div>
-</header>
+
+  <!-- Main header bar -->
+  <header class="cp-header">
+    <div class="cp-header__bar">
+
+      <!-- Logo -->
+      <a href="/" class="cp-logo" aria-label="CalcPhi — Financial Calculators">
+        <span class="cp-logo-tile">φ</span>
+        <span class="cp-logo-wm">Calc<em>Phi</em></span>
+      </a>
+
+      <!-- Primary nav -->
+      <nav class="cp-nav" aria-label="Primary navigation">
+        <a href="/india/"
+           {% if page.url.startsWith('/india/') or page.url.startsWith('/usa/') %}aria-current="true"{% endif %}>
+          Calculators
+        </a>
+        <a href="/india/">Markets</a>
+        <a href="/blog/"
+           {% if page.url.startsWith('/blog/') %}aria-current="page"{% endif %}>
+          Blog
+        </a>
+        <a href="/help/"
+           {% if page.url.startsWith('/help/') %}aria-current="page"{% endif %}>
+          Help
+        </a>
+      </nav>
+
+      <div style="flex:1"></div>
+
+      <!-- Search -->
+      <button class="cp-search-btn" aria-label="Search calculators" onclick="document.getElementById('cp-search-input')?.focus()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>
+        </svg>
+        <span>Search calculators…</span>
+        <span class="cp-search-spacer"></span>
+        <kbd class="cp-search-kbd">⌘K</kbd>
+      </button>
+
+      <!-- Market picker -->
+      <details class="cp-market">
+        <summary aria-label="Choose market">
+          🇮🇳 India
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </summary>
+        <div class="cp-market-dropdown">
+          <a href="/india/">🇮🇳 <strong>India</strong> · INR</a>
+          <a href="/usa/">🇺🇸 <strong>USA</strong> · USD</a>
+          <a href="/canada/">🇨🇦 <strong>Canada</strong> · CAD</a>
+          <a href="/australia/">🇦🇺 <strong>Australia</strong> · AUD</a>
+        </div>
+      </details>
+
+      <!-- Mobile toggle -->
+      <button class="cp-mobile-toggle" aria-label="Toggle navigation" id="nav-toggle" aria-expanded="false" aria-controls="cp-mobile-nav">
+        <span class="cp-ham">
+          <span></span><span></span><span></span>
+        </span>
+      </button>
+
+    </div>
+
+    <!-- Mobile nav (hidden by default) -->
+    <nav id="cp-mobile-nav" class="cp-mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="/india/">Calculators</a>
+      <a href="/india/">Markets</a>
+      <a href="/blog/">Blog</a>
+      <a href="/help/">Help</a>
+      <div class="cp-mobile-nav__markets">
+        <a href="/india/">🇮🇳 India</a>
+        <a href="/usa/">🇺🇸 USA</a>
+        <a href="/canada/">🇨🇦 Canada</a>
+        <a href="/australia/">🇦🇺 Australia</a>
+      </div>
+    </nav>
+  </header>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('nav-toggle');
+  var nav = document.getElementById('cp-mobile-nav');
+  if (btn && nav) {
+    btn.addEventListener('click', function() {
+      var open = nav.hasAttribute('hidden');
+      if (open) { nav.removeAttribute('hidden'); btn.setAttribute('aria-expanded', 'true'); }
+      else { nav.setAttribute('hidden', ''); btn.setAttribute('aria-expanded', 'false'); }
+    });
+  }
+})();
+</script>

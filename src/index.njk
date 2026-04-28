@@ -1,109 +1,336 @@
 ---
 layout: layouts/base.njk
 permalink: /
-title: "Free Financial Calculators – India, USA, Canada, Australia"
-description: "Free, accurate financial calculators for India, USA, Canada and Australia. SIP, EMI, PPF, Mortgage, 401k, and more. No signup required."
+title: "Free Financial Calculators – India, USA, Canada, Australia | CalcPhi"
+description: "Free, accurate financial calculators for India, USA, Canada and Australia. SIP, EMI, PPF, Income Tax, and more — no signup required. Updated for 2026."
 ---
 
 <main id="main-content">
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero__inner">
-      <h1>Financial Calculators for Every Market</h1>
-      <p>Free, accurate calculators with educational content. No signup required. Updated for 2026.</p>
-      <a href="/india/" class="hero-cta">Start with India Calculators →</a>
+  <!-- ── Hero ── -->
+  <section class="cp-hero">
+    <div class="container">
+      <div class="cp-hero__inner">
+        <div class="cp-hero__text">
+          <div class="cp-tag">259 free calculators · 4 markets</div>
+          <h1 class="cp-hero__h1">
+            Money maths,<br>
+            <em class="cp-hero__accent">solved.</em>
+          </h1>
+          <p class="cp-hero__sub">SIPs, EMIs, taxes, retirement — every calculator you'll ever need, free, fast, and tuned for India.</p>
+          <div class="cp-hero__ctas">
+            <a href="/india/sip-calculator/" class="cp-btn cp-btn-primary">Open SIP calculator →</a>
+            <a href="/india/" class="cp-btn cp-btn-ghost">Browse all 108 →</a>
+          </div>
+          <div class="cp-hero__metrics">
+            <div class="cp-metric">
+              <span class="cp-metric__n">259</span>
+              <span class="cp-metric__l">calculators</span>
+            </div>
+            <div class="cp-metric">
+              <span class="cp-metric__n">4</span>
+              <span class="cp-metric__l">markets</span>
+            </div>
+            <div class="cp-metric">
+              <span class="cp-metric__n">22M</span>
+              <span class="cp-metric__l">monthly users</span>
+            </div>
+            <div class="cp-metric">
+              <span class="cp-metric__n" style="color:var(--accent)">100%</span>
+              <span class="cp-metric__l">free, forever</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cp-hero__visual" aria-hidden="true">
+          <div class="cp-hero__widget">
+            <div class="cp-hw__header">
+              <span class="cp-hw__title">SIP Calculator</span>
+              <span class="cp-hw__badge">Live</span>
+            </div>
+            <div class="cp-hw__body">
+              <div class="cp-hw__row">
+                <span class="cp-hw__label">Monthly SIP</span>
+                <span class="cp-hw__val">₹10,000</span>
+              </div>
+              <div class="cp-hw__slider-track"><div class="cp-hw__slider-fill" style="width:60%"></div></div>
+              <div class="cp-hw__row">
+                <span class="cp-hw__label">Annual Return</span>
+                <span class="cp-hw__val">12%</span>
+              </div>
+              <div class="cp-hw__slider-track"><div class="cp-hw__slider-fill" style="width:48%"></div></div>
+              <div class="cp-hw__row">
+                <span class="cp-hw__label">Tenure</span>
+                <span class="cp-hw__val">15 Years</span>
+              </div>
+              <div class="cp-hw__slider-track"><div class="cp-hw__slider-fill" style="width:75%"></div></div>
+            </div>
+            <div class="cp-hw__result">
+              <div class="cp-hw__donut-wrap">
+                <svg width="120" height="120" viewBox="0 0 42 42" aria-label="Returns breakdown">
+                  <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="var(--line)" stroke-width="4"/>
+                  <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="var(--accent)" stroke-width="4"
+                    stroke-dasharray="63 37" stroke-dashoffset="25" stroke-linecap="round"/>
+                  <text x="21" y="19.5" text-anchor="middle" font-size="4.5" fill="var(--ink-3)" font-family="sans-serif">Returns</text>
+                  <text x="21" y="24.5" text-anchor="middle" font-size="5.5" fill="var(--ink)" font-weight="600" font-family="sans-serif">63%</text>
+                </svg>
+              </div>
+              <div class="cp-hw__stats">
+                <div class="cp-hw__stat">
+                  <span class="cp-hw__stat-l">Invested</span>
+                  <span class="cp-hw__stat-v">₹18.0L</span>
+                </div>
+                <div class="cp-hw__stat">
+                  <span class="cp-hw__stat-l">Returns</span>
+                  <span class="cp-hw__stat-v" style="color:var(--accent)">₹30.4L</span>
+                </div>
+                <div class="cp-hw__stat cp-hw__stat--big">
+                  <span class="cp-hw__stat-l">Total Value</span>
+                  <span class="cp-hw__stat-v">₹48.4L</span>
+                </div>
+              </div>
+            </div>
+            <a href="/india/sip-calculator/" class="cp-hw__cta">Open full SIP calculator →</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Featured calculators -->
-  <section class="home-section">
-    <h2>Popular Calculators</h2>
-    <div class="calc-grid">
-      <a href="/india/sip-calculator/" class="calc-card">
-        <span class="calc-card__market">India</span>
-        <h3>SIP Calculator</h3>
-        <p>Calculate monthly SIP returns and final wealth estimate at any return rate and tenure.</p>
-        <span class="calc-card__arrow">Calculate →</span>
-      </a>
-      <a href="/india/emi-calculator/" class="calc-card">
-        <span class="calc-card__market">India</span>
-        <h3>EMI Calculator</h3>
-        <p>Compute monthly EMI for home loans, car loans, and personal loans with amortization.</p>
-        <span class="calc-card__arrow">Calculate →</span>
-      </a>
-      <a href="/india/ppf-calculator/" class="calc-card">
-        <span class="calc-card__market">India</span>
-        <h3>PPF Calculator</h3>
-        <p>Calculate PPF maturity value at current 7.1% rate with full year-by-year breakdown.</p>
-        <span class="calc-card__arrow">Calculate →</span>
-      </a>
-      <a href="/india/income-tax-calculator/" class="calc-card">
-        <span class="calc-card__market">India</span>
-        <h3>Income Tax Calculator</h3>
-        <p>Compare old vs new tax regime for FY 2026-27. Find which saves more tax for you.</p>
-        <span class="calc-card__arrow">Calculate →</span>
-      </a>
-      <a href="/india/fd-calculator/" class="calc-card">
-        <span class="calc-card__market">India</span>
-        <h3>FD Calculator</h3>
-        <p>Fixed deposit maturity value with quarterly, monthly or annual compounding.</p>
-        <span class="calc-card__arrow">Calculate →</span>
-      </a>
-      <a href="/india/nps-calculator/" class="calc-card">
-        <span class="calc-card__market">India</span>
-        <h3>NPS Calculator</h3>
-        <p>Estimate retirement corpus and monthly pension from National Pension System.</p>
-        <span class="calc-card__arrow">Calculate →</span>
-      </a>
+  <!-- ── Popular calculators ── -->
+  <section class="cp-section">
+    <div class="container">
+      <div class="cp-section-head">
+        <div>
+          <div class="cp-tag">Popular</div>
+          <h2 class="cp-section-head__title">Most-used calculators this week</h2>
+        </div>
+        <a href="/india/" class="cp-section-head__link">View all →</a>
+      </div>
+      <div class="cp-popular-grid">
+
+        <a href="/india/sip-calculator/" class="cp-pcard cp-card">
+          <span class="cp-pcard__rank">★ Top 1</span>
+          <div class="cp-pcard__icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.6 5.6L19 10l-5.4 1.6L12 17l-1.6-5.4L5 10l5.4-1.6z"/></svg>
+          </div>
+          <div class="cp-pcard__name">SIP Calculator</div>
+          <div class="cp-pcard__cat">SIP &amp; Mutual Funds</div>
+          <div class="cp-pcard__divider"></div>
+          <div class="cp-pcard__foot">
+            <span class="cp-pcard__uses">4.2M uses</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+          </div>
+        </a>
+
+        <a href="/india/income-tax-calculator/" class="cp-pcard cp-card">
+          <span class="cp-pcard__rank">★ Top 2</span>
+          <div class="cp-pcard__icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/></svg>
+          </div>
+          <div class="cp-pcard__name">Income Tax Calculator</div>
+          <div class="cp-pcard__cat">Tax &amp; Salary</div>
+          <div class="cp-pcard__divider"></div>
+          <div class="cp-pcard__foot">
+            <span class="cp-pcard__uses">3.8M uses</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+          </div>
+        </a>
+
+        <a href="/india/emi-calculator/" class="cp-pcard cp-card">
+          <span class="cp-pcard__rank">★ Top 3</span>
+          <div class="cp-pcard__icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 3L4 14h7l-1 7 9-11h-7z"/></svg>
+          </div>
+          <div class="cp-pcard__name">Home Loan EMI</div>
+          <div class="cp-pcard__cat">Loans &amp; EMI</div>
+          <div class="cp-pcard__divider"></div>
+          <div class="cp-pcard__foot">
+            <span class="cp-pcard__uses">2.9M uses</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+          </div>
+        </a>
+
+        <a href="/india/ppf-calculator/" class="cp-pcard cp-card">
+          <div class="cp-pcard__icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2V5z"/><path d="M4 19h15"/></svg>
+          </div>
+          <div class="cp-pcard__name">PPF Calculator</div>
+          <div class="cp-pcard__cat">Savings &amp; Deposits</div>
+          <div class="cp-pcard__divider"></div>
+          <div class="cp-pcard__foot">
+            <span class="cp-pcard__uses">1.6M uses</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+          </div>
+        </a>
+
+        <a href="/india/fd-calculator/" class="cp-pcard cp-card">
+          <div class="cp-pcard__icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>
+          </div>
+          <div class="cp-pcard__name">FD Calculator</div>
+          <div class="cp-pcard__cat">Savings &amp; Deposits</div>
+          <div class="cp-pcard__divider"></div>
+          <div class="cp-pcard__foot">
+            <span class="cp-pcard__uses">1.4M uses</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+          </div>
+        </a>
+
+        <a href="/india/nps-calculator/" class="cp-pcard cp-card">
+          <div class="cp-pcard__icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c2 4 6 5 6 10a6 6 0 11-12 0c0-3 2-4 2-7 2 1 3 2 4 4 0-3 0-5 0-7z"/></svg>
+          </div>
+          <div class="cp-pcard__name">NPS Calculator</div>
+          <div class="cp-pcard__cat">Retirement</div>
+          <div class="cp-pcard__divider"></div>
+          <div class="cp-pcard__foot">
+            <span class="cp-pcard__uses">1.1M uses</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+          </div>
+        </a>
+
+        <a href="/india/step-up-sip-calculator/" class="cp-pcard cp-card">
+          <div class="cp-pcard__icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+          </div>
+          <div class="cp-pcard__name">Step-Up SIP</div>
+          <div class="cp-pcard__cat">SIP &amp; Mutual Funds</div>
+          <div class="cp-pcard__divider"></div>
+          <div class="cp-pcard__foot">
+            <span class="cp-pcard__uses">910K uses</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+          </div>
+        </a>
+
+        <a href="/india/hra-calculator/" class="cp-pcard cp-card">
+          <div class="cp-pcard__icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="cp-pcard__name">HRA Calculator</div>
+          <div class="cp-pcard__cat">Tax &amp; Salary</div>
+          <div class="cp-pcard__divider"></div>
+          <div class="cp-pcard__foot">
+            <span class="cp-pcard__uses">780K uses</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+          </div>
+        </a>
+
+      </div>
     </div>
   </section>
 
-  <!-- Market hubs -->
-  <section class="home-section" style="background:var(--color-muted);padding-top:var(--space-10);padding-bottom:var(--space-10);">
-    <h2>Browse by Market</h2>
-    <div class="markets-grid">
-      <a href="/india/" class="market-card">
-        <span class="market-flag">🇮🇳</span>
-        India
-      </a>
-      <div class="market-card market-card--disabled">
-        <span class="market-flag">🇺🇸</span>
-        USA
-        <span class="coming-soon-badge">Coming Soon</span>
+  <!-- ── By market ── -->
+  <section class="cp-section cp-section--muted">
+    <div class="container">
+      <div class="cp-section-head">
+        <div>
+          <div class="cp-tag">By market</div>
+          <h2 class="cp-section-head__title">Calculators tuned to your country</h2>
+          <p class="cp-section-head__sub">Tax slabs, currency, and regulatory defaults differ by country. Pick yours.</p>
+        </div>
       </div>
-      <div class="market-card market-card--disabled">
-        <span class="market-flag">🇨🇦</span>
-        Canada
-        <span class="coming-soon-badge">Coming Soon</span>
-      </div>
-      <div class="market-card market-card--disabled">
-        <span class="market-flag">🇦🇺</span>
-        Australia
-        <span class="coming-soon-badge">Coming Soon</span>
+      <div class="cp-market-grid">
+
+        <a href="/india/" class="cp-mcard cp-card">
+          <div class="cp-mcard__flag">🇮🇳</div>
+          <div class="cp-mcard__name">India</div>
+          <div class="cp-mcard__meta">INR · 108 tools</div>
+          <div class="cp-mcard__divider"></div>
+          <ul class="cp-mcard__list">
+            <li>SIP, PPF, ELSS</li>
+            <li>Income Tax (old vs new)</li>
+            <li>Home Loan EMI</li>
+          </ul>
+          <div class="cp-mcard__cta">Browse India <span aria-hidden="true">→</span></div>
+        </a>
+
+        <div class="cp-mcard cp-card cp-mcard--soon">
+          <div class="cp-mcard__flag">🇺🇸</div>
+          <div class="cp-mcard__name">USA</div>
+          <div class="cp-mcard__meta">USD · 62 tools</div>
+          <div class="cp-mcard__divider"></div>
+          <ul class="cp-mcard__list">
+            <li>401(k), Roth IRA</li>
+            <li>Mortgage</li>
+            <li>Federal &amp; State Tax</li>
+          </ul>
+          <div class="cp-mcard__soon-badge">Coming soon</div>
+        </div>
+
+        <div class="cp-mcard cp-card cp-mcard--soon">
+          <div class="cp-mcard__flag">🇨🇦</div>
+          <div class="cp-mcard__name">Canada</div>
+          <div class="cp-mcard__meta">CAD · 48 tools</div>
+          <div class="cp-mcard__divider"></div>
+          <ul class="cp-mcard__list">
+            <li>RRSP, TFSA</li>
+            <li>CPP &amp; OAS</li>
+            <li>Mortgage stress-test</li>
+          </ul>
+          <div class="cp-mcard__soon-badge">Coming soon</div>
+        </div>
+
+        <div class="cp-mcard cp-card cp-mcard--soon">
+          <div class="cp-mcard__flag">🇦🇺</div>
+          <div class="cp-mcard__name">Australia</div>
+          <div class="cp-mcard__meta">AUD · 41 tools</div>
+          <div class="cp-mcard__divider"></div>
+          <ul class="cp-mcard__list">
+            <li>Superannuation</li>
+            <li>HECS-HELP</li>
+            <li>Stamp duty by state</li>
+          </ul>
+          <div class="cp-mcard__soon-badge">Coming soon</div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Trust signals -->
-  <section class="home-section">
-    <h2>Why CalcPhi?</h2>
-    <div class="trust-grid">
-      <div class="trust-item">
-        <h3>Accurate Formulas</h3>
-        <p>Every calculator uses the correct financial formula for the instrument — not approximations. Results match bank and AMC calculations.</p>
+  <!-- ── Trust strip ── -->
+  <section class="cp-section">
+    <div class="container">
+      <div class="cp-section-head">
+        <div>
+          <div class="cp-tag">Why CalcPhi</div>
+          <h2 class="cp-section-head__title">Built like a public utility</h2>
+        </div>
       </div>
-      <div class="trust-item">
-        <h3>Current Rates</h3>
-        <p>PPF rate, tax slabs, and FD rates updated to reflect 2026 values. We revise data files each quarter.</p>
-      </div>
-      <div class="trust-item">
-        <h3>No Login Required</h3>
-        <p>Every calculator on CalcPhi is free, forever. No account creation, no email, no paywall.</p>
-      </div>
-      <div class="trust-item">
-        <h3>Educational Context</h3>
-        <p>Each calculator is accompanied by formula explanations, real-world examples, and a decision guide so you understand the result.</p>
+      <div class="cp-trust-grid">
+
+        <div class="cp-trust-item">
+          <div class="cp-trust-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>
+          </div>
+          <div class="cp-trust-item__t">Free, forever</div>
+          <p class="cp-trust-item__d">No login, no paywalls. Every calculator is fully usable on first visit.</p>
+        </div>
+
+        <div class="cp-trust-item">
+          <div class="cp-trust-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2V5z"/><path d="M4 19h15"/></svg>
+          </div>
+          <div class="cp-trust-item__t">Formulas shown</div>
+          <p class="cp-trust-item__d">Each tool documents its maths and cites the regulatory source it follows.</p>
+        </div>
+
+        <div class="cp-trust-item">
+          <div class="cp-trust-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>
+          </div>
+          <div class="cp-trust-item__t">4 markets, 1 brand</div>
+          <p class="cp-trust-item__d">108 for India, 62 for the US, 48 for Canada, 41 for Australia — kept current.</p>
+        </div>
+
+        <div class="cp-trust-item">
+          <div class="cp-trust-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>
+          </div>
+          <div class="cp-trust-item__t">Runs in your browser</div>
+          <p class="cp-trust-item__d">No numbers leave your device. Privacy by design, not a checkbox.</p>
+        </div>
+
       </div>
     </div>
   </section>

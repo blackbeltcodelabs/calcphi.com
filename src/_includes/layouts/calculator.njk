@@ -50,7 +50,7 @@ layout: layouts/base.njk
     <article class="page-content">
 
       <!-- H1 + page meta -->
-      <h1>{{ h1 }}</h1>
+      <h1 class="calc-page__h1">{{ h1 }}</h1>
       <div class="page-meta">
         <span>Last updated: <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
         {% if author %}
