@@ -1,0 +1,138 @@
+{
+  "id": "rental-yield",
+  "schema": {
+    "appName": "Rental Yield Calculator India",
+    "appDescription": "Calculate gross and net rental yield for any property in India. Know if your property investment generates market-beating returns."
+  },
+  "inputs": [
+    {
+      "id": "ry-value",
+      "label": "Property Value (₹)",
+      "min": 500000,
+      "max": 500000000,
+      "step": 100000,
+      "value": 8000000
+    },
+    {
+      "id": "ry-rent",
+      "label": "Monthly Rent (₹)",
+      "min": 1000,
+      "max": 500000,
+      "step": 1000,
+      "value": 25000
+    },
+    {
+      "id": "ry-maintenance",
+      "label": "Annual Maintenance Cost (₹)",
+      "min": 0,
+      "max": 500000,
+      "step": 1000,
+      "value": 30000,
+      "hint": "Society charges, repairs, painting"
+    },
+    {
+      "id": "ry-prop-tax",
+      "label": "Annual Property Tax (₹)",
+      "min": 0,
+      "max": 200000,
+      "step": 1000,
+      "value": 12000
+    },
+    {
+      "id": "ry-vacancy",
+      "label": "Annual Vacancy Rate (%)",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "value": 8,
+      "hint": "Typically 1 month/year = 8.3%"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ry-gross-yield",
+      "label": "Gross Rental Yield"
+    },
+    {
+      "id": "ry-net-yield",
+      "label": "Net Rental Yield",
+      "highlight": true
+    },
+    {
+      "id": "ry-monthly-income",
+      "label": "Effective Monthly Income"
+    },
+    {
+      "id": "ry-annual-income",
+      "label": "Annual Net Rental Income"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Rental Yield Calculator."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and optimise your decision."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is a good rental yield in India?",
+      "a": "Net rental yields in Indian metros: Mumbai 2–3%, Bangalore 3–4%, Hyderabad 3–4%, Pune 3–4%, Delhi-NCR 2–3%. Tier 2 cities: 4–6%. Anything above 4% net is considered reasonable. Compare with FD rates (7%) — real estate often loses on yield but wins on capital appreciation."
+    },
+    {
+      "q": "How is rental income taxed in India?",
+      "a": "Rental income is taxed under 'Income from House Property'. Net annual value = annual rent − municipal taxes. Deduct 30% standard deduction + home loan interest. Balance is taxable at your slab rate. For jointly-owned property, income splits between owners. TDS: tenant must deduct TDS if annual rent exceeds ₹2.4 lakh."
+    },
+    {
+      "q": "Should I register a rental agreement?",
+      "a": "Yes. A registered rental agreement above 11 months is required by law in most states. Unregistered agreements are valid for 11 months but cannot be used as evidence in court disputes. Registration cost is 2% of annual rent (Maharashtra). E-registration is available in several states."
+    },
+    {
+      "q": "Is this calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. Calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹80 lakh property rented at ₹25,000/month",
+      "text": "Gross yield = (25,000 × 12) / 80,00,000 = 3.75%. Subtract maintenance ₹30,000 + property tax ₹12,000 + vacancy (1 month rent) ₹25,000 = ₹67,000 costs. Net income = ₹3,00,000 − ₹67,000 = ₹2,33,000. Net yield = 2.91%. Modest yield but property appreciation adds."
+    },
+    {
+      "heading": "Comparing FD yield vs rental yield",
+      "text": "₹80 lakh in FD at 7.1% = ₹5,68,000 annual income (pre-tax). Same property yields ₹2,33,000 net. FD beats rental yield significantly. But if property appreciates 7%/year, total return (yield + appreciation) = ₹7.93 lakh — competitive. The choice depends on your view of future property prices."
+    }
+  ],
+  "related": [
+    {
+      "title": "Rent vs Buy Calculator",
+      "url": "/india/rent-vs-buy-calculator/"
+    },
+    {
+      "title": "Real Estate ROI Calculator",
+      "url": "/india/real-estate-roi-calculator/"
+    },
+    {
+      "title": "Stamp Duty Calculator",
+      "url": "/india/stamp-duty-calculator/"
+    }
+  ]
+}

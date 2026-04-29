@@ -1,0 +1,156 @@
+{
+  "id": "rent-vs-buy",
+  "schema": {
+    "appName": "Rent vs Buy Property Calculator India",
+    "appDescription": "Compare renting vs buying a home in India. Calculate break-even point, total cost of ownership, and wealth difference over 20 years."
+  },
+  "inputs": [
+    {
+      "id": "rvb-price",
+      "label": "Property Price (₹)",
+      "min": 1000000,
+      "max": 500000000,
+      "step": 100000,
+      "value": 8000000
+    },
+    {
+      "id": "rvb-down",
+      "label": "Down Payment (₹)",
+      "min": 0,
+      "max": 100000000,
+      "step": 100000,
+      "value": 1600000
+    },
+    {
+      "id": "rvb-loan-rate",
+      "label": "Home Loan Interest Rate (% p.a.)",
+      "min": 5,
+      "max": 15,
+      "step": 0.1,
+      "value": 8.5
+    },
+    {
+      "id": "rvb-tenure",
+      "label": "Loan Tenure (Years)",
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "value": 20
+    },
+    {
+      "id": "rvb-appreciation",
+      "label": "Annual Property Appreciation (%)",
+      "min": 0,
+      "max": 20,
+      "step": 0.5,
+      "value": 6
+    },
+    {
+      "id": "rvb-rent",
+      "label": "Equivalent Monthly Rent (₹)",
+      "min": 1000,
+      "max": 500000,
+      "step": 1000,
+      "value": 25000
+    },
+    {
+      "id": "rvb-invest-return",
+      "label": "Investment Return if Renting (% p.a.)",
+      "min": 5,
+      "max": 20,
+      "step": 0.5,
+      "value": 12
+    }
+  ],
+  "outputs": [
+    {
+      "id": "rvb-emi",
+      "label": "Monthly EMI if Buying"
+    },
+    {
+      "id": "rvb-future-price",
+      "label": "Property Value After 20 Years"
+    },
+    {
+      "id": "rvb-buy-net",
+      "label": "Net Worth if Buying After 20 Years"
+    },
+    {
+      "id": "rvb-rent-net",
+      "label": "Net Worth if Renting After 20 Years"
+    },
+    {
+      "id": "rvb-verdict",
+      "label": "Verdict",
+      "highlight": true
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Rent vs Buy Calculator."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and optimise your decision."
+    }
+  ],
+  "faq": [
+    {
+      "q": "When does it make sense to buy vs rent in India?",
+      "a": "Buying makes sense when: price-to-rent ratio < 20 (property price < 20× annual rent), you plan to stay 7+ years, EMI is less than 40% of income, and property appreciation > home loan rate. Renting makes sense in expensive cities (Mumbai, Bangalore) where rental yield is 2–3% but loan rates are 8.5%."
+    },
+    {
+      "q": "What is the price-to-rent ratio in Indian cities?",
+      "a": "Mumbai: 50–80× (property very expensive relative to rent). Bangalore: 35–50×. Delhi: 40–60×. Pune: 30–45×. Tier 2 cities: 15–25×. A ratio below 20 generally favours buying; above 30 favours renting and investing the down payment."
+    },
+    {
+      "q": "Is buying property always a good investment in India?",
+      "a": "Not always. Over long periods, Indian real estate has appreciated at 6–8% p.a. in major cities. But equity mutual funds have returned 12–15% p.a. over 20 years. The emotional and security value of owning a home is real but hard to quantify. Factor in maintenance (1–2% p.a.), property tax, and illiquidity."
+    },
+    {
+      "q": "Is this calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. Calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹80 lakh flat in Bangalore — buy or rent?",
+      "text": "Monthly rent for equivalent flat: ₹25,000. EMI at 8.5% for 20 years on ₹64 lakh (80%): ₹55,669. Monthly cost difference: ₹30,669. Investing ₹30,669/month at 12% for 20 years = ₹2.64 crore. Property appreciation (6%): ₹80 lakh → ₹2.57 crore. Very close — emotional preference decides."
+    },
+    {
+      "heading": "Tier 2 city — buy wins clearly",
+      "text": "₹40 lakh property in Pune, monthly rent ₹12,000, EMI ₹26,000. Monthly extra for buying: ₹14,000. At 6% appreciation, property → ₹1.28 crore in 20 years. Renting and investing ₹14,000/month at 12% = ₹1.2 crore. Buying slightly better — plus down payment grows separately."
+    }
+  ],
+  "related": [
+    {
+      "title": "Stamp Duty Calculator",
+      "url": "/india/stamp-duty-calculator/"
+    },
+    {
+      "title": "Home Loan EMI Calculator",
+      "url": "/india/home-loan-emi-calculator/"
+    },
+    {
+      "title": "Rental Yield Calculator",
+      "url": "/india/rental-yield-calculator/"
+    }
+  ]
+}

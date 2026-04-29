@@ -1,0 +1,104 @@
+{
+  "id": "property-registration",
+  "schema": {
+    "appName": "Property Registration Cost Calculator India",
+    "appDescription": "Calculate total property registration charges — stamp duty, registration fee, legal charges, and all other costs for buying property in India."
+  },
+  "inputs": [
+    {
+      "id": "pr-value",
+      "label": "Property Value / Stamp Duty Value (₹)",
+      "min": 100000,
+      "max": 500000000,
+      "step": 100000,
+      "value": 5000000
+    }
+  ],
+  "outputs": [
+    {
+      "id": "pr-stamp",
+      "label": "Stamp Duty (6% assumed)"
+    },
+    {
+      "id": "pr-regn",
+      "label": "Registration Fee (1%)"
+    },
+    {
+      "id": "pr-legal",
+      "label": "Legal & Documentation Charges (Est.)"
+    },
+    {
+      "id": "pr-total",
+      "label": "Total Registration Cost",
+      "highlight": true
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Property Registration Calculator."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and optimise your decision."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What documents are needed for property registration?",
+      "a": "Required: Sale deed (original), PAN card, Aadhaar card, passport photos (buyer + seller), property card/7-12 extract, society NOC, encumbrance certificate, tax receipts, and loan sanction letter if applicable. Some states need additional documents like Form 60/61 for purchases without PAN."
+    },
+    {
+      "q": "How long does property registration take?",
+      "a": "Online registration (e-stamp + appointment): same day in most states. Physical registration at Sub-Registrar office: typically 1–3 days after document submission. Mutation (updating revenue records): 15–60 days after registration. Faster in states with e-registration (Maharashtra, Karnataka, Andhra Pradesh)."
+    },
+    {
+      "q": "What is circle rate in property registration?",
+      "a": "Circle rate is the minimum value at which a property can be registered, set by the government. Even if actual transaction price is lower, stamp duty is calculated on circle rate. In major cities, circle rates are typically 10–40% below market value in prime areas."
+    },
+    {
+      "q": "Is this calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. Calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹50 lakh flat registration in Mumbai",
+      "text": "Stamp duty (6%) ₹3,00,000 + Registration ₹30,000 (capped) + Legal ₹15,000–₹25,000 = Total ₹3,45,000–₹3,55,000. Always budget 7–8% above property price for all charges including GST (if applicable) and society transfer fees."
+    },
+    {
+      "heading": "Resale property vs new flat",
+      "text": "Resale flat has stamp duty on the full transaction value. New property (builder flat) has GST of 5% (or 1% for affordable housing). For a ₹1 crore new flat: GST ₹5 lakh + stamp duty ₹5 lakh + registration ₹50,000 = ₹10.5 lakh in additional charges."
+    }
+  ],
+  "related": [
+    {
+      "title": "Stamp Duty Calculator",
+      "url": "/india/stamp-duty-calculator/"
+    },
+    {
+      "title": "Home Loan EMI Calculator",
+      "url": "/india/home-loan-emi-calculator/"
+    },
+    {
+      "title": "Rent vs Buy Calculator",
+      "url": "/india/rent-vs-buy-calculator/"
+    }
+  ]
+}

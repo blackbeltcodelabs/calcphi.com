@@ -1,0 +1,120 @@
+{
+  "id": "ulip-calculator",
+  "schema": {
+    "appName": "ULIP Calculator India — ULIP vs Mutual Fund Comparison",
+    "appDescription": "Calculate ULIP maturity value and compare with equivalent mutual fund investment. See the true impact of ULIP charges on returns."
+  },
+  "inputs": [
+    {
+      "id": "ulip-premium",
+      "label": "Annual Premium (₹)",
+      "min": 10000,
+      "max": 10000000,
+      "step": 10000,
+      "value": 100000
+    },
+    {
+      "id": "ulip-rate",
+      "label": "Expected Fund Return (% p.a.)",
+      "min": 6,
+      "max": 20,
+      "step": 0.5,
+      "value": 10
+    },
+    {
+      "id": "ulip-years",
+      "label": "Policy Term (Years)",
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "value": 15
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ulip-corpus",
+      "label": "ULIP Maturity Value (Est.)"
+    },
+    {
+      "id": "ulip-mf-compare",
+      "label": "Mutual Fund Corpus (Same Premium)",
+      "highlight": true
+    },
+    {
+      "id": "ulip-invested",
+      "label": "Total Premium Paid"
+    },
+    {
+      "id": "ulip-charge-impact",
+      "label": "Charges Impact (ULIP vs MF)"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the ULIP Calculator."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and optimise your decision."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Should I buy ULIP or separate term + mutual fund?",
+      "a": "Separate term + MF is almost always better. A ULIP combines insurance and investment with high charges (3–7% p.a. in early years). Compare: ₹1 lakh/year in ULIP at 10% for 15 years = approximately ₹22 lakh. Same in MF at 12% (net of 0.5–1% expense ratio) = ₹36 lakh. Plus a ₹1 crore term plan costs ₹15,000/year — far more cover than ULIP provides."
+    },
+    {
+      "q": "When does ULIP make sense?",
+      "a": "ULIP makes sense when: you need life cover + investment in one product (simple), you are in the 30% tax bracket (ULIP maturity is tax-free under Section 10(10D) if annual premium ≤₹2.5 lakh), you want automatic rebalancing between equity and debt, and you will stay for 10+ years (charges reduce significantly after year 5)."
+    },
+    {
+      "q": "What are the main charges in ULIP?",
+      "a": "ULIP charges: Premium Allocation Charge (1–5% deducted upfront), Fund Management Charge (1–1.5% p.a.), Mortality Charge (insurance cost, increases with age), Policy Administration Charge (₹100–₹250/month), and Discontinuation Charge if surrendered early. Total charges can be 3–7% of corpus in early years."
+    },
+    {
+      "q": "Is this calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. Calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹1 lakh/year ULIP vs Term + MF",
+      "text": "ULIP at 10% for 15 years (assuming 2% effective charges): approximately ₹22 lakh maturity. Term insurance (₹1 crore cover) at ₹15,000/year. MF with remaining ₹85,000/year at 12% for 15 years: ₹37.6 lakh. Verdict: Term + MF gives ₹15 lakh more corpus with ₹1 crore more insurance cover."
+    },
+    {
+      "heading": "ULIP for high earners — tax angle",
+      "text": "For a 30% bracket investor with ₹2.5 lakh/year ULIP premium: maturity is tax-free (Section 10(10D)). At 30% tax on MF LTCG (if gained), ULIP might save ₹2–4 lakh tax. But the charge drag still likely exceeds the tax saving. Run the numbers carefully."
+    }
+  ],
+  "related": [
+    {
+      "title": "ELSS Calculator",
+      "url": "/india/elss-calculator/"
+    },
+    {
+      "title": "Term Insurance Calculator",
+      "url": "/india/term-insurance-calculator/"
+    },
+    {
+      "title": "SIP Calculator",
+      "url": "/india/sip-calculator/"
+    }
+  ]
+}

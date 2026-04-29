@@ -1,0 +1,132 @@
+{
+  "id": "gst-calculator",
+  "schema": {
+    "appName": "GST Calculator India 2026",
+    "appDescription": "Calculate GST (Goods and Services Tax) on any amount. Add GST to base price or extract GST from GST-inclusive price. All slab rates covered."
+  },
+  "inputs": [
+    {
+      "id": "gst-amount",
+      "label": "Base Amount (₹)",
+      "min": 0,
+      "max": 100000000,
+      "step": 100,
+      "value": 10000,
+      "hint": "Amount before GST"
+    },
+    {
+      "id": "gst-rate",
+      "label": "GST Rate",
+      "type": "select",
+      "options": [
+        {
+          "value": "5",
+          "label": "5%"
+        },
+        {
+          "value": "12",
+          "label": "12%"
+        },
+        {
+          "value": "18",
+          "label": "18%"
+        },
+        {
+          "value": "28",
+          "label": "28%"
+        },
+        {
+          "value": "0",
+          "label": "0% (Exempt)"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "gst-tax",
+      "label": "GST Amount",
+      "highlight": true
+    },
+    {
+      "id": "gst-total",
+      "label": "Total Amount (with GST)"
+    },
+    {
+      "id": "gst-cgst",
+      "label": "CGST (Central)"
+    },
+    {
+      "id": "gst-sgst",
+      "label": "SGST/UTGST (State)"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the GST Calculator. All inputs have smart defaults."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown table to see how your numbers change over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust the inputs to compare different scenarios and find the best option for your situation."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What are the GST slab rates in India 2026?",
+      "a": "GST has 4 main slabs: 5% (essential goods, basic food items, transport), 12% (processed food, mobiles, medicines), 18% (most services, electronics, restaurants), 28% (luxury goods, cars, tobacco). Basic food items like fresh vegetables, unprocessed grains, and milk are exempt (0%)."
+    },
+    {
+      "q": "What is the difference between CGST and SGST?",
+      "a": "GST is a dual tax: CGST (Central GST) collected by the Centre and SGST (State GST) collected by the state. Each is half the total GST rate. For 18% GST, CGST = 9% and SGST = 9%. For interstate transactions, IGST (Integrated GST) applies instead."
+    },
+    {
+      "q": "Do I need to register for GST?",
+      "a": "GST registration is mandatory for businesses with annual turnover above ₹40 lakh (₹20 lakh for special category states). Service providers must register above ₹20 lakh turnover. E-commerce sellers must register regardless of turnover."
+    },
+    {
+      "q": "Is the GST Calculator free?",
+      "a": "Yes, the GST Calculator on CalcPhi is completely free with no registration required."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser. We do not store any financial data."
+    },
+    {
+      "q": "Can I use the GST Calculator on mobile?",
+      "a": "Yes. CalcPhi is fully mobile-optimised and works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "Restaurant bill calculation (18% GST)",
+      "text": "A restaurant bill of ₹2,000 attracts 18% GST = ₹360 (CGST ₹180 + SGST ₹180). Total payable: ₹2,360. AC restaurants charge 18%; non-AC restaurants up to ₹7,500 turnover threshold charge 5% GST."
+    },
+    {
+      "heading": "Construction service (18% GST)",
+      "text": "Construction service costing ₹10 lakh attracts 18% GST = ₹1.8 lakh. Total invoice: ₹11.8 lakh. Note: affordable housing (under ₹45 lakh) attracts concessional 1% GST under specified schemes."
+    }
+  ],
+  "related": [
+    {
+      "title": "Reverse GST Calculator",
+      "url": "/india/gst-reverse-calculator/"
+    },
+    {
+      "title": "TDS Calculator",
+      "url": "/india/tds-calculator/"
+    },
+    {
+      "title": "Income Tax Calculator",
+      "url": "/india/income-tax-calculator/"
+    }
+  ]
+}

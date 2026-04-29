@@ -1,0 +1,130 @@
+{
+  "id": "term-insurance",
+  "schema": {
+    "appName": "Term Insurance Cover Calculator India",
+    "appDescription": "Calculate recommended life insurance cover amount based on income, liabilities, and dependents. Get an indicative annual premium estimate."
+  },
+  "inputs": [
+    {
+      "id": "ti-income",
+      "label": "Annual Income (₹)",
+      "min": 100000,
+      "max": 100000000,
+      "step": 50000,
+      "value": 1200000
+    },
+    {
+      "id": "ti-age",
+      "label": "Current Age (Years)",
+      "min": 18,
+      "max": 65,
+      "step": 1,
+      "value": 32
+    },
+    {
+      "id": "ti-liabilities",
+      "label": "Total Liabilities (₹)",
+      "min": 0,
+      "max": 100000000,
+      "step": 100000,
+      "value": 3000000,
+      "hint": "Home loan + other EMIs"
+    },
+    {
+      "id": "ti-assets",
+      "label": "Total Assets (₹)",
+      "min": 0,
+      "max": 100000000,
+      "step": 100000,
+      "value": 1000000,
+      "hint": "FD, MF, EPF, etc."
+    },
+    {
+      "id": "ti-dependents",
+      "label": "Number of Dependents",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "value": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ti-cover",
+      "label": "Recommended Cover Amount",
+      "highlight": true
+    },
+    {
+      "id": "ti-premium-est",
+      "label": "Estimated Annual Premium*"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Term Insurance Calculator. Smart defaults are pre-filled."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and optimise your decision."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How much term insurance cover do I need?",
+      "a": "A common rule: cover = 15–20× annual income. But the right cover = human life value (HLV). Calculate: (income × remaining working years) + all liabilities − existing assets. This ensures your family can repay debts and sustain their lifestyle without your income."
+    },
+    {
+      "q": "What is the right age to buy term insurance?",
+      "a": "Buy term insurance as early as possible — premiums are lowest when young and healthy. A 25-year-old pays roughly half the premium of a 35-year-old for the same cover. Buy a long-tenure plan (30–35 years) to cover liabilities until retirement."
+    },
+    {
+      "q": "Which is better — ₹1 crore or ₹2 crore term cover?",
+      "a": "For someone earning ₹10–15 lakh/year with a home loan, ₹1 crore is typically inadequate. ₹1.5–2 crore is recommended. Premium difference is small — ₹1 crore plan at 32 costs ₹10,000–₹12,000/year; ₹2 crore plan costs ₹18,000–₹22,000/year. The additional cover is worth the marginal premium."
+    },
+    {
+      "q": "Is this calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "32-year-old earning ₹12 lakh with home loan",
+      "text": "Annual income ₹12 lakh, remaining working years 28, home loan ₹30 lakh, other assets ₹10 lakh. Recommended cover = (12,00,000 × 28) + 30,00,000 − 10,00,000 = ₹3,56,00,000. Round up to ₹3.5 crore. Estimated premium for ₹3.5 crore cover: ₹28,000–₹35,000/year."
+    },
+    {
+      "heading": "Increasing cover vs flat cover",
+      "text": "Instead of ₹1 crore flat cover, consider ₹75 lakh increasing cover (grows 5%/year). Over 30 years, cover doubles to ₹3+ crore, matching inflation. Premium is similar but protection is far superior in later years when your income and liabilities are higher."
+    }
+  ],
+  "related": [
+    {
+      "title": "Life Insurance Needs",
+      "url": "/india/life-insurance-needs-calculator/"
+    },
+    {
+      "title": "Health Insurance Calculator",
+      "url": "/india/health-insurance-calculator/"
+    },
+    {
+      "title": "EPF Calculator",
+      "url": "/india/epf-calculator/"
+    }
+  ]
+}

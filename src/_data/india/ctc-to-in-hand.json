@@ -1,0 +1,113 @@
+{
+  "id": "ctc-to-in-hand",
+  "schema": {
+    "appName": "CTC to In-Hand Salary Calculator India",
+    "appDescription": "Convert CTC to net in-hand monthly salary. Deduct EPF, professional tax, and income tax. See detailed salary breakup for any CTC."
+  },
+  "inputs": [
+    {
+      "id": "ctc-ctc",
+      "label": "Annual CTC (₹)",
+      "min": 100000,
+      "max": 100000000,
+      "step": 10000,
+      "value": 1200000
+    },
+    {
+      "id": "ctc-basic",
+      "label": "Basic Salary (% of CTC)",
+      "min": 30,
+      "max": 70,
+      "step": 5,
+      "value": 50,
+      "hint": "Typically 40–50% of CTC"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ctc-gross",
+      "label": "Monthly Gross Salary"
+    },
+    {
+      "id": "ctc-pf",
+      "label": "Monthly EPF Deduction"
+    },
+    {
+      "id": "ctc-tax",
+      "label": "Monthly Income Tax (TDS)"
+    },
+    {
+      "id": "ctc-in-hand",
+      "label": "Monthly Net In-Hand",
+      "highlight": true
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the CTC to In-Hand Calculator. Smart defaults are pre-filled."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and find the best option."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How much of CTC do I actually receive as in-hand salary?",
+      "a": "For most salaried employees, net in-hand salary is 65–80% of CTC. A ₹12 lakh CTC typically yields ₹75,000–₹85,000/month in-hand. Deductions include: employer PF (part of CTC), employee PF (12% of basic), professional tax (₹200–₹2,500/year), and TDS based on tax liability."
+    },
+    {
+      "q": "Is employer PF part of CTC?",
+      "a": "Yes. Many companies include employer PF contribution (12% of basic) in CTC. This is a benefit you eventually receive at PF withdrawal but reduces your take-home. Always clarify if the stated CTC is 'inclusive of employer PF' or 'exclusive'."
+    },
+    {
+      "q": "What is the difference between CTC, gross salary, and net salary?",
+      "a": "CTC = total cost to company including all benefits, allowances, and employer contributions. Gross salary = CTC minus employer PF and other benefits not paid as salary. Net/in-hand salary = gross salary minus employee PF, professional tax, and income tax TDS."
+    },
+    {
+      "q": "Is the CTC to In-Hand Calculator free?",
+      "a": "Yes, completely free on CalcPhi with no registration."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser. Your data is never stored."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones and tablets."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹12 lakh CTC — monthly in-hand calculation",
+      "text": "₹12 lakh CTC, basic 50% (₹6 lakh/year): Employer PF = ₹72,000/year. Gross = ₹11,28,000. Employee PF = ₹72,000. New regime TDS ≈ ₹nil (₹12L income, below rebate threshold after deductions). In-hand ≈ ₹88,000/month."
+    },
+    {
+      "heading": "₹25 lakh CTC — high earner breakdown",
+      "text": "₹25 lakh CTC: Gross salary ≈ ₹23.5 lakh. Employee PF ₹1.8 lakh. TDS (new regime) ≈ ₹3.6 lakh. Professional tax ₹2,400. Monthly in-hand ≈ ₹1,53,000. Always negotiate CTC structure — higher basic improves PF but reduces take-home through tax."
+    }
+  ],
+  "related": [
+    {
+      "title": "Income Tax Calculator",
+      "url": "/india/income-tax-calculator/"
+    },
+    {
+      "title": "TDS on Salary Calculator",
+      "url": "/india/tds-on-salary-calculator/"
+    },
+    {
+      "title": "EPF Calculator",
+      "url": "/india/epf-calculator/"
+    }
+  ]
+}

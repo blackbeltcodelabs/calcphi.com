@@ -1,0 +1,122 @@
+{
+  "id": "home-loan-tax",
+  "schema": {
+    "appName": "Home Loan Tax Benefit Calculator India 2026",
+    "appDescription": "Calculate income tax savings from home loan interest (Section 24B) and principal repayment (Section 80C) deductions."
+  },
+  "inputs": [
+    {
+      "id": "hlt-income",
+      "label": "Annual Taxable Income (₹)",
+      "min": 0,
+      "max": 100000000,
+      "step": 10000,
+      "value": 1500000
+    },
+    {
+      "id": "hlt-interest",
+      "label": "Annual Home Loan Interest Paid (₹)",
+      "min": 0,
+      "max": 5000000,
+      "step": 10000,
+      "value": 200000,
+      "hint": "From loan statement"
+    },
+    {
+      "id": "hlt-principal",
+      "label": "Annual Principal Repaid (₹)",
+      "min": 0,
+      "max": 2000000,
+      "step": 10000,
+      "value": 100000,
+      "hint": "From loan statement — counts towards 80C"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "hlt-interest-ded",
+      "label": "Interest Deduction (Sec 24B)"
+    },
+    {
+      "id": "hlt-principal-ded",
+      "label": "Principal Deduction (80C)"
+    },
+    {
+      "id": "hlt-total-saved",
+      "label": "Total Tax Saved",
+      "highlight": true
+    },
+    {
+      "id": "hlt-effective-rate",
+      "label": "Effective Tax Slab Applied"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the inputs for the Home Loan Tax Benefit Calculator."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year table."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare options."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What are the home loan tax benefits in India 2026?",
+      "a": "Two deductions: (1) Section 24(B): up to ₹2 lakh per year on home loan interest for self-occupied property. (2) Section 80C: principal repayment (including stamp duty) counts towards ₹1.5 lakh limit. Both available only under the old tax regime. New regime: no home loan tax benefits (except employer NPS)."
+    },
+    {
+      "q": "Can I claim both Section 24 and Section 80C for home loan?",
+      "a": "Yes. Section 24(B) for interest (up to ₹2 lakh) and 80C for principal repayment (within ₹1.5 lakh limit) are separate deductions. However, 80C limit is shared with PPF, ELSS, LIC, and other eligible investments. Claim both to maximise tax savings."
+    },
+    {
+      "q": "Is home loan tax benefit available on second home?",
+      "a": "For a second self-occupied home: no deduction under Section 24(B) — notional rent is taxable. If the second home is let out, entire interest is deductible (no ₹2 lakh cap). This makes a let-out second property more tax-efficient than a self-occupied second home."
+    },
+    {
+      "q": "Is the Home Loan Tax Benefit Calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. Calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹30 lakh home loan — tax savings over 20 years",
+      "text": "In early years: interest component is high. Year 1 interest ≈ ₹2.55 lakh. Deduction capped at ₹2 lakh. At 20% slab: tax saved on interest = ₹41,600. Principal ₹44,000 adds to 80C. Total annual saving ≈ ₹50,000."
+    },
+    {
+      "heading": "Joint home loan — double tax benefit",
+      "text": "Husband and wife as co-borrowers can each claim Section 24B deduction (₹2 lakh each = ₹4 lakh combined) and 80C deduction on principal. Combined tax saving at 20% each = ₹1,66,400/year on ₹4 lakh interest. Joint loans maximise tax benefits."
+    }
+  ],
+  "related": [
+    {
+      "title": "Home Loan EMI",
+      "url": "/india/home-loan-emi-calculator/"
+    },
+    {
+      "title": "Section 80C",
+      "url": "/india/section-80c-calculator/"
+    },
+    {
+      "title": "Income Tax Calculator",
+      "url": "/india/income-tax-calculator/"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "id": "leave-encashment",
+  "schema": {
+    "appName": "Leave Encashment Calculator India",
+    "appDescription": "Calculate leave encashment amount and tax liability on resignation, retirement, or during service. Private sector and government employee rules covered."
+  },
+  "inputs": [
+    {
+      "id": "le-basic",
+      "label": "Monthly Basic Salary (₹)",
+      "min": 5000,
+      "max": 500000,
+      "step": 1000,
+      "value": 50000
+    },
+    {
+      "id": "le-leaves",
+      "label": "Number of Leaves to Encash",
+      "min": 1,
+      "max": 300,
+      "step": 1,
+      "value": 30,
+      "hint": "Earned leaves accumulated"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "le-amount",
+      "label": "Leave Encashment Amount",
+      "highlight": true
+    },
+    {
+      "id": "le-tax-free",
+      "label": "Tax-Free Portion (up to ₹25 lakh at retirement)"
+    },
+    {
+      "id": "le-taxable",
+      "label": "Taxable Portion"
+    },
+    {
+      "id": "le-daily-rate",
+      "label": "Per Day Salary Rate"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Leave Encashment Calculator. Smart defaults are pre-filled."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and find the best option."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is leave encashment taxable in India?",
+      "a": "Leave encashment during service: fully taxable. At retirement/resignation: government employees — full exemption. Private sector employees: exempt up to ₹25 lakh (revised from 2023) or leave salary × average monthly salary of last 10 months/30 × encashable leaves, whichever is less. Formula is complex — use this calculator."
+    },
+    {
+      "q": "How many leaves can be encashed in India?",
+      "a": "There is no universal cap on leaves carried forward or encashed — it depends on company policy. Central government employees can accumulate 300 days of earned leave. Private sector typically allows 30–60 days accumulation. Some companies offer encashment during service (during leave travel allowance cycle)."
+    },
+    {
+      "q": "Can I encash leaves while still employed?",
+      "a": "Yes, if your company policy allows. Some companies offer leave encashment as part of LTC (Leave Travel Concession) block or annual scheme. During service, the full amount is taxable as salary. Government employees can encash up to 30 days in each block of 4 years."
+    },
+    {
+      "q": "Is the Leave Encashment Calculator free?",
+      "a": "Yes, completely free on CalcPhi with no registration."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser. Your data is never stored."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones and tablets."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "30 days encashment at ₹50,000 basic",
+      "text": "Daily rate = 50,000 ÷ 26 = ₹1,923. Leave encashment for 30 days = ₹57,692. At retirement: exempt up to ₹25 lakh. For this example, full amount is tax-free. During service: ₹57,692 added to salary and taxed at slab rate."
+    },
+    {
+      "heading": "Retirement with 240 days accumulated leave",
+      "text": "For ₹1 lakh basic with 240 days leave at retirement: encashment = 240 × (1,00,000/26) = ₹9,23,077. Below ₹25 lakh exemption — fully tax-free. At the 30% slab, this represents ₹2.88 lakh in tax savings versus receiving it as salary."
+    }
+  ],
+  "related": [
+    {
+      "title": "Gratuity Calculator",
+      "url": "/india/gratuity-calculator/"
+    },
+    {
+      "title": "EPF Calculator",
+      "url": "/india/epf-calculator/"
+    },
+    {
+      "title": "VRS Calculator",
+      "url": "/india/vrs-calculator/"
+    }
+  ]
+}

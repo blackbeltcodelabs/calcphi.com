@@ -1,0 +1,108 @@
+{
+  "id": "bonus-after-tax",
+  "schema": {
+    "appName": "Bonus Tax Calculator India",
+    "appDescription": "Calculate TDS deducted on your annual bonus and net amount received. See effective tax rate on bonus under FY 2026-27 tax slabs."
+  },
+  "inputs": [
+    {
+      "id": "bat-salary",
+      "label": "Monthly Basic Salary (₹)",
+      "min": 10000,
+      "max": 1000000,
+      "step": 1000,
+      "value": 80000
+    },
+    {
+      "id": "bat-bonus",
+      "label": "Bonus Amount (₹)",
+      "min": 1000,
+      "max": 10000000,
+      "step": 1000,
+      "value": 200000
+    }
+  ],
+  "outputs": [
+    {
+      "id": "bat-tds",
+      "label": "TDS Deducted on Bonus",
+      "highlight": true
+    },
+    {
+      "id": "bat-net",
+      "label": "Net Bonus Received"
+    },
+    {
+      "id": "bat-rate",
+      "label": "Effective Tax Rate on Bonus"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the inputs for the Bonus Tax Calculator."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year table."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare options."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How is bonus taxed in India?",
+      "a": "Bonus is added to your salary income and taxed at your applicable slab rate. Your employer deducts TDS on bonus at your marginal rate. For someone in the 30% bracket: ₹1 lakh bonus attracts ₹30,000 TDS (plus 4% cess = ₹31,200). The bonus is not separately taxed at a flat rate."
+    },
+    {
+      "q": "Can I reduce tax on my bonus?",
+      "a": "Yes. Maximise 80C investments (₹1.5 lakh), claim 80D deductions, and invest in NPS (₹50,000 extra under 80CCD(1B)). These reduce your total taxable income, lowering the effective rate on your bonus. In the new regime, fewer deductions are available."
+    },
+    {
+      "q": "Is performance bonus different from salary for tax?",
+      "a": "No. All forms of bonus — performance bonus, joining bonus, retention bonus — are treated as salary income and taxed at slab rates. There is no special lower tax rate for bonuses in India, unlike some countries."
+    },
+    {
+      "q": "Is the Bonus Tax Calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. Calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹2 lakh bonus for someone earning ₹10 lakh annual salary",
+      "text": "Annual salary ₹10 lakh, bonus ₹2 lakh. Total income ₹12 lakh. Under new regime (₹12 lakh = nil tax with rebate). TDS on bonus = ₹nil. Net bonus = ₹2 lakh."
+    },
+    {
+      "heading": "₹5 lakh bonus at 30% bracket",
+      "text": "Annual salary ₹25 lakh + ₹5 lakh bonus = ₹30 lakh income. At 30% slab, TDS on ₹5 lakh bonus = ₹1,50,000 + 4% cess = ₹1,56,000. Net bonus = ₹3,44,000."
+    }
+  ],
+  "related": [
+    {
+      "title": "Income Tax Calculator",
+      "url": "/india/income-tax-calculator/"
+    },
+    {
+      "title": "New vs Old Regime",
+      "url": "/india/new-vs-old-regime-calculator/"
+    },
+    {
+      "title": "CTC to In-Hand",
+      "url": "/india/ctc-to-in-hand-calculator/"
+    }
+  ]
+}

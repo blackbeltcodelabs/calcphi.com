@@ -1,0 +1,140 @@
+{
+  "id": "esop-calculator",
+  "schema": {
+    "appName": "ESOP Calculator India — Stock Option Tax",
+    "appDescription": "Calculate ESOP perquisite tax on exercise and capital gains tax on sale. Understand your net ESOP profit after tax in India."
+  },
+  "inputs": [
+    {
+      "id": "esop-units",
+      "label": "Number of ESOP Units",
+      "min": 1,
+      "max": 100000,
+      "step": 100,
+      "value": 1000
+    },
+    {
+      "id": "esop-exercise",
+      "label": "Exercise Price per Share (₹)",
+      "min": 1,
+      "max": 100000,
+      "step": 10,
+      "value": 100
+    },
+    {
+      "id": "esop-fmv",
+      "label": "Fair Market Value at Exercise (₹)",
+      "min": 1,
+      "max": 100000,
+      "step": 10,
+      "value": 800
+    },
+    {
+      "id": "esop-sale",
+      "label": "Actual Sale Price per Share (₹)",
+      "min": 1,
+      "max": 100000,
+      "step": 10,
+      "value": 1000
+    },
+    {
+      "id": "esop-slab",
+      "label": "Your Income Tax Slab Rate (%)",
+      "min": 5,
+      "max": 30,
+      "step": 5,
+      "value": 30
+    }
+  ],
+  "outputs": [
+    {
+      "id": "esop-exercise-gain",
+      "label": "Perquisite Gain at Exercise"
+    },
+    {
+      "id": "esop-perquisite-tax",
+      "label": "Tax on Perquisite (Slab Rate)",
+      "highlight": true
+    },
+    {
+      "id": "esop-capital-gain",
+      "label": "Capital Gain on Sale (FMV to Sale)"
+    },
+    {
+      "id": "esop-capital-tax",
+      "label": "Capital Gains Tax"
+    },
+    {
+      "id": "esop-net",
+      "label": "Net Profit After All Taxes"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the ESOP Calculator. Smart defaults are pre-filled."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and find the best option."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How are ESOPs taxed in India?",
+      "a": "ESOP taxation has two stages: (1) Exercise: FMV minus exercise price = perquisite — taxed at your income slab rate (20–30%). TDS is deducted by the employer. (2) Sale: Sale price minus FMV at exercise = capital gain — taxed as STCG (20%) if held < 1 year or LTCG (12.5% above ₹1.25 lakh) if held > 1 year."
+    },
+    {
+      "q": "When is ESOP income taxed — at vesting, exercise, or sale?",
+      "a": "Vesting: No tax. Exercise (converting option to shares): taxed as perquisite at slab rate. Sale: taxed as capital gains. The critical tax event is exercise — this is when TDS is deducted and you must have liquidity to pay the tax or sell shares immediately."
+    },
+    {
+      "q": "What is ESOP taxation for startup employees?",
+      "a": "Budget 2020 deferred ESOP perquisite tax for startup employees by 5 years or until sale/job change, whichever is earlier. DPIIT-recognised startups qualify. This avoids the cash crunch of paying tax on exercise without selling the shares."
+    },
+    {
+      "q": "Is the ESOP Calculator free?",
+      "a": "Yes, completely free on CalcPhi with no registration."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser. Your data is never stored."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones and tablets."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "1,000 ESOPs: exercise at ₹100 FMV ₹800, sold at ₹1,000",
+      "text": "Perquisite: (800-100) × 1,000 = ₹7,00,000. Tax at 30% = ₹2,10,000. Capital gain: (1,000-800) × 1,000 = ₹2,00,000. STCG tax at 20% = ₹40,000. Net profit: ₹9,00,000 − ₹2,10,000 − ₹40,000 = ₹6,50,000."
+    },
+    {
+      "heading": "Startup ESOP — 5-year tax deferral",
+      "text": "Same ESOP at a DPIIT startup: exercise tax deferred by 5 years. If shares are sold 3 years later at ₹2,000 each, the perquisite (₹7 lakh) is taxed when sold — by which time total gain is ₹1.9 million. Careful planning: sometimes exercising and paying tax early at lower FMV is better."
+    }
+  ],
+  "related": [
+    {
+      "title": "Capital Gains Tax Calculator",
+      "url": "/india/capital-gains-calculator/"
+    },
+    {
+      "title": "Income Tax Calculator",
+      "url": "/india/income-tax-calculator/"
+    },
+    {
+      "title": "CTC to In-Hand Calculator",
+      "url": "/india/ctc-to-in-hand-calculator/"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "id": "health-insurance",
+  "schema": {
+    "appName": "Health Insurance Cover Estimator India",
+    "appDescription": "Estimate the right health insurance coverage for individuals and families in India. Based on age, city, and family size."
+  },
+  "inputs": [
+    {
+      "id": "hi-age",
+      "label": "Primary Insured Age (Years)",
+      "min": 18,
+      "max": 75,
+      "step": 1,
+      "value": 35
+    },
+    {
+      "id": "hi-family",
+      "label": "Family Members to Cover",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "value": 3,
+      "hint": "Including yourself"
+    },
+    {
+      "id": "hi-city",
+      "label": "City Tier",
+      "type": "select",
+      "options": [
+        {
+          "value": "metro",
+          "label": "Metro (Mumbai/Delhi/Bangalore/Chennai)"
+        },
+        {
+          "value": "tier1",
+          "label": "Tier 1 City (Pune/Hyderabad/Kolkata)"
+        },
+        {
+          "value": "tier2",
+          "label": "Tier 2/3 City"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "hi-recommended",
+      "label": "Recommended Cover",
+      "highlight": true
+    },
+    {
+      "id": "hi-premium-est",
+      "label": "Estimated Annual Premium*"
+    },
+    {
+      "id": "hi-premium-monthly",
+      "label": "Per Month*"
+    },
+    {
+      "id": "hi-family-cover",
+      "label": "Coverage Type"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Health Insurance Calculator. Smart defaults are pre-filled."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and optimise your decision."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the minimum health insurance cover needed in India?",
+      "a": "For a family of 4 in a metro city: minimum ₹10 lakh family floater, ideally ₹15–25 lakh. Individual cover for age 30–35: ₹10 lakh. Hospitalisation costs in Mumbai private hospitals can reach ₹8–15 lakh for serious conditions like cancer, cardiac surgery, or ICU stays. Inadequate cover can wipe out savings."
+    },
+    {
+      "q": "Family floater vs individual health insurance — which is better?",
+      "a": "Family floater: one policy covers all family members, any member can use the full sum insured. Cheaper premium than individual policies. Risk: if two members are hospitalised simultaneously, coverage may be insufficient. Individual policies are better if any member has pre-existing conditions."
+    },
+    {
+      "q": "What is not covered in standard health insurance?",
+      "a": "Common exclusions: pre-existing diseases (waiting period 2–4 years), maternity (waiting period 9 months–4 years), dental treatment (unless accident), congenital diseases, cosmetic procedures, experimental treatments, suicide/self-injury. Always read the policy document carefully."
+    },
+    {
+      "q": "Is this calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "Family of 3 in Bangalore — coverage needed",
+      "text": "Parents (35, 32) with 1 child in Bangalore: recommended ₹20 lakh family floater. Private hospital room in Bangalore: ₹8,000–₹25,000/day. A 7-day cardiac care hospitalisation can cost ₹10–15 lakh at Apollo/Fortis."
+    },
+    {
+      "heading": "Senior citizen health insurance",
+      "text": "Health insurance for parents aged 60–65: individual policies of ₹10 lakh each (floater risky given age). Premium for 65-year-old: ₹50,000–₹80,000/year. Consider Star Senior Citizen or Niva Bupa Senior First. Always buy before they exceed the maximum entry age (usually 65–70)."
+    }
+  ],
+  "related": [
+    {
+      "title": "Term Insurance Calculator",
+      "url": "/india/term-insurance-calculator/"
+    },
+    {
+      "title": "Critical Illness Calculator",
+      "url": "/india/critical-illness-calculator/"
+    },
+    {
+      "title": "Section 80D Calculator",
+      "url": "/india/section-80d-calculator/"
+    }
+  ]
+}

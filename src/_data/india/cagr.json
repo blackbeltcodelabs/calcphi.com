@@ -1,0 +1,83 @@
+{
+  "id": "cagr",
+  "inputs": [
+    { "id": "initial-value", "label": "Initial Investment (₹)", "min": 100, "max": 100000000, "step": 1000, "value": 100000, "hint": "Starting value of your investment" },
+    { "id": "final-value", "label": "Final Value (₹)", "min": 100, "max": 100000000, "step": 1000, "value": 200000, "hint": "Current or ending value of your investment" },
+    { "id": "cagr-years", "label": "Investment Period (Years)", "min": 1, "max": 40, "step": 1, "value": 5, "hint": "Number of years between initial and final value" }
+  ],
+  "outputs": [
+    { "id": "cagr-result", "label": "CAGR", "highlight": true },
+    { "id": "absolute-returns", "label": "Absolute Returns (₹)" },
+    { "id": "absolute-percent", "label": "Absolute Returns (%)" }
+  ],
+  "staticTable": {
+    "caption": "CAGR reference table — growth from ₹1 lakh to different final values",
+    "headers": ["Initial Value (₹)", "Final Value (₹)", "Duration (Years)", "CAGR"],
+    "rows": [
+      ["₹1,00,000", "₹2,00,000", "5 years", "14.87%"],
+      ["₹1,00,000", "₹2,00,000", "10 years", "7.18%"],
+      ["₹1,00,000", "₹3,10,585", "10 years", "12.00%"],
+      ["₹1,00,000", "₹5,00,000", "10 years", "17.46%"],
+      ["₹1,00,000", "₹10,00,000", "10 years", "25.89%"]
+    ]
+  },
+  "examples": [
+    {
+      "heading": "Comparing two mutual funds using CAGR",
+      "text": "Fund A grew from ₹1 lakh to ₹2.5 lakhs in 5 years: CAGR = (2.5)^(1/5) − 1 = 20.1%. Fund B grew from ₹1 lakh to ₹2 lakhs in 4 years: CAGR = (2)^(1/4) − 1 = 18.9%. Fund A has a higher CAGR despite taking longer. CAGR is the correct metric for comparing funds across different time periods."
+    },
+    {
+      "heading": "Calculating portfolio CAGR across 10 years",
+      "text": "An investor's portfolio started at ₹5 lakhs in 2016 and grew to ₹18 lakhs by 2026 (10 years). CAGR = (18/5)^(1/10) − 1 = 13.7%. This 13.7% CAGR accounts for all market ups and downs and gives a single meaningful annualised return number to benchmark against a Nifty 50 index fund.",
+      "table": {
+        "headers": ["Portfolio", "Initial (₹)", "Final (₹)", "Years", "CAGR"],
+        "rows": [
+          ["Conservative (debt+equity)", "₹5,00,000", "₹12,00,000", "10", "9.1%"],
+          ["Balanced (50:50)", "₹5,00,000", "₹15,00,000", "10", "11.6%"],
+          ["Aggressive (equity)", "₹5,00,000", "₹18,00,000", "10", "13.7%"]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is CAGR and why is it important for mutual fund investors?",
+      "a": "CAGR (Compound Annual Growth Rate) is the annualised rate of return that converts an initial investment to a final value over multiple years. It smooths out year-to-year volatility and gives a single number representing the 'steady' growth rate that would produce the same result. Mutual fund fact sheets always show CAGR returns (1-year, 3-year, 5-year, since inception) to allow accurate comparisons between funds."
+    },
+    {
+      "q": "How is CAGR calculated?",
+      "a": "CAGR = (Final Value / Initial Value)^(1/Number of Years) − 1. For example, if you invested ₹1 lakh and it grew to ₹2 lakhs in 5 years: CAGR = (2,00,000/1,00,000)^(1/5) − 1 = 2^0.2 − 1 = 1.1487 − 1 = 14.87%. This means the investment grew at 14.87% per year on average, compounded annually."
+    },
+    {
+      "q": "What is the difference between CAGR and absolute returns?",
+      "a": "Absolute return is the total percentage gain: (Final − Initial) / Initial × 100. CAGR is the annualised version of absolute return, accounting for time. A 100% absolute return over 5 years is a 14.87% CAGR, but the same 100% return over 2 years is a 41.4% CAGR. CAGR is more useful for comparisons because it normalises for time. Absolute return is useful only when comparing investments with the same duration."
+    },
+    {
+      "q": "What is a good CAGR for a mutual fund in India?",
+      "a": "For Indian equity mutual funds: a CAGR above 12% over a 10-year period is considered good; above 15% is excellent. The Nifty 50 index has delivered approximately 12–14% CAGR over most 10-year periods. Actively managed large-cap funds typically deliver 12–15% CAGR, while top mid-cap funds have delivered 15–18% CAGR. Debt funds typically deliver 6–8% CAGR."
+    },
+    {
+      "q": "Can CAGR be misleading?",
+      "a": "Yes. CAGR assumes a smooth, steady growth curve and ignores the path of returns. A fund with high volatility might have the same CAGR as a stable fund but with far more risk. CAGR also ignores cash flows — it only works for a single initial investment. For SIP investments with regular contributions, use XIRR (Extended Internal Rate of Return) instead of CAGR."
+    },
+    {
+      "q": "How do I use CAGR to compare two mutual funds?",
+      "a": "To compare using CAGR: (1) Note the starting NAV or value for both funds on the same date; (2) Note the current NAV; (3) Calculate CAGR for each: (Current NAV / Starting NAV)^(1/years) − 1; (4) The fund with higher CAGR has outperformed over that period. Always compare CAGR over the same period (e.g., both over 5 years) and consider risk metrics like standard deviation alongside CAGR."
+    }
+  ],
+  "howToSteps": [
+    { "name": "Enter Initial Investment", "text": "Enter the amount you originally invested. For mutual funds, this is the NAV-based purchase value or the initial investment amount." },
+    { "name": "Enter Final Value", "text": "Enter the current value of your investment. For NAV-based comparison, enter the current NAV multiplied by your units." },
+    { "name": "Set Investment Duration", "text": "Enter the number of years between your initial investment and the final value. Be precise — even a fraction of a year affects CAGR significantly." },
+    { "name": "Read CAGR and Returns", "text": "The calculator shows the annualised CAGR, absolute returns in rupees, and absolute return percentage. Use CAGR to compare this investment against other funds or benchmarks." }
+  ],
+  "related": [
+    { "title": "Lumpsum Calculator", "url": "/india/lumpsum-calculator/", "desc": "Calculate future value of a one-time investment at a given CAGR" },
+    { "title": "SIP Calculator", "url": "/india/sip-calculator/", "desc": "Monthly SIP investment returns calculator" },
+    { "title": "MF Returns Calculator", "url": "/india/mf-returns-calculator/", "desc": "Calculate mutual fund NAV-based returns and CAGR" }
+  ],
+  "schema": {
+    "appName": "CAGR Calculator India",
+    "appDescription": "Calculate CAGR (Compound Annual Growth Rate) for mutual fund investments and compare fund performance"
+  }
+}

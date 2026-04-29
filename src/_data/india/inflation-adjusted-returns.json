@@ -1,0 +1,132 @@
+{
+  "id": "inflation-adjusted-returns",
+  "schema": {
+    "appName": "Inflation-Adjusted Returns Calculator India",
+    "appDescription": "Calculate real returns after adjusting for inflation. Find out the true purchasing power growth of your mutual fund or investment after inflation."
+  },
+  "inputs": [
+    {
+      "id": "ls-principal",
+      "label": "Investment Amount (₹)",
+      "min": 1000,
+      "max": 100000000,
+      "step": 1000,
+      "value": 500000
+    },
+    {
+      "id": "ls-rate",
+      "label": "Nominal Return Rate (% p.a.)",
+      "min": 1,
+      "max": 30,
+      "step": 0.5,
+      "value": 12
+    },
+    {
+      "id": "ls-years",
+      "label": "Investment Period (Years)",
+      "min": 1,
+      "max": 40,
+      "step": 1,
+      "value": 10
+    },
+    {
+      "id": "inflation-rate",
+      "label": "Inflation Rate (% p.a.)",
+      "min": 1,
+      "max": 15,
+      "step": 0.5,
+      "value": 6
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ls-maturity",
+      "label": "Nominal Corpus (Future Value)"
+    },
+    {
+      "id": "ls-gains",
+      "label": "Nominal Gains"
+    },
+    {
+      "id": "ls-cagr",
+      "label": "Nominal Return Rate"
+    },
+    {
+      "id": "real-corpus",
+      "label": "Real Corpus (Inflation-Adjusted)",
+      "highlight": true
+    },
+    {
+      "id": "real-return",
+      "label": "Real Return Rate"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Inflation-Adjusted Returns Calculator."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and optimise your decision."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the difference between nominal and real returns?",
+      "a": "Nominal return: the stated percentage gain on investment. Real return: gain after subtracting inflation. Formula: Real Return ≈ Nominal Return − Inflation (approximately). Exact: Real Return = (1 + Nominal Rate) ÷ (1 + Inflation Rate) − 1. Example: 12% nominal, 6% inflation → Real return = 5.66%."
+    },
+    {
+      "q": "Which investments provide the best real returns in India?",
+      "a": "Historical real returns (nominal return minus 6% inflation): Equity MF (12–15% − 6% = 6–9% real), PPF (7.1% − 6% = 1.1% real), FD (7% − 6% = 1% real), gold (7–9% − 6% = 1–3% real), real estate (7–10% − 6% = 1–4% real). Equity provides the highest real return over long periods."
+    },
+    {
+      "q": "Why do FDs not beat inflation effectively?",
+      "a": "Bank FD rates (6.5–7.5%) barely exceed inflation (6%). After-tax real return: FD at 7% in the 30% bracket = 4.9% post-tax, minus 6% inflation = −1.1% real return. FD holders are actually losing purchasing power in real terms after tax. FDs are appropriate only for 1–3 year goals."
+    },
+    {
+      "q": "Is this calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. Calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹5 lakh SIP vs FD over 10 years (inflation-adjusted)",
+      "text": "₹5 lakh in equity MF at 12% for 10 years: nominal ₹15.5 lakh, real value ₹8.7 lakh (at 6% inflation). FD at 7%: nominal ₹9.84 lakh, real value ₹5.5 lakh. Real gain: equity ₹3.7 lakh vs FD ₹0.5 lakh. Equity provides 7× more real wealth creation."
+    },
+    {
+      "heading": "Gold investment — inflation hedge?",
+      "text": "₹5 lakh in gold at 8% nominal return for 10 years: nominal ₹10.79 lakh. Real value at 6% inflation: ₹6.03 lakh. Real gain: ₹1.03 lakh on ₹5 lakh. Gold is a partial inflation hedge but doesn't generate income. Use as 5–10% portfolio diversifier, not as primary wealth builder."
+    }
+  ],
+  "related": [
+    {
+      "title": "Inflation Impact",
+      "url": "/india/inflation-retirement-calculator/"
+    },
+    {
+      "title": "Retirement Corpus Calculator",
+      "url": "/india/retirement-corpus-calculator/"
+    },
+    {
+      "title": "Lumpsum Calculator",
+      "url": "/india/lumpsum-calculator/"
+    }
+  ]
+}

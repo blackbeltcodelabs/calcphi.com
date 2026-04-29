@@ -1,0 +1,121 @@
+{
+  "id": "fd-vs-rd",
+  "schema": {
+    "appName": "FD vs RD Calculator India",
+    "appDescription": "Compare Fixed Deposit vs Recurring Deposit returns for the same amount invested. Decide which is better for your savings goal."
+  },
+  "inputs": [
+    {
+      "id": "fvrd-amount",
+      "label": "Investment Amount (₹)",
+      "min": 10000,
+      "max": 100000000,
+      "step": 1000,
+      "value": 120000,
+      "hint": "Total amount (for FD) or annual total (for RD)"
+    },
+    {
+      "id": "fvrd-rate",
+      "label": "Interest Rate (% p.a.)",
+      "min": 1,
+      "max": 15,
+      "step": 0.1,
+      "value": 7.1
+    },
+    {
+      "id": "fvrd-years",
+      "label": "Tenure (Years)",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "value": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "fvrd-fd-maturity",
+      "label": "FD Maturity Amount",
+      "highlight": true
+    },
+    {
+      "id": "fvrd-fd-interest",
+      "label": "FD Interest Earned"
+    },
+    {
+      "id": "fvrd-rd-maturity",
+      "label": "RD Maturity Amount"
+    },
+    {
+      "id": "fvrd-rd-interest",
+      "label": "RD Interest Earned"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the inputs for the FD vs RD Calculator."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year table."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare options."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Which gives better returns — FD or RD?",
+      "a": "FD typically gives higher returns than RD for the same total amount and rate. This is because FD is invested as a lump sum from day one and earns interest on the full amount throughout. RD builds up monthly, so later instalments earn less time in the bank."
+    },
+    {
+      "q": "When should I choose RD over FD?",
+      "a": "Choose RD when you don't have a lump sum but want to save regularly. RD builds financial discipline. Choose FD when you have idle funds sitting in savings account — FD earns more than savings account rate immediately. If you have both options, FD gives more interest."
+    },
+    {
+      "q": "Are FD and RD rates the same?",
+      "a": "Usually yes — banks offer the same interest rate for the same tenure on both FD and RD. However, some banks offer slightly different rates. Always compare before opening an account. Post office RD (6.7%) vs post office FD (6.9–7.5%) — post office TD rates are often better."
+    },
+    {
+      "q": "Is the FD vs RD Calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. Calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹1.2 lakh total — FD vs RD over 3 years",
+      "text": "FD: ₹1.2 lakh at 7.1% for 3 years (quarterly compounding) = ₹1,47,773. Interest = ₹27,773. RD: ₹3,333/month at 7.1% for 3 years = ₹1,37,218. Interest = ₹17,218. FD wins by ₹10,555 — because the lump sum earns interest from day 1."
+    },
+    {
+      "heading": "New employee — which to start with?",
+      "text": "If starting salary with no savings: choose RD to build corpus. After 1 year, you have a lump sum — switch to FD or reinvest RD maturity into FD. This is a common strategy: RD for accumulation, FD for holding/growing existing corpus."
+    }
+  ],
+  "related": [
+    {
+      "title": "FD Calculator",
+      "url": "/india/fd-calculator/"
+    },
+    {
+      "title": "RD Calculator",
+      "url": "/india/rd-calculator/"
+    },
+    {
+      "title": "TDS on FD",
+      "url": "/india/tds-on-fd-calculator/"
+    }
+  ]
+}

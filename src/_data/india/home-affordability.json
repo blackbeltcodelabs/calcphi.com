@@ -1,0 +1,136 @@
+{
+  "id": "home-affordability",
+  "schema": {
+    "appName": "Home Affordability Calculator India",
+    "appDescription": "Calculate maximum home loan amount and property price you can afford based on your income, existing EMIs, and down payment."
+  },
+  "inputs": [
+    {
+      "id": "ha-income",
+      "label": "Net Monthly Income (₹)",
+      "min": 20000,
+      "max": 1000000,
+      "step": 1000,
+      "value": 100000
+    },
+    {
+      "id": "ha-existing",
+      "label": "Existing Monthly EMIs (₹)",
+      "min": 0,
+      "max": 500000,
+      "step": 1000,
+      "value": 15000
+    },
+    {
+      "id": "ha-down",
+      "label": "Available Down Payment (₹)",
+      "min": 0,
+      "max": 100000000,
+      "step": 100000,
+      "value": 1500000
+    },
+    {
+      "id": "ha-rate",
+      "label": "Home Loan Interest Rate (% p.a.)",
+      "min": 6,
+      "max": 15,
+      "step": 0.1,
+      "value": 8.5
+    },
+    {
+      "id": "ha-tenure",
+      "label": "Loan Tenure (Years)",
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "value": 20
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ha-max-emi",
+      "label": "Maximum EMI Capacity"
+    },
+    {
+      "id": "ha-max-loan",
+      "label": "Maximum Loan Amount",
+      "highlight": true
+    },
+    {
+      "id": "ha-max-property",
+      "label": "Maximum Property Price (Loan + Down Payment)"
+    },
+    {
+      "id": "ha-monthly-cost",
+      "label": "Estimated Monthly Cost"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Home Affordability Calculator."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and optimise your decision."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How much home loan can I get in India?",
+      "a": "Banks typically lend 75–80% of property value (loan-to-value ratio). Maximum EMI = 40–50% of net monthly income minus existing EMIs (FOIR norms). Example: ₹1 lakh net income, existing EMIs ₹15,000, max new EMI = ₹35,000. At 8.5% for 20 years, max loan = approximately ₹33.4 lakh."
+    },
+    {
+      "q": "How much of my income should go to home EMI?",
+      "a": "Financial advisors recommend EMI not exceeding 30–35% of gross income (or 40% of net take-home). Higher EMI commitment limits your ability to build an emergency fund, invest for retirement, and handle income disruptions. Don't stretch beyond 40% FOIR even if the bank approves."
+    },
+    {
+      "q": "What is the ideal down payment percentage for a home?",
+      "a": "RBI mandates banks lend minimum 10–25% of property value (maximum LTV 75–80%). Make the largest down payment you can without depleting emergency fund. Down payment of 25–30% reduces loan EMI, total interest, and avoids PMI. Use accumulated savings, EPF withdrawal (after 5 years), and gifts."
+    },
+    {
+      "q": "Is this calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. Calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹1 lakh net income — how much home can I afford?",
+      "text": "Net income ₹1 lakh, existing EMIs ₹15,000, available down payment ₹15 lakh. Max new EMI (40% FOIR): ₹25,000. Loan at 8.5% for 20 years: ₹23.87 lakh. Plus ₹15 lakh down payment = ₹38.87 lakh property. In Mumbai, this buys a 1BHK in suburban areas."
+    },
+    {
+      "heading": "Impact of income increase on affordability",
+      "text": "Same person gets a 20% raise (new income ₹1.2 lakh). Max new EMI rises to ₹33,000. Max loan: ₹31.5 lakh. With ₹15 lakh down payment: ₹46.5 lakh property. A 20% income increase translates to ~20% higher affordability."
+    }
+  ],
+  "related": [
+    {
+      "title": "Home Loan EMI Calculator",
+      "url": "/india/home-loan-emi-calculator/"
+    },
+    {
+      "title": "Loan Eligibility Calculator",
+      "url": "/india/loan-eligibility-calculator/"
+    },
+    {
+      "title": "Rent vs Buy Calculator",
+      "url": "/india/rent-vs-buy-calculator/"
+    }
+  ]
+}

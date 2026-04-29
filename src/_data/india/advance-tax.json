@@ -1,0 +1,122 @@
+{
+  "id": "advance-tax",
+  "schema": {
+    "appName": "Advance Tax Calculator India 2026-27",
+    "appDescription": "Calculate advance tax liability and quarterly instalments for FY 2026-27. For self-employed, freelancers, and salaried with additional income."
+  },
+  "inputs": [
+    {
+      "id": "at-income",
+      "label": "Total Annual Income (₹)",
+      "min": 0,
+      "max": 100000000,
+      "step": 10000,
+      "value": 1500000,
+      "hint": "Gross income for FY 2026-27"
+    },
+    {
+      "id": "at-paid",
+      "label": "TDS Already Deducted (₹)",
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "value": 0,
+      "hint": "TDS deducted by employer/bank"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "at-annual-tax",
+      "label": "Annual Tax Liability",
+      "highlight": true
+    },
+    {
+      "id": "at-q1",
+      "label": "Q1 Instalment (by 15 Jun) — 15%"
+    },
+    {
+      "id": "at-q2",
+      "label": "Q2 Instalment (by 15 Sep) — 30%"
+    },
+    {
+      "id": "at-q3",
+      "label": "Q3 Instalment (by 15 Dec) — 30%"
+    },
+    {
+      "id": "at-q4",
+      "label": "Q4 Instalment (by 15 Mar) — 25%"
+    },
+    {
+      "id": "at-balance",
+      "label": "Balance Due After TDS"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Advance Tax Calculator. All inputs have smart defaults."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown table to see how your numbers change over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust the inputs to compare different scenarios and find the best option for your situation."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Who must pay advance tax in India?",
+      "a": "Anyone with total tax liability above ₹10,000 after TDS must pay advance tax. This includes self-employed individuals, freelancers, traders, professionals, and salaried employees with significant non-salary income (rental, capital gains, interest)."
+    },
+    {
+      "q": "What are the advance tax due dates for FY 2026-27?",
+      "a": "Q1: 15 June 2026 (15% of liability), Q2: 15 September 2026 (30%), Q3: 15 December 2026 (30%), Q4: 15 March 2027 (25%). Senior citizens with no business income are exempt."
+    },
+    {
+      "q": "What interest applies for missing advance tax deadlines?",
+      "a": "Missing advance tax instalments attracts interest under Section 234B (1% per month on unpaid tax) and Section 234C (1% per month on instalment shortfall). This interest is calculated at the time of filing your ITR."
+    },
+    {
+      "q": "Is the Advance Tax Calculator free?",
+      "a": "Yes, the Advance Tax Calculator on CalcPhi is completely free with no registration required."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser. We do not store any financial data."
+    },
+    {
+      "q": "Can I use the Advance Tax Calculator on mobile?",
+      "a": "Yes. CalcPhi is fully mobile-optimised and works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "Freelancer with ₹15 lakh annual income",
+      "text": "A freelancer earning ₹15 lakh in FY 2026-27 with no TDS has a tax liability of approximately ₹1.95 lakh under the new regime. Q1 payment (15 June) is ₹29,250; Q2 (15 Sep) ₹58,500; Q3 (15 Dec) ₹58,500; Q4 (15 Mar) ₹48,750."
+    },
+    {
+      "heading": "Salaried employee with rental income",
+      "text": "A salaried employee whose employer deducts ₹80,000 TDS but earns ₹60,000 additional rental income may owe advance tax. Net tax after TDS is calculated, and 4 instalments are due if liability exceeds ₹10,000."
+    }
+  ],
+  "related": [
+    {
+      "title": "Income Tax Calculator",
+      "url": "/india/income-tax-calculator/"
+    },
+    {
+      "title": "New vs Old Tax Regime",
+      "url": "/india/new-vs-old-regime-calculator/"
+    },
+    {
+      "title": "TDS on Salary Calculator",
+      "url": "/india/tds-on-salary-calculator/"
+    }
+  ]
+}

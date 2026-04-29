@@ -1,0 +1,128 @@
+{
+  "id": "post-office-td",
+  "schema": {
+    "appName": "Post Office TD Calculator — Time Deposit",
+    "appDescription": "Calculate Post Office Time Deposit (FD) maturity value. Rates: 1yr 6.9%, 2yr 7.0%, 3yr 7.1%, 5yr 7.5%. 5-year TD qualifies for Section 80C."
+  },
+  "inputs": [
+    {
+      "id": "potd-principal",
+      "label": "Deposit Amount (₹)",
+      "min": 200,
+      "max": 100000000,
+      "step": 1000,
+      "value": 100000,
+      "hint": "Minimum ₹200, no maximum"
+    },
+    {
+      "id": "potd-tenure",
+      "label": "Tenure",
+      "type": "select",
+      "options": [
+        {
+          "value": "1",
+          "label": "1 Year (6.9% p.a.)"
+        },
+        {
+          "value": "2",
+          "label": "2 Years (7.0% p.a.)"
+        },
+        {
+          "value": "3",
+          "label": "3 Years (7.1% p.a.)"
+        },
+        {
+          "value": "5",
+          "label": "5 Years (7.5% p.a.) — 80C eligible"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "potd-rate",
+      "label": "Applicable Interest Rate"
+    },
+    {
+      "id": "potd-interest",
+      "label": "Interest Earned"
+    },
+    {
+      "id": "potd-maturity",
+      "label": "Maturity Amount",
+      "highlight": true
+    },
+    {
+      "id": "potd-invested",
+      "label": "Amount Invested"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Post Office TD Calculator. All inputs have smart defaults."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown table to see how your numbers change over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust the inputs to compare different scenarios and find the best option."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What are Post Office Time Deposit rates for 2026?",
+      "a": "Q1 FY 2026-27 rates: 1 year TD: 6.9% p.a., 2 year: 7.0%, 3 year: 7.1%, 5 year: 7.5%. Interest is compounded quarterly but paid annually. The 5-year TD qualifies for Section 80C deduction up to ₹1.5 lakh."
+    },
+    {
+      "q": "How is Post Office TD different from bank FD?",
+      "a": "Post Office TD is backed by the Government of India (sovereign guarantee), while bank FDs are insured only up to ₹5 lakh per bank under DICGC. PO TD rates are typically competitive with top bank FD rates. TDS is not deducted on POTD interest."
+    },
+    {
+      "q": "Can PO TD be broken prematurely?",
+      "a": "Premature withdrawal is allowed after 6 months at simple interest rate. After 1 year, 2% deduction from applicable TD rate. The original rate is restored if held to maturity."
+    },
+    {
+      "q": "Is the Post Office TD Calculator free?",
+      "a": "Yes, the Post Office TD Calculator on CalcPhi is completely free with no registration required."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser. We do not store any financial data."
+    },
+    {
+      "q": "Can I use the Post Office TD Calculator on mobile?",
+      "a": "Yes. CalcPhi is fully mobile-optimised and works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹1 lakh 5-year Post Office TD at 7.5%",
+      "text": "₹1 lakh in 5-year PO TD at 7.5% p.a. (quarterly compounding) yields ₹1,44,803 at maturity. Interest earned: ₹44,803. The deposit qualifies for Section 80C deduction, effectively reducing the cost for those in the 30% bracket."
+    },
+    {
+      "heading": "Comparison: PO TD vs Bank FD vs NSC",
+      "text": "For ₹2 lakh, 5-year investments: PO TD 7.5% → ₹2,89,606; NSC 7.7% → ₹2,89,806 (similar, plus 80C); SBI FD at 6.5% → ₹2,73,749. Post Office schemes are typically competitive with government guarantee."
+    }
+  ],
+  "related": [
+    {
+      "title": "NSC Calculator",
+      "url": "/india/nsc-calculator/"
+    },
+    {
+      "title": "KVP Calculator",
+      "url": "/india/kvp-calculator/"
+    },
+    {
+      "title": "FD Calculator",
+      "url": "/india/fd-calculator/"
+    }
+  ]
+}

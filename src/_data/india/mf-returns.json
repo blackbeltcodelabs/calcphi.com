@@ -1,0 +1,125 @@
+{
+  "id": "mf-returns",
+  "schema": {
+    "appName": "Mutual Fund Returns Calculator — Absolute & CAGR",
+    "appDescription": "Calculate absolute returns, CAGR, and money multiplier for any mutual fund. Enter NAV at purchase and current NAV to see your fund performance."
+  },
+  "inputs": [
+    {
+      "id": "nav-start",
+      "label": "Purchase NAV (₹)",
+      "min": 0.01,
+      "max": 10000,
+      "step": 0.01,
+      "value": 100
+    },
+    {
+      "id": "nav-end",
+      "label": "Current NAV (₹)",
+      "min": 0.01,
+      "max": 10000,
+      "step": 0.01,
+      "value": 185
+    },
+    {
+      "id": "mf-years",
+      "label": "Investment Period (Years)",
+      "min": 0.1,
+      "max": 30,
+      "step": 0.1,
+      "value": 5
+    },
+    {
+      "id": "mf-dividends",
+      "label": "Dividends Received (₹)",
+      "min": 0,
+      "max": 1000000,
+      "step": 100,
+      "value": 0,
+      "hint": "Optional: add dividends/payouts received"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "absolute-return",
+      "label": "Absolute Return %"
+    },
+    {
+      "id": "cagr-return",
+      "label": "CAGR (Annualised Return)",
+      "highlight": true
+    },
+    {
+      "id": "money-multiplier",
+      "label": "Money Multiplier"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the inputs for the Mutual Fund Returns Calculator."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year table."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare options."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the difference between absolute return and CAGR?",
+      "a": "Absolute return: total % gain from start to finish (e.g., 85% if NAV went from 100 to 185). CAGR: annualised return that accounts for time — 85% over 5 years = 13.1% CAGR. CAGR is the correct metric to compare funds over different periods."
+    },
+    {
+      "q": "How do I find the NAV of a mutual fund?",
+      "a": "NAV is published daily on: AMFI website (amfiindia.com), fund house website, MF utility, and apps like Groww, Zerodha Coin, PayTM Money. Historical NAVs are available for any date. The NAV is the per-unit value of the fund's portfolio."
+    },
+    {
+      "q": "What is a good CAGR for equity mutual funds in India?",
+      "a": "Index funds (Nifty 50): 12–15% CAGR over 10+ years. Actively managed large-cap: 12–16%. Mid-cap: 14–18%. Small-cap: 15–20% (with higher volatility). Debt funds: 6–8%. Always compare against the benchmark index over the same period — if the fund doesn't beat its benchmark, switch to an index fund."
+    },
+    {
+      "q": "Is the Mutual Fund Returns Calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. Calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "NAV 100 to 185 in 5 years",
+      "text": "Absolute return: 85%. CAGR: (185/100)^(1/5) - 1 = 13.1% p.a. Money multiplier: 1.85×. This outperforms the Nifty 50 historical average of 12% — good performance."
+    },
+    {
+      "heading": "NAV 150 to 180 in 2 years",
+      "text": "Absolute return: 20%. CAGR: (180/150)^(1/2) - 1 = 9.5% p.a. Money multiplier: 1.2×. Underperforms Nifty 50. Consider switching to an index fund if consistent underperformance."
+    }
+  ],
+  "related": [
+    {
+      "title": "CAGR Calculator",
+      "url": "/india/cagr-calculator/"
+    },
+    {
+      "title": "NAV Calculator",
+      "url": "/india/nav-calculator/"
+    },
+    {
+      "title": "Direct vs Regular MF",
+      "url": "/india/direct-vs-regular-calculator/"
+    }
+  ]
+}

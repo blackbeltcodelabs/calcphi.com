@@ -1,0 +1,120 @@
+{
+  "id": "pension-income",
+  "schema": {
+    "appName": "Pension Income Calculator India",
+    "appDescription": "Calculate monthly pension income from a retirement corpus using the systematic withdrawal approach. Find sustainable withdrawal rate to last through retirement."
+  },
+  "inputs": [
+    {
+      "id": "pi-corpus",
+      "label": "Retirement Corpus (₹)",
+      "min": 1000000,
+      "max": 500000000,
+      "step": 100000,
+      "value": 10000000
+    },
+    {
+      "id": "pi-rate",
+      "label": "Post-Retirement Investment Return (% p.a.)",
+      "min": 4,
+      "max": 12,
+      "step": 0.5,
+      "value": 7
+    },
+    {
+      "id": "pi-years",
+      "label": "Retirement Period (Years)",
+      "min": 10,
+      "max": 50,
+      "step": 1,
+      "value": 25
+    }
+  ],
+  "outputs": [
+    {
+      "id": "pi-monthly",
+      "label": "Sustainable Monthly Withdrawal",
+      "highlight": true
+    },
+    {
+      "id": "pi-total-withdrawn",
+      "label": "Total Withdrawn Over Period"
+    },
+    {
+      "id": "pi-interest-earned",
+      "label": "Total Returns Earned"
+    },
+    {
+      "id": "pi-annual",
+      "label": "Annual Pension Income"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Pension Income Calculator."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and optimise your decision."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How much monthly pension can ₹1 crore corpus give?",
+      "a": "₹1 crore corpus at 7% return for 25 years: sustainable monthly withdrawal is approximately ₹70,000/month. If you only need ₹50,000/month, the corpus can last indefinitely (corpus earns more than withdrawal). ₹70,000/month at 7% for 25 years depletes the corpus at exactly 25 years."
+    },
+    {
+      "q": "What is the difference between annuity and SWP for pension?",
+      "a": "Annuity (from insurance company): guaranteed income for life, fixed rate, no market risk, income taxable, no liquidity. SWP from mutual fund: market-linked, may vary, corpus remains accessible, more flexible, can increase/decrease withdrawal. SWP is more flexible but carries market risk. Diversify between both."
+    },
+    {
+      "q": "Should I use debt funds or equity for post-retirement portfolio?",
+      "a": "A common allocation: 40% equity, 60% debt at retirement, shifting to 30/70 by age 70. Equity provides growth to beat inflation; debt provides stability for near-term withdrawals. Bucket strategy: 1–2 years expenses in liquid/ultra-short funds, 3–7 years in debt funds, rest in equity."
+    },
+    {
+      "q": "Is this calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. Calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹1 crore corpus — 25 years at 7%",
+      "text": "Monthly withdrawal: ₹70,645. Annual: ₹8.48 lakh. Total withdrawn over 25 years: ₹2.12 crore. Total returns earned from corpus: ₹1.12 crore. The corpus grows with returns but depletes through withdrawals, reaching zero at exactly year 25."
+    },
+    {
+      "heading": "₹2 crore corpus — sustainable forever",
+      "text": "₹2 crore at 7%: monthly income ≈ ₹1.17 lakh. Annual return ≈ ₹14 lakh, spending ≈ ₹14 lakh — corpus stays intact. This is the 'dividend' or perpetual model where you live off investment returns without depleting principal."
+    }
+  ],
+  "related": [
+    {
+      "title": "SWP Calculator",
+      "url": "/india/swp-calculator/"
+    },
+    {
+      "title": "Annuity Calculator",
+      "url": "/india/annuity-calculator/"
+    },
+    {
+      "title": "Retirement Corpus Calculator",
+      "url": "/india/retirement-corpus-calculator/"
+    }
+  ]
+}

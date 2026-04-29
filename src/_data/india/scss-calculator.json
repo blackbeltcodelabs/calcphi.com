@@ -1,0 +1,123 @@
+{
+  "id": "scss-calculator",
+  "schema": {
+    "appName": "SCSS Calculator — Senior Citizen Savings Scheme",
+    "appDescription": "Calculate SCSS quarterly interest income and maturity value. Current rate 8.2% p.a. Available for senior citizens aged 60+. Maximum ₹30 lakh deposit."
+  },
+  "inputs": [
+    {
+      "id": "scss-principal",
+      "label": "Deposit Amount (₹)",
+      "min": 1000,
+      "max": 30000000,
+      "step": 1000,
+      "value": 1500000,
+      "hint": "Maximum ₹30 lakh (per individual)"
+    },
+    {
+      "id": "scss-rate",
+      "label": "Interest Rate (% p.a.)",
+      "min": 7,
+      "max": 10,
+      "step": 0.1,
+      "value": 8.2,
+      "hint": "Current SCSS rate: 8.2% (Q1 FY 2026-27)"
+    },
+    {
+      "id": "scss-years",
+      "label": "Tenure (Years)",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "value": 5,
+      "hint": "5-year tenure, extendable by 3 years"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "scss-quarterly",
+      "label": "Quarterly Interest Payout",
+      "highlight": true
+    },
+    {
+      "id": "scss-annual",
+      "label": "Annual Interest Income"
+    },
+    {
+      "id": "scss-total-interest",
+      "label": "Total Interest (5 Years)"
+    },
+    {
+      "id": "scss-maturity",
+      "label": "Maturity Amount"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the SCSS Calculator. All inputs have smart defaults."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown table to see how your numbers change over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust the inputs to compare different scenarios and find the best option."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Who can open a Senior Citizen Savings Scheme (SCSS) account?",
+      "a": "SCSS is available for Indian citizens aged 60 and above. VRS/superannuation retirees aged 55–60 can open within 1 month of receiving retirement benefits. Defence retirees aged 50+ are eligible. NRIs and HUFs are not eligible."
+    },
+    {
+      "q": "Is SCSS interest taxable?",
+      "a": "Yes. SCSS interest is fully taxable as 'income from other sources'. TDS is deducted at 10% if annual interest exceeds ₹50,000 (senior citizen threshold). You can submit Form 15H if total income is below the taxable limit. SCSS does not offer capital gains benefits."
+    },
+    {
+      "q": "Can SCSS be extended after 5 years?",
+      "a": "Yes. SCSS can be extended by 3 years after 5-year maturity by applying within 1 year of maturity. The extended period earns the interest rate applicable on the date of extension. SCSS qualifies for 80C deduction (within ₹1.5 lakh limit)."
+    },
+    {
+      "q": "Is the SCSS Calculator free?",
+      "a": "Yes, the SCSS Calculator on CalcPhi is completely free with no registration required."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser. We do not store any financial data."
+    },
+    {
+      "q": "Can I use the SCSS Calculator on mobile?",
+      "a": "Yes. CalcPhi is fully mobile-optimised and works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹15 lakh SCSS at 8.2% — quarterly income",
+      "text": "₹15 lakh in SCSS at 8.2% p.a. generates ₹30,750/quarter (₹1,23,000/year). Over 5 years, total interest = ₹6,15,000. This provides predictable quarterly income for retirement planning. TDS applies if interest exceeds ₹50,000/year."
+    },
+    {
+      "heading": "Couple maximising SCSS deposits",
+      "text": "A retired couple can each deposit ₹30 lakh in SCSS (total ₹60 lakh). At 8.2%, combined quarterly payout = ₹1,23,000 (₹4,92,000/year). Each submit Form 15H if income below taxable limit to avoid TDS."
+    }
+  ],
+  "related": [
+    {
+      "title": "Post Office MIS Calculator",
+      "url": "/india/post-office-mis-calculator/"
+    },
+    {
+      "title": "FD Calculator",
+      "url": "/india/fd-calculator/"
+    },
+    {
+      "title": "Annuity Calculator",
+      "url": "/india/annuity-calculator/"
+    }
+  ]
+}

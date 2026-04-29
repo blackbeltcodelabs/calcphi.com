@@ -1,0 +1,162 @@
+{
+  "id": "stamp-duty",
+  "schema": {
+    "appName": "Stamp Duty Calculator India 2026",
+    "appDescription": "Calculate stamp duty and registration charges for property purchase in India. State-wise rates for Maharashtra, Karnataka, Delhi, UP, and other states."
+  },
+  "inputs": [
+    {
+      "id": "sd-value",
+      "label": "Property Value (₹)",
+      "min": 100000,
+      "max": 500000000,
+      "step": 100000,
+      "value": 5000000
+    },
+    {
+      "id": "sd-state",
+      "label": "State",
+      "type": "select",
+      "options": [
+        {
+          "value": "maharashtra",
+          "label": "Maharashtra (5–6%)"
+        },
+        {
+          "value": "karnataka",
+          "label": "Karnataka (5%)"
+        },
+        {
+          "value": "delhi",
+          "label": "Delhi (4–6%)"
+        },
+        {
+          "value": "up",
+          "label": "Uttar Pradesh (7%)"
+        },
+        {
+          "value": "tamil-nadu",
+          "label": "Tamil Nadu (7%)"
+        },
+        {
+          "value": "wb",
+          "label": "West Bengal (5–7%)"
+        },
+        {
+          "value": "gujarat",
+          "label": "Gujarat (4.9%)"
+        },
+        {
+          "value": "other",
+          "label": "Other States (~5%)"
+        }
+      ]
+    },
+    {
+      "id": "sd-gender",
+      "label": "Buyer Gender",
+      "type": "select",
+      "options": [
+        {
+          "value": "male",
+          "label": "Male"
+        },
+        {
+          "value": "female",
+          "label": "Female (reduced rate in some states)"
+        },
+        {
+          "value": "joint",
+          "label": "Joint (male + female)"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "sd-stamp",
+      "label": "Stamp Duty",
+      "highlight": true
+    },
+    {
+      "id": "sd-regn",
+      "label": "Registration Charge (1%)"
+    },
+    {
+      "id": "sd-total",
+      "label": "Total Government Charges"
+    },
+    {
+      "id": "sd-rate-label",
+      "label": "Applicable Rate"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Stamp Duty Calculator."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and optimise your decision."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is stamp duty on property purchase in India?",
+      "a": "Stamp duty is a state tax on property transactions, typically 4–8% of the transaction value. It varies by state, gender (women buyers often get 1–2% concession), property type, and location (urban vs rural). It must be paid before registration. Non-payment makes the deed legally unenforceable."
+    },
+    {
+      "q": "What are the stamp duty rates in Maharashtra 2026?",
+      "a": "Maharashtra stamp duty: 6% for properties above ₹30 lakh in urban areas (5% stamp duty + 1% metro cess). Women buyers get 1% rebate. Local body tax and LBT may apply. Registration fee: 1% of property value, capped at ₹30,000 for properties above ₹30 lakh."
+    },
+    {
+      "q": "Is stamp duty tax-deductible?",
+      "a": "Stamp duty and registration charges paid for a house are deductible under Section 80C (within ₹1.5 lakh limit) in the year of payment. This is in addition to the principal repayment on home loan. Only available under the old tax regime."
+    },
+    {
+      "q": "Is this calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. Calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹50 lakh flat purchase in Mumbai",
+      "text": "Stamp duty (6%): ₹3,00,000. Registration charge (1%, capped at ₹30,000): ₹30,000. Total government charges: ₹3,30,000 — about 6.6% of property value. Women buyers pay 5% stamp duty instead of 6%, saving ₹50,000."
+    },
+    {
+      "heading": "₹1 crore property in Karnataka",
+      "text": "Karnataka stamp duty (5%): ₹5,00,000. Registration (1%): ₹1,00,000. Total: ₹6,00,000 on a ₹1 crore property. BBMP charges additional betterment levy in some areas. Always budget 6–8% over property cost for all charges."
+    }
+  ],
+  "related": [
+    {
+      "title": "Property Registration Calculator",
+      "url": "/india/property-registration-calculator/"
+    },
+    {
+      "title": "Rent vs Buy Calculator",
+      "url": "/india/rent-vs-buy-calculator/"
+    },
+    {
+      "title": "Home Loan EMI Calculator",
+      "url": "/india/home-loan-emi-calculator/"
+    }
+  ]
+}

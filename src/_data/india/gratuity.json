@@ -1,0 +1,113 @@
+{
+  "id": "gratuity",
+  "schema": {
+    "appName": "Gratuity Calculator India",
+    "appDescription": "Calculate gratuity amount for private sector employees under the Payment of Gratuity Act 1972. Know exact gratuity, tax-free limit, and taxable portion."
+  },
+  "inputs": [
+    {
+      "id": "gr-basic",
+      "label": "Last Basic + DA (₹/month)",
+      "min": 5000,
+      "max": 500000,
+      "step": 1000,
+      "value": 50000
+    },
+    {
+      "id": "gr-years",
+      "label": "Years of Continuous Service",
+      "min": 5,
+      "max": 40,
+      "step": 0.5,
+      "value": 10,
+      "hint": "Minimum 5 years (240 days/year)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "gr-gratuity",
+      "label": "Gratuity Amount",
+      "highlight": true
+    },
+    {
+      "id": "gr-tax-free",
+      "label": "Tax-Free Component (up to ₹20 lakh)"
+    },
+    {
+      "id": "gr-taxable",
+      "label": "Taxable Gratuity"
+    },
+    {
+      "id": "gr-per-year",
+      "label": "Gratuity Per Year of Service"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Gratuity Calculator. Smart defaults are pre-filled."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and find the best option."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the gratuity formula in India?",
+      "a": "Gratuity = (Basic + DA) × 15 ÷ 26 × Years of Service. The '15' is for 15 days of salary, '26' converts monthly salary to daily (26 working days/month). Example: ₹50,000 basic, 10 years = 50,000 × 15 ÷ 26 × 10 = ₹2,88,462."
+    },
+    {
+      "q": "Is gratuity tax-free?",
+      "a": "Gratuity up to ₹20 lakh (revised limit) is tax-free for private sector employees under the Payment of Gratuity Act. Government employees get full tax exemption. Amounts above ₹20 lakh are taxable as income from salary."
+    },
+    {
+      "q": "When am I eligible for gratuity?",
+      "a": "Gratuity is payable on: resignation/retirement after 5+ years continuous service, termination (no minimum service requirement), death or disability (no minimum service). The 5-year rule is waived in case of death. Gratuity must be paid within 30 days of becoming payable."
+    },
+    {
+      "q": "Is the Gratuity Calculator free?",
+      "a": "Yes, completely free on CalcPhi with no registration."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser. Your data is never stored."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones and tablets."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹50,000 basic, 10 years service",
+      "text": "Gratuity = 50,000 × 15/26 × 10 = ₹2,88,462. Fully tax-free (below ₹20 lakh limit). That's ₹28,846/year of service. For 20 years, gratuity = ₹5,76,923 — still tax-free as under ₹20 lakh."
+    },
+    {
+      "heading": "High earner — ₹2 lakh basic, 15 years",
+      "text": "Gratuity = 2,00,000 × 15/26 × 15 = ₹17,30,769. Tax-free. For 20 years: ₹23,07,692 — ₹3,07,692 above ₹20 lakh limit is taxable at slab rate."
+    }
+  ],
+  "related": [
+    {
+      "title": "Leave Encashment Calculator",
+      "url": "/india/leave-encashment-calculator/"
+    },
+    {
+      "title": "EPF Calculator",
+      "url": "/india/epf-calculator/"
+    },
+    {
+      "title": "CTC to In-Hand Calculator",
+      "url": "/india/ctc-to-in-hand-calculator/"
+    }
+  ]
+}

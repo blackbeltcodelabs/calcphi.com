@@ -1,0 +1,94 @@
+{
+  "id": "direct-vs-regular",
+  "inputs": [
+    { "id": "dvr-amount", "label": "Investment Amount (₹)", "min": 1000, "max": 100000000, "step": 10000, "value": 1000000, "hint": "One-time lumpsum investment for comparison" },
+    { "id": "dvr-rate", "label": "Direct Plan Return (%)", "min": 1, "max": 30, "step": 0.5, "value": 12, "hint": "Expected annual return of the direct plan" },
+    { "id": "dvr-expense-gap", "label": "Expense Ratio Difference (%)", "min": 0.1, "max": 3, "step": 0.1, "value": 1.5, "hint": "Regular plan has this much higher expense ratio (typically 0.5–2%)" },
+    { "id": "dvr-years", "label": "Investment Period (Years)", "min": 1, "max": 40, "step": 1, "value": 10, "hint": "" }
+  ],
+  "outputs": [
+    { "id": "direct-corpus", "label": "Direct Plan Corpus", "highlight": true },
+    { "id": "regular-corpus", "label": "Regular Plan Corpus" },
+    { "id": "savings-from-direct", "label": "Extra Wealth from Direct Plan" }
+  ],
+  "staticTable": {
+    "caption": "Direct vs Regular plan — extra wealth from direct plan at 12% return with 1.5% expense ratio gap",
+    "headers": ["Investment (₹)", "10 Years Direct (₹)", "10 Years Regular (₹)", "Savings from Direct (₹)"],
+    "rows": [
+      ["₹1,00,000", "₹3,10,585", "₹2,66,002", "₹44,583"],
+      ["₹5,00,000", "₹15,52,924", "₹13,30,008", "₹2,22,916"],
+      ["₹10,00,000", "₹31,05,848", "₹26,60,016", "₹4,45,832"],
+      ["₹25,00,000", "₹77,64,621", "₹66,50,040", "₹11,14,581"],
+      ["₹50,00,000", "₹1,55,29,241", "₹1,33,00,081", "₹22,29,160"]
+    ]
+  },
+  "examples": [
+    {
+      "heading": "₹10 lakh invested for 20 years — direct vs regular plan at 12%",
+      "text": "Investing ₹10 lakhs in a direct plan at 12% annual return for 20 years grows to approximately ₹96.5 lakhs. The same investment in a regular plan with a 1.5% higher expense ratio (effectively 10.5% return) grows to only ₹74.1 lakhs. The difference is ₹22.4 lakhs — money that went to the distributor as commission rather than to the investor. Over 20 years, the expense ratio gap compounds into a massive wealth difference."
+    },
+    {
+      "heading": "The 1% cost of advice — when regular plans might be worth it",
+      "text": "A financial advisor charging 1% on a regular plan provides value if their guidance helps you: avoid panic-selling in downturns; maintain appropriate asset allocation; stay invested for the full duration; and select better-performing funds. If an advisor helps you achieve 13% instead of 12% through better fund selection, the regular plan with advisor may outperform a self-managed direct plan.",
+      "table": {
+        "headers": ["Plan Type", "Gross Return", "Expense Ratio", "Net Return", "10-Year Value (₹10L)"],
+        "rows": [
+          ["Direct Plan (self)", "12%", "0.5%", "11.5%", "₹29,72,318"],
+          ["Regular Plan (advisor)", "12%", "2.0%", "10.0%", "₹25,93,742"],
+          ["Regular Plan (better fund)", "14%", "2.0%", "12.0%", "₹31,05,848"]
+        ]
+      }
+    }
+  ],
+  "decisionGuide": [
+    {
+      "question": "Should I invest in direct or regular mutual fund plans?",
+      "answer": "Choose direct plans if you are comfortable researching and selecting funds yourself, can maintain investment discipline without an advisor, and are investing ₹5 lakhs or more where the expense ratio savings are substantial. Choose regular plans if you need a qualified financial advisor (CFP) to manage your portfolio and can verify their value adds more than their cost."
+    },
+    {
+      "question": "Is it worth switching from regular to direct plan?",
+      "answer": "Switching from regular to direct plan is treated as a redemption and fresh purchase for tax purposes. If your holding is long-term (LTCG), the tax cost of switching may be low. For a ₹10 lakh investment with ₹5 lakhs in gains, switching would trigger approximately ₹46,875 in LTCG tax. Compare this against the estimated annual savings from direct plan to determine the break-even period."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the difference between direct and regular mutual fund plans?",
+      "a": "Direct plans are bought directly from the fund house without any intermediary, resulting in a lower expense ratio (typically 0.5–1.5% less than regular plans). Regular plans involve a distributor or financial advisor who receives commission from the fund house, funded by the higher expense ratio. Both plans invest in the same portfolio — the only difference is the expense ratio, which directly impacts your returns."
+    },
+    {
+      "q": "How much extra do I earn from direct plans over 10 years?",
+      "a": "On a ₹10 lakh investment at 12% direct plan return with a 1.5% expense gap (10.5% regular plan return) over 10 years: direct plan = ₹31.06 lakhs; regular plan = ₹26.6 lakhs. Difference = ₹4.46 lakhs. On a ₹25 lakh investment over 20 years at the same rates: direct plan = ₹2.41 crore; regular plan = ₹1.86 crore. Difference = ₹55 lakhs. The compounding of expense ratio savings is enormous over long periods."
+    },
+    {
+      "q": "What is the typical expense ratio for direct vs regular plans?",
+      "a": "For equity mutual funds: direct plans typically have an expense ratio of 0.5–1.5%; regular plans have 1.5–2.5%. The gap is typically 0.5–1.5 percentage points. For large-cap index funds, direct plans can have an expense ratio as low as 0.05–0.1% (Nifty 50 index funds), making the gap with regular plans even wider. For debt funds, the gap is smaller — typically 0.3–0.5%."
+    },
+    {
+      "q": "Can I switch from regular to direct plan online?",
+      "a": "Yes. You can switch from regular to direct plan online through: (1) The fund house's website or app; (2) MF Central or MF Utility portals; (3) Your broker's app if they support direct plans. The switch is a redemption from regular plan and fresh investment in direct plan — it may trigger capital gains tax. Consider timing the switch to minimise tax impact, ideally after the holding period qualifies for LTCG treatment."
+    },
+    {
+      "q": "Are direct plans always better than regular plans?",
+      "a": "Direct plans are mathematically superior in terms of expense ratio. However, if a financial advisor helps you make better investment decisions — avoiding poor funds, maintaining discipline during volatility, rebalancing at the right time — the value they add may exceed their 0.5–1.5% annual cost. The question is whether your advisor consistently adds more value than their fees. For index fund investors with a buy-and-hold strategy, direct plans are almost always better."
+    },
+    {
+      "q": "Do direct plans have a higher NAV than regular plans?",
+      "a": "Yes. Since direct plans have a lower expense ratio, their NAV grows faster than regular plans for the same fund. Over time, the NAV of a direct plan will always be higher than the corresponding regular plan. This higher NAV is not a disadvantage — you simply buy fewer units at a higher price, but the underlying value per unit is genuinely higher. Returns calculated in percentage terms are what matter, not absolute NAV."
+    }
+  ],
+  "howToSteps": [
+    { "name": "Enter Your Investment Amount", "text": "Enter the lumpsum amount you are comparing. The calculator shows the 20-year difference, so even small investment differences in expense ratio become significant." },
+    { "name": "Set Direct Plan Return", "text": "Enter the expected return of the direct plan fund you are considering. Use the fund's historical 5-year or 10-year CAGR as a reference, keeping in mind past returns do not guarantee future performance." },
+    { "name": "Set Expense Ratio Gap", "text": "Enter the difference in expense ratio between the regular and direct plan. Check the fund's factsheet — the gap is typically 0.5–1.5% for equity funds. For Nifty 50 index funds, the gap may be smaller." },
+    { "name": "Compare Long-Term Difference", "text": "The calculator shows the corpus for both plans and the extra wealth you accumulate by choosing the direct plan. This difference is the commission that would otherwise go to distributors." }
+  ],
+  "related": [
+    { "title": "Expense Ratio Impact Calculator", "url": "/india/expense-ratio-calculator/", "desc": "See exactly how expense ratio drags your returns" },
+    { "title": "Lumpsum Calculator", "url": "/india/lumpsum-calculator/", "desc": "Calculate lumpsum mutual fund investment growth" },
+    { "title": "SIP Calculator", "url": "/india/sip-calculator/", "desc": "Monthly SIP returns calculator" }
+  ],
+  "schema": {
+    "appName": "Direct vs Regular Mutual Fund Calculator India",
+    "appDescription": "Compare direct and regular mutual fund plan returns to see how much extra wealth you earn by avoiding distributor commission"
+  }
+}

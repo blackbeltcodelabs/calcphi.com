@@ -1,0 +1,120 @@
+{
+  "id": "swp-retirement",
+  "schema": {
+    "appName": "SWP Retirement Calculator — How Long Will My Corpus Last?",
+    "appDescription": "Find out how many years your retirement corpus will last with monthly SWP withdrawals at given return rates."
+  },
+  "inputs": [
+    {
+      "id": "swpr-corpus",
+      "label": "Retirement Corpus (₹)",
+      "min": 1000000,
+      "max": 500000000,
+      "step": 100000,
+      "value": 10000000
+    },
+    {
+      "id": "monthly-withdrawal",
+      "label": "Monthly Withdrawal Amount (₹)",
+      "min": 10000,
+      "max": 500000,
+      "step": 5000,
+      "value": 75000
+    },
+    {
+      "id": "swp-rate",
+      "label": "Expected Annual Return (% p.a.)",
+      "min": 4,
+      "max": 15,
+      "step": 0.5,
+      "value": 8
+    }
+  ],
+  "outputs": [
+    {
+      "id": "swpr-duration",
+      "label": "Years Corpus Will Last",
+      "highlight": true
+    },
+    {
+      "id": "swpr-total-withdrawn",
+      "label": "Total Amount Withdrawn"
+    },
+    {
+      "id": "swpr-withdraw-rate",
+      "label": "Annual Withdrawal Rate"
+    },
+    {
+      "id": "swpr-monthly",
+      "label": "Monthly Withdrawal"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the SWP Retirement Calculator."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and optimise your decision."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What withdrawal rate makes my corpus last forever?",
+      "a": "At 8% return: annual withdrawal of 8% of corpus depletes corpus exactly at the end of the first year (oversimplified). Realistically, with monthly compounding and balanced SWP, a withdrawal rate equal to the return rate is approximately sustainable indefinitely. SWP of 6–7% of corpus typically lasts 30+ years at 8% return."
+    },
+    {
+      "q": "How does inflation affect SWP sustainability?",
+      "a": "If you fix monthly withdrawal at ₹75,000 while inflation runs at 6%, your real purchasing power halves in 12 years. Consider a step-up SWP — increase withdrawal by 5–6%/year. This reduces initial withdrawal but maintains lifestyle quality. The trade-off: corpus depletes faster."
+    },
+    {
+      "q": "What funds are best for SWP?",
+      "a": "For retirement SWP: balanced advantage funds (automatic asset allocation), hybrid funds, or a combination of equity + debt. Avoid withdrawing from equity funds during market downturns — maintain 1–2 years of withdrawals in liquid funds as a buffer. This 'bucket strategy' protects against sequence-of-returns risk."
+    },
+    {
+      "q": "Is this calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. Calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹1 crore corpus — ₹75,000/month SWP at 8%",
+      "text": "₹1 crore at 8%, withdrawing ₹75,000/month (9% annual withdrawal rate): corpus lasts approximately 18 years. Reducing to ₹60,000/month: lasts 25 years. At ₹50,000/month (6% withdrawal rate): corpus lasts 30+ years and may actually grow."
+    },
+    {
+      "heading": "₹2 crore corpus — sustainable withdrawal",
+      "text": "At ₹2 crore with 8% return: sustainable withdrawal = ₹1,33,000/month (annual return = annual withdrawal, corpus never depletes). More conservatively at 6%: ₹1,00,000/month. Build corpus to a level where desired lifestyle = 6% of corpus × 1/12."
+    }
+  ],
+  "related": [
+    {
+      "title": "SWP Calculator",
+      "url": "/india/swp-calculator/"
+    },
+    {
+      "title": "Pension Income Calculator",
+      "url": "/india/pension-income-calculator/"
+    },
+    {
+      "title": "Annuity Calculator",
+      "url": "/india/annuity-calculator/"
+    }
+  ]
+}

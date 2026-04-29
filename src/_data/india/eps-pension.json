@@ -1,0 +1,114 @@
+{
+  "id": "eps-pension",
+  "schema": {
+    "appName": "EPS Pension Calculator — Employee Pension Scheme",
+    "appDescription": "Calculate your monthly EPS pension at retirement. Based on pensionable salary and years of service under EPFO's Employee Pension Scheme 1995."
+  },
+  "inputs": [
+    {
+      "id": "eps-salary",
+      "label": "Last Basic Salary (₹)",
+      "min": 5000,
+      "max": 150000,
+      "step": 1000,
+      "value": 15000,
+      "hint": "Pensionable salary capped at ₹15,000"
+    },
+    {
+      "id": "eps-years",
+      "label": "Years of Eligible Service",
+      "min": 10,
+      "max": 35,
+      "step": 1,
+      "value": 20,
+      "hint": "EPS pension requires minimum 10 years"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "eps-monthly-pension",
+      "label": "Monthly EPS Pension",
+      "highlight": true
+    },
+    {
+      "id": "eps-annual-pension",
+      "label": "Annual Pension"
+    },
+    {
+      "id": "eps-employer-contrib",
+      "label": "Monthly Employer EPS Contribution"
+    },
+    {
+      "id": "eps-total-contrib",
+      "label": "Total EPS Contributed (Career)"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the EPS Pension Calculator. Smart defaults are pre-filled."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and find the best option."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How is EPS pension calculated?",
+      "a": "EPS pension formula: Monthly Pension = (Pensionable Salary × Pensionable Service) ÷ 70. Pensionable salary = average last 60 months' basic (capped at ₹15,000). Maximum pension (35 years, ₹15,000 salary) = (15,000 × 35) ÷ 70 = ₹7,500/month. Minimum pension is ₹1,000/month."
+    },
+    {
+      "q": "What is the minimum service required for EPS pension?",
+      "a": "Minimum 10 years of eligible service is required for EPS pension. Less than 10 years: you can withdraw the EPS corpus (Scheme Certificate). Between 10–58 years: pension starts at 58. Early pension (age 50–58) possible with 10% reduction per year."
+    },
+    {
+      "q": "Can I get higher pension under EPS?",
+      "a": "The Supreme Court 2022 judgement allowed employees earning above ₹15,000 to contribute to EPS on actual salary. This is the 'Higher Pension' option. Employees who opted by the May 2023 deadline can get significantly higher EPS pension — up to ₹15,000/month or more."
+    },
+    {
+      "q": "Is the EPS Pension Calculator free?",
+      "a": "Yes, completely free on CalcPhi with no registration."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser. Your data is never stored."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones and tablets."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "20 years service, ₹15,000 pensionable salary",
+      "text": "EPS pension = (15,000 × 20) ÷ 70 = ₹4,286/month (₹51,432/year). This starts at age 58. Total EPS contribution over 20 years: approx ₹3,00,000. A ₹4,286/month pension on ₹3 lakh invested = very attractive long-term return."
+    },
+    {
+      "heading": "Effect of 2 years extra service",
+      "text": "30 years service at ₹15,000: pension = ₹6,429/month. 32 years: ₹6,857/month. Every extra year adds ₹214/month pension. Delaying EPF withdrawal to maximise EPS service years is financially smart."
+    }
+  ],
+  "related": [
+    {
+      "title": "EPF Calculator",
+      "url": "/india/epf-calculator/"
+    },
+    {
+      "title": "NPS Calculator",
+      "url": "/india/nps-calculator/"
+    },
+    {
+      "title": "Retirement Corpus Calculator",
+      "url": "/india/retirement-corpus-calculator/"
+    }
+  ]
+}

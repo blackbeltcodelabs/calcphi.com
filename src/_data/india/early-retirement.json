@@ -1,0 +1,144 @@
+{
+  "id": "early-retirement",
+  "schema": {
+    "appName": "Early Retirement Calculator India",
+    "appDescription": "Plan for early retirement at any age. Calculate corpus needed, monthly investment, and post-retirement income to sustain expenses until life expectancy."
+  },
+  "inputs": [
+    {
+      "id": "er-monthly",
+      "label": "Current Monthly Expenses (₹)",
+      "min": 10000,
+      "max": 1000000,
+      "step": 1000,
+      "value": 80000
+    },
+    {
+      "id": "er-age",
+      "label": "Current Age",
+      "min": 20,
+      "max": 55,
+      "step": 1,
+      "value": 32
+    },
+    {
+      "id": "er-retire",
+      "label": "Target Retirement Age",
+      "min": 35,
+      "max": 60,
+      "step": 1,
+      "value": 45
+    },
+    {
+      "id": "er-life",
+      "label": "Life Expectancy",
+      "min": 70,
+      "max": 100,
+      "step": 1,
+      "value": 85
+    },
+    {
+      "id": "er-inflation",
+      "label": "Inflation Rate (% p.a.)",
+      "min": 3,
+      "max": 10,
+      "step": 0.5,
+      "value": 6
+    },
+    {
+      "id": "er-post-rate",
+      "label": "Post-Retirement Return (% p.a.)",
+      "min": 4,
+      "max": 10,
+      "step": 0.5,
+      "value": 7
+    }
+  ],
+  "outputs": [
+    {
+      "id": "er-corpus",
+      "label": "Corpus Needed at Retirement",
+      "highlight": true
+    },
+    {
+      "id": "er-future-monthly",
+      "label": "Monthly Expenses at Retirement (Inflation)"
+    },
+    {
+      "id": "er-years",
+      "label": "Retirement Duration"
+    },
+    {
+      "id": "er-monthly-sip",
+      "label": "Monthly SIP Needed (12% pre-retirement)"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Early Retirement Calculator."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and optimise your decision."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the difference between early retirement and FIRE?",
+      "a": "FIRE (Financial Independence, Retire Early) and early retirement are related concepts. FIRE emphasises financial independence first — you could work but choose not to. Early retirement focuses on leaving employment before the traditional age of 60. The corpus calculation is similar but early retirement may have a longer retirement horizon, requiring a larger corpus."
+    },
+    {
+      "q": "What are the challenges of early retirement in India?",
+      "a": "Challenges: longer retirement horizon (40+ years), higher inflation impact, no EPF/NPS top-up, health insurance costs without employer cover, social isolation, potential career regret. Also, corpus must grow through this period — conservative investments may not beat inflation."
+    },
+    {
+      "q": "How do I calculate how much I need to retire at 45?",
+      "a": "1. Estimate monthly expenses at age 45 (adjust for inflation). 2. Calculate total expenses from 45 to life expectancy (80–85). 3. Find present value of these expenses at post-retirement investment rate. This is your corpus target. Divide by your investment period to get monthly SIP needed."
+    },
+    {
+      "q": "Is this calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. Calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "Retiring at 45 with ₹80,000/month expenses",
+      "text": "At 6% inflation, expenses at 45: ₹1,70,000/month (₹20.4 lakh/year). Retirement period: 40 years. Corpus needed at 7% post-retirement return: approximately ₹4.8 crore. Monthly SIP at 12% for 13 years: ₹1,50,000."
+    },
+    {
+      "heading": "Impact of 5-year delay — retire at 50 vs 45",
+      "text": "Retire at 45: corpus needed ₹4.8 crore, monthly SIP ₹1,50,000 for 13 years. Retire at 50: corpus needed ₹5.2 crore (higher inflation-adjusted expenses), monthly SIP ₹90,000 for 18 years. Five extra working years dramatically reduce the monthly investment burden."
+    }
+  ],
+  "related": [
+    {
+      "title": "FIRE Number Calculator",
+      "url": "/india/fire-number-calculator/"
+    },
+    {
+      "title": "Retirement Corpus Calculator",
+      "url": "/india/retirement-corpus-calculator/"
+    },
+    {
+      "title": "SWP Calculator",
+      "url": "/india/swp-calculator/"
+    }
+  ]
+}

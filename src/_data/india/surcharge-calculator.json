@@ -1,0 +1,105 @@
+{
+  "id": "surcharge-calculator",
+  "schema": {
+    "appName": "Income Tax Surcharge Calculator India",
+    "appDescription": "Calculate income tax surcharge and health & education cess for high-income individuals. FY 2026-27 rates."
+  },
+  "inputs": [
+    {
+      "id": "sc-income",
+      "label": "Total Taxable Income (₹)",
+      "min": 0,
+      "max": 500000000,
+      "step": 100000,
+      "value": 5000000,
+      "hint": "Net taxable income after deductions"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "sc-base-tax",
+      "label": "Base Income Tax",
+      "highlight": true
+    },
+    {
+      "id": "sc-surcharge",
+      "label": "Surcharge"
+    },
+    {
+      "id": "sc-cess",
+      "label": "Health & Education Cess (4%)"
+    },
+    {
+      "id": "sc-total",
+      "label": "Total Tax Payable"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Income Tax Surcharge Calculator. All inputs have smart defaults."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown table to see how your numbers change over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust the inputs to compare different scenarios and find the best option for your situation."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is income tax surcharge in India?",
+      "a": "Surcharge is an additional tax on income tax itself, levied on high-income taxpayers. For FY 2026-27: income ₹50L–₹1Cr attracts 10% surcharge; ₹1Cr–₹2Cr attracts 15%; ₹2Cr–₹5Cr attracts 25%; above ₹5Cr attracts 37% (new regime capped at 25% post Budget 2023)."
+    },
+    {
+      "q": "What is health and education cess?",
+      "a": "4% cess is levied on (income tax + surcharge) for all taxpayers. It funds health and education initiatives. There is no exemption from cess."
+    },
+    {
+      "q": "Is surcharge applicable under the new tax regime?",
+      "a": "Yes, surcharge applies under both old and new tax regimes. However, the maximum surcharge under the new regime for capital gains is capped at 15%."
+    },
+    {
+      "q": "Is the Surcharge Calculator free?",
+      "a": "Yes, the Surcharge Calculator on CalcPhi is completely free with no registration required."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser. We do not store any financial data."
+    },
+    {
+      "q": "Can I use the Surcharge Calculator on mobile?",
+      "a": "Yes. CalcPhi is fully mobile-optimised and works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹75 lakh income — surcharge calculation",
+      "text": "For ₹75 lakh taxable income, base tax under new regime is approximately ₹15.6 lakh. Surcharge at 10% = ₹1.56 lakh. Cess at 4% on ₹17.16 lakh = ₹68,640. Total tax payable: ₹17.85 lakh (effective rate ~23.8%)."
+    },
+    {
+      "heading": "₹2 crore income — 25% surcharge",
+      "text": "For ₹2 crore income, surcharge jumps to 25% of base tax. This significantly increases the effective tax rate. Use marginal relief provisions if income is just above the ₹1 crore or ₹2 crore threshold."
+    }
+  ],
+  "related": [
+    {
+      "title": "Income Tax Calculator",
+      "url": "/india/income-tax-calculator/"
+    },
+    {
+      "title": "Advance Tax Calculator",
+      "url": "/india/advance-tax-calculator/"
+    },
+    {
+      "title": "New vs Old Tax Regime",
+      "url": "/india/new-vs-old-regime-calculator/"
+    }
+  ]
+}

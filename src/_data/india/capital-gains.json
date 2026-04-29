@@ -1,0 +1,143 @@
+{
+  "id": "capital-gains",
+  "schema": {
+    "appName": "Capital Gains Tax Calculator India 2026",
+    "appDescription": "Calculate LTCG and STCG tax on equity, mutual funds, property, and debt instruments. Updated for Budget 2024 rates — 12.5% LTCG equity, 20% STCG equity."
+  },
+  "inputs": [
+    {
+      "id": "cg-buy-price",
+      "label": "Purchase Price (₹)",
+      "min": 1,
+      "max": 100000000,
+      "step": 1000,
+      "value": 500000
+    },
+    {
+      "id": "cg-sell-price",
+      "label": "Sale Price (₹)",
+      "min": 1,
+      "max": 100000000,
+      "step": 1000,
+      "value": 900000
+    },
+    {
+      "id": "cg-years",
+      "label": "Holding Period (Years)",
+      "min": 0.1,
+      "max": 30,
+      "step": 0.5,
+      "value": 2
+    },
+    {
+      "id": "cg-asset-type",
+      "label": "Asset Type",
+      "type": "select",
+      "options": [
+        {
+          "value": "equity",
+          "label": "Equity Shares / Equity MF"
+        },
+        {
+          "value": "debt",
+          "label": "Debt MF / Bonds"
+        },
+        {
+          "value": "property",
+          "label": "Property / Real Estate"
+        },
+        {
+          "value": "gold",
+          "label": "Gold / Sovereign Gold Bond"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "cg-gain",
+      "label": "Capital Gain"
+    },
+    {
+      "id": "cg-type",
+      "label": "Gain Type"
+    },
+    {
+      "id": "cg-tax",
+      "label": "Capital Gains Tax",
+      "highlight": true
+    },
+    {
+      "id": "cg-net",
+      "label": "Net Gain After Tax"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the inputs for the Capital Gains Tax Calculator."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year table."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare options."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What are the capital gains tax rates in India 2026?",
+      "a": "Equity shares/MF (Budget 2024): LTCG (>1 year) at 12.5% above ₹1.25 lakh/year exemption; STCG (<1 year) at 20%. Debt MF/bonds: taxed at income slab rate (no LTCG/STCG distinction from FY 2024). Property: LTCG (>2 years) at 12.5% without indexation or 20% with indexation; STCG at slab rate."
+    },
+    {
+      "q": "What is the LTCG exemption limit for equity in India?",
+      "a": "Budget 2024 increased LTCG exemption to ₹1.25 lakh/year (from ₹1 lakh). Any equity LTCG above ₹1.25 lakh is taxed at 12.5%. For example, if you have ₹2 lakh LTCG: taxable = ₹75,000, tax = ₹9,375. You can plan redemptions across financial years to stay within the exemption."
+    },
+    {
+      "q": "Can I save LTCG tax on property sale?",
+      "a": "Yes. LTCG on property sale (held >2 years) can be reinvested: (a) in a new residential property (Section 54) within 2 years/3 years under construction, (b) in NHAI or REC bonds (Section 54EC) within 6 months — maximum ₹50 lakh, (c) Capital Gains Account Scheme while arranging reinvestment."
+    },
+    {
+      "q": "Is the Capital Gains Tax Calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. Calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "Equity MF LTCG — ₹4 lakh gain",
+      "text": "₹4 lakh LTCG on equity MF held 2 years. Exemption ₹1.25 lakh. Taxable gain: ₹2.75 lakh. LTCG tax at 12.5%: ₹34,375. Net gain after tax: ₹3,65,625. Effective tax rate on total gain: 8.6%."
+    },
+    {
+      "heading": "Property sale LTCG — ₹50 lakh gain",
+      "text": "Property bought ₹50 lakh (2018), sold ₹1 crore (2026). LTCG = ₹50 lakh. With indexation (CII 2018: 280, 2026 est: 400): indexed cost = 50L × 400/280 = ₹71.4 lakh, gain = ₹28.6 lakh, tax at 20% = ₹5.72 lakh. Without indexation (Budget 2024): ₹50 lakh × 12.5% = ₹6.25 lakh. Choose whichever is lower."
+    }
+  ],
+  "related": [
+    {
+      "title": "Income Tax Calculator",
+      "url": "/india/income-tax-calculator/"
+    },
+    {
+      "title": "ELSS Calculator",
+      "url": "/india/elss-calculator/"
+    },
+    {
+      "title": "Home Loan Tax Benefit",
+      "url": "/india/home-loan-tax-calculator/"
+    }
+  ]
+}

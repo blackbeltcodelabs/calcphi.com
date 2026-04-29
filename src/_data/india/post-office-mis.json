@@ -1,0 +1,114 @@
+{
+  "id": "post-office-mis",
+  "schema": {
+    "appName": "Post Office MIS Calculator — Monthly Income Scheme",
+    "appDescription": "Calculate monthly interest income from Post Office Monthly Income Scheme (MIS). Current rate 7.4% p.a. Maximum ₹9 lakh (single), ₹15 lakh (joint)."
+  },
+  "inputs": [
+    {
+      "id": "pomis-principal",
+      "label": "Deposit Amount (₹)",
+      "min": 1000,
+      "max": 15000000,
+      "step": 1000,
+      "value": 900000,
+      "hint": "Max ₹9 lakh (single), ₹15 lakh (joint account)"
+    },
+    {
+      "id": "pomis-rate",
+      "label": "Interest Rate (% p.a.)",
+      "min": 5,
+      "max": 10,
+      "step": 0.1,
+      "value": 7.4,
+      "hint": "Current POMIS rate: 7.4% (Q1 FY 2026-27)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "pomis-monthly",
+      "label": "Monthly Interest Income",
+      "highlight": true
+    },
+    {
+      "id": "pomis-annual",
+      "label": "Annual Interest Income"
+    },
+    {
+      "id": "pomis-total",
+      "label": "Total Interest (5 Years)"
+    },
+    {
+      "id": "pomis-maturity",
+      "label": "Maturity Amount (Principal Returned)"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Post Office MIS Calculator. All inputs have smart defaults."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown table to see how your numbers change over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust the inputs to compare different scenarios and find the best option."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is Post Office Monthly Income Scheme (POMIS)?",
+      "a": "POMIS is a 5-year post office scheme that pays fixed monthly interest. Current rate is 7.4% p.a. Maximum deposit: ₹9 lakh (single), ₹15 lakh (joint). Interest is paid monthly to the linked post office savings account. The principal is returned at maturity."
+    },
+    {
+      "q": "Is POMIS interest taxable?",
+      "a": "Yes. POMIS interest is fully taxable as 'income from other sources' at your income tax slab rate. TDS is not deducted at source, but you must declare the interest in your ITR. POMIS does not qualify for Section 80C deduction."
+    },
+    {
+      "q": "Can POMIS be closed before 5 years?",
+      "a": "Yes, premature closure is allowed after 1 year. If closed before 3 years: 2% deduction from principal. If closed after 3 years: 1% deduction. The penalty makes early closure costly — invest only if you can hold for 5 years."
+    },
+    {
+      "q": "Is the Post Office MIS Calculator free?",
+      "a": "Yes, the Post Office MIS Calculator on CalcPhi is completely free with no registration required."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser. We do not store any financial data."
+    },
+    {
+      "q": "Can I use the Post Office MIS Calculator on mobile?",
+      "a": "Yes. CalcPhi is fully mobile-optimised and works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹9 lakh POMIS — maximum single account deposit",
+      "text": "₹9 lakh in POMIS at 7.4% p.a. generates ₹5,550/month (₹66,600/year) for 5 years. Total interest: ₹3,33,000. Principal returned at maturity. Ideal for retirees needing predictable monthly income."
+    },
+    {
+      "heading": "Joint POMIS account — ₹15 lakh deposit",
+      "text": "A couple with ₹15 lakh joint POMIS at 7.4% gets ₹9,250/month (₹1,11,000/year). Over 5 years, total interest = ₹5,55,000. Monthly payout is credited directly to the post office savings account."
+    }
+  ],
+  "related": [
+    {
+      "title": "SCSS Calculator",
+      "url": "/india/scss-calculator/"
+    },
+    {
+      "title": "FD Calculator",
+      "url": "/india/fd-calculator/"
+    },
+    {
+      "title": "Annuity Calculator",
+      "url": "/india/annuity-calculator/"
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "id": "critical-illness",
+  "schema": {
+    "appName": "Critical Illness Insurance Cover Calculator",
+    "appDescription": "Calculate recommended critical illness insurance cover for India. Factor in income replacement, treatment costs, and recovery period for cancer, heart attack, and stroke."
+  },
+  "inputs": [
+    {
+      "id": "ci-income",
+      "label": "Monthly Income (₹)",
+      "min": 20000,
+      "max": 5000000,
+      "step": 5000,
+      "value": 100000
+    },
+    {
+      "id": "ci-recovery",
+      "label": "Expected Recovery Period (Months)",
+      "min": 3,
+      "max": 36,
+      "step": 3,
+      "value": 12,
+      "hint": "Average recovery: cancer 12–24 months, heart 3–6 months"
+    },
+    {
+      "id": "ci-treatment",
+      "label": "Expected Treatment Cost (₹)",
+      "min": 100000,
+      "max": 10000000,
+      "step": 100000,
+      "value": 2000000,
+      "hint": "Cancer: ₹5–20 lakh, cardiac: ₹3–8 lakh"
+    },
+    {
+      "id": "ci-emi",
+      "label": "Monthly EMI Obligations (₹)",
+      "min": 0,
+      "max": 500000,
+      "step": 1000,
+      "value": 30000
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ci-income-loss",
+      "label": "Income Loss During Recovery"
+    },
+    {
+      "id": "ci-treatment",
+      "label": "Treatment Cost Covered"
+    },
+    {
+      "id": "ci-emi-total",
+      "label": "EMIs During Recovery"
+    },
+    {
+      "id": "ci-recommended",
+      "label": "Recommended CI Cover",
+      "highlight": true
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Critical Illness Calculator. Smart defaults are pre-filled."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and optimise your decision."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is critical illness insurance and how is it different from health insurance?",
+      "a": "Critical illness insurance pays a lump sum on diagnosis of specified conditions (cancer, heart attack, stroke, kidney failure, etc.) regardless of actual medical bills. Health insurance reimburses hospitalisation expenses. CI insurance covers income loss, treatment abroad, and lifestyle adjustments — not just bills. Both are needed."
+    },
+    {
+      "q": "Which diseases are covered under critical illness insurance?",
+      "a": "Standard critical illness covers 15–40 conditions including: cancer, myocardial infarction, stroke, kidney failure, major organ transplant, coronary artery bypass graft, aorta surgery, coma, multiple sclerosis, motor neurone disease, blindness, deafness, paralysis, and Alzheimer's."
+    },
+    {
+      "q": "Is critical illness insurance claim tax-free?",
+      "a": "Yes. The lump sum payout from critical illness insurance is fully tax-free under Section 10(10D) of the Income Tax Act. The premium also qualifies for Section 80D deduction (within the ₹25,000 or ₹50,000 limit for self/senior citizens)."
+    },
+    {
+      "q": "Is this calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "Cancer diagnosis — financial impact",
+      "text": "A ₹1 lakh/month earner with ₹30,000 EMI diagnosed with cancer: 12 months recovery = ₹12 lakh income loss + ₹15 lakh treatment + ₹3.6 lakh EMIs = ₹30.6 lakh CI cover needed. A ₹25 lakh CI policy covers most of this."
+    },
+    {
+      "heading": "Cardiac event at age 45",
+      "text": "Heart bypass surgery: ₹5–8 lakh at top hospitals. Recovery: 3–6 months. Income loss at ₹80,000/month: ₹4.8 lakh. Total impact: ₹12–15 lakh. A ₹15 lakh CI policy covers this with room for lifestyle adjustments."
+    }
+  ],
+  "related": [
+    {
+      "title": "Health Insurance Calculator",
+      "url": "/india/health-insurance-calculator/"
+    },
+    {
+      "title": "Term Insurance Calculator",
+      "url": "/india/term-insurance-calculator/"
+    },
+    {
+      "title": "Life Insurance Needs",
+      "url": "/india/life-insurance-needs-calculator/"
+    }
+  ]
+}

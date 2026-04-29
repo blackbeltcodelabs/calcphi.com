@@ -1,0 +1,136 @@
+{
+  "id": "under-construction",
+  "schema": {
+    "appName": "Under-Construction Property EMI Calculator India",
+    "appDescription": "Calculate pre-EMI, regular EMI, GST, and total cost for under-construction property. Understand the full financial impact of buying property during construction."
+  },
+  "inputs": [
+    {
+      "id": "uc-value",
+      "label": "Property Agreement Value (₹)",
+      "min": 500000,
+      "max": 500000000,
+      "step": 100000,
+      "value": 7500000
+    },
+    {
+      "id": "uc-loan",
+      "label": "Home Loan Amount (₹)",
+      "min": 100000,
+      "max": 100000000,
+      "step": 100000,
+      "value": 6000000
+    },
+    {
+      "id": "uc-rate",
+      "label": "Interest Rate (% p.a.)",
+      "min": 6,
+      "max": 15,
+      "step": 0.1,
+      "value": 8.5
+    },
+    {
+      "id": "uc-construction",
+      "label": "Construction Period (Years)",
+      "min": 0.5,
+      "max": 5,
+      "step": 0.5,
+      "value": 2
+    },
+    {
+      "id": "uc-tenure",
+      "label": "Loan Tenure After Possession (Years)",
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "value": 20
+    }
+  ],
+  "outputs": [
+    {
+      "id": "uc-emi",
+      "label": "Regular EMI (Post-Possession)",
+      "highlight": true
+    },
+    {
+      "id": "uc-pre-emi",
+      "label": "Total Pre-EMI During Construction"
+    },
+    {
+      "id": "uc-gst",
+      "label": "GST on Property (5%)"
+    },
+    {
+      "id": "uc-total-cost",
+      "label": "Total Cost of Property"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Under-Construction Property EMI Calculator."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and optimise your decision."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is pre-EMI on under-construction property?",
+      "a": "During construction, the bank releases loan in stages (as construction progresses). Pre-EMI = interest on the disbursed amount. You don't pay full EMI until possession. Pre-EMI is not principal repayment — your loan balance doesn't reduce during this period."
+    },
+    {
+      "q": "Is GST applicable on under-construction property?",
+      "a": "Yes. Under-construction residential property attracts 5% GST (without input tax credit). Affordable housing (value below ₹45 lakh, carpet area below 60 sqm): 1% GST. Completed/ready-to-move property registered before the builder gets occupancy certificate: no GST."
+    },
+    {
+      "q": "What are the risks of buying under-construction property?",
+      "a": "Risks: construction delays (common — factor in 1–2 year buffer), builder default or insolvency, quality issues, changes in local regulations affecting FSI, and market price decline during construction. RERA registration of the project is mandatory from 2017 — always verify at RERA portal before booking."
+    },
+    {
+      "q": "Is this calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. Calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹75 lakh under-construction flat with ₹60 lakh loan",
+      "text": "GST (5%): ₹3,75,000. Pre-EMI for 2 years on average disbursement of ₹30 lakh: ₹2,13,333/year, total ₹4,26,667. Regular post-possession EMI: ₹52,120/month for 20 years. Total cost: ₹75L + GST ₹3.75L + pre-EMI ₹4.27L = ₹83.02 lakh initial, plus ₹1.25 crore over 20 years in EMIs."
+    },
+    {
+      "heading": "Ready-to-move vs under-construction",
+      "text": "Ready-to-move: no GST, no pre-EMI loss, immediate possession. Typically 10–15% higher price than under-construction for same location. Under-construction: lower price, risk of delays, pre-EMI cost (money down the drain). For a 2-year project: pre-EMI loss often equals the price advantage."
+    }
+  ],
+  "related": [
+    {
+      "title": "Home Loan EMI Calculator",
+      "url": "/india/home-loan-emi-calculator/"
+    },
+    {
+      "title": "Stamp Duty Calculator",
+      "url": "/india/stamp-duty-calculator/"
+    },
+    {
+      "title": "Home Affordability Calculator",
+      "url": "/india/home-affordability-calculator/"
+    }
+  ]
+}

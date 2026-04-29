@@ -1,0 +1,124 @@
+{
+  "id": "nav-calculator",
+  "schema": {
+    "appName": "Mutual Fund NAV Calculator India",
+    "appDescription": "Calculate current value of your mutual fund holdings, profit or loss, and CAGR based on units held and NAV at purchase vs current NAV."
+  },
+  "inputs": [
+    {
+      "id": "nav-units",
+      "label": "Units Held",
+      "min": 0.001,
+      "max": 1000000,
+      "step": 0.001,
+      "value": 1000
+    },
+    {
+      "id": "current-nav",
+      "label": "Current NAV (₹)",
+      "min": 0.01,
+      "max": 100000,
+      "step": 0.01,
+      "value": 185
+    },
+    {
+      "id": "purchase-nav",
+      "label": "Average Purchase NAV (₹)",
+      "min": 0.01,
+      "max": 100000,
+      "step": 0.01,
+      "value": 100
+    },
+    {
+      "id": "nav-years",
+      "label": "Holding Period (Years)",
+      "min": 0.1,
+      "max": 30,
+      "step": 0.1,
+      "value": 5
+    }
+  ],
+  "outputs": [
+    {
+      "id": "current-value",
+      "label": "Current Portfolio Value",
+      "highlight": true
+    },
+    {
+      "id": "profit-loss",
+      "label": "Profit / Loss"
+    },
+    {
+      "id": "nav-cagr",
+      "label": "CAGR"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the inputs for the NAV Calculator."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year table."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare options."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How is mutual fund NAV calculated?",
+      "a": "NAV = (Total Assets of Fund − Liabilities) ÷ Number of Units Outstanding. It's calculated daily after market close by the fund house. When you invest ₹10,000 in a fund with NAV ₹50, you get 200 units. If NAV rises to ₹65, your investment is worth ₹13,000 (200 × ₹65)."
+    },
+    {
+      "q": "Can I buy mutual funds at the current day's NAV?",
+      "a": "Purchases submitted before 3 PM on a business day get that day's NAV. After 3 PM: next business day's NAV. For liquid funds: 1:30 PM cutoff. SEBI introduced T+1 NAV for cut-off times on equity and other funds — verify with your fund house."
+    },
+    {
+      "q": "Does higher NAV mean an expensive fund?",
+      "a": "No. High NAV doesn't mean the fund is expensive. A fund with NAV ₹500 isn't more expensive than one with ₹50 — you buy fewer units but the proportional return is the same. Never choose between funds based on NAV — compare returns, expense ratio, and portfolio quality."
+    },
+    {
+      "q": "Is the NAV Calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. Calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "1,000 units at average NAV ₹100, current NAV ₹185",
+      "text": "Current value: 1,000 × ₹185 = ₹1,85,000. Investment cost: 1,000 × ₹100 = ₹1,00,000. Profit: ₹85,000. CAGR over 5 years: 13.1% p.a. Absolute return: 85%."
+    },
+    {
+      "heading": "SIP investor — weighted average NAV",
+      "text": "SIP investors buy at different NAVs each month. Your statement shows average cost NAV. If you've invested ₹1,00,000 in SIP and now have 850 units at ₹150 NAV: current value ₹1,27,500, gain ₹27,500, average purchase NAV = ₹1,00,000 / 850 = ₹117.6."
+    }
+  ],
+  "related": [
+    {
+      "title": "MF Returns Calculator",
+      "url": "/india/mf-returns-calculator/"
+    },
+    {
+      "title": "CAGR Calculator",
+      "url": "/india/cagr-calculator/"
+    },
+    {
+      "title": "Expense Ratio",
+      "url": "/india/expense-ratio-calculator/"
+    }
+  ]
+}

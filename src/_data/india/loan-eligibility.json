@@ -1,0 +1,126 @@
+{
+  "id": "loan-eligibility",
+  "schema": {
+    "appName": "Loan Eligibility Calculator India",
+    "appDescription": "Calculate maximum loan amount you are eligible for based on net income, existing EMIs, and lender FOIR norms. Applies for home, car, and personal loans."
+  },
+  "inputs": [
+    {
+      "id": "le-income",
+      "label": "Net Monthly Income (₹)",
+      "min": 10000,
+      "max": 1000000,
+      "step": 1000,
+      "value": 80000,
+      "hint": "Take-home salary after all deductions"
+    },
+    {
+      "id": "le-existing",
+      "label": "Existing Monthly EMIs (₹)",
+      "min": 0,
+      "max": 500000,
+      "step": 1000,
+      "value": 10000,
+      "hint": "Total of all current loan EMIs"
+    },
+    {
+      "id": "le-rate",
+      "label": "Loan Interest Rate (% p.a.)",
+      "min": 1,
+      "max": 30,
+      "step": 0.1,
+      "value": 8.5
+    },
+    {
+      "id": "le-tenure",
+      "label": "Loan Tenure (Years)",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "value": 20
+    }
+  ],
+  "outputs": [
+    {
+      "id": "le-max-emi",
+      "label": "Maximum EMI Capacity"
+    },
+    {
+      "id": "le-max-loan",
+      "label": "Maximum Loan Eligible",
+      "highlight": true
+    },
+    {
+      "id": "le-foir",
+      "label": "Current FOIR (Fixed Obligation to Income Ratio)"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Loan Eligibility Calculator. All inputs have smart defaults."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see how numbers evolve year by year."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare different scenarios and find the best option for you."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How do banks calculate loan eligibility?",
+      "a": "Banks use FOIR (Fixed Obligation to Income Ratio) — typically 40–50% of net income. If your net salary is ₹80,000, you can have total EMIs (existing + new) of ₹32,000–₹40,000. The remaining EMI capacity determines the maximum loan. Credit score, employer category, and age also affect final eligibility."
+    },
+    {
+      "q": "What FOIR do banks use for home loans?",
+      "a": "Most banks allow FOIR up to 50% for home loans with good credit scores. SBI uses 50% FOIR, HDFC 50%, ICICI up to 55% for high-income applicants. For personal loans, FOIR is typically capped at 40–45%."
+    },
+    {
+      "q": "How can I increase my loan eligibility?",
+      "a": "To increase eligibility: clear existing loans to reduce FOIR, add co-borrower (spouse), improve CIBIL score above 750, increase tenure (reduces EMI per lakh), choose a lender offering higher FOIR, and demonstrate stable income with ITR + salary slips."
+    },
+    {
+      "q": "Is the Loan Eligibility Calculator free?",
+      "a": "Yes, completely free with no registration on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser. We never store your financial data."
+    },
+    {
+      "q": "Can I use the Loan Eligibility Calculator on mobile?",
+      "a": "Yes. CalcPhi works on all modern smartphones and tablets."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹80,000 net salary — home loan eligibility",
+      "text": "Net income ₹80,000, existing EMI ₹10,000. Available EMI capacity at 50% FOIR = ₹40,000 − ₹10,000 = ₹30,000. At 8.5% for 20 years, max home loan = approximately ₹28.6 lakh."
+    },
+    {
+      "heading": "Adding co-borrower to boost eligibility",
+      "text": "Adding a co-borrower with ₹60,000 net income raises combined income to ₹1.4 lakh. At 50% FOIR, combined EMI capacity = ₹70,000. This doubles the eligible loan amount to approximately ₹60 lakh."
+    }
+  ],
+  "related": [
+    {
+      "title": "Home Loan EMI Calculator",
+      "url": "/india/home-loan-emi-calculator/"
+    },
+    {
+      "title": "Loan Prepayment Calculator",
+      "url": "/india/loan-prepayment-calculator/"
+    },
+    {
+      "title": "Home Affordability Calculator",
+      "url": "/india/home-affordability-calculator/"
+    }
+  ]
+}

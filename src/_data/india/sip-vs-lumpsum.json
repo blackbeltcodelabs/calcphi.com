@@ -1,0 +1,92 @@
+{
+  "id": "sip-vs-lumpsum",
+  "inputs": [
+    { "id": "sip-monthly", "label": "Monthly Investment (₹)", "min": 500, "max": 1000000, "step": 500, "value": 5000, "hint": "SIP amount per month — lumpsum uses this × 12 × years as principal" },
+    { "id": "sip-rate", "label": "Expected Annual Return (%)", "min": 1, "max": 30, "step": 0.5, "value": 12, "hint": "Applied to both SIP and lumpsum for comparison" },
+    { "id": "sip-years", "label": "Investment Period (Years)", "min": 1, "max": 40, "step": 1, "value": 10, "hint": "Years for SIP; same total amount invested as lumpsum on day one" }
+  ],
+  "outputs": [
+    { "id": "sip-maturity", "label": "SIP Maturity Value", "highlight": true },
+    { "id": "lumpsum-maturity", "label": "Lumpsum Maturity Value" },
+    { "id": "sip-advantage", "label": "SIP vs Lumpsum Difference" }
+  ],
+  "staticTable": {
+    "caption": "SIP vs Lumpsum comparison at 12% annual return — ₹5,000/month",
+    "headers": ["Duration", "SIP Maturity (₹)", "Lumpsum Maturity (₹)", "Winner"],
+    "rows": [
+      ["5 years", "₹4,08,348", "₹4,23,562", "Lumpsum"],
+      ["10 years", "₹11,61,695", "₹10,45,028", "SIP"],
+      ["15 years", "₹25,22,880", "₹20,98,688", "SIP"],
+      ["20 years", "₹49,95,740", "₹41,01,093", "SIP"]
+    ]
+  },
+  "examples": [
+    {
+      "heading": "₹5,000/month SIP vs ₹60,000 lumpsum over 10 years at 12%",
+      "text": "If you invest ₹5,000/month via SIP for 10 years (total ₹6 lakhs), your maturity value is approximately ₹11.6 lakhs. If you invest the same ₹6 lakhs as a lumpsum at the start of 10 years at 12%, the maturity value is approximately ₹10.5 lakhs. In this case, SIP wins by approximately ₹1.1 lakhs because you are investing monthly, so the effective duration per rupee is less — but the SIP formula compensates with the (1+r) multiplier."
+    },
+    {
+      "heading": "When lumpsum beats SIP — short-term bull market scenario",
+      "text": "In a steadily rising bull market over 5 years, lumpsum outperforms SIP because the full capital is deployed from day one. For ₹5,000/month (₹3 lakh total), a lumpsum deployed at the start grows to ₹4.24 lakhs at 12% over 5 years, while the SIP grows to ₹4.08 lakhs. The lumpsum advantage comes from compounding the entire principal for the full 5 years.",
+      "table": {
+        "headers": ["Duration", "Market Condition", "SIP (₹)", "Lumpsum (₹)", "Better Option"],
+        "rows": [
+          ["5 years", "Steady bull market", "₹4,08,348", "₹4,23,562", "Lumpsum (+₹15,214)"],
+          ["10 years", "Normal market cycle", "₹11,61,695", "₹10,45,028", "SIP (+₹1,16,667)"],
+          ["15 years", "Mixed cycles", "₹25,22,880", "₹20,98,688", "SIP (+₹4,24,192)"]
+        ]
+      }
+    }
+  ],
+  "decisionGuide": [
+    {
+      "question": "I have a bonus of ₹5 lakhs. Should I invest lumpsum or spread it as SIP?",
+      "answer": "If markets are at historical highs (Nifty P/E above 24), consider parking in a liquid fund and doing an STP (Systematic Transfer Plan) to equity over 6–12 months. If you believe markets are fairly valued or below average levels, a lumpsum investment will likely outperform SIP over 5+ years. If uncertain, split 50/50 — invest half as lumpsum and use the rest for STP."
+    },
+    {
+      "question": "Why does SIP outperform lumpsum over longer periods in this calculator?",
+      "answer": "This calculator uses a simplified comparison: the same total amount invested as lumpsum on day one vs spread as monthly SIP. The SIP formula includes the (1+r) factor that slightly favours SIP in most mid-to-long-term scenarios at moderate return rates. In reality, lumpsum outperforms SIP in consistently rising markets because the full capital compounds from day one — the outcome depends heavily on market timing and trajectory."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is SIP better than lumpsum for mutual fund investment?",
+      "a": "It depends on market conditions and your financial situation. SIP is better when: you have a regular monthly income; markets are volatile or at historical highs; you cannot predict market direction. Lumpsum is better when: you have a large amount ready to invest; markets are at a low or fair valuation; you have a 10+ year horizon. Both methods are valid — SIP reduces timing risk while lumpsum maximises compounding time."
+    },
+    {
+      "q": "What happens if I miss a SIP installment vs lumpsum?",
+      "a": "Missing a SIP installment has minimal long-term impact — most fund houses allow you to pause or skip installments without penalty. The missed month simply means slightly less invested. A lumpsum investment is unaffected by monthly decisions once deployed. For SIP investors prone to skipping installments during market downturns, an auto-debit mandate is strongly recommended."
+    },
+    {
+      "q": "What is rupee cost averaging in SIP?",
+      "a": "Rupee cost averaging means that by investing a fixed amount each month, you automatically buy more units when prices fall (during market downturns) and fewer units when prices rise. This reduces the average cost per unit over time compared to investing a lumpsum at a single price point. This is the key risk-management advantage of SIP over lumpsum investing."
+    },
+    {
+      "q": "If I have ₹1 lakh to invest, which is better — SIP or lumpsum?",
+      "a": "For ₹1 lakh: if you invest as a lumpsum now at 12% for 10 years, it grows to ₹3.1 lakhs. If you divide it into ₹8,333/month for 12 months at 12%, then leave that invested for 9 more years, the calculation is more complex. As a general rule for medium-term (5–10 year) lumpsum deployment, consider STP (Systematic Transfer Plan) from a liquid fund to equity over 6–12 months to reduce market timing risk."
+    },
+    {
+      "q": "How does market timing affect SIP vs lumpsum returns?",
+      "a": "Market timing dramatically affects lumpsum returns — investing at a market peak can result in no real gains for several years. SIP is largely immune to timing since you invest across multiple market levels. Studies of Nifty 50 data show that for any random starting point, SIP underperformed lumpsum in only about 30% of cases over 10-year periods. For most retail investors without market timing expertise, SIP is the safer choice."
+    },
+    {
+      "q": "Can I switch from SIP to lumpsum in the same mutual fund?",
+      "a": "Yes. You can make both SIP and additional lumpsum investments in the same mutual fund scheme. The SIP units and lumpsum units are tracked separately for tax purposes. Many investors start with SIP and add lumpsum investments during market corrections to boost their overall corpus. This hybrid approach combines SIP's risk management with lumpsum's compounding advantage."
+    }
+  ],
+  "howToSteps": [
+    { "name": "Enter Monthly Investment Amount", "text": "Enter the amount you plan to invest monthly. The lumpsum comparison will use the total investment (monthly × 12 × years) as the equivalent one-time investment." },
+    { "name": "Set Expected Return Rate", "text": "Enter the expected annual return. The same rate is applied to both SIP and lumpsum for a fair apple-to-apple comparison." },
+    { "name": "Set Investment Duration", "text": "Enter the number of years. The SIP invests monthly over this period; the lumpsum invests the equivalent total amount upfront on day one." },
+    { "name": "Compare Results", "text": "The calculator shows the maturity value for both SIP and lumpsum, and the difference between the two. Use this to make an informed decision based on your current financial situation and market outlook." }
+  ],
+  "related": [
+    { "title": "SIP Calculator", "url": "/india/sip-calculator/", "desc": "Detailed SIP returns with year-by-year breakdown" },
+    { "title": "Lumpsum Calculator", "url": "/india/lumpsum-calculator/", "desc": "Calculate one-time investment growth" },
+    { "title": "STP Calculator", "url": "/india/stp-calculator/", "desc": "Systematic Transfer Plan from liquid to equity fund" }
+  ],
+  "schema": {
+    "appName": "SIP vs Lumpsum Calculator India",
+    "appDescription": "Compare SIP vs lumpsum investment returns for the same amount and duration in Indian mutual funds"
+  }
+}

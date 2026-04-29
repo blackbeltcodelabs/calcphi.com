@@ -1,0 +1,88 @@
+{
+  "id": "swp",
+  "inputs": [
+    { "id": "swp-corpus", "label": "Total Corpus (₹)", "min": 100000, "max": 100000000, "step": 50000, "value": 5000000, "hint": "Your accumulated mutual fund corpus" },
+    { "id": "monthly-withdrawal", "label": "Monthly Withdrawal (₹)", "min": 1000, "max": 500000, "step": 1000, "value": 25000, "hint": "Fixed amount to withdraw each month" },
+    { "id": "swp-rate", "label": "Expected Annual Return (%)", "min": 1, "max": 20, "step": 0.5, "value": 8, "hint": "Expected return on remaining corpus (use 7–9% for balanced funds)" },
+    { "id": "swp-years", "label": "Withdrawal Period (Years)", "min": 1, "max": 40, "step": 1, "value": 20, "hint": "Number of years you plan to withdraw" }
+  ],
+  "outputs": [
+    { "id": "remaining-corpus", "label": "Remaining Corpus", "highlight": true },
+    { "id": "total-withdrawn", "label": "Total Withdrawn" },
+    { "id": "total-returns", "label": "Returns Earned" }
+  ],
+  "staticTable": {
+    "caption": "SWP sustainability at 8% annual return for a ₹50 lakh corpus",
+    "headers": ["Monthly Withdrawal (₹)", "Years Corpus Lasts", "Total Withdrawn (₹)", "Remaining Corpus (₹)"],
+    "rows": [
+      ["₹15,000", "20+ years", "₹36,00,000", "₹79,25,434"],
+      ["₹25,000", "20+ years", "₹60,00,000", "₹29,28,182"],
+      ["₹33,000", "20 years", "₹79,20,000", "~₹0"],
+      ["₹40,000", "~16 years", "₹76,80,000", "₹0 (depleted)"],
+      ["₹50,000", "~12 years", "₹72,00,000", "₹0 (depleted)"]
+    ]
+  },
+  "examples": [
+    {
+      "heading": "Retiree withdrawing ₹25,000/month from ₹50 lakh corpus at 8%",
+      "text": "A retiree with ₹50 lakhs in a balanced mutual fund drawing ₹25,000/month at 8% annual return sustains withdrawals for 20 years and still has approximately ₹29.3 lakhs remaining. The corpus grows while being withdrawn, extending its life well beyond the break-even period."
+    },
+    {
+      "heading": "Aggressive withdrawal — ₹50,000/month from ₹50 lakh corpus at 8%",
+      "text": "Withdrawing ₹50,000/month (₹6 lakhs/year) from a ₹50 lakh corpus at 8% return depletes the fund in approximately 12 years. The total withdrawn before depletion is around ₹72 lakhs — a 44% return on corpus even while withdrawing aggressively."
+    },
+    {
+      "heading": "Conservative SWP — supplementing pension income",
+      "text": "Many retirees use SWP to top up pension income. A ₹20,000/month SWP from ₹40 lakhs at 8% over 20 years withdraws ₹48 lakhs total while leaving ₹38.7 lakhs remaining — the fund effectively sustains indefinitely at this withdrawal rate.",
+      "table": {
+        "headers": ["Corpus (₹)", "Monthly Withdrawal (₹)", "After 20 Years (₹)", "Corpus Status"],
+        "rows": [
+          ["₹30,00,000", "₹20,000", "₹2,75,714", "Nearly depleted"],
+          ["₹40,00,000", "₹20,000", "₹38,71,428", "Sustained"],
+          ["₹50,00,000", "₹20,000", "₹74,67,142", "Growing"]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is a Systematic Withdrawal Plan (SWP) in mutual funds?",
+      "a": "An SWP (Systematic Withdrawal Plan) allows you to withdraw a fixed amount from your mutual fund corpus every month. Unlike FD interest, the remaining corpus stays invested and continues earning returns. SWP is widely used in India for retirement income planning, as it offers tax efficiency compared to FD interest — only the gains component of each withdrawal is taxed."
+    },
+    {
+      "q": "How long will ₹50 lakhs last in SWP at ₹25,000/month withdrawal?",
+      "a": "At ₹25,000/month withdrawal and 8% annual return, a ₹50 lakh corpus lasts well beyond 20 years. In fact, after 20 years you will still have approximately ₹29.3 lakhs remaining. The corpus sustains withdrawals for so long because the remaining balance earns returns each month that partially offset the withdrawals."
+    },
+    {
+      "q": "Is SWP tax-free in India?",
+      "a": "SWP withdrawals are not fully tax-free. Each withdrawal consists of a capital (cost) portion and a gains portion. Only the gains portion is taxable. For equity mutual funds: gains held over 1 year are taxed at 12.5% LTCG (above ₹1.25 lakh/year); gains held under 1 year at 20% STCG. Debt fund gains are taxed at your income slab rate. SWP is still more tax-efficient than FD interest, which is fully taxable."
+    },
+    {
+      "q": "What is a safe SWP withdrawal rate from a mutual fund corpus?",
+      "a": "The commonly cited safe withdrawal rate is 3–4% of corpus per year (the '4% rule'). For Indian conditions with equity funds returning 10–12%, a withdrawal rate of 5–6% annually (0.4–0.5% monthly) is generally sustainable over 20+ years. For ₹50 lakhs, this means ₹20,000–25,000/month. Withdrawing more than 8% annually risks depleting the corpus within 12–15 years."
+    },
+    {
+      "q": "What is the difference between SWP and dividend option in mutual funds?",
+      "a": "The dividend option (now called IDCW — Income Distribution cum Capital Withdrawal) distributes profits periodically but the amount is variable and at the fund house's discretion. SWP gives you full control over the withdrawal amount and timing. SWP is also more tax-efficient because you choose which units to redeem, allowing you to optimise LTCG vs STCG. SEBI now recommends SWP over IDCW for regular income."
+    },
+    {
+      "q": "Can I start an SWP immediately after investing a lumpsum?",
+      "a": "Yes, you can start SWP immediately after a lumpsum investment. However, if you start SWP within 1 year of investment in an equity fund, the withdrawals may attract Short-Term Capital Gains (STCG) tax at 20%. For tax efficiency, wait at least 1 year before starting SWP so that gains qualify for LTCG at 12.5% (with ₹1.25 lakh exemption). Some investors park lumpsum in a liquid fund for 1 year before activating SWP."
+    }
+  ],
+  "howToSteps": [
+    { "name": "Enter Your Total Corpus", "text": "Enter your accumulated mutual fund corpus — the total lumpsum you have invested or accumulated. This is the starting balance for your SWP." },
+    { "name": "Set Monthly Withdrawal Amount", "text": "Enter the fixed amount you want to withdraw every month. This is your regular income from the mutual fund. Keep this below 0.5% of your corpus monthly for long-term sustainability." },
+    { "name": "Set Expected Return Rate", "text": "Enter the expected annual return on the remaining corpus. Use 7–9% for balanced/hybrid funds, 8–10% for equity funds. Be conservative — the corpus must sustain withdrawals." },
+    { "name": "Review Results and Table", "text": "The calculator shows your remaining corpus after the withdrawal period, total amount withdrawn, and total returns earned. The year-by-year table shows how your corpus changes over time." }
+  ],
+  "related": [
+    { "title": "SIP Calculator", "url": "/india/sip-calculator/", "desc": "Build your corpus with monthly SIP investments" },
+    { "title": "Lumpsum Calculator", "url": "/india/lumpsum-calculator/", "desc": "Calculate growth of one-time investments" },
+    { "title": "NPS Calculator", "url": "/india/nps-calculator/", "desc": "National Pension Scheme corpus and annuity calculator" }
+  ],
+  "schema": {
+    "appName": "SWP Calculator India",
+    "appDescription": "Calculate systematic withdrawal plan returns and how long your corpus lasts with monthly withdrawals"
+  }
+}

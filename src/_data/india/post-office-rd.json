@@ -1,0 +1,119 @@
+{
+  "id": "post-office-rd",
+  "schema": {
+    "appName": "Post Office RD Calculator — Recurring Deposit",
+    "appDescription": "Calculate Post Office Recurring Deposit maturity. Current rate 6.7% p.a. compounded quarterly. Minimum ₹100/month. 5-year fixed tenure."
+  },
+  "inputs": [
+    {
+      "id": "rd-deposit",
+      "label": "Monthly Deposit (₹)",
+      "min": 100,
+      "max": 1000000,
+      "step": 100,
+      "value": 5000,
+      "hint": "Minimum ₹100/month, no maximum"
+    },
+    {
+      "id": "rd-rate",
+      "label": "Interest Rate (% p.a.)",
+      "min": 5,
+      "max": 10,
+      "step": 0.1,
+      "value": 6.7,
+      "hint": "Current PO RD rate: 6.7% p.a."
+    },
+    {
+      "id": "rd-years",
+      "label": "Tenure (Years)",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "value": 5
+    }
+  ],
+  "outputs": [
+    {
+      "id": "rd-maturity",
+      "label": "Maturity Amount",
+      "highlight": true
+    },
+    {
+      "id": "rd-invested",
+      "label": "Total Deposited"
+    },
+    {
+      "id": "rd-interest",
+      "label": "Interest Earned"
+    }
+  ],
+  "formulaEngine": "rd",
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Post Office RD Calculator. All inputs have smart defaults."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown table to see how your numbers change over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust the inputs to compare different scenarios and find the best option."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is Post Office RD and its current rate?",
+      "a": "Post Office Recurring Deposit is a 5-year scheme with a current rate of 6.7% p.a. (Q1 FY 2026-27), compounded quarterly. Minimum ₹100/month. Unlike bank RDs, there is no TDS on PO RD interest. It has sovereign guarantee (Government of India backed)."
+    },
+    {
+      "q": "Can PO RD be extended after 5 years?",
+      "a": "Yes. PO RD can be extended for another 5 years. Deposits can also be stopped after 3 years (treated as closed early). Premature closure allowed after 3 years at applicable simple interest rate."
+    },
+    {
+      "q": "How does PO RD compare to bank RD?",
+      "a": "PO RD (6.7%) vs SBI RD (6.5%) — PO RD has slightly higher rate with sovereign guarantee. Bank RDs may offer up to 7.5% at small finance banks with higher rates but less security. No TDS on PO RD is an additional advantage."
+    },
+    {
+      "q": "Is the Post Office RD Calculator free?",
+      "a": "Yes, the Post Office RD Calculator on CalcPhi is completely free with no registration required."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser. We do not store any financial data."
+    },
+    {
+      "q": "Can I use the Post Office RD Calculator on mobile?",
+      "a": "Yes. CalcPhi is fully mobile-optimised and works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹5,000/month PO RD for 5 years",
+      "text": "₹5,000/month in PO RD at 6.7% p.a. for 5 years: total invested = ₹3,00,000. Maturity = approximately ₹3,54,000. Interest earned = ₹54,000."
+    },
+    {
+      "heading": "₹10,000/month — 5-year wealth building",
+      "text": "₹10,000/month at 6.7% over 5 years builds a corpus of ₹7,08,000 on ₹6,00,000 invested. Post office RD is ideal for disciplined monthly savings with government backing."
+    }
+  ],
+  "related": [
+    {
+      "title": "RD Calculator",
+      "url": "/india/rd-calculator/"
+    },
+    {
+      "title": "FD Calculator",
+      "url": "/india/fd-calculator/"
+    },
+    {
+      "title": "NSC Calculator",
+      "url": "/india/nsc-calculator/"
+    }
+  ]
+}

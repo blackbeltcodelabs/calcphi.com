@@ -1,0 +1,120 @@
+{
+  "id": "home-loan-insurance",
+  "schema": {
+    "appName": "Home Loan Insurance (HLPP) Calculator India",
+    "appDescription": "Calculate home loan protection plan premium and EMI. Understand the cost of mortgage insurance and whether it's worth buying separately vs bundled."
+  },
+  "inputs": [
+    {
+      "id": "hli-loan",
+      "label": "Home Loan Amount (₹)",
+      "min": 500000,
+      "max": 100000000,
+      "step": 100000,
+      "value": 5000000
+    },
+    {
+      "id": "hli-rate",
+      "label": "Home Loan Interest Rate (% p.a.)",
+      "min": 6,
+      "max": 15,
+      "step": 0.1,
+      "value": 8.5
+    },
+    {
+      "id": "hli-years",
+      "label": "Loan Tenure (Years)",
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "value": 20
+    }
+  ],
+  "outputs": [
+    {
+      "id": "hli-emi",
+      "label": "Monthly Home Loan EMI"
+    },
+    {
+      "id": "hli-annual-premium",
+      "label": "Annual Insurance Premium (Est.)"
+    },
+    {
+      "id": "hli-monthly-premium",
+      "label": "Monthly Premium Cost"
+    },
+    {
+      "id": "hli-total-premium",
+      "label": "Total Premium Over Loan Tenure",
+      "highlight": true
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Home Loan Insurance Calculator. Smart defaults are pre-filled."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and optimise your decision."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is Home Loan Protection Plan (HLPP)?",
+      "a": "HLPP (or mortgage insurance) pays off the outstanding home loan if the borrower dies or becomes permanently disabled during the loan tenure. Banks often insist on HLPP when sanctioning home loans. The cover reduces with the outstanding loan balance."
+    },
+    {
+      "q": "Is home loan insurance mandatory in India?",
+      "a": "No. RBI has clarified that home loan insurance cannot be made mandatory by banks. However, banks may strongly recommend it. You can opt for a separate term insurance plan of equivalent cover — it's often cheaper and provides more flexibility."
+    },
+    {
+      "q": "HLPP vs separate term insurance — which is better?",
+      "a": "Separate term insurance is typically better: broader coverage (not linked to loan), fixed cover (doesn't reduce), portable (applies even if you switch banks), and usually cheaper. HLPP premium is higher because it's bundled with bank services. Calculate total cost before deciding."
+    },
+    {
+      "q": "Is this calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹50 lakh home loan — HLPP cost",
+      "text": "₹50 lakh loan at 8.5% for 20 years: EMI = ₹43,391. HLPP annual premium: approximately 0.3–0.6% of loan = ₹15,000–₹30,000/year. Total premium over 20 years = ₹3–6 lakh. A separate term insurance of ₹1 crore for a 30-year-old costs ₹10,000–₹12,000/year — covers the loan plus provides family with additional corpus."
+    },
+    {
+      "heading": "Banks financing HLPP into the loan",
+      "text": "Banks often add HLPP premium to the loan amount. For ₹50 lakh loan with ₹2 lakh HLPP premium added: new loan = ₹52 lakh. Extra EMI: ₹1,762/month. Over 20 years, total extra = ₹4.2 lakh (because you're paying interest on the premium too)."
+    }
+  ],
+  "related": [
+    {
+      "title": "Term Insurance Calculator",
+      "url": "/india/term-insurance-calculator/"
+    },
+    {
+      "title": "Home Loan EMI Calculator",
+      "url": "/india/home-loan-emi-calculator/"
+    },
+    {
+      "title": "Life Insurance Needs",
+      "url": "/india/life-insurance-needs-calculator/"
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "id": "section-80c",
+  "schema": {
+    "appName": "Section 80C Deduction Calculator",
+    "appDescription": "Calculate your Section 80C deductions and tax savings. Plan PPF, ELSS, LIC, EPF, and other 80C investments to claim the full ₹1.5 lakh limit."
+  },
+  "inputs": [
+    {
+      "id": "s80c-income",
+      "label": "Annual Taxable Income (₹)",
+      "min": 0,
+      "max": 100000000,
+      "step": 10000,
+      "value": 1200000
+    },
+    {
+      "id": "s80c-elss",
+      "label": "ELSS / Mutual Funds (₹)",
+      "min": 0,
+      "max": 150000,
+      "step": 1000,
+      "value": 50000
+    },
+    {
+      "id": "s80c-ppf",
+      "label": "PPF Contribution (₹)",
+      "min": 0,
+      "max": 150000,
+      "step": 500,
+      "value": 50000
+    },
+    {
+      "id": "s80c-lic",
+      "label": "LIC Premium (₹)",
+      "min": 0,
+      "max": 150000,
+      "step": 1000,
+      "value": 25000
+    },
+    {
+      "id": "s80c-epf",
+      "label": "EPF Employee Contribution (₹)",
+      "min": 0,
+      "max": 150000,
+      "step": 1000,
+      "value": 25000
+    },
+    {
+      "id": "s80c-other",
+      "label": "Other 80C (NSC, SCSS, tuition fees) (₹)",
+      "min": 0,
+      "max": 150000,
+      "step": 1000,
+      "value": 0
+    }
+  ],
+  "outputs": [
+    {
+      "id": "s80c-total",
+      "label": "Total 80C Claimed"
+    },
+    {
+      "id": "s80c-tax-saved",
+      "label": "Tax Saved",
+      "highlight": true
+    },
+    {
+      "id": "s80c-remaining",
+      "label": "Remaining 80C Limit"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Section 80C Calculator. All inputs have smart defaults."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown table to see how your numbers change over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust the inputs to compare different scenarios and find the best option for your situation."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the maximum Section 80C deduction?",
+      "a": "The maximum deduction under Section 80C is ₹1,50,000 per financial year. This limit has not changed since FY 2014-15. Investments beyond ₹1.5 lakh get no additional 80C benefit, though they may still be worthwhile as investments."
+    },
+    {
+      "q": "Which investments qualify for Section 80C?",
+      "a": "Eligible investments: EPF/VPF contributions, PPF, ELSS mutual funds, NSC, 5-year tax-saver FD, SSY (Sukanya Samriddhi), SCSS, life insurance premiums (LIC etc.), home loan principal repayment, children's tuition fees (up to 2 children), NPS employee contribution (within limit)."
+    },
+    {
+      "q": "Is Section 80C available under the new tax regime?",
+      "a": "No. Section 80C deductions are not available under the new tax regime introduced from FY 2020-21. If you opt for the new regime, investments like PPF, ELSS, and LIC premiums still grow but you cannot claim them as deductions."
+    },
+    {
+      "q": "Is the Section 80C Calculator free?",
+      "a": "Yes, the Section 80C Calculator on CalcPhi is completely free with no registration required."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser. We do not store any financial data."
+    },
+    {
+      "q": "Can I use the Section 80C Calculator on mobile?",
+      "a": "Yes. CalcPhi is fully mobile-optimised and works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "Maximising 80C deduction at ₹15 lakh income",
+      "text": "For ₹15 lakh income at the 20% slab, claiming full ₹1.5 lakh under 80C saves ₹31,200 in tax (including 4% cess). The best mix: ELSS (returns + tax efficiency), EPF (guaranteed), and PPF (risk-free, compounding)."
+    },
+    {
+      "heading": "Partial 80C utilisation — ₹80,000 invested",
+      "text": "If you've invested ₹80,000 in 80C instruments, you still have ₹70,000 of unutilised limit. Consider PPF top-up before 31 March to maximise deduction and avoid leaving tax savings on the table."
+    }
+  ],
+  "related": [
+    {
+      "title": "PPF Calculator",
+      "url": "/india/ppf-calculator/"
+    },
+    {
+      "title": "ELSS Calculator",
+      "url": "/india/elss-calculator/"
+    },
+    {
+      "title": "New vs Old Tax Regime",
+      "url": "/india/new-vs-old-regime-calculator/"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "apy-calculator",
+  "schema": {
+    "appName": "APY Calculator — Atal Pension Yojana",
+    "appDescription": "Calculate your monthly APY contribution for a guaranteed pension of ₹1,000 to ₹5,000/month at age 60. Based on your current age."
+  },
+  "inputs": [
+    {
+      "id": "apy-age",
+      "label": "Current Age (Years)",
+      "min": 18,
+      "max": 39,
+      "step": 1,
+      "value": 28
+    },
+    {
+      "id": "apy-pension",
+      "label": "Desired Pension at 60 (₹/month)",
+      "type": "select",
+      "options": [
+        {
+          "value": "1000",
+          "label": "₹1,000/month"
+        },
+        {
+          "value": "2000",
+          "label": "₹2,000/month"
+        },
+        {
+          "value": "3000",
+          "label": "₹3,000/month"
+        },
+        {
+          "value": "4000",
+          "label": "₹4,000/month"
+        },
+        {
+          "value": "5000",
+          "label": "₹5,000/month"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "apy-monthly",
+      "label": "Monthly Contribution Required",
+      "highlight": true
+    },
+    {
+      "id": "apy-years",
+      "label": "Years of Contribution"
+    },
+    {
+      "id": "apy-total-contrib",
+      "label": "Total Contribution"
+    },
+    {
+      "id": "apy-pension-out",
+      "label": "Guaranteed Monthly Pension at 60"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the APY Calculator. All inputs have smart defaults."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown table to see how your numbers change over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust the inputs to compare different scenarios and find the best option."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is Atal Pension Yojana (APY)?",
+      "a": "APY is a government-backed pension scheme for unorganised sector workers. It guarantees a fixed monthly pension of ₹1,000 to ₹5,000 from age 60. Both employee and (for eligible subscribers) the government contribute. On death, the spouse gets the same pension; on spouse's death, the nominee gets the corpus."
+    },
+    {
+      "q": "Who is eligible for APY?",
+      "a": "Any Indian citizen aged 18–40 with a savings bank account is eligible. However, income taxpayers are not eligible. Enrolment is through banks and post offices. The NPS trust manages the APY corpus."
+    },
+    {
+      "q": "What is the government co-contribution under APY?",
+      "a": "The government contributed 50% of the subscriber's contribution or ₹1,000/year (whichever is lower) for 5 years (2015–20) for eligible subscribers. New subscribers from FY 2022 onwards who are income taxpayers are not eligible for government co-contribution."
+    },
+    {
+      "q": "Is the APY Calculator free?",
+      "a": "Yes, the APY Calculator on CalcPhi is completely free with no registration required."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser. We do not store any financial data."
+    },
+    {
+      "q": "Can I use the APY Calculator on mobile?",
+      "a": "Yes. CalcPhi is fully mobile-optimised and works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "28-year-old targeting ₹3,000/month pension",
+      "text": "A 28-year-old subscribing to APY for ₹3,000/month pension contributes ₹376/month for 32 years (total ₹1,44,192). At 60, they receive ₹3,000/month (₹36,000/year) guaranteed for life."
+    },
+    {
+      "heading": "Starting late at 35 for ₹5,000/month pension",
+      "text": "Joining APY at 35 for ₹5,000/month pension requires ₹902/month for 25 years (total ₹2,70,600). The corpus at 60 is ₹8.5 lakh. Starting at 25 for the same pension requires only ₹376/month — early start saves significantly."
+    }
+  ],
+  "related": [
+    {
+      "title": "NPS Calculator",
+      "url": "/india/nps-calculator/"
+    },
+    {
+      "title": "EPF Calculator",
+      "url": "/india/epf-calculator/"
+    },
+    {
+      "title": "Retirement Corpus Calculator",
+      "url": "/india/retirement-corpus-calculator/"
+    }
+  ]
+}

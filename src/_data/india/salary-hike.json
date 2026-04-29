@@ -1,0 +1,112 @@
+{
+  "id": "salary-hike",
+  "schema": {
+    "appName": "Salary Hike Calculator India",
+    "appDescription": "Calculate new CTC, monthly in-hand increase, and annual increment amount from a percentage salary hike. Plan your appraisal negotiation."
+  },
+  "inputs": [
+    {
+      "id": "sh-ctc",
+      "label": "Current Annual CTC (₹)",
+      "min": 100000,
+      "max": 100000000,
+      "step": 10000,
+      "value": 1200000
+    },
+    {
+      "id": "sh-hike",
+      "label": "Hike Percentage (%)",
+      "min": 1,
+      "max": 100,
+      "step": 0.5,
+      "value": 15
+    }
+  ],
+  "outputs": [
+    {
+      "id": "sh-new-ctc",
+      "label": "New Annual CTC",
+      "highlight": true
+    },
+    {
+      "id": "sh-new-inhand",
+      "label": "Estimated New Monthly In-Hand"
+    },
+    {
+      "id": "sh-monthly-increase",
+      "label": "Monthly In-Hand Increase"
+    },
+    {
+      "id": "sh-annual-increase",
+      "label": "Annual Increase"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Salary Hike Calculator. Smart defaults are pre-filled."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and find the best option."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is a good salary hike percentage in India 2026?",
+      "a": "Average salary hike in India 2026 is 9–10% for IT sector and 8–9% for other sectors per major HR surveys. High performers typically get 15–20%. Switching jobs (job hopping) typically yields 20–40% increments. Startups may offer equity in lieu of higher hikes."
+    },
+    {
+      "q": "How does a salary hike affect take-home salary?",
+      "a": "A ₹2 lakh CTC increase does not result in ₹16,667 extra per month. Employer PF increases if basic increases, TDS increases if you move to a higher slab, and professional tax may increase. Net in-hand increase is typically 60–75% of CTC increase."
+    },
+    {
+      "q": "Should I negotiate CTC or in-hand salary?",
+      "a": "Negotiate in-hand salary if possible. Employers sometimes inflate CTC with inflexible benefits like medical reimbursements, education allowances, and LTA that don't directly appear as cash. Clarify the cash component vs reimbursements vs benefits."
+    },
+    {
+      "q": "Is the Salary Hike Calculator free?",
+      "a": "Yes, completely free on CalcPhi with no registration."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser. Your data is never stored."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones and tablets."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹12 lakh → 15% hike",
+      "text": "15% hike on ₹12 lakh CTC = new CTC ₹13.8 lakh. Annual increment = ₹1.8 lakh. Monthly in-hand increase ≈ ₹10,000–₹12,000 (after tax on incremental income). If you move from nil-tax to 5% slab, the net increase is less than expected."
+    },
+    {
+      "heading": "Evaluating job offer: 30% hike but higher city",
+      "text": "Moving from ₹12 lakh (Pune) to ₹15.6 lakh (Mumbai) with 30% hike sounds attractive. But Mumbai cost of living premium (rent, commute) often negates ₹15,000–₹25,000 extra per month. Always calculate city-adjusted real income."
+    }
+  ],
+  "related": [
+    {
+      "title": "CTC to In-Hand Calculator",
+      "url": "/india/ctc-to-in-hand-calculator/"
+    },
+    {
+      "title": "EPF Calculator",
+      "url": "/india/epf-calculator/"
+    },
+    {
+      "title": "Income Tax Calculator",
+      "url": "/india/income-tax-calculator/"
+    }
+  ]
+}

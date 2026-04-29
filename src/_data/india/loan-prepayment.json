@@ -1,0 +1,137 @@
+{
+  "id": "loan-prepayment",
+  "schema": {
+    "appName": "Loan Prepayment Calculator India",
+    "appDescription": "Calculate interest saved and reduced tenure from partial loan prepayment. See exact benefit of prepaying your home, car, or personal loan."
+  },
+  "inputs": [
+    {
+      "id": "lp-loan",
+      "label": "Original Loan Amount (₹)",
+      "min": 10000,
+      "max": 100000000,
+      "step": 10000,
+      "value": 3000000
+    },
+    {
+      "id": "lp-rate",
+      "label": "Interest Rate (% p.a.)",
+      "min": 1,
+      "max": 30,
+      "step": 0.1,
+      "value": 8.5
+    },
+    {
+      "id": "lp-tenure",
+      "label": "Original Tenure (Years)",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "value": 20
+    },
+    {
+      "id": "lp-prepay",
+      "label": "Prepayment Amount (₹)",
+      "min": 10000,
+      "max": 100000000,
+      "step": 10000,
+      "value": 500000
+    },
+    {
+      "id": "lp-after",
+      "label": "Prepayment After (Years)",
+      "min": 0,
+      "max": 25,
+      "step": 1,
+      "value": 3,
+      "hint": "Number of years from loan start"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "lp-emi",
+      "label": "Original EMI"
+    },
+    {
+      "id": "lp-new-emi",
+      "label": "New EMI (if tenure constant)"
+    },
+    {
+      "id": "lp-interest-saved",
+      "label": "Total Interest Saved",
+      "highlight": true
+    },
+    {
+      "id": "lp-tenure-saved",
+      "label": "Months Reduced"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Loan Prepayment Calculator. All inputs have smart defaults."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see how numbers evolve year by year."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare different scenarios and find the best option for you."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Should I prepay home loan or invest the money?",
+      "a": "Prepayment is financially equivalent to getting a guaranteed return equal to your loan interest rate. If your home loan rate is 8.5%, prepaying gives you a guaranteed 8.5% after-tax return. Compare this with post-tax returns from other investments. For most equity-shy investors, prepayment is optimal."
+    },
+    {
+      "q": "Is there a prepayment penalty on home loans?",
+      "a": "RBI mandates zero prepayment penalty on floating rate home loans for individuals. Banks cannot charge any fee for partial or full prepayment. Fixed rate home loans may have prepayment charges of 2–4% — check your loan agreement."
+    },
+    {
+      "q": "When is the best time to prepay — early or late?",
+      "a": "Prepaying early in the loan tenure saves more interest because EMI in early years is mostly interest. Prepaying in year 3 of a 20-year loan at 8.5% saves significantly more than prepaying in year 15. The earlier the prepayment, the more interest you save."
+    },
+    {
+      "q": "Is the Loan Prepayment Calculator free?",
+      "a": "Yes, completely free with no registration on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser. We never store your financial data."
+    },
+    {
+      "q": "Can I use the Loan Prepayment Calculator on mobile?",
+      "a": "Yes. CalcPhi works on all modern smartphones and tablets."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹5 lakh prepayment after 3 years on ₹30 lakh home loan",
+      "text": "₹30 lakh at 8.5% for 20 years = EMI ₹26,034. Prepaying ₹5 lakh after 3 years reduces tenure by approximately 38 months and saves ₹7.8 lakh in total interest — a 56% return on the prepayment amount."
+    },
+    {
+      "heading": "Effect on EMI vs tenure",
+      "text": "With ₹5 lakh prepayment, you can choose to: (a) keep EMI same and cut tenure by ~3 years, or (b) keep tenure same and reduce EMI to ₹23,060. Most financial advisors recommend keeping EMI same and reducing tenure — you save more interest."
+    }
+  ],
+  "related": [
+    {
+      "title": "Home Loan EMI Calculator",
+      "url": "/india/home-loan-emi-calculator/"
+    },
+    {
+      "title": "Loan Eligibility Calculator",
+      "url": "/india/loan-eligibility-calculator/"
+    },
+    {
+      "title": "Balance Transfer Calculator",
+      "url": "/india/balance-transfer-calculator/"
+    }
+  ]
+}

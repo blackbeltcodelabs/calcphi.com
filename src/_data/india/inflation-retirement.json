@@ -1,0 +1,120 @@
+{
+  "id": "inflation-retirement",
+  "schema": {
+    "appName": "Inflation Impact on Retirement Calculator",
+    "appDescription": "See how inflation erodes the purchasing power of your retirement corpus over time. Calculate real vs nominal value of your savings 10, 20, or 30 years from now."
+  },
+  "inputs": [
+    {
+      "id": "ir-corpus",
+      "label": "Current Corpus / Savings (₹)",
+      "min": 100000,
+      "max": 500000000,
+      "step": 100000,
+      "value": 5000000
+    },
+    {
+      "id": "ir-inflation",
+      "label": "Annual Inflation Rate (%)",
+      "min": 3,
+      "max": 12,
+      "step": 0.5,
+      "value": 6
+    },
+    {
+      "id": "ir-years",
+      "label": "Years Into Future",
+      "min": 5,
+      "max": 40,
+      "step": 5,
+      "value": 20
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ir-real-value",
+      "label": "Real Value of Corpus (Today's ₹)",
+      "highlight": true
+    },
+    {
+      "id": "ir-loss",
+      "label": "Purchasing Power Lost to Inflation"
+    },
+    {
+      "id": "ir-percent-lost",
+      "label": "Percentage Lost"
+    },
+    {
+      "id": "ir-needed-return",
+      "label": "Return Needed to Beat Inflation"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Inflation Impact Calculator."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and optimise your decision."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How does inflation affect retirement savings?",
+      "a": "₹1 crore today at 6% inflation is worth only ₹31.2 lakh in real terms after 20 years. This means your retirement corpus must more than triple just to maintain purchasing power. Investments that don't beat inflation by a significant margin are actually losing value in real terms."
+    },
+    {
+      "q": "What is the average inflation rate in India?",
+      "a": "India's CPI inflation has averaged 6–7% over the past decade (2013–2024). Food inflation is typically higher. For retirement planning, use 6–7% as a conservative assumption. Healthcare inflation is higher (10–12%) — budget separately for medical costs in retirement."
+    },
+    {
+      "q": "How can I protect my retirement corpus from inflation?",
+      "a": "Invest in assets that beat inflation: equity mutual funds (12–15% historical CAGR), equity-linked NPS (10–12%), real estate (7–10%). Even in retirement, maintain 30–40% equity exposure to beat inflation over a 25-30 year retirement horizon. Avoid parking all corpus in FDs post-retirement."
+    },
+    {
+      "q": "Is this calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. Calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹50 lakh savings — purchasing power in 20 years",
+      "text": "₹50 lakh at 6% inflation: real value in 20 years = ₹15.6 lakh. You need ₹50 lakh to buy the same goods that ₹15.6 lakh buys today. This is why FDs at 7.1% barely beat 6% inflation — you're only growing wealth at 1% real rate."
+    },
+    {
+      "heading": "Required return to maintain purchasing power",
+      "text": "To maintain ₹50 lakh in real terms over 20 years, you need 6% return just to break even (same as inflation). To actually grow by 5% real, you need 11% nominal return. This is why equity (historical 12–15% CAGR) is essential in long-term portfolios."
+    }
+  ],
+  "related": [
+    {
+      "title": "Retirement Corpus Calculator",
+      "url": "/india/retirement-corpus-calculator/"
+    },
+    {
+      "title": "Inflation-Adjusted Returns",
+      "url": "/india/inflation-adjusted-returns-calculator/"
+    },
+    {
+      "title": "SWP Calculator",
+      "url": "/india/swp-calculator/"
+    }
+  ]
+}

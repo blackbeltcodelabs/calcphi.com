@@ -1,0 +1,137 @@
+{
+  "id": "section-80d",
+  "schema": {
+    "appName": "Section 80D Health Insurance Deduction Calculator",
+    "appDescription": "Calculate Section 80D deduction for health insurance premiums for self, family, and parents. FY 2026-27 limits."
+  },
+  "inputs": [
+    {
+      "id": "s80d-income",
+      "label": "Annual Taxable Income (₹)",
+      "min": 0,
+      "max": 100000000,
+      "step": 10000,
+      "value": 1200000
+    },
+    {
+      "id": "s80d-self",
+      "label": "Health Insurance Premium — Self & Family (₹)",
+      "min": 0,
+      "max": 100000,
+      "step": 1000,
+      "value": 20000,
+      "hint": "Including spouse and children"
+    },
+    {
+      "id": "s80d-parents",
+      "label": "Health Insurance Premium — Parents (₹)",
+      "min": 0,
+      "max": 100000,
+      "step": 1000,
+      "value": 30000,
+      "hint": "25,000 limit (50,000 if senior citizen parents)"
+    },
+    {
+      "id": "s80d-senior-parents",
+      "label": "Are parents senior citizens?",
+      "type": "select",
+      "options": [
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "yes",
+          "label": "Yes (age 60+)"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "s80d-self-ded",
+      "label": "Self & Family Deduction"
+    },
+    {
+      "id": "s80d-parent-ded",
+      "label": "Parents Deduction"
+    },
+    {
+      "id": "s80d-total",
+      "label": "Total 80D Deduction"
+    },
+    {
+      "id": "s80d-saved",
+      "label": "Tax Saved",
+      "highlight": true
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Section 80D Calculator. All inputs have smart defaults."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown table to see how your numbers change over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust the inputs to compare different scenarios and find the best option for your situation."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the Section 80D limit for FY 2026-27?",
+      "a": "Section 80D limits: self and family (below 60) — ₹25,000; self senior citizen — ₹50,000; parents (below 60) — ₹25,000; parents senior citizens — ₹50,000. Maximum combined deduction: ₹1 lakh (₹50,000 self + ₹50,000 senior parent). Preventive health check-up ₹5,000 included in limit."
+    },
+    {
+      "q": "Does Section 80D apply under the new tax regime?",
+      "a": "No. Section 80D deductions are not available under the new tax regime. You can only claim them if you opt for the old tax regime. However, buying health insurance is still advisable for medical protection regardless of the tax regime."
+    },
+    {
+      "q": "Can I claim 80D if I pay health insurance premium for my spouse?",
+      "a": "Yes, you can claim 80D for premiums paid for yourself, your spouse, dependent children, and parents. You cannot claim for in-laws or siblings. Premiums must be paid by cheque, DD, or digital payment (not cash)."
+    },
+    {
+      "q": "Is the Section 80D Calculator free?",
+      "a": "Yes, the Section 80D Calculator on CalcPhi is completely free with no registration required."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser. We do not store any financial data."
+    },
+    {
+      "q": "Can I use the Section 80D Calculator on mobile?",
+      "a": "Yes. CalcPhi is fully mobile-optimised and works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "Family floater + senior citizen parents premium",
+      "text": "Paying ₹20,000 for a family floater (self, spouse, children) and ₹35,000 for senior citizen parents gives 80D deduction of ₹20,000 + ₹35,000 = ₹55,000. At 20% tax slab, this saves ₹11,440 in tax (with cess)."
+    },
+    {
+      "heading": "Self senior citizen — maximum deduction",
+      "text": "A senior citizen taxpayer paying ₹50,000 own premium + ₹50,000 for senior citizen parents claims maximum ₹1 lakh deduction under 80D, saving up to ₹31,200 at the 30% slab."
+    }
+  ],
+  "related": [
+    {
+      "title": "Income Tax Calculator",
+      "url": "/india/income-tax-calculator/"
+    },
+    {
+      "title": "Health Insurance Calculator",
+      "url": "/india/health-insurance-calculator/"
+    },
+    {
+      "title": "New vs Old Tax Regime",
+      "url": "/india/new-vs-old-regime-calculator/"
+    }
+  ]
+}

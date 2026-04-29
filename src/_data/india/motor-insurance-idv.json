@@ -1,0 +1,117 @@
+{
+  "id": "motor-insurance-idv",
+  "schema": {
+    "appName": "Motor Insurance IDV Calculator India",
+    "appDescription": "Calculate Insured Declared Value (IDV) and estimated premium for your car or two-wheeler. IDV is the maximum claim amount in case of total loss or theft."
+  },
+  "inputs": [
+    {
+      "id": "idv-price",
+      "label": "Vehicle Ex-Showroom Price (₹)",
+      "min": 50000,
+      "max": 20000000,
+      "step": 10000,
+      "value": 1200000
+    },
+    {
+      "id": "idv-age",
+      "label": "Vehicle Age (Years)",
+      "min": 0,
+      "max": 10,
+      "step": 0.5,
+      "value": 2,
+      "hint": "0 = brand new, up to 5 years considered"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "idv-value",
+      "label": "IDV (Insured Declared Value)",
+      "highlight": true
+    },
+    {
+      "id": "idv-depreciation",
+      "label": "Depreciation Rate"
+    },
+    {
+      "id": "idv-od-premium",
+      "label": "Est. Own Damage Premium"
+    },
+    {
+      "id": "idv-tp",
+      "label": "Third Party Premium (Statutory)"
+    },
+    {
+      "id": "idv-total",
+      "label": "Total Estimated Premium"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Motor Insurance IDV Calculator. Smart defaults are pre-filled."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and optimise your decision."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is IDV in car insurance?",
+      "a": "IDV (Insured Declared Value) is the maximum amount an insurer pays for total loss (write-off or theft) of your vehicle. It's the current market value of the vehicle — ex-showroom price minus depreciation. IDV decreases each year as the car depreciates. Lower IDV = lower premium but less payout in a total loss."
+    },
+    {
+      "q": "How is IDV calculated in India?",
+      "a": "IDV = Ex-showroom price × (1 − Depreciation Rate). Depreciation schedule: <6 months: 5%, 6m–1yr: 15%, 1–2yr: 20%, 2–3yr: 30%, 3–4yr: 40%, 4–5yr: 50%. Above 5 years: IDV is mutually agreed with insurer. IRDAI sets these depreciation rates."
+    },
+    {
+      "q": "Should I declare a lower IDV to reduce premium?",
+      "a": "Reducing IDV reduces premium but directly reduces your claim payout in a total loss. A 10% IDV reduction might save ₹3,000 in annual premium but reduces your claim by ₹1–2 lakh. Always ensure IDV reflects actual market value. Many insurers allow IDV to be adjusted ±20%."
+    },
+    {
+      "q": "Is this calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹12 lakh car aged 2 years — IDV calculation",
+      "text": "IDV at 2 years = ₹12 lakh × (1 − 20%) = ₹9.6 lakh. Own damage premium ≈ 2–3.5% of IDV = ₹19,200–₹33,600. Third party premium (1000–1500cc): ₹4,188/year (IRDAI regulated). Total comprehensive premium: ₹23,000–₹38,000."
+    },
+    {
+      "heading": "5-year-old car — renew or let lapse?",
+      "text": "5-year-old car at 50% depreciation: ₹15 lakh car → IDV ₹7.5 lakh. If replacement cost is only ₹8–9 lakh (resale), a ₹7.5 lakh IDV is still worth insuring. Premium: approximately ₹15,000–₹25,000. Always renew comprehensive insurance — third-party is legally mandatory."
+    }
+  ],
+  "related": [
+    {
+      "title": "Term Insurance Calculator",
+      "url": "/india/term-insurance-calculator/"
+    },
+    {
+      "title": "Health Insurance Calculator",
+      "url": "/india/health-insurance-calculator/"
+    },
+    {
+      "title": "Home Loan Insurance Calculator",
+      "url": "/india/home-loan-insurance-calculator/"
+    }
+  ]
+}

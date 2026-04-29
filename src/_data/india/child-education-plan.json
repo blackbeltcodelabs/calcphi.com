@@ -1,0 +1,138 @@
+{
+  "id": "child-education-plan",
+  "schema": {
+    "appName": "Child Education Plan Calculator India",
+    "appDescription": "Calculate how much to save monthly for your child's higher education. Factor in education inflation (10–12% p.a.) and investment returns."
+  },
+  "inputs": [
+    {
+      "id": "cep-cost",
+      "label": "Current Cost of Education (₹)",
+      "min": 100000,
+      "max": 100000000,
+      "step": 100000,
+      "value": 2000000,
+      "hint": "Today's cost of target college/course"
+    },
+    {
+      "id": "cep-age",
+      "label": "Child's Current Age (Years)",
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "value": 5
+    },
+    {
+      "id": "cep-edu-age",
+      "label": "Age When Education Begins",
+      "min": 16,
+      "max": 21,
+      "step": 1,
+      "value": 18
+    },
+    {
+      "id": "cep-inflation",
+      "label": "Education Inflation Rate (% p.a.)",
+      "min": 5,
+      "max": 15,
+      "step": 0.5,
+      "value": 10,
+      "hint": "Education costs inflate 10–12% p.a. in India"
+    },
+    {
+      "id": "cep-return",
+      "label": "Expected Investment Return (% p.a.)",
+      "min": 6,
+      "max": 20,
+      "step": 0.5,
+      "value": 12
+    }
+  ],
+  "outputs": [
+    {
+      "id": "cep-future-cost",
+      "label": "Future Education Cost",
+      "highlight": true
+    },
+    {
+      "id": "cep-monthly-sip",
+      "label": "Monthly SIP Needed"
+    },
+    {
+      "id": "cep-years",
+      "label": "Years to Save"
+    },
+    {
+      "id": "cep-lumpsum-now",
+      "label": "Lumpsum Needed Today (Alternative)"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Child Education Plan Calculator."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and optimise your decision."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How much does a college education cost in India in 2026?",
+      "a": "IIT B.Tech (4 years): ₹8–12 lakh total. Private engineering: ₹8–20 lakh. MBBS private: ₹40–80 lakh (or NRI quota ₹80 lakh+). MBA at top IIM: ₹25–30 lakh. Study abroad (US, UK): ₹60 lakh–₹1.5 crore. Education costs in India inflate at 10–12% p.a."
+    },
+    {
+      "q": "Which are the best investment options for child education?",
+      "a": "SSY (if girl child, tax-free 8.2%, but locks till age 21). ELSS mutual funds (12–15% potential return, 3-year lock-in, 80C). PPF (7.1%, safe, 15-year tenure). Equity MF SIP (best growth, needed for long-term education goals). Sukanya Samriddhi works well for daughters; ELSS SIP best for sons."
+    },
+    {
+      "q": "Should I use an education loan instead of savings?",
+      "a": "Education loans are available at 8–15% p.a. For a career with good starting salary (IIT/IIM graduates), a loan is manageable. But for uncertain career paths or courses without guaranteed ROI, loan can become a burden. Ideally, save for 50–70% and take loan for balance to maintain financial flexibility."
+    },
+    {
+      "q": "Is this calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. Calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹20 lakh today's cost, child aged 5",
+      "text": "At 10% education inflation for 13 years: future cost = ₹67.7 lakh. Monthly SIP at 12% for 13 years: ₹18,400/month. Or lumpsum today: ₹67.7 lakh / (1.12)^13 = ₹14.6 lakh. Investing ₹14.6 lakh today at 12% solves the problem entirely."
+    },
+    {
+      "heading": "Studying abroad — US MBA",
+      "text": "US MBA: current cost $80,000 (₹67 lakh at ₹84/$). At 10% education inflation + 3% dollar appreciation for 15 years: future cost ₹2.8 crore. Monthly SIP at 12%: ₹60,000/month. Start planning at birth for overseas education goals."
+    }
+  ],
+  "related": [
+    {
+      "title": "SSY Calculator",
+      "url": "/india/ssy-calculator/"
+    },
+    {
+      "title": "SIP Calculator",
+      "url": "/india/sip-calculator/"
+    },
+    {
+      "title": "ELSS Calculator",
+      "url": "/india/elss-calculator/"
+    }
+  ]
+}

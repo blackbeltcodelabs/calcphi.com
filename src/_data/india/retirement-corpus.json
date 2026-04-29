@@ -1,0 +1,144 @@
+{
+  "id": "retirement-corpus",
+  "schema": {
+    "appName": "Retirement Corpus Calculator India",
+    "appDescription": "Calculate the total corpus needed at retirement to sustain your desired lifestyle. Factor in inflation, investment returns, and life expectancy."
+  },
+  "inputs": [
+    {
+      "id": "rc-monthly",
+      "label": "Current Monthly Expenses (₹)",
+      "min": 5000,
+      "max": 1000000,
+      "step": 1000,
+      "value": 80000
+    },
+    {
+      "id": "rc-age",
+      "label": "Current Age (Years)",
+      "min": 20,
+      "max": 60,
+      "step": 1,
+      "value": 35
+    },
+    {
+      "id": "rc-retire-age",
+      "label": "Target Retirement Age",
+      "min": 40,
+      "max": 65,
+      "step": 1,
+      "value": 60
+    },
+    {
+      "id": "rc-life-expect",
+      "label": "Life Expectancy",
+      "min": 70,
+      "max": 100,
+      "step": 1,
+      "value": 85
+    },
+    {
+      "id": "rc-inflation",
+      "label": "Inflation Rate (% p.a.)",
+      "min": 3,
+      "max": 12,
+      "step": 0.5,
+      "value": 6
+    },
+    {
+      "id": "rc-post-rate",
+      "label": "Post-Retirement Return Rate (% p.a.)",
+      "min": 4,
+      "max": 12,
+      "step": 0.5,
+      "value": 7
+    }
+  ],
+  "outputs": [
+    {
+      "id": "rc-corpus",
+      "label": "Corpus Needed at Retirement",
+      "highlight": true
+    },
+    {
+      "id": "rc-monthly-at-retire",
+      "label": "Monthly Expenses at Retirement (Inflation-Adjusted)"
+    },
+    {
+      "id": "rc-monthly-sip",
+      "label": "Monthly SIP Needed (at 12% return)"
+    },
+    {
+      "id": "rc-years",
+      "label": "Years of Retirement to Fund"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Retirement Corpus Calculator."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and optimise your decision."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How much corpus do I need to retire in India?",
+      "a": "A popular rule: corpus = 25× annual expenses (4% withdrawal rule). For ₹1 lakh/month expenses at retirement (inflation-adjusted), annual = ₹12 lakh, corpus = ₹3 crore. But with Indian inflation at 6%, medical costs, and increasing longevity, 30× (3.3% withdrawal rate) is safer."
+    },
+    {
+      "q": "How does inflation affect retirement planning?",
+      "a": "₹80,000/month today becomes ₹2,57,000/month in 25 years at 6% inflation. This is why you cannot plan retirement based on today's expenses — you must inflation-adjust. The corpus must be large enough to sustain inflating expenses throughout the retirement period."
+    },
+    {
+      "q": "What is the safe withdrawal rate for Indian retirees?",
+      "a": "The 4% rule (developed for US markets) may be aggressive for India. With 6% inflation and potential market volatility, 3–3.5% withdrawal rate is safer. At 3%: corpus = 33× annual expenses. At 3.5%: corpus = 28× annual expenses. The lower the withdrawal rate, the lower the risk of outliving money."
+    },
+    {
+      "q": "Is this calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. Calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "35-year-old targeting retirement at 60",
+      "text": "Current monthly expenses ₹80,000. At 6% inflation, expenses at 60 = ₹3,43,000/month. Corpus needed (3% withdrawal rate): ₹3,43,000 × 12 / 0.03 = ₹13.7 crore. Monthly SIP at 12% for 25 years to reach ₹13.7 crore: ₹65,000/month."
+    },
+    {
+      "heading": "Early retirement at 50 — higher corpus needed",
+      "text": "Same person targeting retirement at 50 (35 years of retirement, more inflation): corpus needed ≈ ₹6.2 crore (expenses lower as retirement is earlier). Monthly SIP at 12% for 15 years: ₹1,45,000/month. Early retirement requires dramatically higher monthly investment."
+    }
+  ],
+  "related": [
+    {
+      "title": "FIRE Number Calculator",
+      "url": "/india/fire-number-calculator/"
+    },
+    {
+      "title": "SWP Calculator",
+      "url": "/india/swp-calculator/"
+    },
+    {
+      "title": "Early Retirement Calculator",
+      "url": "/india/early-retirement-calculator/"
+    }
+  ]
+}

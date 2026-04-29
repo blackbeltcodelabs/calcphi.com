@@ -1,0 +1,132 @@
+{
+  "id": "life-insurance-needs",
+  "schema": {
+    "appName": "Life Insurance Needs Calculator India",
+    "appDescription": "Calculate exact life insurance requirement using Human Life Value method. Factor in income, dependents, liabilities, and existing coverage."
+  },
+  "inputs": [
+    {
+      "id": "lin-income",
+      "label": "Annual Income (₹)",
+      "min": 100000,
+      "max": 100000000,
+      "step": 50000,
+      "value": 1200000
+    },
+    {
+      "id": "lin-age",
+      "label": "Current Age (Years)",
+      "min": 18,
+      "max": 65,
+      "step": 1,
+      "value": 35
+    },
+    {
+      "id": "lin-liabilities",
+      "label": "Total Liabilities (₹)",
+      "min": 0,
+      "max": 100000000,
+      "step": 100000,
+      "value": 5000000
+    },
+    {
+      "id": "lin-assets",
+      "label": "Existing Assets (₹)",
+      "min": 0,
+      "max": 100000000,
+      "step": 100000,
+      "value": 2000000
+    },
+    {
+      "id": "lin-expenses",
+      "label": "Annual Expense Growth Rate (%)",
+      "min": 3,
+      "max": 15,
+      "step": 0.5,
+      "value": 6
+    }
+  ],
+  "outputs": [
+    {
+      "id": "lin-cover",
+      "label": "Recommended Life Cover",
+      "highlight": true
+    },
+    {
+      "id": "lin-pv-income",
+      "label": "Present Value of Future Income"
+    },
+    {
+      "id": "lin-gap",
+      "label": "Coverage Gap (if any existing cover)"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Life Insurance Needs Calculator. Smart defaults are pre-filled."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and optimise your decision."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the Human Life Value (HLV) method?",
+      "a": "HLV calculates the present value of all future income your dependents would lose if you died today. It accounts for inflation and expected salary growth. HLV = present value of (future income × working years) + liabilities − existing assets. This is the most rigorous method for calculating life insurance needs."
+    },
+    {
+      "q": "Should I count EPF and PPF as existing assets?",
+      "a": "Yes. Include all financial assets: EPF corpus, PPF, mutual funds, FDs, and existing life insurance. But don't count your home if your family will continue living in it — it's not a liquid asset for income replacement."
+    },
+    {
+      "q": "How often should I review life insurance coverage?",
+      "a": "Review every 3–5 years or after major life events: marriage, childbirth, home loan, promotion (income increase). As you age, liabilities reduce and assets grow — you may need to adjust coverage. Review after 10 years of a term policy as circumstances change significantly."
+    },
+    {
+      "q": "Is this calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "35-year-old with family — HLV calculation",
+      "text": "₹15 lakh annual income, 25 working years remaining. PV of income at 6% discount = ₹1.71 crore. Add ₹50 lakh home loan, subtract ₹20 lakh EPF+PPF = ₹2.01 crore total need. Round to ₹2 crore term cover."
+    },
+    {
+      "heading": "Self-employed professional",
+      "text": "Self-employed earning ₹25 lakh/year with no EPF/PF: HLV at 35 = ₹2.85 crore. With ₹80 lakh home loan: total need ₹3.65 crore. Irregular income makes comprehensive term insurance even more critical."
+    }
+  ],
+  "related": [
+    {
+      "title": "Term Insurance Calculator",
+      "url": "/india/term-insurance-calculator/"
+    },
+    {
+      "title": "Health Insurance Calculator",
+      "url": "/india/health-insurance-calculator/"
+    },
+    {
+      "title": "EPF Calculator",
+      "url": "/india/epf-calculator/"
+    }
+  ]
+}

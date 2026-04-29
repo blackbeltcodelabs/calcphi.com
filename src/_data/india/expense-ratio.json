@@ -1,0 +1,95 @@
+{
+  "id": "expense-ratio",
+  "inputs": [
+    { "id": "ls-principal", "label": "Investment Amount (₹)", "min": 1000, "max": 100000000, "step": 10000, "value": 1000000, "hint": "One-time investment for expense ratio comparison" },
+    { "id": "ls-rate", "label": "Gross Return Rate (%)", "min": 1, "max": 30, "step": 0.5, "value": 12, "hint": "Fund's gross return before expense ratio deduction" },
+    { "id": "ls-years", "label": "Investment Period (Years)", "min": 1, "max": 40, "step": 1, "value": 10, "hint": "" },
+    { "id": "expense-ratio", "label": "Expense Ratio (%)", "min": 0.05, "max": 5, "step": 0.05, "value": 1.5, "hint": "Total expense ratio (TER) of the mutual fund — check fund factsheet" }
+  ],
+  "outputs": [
+    { "id": "corpus-without-er", "label": "Corpus Without Expense Ratio", "highlight": true },
+    { "id": "corpus-with-er", "label": "Corpus After Expense Ratio" },
+    { "id": "total-er-cost", "label": "Total Cost of Expense Ratio" }
+  ],
+  "staticTable": {
+    "caption": "Expense ratio drag on ₹10 lakh investment at 12% gross return over 20 years",
+    "headers": ["Expense Ratio (%)", "Corpus After 20 Years (₹)", "Vs Zero Expense (₹)", "Cost of ER (₹)"],
+    "rows": [
+      ["0.1% (Index fund)", "₹92,86,352", "₹96,46,293", "₹3,59,941"],
+      ["0.5% (Low-cost fund)", "₹87,24,709", "₹96,46,293", "₹9,21,584"],
+      ["1.0% (Active fund)", "₹79,17,269", "₹96,46,293", "₹17,29,024"],
+      ["1.5% (Average active)", "₹71,84,657", "₹96,46,293", "₹24,61,636"],
+      ["2.5% (High-cost fund)", "₹59,26,546", "₹96,46,293", "₹37,19,747"]
+    ]
+  },
+  "examples": [
+    {
+      "heading": "₹10 lakh in a 1.5% ER fund vs 0.1% index fund — 20 years at 12%",
+      "text": "Investing ₹10 lakhs in a fund with a 1.5% expense ratio at 12% gross return for 20 years produces a corpus of ₹71.8 lakhs. The same investment in a 0.1% index fund (effectively 11.9% net) produces ₹92.9 lakhs. The 1.4% expense ratio gap costs you ₹21.1 lakhs over 20 years — more than double the initial investment. This illustrates why Warren Buffett and most research strongly advocates for low-cost index funds."
+    },
+    {
+      "heading": "The 1% rule — how 1% ER impacts 30-year wealth",
+      "text": "A 1% expense ratio seems small annually but compounds to a massive drag over 30 years. On ₹5 lakhs at 12% gross return over 30 years: without any ER the corpus is ₹1.49 crore; with 1% ER (net 11%) it is ₹1.13 crore. The 1% annual fee has cost ₹36 lakhs over 30 years — 7.2x the initial investment.",
+      "table": {
+        "headers": ["Expense Ratio", "Net Return", "30-Year Corpus (₹5L)", "Cost vs 0% ER"],
+        "rows": [
+          ["0%", "12%", "₹1,49,79,582", "—"],
+          ["0.1%", "11.9%", "₹1,44,09,716", "₹5,69,866"],
+          ["1.0%", "11%", "₹1,13,49,305", "₹36,30,277"],
+          ["2.0%", "10%", "₹87,24,709", "₹62,54,873"]
+        ]
+      }
+    }
+  ],
+  "decisionGuide": [
+    {
+      "question": "What is a reasonable expense ratio for a mutual fund?",
+      "answer": "SEBI has capped mutual fund expense ratios in India. For equity funds: direct plans must be below 1.05% and regular plans below 2.25% for funds above ₹10,000 crore AUM. Index funds have expense ratios of 0.05–0.3%. Actively managed equity funds range from 0.5–1.5% (direct) and 1.5–2.5% (regular). Any expense ratio above 2% for an equity fund is considered high — check if the fund consistently outperforms its benchmark by more than the expense ratio."
+    },
+    {
+      "question": "Does outperformance justify a high expense ratio?",
+      "answer": "Only if the fund consistently outperforms its benchmark by more than the expense ratio differential — i.e., an active fund at 1.5% TER must beat the index by at least 1.5% annually after costs to justify its fee. Research globally and in India shows that fewer than 20% of actively managed funds achieve this over 10+ year periods. For long-term investors, low-cost index funds with 0.05–0.1% expense ratios have historically outperformed most high-cost active funds."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is an expense ratio in a mutual fund?",
+      "a": "The expense ratio (or Total Expense Ratio — TER) is the annual fee charged by a mutual fund to cover its operational costs: fund manager salary, administrative expenses, marketing costs, and distributor commissions (for regular plans). It is expressed as a percentage of the fund's average assets under management (AUM). A 1.5% expense ratio means ₹1,500 is charged annually for every ₹1 lakh invested."
+    },
+    {
+      "q": "How does the expense ratio affect mutual fund returns?",
+      "a": "The expense ratio is deducted daily from the fund's NAV — it is not a separate fee but is baked into the NAV calculation. A fund with 12% gross return and 1.5% expense ratio delivers a 10.5% net return to investors. Over 10 years on ₹10 lakhs, this reduces your corpus by approximately ₹4.5 lakhs. The drag compounds over time — the longer your investment horizon, the greater the absolute impact of expense ratio."
+    },
+    {
+      "q": "What is TER (Total Expense Ratio) in mutual funds?",
+      "a": "TER (Total Expense Ratio) is the total annual cost of owning a mutual fund, expressed as a percentage. It includes the investment management fee, registrar and transfer agent fee, custodian fee, audit fee, and distributor commission (for regular plans). SEBI mandates that mutual funds publish their TER daily on their website and in monthly factsheets. The expense ratio directly reduces the fund's NAV each day."
+    },
+    {
+      "q": "Do index funds have a lower expense ratio than active funds?",
+      "a": "Yes, significantly. Indian Nifty 50 index funds have expense ratios as low as 0.05–0.2% (direct plans), while actively managed large-cap equity funds charge 0.5–1.5% (direct) or 1.5–2.5% (regular plans). The gap of 1–2% annually compounds into a massive difference over 20–30 years. SEBI's data shows that most actively managed equity funds in India have not consistently outperformed the Nifty 50 index after accounting for expense ratios."
+    },
+    {
+      "q": "What is SEBI's expense ratio limit for mutual funds in India?",
+      "a": "SEBI sets maximum TER limits based on fund size. For equity funds: up to 2.25% TER for regular plans and proportionally less for larger fund sizes. For direct plans, the TER must be lower by the amount of distributor commission. As AUM increases, the maximum TER decreases — large funds above ₹50,000 crore have a maximum equity TER of 1.05% for regular plans. Debt funds have lower caps. Index and ETFs have separate, lower limits."
+    },
+    {
+      "q": "How do I find the expense ratio of my mutual fund?",
+      "a": "You can find the expense ratio (TER) of any mutual fund by: (1) Checking the fund factsheet on the AMC's website — TER is always disclosed; (2) Visiting AMFI's website at amfiindia.com; (3) Using fund comparison platforms like Morningstar, Value Research, or Groww. The expense ratio is updated monthly. Always compare the TER of the direct plan vs regular plan of the same fund to understand the distributor commission component."
+    }
+  ],
+  "howToSteps": [
+    { "name": "Enter Investment Amount", "text": "Enter your lumpsum investment. The calculator compares the corpus with and without the expense ratio to show the total drag on your wealth." },
+    { "name": "Set Gross Return Rate", "text": "Enter the fund's gross return before expense ratio deduction. Check the fund's benchmark return or historical performance as a reference." },
+    { "name": "Enter Expense Ratio", "text": "Enter the fund's Total Expense Ratio (TER). Find this on the fund factsheet or AMC website. Direct plans typically show 0.1–1.5%; regular plans show 1.5–2.5%." },
+    { "name": "See the Cost of Fees", "text": "The calculator shows your corpus both without any expense ratio and after the expense ratio deduction, and the total fees paid over the investment period. Use this to compare direct vs regular plans or different funds." }
+  ],
+  "related": [
+    { "title": "Direct vs Regular Plan Calculator", "url": "/india/direct-vs-regular-calculator/", "desc": "Compare direct and regular mutual fund plan returns" },
+    { "title": "Lumpsum Calculator", "url": "/india/lumpsum-calculator/", "desc": "Calculate one-time investment growth" },
+    { "title": "SIP Calculator", "url": "/india/sip-calculator/", "desc": "Monthly SIP returns calculator" }
+  ],
+  "schema": {
+    "appName": "Expense Ratio Impact Calculator India",
+    "appDescription": "Calculate how mutual fund expense ratio reduces your investment returns and total corpus over time"
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "id": "annuity-calculator",
+  "schema": {
+    "appName": "Annuity Calculator India — Pension Payout",
+    "appDescription": "Calculate monthly pension income from an annuity investment. Compare life annuity, return of purchase price (ROP), and joint life options."
+  },
+  "inputs": [
+    {
+      "id": "ann-corpus",
+      "label": "Annuity Purchase Price (₹)",
+      "min": 100000,
+      "max": 100000000,
+      "step": 100000,
+      "value": 2000000
+    },
+    {
+      "id": "ann-rate",
+      "label": "Annuity Rate (% p.a.)",
+      "min": 4,
+      "max": 8,
+      "step": 0.1,
+      "value": 6,
+      "hint": "Current IRDAI-guided annuity rates 5.5–7%"
+    },
+    {
+      "id": "ann-type",
+      "label": "Annuity Type",
+      "type": "select",
+      "options": [
+        {
+          "value": "life",
+          "label": "Life Annuity (payments stop on death)"
+        },
+        {
+          "value": "rop",
+          "label": "Return of Purchase Price (ROP) on death"
+        },
+        {
+          "value": "joint",
+          "label": "Joint Life (spouse continues after death)"
+        },
+        {
+          "value": "increasing",
+          "label": "Increasing Annuity (3% annual increase)"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ann-monthly",
+      "label": "Monthly Annuity Payout",
+      "highlight": true
+    },
+    {
+      "id": "ann-annual",
+      "label": "Annual Annuity Income"
+    },
+    {
+      "id": "ann-with-return",
+      "label": "Investment Return Component"
+    },
+    {
+      "id": "ann-effective-yield",
+      "label": "Effective Annuity Yield"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Annuity Calculator."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and optimise your decision."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is an annuity and how does it work in India?",
+      "a": "An annuity is a contract where you pay a lump sum to an insurance company and receive regular pension payments (monthly/quarterly/annual) for life or a fixed period. In India, annuities are offered by life insurers like LIC, SBI Life, HDFC Life. NPS mandates 40% of corpus into annuity at retirement."
+    },
+    {
+      "q": "What is the annuity rate in India 2026?",
+      "a": "Annuity rates in India range from 5.5% to 7% p.a. depending on the insurer, annuity type, and purchase age. Immediate annuity rates are higher for older buyers. LIC's Jeevan Akshay VII offers 6–7% for single life annuity. HDFC Life and SBI Life offer comparable rates."
+    },
+    {
+      "q": "Is annuity income taxable in India?",
+      "a": "Yes. Annuity income is fully taxable as 'income from other sources' at your applicable slab rate. There is no special exemption for annuity income. This is different from EPF/PPF maturity which can be tax-free. Factor in tax while planning your retirement income from annuities."
+    },
+    {
+      "q": "Is this calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. Calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹20 lakh NPS annuity corpus at 6%",
+      "text": "₹20 lakh annuity at 6% (life annuity): ₹10,000/month = ₹1,20,000/year. With Return of Purchase Price (ROP): ₹8,500/month (lower payout, but family gets ₹20 lakh on death). Joint life with ROP: ₹7,800/month — spouse also protected."
+    },
+    {
+      "heading": "₹50 lakh corpus — comparing options",
+      "text": "₹50 lakh single life annuity at 6%: ₹25,000/month. With 3% increasing: starts at ₹22,000/month, reaches ₹37,000 after 20 years. If you live 20+ years, increasing annuity wins against inflation. Buy at least 40% of annuity corpus with inflation-increasing option."
+    }
+  ],
+  "related": [
+    {
+      "title": "NPS Calculator",
+      "url": "/india/nps-calculator/"
+    },
+    {
+      "title": "SWP Calculator",
+      "url": "/india/swp-calculator/"
+    },
+    {
+      "title": "Pension Income Calculator",
+      "url": "/india/pension-income-calculator/"
+    }
+  ]
+}

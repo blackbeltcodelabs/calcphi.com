@@ -1,0 +1,120 @@
+{
+  "id": "overtime",
+  "schema": {
+    "appName": "Overtime Pay Calculator India",
+    "appDescription": "Calculate overtime pay, hourly rate, and total monthly salary including overtime. Based on Factories Act 1948 — OT must be paid at double the ordinary rate."
+  },
+  "inputs": [
+    {
+      "id": "ot-basic",
+      "label": "Monthly Basic Salary (₹)",
+      "min": 5000,
+      "max": 500000,
+      "step": 1000,
+      "value": 30000
+    },
+    {
+      "id": "ot-hours",
+      "label": "Overtime Hours per Month",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "value": 20
+    },
+    {
+      "id": "ot-work-days",
+      "label": "Working Days per Month",
+      "min": 22,
+      "max": 30,
+      "step": 1,
+      "value": 26
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ot-hourly",
+      "label": "Hourly Rate"
+    },
+    {
+      "id": "ot-ot-rate",
+      "label": "Overtime Rate (2x)"
+    },
+    {
+      "id": "ot-ot-pay",
+      "label": "Total Overtime Pay"
+    },
+    {
+      "id": "ot-total",
+      "label": "Total Monthly Salary with OT",
+      "highlight": true
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Overtime Calculator. Smart defaults are pre-filled."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and find the best option."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the overtime rate in India under labour law?",
+      "a": "The Factories Act 1948 mandates overtime pay at twice the ordinary rate for factory workers. Normal working hours: 48 hours/week (9 hours/day). Any work beyond this is overtime. The new Labour Codes retain this double-rate provision. IT/services employees typically follow company policy."
+    },
+    {
+      "q": "Is overtime pay taxable?",
+      "a": "Yes. Overtime pay is fully taxable as part of salary income. There is no exemption for overtime earnings. TDS on overtime is calculated by your employer based on projected annual income. The tax is straightforward — overtime is just additional salary."
+    },
+    {
+      "q": "Do IT/software employees get overtime?",
+      "a": "Most IT professionals are categorised as 'management staff' or 'skilled workers' exempt from overtime provisions. However, some IT companies pay OT voluntarily or offer comp-off (compensatory off) instead of payment. Start-ups often have no formal OT policy."
+    },
+    {
+      "q": "Is the Overtime Calculator free?",
+      "a": "Yes, completely free on CalcPhi with no registration."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser. Your data is never stored."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones and tablets."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹30,000 basic — 20 OT hours/month",
+      "text": "Hourly rate = 30,000 ÷ (26 × 8) = ₹144/hour. OT rate = ₹288/hour. 20 OT hours = ₹5,769. Total monthly = ₹35,769. Annual OT income = ₹69,228 (if consistent) — adds meaningful income for factory workers."
+    },
+    {
+      "heading": "Shift worker calculation",
+      "text": "A factory worker earning ₹20,000 basic working 30 OT hours/month at ₹192/hour OT rate earns ₹5,769 OT pay. Total ₹25,769/month. At 12 months = ₹3,09,231 annual income — below taxable limit, so no TDS."
+    }
+  ],
+  "related": [
+    {
+      "title": "CTC to In-Hand Calculator",
+      "url": "/india/ctc-to-in-hand-calculator/"
+    },
+    {
+      "title": "Salary Hike Calculator",
+      "url": "/india/salary-hike-calculator/"
+    },
+    {
+      "title": "Income Tax Calculator",
+      "url": "/india/income-tax-calculator/"
+    }
+  ]
+}

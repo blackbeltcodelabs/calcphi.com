@@ -1,0 +1,117 @@
+{
+  "id": "epf-contribution",
+  "schema": {
+    "appName": "EPF Contribution Breakup Calculator",
+    "appDescription": "Calculate monthly EPF and EPS contribution split between employee and employer. Understand where your 12% EPF goes — EPF vs EPS."
+  },
+  "inputs": [
+    {
+      "id": "epfc-basic",
+      "label": "Monthly Basic + DA (₹)",
+      "min": 5000,
+      "max": 500000,
+      "step": 1000,
+      "value": 30000
+    },
+    {
+      "id": "epfc-vpf",
+      "label": "Voluntary PF (% extra)",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "value": 0,
+      "hint": "VPF is on top of mandatory 12%"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "epfc-emp-pf",
+      "label": "Employee EPF (12% of Basic)"
+    },
+    {
+      "id": "epfc-vpf",
+      "label": "Voluntary PF (VPF)"
+    },
+    {
+      "id": "epfc-empl-pf",
+      "label": "Employer EPF (3.67%)"
+    },
+    {
+      "id": "epfc-empl-eps",
+      "label": "Employer EPS (8.33%)"
+    },
+    {
+      "id": "epfc-total-epf",
+      "label": "Total Monthly to EPF Account",
+      "highlight": true
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the EPF Contribution Calculator. Smart defaults are pre-filled."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and find the best option."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the difference between EPF and EPS?",
+      "a": "EPF (Employee Provident Fund): both employee 12% and employer 3.67% go here — you get this with interest on retirement/resignation. EPS (Employee Pension Scheme): employer's 8.33% (capped at ₹1,250/month) goes to EPS — this funds a monthly pension after age 58 with 10+ years of service. You don't receive EPS corpus directly."
+    },
+    {
+      "q": "What is VPF and should I invest in it?",
+      "a": "VPF (Voluntary Provident Fund) is additional contribution beyond mandatory 12%. It earns the same EPF rate (8.25%) and has the same EEE tax treatment. For risk-free, tax-free guaranteed returns, VPF is superior to most fixed income alternatives. However, it is illiquid until retirement."
+    },
+    {
+      "q": "Is EPF interest fully tax-free?",
+      "a": "EPF interest is tax-free for employee contributions up to ₹2.5 lakh/year (₹5 lakh for government employees). Interest on contributions above this threshold is taxable. Employer contributions up to 12% of basic are tax-free. Withdrawal after 5 years of continuous service is tax-free."
+    },
+    {
+      "q": "Is the EPF Contribution Breakup Calculator free?",
+      "a": "Yes, completely free on CalcPhi with no registration."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser. Your data is never stored."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones and tablets."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹30,000 basic — EPF/EPS split",
+      "text": "Monthly contributions: Employee PF = ₹3,600 (12%). Employer: EPF = ₹1,101 (3.67%), EPS = ₹1,250 (capped). Total to EPF account = ₹4,701. Total monthly EPF-related deduction = ₹7,201 from combined CTC. EPS ₹1,250 is separate — not in your EPF account."
+    },
+    {
+      "heading": "High earner — above ₹15,000 basic",
+      "text": "For ₹1 lakh basic: Employee PF = ₹12,000. Employer EPS = ₹1,250 (capped). Employer EPF = ₹12,000 × 3.67% = ₹4,404. Total EPF account credit = ₹16,404/month. Higher earners benefit most from EPF as tax-free compounding grows significantly."
+    }
+  ],
+  "related": [
+    {
+      "title": "EPF Calculator",
+      "url": "/india/epf-calculator/"
+    },
+    {
+      "title": "EPS Pension Calculator",
+      "url": "/india/eps-pension-calculator/"
+    },
+    {
+      "title": "CTC to In-Hand Calculator",
+      "url": "/india/ctc-to-in-hand-calculator/"
+    }
+  ]
+}

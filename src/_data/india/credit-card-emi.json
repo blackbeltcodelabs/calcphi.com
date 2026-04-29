@@ -1,0 +1,121 @@
+{
+  "id": "credit-card-emi",
+  "schema": {
+    "appName": "Credit Card EMI Calculator India",
+    "appDescription": "Calculate credit card EMI interest cost and compare with personal loan. Understand the true cost of converting credit card purchases to EMIs."
+  },
+  "inputs": [
+    {
+      "id": "cc-amount",
+      "label": "Purchase Amount (₹)",
+      "min": 5000,
+      "max": 5000000,
+      "step": 1000,
+      "value": 50000
+    },
+    {
+      "id": "cc-rate",
+      "label": "Credit Card Interest Rate (% p.a.)",
+      "min": 12,
+      "max": 48,
+      "step": 1,
+      "value": 24,
+      "hint": "Most cards charge 24–42% p.a."
+    },
+    {
+      "id": "cc-months",
+      "label": "EMI Tenure (Months)",
+      "min": 3,
+      "max": 24,
+      "step": 3,
+      "value": 12
+    }
+  ],
+  "outputs": [
+    {
+      "id": "cc-emi",
+      "label": "Monthly EMI"
+    },
+    {
+      "id": "cc-total-interest",
+      "label": "Total Interest Paid"
+    },
+    {
+      "id": "cc-total",
+      "label": "Total Payment"
+    },
+    {
+      "id": "cc-effective-rate",
+      "label": "Effective Annual Rate",
+      "highlight": true
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Credit Card EMI Calculator. All inputs have smart defaults."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see how numbers evolve year by year."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare different scenarios and find the best option for you."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the interest rate on credit card EMIs in India?",
+      "a": "Credit card EMI interest rates range from 12% to 36% p.a. depending on the bank and offer. 'No-cost EMI' schemes (available on electronics, appliances) waive interest but merchants often inflate the base price. Banks also charge processing fees (₹99–₹299) for EMI conversion."
+    },
+    {
+      "q": "Is credit card EMI better than personal loan?",
+      "a": "Personal loan rates (10–18% p.a.) are typically lower than credit card EMI rates (18–36%). For purchases above ₹50,000 over 12+ months, a personal loan is usually cheaper. Credit card EMI is convenient but costlier — the ease comes at a price."
+    },
+    {
+      "q": "What happens if I miss a credit card EMI?",
+      "a": "Missing a CC EMI reverts the entire outstanding balance to the card's full interest rate (typically 36–42% p.a.) and attracts late payment charges (₹500–₹1,300). Your CIBIL score drops significantly. Always keep auto-debit for minimum payment to avoid this."
+    },
+    {
+      "q": "Is the Credit Card EMI Calculator free?",
+      "a": "Yes, completely free with no registration on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser. We never store your financial data."
+    },
+    {
+      "q": "Can I use the Credit Card EMI Calculator on mobile?",
+      "a": "Yes. CalcPhi works on all modern smartphones and tablets."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹50,000 laptop on 12-month credit card EMI at 24%",
+      "text": "₹50,000 at 24% for 12 months: EMI = ₹4,741. Total interest = ₹6,892. Total payment = ₹56,892. Effective rate is 24% p.a. Compare with HDFC personal loan at 12%: EMI = ₹4,440, total interest = ₹3,280 — saving ₹3,600."
+    },
+    {
+      "heading": "No-cost EMI — is it really free?",
+      "text": "Flipkart/Amazon 'no-cost EMI' on ₹30,000 TV for 6 months: you pay ₹5,000/month with no stated interest. However, the product price on no-cost EMI is often ₹1,500–₹2,500 higher than cash price. Effective cost: 10–16% p.a. Not free — just structured differently."
+    }
+  ],
+  "related": [
+    {
+      "title": "EMI Calculator",
+      "url": "/india/emi-calculator/"
+    },
+    {
+      "title": "Loan Eligibility Calculator",
+      "url": "/india/loan-eligibility-calculator/"
+    },
+    {
+      "title": "Balance Transfer Calculator",
+      "url": "/india/balance-transfer-calculator/"
+    }
+  ]
+}

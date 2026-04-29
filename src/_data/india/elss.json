@@ -1,0 +1,92 @@
+{
+  "id": "elss",
+  "formulaEngine": "sip",
+  "inputs": [
+    { "id": "monthly-investment", "label": "Monthly ELSS Investment (₹)", "min": 500, "max": 1000000, "step": 500, "value": 12500, "hint": "₹1.5L/year (₹12,500/month) maximises Section 80C deduction" },
+    { "id": "return-rate", "label": "Expected Annual Return (%)", "min": 1, "max": 30, "step": 0.5, "value": 14, "hint": "Historical ELSS category average: 12–16% over 10+ years" },
+    { "id": "tenure", "label": "Investment Period (Years)", "min": 3, "max": 30, "step": 1, "value": 15, "hint": "Minimum 3-year lock-in per installment; longer = better returns" }
+  ],
+  "outputs": [
+    { "id": "total-invested", "label": "Total Invested" },
+    { "id": "estimated-returns", "label": "Estimated Returns", "highlight": true },
+    { "id": "total-wealth", "label": "Total Wealth" }
+  ],
+  "staticTable": {
+    "caption": "ELSS SIP returns at 14% annual return — tax savings and wealth creation",
+    "headers": ["Monthly SIP (₹)", "Annual 80C Saving (₹)", "10-Year Wealth (₹)", "15-Year Wealth (₹)"],
+    "rows": [
+      ["₹5,000", "₹15,600", "₹13,93,490", "₹40,43,824"],
+      ["₹12,500", "₹39,000", "₹34,83,726", "₹1,01,09,561"],
+      ["₹25,000", "₹46,800 (max)", "₹69,67,452", "₹2,02,19,122"],
+      ["₹50,000", "₹46,800 (max)", "₹1,39,34,904", "₹4,04,38,244"]
+    ]
+  },
+  "examples": [
+    {
+      "heading": "Salaried professional saving ₹12,500/month in ELSS for 15 years",
+      "text": "Investing ₹12,500/month in ELSS (₹1.5 lakhs/year — the maximum 80C deduction) at 14% annual return for 15 years builds a corpus of approximately ₹1.01 crore. Additionally, the investor saves approximately ₹39,000 per year in income tax (30% bracket), adding up to ₹5.85 lakhs in tax savings over 15 years. ELSS uniquely combines wealth creation with tax efficiency."
+    },
+    {
+      "heading": "ELSS vs PPF for tax saving — ₹1.5L/year for 15 years",
+      "text": "Both ELSS and PPF qualify under Section 80C. PPF at 7.1% for 15 years on ₹1.5L/year grows to approximately ₹40.7 lakhs. ELSS at 12% for the same period grows to approximately ₹75.4 lakhs — nearly double. ELSS carries market risk and a 3-year lock-in per installment, while PPF is risk-free with a 15-year lock-in.",
+      "table": {
+        "headers": ["Instrument", "Rate", "15-Year Corpus", "Lock-in", "Tax on Maturity"],
+        "rows": [
+          ["ELSS", "12–16% (equity)", "₹75–₹1,01 L (at 12–14%)", "3 years per SIP", "12.5% LTCG above ₹1.25L"],
+          ["PPF", "7.1% (guaranteed)", "₹40.7 lakhs", "15 years", "Fully exempt"]
+        ]
+      }
+    }
+  ],
+  "decisionGuide": [
+    {
+      "question": "Should you invest ₹12,500/month in ELSS or spread across 80C instruments?",
+      "answer": "If you are in the 30% tax bracket and have a 10+ year horizon, allocating the entire ₹1.5L/year 80C limit to ELSS maximises both tax savings (₹46,800/year) and wealth creation potential. Combine with EPF contributions (which also count toward 80C) to reach the limit without fully concentrating in ELSS."
+    },
+    {
+      "question": "Does ELSS 3-year lock-in apply per installment or to the entire investment?",
+      "answer": "The 3-year lock-in applies per installment. Each monthly SIP installment is locked for 3 years from its date of investment. So in an ongoing SWP, some installments are always locked. This means you cannot redeem the entire ELSS investment at once until 3 years after the final SIP installment."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is ELSS and how does it save tax?",
+      "a": "ELSS (Equity Linked Savings Scheme) is a type of mutual fund that qualifies for tax deduction under Section 80C of the Income Tax Act. Investments up to ₹1.5 lakh per year in ELSS reduce your taxable income by the same amount. For someone in the 30% tax bracket, this saves up to ₹46,800 in income tax annually. ELSS is the only mutual fund category with a tax benefit."
+    },
+    {
+      "q": "What is the lock-in period for ELSS?",
+      "a": "ELSS has a mandatory lock-in period of 3 years per installment. Each SIP installment is locked for 3 years from the date of investment. For example, an installment invested in January 2024 can be redeemed from January 2027. You cannot withdraw ELSS units before the 3-year lock-in, making it the shortest lock-in among all 80C instruments (PPF: 15 years, NSC: 5 years)."
+    },
+    {
+      "q": "Is ELSS return tax-free?",
+      "a": "ELSS returns are not entirely tax-free. Since ELSS invests in equity, gains held over 1 year are taxed as Long-Term Capital Gains (LTCG) at 12.5% above ₹1.25 lakh per year. Since the 3-year lock-in ensures holdings are always long-term, STCG does not apply to ELSS. The tax on gains is significantly lower than the initial 80C tax saving, making ELSS net tax-positive in most scenarios."
+    },
+    {
+      "q": "ELSS vs PPF — which is better for tax saving in India?",
+      "a": "ELSS historically delivers higher returns (12–16% over long periods) compared to PPF (currently 7.1%), but carries equity market risk. ELSS has a 3-year lock-in versus PPF's 15-year lock-in, giving more flexibility. PPF maturity is completely tax-free (EEE status), while ELSS gains above ₹1.25L/year are taxed at 12.5%. For long-term investors willing to accept market risk, ELSS typically creates more wealth. For risk-averse investors seeking guaranteed returns, PPF is more suitable."
+    },
+    {
+      "q": "Can I invest more than ₹1.5 lakh in ELSS in a year?",
+      "a": "Yes, you can invest any amount in ELSS without an upper limit. However, the Section 80C deduction is capped at ₹1.5 lakh per year across all 80C instruments combined. Investments above ₹1.5 lakh do not get any additional tax deduction but continue to earn market-linked returns. For amounts beyond the 80C limit, consider investing in a regular equity mutual fund instead."
+    },
+    {
+      "q": "What return should I use for ELSS projections?",
+      "a": "The ELSS category has delivered approximately 12–16% CAGR over 10–15 year periods historically, with the best funds generating higher returns. For conservative planning, use 12%. For moderate estimates, use 14%. Do not use more than 16% for projections, as past performance does not guarantee future returns. The actual return depends on the specific ELSS fund and market conditions."
+    }
+  ],
+  "howToSteps": [
+    { "name": "Set Monthly Investment", "text": "Enter your monthly ELSS SIP amount. ₹12,500/month equals ₹1.5 lakhs/year — the maximum Section 80C deduction limit. This maximises both your tax saving and wealth creation." },
+    { "name": "Adjust Return Rate", "text": "Use 12–14% for conservative to moderate ELSS return estimates. The top ELSS funds have delivered 14–18% over long periods, but use conservative estimates for planning." },
+    { "name": "Set Investment Duration", "text": "Set your investment period. ELSS requires a minimum 3-year commitment per installment. For best results, stay invested for 10–15 years to fully benefit from equity compounding." },
+    { "name": "View Wealth and Tax Savings", "text": "The calculator shows your total corpus at maturity. Additionally, multiply your annual investment by your tax slab rate (20% or 30%) to estimate your annual income tax saving from Section 80C." }
+  ],
+  "related": [
+    { "title": "SIP Calculator", "url": "/india/sip-calculator/", "desc": "General SIP returns calculator for all mutual funds" },
+    { "title": "PPF Calculator", "url": "/india/ppf-calculator/", "desc": "Compare ELSS with tax-free PPF returns" },
+    { "title": "Income Tax Calculator", "url": "/india/income-tax-calculator/", "desc": "Calculate your income tax and 80C savings" }
+  ],
+  "schema": {
+    "appName": "ELSS Calculator India",
+    "appDescription": "Calculate ELSS mutual fund returns and tax savings under Section 80C for Indian investors"
+  }
+}

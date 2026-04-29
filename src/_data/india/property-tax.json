@@ -1,0 +1,144 @@
+{
+  "id": "property-tax",
+  "schema": {
+    "appName": "Property Tax Calculator India",
+    "appDescription": "Calculate annual property tax for residential and commercial properties. Municipal property tax rates vary by city — Delhi, Mumbai, Bangalore, Chennai, Hyderabad covered."
+  },
+  "inputs": [
+    {
+      "id": "ptax-area",
+      "label": "Property Area (sq ft)",
+      "min": 100,
+      "max": 100000,
+      "step": 10,
+      "value": 1000
+    },
+    {
+      "id": "ptax-rate-sqft",
+      "label": "Annual Value per Sq Ft (₹)",
+      "min": 1,
+      "max": 200,
+      "step": 1,
+      "value": 30,
+      "hint": "Varies by city, zone, and property type"
+    },
+    {
+      "id": "ptax-city",
+      "label": "City",
+      "type": "select",
+      "options": [
+        {
+          "value": "delhi",
+          "label": "Delhi (15% of annual value)"
+        },
+        {
+          "value": "mumbai",
+          "label": "Mumbai (varies by ward)"
+        },
+        {
+          "value": "bangalore",
+          "label": "Bangalore (BBMP)"
+        },
+        {
+          "value": "chennai",
+          "label": "Chennai (0.5–1% market value)"
+        },
+        {
+          "value": "hyderabad",
+          "label": "Hyderabad (GHMC)"
+        },
+        {
+          "value": "other",
+          "label": "Other Cities"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ptax-annual-value",
+      "label": "Annual Value of Property"
+    },
+    {
+      "id": "ptax-annual",
+      "label": "Annual Property Tax",
+      "highlight": true
+    },
+    {
+      "id": "ptax-quarterly",
+      "label": "Quarterly Payment"
+    },
+    {
+      "id": "ptax-rate",
+      "label": "Effective Tax Rate"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Property Tax Calculator."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and optimise your decision."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How is property tax calculated in India?",
+      "a": "Property tax = Annual Value × Tax Rate. Annual value is set by the municipal authority based on: area, location (zone), property type, and age. In Delhi: Annual Value = covered area × monthly rent determined by MCD × 12. Tax rate: 15% for Category A areas. Self-assessment (SAF) is mandatory for property owners."
+    },
+    {
+      "q": "Is property tax deductible from income tax?",
+      "a": "Property tax paid to local municipal authority is deductible from 'Income from House Property' if you're computing rental income. For self-occupied property, there is no net annual value (NIL), so property tax doesn't affect your income tax calculation. It is a direct cost of ownership."
+    },
+    {
+      "q": "What happens if I don't pay property tax?",
+      "a": "Non-payment attracts interest (typically 1.5–2% per month) and penalties. Continued default can result in sealing/attachment of property. Municipal authorities can also cut off water/power connections. Property tax records are important for sale — clear dues certificates are required at registration."
+    },
+    {
+      "q": "Is this calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. Calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "1,000 sq ft flat in Bangalore",
+      "text": "BBMP property tax for 1,000 sq ft residential flat (Zone C, tenanted): Annual value ≈ ₹30,000–₹50,000. Tax at 22.5% = ₹6,750–₹11,250/year. Owners can pay online via BBMP portal. 5% discount for paying in April."
+    },
+    {
+      "heading": "Self-occupied vs rented property tax",
+      "text": "Property tax is the same whether self-occupied or rented — it depends on area and zone, not occupancy status. However, for income tax purposes, rental income is taxable while self-occupied property has nil annual value."
+    }
+  ],
+  "related": [
+    {
+      "title": "Stamp Duty Calculator",
+      "url": "/india/stamp-duty-calculator/"
+    },
+    {
+      "title": "Property Registration Calculator",
+      "url": "/india/property-registration-calculator/"
+    },
+    {
+      "title": "Rental Yield Calculator",
+      "url": "/india/rental-yield-calculator/"
+    }
+  ]
+}

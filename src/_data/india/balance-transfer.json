@@ -1,0 +1,136 @@
+{
+  "id": "balance-transfer",
+  "schema": {
+    "appName": "Home Loan Balance Transfer Calculator",
+    "appDescription": "Calculate exact savings from transferring your home loan to a bank offering a lower interest rate. See EMI difference and total interest saved."
+  },
+  "inputs": [
+    {
+      "id": "bt-loan",
+      "label": "Outstanding Loan Amount (₹)",
+      "min": 100000,
+      "max": 100000000,
+      "step": 10000,
+      "value": 2500000
+    },
+    {
+      "id": "bt-old-rate",
+      "label": "Current Interest Rate (% p.a.)",
+      "min": 1,
+      "max": 20,
+      "step": 0.1,
+      "value": 9.5
+    },
+    {
+      "id": "bt-new-rate",
+      "label": "New Interest Rate (% p.a.)",
+      "min": 1,
+      "max": 20,
+      "step": 0.1,
+      "value": 8.5
+    },
+    {
+      "id": "bt-tenure",
+      "label": "Remaining Tenure (Years)",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "value": 15
+    },
+    {
+      "id": "bt-fee",
+      "label": "Balance Transfer Processing Fee (%)",
+      "min": 0,
+      "max": 3,
+      "step": 0.1,
+      "value": 0.5
+    }
+  ],
+  "outputs": [
+    {
+      "id": "bt-old-emi",
+      "label": "Current Monthly EMI"
+    },
+    {
+      "id": "bt-new-emi",
+      "label": "New Monthly EMI"
+    },
+    {
+      "id": "bt-emi-saving",
+      "label": "Monthly Savings"
+    },
+    {
+      "id": "bt-gross-saving",
+      "label": "Total Interest Saved (Net of Fees)",
+      "highlight": true
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Balance Transfer Calculator. All inputs have smart defaults."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see how numbers evolve year by year."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare different scenarios and find the best option for you."
+    }
+  ],
+  "faq": [
+    {
+      "q": "When does home loan balance transfer make financial sense?",
+      "a": "Balance transfer is beneficial when the interest rate difference is at least 0.5% and remaining tenure is more than 5 years. A 1% rate reduction on ₹50 lakh with 15 years remaining saves approximately ₹8–9 lakh in total interest. Check processing fees, legal charges, and foreclosure charges before switching."
+    },
+    {
+      "q": "What documents are needed for home loan balance transfer?",
+      "a": "Typically required: original property documents (NOC from current lender), last 12 months' loan account statement, 3 months salary slips, 2 years ITR, bank statements (6 months), and property papers. The new bank does a fresh property valuation and credit check."
+    },
+    {
+      "q": "Does balance transfer affect CIBIL score?",
+      "a": "Yes, slightly. The new bank does a hard inquiry when processing the transfer application. This may temporarily reduce your CIBIL score by 5–10 points. However, regular EMI payments with the new bank will rebuild it quickly. Multiple balance transfer applications in a short period are a bigger red flag."
+    },
+    {
+      "q": "Is the Balance Transfer Calculator free?",
+      "a": "Yes, completely free with no registration on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser. We never store your financial data."
+    },
+    {
+      "q": "Can I use the Balance Transfer Calculator on mobile?",
+      "a": "Yes. CalcPhi works on all modern smartphones and tablets."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "9.5% → 8.5% on ₹25 lakh, 15 years remaining",
+      "text": "Transferring ₹25 lakh from 9.5% to 8.5% with 15 years remaining reduces monthly EMI by ₹1,498. Total interest saved over 15 years: approximately ₹2.7 lakh. Processing fee of 0.5% (₹12,500) is recovered in 8 months."
+    },
+    {
+      "heading": "Effect of waiting too long to transfer",
+      "text": "The same balance transfer done after 10 years (only 5 years remaining) saves only ₹40,000 in interest — the processing fee alone may negate the benefit. Balance transfer works best in the first half of the loan tenure."
+    }
+  ],
+  "related": [
+    {
+      "title": "Home Loan EMI Calculator",
+      "url": "/india/home-loan-emi-calculator/"
+    },
+    {
+      "title": "Loan Prepayment Calculator",
+      "url": "/india/loan-prepayment-calculator/"
+    },
+    {
+      "title": "Flat vs Reducing Rate Calculator",
+      "url": "/india/flat-vs-reducing-calculator/"
+    }
+  ]
+}

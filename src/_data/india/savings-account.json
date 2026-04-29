@@ -1,0 +1,121 @@
+{
+  "id": "savings-account",
+  "schema": {
+    "appName": "Savings Account Interest Calculator India",
+    "appDescription": "Calculate monthly and annual interest earned on savings account balance. Compare savings account vs FD vs liquid fund returns."
+  },
+  "inputs": [
+    {
+      "id": "sa-balance",
+      "label": "Account Balance (₹)",
+      "min": 1000,
+      "max": 100000000,
+      "step": 1000,
+      "value": 500000
+    },
+    {
+      "id": "sa-rate",
+      "label": "Interest Rate (% p.a.)",
+      "min": 2,
+      "max": 7,
+      "step": 0.25,
+      "value": 3.5,
+      "hint": "SBI/HDFC: 3.5%; Small finance banks: up to 7%"
+    },
+    {
+      "id": "sa-months",
+      "label": "Period (Months)",
+      "min": 1,
+      "max": 60,
+      "step": 1,
+      "value": 12
+    }
+  ],
+  "outputs": [
+    {
+      "id": "sa-monthly-interest",
+      "label": "Monthly Interest Earned"
+    },
+    {
+      "id": "sa-quarterly-interest",
+      "label": "Quarterly Interest"
+    },
+    {
+      "id": "sa-annual-interest",
+      "label": "Annual Interest"
+    },
+    {
+      "id": "sa-corpus",
+      "label": "Balance After Period",
+      "highlight": true
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Savings Account Interest Calculator."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and optimise your decision."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the savings account interest rate in India 2026?",
+      "a": "Major banks: SBI 3.0%, HDFC Bank 3.5%, ICICI Bank 3.5%, Axis Bank 3.5%. Small finance banks: AU Small Finance 7%, Unity Small Finance 6%, Equitas 5.5%. Interest is calculated daily on closing balance and credited quarterly. TDS applies if interest exceeds ₹10,000/year."
+    },
+    {
+      "q": "How is savings account interest calculated?",
+      "a": "Interest = Daily Closing Balance × Annual Rate ÷ 365. Interest is calculated daily and credited quarterly (Jan, Apr, Jul, Oct). You earn interest on the daily balance, so withdrawals reduce interest. Maintain higher balance on month-end for better interest calculations in some banks."
+    },
+    {
+      "q": "Should I keep large amounts in savings account?",
+      "a": "No. Savings accounts pay 3.5–7% while FDs offer 7–8% and liquid funds 7–8.5% with daily liquidity. For idle money above ₹1 lakh: sweep-in FD (automatically sweeps to FD at threshold), liquid funds (redeemable T+1, similar returns to savings for high balances), or ultra-short-term debt funds."
+    },
+    {
+      "q": "Is this calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. Calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹5 lakh in SBI savings account for 12 months",
+      "text": "₹5 lakh at 3.0% for 12 months: monthly interest ₹1,250, annual ₹15,000. Compared with SBI FD at 6.8%: annual interest ₹34,000. Keeping ₹5 lakh in savings instead of FD costs ₹19,000/year in forgone interest."
+    },
+    {
+      "heading": "AU Small Finance Bank — 7% savings account",
+      "text": "₹5 lakh at 7% (AU Small Finance): annual interest ₹35,000. Nearly same as FD but with instant liquidity. However, deposits are insured only up to ₹5 lakh per bank under DICGC — important if balance approaches this limit."
+    }
+  ],
+  "related": [
+    {
+      "title": "FD Calculator",
+      "url": "/india/fd-calculator/"
+    },
+    {
+      "title": "RD Calculator",
+      "url": "/india/rd-calculator/"
+    },
+    {
+      "title": "FD vs RD Calculator",
+      "url": "/india/fd-vs-rd-calculator/"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "id": "vrs-calculator",
+  "schema": {
+    "appName": "VRS Calculator — Voluntary Retirement Scheme",
+    "appDescription": "Calculate VRS compensation — ex-gratia, gratuity, and leave encashment. Know the tax implications and net payment under Section 10(10C) exemption."
+  },
+  "inputs": [
+    {
+      "id": "vrs-basic",
+      "label": "Monthly Basic + DA (₹)",
+      "min": 5000,
+      "max": 500000,
+      "step": 1000,
+      "value": 80000
+    },
+    {
+      "id": "vrs-years",
+      "label": "Years of Service Completed",
+      "min": 5,
+      "max": 40,
+      "step": 1,
+      "value": 20
+    },
+    {
+      "id": "vrs-remaining",
+      "label": "Years Remaining to Retirement",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "value": 10
+    },
+    {
+      "id": "vrs-leaves",
+      "label": "Accumulated Earned Leaves",
+      "min": 0,
+      "max": 300,
+      "step": 5,
+      "value": 120
+    }
+  ],
+  "outputs": [
+    {
+      "id": "vrs-ex-gratia",
+      "label": "VRS Ex-Gratia Compensation",
+      "highlight": true
+    },
+    {
+      "id": "vrs-gratuity",
+      "label": "Gratuity Amount"
+    },
+    {
+      "id": "vrs-leave",
+      "label": "Leave Encashment"
+    },
+    {
+      "id": "vrs-total",
+      "label": "Total VRS Package"
+    },
+    {
+      "id": "vrs-tax-free",
+      "label": "Tax-Free Amount (Section 10(10C))"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the VRS Calculator. Smart defaults are pre-filled."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and find the best option."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is VRS ex-gratia and how is it calculated?",
+      "a": "VRS ex-gratia = lower of: (a) 3 months' salary for each completed year of service, or (b) salary × remaining months of service. Formula A for 20 years: 3 × monthly salary × 20 = 60 months' salary. Formula B: salary × months remaining to 60. The lower of the two is the VRS payment."
+    },
+    {
+      "q": "Is VRS compensation taxable?",
+      "a": "VRS compensation is exempt from tax under Section 10(10C) up to ₹5 lakh (public sector) or as per Central Government scheme for other employees. The ₹5 lakh VRS exemption is combined for all years — you can claim it only once in a lifetime."
+    },
+    {
+      "q": "Who is eligible for VRS in India?",
+      "a": "VRS is available to employees of central/state governments, PSUs, and companies with 50+ employees. Eligibility: completed 10 years of service OR attained 40 years of age (either criterion). The employee must apply voluntarily — compulsory separation is different from VRS."
+    },
+    {
+      "q": "Is the VRS Calculator free?",
+      "a": "Yes, completely free on CalcPhi with no registration."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser. Your data is never stored."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones and tablets."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹80,000 basic, 20 years service, 10 years remaining",
+      "text": "VRS Formula A: 3 × 80,000 × 20 = ₹48 lakh. Formula B: 80,000 × 120 months remaining = ₹96 lakh. Ex-gratia = ₹48 lakh (lower). Plus gratuity ₹9.23 lakh + leave encashment ₹3.69 lakh. Total VRS package ≈ ₹60.9 lakh."
+    },
+    {
+      "heading": "Tax on VRS package",
+      "text": "₹48 lakh ex-gratia has ₹5 lakh exemption under 10(10C). Taxable VRS = ₹43 lakh. At 30% bracket: tax = ₹13.32 lakh. Careful planning — taking VRS in a year with no other income minimises tax. Some spread VRS across financial years."
+    }
+  ],
+  "related": [
+    {
+      "title": "Gratuity Calculator",
+      "url": "/india/gratuity-calculator/"
+    },
+    {
+      "title": "Leave Encashment Calculator",
+      "url": "/india/leave-encashment-calculator/"
+    },
+    {
+      "title": "Retirement Corpus Calculator",
+      "url": "/india/retirement-corpus-calculator/"
+    }
+  ]
+}

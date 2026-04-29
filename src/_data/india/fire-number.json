@@ -1,0 +1,137 @@
+{
+  "id": "fire-number",
+  "schema": {
+    "appName": "FIRE Number Calculator India — Financial Independence",
+    "appDescription": "Calculate your FIRE number — the corpus needed for financial independence. Based on your monthly expenses, withdrawal rate, and inflation."
+  },
+  "inputs": [
+    {
+      "id": "fn-monthly",
+      "label": "Current Monthly Expenses (₹)",
+      "min": 10000,
+      "max": 1000000,
+      "step": 1000,
+      "value": 80000
+    },
+    {
+      "id": "fn-withdraw-rate",
+      "label": "Safe Withdrawal Rate (%)",
+      "min": 2,
+      "max": 6,
+      "step": 0.1,
+      "value": 3.5,
+      "hint": "3–4% is generally safe for Indian conditions"
+    },
+    {
+      "id": "fn-inflation",
+      "label": "Inflation Rate (% p.a.)",
+      "min": 3,
+      "max": 10,
+      "step": 0.5,
+      "value": 6
+    },
+    {
+      "id": "fn-age",
+      "label": "Current Age",
+      "min": 20,
+      "max": 55,
+      "step": 1,
+      "value": 32
+    },
+    {
+      "id": "fn-fire-age",
+      "label": "Target FIRE Age",
+      "min": 30,
+      "max": 60,
+      "step": 1,
+      "value": 45
+    }
+  ],
+  "outputs": [
+    {
+      "id": "fn-fire-number",
+      "label": "Your FIRE Number",
+      "highlight": true
+    },
+    {
+      "id": "fn-future-monthly",
+      "label": "Monthly Expenses at FIRE Age"
+    },
+    {
+      "id": "fn-years-to-fire",
+      "label": "Years to FIRE"
+    },
+    {
+      "id": "fn-monthly-sip",
+      "label": "Monthly Investment Needed (at 12%)"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the FIRE Number Calculator."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and optimise your decision."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is FIRE and how does it work?",
+      "a": "FIRE (Financial Independence, Retire Early) is about accumulating enough corpus that investment returns exceed living expenses — allowing you to stop working permanently. The FIRE number = annual expenses ÷ safe withdrawal rate. At 4% SWR: corpus = 25× annual expenses. Invest aggressively early, retire when corpus is reached."
+    },
+    {
+      "q": "Is the 4% rule safe for Indian FIRE?",
+      "a": "The 4% rule was derived from US market data. For India: higher inflation (6% vs 2% in US), shorter equity market history, potential political/regulatory risk. 3–3.5% SWR is safer for India. At 3%: FIRE number = 33× annual expenses — you need 33% more corpus."
+    },
+    {
+      "q": "What are the main FIRE variations?",
+      "a": "Lean FIRE: aggressive frugality, low expenses, small corpus. Fat FIRE: comfortable lifestyle, large corpus. Barista FIRE: semi-retirement with part-time work covering some expenses. Coast FIRE: invest early, coast to retirement on existing corpus without new investments. Choose based on your lifestyle goals."
+    },
+    {
+      "q": "Is this calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. Calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹80,000/month expenses — FIRE at 45",
+      "text": "At 6% inflation, expenses at 45 (13 years from age 32): ₹1,70,000/month. Annual: ₹20.4 lakh. FIRE number at 3.5% SWR: ₹20.4 lakh ÷ 0.035 = ₹5.83 crore. Monthly investment at 12% for 13 years: ₹1,82,000/month. Aggressive saving required."
+    },
+    {
+      "heading": "Lean FIRE with ₹40,000/month lifestyle",
+      "text": "Lean FIRE at ₹40,000/month, targeting 45 (inflation-adjusted: ₹85,000/month). FIRE number: ₹85,000 × 12 / 0.04 = ₹2.55 crore. More achievable: ₹75,000/month investment at 12% for 13 years. Lean FIRE dramatically lowers the target."
+    }
+  ],
+  "related": [
+    {
+      "title": "Retirement Corpus Calculator",
+      "url": "/india/retirement-corpus-calculator/"
+    },
+    {
+      "title": "Early Retirement Calculator",
+      "url": "/india/early-retirement-calculator/"
+    },
+    {
+      "title": "SWP Calculator",
+      "url": "/india/swp-calculator/"
+    }
+  ]
+}

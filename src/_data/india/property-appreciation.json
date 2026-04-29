@@ -1,0 +1,117 @@
+{
+  "id": "property-appreciation",
+  "schema": {
+    "appName": "Property Appreciation Calculator India",
+    "appDescription": "Calculate future value of your property investment. Enter purchase price, annual appreciation rate, and holding period to see projected value."
+  },
+  "inputs": [
+    {
+      "id": "ls-principal",
+      "label": "Purchase Price (₹)",
+      "min": 100000,
+      "max": 500000000,
+      "step": 100000,
+      "value": 5000000
+    },
+    {
+      "id": "ls-rate",
+      "label": "Annual Appreciation Rate (%)",
+      "min": 1,
+      "max": 20,
+      "step": 0.5,
+      "value": 7
+    },
+    {
+      "id": "ls-years",
+      "label": "Holding Period (Years)",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "value": 10
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ls-maturity",
+      "label": "Future Property Value",
+      "highlight": true
+    },
+    {
+      "id": "ls-gains",
+      "label": "Capital Gain"
+    },
+    {
+      "id": "ls-cagr",
+      "label": "Annual Appreciation Rate"
+    }
+  ],
+  "formulaEngine": "lumpsum",
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Property Appreciation Calculator."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and optimise your decision."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the average property appreciation rate in India?",
+      "a": "Historical real estate appreciation in India: metro cities (Mumbai, Bangalore, Delhi) 7–10% p.a. over 20 years. Tier 2 cities: 8–12% p.a. However, these are averages — specific locations can do much better or worse. Always factor in location micro-market trends."
+    },
+    {
+      "q": "How accurate is property appreciation forecasting?",
+      "a": "Real estate appreciation is highly location-specific and cannot be accurately predicted. Factors: infrastructure development (metro stations, IT parks), population growth, regulatory changes (FSI/FAR changes), economic conditions. Use this calculator for scenario planning with optimistic/pessimistic assumptions."
+    },
+    {
+      "q": "Is capital gains tax applicable on property appreciation?",
+      "a": "Yes. If you sell the property, LTCG (held >2 years) is taxed at 12.5% (Budget 2024 rate, no indexation) or 20% with indexation — whichever is lower for transactions before July 2024. Reinvesting in a new home (Section 54) or specified bonds (Section 54EC) can defer/reduce LTCG."
+    },
+    {
+      "q": "Is this calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. Calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹50 lakh property at 7% appreciation for 10 years",
+      "text": "₹50 lakh at 7% p.a. for 10 years = ₹98.36 lakh. Capital gain: ₹48.36 lakh. LTCG tax at 12.5% = ₹6.05 lakh. Net gain after tax: ₹42.31 lakh. If reinvested in new property: tax deferred under Section 54."
+    },
+    {
+      "heading": "Metro vs Tier 2 — appreciation difference",
+      "text": "₹50 lakh at 7% (metro, 10 years) = ₹98.36 lakh. At 10% (Tier 2, 10 years) = ₹129.69 lakh. Difference of ₹31.33 lakh. But liquidity and rental yield in Tier 2 cities may be lower — higher appreciation, lower rental income."
+    }
+  ],
+  "related": [
+    {
+      "title": "Real Estate ROI Calculator",
+      "url": "/india/real-estate-roi-calculator/"
+    },
+    {
+      "title": "Rental Yield Calculator",
+      "url": "/india/rental-yield-calculator/"
+    },
+    {
+      "title": "Rent vs Buy Calculator",
+      "url": "/india/rent-vs-buy-calculator/"
+    }
+  ]
+}

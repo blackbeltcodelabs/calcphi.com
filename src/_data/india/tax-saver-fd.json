@@ -1,0 +1,148 @@
+{
+  "id": "tax-saver-fd",
+  "schema": {
+    "appName": "Tax Saver FD Calculator",
+    "appDescription": "Calculate returns on 5-year tax-saving FD eligible for Section 80C deduction up to ₹1.5 lakh."
+  },
+  "inputs": [
+    {
+      "id": "fd-principal",
+      "label": "Deposit Amount (₹)",
+      "min": 1000,
+      "max": 100000000,
+      "step": 1000,
+      "value": 100000
+    },
+    {
+      "id": "fd-rate",
+      "label": "Interest Rate (% p.a.)",
+      "min": 1,
+      "max": 15,
+      "step": 0.1,
+      "value": 7.0
+    },
+    {
+      "id": "fd-tenure-years",
+      "label": "Tenure (Years)",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "value": 3
+    },
+    {
+      "id": "fd-tenure-months",
+      "label": "Tenure (Months)",
+      "min": 0,
+      "max": 11,
+      "step": 1,
+      "value": 0
+    },
+    {
+      "id": "fd-compounding",
+      "label": "Compounding Frequency",
+      "type": "select",
+      "options": [
+        {
+          "value": "quarterly",
+          "label": "Quarterly"
+        },
+        {
+          "value": "monthly",
+          "label": "Monthly"
+        },
+        {
+          "value": "annually",
+          "label": "Annually"
+        },
+        {
+          "value": "simple",
+          "label": "Simple Interest"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "maturity-amount",
+      "label": "Maturity Amount",
+      "highlight": true
+    },
+    {
+      "id": "interest-earned",
+      "label": "Interest Earned"
+    },
+    {
+      "id": "effective-rate",
+      "label": "Effective Annual Yield"
+    }
+  ],
+  "formulaEngine": "fd",
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the Tax Saver FD Calculator. All inputs have smart defaults."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time as you type — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown table to see how your numbers change over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust the inputs to compare different scenarios and find the best option for your situation."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How accurate is the Tax Saver FD Calculator?",
+      "a": "The Tax Saver FD Calculator uses standard financial formulas. Results are indicative; actual figures depend on your lender or financial institution's policies."
+    },
+    {
+      "q": "Is the Tax Saver FD Calculator free to use?",
+      "a": "Yes, the Tax Saver FD Calculator on CalcPhi is completely free with no registration required."
+    },
+    {
+      "q": "Are my data inputs stored?",
+      "a": "No. All calculations happen in your browser. We do not store any of your financial data."
+    },
+    {
+      "q": "How often are the Tax Saver FD Calculator rates updated?",
+      "a": "Rates in examples are updated periodically to reflect current market conditions. Always verify with your bank or advisor."
+    },
+    {
+      "q": "Can I use the Tax Saver FD Calculator on mobile?",
+      "a": "Yes. CalcPhi is fully mobile-optimised. The calculator works on all modern smartphones and tablets."
+    },
+    {
+      "q": "Who should use this calculator?",
+      "a": "Anyone in India planning their finances can benefit from the Tax Saver FD Calculator. It's designed for both beginners and experienced investors."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹1 lakh deposit at 7% for 3 years (quarterly compounding)",
+      "text": "Investing ₹1 lakh at 7% p.a. with quarterly compounding for 3 years yields ₹1,23,144. Effective annual yield is 7.19% — slightly higher than the nominal rate due to quarterly compounding."
+    },
+    {
+      "heading": "₹5 lakh deposit for 5 years — FD vs RD",
+      "text": "A ₹5 lakh FD at 7.1% for 5 years grows to approximately ₹7,08,867 (quarterly). Contrast with an RD of ₹8,333/month for 5 years at 7.1% — total deposited ₹5 lakh, maturity ₹5,99,714."
+    }
+  ],
+  "related": [
+    {
+      "title": "Section 80C Calculator",
+      "url": "/india/section-80c-calculator/"
+    },
+    {
+      "title": "FD Calculator",
+      "url": "/india/fd-calculator/"
+    },
+    {
+      "title": "PPF Calculator",
+      "url": "/india/ppf-calculator/"
+    }
+  ]
+}

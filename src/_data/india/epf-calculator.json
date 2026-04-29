@@ -1,0 +1,122 @@
+{
+  "id": "epf-calculator",
+  "schema": {
+    "appName": "EPF Calculator — Employee Provident Fund",
+    "appDescription": "Calculate EPF corpus at retirement. Enter basic salary, years of service, and EPF rate to see total EPF accumulation including employer and employee contributions."
+  },
+  "inputs": [
+    {
+      "id": "epf-basic",
+      "label": "Monthly Basic + DA (₹)",
+      "min": 5000,
+      "max": 500000,
+      "step": 1000,
+      "value": 30000,
+      "hint": "EPF is calculated on Basic + DA"
+    },
+    {
+      "id": "epf-years",
+      "label": "Years to Retirement",
+      "min": 1,
+      "max": 35,
+      "step": 1,
+      "value": 25
+    },
+    {
+      "id": "epf-rate",
+      "label": "EPF Interest Rate (%)",
+      "min": 7,
+      "max": 10,
+      "step": 0.1,
+      "value": 8.25,
+      "hint": "Current EPF rate: 8.25% p.a."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "epf-annual-contrib",
+      "label": "Annual EPF Contribution (Employee + Employer)"
+    },
+    {
+      "id": "epf-total-invested",
+      "label": "Total Contributed Over Career"
+    },
+    {
+      "id": "epf-corpus",
+      "label": "EPF Corpus at Retirement",
+      "highlight": true
+    },
+    {
+      "id": "epf-returns",
+      "label": "Total Interest Earned"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the input fields for the EPF Calculator. Smart defaults are pre-filled."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time — no submit button needed."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year breakdown to see numbers over time."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare scenarios and find the best option."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the EPF interest rate for FY 2025-26?",
+      "a": "The EPFO board has recommended 8.25% p.a. for FY 2025-26, same as FY 2024-25. EPF interest is calculated monthly but credited annually. Interest on employee share up to ₹2.5 lakh contribution/year is tax-free; above ₹2.5 lakh it's taxable."
+    },
+    {
+      "q": "How much does the employer contribute to EPF?",
+      "a": "The employer contributes 12% of basic+DA. Of this: 3.67% goes to EPF (employee account) and 8.33% goes to EPS (Employee Pension Scheme). For basic salaries above ₹15,000, the EPS contribution is capped at 8.33% of ₹15,000 = ₹1,250/month."
+    },
+    {
+      "q": "When can I withdraw EPF?",
+      "a": "Full EPF withdrawal: 2 months after leaving employment (non-retirement). Partial withdrawal: allowed for house purchase (up to 90% after 5 years), marriage/education (50% after 7 years), medical (limited). Tax-free if employed for 5+ continuous years. Premature withdrawal before 5 years attracts TDS."
+    },
+    {
+      "q": "Is the EPF Calculator free?",
+      "a": "Yes, completely free on CalcPhi with no registration."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. All calculations run in your browser. Your data is never stored."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all modern smartphones and tablets."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹30,000 basic salary — 25 years EPF accumulation",
+      "text": "₹30,000 basic at 8.25% for 25 years: Employee contribution 12% = ₹3,600/month. Employer EPF 3.67% = ₹1,101/month. Total EPF contribution = ₹4,701/month. EPF corpus ≈ ₹48.9 lakh at 8.25%. Total invested ≈ ₹14.1 lakh."
+    },
+    {
+      "heading": "High earner — VPF impact",
+      "text": "Adding VPF (Voluntary PF) of ₹10,000/month on top of mandatory EPF significantly grows the tax-free corpus. ₹10,000/month VPF for 25 years at 8.25% = additional ₹24.5 lakh. Total EPF+VPF corpus: ₹73+ lakh — all tax-free if held for 5+ years."
+    }
+  ],
+  "related": [
+    {
+      "title": "EPF Contribution Calculator",
+      "url": "/india/epf-contribution-calculator/"
+    },
+    {
+      "title": "EPS Pension Calculator",
+      "url": "/india/eps-pension-calculator/"
+    },
+    {
+      "title": "PPF vs EPF vs NPS",
+      "url": "/india/ppf-epf-nps-compare-calculator/"
+    }
+  ]
+}

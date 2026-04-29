@@ -1,0 +1,137 @@
+{
+  "id": "stp",
+  "schema": {
+    "appName": "STP Calculator — Systematic Transfer Plan",
+    "appDescription": "Calculate returns from an STP (Systematic Transfer Plan) strategy — move money from debt fund to equity fund monthly to reduce timing risk."
+  },
+  "inputs": [
+    {
+      "id": "stp-corpus",
+      "label": "Initial Lumpsum in Source Fund (₹)",
+      "min": 10000,
+      "max": 100000000,
+      "step": 10000,
+      "value": 1000000
+    },
+    {
+      "id": "monthly-investment",
+      "label": "Monthly Transfer Amount (₹)",
+      "min": 1000,
+      "max": 1000000,
+      "step": 1000,
+      "value": 50000
+    },
+    {
+      "id": "stp-source-rate",
+      "label": "Source Fund Return (% p.a.)",
+      "min": 4,
+      "max": 10,
+      "step": 0.5,
+      "value": 7,
+      "hint": "Debt/liquid fund rate"
+    },
+    {
+      "id": "return-rate",
+      "label": "Target Equity Fund Return (% p.a.)",
+      "min": 8,
+      "max": 30,
+      "step": 0.5,
+      "value": 12
+    },
+    {
+      "id": "tenure",
+      "label": "STP Duration (Months)",
+      "min": 3,
+      "max": 36,
+      "step": 3,
+      "value": 12
+    }
+  ],
+  "outputs": [
+    {
+      "id": "final-equity-corpus",
+      "label": "Final Equity Fund Corpus",
+      "highlight": true
+    },
+    {
+      "id": "source-remaining",
+      "label": "Remaining in Source Fund"
+    },
+    {
+      "id": "stp-interest-earned",
+      "label": "Source Fund Interest Earned"
+    },
+    {
+      "id": "stp-total-transferred",
+      "label": "Total Transferred to Equity"
+    }
+  ],
+  "howToSteps": [
+    {
+      "name": "Enter your details",
+      "text": "Fill in the inputs for the STP Calculator."
+    },
+    {
+      "name": "View instant results",
+      "text": "Results update in real time."
+    },
+    {
+      "name": "Explore breakdown",
+      "text": "Open the year-by-year table."
+    },
+    {
+      "name": "Compare scenarios",
+      "text": "Adjust inputs to compare options."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is STP in mutual funds?",
+      "a": "STP (Systematic Transfer Plan) automatically transfers a fixed amount from one mutual fund (usually liquid/debt) to another (usually equity) at regular intervals (monthly). It's an alternative to SIP when you have a lump sum — instead of investing everything at once (timing risk), you gradually move into equity."
+    },
+    {
+      "q": "STP vs SIP — which is better?",
+      "a": "If you have a lump sum: STP reduces timing risk by spreading equity entry over 6–12 months. If you're investing from monthly income: SIP directly into equity is simpler. STP is not inherently better than investing the full lump sum — in a rising market, full lump sum beats STP. But STP reduces regret if market falls after investment."
+    },
+    {
+      "q": "How long should an STP run?",
+      "a": "Typical STP duration: 6–12 months. Longer STPs (24–36 months) don't add much protection as market cycles are shorter. In a bear market: shorter STP (3–6 months) or stop STP and invest lump sum. In bull market: STP might mean you miss some gains. Balanced approach: 12-month STP in most conditions."
+    },
+    {
+      "q": "Is the STP Calculator free?",
+      "a": "Yes, completely free on CalcPhi."
+    },
+    {
+      "q": "Are my inputs stored?",
+      "a": "No. Calculations run in your browser."
+    },
+    {
+      "q": "Is it mobile-friendly?",
+      "a": "Yes. Works on all smartphones."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "₹10 lakh lump sum via 12-month STP",
+      "text": "₹10 lakh in liquid fund at 7%, transferring ₹83,333/month to equity at 12% for 12 months. Source fund earns ₹38,500 while you wait. Equity corpus after 12 months: approximately ₹10.7 lakh. Total wealth: ₹10.7 lakh equity + residual liquid. Compared with lump sum at 12%: ₹11.27 lakh — lump sum wins in a rising market."
+    },
+    {
+      "heading": "STP in volatile market",
+      "text": "If market falls 20% in month 3 of STP: early STP instalments benefit from lower prices (averaging). Lump sum investor sees 20% drop immediately. STP provides psychological and financial protection in downside scenarios."
+    }
+  ],
+  "related": [
+    {
+      "title": "SIP Calculator",
+      "url": "/india/sip-calculator/"
+    },
+    {
+      "title": "Lumpsum Calculator",
+      "url": "/india/lumpsum-calculator/"
+    },
+    {
+      "title": "MF Returns Calculator",
+      "url": "/india/mf-returns-calculator/"
+    }
+  ]
+}
