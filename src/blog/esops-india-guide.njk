@@ -1,0 +1,86 @@
+---
+layout: layouts/base.njk
+permalink: /blog/esops-india-guide/
+authorId: priya-sharma
+datePublished: "2026-02-25"
+dateModified: "2026-02-25"
+title: "ESOPs in India: How to Calculate Your Real Gains and Minimise Tax"
+description: "ESOPs (Employee Stock Option Plans) are taxed twice — as a perquisite when you exercise, and as capital gains when you sell. Here's how to calculate your actual gain and structure your exit."
+breadcrumbs:
+  - name: Home
+    url: /
+  - name: Blog
+    url: /blog/
+  - name: ESOPs India Guide
+---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "ESOPs in India: Real Gains and Tax Minimisation Guide",
+  "description": "How ESOP taxation works in India — perquisite tax on exercise, capital gains on sale, and strategies to minimise the tax burden.",
+  "url": "https://calcphi.com/blog/esops-india-guide/",
+  "datePublished": "2026-02-25",
+  "dateModified": "2026-02-25",
+  "author": {"@type": "Person", "name": "Priya Sharma", "url": "https://calcphi.com/about/authors/priya-sharma/"},
+  "publisher": {"@type": "Organization", "name": "CalcPhi", "url": "https://calcphi.com"},
+  "mainEntityOfPage": "https://calcphi.com/blog/esops-india-guide/"
+}
+</script>
+<main id="main-content">
+  <div class="simple-page blog-article">
+    <div class="blog-article__meta"><span class="blog-card__tag">Salary</span></div>
+    <h1>ESOPs in India: How to Calculate Your Real Gains and Minimise Tax</h1>
+    <div class="article-dateline">
+      <span class="article-dateline__item"><span class="article-dateline__label">Published:</span> 25 February 2026</span>
+      <span class="article-dateline__sep">·</span>
+      <span class="article-dateline__item">{% set author = authors[authorId] %}By <a href="{{ author.url }}">{{ author.name }}</a>, {{ author.credentials }}</span>
+    </div>
+    <p class="blog-article__intro">If you work at a startup or a listed tech company, you probably have ESOPs sitting in your vesting schedule. They look great on paper — until you exercise them and discover the tax bill. ESOPs in India are taxed at two points, and the combined levy can eat 35–50% of your paper gains if you're not careful. Here's the complete breakdown.</p>
+
+    <h2>How ESOPs Work: From Grant to Sale</h2>
+    <ol>
+      <li><strong>Grant:</strong> Company grants you the option to buy N shares at a fixed price (exercise price or strike price) at a future date. No tax at this point.</li>
+      <li><strong>Vesting:</strong> Options vest over a period (typically 4 years with 1-year cliff). No tax at vesting.</li>
+      <li><strong>Exercise:</strong> You pay the strike price and receive shares. <strong>Tax Event 1:</strong> The difference between the Fair Market Value (FMV) on exercise date and the strike price is treated as a "perquisite" — added to salary income and taxed at your slab rate.</li>
+      <li><strong>Sale:</strong> You sell the shares in the market. <strong>Tax Event 2:</strong> The difference between the sale price and the FMV on exercise date is capital gains — STCG at 20% (under 12 months) or LTCG at 12.5% above ₹1.25L (over 12 months).</li>
+    </ol>
+
+    <h2>The Real Tax on ESOPs: A Worked Example</h2>
+    <p>Scenario: 1,000 shares, strike price ₹100, FMV at exercise ₹800, sale price ₹1,200 one year later. Employee in 30% bracket.</p>
+    <table class="data-table">
+      <caption>ESOP tax calculation — exercise and sale</caption>
+      <thead><tr><th>Event</th><th>Calculation</th><th>Tax</th></tr></thead>
+      <tbody>
+        <tr><td>Exercise (perquisite tax)</td><td>(₹800 − ₹100) × 1,000 = ₹7,00,000 added to salary</td><td>₹2,18,400 (30% + cess)</td></tr>
+        <tr><td>Sale after 12+ months (LTCG)</td><td>(₹1,200 − ₹800) × 1,000 = ₹4,00,000 gain; tax on ₹2,75,000 above exemption</td><td>₹34,375 (12.5%)</td></tr>
+        <tr><td><strong>Total tax</strong></td><td></td><td><strong>₹2,52,775</strong></td></tr>
+        <tr><td>Net gain (₹12L − ₹1L strike − tax)</td><td>₹12L − ₹1L − ₹2.53L</td><td><strong>₹8.47 lakh</strong></td></tr>
+      </tbody>
+    </table>
+    <p>You made ₹11 lakh in gross gains and kept ₹8.47 lakh — 77% of gains. Not bad, but the perquisite tax hits in the exercise year, creating a cash-flow problem: you owe tax before you've sold any shares.</p>
+
+    <h2>Strategies to Minimise ESOP Tax</h2>
+    <p><strong>Exercise early in the year:</strong> If you exercise in April, the perquisite is added to that year's income. If your total income stays manageable, you may avoid tipping into the 30% bracket. Exercising across two financial years can split the perquisite income.</p>
+    <p><strong>Sell immediately after exercise (same-day exercise-and-sell):</strong> If the shares are listed, an immediate sale means zero capital gains (FMV = sale price). You pay only one tax: the perquisite at exercise. This avoids the capital gains layer entirely. Useful when stock price is volatile and you don't want to hold.</p>
+    <p><strong>Hold for 12 months after exercise:</strong> Converts capital gains from 20% STCG to 12.5% LTCG. The 7.5% rate saving on ₹4 lakh capital gains = ₹30,000 saved. Worthwhile if you're confident in the stock.</p>
+
+    <h2>ESOP Tax for Startup Employees (Unlisted Companies)</h2>
+    <p>Unlisted company ESOPs have an additional pain point: no TDS deferral allowed for listed companies' employees — TDS is due at exercise, before you can sell. Budget 2020 introduced a deferral for eligible startups (DPIIT-registered): tax on ESOP perquisite is deferred for 48 months or until sale, whichever is earlier. Check if your startup is DPIIT-registered to benefit from this.</p>
+
+    <h2>FAQ</h2>
+    <h3>What is FMV for unlisted company ESOPs?</h3>
+    <p>For unlisted companies, FMV is determined by a Category I merchant banker registered with SEBI. The valuation report (typically a discounted cash flow or NAV-based valuation) is required to calculate the perquisite tax. Your company's finance team should provide this.</p>
+    <h3>Can I claim a loss if I sell ESOP shares below the FMV at exercise?</h3>
+    <p>Yes. If you sell below the FMV at exercise (your cost basis for capital gains), you have a capital loss. This can be offset against other capital gains in the same year and carried forward for 8 years for future capital gains offset.</p>
+    <h3>Are RSUs (Restricted Stock Units) taxed the same way as ESOPs?</h3>
+    <p>RSUs vest and are delivered directly as shares — no exercise price. At vesting, the full FMV is taxable as perquisite. Capital gains apply from vesting date to sale date. RSUs in listed Indian companies vest, and tax is deducted by the employer before delivery.</p>
+
+    <div class="blog-article__cta">
+      <p>Calculate your ESOP gains:</p>
+      <a href="/india/esop-calculator/" class="cta-link">ESOP Calculator →</a>
+      <a href="/india/capital-gains-calculator/" class="cta-link" style="margin-left:var(--space-3)">Capital Gains Calculator →</a>
+    </div>
+    {% include "components/author-bio.njk" %}
+  </div>
+</main>
