@@ -44,11 +44,7 @@ breadcrumbs:
       {% for key, author in authors %}
       <article class="author-row">
         <a href="{{ author.url }}" class="author-row__photo-link">
-          <img src="{{ author.image }}"
-               alt="{{ author.name }}, {{ author.credentials }}"
-               class="author-row__photo"
-               width="160" height="160"
-               loading="lazy">
+          {% authorImage author.image, author.name + ", " + author.title + " at CalcPhi", 160, "author-row__photo", "lazy" %}
           <span class="author-row__cred-badge">{{ author.credentials }}</span>
         </a>
 

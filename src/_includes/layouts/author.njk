@@ -27,11 +27,7 @@ layout: layouts/base.njk
   <!-- Author hero -->
   <div class="author-hero">
     <div class="author-hero__inner">
-      <img src="{{ author.image }}"
-           alt="{{ author.name }}, {{ author.credentials }}"
-           class="author-hero__photo"
-           width="160" height="160"
-           loading="eager">
+      {% authorImage author.image, author.name + ", " + author.title + " at CalcPhi", 160, "author-hero__photo", "eager" %}
       <div class="author-hero__text">
         <span class="author-hero__cred">{{ author.credentials }}</span>
         <h1>{{ author.name }}<svg class="verified-badge" aria-label="Verified author" title="Verified" viewBox="0 0 20 20" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#1d9bf0"/><path d="M6 10.5l2.5 2.5L14 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></h1>

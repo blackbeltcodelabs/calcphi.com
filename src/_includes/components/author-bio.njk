@@ -2,11 +2,7 @@
 {% set author = authors[authorId] %}
 <div class="author-bio-card">
   <a href="{{ author.url }}" class="author-bio-card__img-link">
-    <img src="{{ author.image }}"
-         alt="{{ author.name }}, {{ author.credentials }}"
-         class="author-bio-card__photo"
-         width="80" height="80"
-         loading="lazy">
+    {% authorImage author.image, author.name + ", " + author.title + " at CalcPhi", 80, "author-bio-card__photo", "lazy" %}
   </a>
   <div class="author-bio-card__body">
     <p class="author-bio-card__label">Written by</p>
