@@ -9,11 +9,81 @@
     "image": "/assets/images/authors/priya-sharma.png",
     "shortBio": "Priya is a CFA charterholder with 10 years of experience in equity research and mutual fund analysis. She has covered Indian capital markets for leading asset management firms and specialises in SIP strategy, fund selection, and long-term wealth creation.",
     "fullBio": "Priya Sharma is a CFA charterholder with over 10 years of experience in equity research and mutual fund analysis across Indian capital markets. She has worked with leading asset management firms evaluating large-cap, mid-cap, and multi-asset strategies. Her research has been cited in financial publications covering AMFI-published return data and SEBI-regulated fund performance. At CalcPhi, Priya oversees the accuracy of all investment calculator methodologies and writes content on SIP strategy, lumpsum investing, and long-term wealth planning. Her work is grounded in primary financial data from AMFI, NSE, and BSE rather than commentary.",
-    "expertise": ["Mutual Funds", "SIP Strategy", "Lumpsum Investing", "Equity Research", "Portfolio Construction", "AMFI Data Analysis"],
+    "expertise": [
+      "Mutual Funds",
+      "SIP Strategy",
+      "Lumpsum Investing",
+      "Equity Research",
+      "Portfolio Construction",
+      "AMFI Data Analysis"
+    ],
     "url": "/about/authors/priya-sharma/",
     "linkedin": "https://www.linkedin.com/",
     "articles": [
-      { "title": "SIP vs Lumpsum: Which Investment Strategy Works for You?", "url": "/blog/sip-vs-lumpsum/" }
+      {
+        "title": "Best SIP Amount by Salary in India 2026 \u2014 How Much Should You Invest?",
+        "url": "/blog/best-sip-amount-by-salary/"
+      },
+      {
+        "title": "CAGR vs XIRR: Which Return Metric Should You Use for Mutual Funds?",
+        "url": "/blog/cagr-vs-xirr/"
+      },
+      {
+        "title": "Direct vs Regular Mutual Funds: The Hidden Cost You're Paying Every Year",
+        "url": "/blog/direct-vs-regular-mutual-funds/"
+      },
+      {
+        "title": "EPF Balance: How to Check, Calculate, and Actually Maximise Your Corpus",
+        "url": "/blog/epf-balance-guide/"
+      },
+      {
+        "title": "ESOPs in India: How to Calculate Your Real Gains and Minimise Tax",
+        "url": "/blog/esops-india-guide/"
+      },
+      {
+        "title": "Financial Planning in Your 30s India 2026 \u2014 10 Money Moves That Change Everything",
+        "url": "/blog/financial-planning-30s-india/"
+      },
+      {
+        "title": "Home Loan Prepayment vs Investing: Which Gives You More Wealth?",
+        "url": "/blog/home-loan-prepayment-vs-investing/"
+      },
+      {
+        "title": "Home Loan vs Renting in India: What the Real Numbers Say in 2026",
+        "url": "/blog/home-loan-vs-rent/"
+      },
+      {
+        "title": "How to Choose the Best SIP Fund in 2026 \u2013 A No-Nonsense Guide",
+        "url": "/blog/how-to-choose-sip-fund/"
+      },
+      {
+        "title": "NPS Tier 1 vs Tier 2: How to Use NPS Smartly for Tax and Retirement",
+        "url": "/blog/nps-tier-1-vs-tier-2/"
+      },
+      {
+        "title": "Personal Loan EMI Calculator: What That 11% Interest Rate Actually Costs You",
+        "url": "/blog/personal-loan-true-cost/"
+      },
+      {
+        "title": "Salary Increment Negotiation: How to Frame Your Ask With Numbers",
+        "url": "/blog/salary-increment-guide/"
+      },
+      {
+        "title": "SIP Returns: What 12% Annual Return Actually Means Month to Month",
+        "url": "/blog/sip-returns-what-12-percent-means/"
+      },
+      {
+        "title": "SIP vs FD: Which is Better for Indian Investors in 2026?",
+        "url": "/blog/sip-vs-fd-which-is-better/"
+      },
+      {
+        "title": "SIP vs Lumpsum Investment: Which Strategy Works Better?",
+        "url": "/blog/sip-vs-lumpsum/"
+      },
+      {
+        "title": "Under-Construction vs Ready-to-Move Property: A Full Financial Comparison",
+        "url": "/blog/under-construction-vs-ready-to-move/"
+      }
     ]
   },
   "arjun-mehta": {
@@ -26,11 +96,82 @@
     "image": "/assets/images/authors/arjun-mehta.png",
     "shortBio": "Arjun is a Chartered Accountant with 12 years of experience in direct taxation, income tax planning, and compliance for salaried individuals and HNIs. He advises clients on old vs new regime selection, HRA optimisation, and 80C investment planning.",
     "fullBio": "Arjun Mehta is a Chartered Accountant (ICAI member) with over 12 years of experience in direct taxation, income tax planning, and statutory compliance. He has advised hundreds of salaried individuals and high-net-worth clients on tax optimisation strategies, including regime selection under the Finance Act, HRA exemption planning, and maximising deductions under Sections 80C, 80D, 80CCD, and 24(b). At CalcPhi, Arjun is responsible for verifying all income tax calculator logic against CBDT notifications and Finance Act amendments. He ensures that slab rates, rebates, surcharges, and cess figures are accurate and updated within 7 days of any official notification. All tax content on this site reflects current CBDT guidelines and AY 2027-28 provisions.",
-    "expertise": ["Income Tax Planning", "Old vs New Regime", "HRA Exemption", "Section 80C", "Section 80D", "CBDT Compliance", "Tax Filing"],
+    "expertise": [
+      "Income Tax Planning",
+      "Old vs New Regime",
+      "HRA Exemption",
+      "Section 80C",
+      "Section 80D",
+      "CBDT Compliance",
+      "Tax Filing"
+    ],
     "url": "/about/authors/arjun-mehta/",
     "linkedin": "https://www.linkedin.com/",
     "articles": [
-      { "title": "Old vs New Tax Regime FY 2026-27: Which Saves You More?", "url": "/blog/old-vs-new-tax-regime/" }
+      {
+        "title": "Advance Tax in India 2026: Who Needs to Pay, When, and How to Calculate",
+        "url": "/blog/advance-tax-guide/"
+      },
+      {
+        "title": "Home Loan Balance Transfer: When It's Worth It and When to Skip",
+        "url": "/blog/balance-transfer-home-loan/"
+      },
+      {
+        "title": "Capital Gains Tax in India 2026: STCG, LTCG, and What Changed in Budget 2024",
+        "url": "/blog/capital-gains-tax-india/"
+      },
+      {
+        "title": "Car Loan vs Paying Outright: When Does Borrowing for a Car Make Sense?",
+        "url": "/blog/car-loan-vs-buying-outright/"
+      },
+      {
+        "title": "Credit Score India 2026 \u2014 Complete Guide to CIBIL Score, Ranges, and How to Improve",
+        "url": "/blog/credit-score-india-guide/"
+      },
+      {
+        "title": "CTC vs In-Hand Salary: Why Your Offer Letter Is Lying to You",
+        "url": "/blog/ctc-vs-in-hand-salary/"
+      },
+      {
+        "title": "ELSS vs PPF: Which Is Better for 80C Tax Saving in 2026?",
+        "url": "/blog/elss-vs-ppf-tax-saving/"
+      },
+      {
+        "title": "Expense Ratio Explained: How Fund Charges Silently Eat Your Mutual Fund Returns",
+        "url": "/blog/expense-ratio-explained/"
+      },
+      {
+        "title": "Gratuity Calculation in India 2026: How Much Are You Owed and When?",
+        "url": "/blog/gratuity-calculation-guide/"
+      },
+      {
+        "title": "How to Save Maximum Tax Under Section 80C in 2026 \u2014 A Complete Checklist",
+        "url": "/blog/how-to-save-tax-80c/"
+      },
+      {
+        "title": "HRA Exemption in 2026: How to Claim It, Even If You Pay Rent to Your Parents",
+        "url": "/blog/hra-exemption-guide/"
+      },
+      {
+        "title": "ITR Filing Guide for Salaried Employees: How to File Your Tax Return for AY 2026-27",
+        "url": "/blog/itr-filing-guide-2026/"
+      },
+      {
+        "title": "NSC vs KVP vs Post Office TD: Which Government Scheme Wins in 2026?",
+        "url": "/blog/nsc-vs-kvp-post-office/"
+      },
+      {
+        "title": "Old vs New Tax Regime FY 2026-27: Complete Comparison",
+        "url": "/blog/old-vs-new-tax-regime/"
+      },
+      {
+        "title": "TDS on Salary and Form 16: How to Read Your Tax Certificate and File Correctly",
+        "url": "/blog/tds-on-salary-form-16/"
+      },
+      {
+        "title": "Understanding Your Payslip: Every Line Item Decoded for Indian Employees",
+        "url": "/blog/understanding-payslip/"
+      }
     ]
   },
   "deepa-krishnan": {
@@ -42,12 +183,99 @@
     "avatarColor": "#059669",
     "image": "/assets/images/authors/deepa-krishnan.png",
     "shortBio": "Deepa is a Certified Financial Planner (CFP) with 8 years of experience in retirement planning, NPS, PPF, and fixed-income instruments for Indian investors.",
-    "fullBio": "Deepa Krishnan is a Certified Financial Planner (CFP) with over 8 years of experience in holistic financial planning for Indian investors. Her practice focuses on retirement corpus planning, government-backed savings instruments (PPF, NPS, SCSS), and fixed-income portfolio construction. She has helped clients across income brackets design tax-efficient savings strategies that balance growth, safety, and liquidity. At CalcPhi, Deepa reviews all calculator content related to PPF, NPS, FD, and RD — verifying formulas against PFRDA guidelines, RBI notifications, and official PFRDA-published annuity rates. Her content is designed to give retail investors the same clarity that financial advisors provide their private clients.",
-    "expertise": ["Retirement Planning", "PPF", "NPS", "Fixed Deposits", "PFRDA Guidelines", "CFP Methodology", "Holistic Financial Planning"],
+    "fullBio": "Deepa Krishnan is a Certified Financial Planner (CFP) with over 8 years of experience in holistic financial planning for Indian investors. Her practice focuses on retirement corpus planning, government-backed savings instruments (PPF, NPS, SCSS), and fixed-income portfolio construction. She has helped clients across income brackets design tax-efficient savings strategies that balance growth, safety, and liquidity. At CalcPhi, Deepa reviews all calculator content related to PPF, NPS, FD, and RD \u2014 verifying formulas against PFRDA guidelines, RBI notifications, and official PFRDA-published annuity rates. Her content is designed to give retail investors the same clarity that financial advisors provide their private clients.",
+    "expertise": [
+      "Retirement Planning",
+      "PPF",
+      "NPS",
+      "Fixed Deposits",
+      "PFRDA Guidelines",
+      "CFP Methodology",
+      "Holistic Financial Planning"
+    ],
     "url": "/about/authors/deepa-krishnan/",
     "linkedin": "https://www.linkedin.com/",
     "articles": [
-      { "title": "PPF vs NPS vs FD: Where to Park Your Long-Term Money?", "url": "/blog/ppf-vs-nps-vs-fd/" }
+      {
+        "title": "APY vs NPS: Which Pension Scheme Is Right for You in 2026?",
+        "url": "/blog/apy-vs-nps/"
+      },
+      {
+        "title": "Best Savings Account Interest Rates in India 2026: Which Bank Pays the Most?",
+        "url": "/blog/best-savings-account-interest-2026/"
+      },
+      {
+        "title": "FD vs Debt Mutual Fund: Where to Park Your Short-Term Money in 2026?",
+        "url": "/blog/fd-vs-debt-mutual-fund/"
+      },
+      {
+        "title": "FIRE in India: The Complete Math Behind Retiring at 40",
+        "url": "/blog/fire-india-retire-at-40/"
+      },
+      {
+        "title": "How Much Do You Need to Retire at 50 in India? The Real Math",
+        "url": "/blog/how-much-to-retire-at-50/"
+      },
+      {
+        "title": "How to Build an Emergency Fund in India 2026 \u2014 The Complete Guide",
+        "url": "/blog/how-to-build-emergency-fund-india/"
+      },
+      {
+        "title": "How to Plan Retirement in India 2026 \u2014 Step-by-Step Guide",
+        "url": "/blog/how-to-plan-retirement-india/"
+      },
+      {
+        "title": "How to Read a Mutual Fund Factsheet: Every Number Decoded",
+        "url": "/blog/how-to-read-mutual-fund-factsheet/"
+      },
+      {
+        "title": "Income Tax on Fixed Deposits: How TDS Works and How to Legally Reduce It",
+        "url": "/blog/income-tax-on-fd/"
+      },
+      {
+        "title": "Post Office Schemes vs Bank FDs: The Complete 2026 Comparison",
+        "url": "/blog/post-office-schemes-vs-bank-fd/"
+      },
+      {
+        "title": "PPF vs NPS vs FD: Where to Park Your Long-Term Savings?",
+        "url": "/blog/ppf-vs-nps-vs-fd/"
+      },
+      {
+        "title": "Property Registration and Stamp Duty in India 2026: State-by-State Guide",
+        "url": "/blog/property-registration-stamp-duty/"
+      },
+      {
+        "title": "RD vs FD: Which Is Better for Regular Savers in 2026?",
+        "url": "/blog/rd-vs-fd/"
+      },
+      {
+        "title": "How to Calculate Real ROI on Rental Property in India \u2014 Beyond the Gross Yield",
+        "url": "/blog/rental-property-roi-india/"
+      },
+      {
+        "title": "How to Retire Early in India: Complete FIRE Planning Guide 2026",
+        "url": "/blog/retire-early-india-guide/"
+      },
+      {
+        "title": "Section 80D: How to Maximise Your Health Insurance Tax Deduction in 2026",
+        "url": "/blog/section-80d-health-insurance/"
+      },
+      {
+        "title": "Senior Citizen Savings Scheme vs FD: The Best Option After 60 in 2026",
+        "url": "/blog/senior-citizen-savings-vs-fd/"
+      },
+      {
+        "title": "Step-Up SIP: Why Increasing Your SIP by 10% a Year Changes Everything",
+        "url": "/blog/step-up-sip-power/"
+      },
+      {
+        "title": "Term Insurance India 2026 \u2014 How Much Cover Do You Actually Need?",
+        "url": "/blog/term-insurance-india-guide/"
+      },
+      {
+        "title": "What is FIRE? Financial Independence, Retire Early \u2014 Complete India Guide",
+        "url": "/blog/what-is-fire-financial-independence/"
+      }
     ]
   }
 }

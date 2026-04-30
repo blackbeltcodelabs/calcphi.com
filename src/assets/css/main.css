@@ -1151,3 +1151,12 @@ a.cp-mcard:hover { color: inherit; }
 }
 .text-center { text-align: center; }
 .mt-0 { margin-top: 0; }
+
+/* ── Verified author badge ────────────────────────────────── */
+.verified-badge {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 4px;
+  margin-bottom: 3px;
+  flex-shrink: 0;
+}

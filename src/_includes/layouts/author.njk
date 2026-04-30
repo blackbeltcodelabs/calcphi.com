@@ -34,7 +34,7 @@ layout: layouts/base.njk
            loading="eager">
       <div class="author-hero__text">
         <span class="author-hero__cred">{{ author.credentials }}</span>
-        <h1>{{ author.name }}</h1>
+        <h1>{{ author.name }}<svg class="verified-badge" aria-label="Verified author" viewBox="0 0 20 20" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#1d9bf0"/><path d="M6 10.5l2.5 2.5L14 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></h1>
         <p class="author-hero__title">{{ author.title }}</p>
         <div class="author-hero__actions">
           <a href="{{ author.linkedin }}" class="author-hero__linkedin" rel="noopener noreferrer nofollow" target="_blank">
