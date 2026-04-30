@@ -1,6 +1,35 @@
 {% if calcData.related %}
+
+{% set catSlugs = {
+  "Mutual Funds & Investments": "mutual-funds",
+  "Tax Calculators": "tax",
+  "Loans & Borrowing": "loans",
+  "Banking & Fixed Income": "banking",
+  "Government Schemes": "government",
+  "Retirement Planning": "retirement",
+  "Salary & Employment": "salary",
+  "Real Estate": "real-estate",
+  "Insurance": "insurance"
+} %}
+
+{% set pageCategory = "" %}
+{% set pageCategorySlug = "" %}
+{% for calc in india.calculators %}
+  {% if calc.id == calculatorId %}
+    {% set pageCategory = calc.category %}
+    {% set pageCategorySlug = catSlugs[calc.category] %}
+  {% endif %}
+{% endfor %}
+
 <section id="related" class="related-section">
-  <h2>Related Calculators</h2>
+  <div class="related-section__header">
+    <h2>Related Calculators</h2>
+    {% if pageCategory %}
+    <a href="/india/#{{ pageCategorySlug }}" class="related-section__hub-link">
+      All {{ pageCategory }} tools →
+    </a>
+    {% endif %}
+  </div>
   <div class="related-grid">
     {% for item in calcData.related %}
     <a href="{{ item.url }}" class="related-card">

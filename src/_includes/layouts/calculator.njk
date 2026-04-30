@@ -283,40 +283,44 @@ layout: layouts/base.njk
 
     </article>
 
-    <!-- Sidebar -->
-    {% if market == "usa" %}
-    <aside class="page-sidebar" aria-label="USA Calculators navigation">
+    <!-- Sidebar: same-category calculators only (hub-and-spoke) -->
+    {% set catSlugs = {
+      "Mutual Funds & Investments": "mutual-funds",
+      "Tax Calculators": "tax",
+      "Loans & Borrowing": "loans",
+      "Banking & Fixed Income": "banking",
+      "Government Schemes": "government",
+      "Retirement Planning": "retirement",
+      "Salary & Employment": "salary",
+      "Real Estate": "real-estate",
+      "Insurance": "insurance"
+    } %}
+    {% set pageCategory = "" %}
+    {% for calc in india.calculators %}
+      {% if calc.id == calculatorId %}{% set pageCategory = calc.category %}{% endif %}
+    {% endfor %}
+    <aside class="page-sidebar" aria-label="More {{ pageCategory }} calculators">
       <nav class="sidebar-nav">
-        <h2>USA Calculators</h2>
+        <div class="sidebar-nav__head">
+          <span class="sidebar-nav__label">{{ pageCategory or "India Calculators" }}</span>
+          <a href="/india/#{{ catSlugs[pageCategory] or '' }}" class="sidebar-nav__hub-link">View all →</a>
+        </div>
         <ul>
-          {% for calc in usa.calculators %}
+          {% set calcList = usa.calculators if market == "usa" else india.calculators %}
+          {% for calc in calcList %}
+          {% if calc.category == pageCategory or (not pageCategory and market == "usa") %}
           <li>
             <a href="{{ calc.url }}"
                {% if calc.id == calculatorId %}aria-current="page"{% endif %}>
               {{ calc.title }}
             </a>
           </li>
+          {% endif %}
           {% endfor %}
         </ul>
+        <a href="/india/" class="sidebar-nav__browse-all">Browse all 108 India tools →</a>
       </nav>
     </aside>
-    {% else %}
-    <aside class="page-sidebar" aria-label="India Calculators navigation">
-      <nav class="sidebar-nav">
-        <h2>India Calculators</h2>
-        <ul>
-          {% for calc in india.calculators %}
-          <li>
-            <a href="{{ calc.url }}"
-               {% if calc.id == calculatorId %}aria-current="page"{% endif %}>
-              {{ calc.title }}
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-      </nav>
-    </aside>
-    {% endif %}
   </div>
 </main>
 

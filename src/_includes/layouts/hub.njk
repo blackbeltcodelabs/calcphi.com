@@ -14,15 +14,20 @@ layout: layouts/base.njk
   <div class="hub-content">
     {{ content | safe }}
 
-    {% set categories = [] %}
-    {% for calc in india.calculators %}
-      {% if calc.category not in categories %}
-        {% set categories = categories.concat(calc.category) %}
-      {% endif %}
-    {% endfor %}
+    {% set catSlugs = {
+      "Mutual Funds & Investments": "mutual-funds",
+      "Tax Calculators": "tax",
+      "Loans & Borrowing": "loans",
+      "Banking & Fixed Income": "banking",
+      "Government Schemes": "government",
+      "Retirement Planning": "retirement",
+      "Salary & Employment": "salary",
+      "Real Estate": "real-estate",
+      "Insurance": "insurance"
+    } %}
 
     {% for cat in ["Mutual Funds & Investments", "Tax Calculators", "Loans & Borrowing", "Banking & Fixed Income", "Government Schemes", "Retirement Planning", "Salary & Employment", "Real Estate", "Insurance"] %}
-    <div class="hub-category">
+    <div class="hub-category" id="{{ catSlugs[cat] }}">
       <h2>{{ cat }}</h2>
       <div class="hub-grid">
         {% for calc in india.calculators %}

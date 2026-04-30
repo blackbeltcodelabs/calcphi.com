@@ -328,6 +328,11 @@ a.cp-mcard:hover { color: inherit; }
   text-decoration: none; transition: color .12s;
 }
 .cp-footer__col a:hover { color: var(--ink); text-decoration: none; }
+.cp-footer__view-all {
+  margin-top: 6px; font-size: 12px !important;
+  color: var(--accent) !important; font-weight: 500;
+}
+.cp-footer__view-all:hover { color: var(--accent) !important; text-decoration: underline !important; }
 .cp-footer__divider { height: 1px; background: var(--line); margin: 48px 0 20px; }
 .cp-footer__bottom {}
 .cp-footer__disclaimer {
@@ -535,6 +540,16 @@ a.cp-mcard:hover { color: inherit; }
 
 /* ── Related calculators grid ─────────────────────────────── */
 .related-section { margin: var(--space-10) 0; }
+.related-section__header {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 16px; margin-bottom: 4px;
+}
+.related-section__header h2 { margin: 0; }
+.related-section__hub-link {
+  font-size: 13px; color: var(--accent); text-decoration: none;
+  white-space: nowrap; font-weight: 500; flex-shrink: 0;
+}
+.related-section__hub-link:hover { text-decoration: underline; }
 .related-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -697,6 +712,28 @@ a.cp-mcard:hover { color: inherit; }
   color: #fff;
   font-weight: 600;
 }
+.sidebar-nav__head {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 8px; margin-bottom: var(--space-4);
+}
+.sidebar-nav__label {
+  font-size: var(--text-sm); font-weight: 700;
+  color: var(--color-text-secondary);
+  text-transform: uppercase; letter-spacing: 0.06em;
+}
+.sidebar-nav__hub-link {
+  font-size: 11px; color: var(--accent, var(--color-primary));
+  text-decoration: none; font-weight: 500; white-space: nowrap;
+}
+.sidebar-nav__hub-link:hover { text-decoration: underline; }
+.sidebar-nav__browse-all {
+  display: block; margin-top: var(--space-4);
+  padding: var(--space-2) var(--space-3);
+  font-size: 12px; color: var(--color-text-secondary);
+  border-top: 1px solid var(--color-border);
+  text-decoration: none;
+}
+.sidebar-nav__browse-all:hover { color: var(--color-text); text-decoration: none; }
 
 /* ── Footer (legacy — replaced by .cp-footer) ─────────────── */
 
