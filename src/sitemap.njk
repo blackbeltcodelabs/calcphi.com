@@ -9,7 +9,7 @@ eleventyExcludeFromCollections: true
   {%- if page.url and not page.data.eleventyExcludeFromCollections %}
   <url>
     <loc>{{ site.url }}{{ page.url }}</loc>
-    <lastmod>{{ page.date | dateIso }}</lastmod>
+    <lastmod>{{ (page.data.dateModified or page.data.datePublished or page.date) | dateIso }}</lastmod>
     <changefreq>{% if page.url == "/" %}weekly{% elif page.url.startsWith("/india/") %}monthly{% else %}yearly{% endif %}</changefreq>
     <priority>{% if page.url == "/" %}1.0{% elif page.url == "/india/" %}0.9{% elif page.url.startsWith("/india/") and page.url.length > 8 %}0.8{% else %}0.5{% endif %}</priority>
   </url>
