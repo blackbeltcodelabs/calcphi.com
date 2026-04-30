@@ -196,7 +196,6 @@
   display: flex; justify-content: space-between; align-items: center;
   margin-top: auto;
 }
-.cp-pcard__uses { font-family: var(--font-num); font-size: 10.5px; color: var(--ink-3); }
 
 /* ── Market grid ──────────────────────────────────────────── */
 .cp-market-grid {
