@@ -207,6 +207,11 @@ button { cursor: pointer; font: inherit; border: none; background: none; }
   transition: background .1s;
 }
 .cp-market-dropdown a:hover { background: var(--bg-2); color: var(--ink); text-decoration: none; }
+.cp-market-item--soon {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 10px; border-radius: 6px; font-size: 13px;
+  color: var(--ink-4, #b0b8c8); cursor: not-allowed; user-select: none;
+}
 
 /* Mobile toggle */
 .cp-mobile-toggle {

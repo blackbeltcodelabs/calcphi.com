@@ -233,6 +233,12 @@
   color: var(--ink-3); padding: 3px 10px; border-radius: 999px;
   text-transform: uppercase; letter-spacing: .04em;
 }
+.cp-soon-badge {
+  display: inline-block; font-size: 9.5px; font-weight: 600;
+  background: var(--bg-3); color: var(--ink-4, #b0b8c8);
+  padding: 1px 6px; border-radius: 999px;
+  text-transform: uppercase; letter-spacing: .05em; margin-left: 4px;
+}
 a.cp-mcard:hover { color: inherit; }
 
 /* ── Trust grid ───────────────────────────────────────────── */
@@ -274,6 +280,11 @@ a.cp-mcard:hover { color: inherit; }
 .cp-mobile-nav__markets a {
   border-bottom: none; font-size: 13.5px; padding: 8px 0;
 }
+.cp-mobile-nav__market--soon {
+  border-bottom: none; font-size: 13.5px; padding: 8px 0;
+  color: var(--ink-4, #b0b8c8); cursor: not-allowed; user-select: none;
+  display: flex; align-items: center; gap: 6px;
+}
 
 /* ── New footer ───────────────────────────────────────────── */
 .cp-footer {
@@ -304,6 +315,9 @@ a.cp-mcard:hover { color: inherit; }
   transition: border-color .12s, background .12s;
 }
 .cp-footer__mchip:hover { border-color: var(--line-2); background: var(--bg-3); text-decoration: none; }
+.cp-footer__mchip--soon {
+  opacity: .5; cursor: not-allowed; pointer-events: none; user-select: none;
+}
 .cp-footer__col {}
 .cp-footer__head {
   font-size: 10.5px; font-weight: 700; text-transform: uppercase;
