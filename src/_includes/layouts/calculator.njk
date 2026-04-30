@@ -321,4 +321,4 @@ layout: layouts/base.njk
 </main>
 
 <!-- Calculator JS -->
-<script type="module" src="/assets/js/calculators/{{ calculatorId }}.js" defer></script>
+<script type="module" src="/assets/js/calculators/{{ calcData.formulaEngine | default(calculatorId) }}.js" defer></script>
