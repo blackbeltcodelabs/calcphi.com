@@ -295,9 +295,10 @@ a.cp-mcard:hover { color: inherit; }
 }
 .cp-footer__grid {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr;
-  gap: 32px;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 24px;
   margin-bottom: 0;
+  align-items: start;
 }
 .cp-footer__brand {}
 .cp-footer__desc {
@@ -305,13 +306,14 @@ a.cp-mcard:hover { color: inherit; }
   line-height: 1.6; max-width: 240px;
 }
 .cp-footer__markets {
-  display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px;
+  display: flex; flex-direction: column; gap: 5px; margin-top: 16px;
 }
 .cp-footer__mchip {
-  display: inline-flex; align-items: center; gap: 4px;
-  height: 26px; padding: 0 10px; border-radius: 999px;
+  display: inline-flex; align-items: center; gap: 6px;
+  height: 28px; padding: 0 12px; border-radius: 999px;
   border: 1px solid var(--line); background: var(--surface);
   font-size: 12px; color: var(--ink-2); text-decoration: none;
+  width: fit-content;
   transition: border-color .12s, background .12s;
 }
 .cp-footer__mchip:hover { border-color: var(--line-2); background: var(--bg-3); text-decoration: none; }
@@ -348,7 +350,7 @@ a.cp-mcard:hover { color: inherit; }
   .cp-trust-item:nth-child(2) { border-right: none; }
   .cp-trust-item:nth-child(3) { border-bottom: none; }
   .cp-trust-item:last-child { border-bottom: none; }
-  .cp-footer__grid { grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+  .cp-footer__grid { grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px; }
   .cp-hero__inner { gap: 32px; }
 }
 @media (max-width: 900px) {
