@@ -1,31 +1,42 @@
-import { formatINR, setResult, getInputValue, buildTableRows, bindInputs } from '../ui.js';
+import { formatAUD, setResult, getInputValue, bindInputs } from '../ui.js';
 
-function calcEmi(p, r, n) { return r === 0 ? p/n : (p * r * Math.pow(1+r, n)) / (Math.pow(1+r, n) - 1); }
+function calculate({ propertyPrice, depositPercent, mortgageRate, weeklyRent, propertyGrowth, years }) {
+  const deposit = propertyPrice * depositPercent / 100;
+  const loanAmount = propertyPrice - deposit;
+  const r = mortgageRate / 100 / 12;
+  const n = years * 12;
+  const monthly = r === 0 ? loanAmount / n : (loanAmount * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+  const totalMortgagePayments = monthly * n;
+  const stampDuty = propertyPrice * 0.04;
+  const maintenanceAnnual = propertyPrice * 0.01;
+  const totalBuyCost = deposit + stampDuty + totalMortgagePayments + maintenanceAnnual * years;
+  const totalRentCost = weeklyRent * 52 * years;
+  const futurePropertyValue = propertyPrice * Math.pow(1 + propertyGrowth / 100, years);
+  let balance = loanAmount;
+  for (let m = 0; m < n; m++) {
+    const intCharge = balance * r;
+    balance = Math.max(0, balance - (monthly - intCharge));
+  }
+  const equityBuilt = futurePropertyValue - balance;
+  const netBuyAdvantage = equityBuilt - totalBuyCost + totalRentCost;
+  return { buyCost: totalBuyCost, rentCost: totalRentCost, equityBuilt, netBuyAdvantage };
+}
 
 function update() {
-  const propValue = getInputValue('rvb-price');
-  const downPayment = getInputValue('rvb-down');
-  const loanRate = getInputValue('rvb-loan-rate') / 12 / 100;
-  const tenure = getInputValue('rvb-tenure');
-  const appreciation = getInputValue('rvb-appreciation') / 100;
-  const rent = getInputValue('rvb-rent');
-  const investReturn = getInputValue('rvb-invest-return') / 100;
-  const loan = propValue - downPayment;
-  const emi = calcEmi(loan, loanRate, tenure * 12);
-  const futurePropValue = propValue * Math.pow(1 + appreciation, tenure);
-  const buyTotalPaid = emi * tenure * 12 + downPayment;
-  const rentTotal = rent * 12 * Math.pow((1 + 0.05 * tenure), 1) * tenure;
-  const investedDown = downPayment * Math.pow(1 + investReturn, tenure);
-  const rentInvestDiff = (emi - rent) < 0 ? 0 : (emi - rent) * 12;
-  const netBuyWealth = futurePropValue - (loan > 0 ? 0 : 0);
-  setResult('rvb-emi', formatINR(emi));
-  setResult('rvb-future-price', formatINR(futurePropValue));
-  setResult('rvb-buy-total', formatINR(buyTotalPaid));
-  setResult('rvb-rent-total', formatINR(rentTotal));
-  setResult('rvb-verdict', emi > rent * 1.5 ? 'Renting may be better short-term' : 'Buying builds long-term wealth');
+  const propertyPrice = getInputValue('property-price');
+  const depositPercent = getInputValue('deposit-percent');
+  const mortgageRate = getInputValue('mortgage-rate');
+  const weeklyRent = getInputValue('weekly-rent');
+  const propertyGrowth = getInputValue('property-growth');
+  const years = getInputValue('years');
+  const { buyCost, rentCost, equityBuilt, netBuyAdvantage } = calculate({ propertyPrice, depositPercent, mortgageRate, weeklyRent, propertyGrowth, years });
+  setResult('buy-cost', formatAUD(buyCost));
+  setResult('rent-cost', formatAUD(rentCost));
+  setResult('equity-built', formatAUD(equityBuilt));
+  setResult('net-buy-advantage', netBuyAdvantage >= 0 ? 'Buy ahead by ' + formatAUD(netBuyAdvantage) : 'Rent ahead by ' + formatAUD(-netBuyAdvantage));
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  bindInputs(['rvb-price','rvb-down','rvb-loan-rate','rvb-tenure','rvb-appreciation','rvb-rent','rvb-invest-return'], update);
+  bindInputs(['property-price', 'deposit-percent', 'mortgage-rate', 'weekly-rent', 'property-growth', 'years'], update);
   update();
 });
