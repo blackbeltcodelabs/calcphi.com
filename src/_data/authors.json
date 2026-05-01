@@ -174,6 +174,87 @@
       }
     ]
   },
+  "sarah-mitchell": {
+    "id": "sarah-mitchell",
+    "name": "Sarah Mitchell",
+    "credentials": "CFA",
+    "title": "Investment Analyst & CFA Charterholder",
+    "initials": "SM",
+    "avatarColor": "#0d9488",
+    "image": "/assets/images/authors/sarah-mitchell.png",
+    "shortBio": "Sarah is a CFA charterholder based in Sydney with 11 years of experience in superannuation, managed funds, and investment portfolio analysis across Australian equity and fixed-income markets.",
+    "fullBio": "Sarah Mitchell is a CFA charterholder with over 11 years of experience in investment analysis and superannuation fund management. Based in Sydney, she has worked with major Australian industry funds and retail superannuation providers, advising on asset allocation, investment menu construction, and member outcomes. Her research background covers Australian equities, fixed income, and multi-asset portfolios, with a focus on long-term retirement adequacy. At CalcPhi, Sarah oversees the accuracy of all superannuation and investment calculator content, verifying methodologies against APRA reporting standards, ATO super rules, and ASIC guidance. Her work reflects current Superannuation Guarantee rates, contribution caps, and preservation age rules effective for the 2025-26 financial year.",
+    "expertise": [
+      "Superannuation",
+      "Salary Sacrifice",
+      "Investment Returns",
+      "Franking Credits",
+      "APRA Standards",
+      "Asset Allocation",
+      "Retirement Adequacy"
+    ],
+    "url": "/about/authors/sarah-mitchell/",
+    "linkedin": "https://www.linkedin.com/",
+    "articles": [
+      { "title": "How Much Super Do You Need to Retire Comfortably in Australia?", "url": "/blog/au/how-much-super-to-retire/" },
+      { "title": "Salary Sacrifice Super: How to Legally Pay Less Tax and Retire Richer", "url": "/blog/au/salary-sacrifice-super-guide/" },
+      { "title": "Franking Credits Explained: How Australian Dividend Investors Get a Tax Refund", "url": "/blog/au/franking-credits-explained/" }
+    ]
+  },
+  "james-obrien": {
+    "id": "james-obrien",
+    "name": "James O'Brien",
+    "credentials": "CPA",
+    "title": "Chartered Tax Adviser & CPA",
+    "initials": "JO",
+    "avatarColor": "#1e3a5f",
+    "image": "/assets/images/authors/james-obrien.png",
+    "shortBio": "James is a CPA and registered tax agent based in Melbourne with 14 years of experience in Australian tax law, CGT, PAYG withholding, and HECS-HELP repayment rules for salaried professionals and investors.",
+    "fullBio": "James O'Brien is a CPA (CPA Australia member) and registered tax agent with over 14 years of experience in Australian tax compliance and planning. Based in Melbourne, he advises individuals, investors, and small business owners on capital gains tax, PAYG withholding, income tax optimisation, and HECS-HELP debt management. James has worked extensively with ATO public rulings and Tax Determination documents, ensuring all advice aligns with current law. At CalcPhi, he is responsible for verifying all Australian tax calculator logic against ATO published rates, Tax Office legislation, and Federal Budget updates. His content is updated within 7 days of any ATO or Budget announcement affecting income tax, CGT, or withholding rates.",
+    "expertise": [
+      "Income Tax (ATO)",
+      "Capital Gains Tax",
+      "PAYG Withholding",
+      "HECS-HELP Repayment",
+      "Tax Return Preparation",
+      "ATO Compliance",
+      "Investment Property Tax"
+    ],
+    "url": "/about/authors/james-obrien/",
+    "linkedin": "https://www.linkedin.com/",
+    "articles": [
+      { "title": "Australian Income Tax 2025-26: Stage 3 Tax Cuts and What They Mean for You", "url": "/blog/au/australia-income-tax-2025-26/" },
+      { "title": "Capital Gains Tax Australia: How the 50% CGT Discount Works and When You Qualify", "url": "/blog/au/capital-gains-tax-australia/" },
+      { "title": "HECS-HELP Debt in 2025: Repayment Rates, Indexation, and How to Pay It Off Faster", "url": "/blog/au/hecs-help-repayment-guide/" }
+    ]
+  },
+  "emma-hartley": {
+    "id": "emma-hartley",
+    "name": "Emma Hartley",
+    "credentials": "CFP",
+    "title": "Certified Financial Planner & Mortgage Specialist",
+    "initials": "EH",
+    "avatarColor": "#b45309",
+    "image": "/assets/images/authors/emma-hartley.png",
+    "shortBio": "Emma is a CFP based in Brisbane with 9 years of experience in mortgage advice, first home buyer strategy, and retirement planning for Australian households navigating property markets and the age pension system.",
+    "fullBio": "Emma Hartley is a Certified Financial Planner (CFP, FPA member) with over 9 years of experience helping Australian households make informed decisions about home ownership, mortgage structuring, and retirement planning. Based in Brisbane, she has advised hundreds of first home buyers on stamp duty exemptions, FHOG grants, and LMI thresholds across different states. Her retirement planning practice covers account-based pensions, age pension eligibility, and transition-to-retirement strategies. At CalcPhi, Emma verifies all home loan and retirement-related calculator content, including mortgage repayment logic, LMI estimates, stamp duty schedules by state, and Centrelink age pension means-testing rules. All content reflects current rates as published by Services Australia and state revenue offices.",
+    "expertise": [
+      "Mortgage & Home Loans",
+      "First Home Buyer Strategy",
+      "LMI & Stamp Duty",
+      "Age Pension",
+      "Retirement Planning",
+      "Offset Accounts",
+      "Refinancing"
+    ],
+    "url": "/about/authors/emma-hartley/",
+    "linkedin": "https://www.linkedin.com/",
+    "articles": [
+      { "title": "First Home Buyer Australia 2025: Grants, Stamp Duty Exemptions, and What You Actually Need", "url": "/blog/au/first-home-buyer-australia-guide/" },
+      { "title": "Offset Account vs Redraw: Which Is Better for Your Australian Mortgage?", "url": "/blog/au/offset-account-vs-redraw/" },
+      { "title": "Australian Age Pension 2025: Eligibility, Assets Test, and How to Maximise Your Payment", "url": "/blog/au/age-pension-australia-guide/" }
+    ]
+  },
   "deepa-krishnan": {
     "id": "deepa-krishnan",
     "name": "Deepa Krishnan",
