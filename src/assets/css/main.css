@@ -1213,7 +1213,7 @@ a.cp-mcard:hover { color: inherit; }
 
 /* ── Geo banner ────────────────────────────────────────────── */
 .geo-banner {
-  background: var(--color-primary);
+  background: #1c4a3b;
   color: #fff;
   font-size: var(--text-sm, 0.85rem);
   border-bottom: 1px solid rgba(255,255,255,.1);

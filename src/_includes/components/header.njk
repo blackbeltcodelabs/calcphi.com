@@ -21,11 +21,14 @@
 
       <!-- Primary nav -->
       <nav class="cp-nav" aria-label="Primary navigation">
-        <a href="/india/"
-           {% if page.url.startsWith('/india/') or page.url.startsWith('/usa/') %}aria-current="true"{% endif %}>
+        <a href="{% if page.url.startsWith('/australia/') %}/australia/{% elif page.url.startsWith('/usa/') %}/usa/{% else %}/india/{% endif %}"
+           {% if page.url.startsWith('/india/') or page.url.startsWith('/australia/') or page.url.startsWith('/usa/') %}aria-current="true"{% endif %}>
           Calculators
         </a>
-        <a href="/india/">Markets</a>
+        <a href="/"
+           {% if page.url == "/" %}aria-current="page"{% endif %}>
+          Markets
+        </a>
         <a href="/blog/"
            {% if page.url.startsWith('/blog/') %}aria-current="page"{% endif %}>
           Blog
@@ -75,8 +78,8 @@
 
     <!-- Mobile nav (hidden by default) -->
     <nav id="cp-mobile-nav" class="cp-mobile-nav" aria-label="Mobile navigation" hidden>
-      <a href="/india/">Calculators</a>
-      <a href="/india/">Markets</a>
+      <a href="{% if page.url.startsWith('/australia/') %}/australia/{% elif page.url.startsWith('/usa/') %}/usa/{% else %}/india/{% endif %}">Calculators</a>
+      <a href="/">Markets</a>
       <a href="/blog/">Blog</a>
       <a href="/help/">Help</a>
       <div class="cp-mobile-nav__markets">
