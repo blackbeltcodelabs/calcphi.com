@@ -89,7 +89,14 @@
     { "source": "/india/privacy.html", "destination": "/privacy/", "permanent": true },
     { "source": "/about.html", "destination": "/about/", "permanent": true },
     { "source": "/contact.html", "destination": "/contact/", "permanent": true },
-    { "source": "/privacy.html", "destination": "/privacy/", "permanent": true }
+    { "source": "/privacy.html", "destination": "/privacy/", "permanent": true },
+    { "source": "/about/authors/", "destination": "/india/authors/", "permanent": false },
+    { "source": "/about/authors/priya-sharma/", "destination": "/india/authors/priya-sharma/", "permanent": true },
+    { "source": "/about/authors/arjun-mehta/", "destination": "/india/authors/arjun-mehta/", "permanent": true },
+    { "source": "/about/authors/deepa-krishnan/", "destination": "/india/authors/deepa-krishnan/", "permanent": true },
+    { "source": "/about/authors/sarah-mitchell/", "destination": "/australia/authors/sarah-mitchell/", "permanent": true },
+    { "source": "/about/authors/james-obrien/", "destination": "/australia/authors/james-obrien/", "permanent": true },
+    { "source": "/about/authors/emma-hartley/", "destination": "/australia/authors/emma-hartley/", "permanent": true }
   ],
   "headers": [
     {

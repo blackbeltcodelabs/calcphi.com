@@ -91,7 +91,11 @@ layout: layouts/base.njk
 
       <div class="author-sidebar__card">
         <h3>More Authors</h3>
-        <a href="/about/authors/" class="author-sidebar__link">View all CalcPhi authors →</a>
+        {% if author.market == "australia" %}
+        <a href="/australia/authors/" class="author-sidebar__link">View all Australia authors →</a>
+        {% else %}
+        <a href="/india/authors/" class="author-sidebar__link">View all India authors →</a>
+        {% endif %}
       </div>
 
     </aside>

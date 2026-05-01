@@ -17,11 +17,11 @@
       "Portfolio Construction",
       "AMFI Data Analysis"
     ],
-    "url": "/about/authors/priya-sharma/",
+    "url": "/india/authors/priya-sharma/",
     "linkedin": "https://www.linkedin.com/",
     "articles": [
       {
-        "title": "Best SIP Amount by Salary in India 2026 \u2014 How Much Should You Invest?",
+        "title": "Best SIP Amount by Salary in India 2026 — How Much Should You Invest?",
         "url": "/blog/best-sip-amount-by-salary/"
       },
       {
@@ -41,7 +41,7 @@
         "url": "/blog/esops-india-guide/"
       },
       {
-        "title": "Financial Planning in Your 30s India 2026 \u2014 10 Money Moves That Change Everything",
+        "title": "Financial Planning in Your 30s India 2026 — 10 Money Moves That Change Everything",
         "url": "/blog/financial-planning-30s-india/"
       },
       {
@@ -53,7 +53,7 @@
         "url": "/blog/home-loan-vs-rent/"
       },
       {
-        "title": "How to Choose the Best SIP Fund in 2026 \u2013 A No-Nonsense Guide",
+        "title": "How to Choose the Best SIP Fund in 2026 – A No-Nonsense Guide",
         "url": "/blog/how-to-choose-sip-fund/"
       },
       {
@@ -84,7 +84,8 @@
         "title": "Under-Construction vs Ready-to-Move Property: A Full Financial Comparison",
         "url": "/blog/under-construction-vs-ready-to-move/"
       }
-    ]
+    ],
+    "market": "india"
   },
   "arjun-mehta": {
     "id": "arjun-mehta",
@@ -105,7 +106,7 @@
       "CBDT Compliance",
       "Tax Filing"
     ],
-    "url": "/about/authors/arjun-mehta/",
+    "url": "/india/authors/arjun-mehta/",
     "linkedin": "https://www.linkedin.com/",
     "articles": [
       {
@@ -125,7 +126,7 @@
         "url": "/blog/car-loan-vs-buying-outright/"
       },
       {
-        "title": "Credit Score India 2026 \u2014 Complete Guide to CIBIL Score, Ranges, and How to Improve",
+        "title": "Credit Score India 2026 — Complete Guide to CIBIL Score, Ranges, and How to Improve",
         "url": "/blog/credit-score-india-guide/"
       },
       {
@@ -145,7 +146,7 @@
         "url": "/blog/gratuity-calculation-guide/"
       },
       {
-        "title": "How to Save Maximum Tax Under Section 80C in 2026 \u2014 A Complete Checklist",
+        "title": "How to Save Maximum Tax Under Section 80C in 2026 — A Complete Checklist",
         "url": "/blog/how-to-save-tax-80c/"
       },
       {
@@ -172,7 +173,8 @@
         "title": "Understanding Your Payslip: Every Line Item Decoded for Indian Employees",
         "url": "/blog/understanding-payslip/"
       }
-    ]
+    ],
+    "market": "india"
   },
   "sarah-mitchell": {
     "id": "sarah-mitchell",
@@ -193,13 +195,23 @@
       "Asset Allocation",
       "Retirement Adequacy"
     ],
-    "url": "/about/authors/sarah-mitchell/",
+    "url": "/australia/authors/sarah-mitchell/",
     "linkedin": "https://www.linkedin.com/",
     "articles": [
-      { "title": "How Much Super Do You Need to Retire Comfortably in Australia?", "url": "/blog/au/how-much-super-to-retire/" },
-      { "title": "Salary Sacrifice Super: How to Legally Pay Less Tax and Retire Richer", "url": "/blog/au/salary-sacrifice-super-guide/" },
-      { "title": "Franking Credits Explained: How Australian Dividend Investors Get a Tax Refund", "url": "/blog/au/franking-credits-explained/" }
-    ]
+      {
+        "title": "How Much Super Do You Need to Retire Comfortably in Australia?",
+        "url": "/blog/au/how-much-super-to-retire/"
+      },
+      {
+        "title": "Salary Sacrifice Super: How to Legally Pay Less Tax and Retire Richer",
+        "url": "/blog/au/salary-sacrifice-super-guide/"
+      },
+      {
+        "title": "Franking Credits Explained: How Australian Dividend Investors Get a Tax Refund",
+        "url": "/blog/au/franking-credits-explained/"
+      }
+    ],
+    "market": "australia"
   },
   "james-obrien": {
     "id": "james-obrien",
@@ -220,13 +232,23 @@
       "ATO Compliance",
       "Investment Property Tax"
     ],
-    "url": "/about/authors/james-obrien/",
+    "url": "/australia/authors/james-obrien/",
     "linkedin": "https://www.linkedin.com/",
     "articles": [
-      { "title": "Australian Income Tax 2025-26: Stage 3 Tax Cuts and What They Mean for You", "url": "/blog/au/australia-income-tax-2025-26/" },
-      { "title": "Capital Gains Tax Australia: How the 50% CGT Discount Works and When You Qualify", "url": "/blog/au/capital-gains-tax-australia/" },
-      { "title": "HECS-HELP Debt in 2025: Repayment Rates, Indexation, and How to Pay It Off Faster", "url": "/blog/au/hecs-help-repayment-guide/" }
-    ]
+      {
+        "title": "Australian Income Tax 2025-26: Stage 3 Tax Cuts and What They Mean for You",
+        "url": "/blog/au/australia-income-tax-2025-26/"
+      },
+      {
+        "title": "Capital Gains Tax Australia: How the 50% CGT Discount Works and When You Qualify",
+        "url": "/blog/au/capital-gains-tax-australia/"
+      },
+      {
+        "title": "HECS-HELP Debt in 2025: Repayment Rates, Indexation, and How to Pay It Off Faster",
+        "url": "/blog/au/hecs-help-repayment-guide/"
+      }
+    ],
+    "market": "australia"
   },
   "emma-hartley": {
     "id": "emma-hartley",
@@ -247,13 +269,23 @@
       "Offset Accounts",
       "Refinancing"
     ],
-    "url": "/about/authors/emma-hartley/",
+    "url": "/australia/authors/emma-hartley/",
     "linkedin": "https://www.linkedin.com/",
     "articles": [
-      { "title": "First Home Buyer Australia 2025: Grants, Stamp Duty Exemptions, and What You Actually Need", "url": "/blog/au/first-home-buyer-australia-guide/" },
-      { "title": "Offset Account vs Redraw: Which Is Better for Your Australian Mortgage?", "url": "/blog/au/offset-account-vs-redraw/" },
-      { "title": "Australian Age Pension 2025: Eligibility, Assets Test, and How to Maximise Your Payment", "url": "/blog/au/age-pension-australia-guide/" }
-    ]
+      {
+        "title": "First Home Buyer Australia 2025: Grants, Stamp Duty Exemptions, and What You Actually Need",
+        "url": "/blog/au/first-home-buyer-australia-guide/"
+      },
+      {
+        "title": "Offset Account vs Redraw: Which Is Better for Your Australian Mortgage?",
+        "url": "/blog/au/offset-account-vs-redraw/"
+      },
+      {
+        "title": "Australian Age Pension 2025: Eligibility, Assets Test, and How to Maximise Your Payment",
+        "url": "/blog/au/age-pension-australia-guide/"
+      }
+    ],
+    "market": "australia"
   },
   "deepa-krishnan": {
     "id": "deepa-krishnan",
@@ -264,7 +296,7 @@
     "avatarColor": "#059669",
     "image": "/assets/images/authors/deepa-krishnan.png",
     "shortBio": "Deepa is a Certified Financial Planner (CFP) with 8 years of experience in retirement planning, NPS, PPF, and fixed-income instruments for Indian investors.",
-    "fullBio": "Deepa Krishnan is a Certified Financial Planner (CFP) with over 8 years of experience in holistic financial planning for Indian investors. Her practice focuses on retirement corpus planning, government-backed savings instruments (PPF, NPS, SCSS), and fixed-income portfolio construction. She has helped clients across income brackets design tax-efficient savings strategies that balance growth, safety, and liquidity. At CalcPhi, Deepa reviews all calculator content related to PPF, NPS, FD, and RD \u2014 verifying formulas against PFRDA guidelines, RBI notifications, and official PFRDA-published annuity rates. Her content is designed to give retail investors the same clarity that financial advisors provide their private clients.",
+    "fullBio": "Deepa Krishnan is a Certified Financial Planner (CFP) with over 8 years of experience in holistic financial planning for Indian investors. Her practice focuses on retirement corpus planning, government-backed savings instruments (PPF, NPS, SCSS), and fixed-income portfolio construction. She has helped clients across income brackets design tax-efficient savings strategies that balance growth, safety, and liquidity. At CalcPhi, Deepa reviews all calculator content related to PPF, NPS, FD, and RD — verifying formulas against PFRDA guidelines, RBI notifications, and official PFRDA-published annuity rates. Her content is designed to give retail investors the same clarity that financial advisors provide their private clients.",
     "expertise": [
       "Retirement Planning",
       "PPF",
@@ -274,7 +306,7 @@
       "CFP Methodology",
       "Holistic Financial Planning"
     ],
-    "url": "/about/authors/deepa-krishnan/",
+    "url": "/india/authors/deepa-krishnan/",
     "linkedin": "https://www.linkedin.com/",
     "articles": [
       {
@@ -298,11 +330,11 @@
         "url": "/blog/how-much-to-retire-at-50/"
       },
       {
-        "title": "How to Build an Emergency Fund in India 2026 \u2014 The Complete Guide",
+        "title": "How to Build an Emergency Fund in India 2026 — The Complete Guide",
         "url": "/blog/how-to-build-emergency-fund-india/"
       },
       {
-        "title": "How to Plan Retirement in India 2026 \u2014 Step-by-Step Guide",
+        "title": "How to Plan Retirement in India 2026 — Step-by-Step Guide",
         "url": "/blog/how-to-plan-retirement-india/"
       },
       {
@@ -330,7 +362,7 @@
         "url": "/blog/rd-vs-fd/"
       },
       {
-        "title": "How to Calculate Real ROI on Rental Property in India \u2014 Beyond the Gross Yield",
+        "title": "How to Calculate Real ROI on Rental Property in India — Beyond the Gross Yield",
         "url": "/blog/rental-property-roi-india/"
       },
       {
@@ -350,13 +382,14 @@
         "url": "/blog/step-up-sip-power/"
       },
       {
-        "title": "Term Insurance India 2026 \u2014 How Much Cover Do You Actually Need?",
+        "title": "Term Insurance India 2026 — How Much Cover Do You Actually Need?",
         "url": "/blog/term-insurance-india-guide/"
       },
       {
-        "title": "What is FIRE? Financial Independence, Retire Early \u2014 Complete India Guide",
+        "title": "What is FIRE? Financial Independence, Retire Early — Complete India Guide",
         "url": "/blog/what-is-fire-financial-independence/"
       }
-    ]
+    ],
+    "market": "india"
   }
 }

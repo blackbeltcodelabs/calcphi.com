@@ -1,0 +1,113 @@
+---
+layout: layouts/base.njk
+permalink: /australia/authors/
+title: "Australia Financial Experts & Authors – CalcPhi"
+description: "Meet CalcPhi's Australia editorial team — CFA charterholders, CPA Australia members, and CFPs who verify every Australia calculator formula against ATO and APRA guidelines."
+breadcrumbs:
+  - name: Home
+    url: /
+  - name: Australia
+    url: /australia/
+  - name: Our Authors
+---
+
+<main id="main-content">
+
+  <div class="authors-page-header">
+    <div class="authors-page-header__inner">
+      <p class="authors-page-header__eyebrow">Australia Editorial Team</p>
+      <h1>Australia Financial Experts</h1>
+      <p class="authors-page-header__sub">Every Australia calculator and article on CalcPhi is written and independently verified by a qualified Australian financial professional — CFA, CPA, or CFP — with direct knowledge of ATO, APRA, ASIC, and Services Australia regulations.</p>
+
+      <div class="authors-trust-bar">
+        <div class="authors-trust-badge">
+          <span class="authors-trust-badge__icon">◆</span>
+          CFA Institute
+        </div>
+        <div class="authors-trust-badge">
+          <span class="authors-trust-badge__icon">◆</span>
+          CPA Australia
+        </div>
+        <div class="authors-trust-badge">
+          <span class="authors-trust-badge__icon">◆</span>
+          FPA Certified CFP
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="authors-list-wrap">
+    <div class="authors-list">
+      {% for key, author in authors %}
+      {% if author.market == "australia" %}
+      <article class="author-row">
+        <a href="{{ author.url }}" class="author-row__photo-link">
+          {% authorImage author.image, author.name + ", " + author.title + " at CalcPhi", 160, "author-row__photo", "lazy" %}
+          <span class="author-row__cred-badge">{{ author.credentials }}</span>
+        </a>
+        <div class="author-row__content">
+          <div class="author-row__header">
+            <div class="author-row__identity">
+              <h2><a href="{{ author.url }}">{{ author.name }}</a><svg class="verified-badge" aria-label="Verified author" title="Verified" viewBox="0 0 20 20" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#1d9bf0"/><path d="M6 10.5l2.5 2.5L14 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></h2>
+              <p class="author-row__title">{{ author.title }}</p>
+            </div>
+            <a href="{{ author.url }}" class="author-row__btn">View Profile →</a>
+          </div>
+          <p class="author-row__bio">{{ author.shortBio }}</p>
+          <div class="author-row__footer">
+            <div class="author-row__tags">
+              {% for skill in author.expertise | slice(0, 4) %}
+              <span class="author-row__tag">{{ skill }}</span>
+              {% endfor %}
+            </div>
+            <div class="author-row__articles-count">
+              <span>{{ author.articles | length }} article{% if author.articles | length != 1 %}s{% endif %} published</span>
+            </div>
+          </div>
+        </div>
+      </article>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="editorial-pledge">
+    <div class="editorial-pledge__inner">
+      <div class="editorial-pledge__heading">
+        <p class="authors-page-header__eyebrow">Our Standards</p>
+        <h2>The CalcPhi Australia Editorial Pledge</h2>
+        <p>Every formula and rate is cross-checked against ATO Tax Determinations, APRA quarterly statistics, ASIC guidance, and Services Australia publications. Updated within 7 days of any ATO or Budget announcement.</p>
+      </div>
+      <div class="editorial-pledge__grid">
+        <div class="editorial-pledge__item">
+          <span class="editorial-pledge__num">01</span>
+          <h3>ATO & APRA Verified</h3>
+          <p>All tax and super content is verified against current ATO public rulings and APRA reporting standards before publication.</p>
+        </div>
+        <div class="editorial-pledge__item">
+          <span class="editorial-pledge__num">02</span>
+          <h3>ASIC & Services Australia</h3>
+          <p>Age pension rates and Centrelink thresholds are sourced directly from Services Australia publications. Loan comparison rates follow ASIC guidelines.</p>
+        </div>
+        <div class="editorial-pledge__item">
+          <span class="editorial-pledge__num">03</span>
+          <h3>Updated Within 7 Days</h3>
+          <p>When tax rates, super caps, or Centrelink thresholds change, affected pages are updated within 7 days of the official announcement.</p>
+        </div>
+        <div class="editorial-pledge__item">
+          <span class="editorial-pledge__num">04</span>
+          <h3>Editorial Independence</h3>
+          <p>No calculator result or recommendation is influenced by advertising or affiliate relationships. Accuracy only.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="authors-bottom-cta">
+    <div class="authors-bottom-cta__inner">
+      <p>Looking for our India financial experts?</p>
+      <a href="/india/authors/" class="cta-link">Meet the India Team →</a>
+    </div>
+  </div>
+
+</main>
