@@ -1,0 +1,72 @@
+{
+  "id": "capital-gains-au",
+  "inputs": [
+    { "id": "purchase-price", "label": "Purchase Price (A$)", "min": 0, "max": 10000000, "step": 1000, "value": 400000, "hint": "Original cost base including purchase costs" },
+    { "id": "sale-price", "label": "Sale Price (A$)", "min": 0, "max": 10000000, "step": 1000, "value": 650000, "hint": "Proceeds net of selling costs" },
+    { "id": "held-over-12-months", "label": "Held for 12+ Months?", "type": "select", "options": [
+      { "value": "yes", "label": "Yes — 50% CGT discount applies" },
+      { "value": "no", "label": "No — full gain taxable" }
+    ], "hint": "Individuals get a 50% discount for assets held 12+ months" },
+    { "id": "taxable-income", "label": "Other Taxable Income (A$)", "min": 0, "max": 5000000, "step": 1000, "value": 85000, "hint": "Your other income this year (salary, etc.) before the capital gain" },
+    { "id": "asset-type", "label": "Asset Type", "type": "select", "options": [
+      { "value": "shares", "label": "Shares / ETFs" },
+      { "value": "property-invest", "label": "Investment Property" },
+      { "value": "property-main", "label": "Main Residence (PPOR)" },
+      { "value": "other", "label": "Other Asset" }
+    ], "hint": "Main residence is exempt from CGT in most cases" }
+  ],
+  "outputs": [
+    { "id": "gross-gain", "label": "Gross Capital Gain" },
+    { "id": "discounted-gain", "label": "Discounted Gain (Taxable)" },
+    { "id": "cgt-payable", "label": "CGT Payable (Est.)", "highlight": true },
+    { "id": "effective-cgt-rate", "label": "Effective CGT Rate" },
+    { "id": "net-proceeds", "label": "Net After CGT" }
+  ],
+  "howToSteps": [
+    { "name": "Enter Purchase and Sale Prices", "text": "Enter the cost base (original purchase price plus stamp duty, legal fees, and capital improvements) and the sale proceeds (net of agent fees and selling costs)." },
+    { "name": "Confirm Holding Period", "text": "Select whether you held the asset for more than 12 months. If yes, only 50% of the gain is included in your taxable income — this is the CGT discount for individuals." },
+    { "name": "Enter Other Income", "text": "Enter your other taxable income for the year (salary, rent, etc.). The taxable portion of the capital gain is added on top, and marginal rates apply to the combined total." },
+    { "name": "Review CGT Payable", "text": "The calculator shows gross gain, discounted gain (after 50% discount if applicable), estimated CGT payable at your marginal rate, effective CGT rate, and net proceeds after tax." }
+  ],
+  "faq": [
+    {
+      "q": "How is capital gains tax calculated in Australia?",
+      "a": "Australia does not have a separate CGT rate. Capital gains are added to your assessable income and taxed at your marginal income tax rate. If you held the asset for 12+ months, the gain is first reduced by 50% (the CGT discount) before being added to income. For example, a $250,000 gain becomes a $125,000 taxable amount after the discount, taxed at your top marginal rate."
+    },
+    {
+      "q": "Is my home (main residence) exempt from CGT?",
+      "a": "Generally yes. Your principal place of residence (PPOR) is exempt from CGT. Partial exemptions apply if you rented it out at any point, used it for business, or it was not your main residence for the entire ownership period. The partial exemption is calculated on a pro-rata basis for the proportion of time it was not your PPOR. Foreign residents are not entitled to the main residence exemption."
+    },
+    {
+      "q": "Can I offset capital gains with capital losses?",
+      "a": "Yes. Capital losses can be offset against capital gains in the same income year. If losses exceed gains, the net capital loss is carried forward to reduce future capital gains — it cannot be used to offset ordinary income. The CGT discount is applied after offsetting losses: losses first reduce the gross gain, then the 50% discount is applied to the net gain."
+    },
+    {
+      "q": "How do franking credits interact with capital gains on shares?",
+      "a": "Franking credits are attached to dividends, not capital gains. They operate separately: franking credits reduce your income tax on dividend income, while capital gains from selling shares are calculated separately on the difference between cost base and sale proceeds. Both use the same marginal rate structure but are calculated independently."
+    },
+    {
+      "q": "What is the cost base for CGT purposes?",
+      "a": "The cost base includes the original purchase price plus incidental costs of acquisition (stamp duty, legal fees, buyer's agent), costs of ownership that were not deductible (some capital improvements for investment properties), and costs of disposal (agent fees, legal fees). For shares, the cost base is the purchase price plus brokerage. Keeping records of all these costs is essential for accurate CGT calculations."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "Investment property — $250,000 gain after 5 years",
+      "text": "An investor sells an investment property for $650,000, purchased for $400,000 (cost base including stamp duty). Gross gain is $250,000. Held 5 years, so 50% CGT discount applies: taxable gain is $125,000. With other income of $85,000, total taxable income is $210,000. CGT payable on $125,000 at the marginal rate (approximately $75,000 at 45% + $50,000 at 37%) is approximately $52,250."
+    },
+    {
+      "heading": "Share portfolio — $80,000 gain, less than 12 months",
+      "text": "An investor sells shares making a $80,000 capital gain but held for only 10 months — no CGT discount applies. With other income of $90,000, total taxable income is $170,000. The $80,000 gain is taxed at the 37% marginal rate (the bracket $135,001–$190,000). CGT payable is approximately $29,600."
+    }
+  ],
+  "related": [
+    { "title": "Income Tax Calculator", "url": "/australia/income-tax-calculator/", "desc": "Calculate your marginal rate to determine CGT impact" },
+    { "title": "Investment Returns Calculator", "url": "/australia/investment-returns-calculator/", "desc": "Model pre-tax and after-CGT investment returns" },
+    { "title": "Franking Credits Calculator", "url": "/australia/franking-credits-calculator/", "desc": "Calculate franking credit offsets on dividend income" }
+  ],
+  "schema": {
+    "appName": "Capital Gains Tax Calculator Australia",
+    "appDescription": "Calculate Australian CGT payable on shares, property and other assets, including the 50% CGT discount for assets held over 12 months"
+  }
+}

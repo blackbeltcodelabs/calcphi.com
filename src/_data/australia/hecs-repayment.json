@@ -1,0 +1,87 @@
+{
+  "id": "hecs-repayment",
+  "inputs": [
+    { "id": "hecs-balance", "label": "HECS-HELP Balance (A$)", "min": 0, "max": 200000, "step": 500, "value": 35000, "hint": "Check your current HECS balance via ATO online services in myGov" },
+    { "id": "annual-income", "label": "Annual Taxable Income (A$)", "min": 0, "max": 500000, "step": 1000, "value": 72000, "hint": "Your current annual taxable income" },
+    { "id": "income-growth", "label": "Expected Annual Income Growth (%)", "min": 0, "max": 15, "step": 0.5, "value": 3.5, "hint": "Expected salary increase per year" },
+    { "id": "indexation-rate", "label": "HECS Indexation Rate (%)", "min": 0, "max": 10, "step": 0.1, "value": 3.2, "hint": "Based on CPI — was 7.1% in 2023, fell to 4.7% in 2024; use 3–4% as long-run estimate" }
+  ],
+  "outputs": [
+    { "id": "this-year-repayment", "label": "This Year's Repayment", "highlight": true },
+    { "id": "this-year-rate", "label": "Repayment Rate (%)" },
+    { "id": "indexation-added", "label": "Indexation Added This Year" },
+    { "id": "years-to-clear", "label": "Estimated Years to Debt-Free" },
+    { "id": "total-repaid", "label": "Total Amount Repaid" }
+  ],
+  "staticTable": {
+    "caption": "HECS-HELP repayment income thresholds — FY2025–26 (ATO Schedule 9)",
+    "headers": ["Annual Income", "Repayment Rate", "Annual Repayment on Min Income"],
+    "rows": [
+      ["Below $54,435", "Nil", "$0"],
+      ["$54,435 – $62,998", "1.0%", "$544 – $630"],
+      ["$62,999 – $66,819", "2.0%", "$1,260 – $1,336"],
+      ["$66,820 – $70,539", "2.5%", "$1,671 – $1,763"],
+      ["$70,540 – $74,919", "3.0%", "$2,116 – $2,248"],
+      ["$74,920 – $79,489", "3.5%", "$2,622 – $2,782"],
+      ["$79,490 – $84,268", "4.0%", "$3,180 – $3,371"],
+      ["$84,269 – $89,524", "4.5%", "$3,792 – $4,029"],
+      ["$89,525 – $95,092", "5.0%", "$4,476 – $4,755"],
+      ["$95,093 – $100,996", "5.5%", "$5,230 – $5,555"],
+      ["$100,997 – $107,214", "6.0%", "$6,060 – $6,433"],
+      ["$107,215 – $113,847", "6.5%", "$6,969 – $7,400"],
+      ["$113,848 – $120,899", "7.0%", "$7,969 – $8,463"],
+      ["$120,900 – $128,392", "7.5%", "$9,068 – $9,629"],
+      ["$128,393 – $136,331", "8.0%", "$10,271 – $10,907"],
+      ["$136,332 – $144,730", "8.5%", "$11,588 – $12,302"],
+      ["$144,731 – $151,200", "9.0%", "$13,026 – $13,608"],
+      ["$151,201+", "10.0%", "10% of income"]
+    ]
+  },
+  "howToSteps": [
+    { "name": "Enter Your HECS Balance", "text": "Enter your current HECS-HELP debt balance. Check your exact balance via ATO online services in myGov or on your most recent Notice of Assessment." },
+    { "name": "Enter Your Income", "text": "Enter your current annual taxable income. Your employer withholds HECS repayments via payroll if your income exceeds the threshold ($54,435 in FY2025–26). If your income is below this, no repayments are made." },
+    { "name": "Set Income Growth and Indexation", "text": "Enter your expected annual salary growth and the HECS indexation rate (the rate at which the balance is adjusted each June 1 based on the lower of CPI or Wage Price Index, following 2023 law change). A realistic long-run estimate is 3–3.5%." },
+    { "name": "Review Repayment Timeline", "text": "The calculator shows your current-year repayment, the indexation added to your balance, and the estimated years until your debt is fully repaid at your projected income growth rate." }
+  ],
+  "faq": [
+    {
+      "q": "How does HECS-HELP indexation work?",
+      "a": "HECS-HELP balances are indexed each year on 1 June using the lower of the Consumer Price Index (CPI) or the Wage Price Index (WPI), as amended by legislation in 2023. Before 2023, only CPI was used — resulting in an indexation rate of 7.1% in 2023 (the highest in decades). From 2024 onwards, the lower of CPI or WPI is used, resulting in indexation of approximately 4.0–4.7% in 2024 and an expected 3.0–3.5% in 2025–26."
+    },
+    {
+      "q": "What is the HECS minimum repayment threshold for FY2025–26?",
+      "a": "The minimum repayment income threshold for FY2025–26 is $54,435. If your taxable income is below this amount, no HECS repayment is required — whether you lodge a tax return or not. The repayment rate starts at 1% of income at the threshold and rises progressively to 10% for incomes above $151,201."
+    },
+    {
+      "q": "Should I voluntarily repay my HECS debt early?",
+      "a": "This depends on your situation. HECS-HELP is an unusual debt: it has no interest (only indexation at CPI/WPI), and repayments are income-contingent (paused if your income falls). Prior to 2023, the ATO offered a 5% bonus for voluntary repayments of $500+ — this incentive was abolished from 1 January 2017. Today, there is no financial benefit to voluntary repayment beyond the indexation rate — if indexation is 3%, paying off HECS is equivalent to earning a guaranteed 3% return on that money."
+    },
+    {
+      "q": "Does HECS-HELP debt affect my home loan borrowing capacity?",
+      "a": "Yes. Lenders include compulsory HECS repayments as a committed expenditure when assessing your borrowing capacity. For example, on a $95,000 income with a 5.5% repayment rate, HECS reduces your disposable income by $5,225/year — which reduces borrowing capacity by approximately $80,000–$100,000 depending on the lender's assessment methodology."
+    },
+    {
+      "q": "What happens to my HECS debt if I move overseas?",
+      "a": "From 1 January 2016, Australians with HECS-HELP debt who move overseas are required to make repayments if their worldwide income exceeds the repayment threshold. The ATO requires overseas borrowers to complete a Worldwide Income Assessment each year. Historically many Australians living overseas did not repay — this system closed that loophole."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "$35,000 HECS, $72,000 income, 3.5% income growth",
+      "text": "With $35,000 HECS balance at $72,000 income: FY2025–26 repayment rate is 3.5% = $2,520. Indexation at 3.2% adds approximately $1,120 to the balance. Net reduction: $1,400. Projected years to debt-free with 3.5% annual income growth: approximately 12 years. Total repaid including indexation: approximately $38,500."
+    },
+    {
+      "heading": "$55,000 HECS, $110,000 income",
+      "text": "With $55,000 HECS balance at $110,000 income: repayment rate is 6.5% = $7,150/year withheld via payroll. Indexation at 3.2% adds approximately $1,760. Net annual debt reduction: $5,390. Projected years to debt-free: approximately 8 years. The higher income accelerates repayment significantly."
+    }
+  ],
+  "related": [
+    { "title": "Salary / Take-Home Pay Calculator", "url": "/australia/salary-take-home-calculator/", "desc": "Net pay after HECS withholding and income tax" },
+    { "title": "PAYG Withholding Calculator", "url": "/australia/payg-withholding-calculator/", "desc": "Per-payslip HECS withholding amount" },
+    { "title": "Personal Loan Calculator", "url": "/australia/personal-loan-calculator/", "desc": "Compare HECS with other forms of debt" }
+  ],
+  "schema": {
+    "appName": "HECS-HELP Repayment Calculator Australia",
+    "appDescription": "Calculate annual HECS-HELP repayment, indexation added, and years to debt-free based on your taxable income and current balance for FY2025–26"
+  }
+}

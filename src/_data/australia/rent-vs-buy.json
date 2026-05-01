@@ -1,0 +1,64 @@
+{
+  "id": "rent-vs-buy",
+  "inputs": [
+    { "id": "property-price", "label": "Property Purchase Price (A$)", "min": 100000, "max": 5000000, "step": 10000, "value": 800000, "hint": "Target property value" },
+    { "id": "deposit-percent", "label": "Deposit (%)", "min": 5, "max": 50, "step": 1, "value": 20, "hint": "As % of purchase price" },
+    { "id": "mortgage-rate", "label": "Mortgage Interest Rate (%)", "min": 0.5, "max": 20, "step": 0.05, "value": 6.3, "hint": "Current variable home loan rate" },
+    { "id": "weekly-rent", "label": "Equivalent Weekly Rent (A$)", "min": 100, "max": 5000, "step": 10, "value": 650, "hint": "Comparable rental in your target area" },
+    { "id": "property-growth", "label": "Annual Property Growth (%)", "min": 0, "max": 15, "step": 0.5, "value": 4, "hint": "Long-run Australian average ~4–5% p.a." },
+    { "id": "years", "label": "Comparison Period (Years)", "min": 5, "max": 30, "step": 1, "value": 10, "hint": "" }
+  ],
+  "outputs": [
+    { "id": "buy-cost", "label": "Total Cost to Buy" },
+    { "id": "rent-cost", "label": "Total Cost to Rent", "highlight": true },
+    { "id": "equity-built", "label": "Equity Built (Buying)" },
+    { "id": "net-buy-advantage", "label": "Net Financial Advantage" }
+  ],
+  "howToSteps": [
+    { "name": "Enter Property and Rent Details", "text": "Enter the purchase price of your target property and the equivalent weekly rent for a comparable property in the same area. Both inputs drive the true cost comparison." },
+    { "name": "Set Mortgage Rate and Deposit", "text": "Enter your expected mortgage interest rate and deposit percentage. A 20% deposit avoids LMI and reduces monthly repayments." },
+    { "name": "Choose Your Timeframe", "text": "Select how many years you plan to compare. Buying typically becomes more advantageous over longer periods due to capital growth and equity build-up, while renting wins in the short term due to lower upfront costs." },
+    { "name": "Review the Trade-Off", "text": "The calculator shows total cost of buying vs renting over the period, equity built through ownership, and the net financial advantage of buying (accounting for opportunity cost of deposit)." }
+  ],
+  "faq": [
+    {
+      "q": "Is it better to rent or buy in Australia right now?",
+      "a": "It depends on your city, timeframe, and financial situation. In 2026, with home loan rates at approximately 6.3%, buying is typically more expensive month-to-month than renting in most capital cities. However, if you plan to stay for 7–10+ years and the market appreciates at historical rates (~4–5% p.a.), buying generally builds more long-term wealth than renting and investing the difference."
+    },
+    {
+      "q": "What upfront costs do I need to budget when buying in Australia?",
+      "a": "Typical upfront costs include stamp duty (the largest cost — see our First Home Buyer Calculator for state-specific figures), building and pest inspection ($400–$800), legal/conveyancing fees ($1,500–$3,000), loan application fees ($0–$600), LMI if LVR >80%, and moving costs. In NSW, buying an $800,000 property incurs stamp duty of approximately $31,490 for an established property (non-first home buyer)."
+    },
+    {
+      "q": "What ongoing costs does home ownership involve beyond the mortgage?",
+      "a": "Home owners must budget for council rates ($1,200–$2,500/year), water rates ($800–$1,500/year), home and contents insurance ($1,500–$3,000/year), strata fees if applicable ($2,000–$10,000+/year), maintenance (typically 1–2% of property value annually), and land tax for investment properties."
+    },
+    {
+      "q": "Does the rent money dead money argument hold up?",
+      "a": "Not entirely. While home ownership builds equity, renters avoid opportunity costs such as stamp duty, maintenance, and capital tied up in a deposit. If a renter invests their deposit and the difference between rent and mortgage repayments in diversified assets, they can build comparable wealth — though most Australians find the enforced saving of mortgage repayments more effective in practice."
+    },
+    {
+      "q": "How does negative gearing affect the rent vs buy decision for investors?",
+      "a": "Negative gearing allows investors to deduct rental property losses (where interest and expenses exceed rental income) against other income, reducing their tax bill. This can make the true after-tax cost of holding an investment property lower than the gross figures suggest. However, it does not eliminate the risk of capital loss or a prolonged period of negative cash flow."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "Sydney — $800,000 home, 10-year comparison",
+      "text": "Buying an $800,000 property in Sydney with a 20% deposit at 6.3% over 30 years costs approximately $3,962/month in mortgage repayments. Renting a comparable property at $650/week costs $2,817/month. Over 10 years, buying costs approximately $594,000 (including interest, rates, and maintenance) while renting costs $338,000. However, the buyer builds approximately $320,000 in equity and benefits from expected capital growth of approximately $400,000, making buying advantageous after ~7 years."
+    },
+    {
+      "heading": "Regional area — $450,000 property, 5-year comparison",
+      "text": "In a regional city where a $450,000 property can be rented for $400/week, buying with a 20% deposit ($90,000) at 6.3% means monthly repayments of approximately $2,228 vs rent of $1,733. Over 5 years, buying is more expensive in cash terms, but builds approximately $80,000 in equity. Whether buying wins depends heavily on local capital growth."
+    }
+  ],
+  "related": [
+    { "title": "Mortgage Calculator", "url": "/australia/mortgage-calculator/", "desc": "Calculate exact monthly repayments for your target property" },
+    { "title": "First Home Buyer Calculator", "url": "/australia/first-home-buyer-calculator/", "desc": "Full upfront cost breakdown including stamp duty" },
+    { "title": "LMI Calculator", "url": "/australia/lmi-calculator/", "desc": "Estimate LMI if your deposit is under 20%" }
+  ],
+  "schema": {
+    "appName": "Rent vs Buy Calculator Australia",
+    "appDescription": "Compare the true financial cost of renting versus buying a home in Australia, including stamp duty, mortgage interest, capital growth, and equity build-up"
+  }
+}

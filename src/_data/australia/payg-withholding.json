@@ -1,0 +1,72 @@
+{
+  "id": "payg-withholding",
+  "inputs": [
+    { "id": "gross-income", "label": "Gross Income per Pay Period (A$)", "min": 0, "max": 200000, "step": 10, "value": 3269, "hint": "E.g. weekly wage, fortnightly salary, etc." },
+    { "id": "pay-frequency", "label": "Pay Frequency", "type": "select", "options": [
+      { "value": "weekly", "label": "Weekly" },
+      { "value": "fortnightly", "label": "Fortnightly" },
+      { "value": "monthly", "label": "Monthly" }
+    ], "hint": "" },
+    { "id": "tfn-claimed", "label": "Tax-Free Threshold Claimed?", "type": "select", "options": [
+      { "value": "yes", "label": "Yes — claiming threshold at this employer" },
+      { "value": "no", "label": "No — not claiming (higher withholding)" }
+    ], "hint": "Claim at only one employer per year" },
+    { "id": "hecs-debt", "label": "HECS-HELP / Study Loan?", "type": "select", "options": [
+      { "value": "no", "label": "No student loan" },
+      { "value": "yes", "label": "Yes — HECS/HELP debt" }
+    ], "hint": "Employer withholds additional HECS repayment amount" }
+  ],
+  "outputs": [
+    { "id": "tax-withheld", "label": "PAYG Tax Withheld", "highlight": true },
+    { "id": "hecs-withheld", "label": "HECS Repayment Withheld" },
+    { "id": "total-withheld", "label": "Total Withheld (Tax + HECS)" },
+    { "id": "net-pay", "label": "Estimated Net Pay" }
+  ],
+  "howToSteps": [
+    { "name": "Enter Gross Pay per Period", "text": "Enter your gross earnings for the pay period (weekly, fortnightly, or monthly). This is before any deductions — the pre-tax figure shown on your contract or pay offer." },
+    { "name": "Select Pay Frequency", "text": "Select how often you are paid. The ATO's withholding tables use the annualised income figure, so pay frequency affects the calculation. Fortnightly pay is most common in Australia." },
+    { "name": "Confirm Tax-Free Threshold Status", "text": "If you have lodged a TFN declaration claiming the tax-free threshold with this employer, select 'Yes'. If not claiming (e.g. second job), select 'No' — withholding will be higher." },
+    { "name": "Indicate HECS Debt", "text": "If you have an outstanding HECS-HELP or Study Loan, your employer must withhold an additional repayment amount based on your annualised income. Select 'Yes' if applicable." }
+  ],
+  "faq": [
+    {
+      "q": "What is PAYG withholding in Australia?",
+      "a": "PAYG (Pay As You Go) withholding is the system by which employers deduct income tax from employee wages each pay period and remit it to the ATO on the employee's behalf. It is similar to Pay As You Earn (PAYE) systems in the UK and other countries. The amount withheld is calculated using the ATO's weekly, fortnightly, or monthly withholding tax tables."
+    },
+    {
+      "q": "What happens if too much or too little tax is withheld?",
+      "a": "If too much tax is withheld, you receive a refund when you lodge your tax return. If too little is withheld (e.g. you have multiple jobs or investment income not subject to withholding), you will owe a tax debt when you lodge. The ATO charges the Shortfall Interest Charge (SIC) on underpayments. It is the taxpayer's responsibility to ensure sufficient tax is paid."
+    },
+    {
+      "q": "Can I vary my PAYG withholding?",
+      "a": "Yes. You can ask your employer to withhold additional amounts (by lodging a withholding variation) if, for example, you have investment income not subject to withholding. You can also apply to the ATO to vary withholding downward if you have large deductions — for example, significant investment property losses — to avoid waiting until year-end for a refund."
+    },
+    {
+      "q": "How does having a HECS-HELP debt affect my pay?",
+      "a": "If your taxable income exceeds the minimum HECS repayment threshold ($54,435 in FY2025–26), your employer must withhold an additional HECS repayment amount from each pay. You indicate this on your TFN declaration or by contacting your payroll. The repayment rate ranges from 1% at the threshold to 10% on incomes above $151,201. The withheld amount goes directly to reduce your HECS balance."
+    },
+    {
+      "q": "Do I need to lodge a tax return if my employer withholds the correct tax?",
+      "a": "Most Australian employees must still lodge a tax return, even if the correct amount was withheld. You may be entitled to deductions (work-related expenses, charitable donations, income protection premiums) that reduce your taxable income and result in a refund. You must also report interest, dividend, and rental income. The ATO pre-fills much of this data via its myTax system."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "Full-time employee — $85,000/year, fortnightly",
+      "text": "An employee earning $85,000/year paid fortnightly ($3,269/fortnight), claiming the tax-free threshold, with no HECS debt. PAYG tax withheld per fortnight is approximately $720. Annual tax withheld: $18,720, closely matching the annual income tax liability of $18,672 (difference settled at tax return time)."
+    },
+    {
+      "heading": "Second job (no threshold claim) — $600/week",
+      "text": "An employee earning $600/week at a second job who does not claim the tax-free threshold (already claimed at primary employer). PAYG withholding is calculated at the higher 'no tax-free threshold' rates. Estimated weekly withholding: approximately $180, reflecting a higher effective rate since no threshold is applied."
+    }
+  ],
+  "related": [
+    { "title": "Salary / Take-Home Pay Calculator", "url": "/australia/salary-take-home-calculator/", "desc": "Full annual tax and take-home breakdown" },
+    { "title": "HECS-HELP Repayment Calculator", "url": "/australia/hecs-repayment-calculator/", "desc": "Annual HECS repayment based on your income" },
+    { "title": "Income Tax Calculator", "url": "/australia/income-tax-calculator/", "desc": "Annual income tax using ATO bracket rates" }
+  ],
+  "schema": {
+    "appName": "PAYG Withholding Calculator Australia",
+    "appDescription": "Calculate weekly employer PAYG tax withholding for Australian employees using ATO Schedule 1 rates, including HECS-HELP repayment amounts"
+  }
+}

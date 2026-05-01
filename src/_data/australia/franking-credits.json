@@ -1,0 +1,63 @@
+{
+  "id": "franking-credits",
+  "inputs": [
+    { "id": "cash-dividend", "label": "Cash Dividend Received (A$)", "min": 0, "max": 1000000, "step": 10, "value": 700, "hint": "The actual cash dividend paid (not grossed up)" },
+    { "id": "franking-percent", "label": "Franking Percentage (%)", "min": 0, "max": 100, "step": 1, "value": 100, "hint": "100% = fully franked; 0% = unfranked" },
+    { "id": "marginal-tax-rate", "label": "Your Marginal Tax Rate (%)", "min": 0, "max": 47, "step": 1, "value": 32, "hint": "Your top marginal rate including Medicare levy (e.g. 32% = 30% + 2%)" }
+  ],
+  "outputs": [
+    { "id": "franking-credit", "label": "Franking Credit Value", "highlight": true },
+    { "id": "grossed-up-dividend", "label": "Grossed-Up Dividend" },
+    { "id": "tax-on-dividend", "label": "Tax on Grossed-Up Dividend" },
+    { "id": "tax-offset", "label": "Tax Offset from Franking Credits" },
+    { "id": "net-tax", "label": "Net Tax After Offset" },
+    { "id": "after-tax-income", "label": "After-Tax Dividend Income" }
+  ],
+  "howToSteps": [
+    { "name": "Enter Cash Dividend", "text": "Enter the cash dividend you received. This is the actual payment deposited to your account — shown on your dividend statement. Do not include the franking credit at this step." },
+    { "name": "Set Franking Percentage", "text": "Enter the franking percentage from your dividend statement. Most large Australian companies (e.g. CBA, BHP, Telstra, ANZ) pay fully franked dividends (100%). Some companies pay partially franked or unfranked dividends." },
+    { "name": "Enter Your Marginal Tax Rate", "text": "Enter your marginal income tax rate including the 2% Medicare levy. For example: 32% (30% income tax + 2% Medicare levy) or 19% for lower incomes." },
+    { "name": "Review Franking Credit Value", "text": "The calculator shows the franking credit attached to your dividend, the grossed-up income, total tax on the grossed-up dividend at your marginal rate, the tax offset provided by the franking credit, and your final after-tax income." }
+  ],
+  "faq": [
+    {
+      "q": "What are franking credits in Australia?",
+      "a": "Franking credits (also called imputation credits) are tax credits attached to dividends paid by Australian companies. When a company pays tax at the 30% corporate tax rate, it can pass those credits through to shareholders. Shareholders include the grossed-up dividend in their assessable income but use the franking credit to offset their income tax liability — preventing double taxation on company profits."
+    },
+    {
+      "q": "How is the franking credit amount calculated?",
+      "a": "Franking credit = (Cash dividend × Franking %) × Company tax rate / (1 − Company tax rate). For a $700 fully franked dividend from a company paying 30% tax: Franking credit = $700 × 100% × 30% / 70% = $300. The grossed-up dividend is $700 + $300 = $1,000. This $1,000 is included in your assessable income."
+    },
+    {
+      "q": "Are franking credits refundable if I pay no tax?",
+      "a": "Yes. Since 2000, unused franking credits are refundable in Australia. If your grossed-up dividend income does not result in enough tax liability to absorb the franking credits, the ATO will refund the excess credits. This is particularly valuable for low-income earners, retirees, and self-managed super funds (SMSFs) in pension phase, which pay 0% tax and can claim full refunds of franking credits."
+    },
+    {
+      "q": "Do all Australian shares have franking credits?",
+      "a": "No. Only Australian companies that have paid Australian corporate tax can attach franking credits to dividends. Foreign companies, Australian companies with significant offshore earnings, companies in tax losses, and growth companies that pay no dividends will pay unfranked or partially franked dividends. Large Australian banks (CBA, ANZ, NAB, Westpac), BHP, and many ASX-listed companies pay fully franked dividends."
+    },
+    {
+      "q": "How do I report franking credits on my tax return?",
+      "a": "You must include both the cash dividend and the franking credit in your assessable income on your tax return. Your broker or share registry will provide an Annual Tax Statement showing dividends paid and franking credits attached. In myTax, the ATO pre-fills dividend and franking credit data from share registries for most listed shares. You then claim the franking credits as a tax offset in the same return."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "$700 fully franked dividend, 32% marginal rate",
+      "text": "CBA pays a $700 fully franked dividend. Franking credit: $700 × 30/70 = $300. Grossed-up dividend: $1,000. Tax on $1,000 at 32% marginal rate: $320. Franking credit offset: $300. Net additional tax: $20. After-tax income from the dividend: $680 ($700 cash − $20 additional tax)."
+    },
+    {
+      "heading": "$700 fully franked dividend, 0% rate (retiree SMSF in pension phase)",
+      "text": "A self-managed super fund in full pension phase (0% tax). Grossed-up dividend: $1,000. Tax at 0%: $0. Franking credit: $300 fully refundable. Total after-tax income: $1,000 ($700 cash + $300 refund). Fully franked dividends provide a 42.9% bonus to the cash dividend for 0% tax entities."
+    }
+  ],
+  "related": [
+    { "title": "Investment Returns Calculator", "url": "/australia/investment-returns-calculator/", "desc": "Total return including dividends, franking credits, and CGT" },
+    { "title": "Income Tax Calculator", "url": "/australia/income-tax-calculator/", "desc": "Calculate your marginal rate for the franking credit calculator" },
+    { "title": "Capital Gains Tax Calculator", "url": "/australia/capital-gains-tax-calculator/", "desc": "CGT on selling Australian shares" }
+  ],
+  "schema": {
+    "appName": "Franking Credits Calculator Australia",
+    "appDescription": "Calculate the value of Australian franking credits on dividends, grossed-up income, and after-tax dividend income at your marginal tax rate"
+  }
+}

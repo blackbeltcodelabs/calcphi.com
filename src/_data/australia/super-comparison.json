@@ -1,0 +1,77 @@
+{
+  "id": "super-comparison",
+  "inputs": [
+    { "id": "current-balance", "label": "Current Super Balance (A$)", "min": 0, "max": 5000000, "step": 1000, "value": 120000, "hint": "Your existing super balance" },
+    { "id": "annual-contributions", "label": "Annual Contributions (A$)", "min": 0, "max": 100000, "step": 500, "value": 12000, "hint": "Employer SG + any salary sacrifice or personal contributions" },
+    { "id": "years-to-retire", "label": "Years to Retirement", "min": 1, "max": 50, "step": 1, "value": 25, "hint": "" },
+    { "id": "fund-a-return", "label": "Fund A — Annual Return (%)", "min": 1, "max": 15, "step": 0.1, "value": 7.0, "hint": "e.g. AustralianSuper Balanced: ~7–8% p.a. (10yr avg)" },
+    { "id": "fund-a-fee", "label": "Fund A — Annual Fee (%)", "min": 0, "max": 3, "step": 0.01, "value": 0.67, "hint": "Total administration + investment fee as % of balance" },
+    { "id": "fund-b-return", "label": "Fund B — Annual Return (%)", "min": 1, "max": 15, "step": 0.1, "value": 7.0, "hint": "" },
+    { "id": "fund-b-fee", "label": "Fund B — Annual Fee (%)", "min": 0, "max": 3, "step": 0.01, "value": 1.20, "hint": "Higher-fee retail or legacy fund" }
+  ],
+  "outputs": [
+    { "id": "fund-a-balance", "label": "Fund A Balance at Retirement", "highlight": true },
+    { "id": "fund-b-balance", "label": "Fund B Balance at Retirement" },
+    { "id": "fee-difference", "label": "Total Fees Difference" },
+    { "id": "balance-difference", "label": "Balance Difference" }
+  ],
+  "staticTable": {
+    "caption": "Approximate fees and returns — major Australian super funds (illustrative, based on publicly available data 2025)",
+    "headers": ["Fund", "Investment Option", "Annual Fee (est.)", "10-yr Return (est.)"],
+    "rows": [
+      ["AustralianSuper", "Balanced", "0.67%", "8.1%"],
+      ["Australian Retirement Trust", "Balanced", "0.69%", "7.9%"],
+      ["Aware Super", "High Growth", "0.85%", "9.0%"],
+      ["Hostplus", "Balanced", "0.62%", "8.4%"],
+      ["Rest", "Core Strategy", "0.60%", "7.8%"],
+      ["Retail / Legacy Fund (avg)", "Balanced", "1.2–1.8%", "6.5–7.5%"]
+    ]
+  },
+  "howToSteps": [
+    { "name": "Enter Current Balance and Contributions", "text": "Enter your current super balance and total annual contributions (employer SG plus any voluntary contributions). These apply identically to both funds being compared." },
+    { "name": "Enter Fund A Details", "text": "Enter the expected annual return and total fees (administration fee + investment fee as % of balance) for your current or preferred fund. Check the product disclosure statement (PDS) or fund website for fee details." },
+    { "name": "Enter Fund B Details", "text": "Enter the details for the alternative fund. Many Australians are in legacy retail funds charging 1%+ annually. Even a 0.5% fee difference has a large long-term impact." },
+    { "name": "Review the Difference", "text": "The calculator shows projected balances for both funds, total fees paid to each, and the balance difference at retirement. This quantifies the cost of staying in a high-fee fund." }
+  ],
+  "faq": [
+    {
+      "q": "How much does a 1% difference in super fees really matter?",
+      "a": "Enormously. On a $120,000 balance growing at 7% for 25 years with $12,000 annual contributions, a fund charging 0.67% annually produces approximately $1.06 million at retirement. A fund charging 1.67% produces approximately $897,000 — a difference of over $160,000. The compounding effect of fees on fees over decades makes even seemingly small percentage differences very significant."
+    },
+    {
+      "q": "How do I find my super fund's fees?",
+      "a": "Your super fund's fees are disclosed in the Product Disclosure Statement (PDS) and in the fees and costs section of your annual statement. The Australian Prudential Regulation Authority (APRA) also publishes annual super fund performance data at moneysmart.gov.au, which allows direct comparison of fees and returns across all APRA-regulated funds."
+    },
+    {
+      "q": "What is YFYS (Your Future, Your Super)?",
+      "a": "Your Future, Your Super is a government initiative requiring APRA to publish annual performance tests for super funds and MySuper products. Funds that fail two consecutive performance tests must notify members and cannot accept new members. The test compares the fund's 8-year return against an index benchmark after fees. Members can check their fund's performance on the ATO's super comparison tool at ato.gov.au."
+    },
+    {
+      "q": "Should I choose a balanced or growth investment option in super?",
+      "a": "Investment option selection depends on your risk tolerance and time to retirement. Growth options (70–85% equities) have higher expected returns but more short-term volatility. Balanced options (55–70% equities) offer moderate growth with less volatility. For members more than 10 years from retirement, most financial advisers suggest a growth option. For members within 5 years of retirement, a balanced or conservative option reduces sequence-of-returns risk."
+    },
+    {
+      "q": "How many super accounts can I have?",
+      "a": "You can technically have multiple super accounts, but consolidating into one is almost always beneficial. Multiple accounts mean multiple sets of fees and sometimes multiple life insurance premiums. You can consolidate super accounts through myGov — the ATO will transfer balances from old funds to your nominated fund. Check that consolidating does not cancel valuable insurance cover before proceeding."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "Hostplus (0.62%) vs retail fund (1.50%) — $120,000, 25 years",
+      "text": "Comparing $120,000 current balance, $12,000 annual contributions, 7% return for 25 years: Hostplus at 0.62% fees produces approximately $1.07 million. A retail fund at 1.50% produces approximately $930,000. Difference: approximately $140,000 — the cost of staying in the higher-fee fund over 25 years."
+    },
+    {
+      "heading": "Same fund, different options — Growth vs Balanced",
+      "text": "Within the same fund, choosing the Growth option (8.5% return, 0.85% fees) vs Balanced option (7.0% return, 0.67% fees) on $120,000 over 25 years: Growth produces approximately $1.28 million; Balanced produces approximately $1.07 million. The Growth option adds $210,000 despite slightly higher fees — illustrating that higher-returning investment options can outweigh higher fees over long periods."
+    }
+  ],
+  "related": [
+    { "title": "Super Balance Calculator", "url": "/australia/super-balance-calculator/", "desc": "Project your super balance with chosen return and contribution rates" },
+    { "title": "Age Pension Calculator", "url": "/australia/age-pension-calculator/", "desc": "Higher super balance reduces Age Pension eligibility" },
+    { "title": "Salary Sacrifice Calculator", "url": "/australia/salary-sacrifice-calculator/", "desc": "Boost super contributions while reducing tax" }
+  ],
+  "schema": {
+    "appName": "Super Fund Comparison Calculator Australia",
+    "appDescription": "Compare two Australian superannuation funds by fee and return to show the long-term balance difference and total cost of high fees"
+  }
+}

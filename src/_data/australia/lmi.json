@@ -1,0 +1,70 @@
+{
+  "id": "lmi",
+  "inputs": [
+    { "id": "property-value", "label": "Property Value (A$)", "min": 100000, "max": 5000000, "step": 5000, "value": 750000, "hint": "Purchase price or bank valuation" },
+    { "id": "deposit-amount", "label": "Deposit Amount (A$)", "min": 0, "max": 2000000, "step": 1000, "value": 75000, "hint": "Your available deposit (genuinely saved)" },
+    { "id": "state", "label": "State / Territory", "type": "select", "options": [
+      { "value": "NSW", "label": "New South Wales (NSW)" },
+      { "value": "VIC", "label": "Victoria (VIC)" },
+      { "value": "QLD", "label": "Queensland (QLD)" },
+      { "value": "WA", "label": "Western Australia (WA)" },
+      { "value": "SA", "label": "South Australia (SA)" },
+      { "value": "ACT", "label": "Australian Capital Territory (ACT)" },
+      { "value": "TAS", "label": "Tasmania (TAS)" },
+      { "value": "NT", "label": "Northern Territory (NT)" }
+    ], "hint": "LMI rates vary slightly by insurer and state" }
+  ],
+  "outputs": [
+    { "id": "lvr", "label": "Loan-to-Value Ratio (LVR)" },
+    { "id": "loan-amount", "label": "Loan Amount Required" },
+    { "id": "lmi-estimate", "label": "Estimated LMI Premium", "highlight": true },
+    { "id": "lmi-capitalised", "label": "LMI Added to Loan" }
+  ],
+  "howToSteps": [
+    { "name": "Enter Property Value", "text": "Enter the purchase price or the lender's valuation of the property. Banks will use the lower of the two figures to calculate your LVR." },
+    { "name": "Enter Your Deposit", "text": "Enter the total deposit you have available. Deposits below 20% of the property value will trigger LMI. Genuine savings requirements typically apply for deposits below 10%." },
+    { "name": "Select Your State", "text": "LMI premiums can vary slightly by state and insurer (Genworth / QBE). Select your state for the most accurate estimate." },
+    { "name": "Review LMI Cost", "text": "The calculator shows your LVR, loan amount, estimated LMI premium, and the effect of capitalising LMI onto the loan (adding it to the balance rather than paying upfront)." }
+  ],
+  "faq": [
+    {
+      "q": "What is LMI in Australia?",
+      "a": "Lenders Mortgage Insurance (LMI) is insurance that protects the lender (not the borrower) if you default on your home loan. It is typically required when your LVR exceeds 80% — that is, when your deposit is less than 20% of the property value. LMI is a one-time premium, usually capitalised onto your loan."
+    },
+    {
+      "q": "How much does LMI cost in Australia?",
+      "a": "LMI premiums vary by LVR and loan amount. As a rough guide: on a $600,000 loan at 90% LVR (10% deposit), LMI is approximately $11,000–$16,000. At 95% LVR, it can exceed $25,000 on the same loan. The premium is calculated by Genworth or QBE using actuarial tables and varies by lender."
+    },
+    {
+      "q": "Can I avoid paying LMI?",
+      "a": "You can avoid LMI by saving a 20% deposit, using a guarantor (parental guarantee loan), or accessing certain government schemes such as the First Home Guarantee (FHG), which allows eligible first home buyers to borrow with a 5% deposit and no LMI, with the government guaranteeing up to 15% of the loan."
+    },
+    {
+      "q": "Is LMI tax deductible in Australia?",
+      "a": "For investment properties, LMI is generally tax-deductible, spread over 5 years or the loan term (whichever is shorter). For owner-occupied properties, LMI is not tax-deductible as it is a capital expense. Always confirm with a tax agent or the ATO."
+    },
+    {
+      "q": "What is the First Home Guarantee (FHG)?",
+      "a": "The First Home Guarantee (FHG), administered by Housing Australia, allows eligible first home buyers to purchase with as little as 5% deposit without paying LMI. The government guarantees the remaining 15% to the lender. Places are limited each financial year (35,000 places in FY2025–26). Income and property price caps apply by state."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "10% deposit on $750,000 property — 90% LVR",
+      "text": "A buyer purchasing a $750,000 property in Sydney with a $75,000 deposit (10%) borrows $675,000 at 90% LVR. Estimated LMI premium is approximately $13,800–$17,000 depending on insurer. If capitalised onto the loan, total borrowings become approximately $692,000 and the LMI is repaid with interest over the loan term."
+    },
+    {
+      "heading": "5% deposit — 95% LVR, no FHG",
+      "text": "Borrowing 95% on a $600,000 property ($30,000 deposit, $570,000 loan) incurs an LMI premium estimated at approximately $22,000–$28,000. Using the First Home Guarantee instead eliminates this cost entirely for eligible buyers, provided the property is within the price cap ($900,000 for NSW as of FY2026)."
+    }
+  ],
+  "related": [
+    { "title": "Mortgage Calculator", "url": "/australia/mortgage-calculator/", "desc": "Calculate monthly repayments including LMI capitalisation" },
+    { "title": "First Home Buyer Calculator", "url": "/australia/first-home-buyer-calculator/", "desc": "Stamp duty, FHOG, and deposit requirements" },
+    { "title": "Rent vs Buy Calculator", "url": "/australia/rent-vs-buy-calculator/", "desc": "Compare renting versus buying with full upfront costs" }
+  ],
+  "schema": {
+    "appName": "LMI Calculator Australia",
+    "appDescription": "Estimate Lenders Mortgage Insurance (LMI) premium for Australian home loans based on LVR, loan amount and state"
+  }
+}

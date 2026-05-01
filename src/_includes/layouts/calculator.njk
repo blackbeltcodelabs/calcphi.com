@@ -8,7 +8,7 @@ layout: layouts/base.njk
   Data files provide all content via calcData (injected by the page).
 #}
 
-{% if market == "usa" %}{% set calcData = usa[calculatorId] %}{% else %}{% set calcData = india[calculatorId] %}{% endif %}
+{% if market == "usa" %}{% set calcData = usa[calculatorId] %}{% elif market == "australia" %}{% set calcData = australia[calculatorId] %}{% else %}{% set calcData = india[calculatorId] %}{% endif %}
 
 <!-- Schema markup — ld+json in body is valid and parsed by Google -->
 <script type="application/ld+json">
@@ -22,7 +22,7 @@ layout: layouts/base.njk
       "description": {{ calcData.schema.appDescription | dump | safe }},
       "applicationCategory": "FinanceApplication",
       "operatingSystem": "All",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "{{ 'USD' if market == 'usa' else 'INR' }}" }
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "{{ 'USD' if market == 'usa' else ('AUD' if market == 'australia' else 'INR') }}" }
     },
     {
       "@type": "FAQPage",
@@ -284,6 +284,43 @@ layout: layouts/base.njk
     </article>
 
     <!-- Sidebar: same-category calculators only (hub-and-spoke) -->
+    {% if market == "australia" %}
+
+    {% set auCatSlugs = {
+      "Home Loans": "home-loans",
+      "Tax": "tax",
+      "Superannuation": "superannuation",
+      "Savings & Investments": "savings-investments",
+      "Borrowing": "borrowing"
+    } %}
+    {% set pageCategory = "" %}
+    {% for calc in australia.calculators %}
+      {% if calc.id == calculatorId %}{% set pageCategory = calc.category %}{% endif %}
+    {% endfor %}
+    <aside class="page-sidebar" aria-label="More {{ pageCategory }} calculators">
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav__head">
+          <span class="sidebar-nav__label">{{ pageCategory or "Australia Calculators" }}</span>
+          <a href="/australia/#{{ auCatSlugs[pageCategory] or '' }}" class="sidebar-nav__hub-link">View all →</a>
+        </div>
+        <ul>
+          {% for calc in australia.calculators %}
+          {% if calc.category == pageCategory %}
+          <li>
+            <a href="{{ calc.url }}"
+               {% if calc.id == calculatorId %}aria-current="page"{% endif %}>
+              {{ calc.title }}
+            </a>
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+        <a href="/australia/" class="sidebar-nav__browse-all">Browse all 20 Australia tools →</a>
+      </nav>
+    </aside>
+
+    {% else %}
+
     {% set catSlugs = {
       "Mutual Funds & Investments": "mutual-funds",
       "Tax Calculators": "tax",
@@ -321,6 +358,8 @@ layout: layouts/base.njk
         <a href="/india/" class="sidebar-nav__browse-all">Browse all 108 India tools →</a>
       </nav>
     </aside>
+
+    {% endif %}
   </div>
 </main>
 

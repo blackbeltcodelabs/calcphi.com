@@ -1,0 +1,83 @@
+{
+  "id": "age-pension",
+  "inputs": [
+    { "id": "age", "label": "Your Age", "min": 60, "max": 85, "step": 1, "value": 67, "hint": "Age Pension eligibility age is 67 (born after 1 January 1957)" },
+    { "id": "relationship-status", "label": "Relationship Status", "type": "select", "options": [
+      { "value": "single", "label": "Single" },
+      { "value": "couple", "label": "Couple (combined)" }
+    ], "hint": "Rates and thresholds differ for singles and couples" },
+    { "id": "super-assets", "label": "Super / Financial Assets (A$)", "min": 0, "max": 5000000, "step": 5000, "value": 350000, "hint": "Total assessable financial assets (super, shares, bank accounts)" },
+    { "id": "non-financial-assets", "label": "Other Assets (A$)", "min": 0, "max": 5000000, "step": 5000, "value": 50000, "hint": "Car, personal effects, etc. (not your home if owner-occupier)" },
+    { "id": "home-owner", "label": "Home Owner?", "type": "select", "options": [
+      { "value": "yes", "label": "Yes — homeowner (PPOR excluded)" },
+      { "value": "no", "label": "No — non-homeowner" }
+    ], "hint": "Your principal home is excluded from the assets test" },
+    { "id": "income-per-fortnight", "label": "Other Income per Fortnight (A$)", "min": 0, "max": 10000, "step": 10, "value": 0, "hint": "Employment, rental, investments — excluding the pension itself" }
+  ],
+  "outputs": [
+    { "id": "max-pension", "label": "Maximum Pension Rate (Annual)" },
+    { "id": "assets-test-result", "label": "Assets Test Reduction" },
+    { "id": "income-test-result", "label": "Income Test Reduction" },
+    { "id": "pension-payable", "label": "Estimated Age Pension (Annual)", "highlight": true },
+    { "id": "pension-fortnightly", "label": "Estimated Pension (Per Fortnight)" }
+  ],
+  "staticTable": {
+    "caption": "Age Pension rates and thresholds (approximate, FY2025–26, indexed March and September)",
+    "headers": ["Measure", "Single", "Couple (combined)"],
+    "rows": [
+      ["Maximum pension (per fortnight)", "$1,144.40", "$1,725.20"],
+      ["Maximum pension (annual)", "$29,754", "$44,855"],
+      ["Full pension assets threshold (homeowner)", "$314,000", "$470,000"],
+      ["Pension cut-out assets (homeowner)", "$686,250", "$1,031,000"],
+      ["Full pension income threshold (per fortnight)", "$204", "$360"],
+      ["Pension cut-out income (per fortnight)", "$2,444.60", "$3,737.60"]
+    ]
+  },
+  "howToSteps": [
+    { "name": "Enter Your Age and Status", "text": "The Age Pension eligibility age is 67 for anyone born after 1 January 1957. Enter your age and whether you are single or part of a couple — rates and thresholds differ significantly." },
+    { "name": "Enter Assessable Assets", "text": "Enter your total assessable assets: superannuation, shares, bank savings, investment properties (at market value), and other personal property. Your principal home is excluded. Centrelink uses the higher of the assets or income test reduction." },
+    { "name": "Enter Other Income", "text": "Enter any regular income from employment, rent, investments, or drawdowns from super income streams. Centrelink applies both income and assets tests and pays the lower resulting pension." },
+    { "name": "Review Estimated Pension", "text": "The calculator provides an estimate of your annual and fortnightly Age Pension entitlement. This is an approximation — actual entitlements are assessed by Centrelink, which also applies deeming rules to financial assets." }
+  ],
+  "faq": [
+    {
+      "q": "What is the Age Pension eligibility age in Australia?",
+      "a": "The Age Pension eligibility age is 67 for anyone born on or after 1 January 1957. It was gradually increased from 65 to 67 between 2017 and 2023. There is no plan to increase it further beyond 67 under current legislation, though this is periodically debated."
+    },
+    {
+      "q": "How does the assets test work for the Age Pension?",
+      "a": "Centrelink reduces the Age Pension by $3 per fortnight for every $1,000 of assessable assets above the lower threshold. For a single homeowner in FY2025–26, the full pension is paid up to $314,000 in assets. The pension reduces to zero at approximately $686,250 in assets. Non-homeowners have higher thresholds ($543,750 full pension / $921,750 cut-out, approximately)."
+    },
+    {
+      "q": "What is the deeming rate and how does it affect the income test?",
+      "a": "The income test uses deeming rates to estimate income from financial investments (regardless of actual income received). Centrelink deems financial assets (super accounts in accumulation phase, bank accounts, shares) to earn: 0.25% on the first $60,400 (single) / $100,200 (couple) and 2.25% above those thresholds (rates as of May 2026). Actual income from investment properties and employment is assessed directly."
+    },
+    {
+      "q": "Does super count as an asset for the Age Pension?",
+      "a": "It depends on your age and whether super is in accumulation or pension phase. Super in accumulation phase is not counted as an asset until you reach Age Pension age. Once you reach Age Pension age, all super balances (accumulation and pension) are counted as assessable assets. This means drawing down super before reaching pension age can reduce your assessable assets at the time of applying."
+    },
+    {
+      "q": "Can I receive both the Age Pension and income from super?",
+      "a": "Yes. You can receive Age Pension payments and draw down super simultaneously. However, super drawdowns are assessed under the income test (minimum drawdown rates apply to super pensions). Many Australians use a combination of partial Age Pension and super drawdown in retirement. Centrelink's means tests determine how much pension you receive alongside your other income and assets."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "Single homeowner — $350,000 in super, no other income",
+      "text": "A single homeowner with $350,000 in super/financial assets and no other income. Assets test: $350,000 is above the $314,000 full pension threshold. Reduction: ($350,000 - $314,000) / $1,000 x $3 = $108/fortnight reduction. Maximum pension is approximately $1,144/fortnight. Estimated pension: approximately $1,036/fortnight, or about $26,936/year."
+    },
+    {
+      "heading": "Couple homeowners — $600,000 assets",
+      "text": "A couple with $600,000 in combined assessable assets (homeowners). Full pension couple threshold is approximately $470,000. Reduction: ($600,000 - $470,000) / $1,000 x $3 = $390/fortnight for the couple. Maximum couple pension $1,725/fortnight. Estimated pension: approximately $1,335/fortnight, or about $34,710/year."
+    }
+  ],
+  "related": [
+    { "title": "Super Balance Calculator", "url": "/australia/super-balance-calculator/", "desc": "Project your super balance to see Age Pension interaction" },
+    { "title": "Salary Sacrifice Calculator", "url": "/australia/salary-sacrifice-calculator/", "desc": "Grow super to reduce reliance on Age Pension" },
+    { "title": "Income Tax Calculator", "url": "/australia/income-tax-calculator/", "desc": "Age Pension is assessable income — check your tax position" }
+  ],
+  "schema": {
+    "appName": "Age Pension Calculator Australia",
+    "appDescription": "Estimate your Centrelink Age Pension entitlement under the assets and income tests for FY2025–26"
+  }
+}

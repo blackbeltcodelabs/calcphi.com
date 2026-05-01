@@ -1,0 +1,63 @@
+{
+  "id": "salary-sacrifice",
+  "inputs": [
+    { "id": "gross-salary", "label": "Annual Gross Salary (A$)", "min": 0, "max": 2000000, "step": 1000, "value": 100000, "hint": "Before tax salary, excluding super" },
+    { "id": "sacrifice-amount", "label": "Annual Salary Sacrifice (A$)", "min": 0, "max": 30000, "step": 500, "value": 10000, "hint": "Amount to sacrifice — concessional cap is $30,000 total (inc. SG)" },
+    { "id": "employer-sg", "label": "Employer SG Contributions (A$)", "min": 0, "max": 30000, "step": 100, "value": 12000, "hint": "12% of salary = $12,000 on $100k salary" }
+  ],
+  "outputs": [
+    { "id": "tax-before", "label": "Tax Without Sacrifice" },
+    { "id": "tax-after", "label": "Tax With Sacrifice", "highlight": true },
+    { "id": "tax-saving", "label": "Annual Tax Saving" },
+    { "id": "net-pay-change", "label": "Change in Take-Home Pay" },
+    { "id": "super-tax-in-fund", "label": "Contributions Tax in Super" },
+    { "id": "net-benefit", "label": "Net Annual Benefit" }
+  ],
+  "howToSteps": [
+    { "name": "Enter Your Gross Salary", "text": "Enter your annual gross salary (excluding super). This is your before-tax salary as shown on your employment contract." },
+    { "name": "Set Sacrifice Amount", "text": "Enter the amount you wish to salary sacrifice to superannuation each year. The total concessional contributions cap is $30,000 per year (including your employer's SG contributions). Do not exceed this cap." },
+    { "name": "Confirm Employer SG", "text": "Enter your employer's annual SG contributions (12% of salary for FY2026). This forms part of the $30,000 concessional cap. The remaining room is how much you can sacrifice." },
+    { "name": "Check Your Net Benefit", "text": "The calculator shows your tax saving from lower taxable income, the 15% contributions tax paid in the fund, your net take-home pay change, and the overall annual financial benefit of salary sacrificing." }
+  ],
+  "faq": [
+    {
+      "q": "How does salary sacrifice to super work in Australia?",
+      "a": "Salary sacrifice to super allows you to divert pre-tax salary into your superannuation fund instead of receiving it as take-home pay. The sacrificed amount is taxed at only 15% (concessional contributions tax) inside the fund, rather than at your marginal income tax rate. For someone in the 32.5% (or 30%+2% Medicare) bracket, this saves approximately 19c per dollar sacrificed."
+    },
+    {
+      "q": "What is the concessional contributions cap for salary sacrifice?",
+      "a": "The concessional contributions cap is $30,000 per financial year (FY2025–26). This cap includes all concessional contributions: your employer's SG contributions (e.g. $12,000 on a $100,000 salary at 12%), plus any salary sacrifice amounts. On a $100,000 salary, the maximum additional salary sacrifice room is $30,000 minus $12,000 SG = $18,000 per year."
+    },
+    {
+      "q": "What happens if I exceed the concessional contributions cap?",
+      "a": "Excess concessional contributions are included in your assessable income at your marginal tax rate. You receive a 15% tax offset for contributions tax already paid in the fund, but you will still pay extra tax on the excess. Excess concessional contributions also count toward your non-concessional contributions cap. The ATO will notify you via your myGov account if you have exceeded the cap."
+    },
+    {
+      "q": "Can salary sacrifice to super affect my home loan borrowing capacity?",
+      "a": "Yes. Salary sacrifice reduces your take-home pay, which lenders use to assess your borrowing capacity and loan serviceability. Some lenders will add back the sacrificed amount for serviceability purposes, but policies vary. If you are planning to apply for a home loan, consult your lender or broker before increasing salary sacrifice contributions."
+    },
+    {
+      "q": "Can I salary sacrifice to super in addition to the FHSS scheme?",
+      "a": "Yes. The First Home Super Saver (FHSS) scheme allows eligible first home buyers to make voluntary concessional contributions (including salary sacrifice) up to $15,000/year and $50,000 total, and then request release for a first home deposit. FHSS contributions count toward the $30,000 concessional cap. The ATO must issue a FHSS determination before you can access these funds."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "$100,000 salary — $10,000 sacrifice",
+      "text": "Salary sacrificing $10,000 on a $100,000 gross salary reduces taxable income from $100,000 to $90,000. Income tax drops from $22,967 to $19,717 — a saving of $3,250. The fund pays 15% contributions tax on $10,000 = $1,500. Net annual benefit: $1,750. Take-home pay falls by $6,750 (not the full $10,000, because the tax saving partially offsets it)."
+    },
+    {
+      "heading": "$120,000 salary — maximising to cap",
+      "text": "On a $120,000 salary, employer SG is $14,400. The remaining concessional cap space is $15,600 (to reach $30,000 total). Sacrificing $15,600 reduces taxable income from $120,000 to $104,400. Tax saving at 30%+2% marginal = approximately $5,000. Fund pays 15% on $15,600 = $2,340. Net annual benefit: approximately $2,660."
+    }
+  ],
+  "related": [
+    { "title": "Super Balance Calculator", "url": "/australia/super-balance-calculator/", "desc": "Project how salary sacrifice boosts your retirement balance" },
+    { "title": "Salary / Take-Home Pay Calculator", "url": "/australia/salary-take-home-calculator/", "desc": "See take-home pay impact of salary sacrifice" },
+    { "title": "Income Tax Calculator", "url": "/australia/income-tax-calculator/", "desc": "Calculate your marginal rate to quantify the tax saving" }
+  ],
+  "schema": {
+    "appName": "Salary Sacrifice Calculator Australia",
+    "appDescription": "Calculate Australian tax savings, super boost, and net take-home pay impact from salary sacrificing to superannuation"
+  }
+}

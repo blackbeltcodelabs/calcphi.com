@@ -12,6 +12,18 @@ export function formatUSD(value) {
   return '$' + num.toLocaleString('en-US');
 }
 
+export function formatAUD(value) {
+  const num = Math.round(Number(value));
+  if (isNaN(num)) return '—';
+  return 'A$' + num.toLocaleString('en-AU');
+}
+
+export function formatAUDCents(value) {
+  const num = Number(value);
+  if (isNaN(num)) return '—';
+  return 'A$' + num.toLocaleString('en-AU', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+
 export function formatUSDCents(value) {
   const num = Number(value);
   if (isNaN(num)) return '—';

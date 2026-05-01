@@ -1,0 +1,64 @@
+{
+  "id": "investment-returns-au",
+  "inputs": [
+    { "id": "initial-investment", "label": "Initial Investment (A$)", "min": 0, "max": 10000000, "step": 1000, "value": 50000, "hint": "Starting investment amount" },
+    { "id": "final-value", "label": "Final Value (A$)", "min": 0, "max": 10000000, "step": 1000, "value": 120000, "hint": "Current or sale value of the investment" },
+    { "id": "years-held", "label": "Years Held", "min": 1, "max": 50, "step": 1, "value": 8, "hint": "" },
+    { "id": "annual-income", "label": "Annual Distributions / Dividends (A$)", "min": 0, "max": 1000000, "step": 100, "value": 2000, "hint": "Average annual income received (dividends, distributions)" },
+    { "id": "inflation-rate", "label": "Inflation Rate (%)", "min": 0, "max": 15, "step": 0.1, "value": 3.0, "hint": "RBA target inflation: 2–3%. Enter to see real (inflation-adjusted) return." }
+  ],
+  "outputs": [
+    { "id": "total-return", "label": "Total Return (A$)", "highlight": true },
+    { "id": "total-return-pct", "label": "Total Return (%)" },
+    { "id": "cagr", "label": "CAGR (Annualised Return)" },
+    { "id": "real-cagr", "label": "Real Return (Inflation-Adjusted)" },
+    { "id": "total-income", "label": "Total Income Received" }
+  ],
+  "howToSteps": [
+    { "name": "Enter Investment and Final Value", "text": "Enter the original investment amount and the current or sale value. Include any amounts reinvested in the final value figure if dividends were reinvested (use the annual distributions field for distributions taken as cash)." },
+    { "name": "Enter Holding Period and Income", "text": "Enter the number of years held and the average annual distributions or dividends received in cash (not reinvested). This is used to calculate total return including income." },
+    { "name": "Set Inflation Rate", "text": "Enter the expected inflation rate to calculate your real (purchasing power) return. The RBA's target inflation band is 2–3%. A nominal 7% return at 3% inflation delivers a real return of approximately 3.9%." },
+    { "name": "Review CAGR and Real Return", "text": "The calculator shows total dollar return, percentage total return, CAGR (compound annual growth rate), and inflation-adjusted CAGR. Use CAGR to compare investments of different durations." }
+  ],
+  "faq": [
+    {
+      "q": "What is CAGR and how is it calculated?",
+      "a": "CAGR (Compound Annual Growth Rate) is the annualised rate at which an investment would need to grow each year to reach its final value from its starting value. Formula: CAGR = (Final Value / Initial Value)^(1 / Years) − 1. For example, an investment growing from $50,000 to $120,000 over 8 years has a CAGR of approximately 11.5% per year (capital growth only, excluding income)."
+    },
+    {
+      "q": "What are the long-run returns of Australian shares?",
+      "a": "The ASX 200 has delivered approximately 9.5–10.5% total annual returns (including dividends, before inflation) over 20–30 year periods as of 2025. After inflation (approximately 3%), the real return is approximately 6.5–7.5% per year. Including franking credits (which most fully franked Australian shares carry), total return to Australian residents is boosted by approximately 1.0–1.5% per year compared to overseas investors."
+    },
+    {
+      "q": "What is the difference between nominal and real return?",
+      "a": "A nominal return is the raw percentage gain before adjusting for inflation. A real return accounts for inflation — it measures how much your purchasing power has grown. At 3% inflation, a 7% nominal return translates to a real return of approximately 3.9% (calculated as (1.07/1.03) − 1 = 3.88%). Real return is what matters for long-term wealth preservation."
+    },
+    {
+      "q": "How do Australian residential property returns compare to shares?",
+      "a": "Over the 20 years to 2025, Australian residential property returned approximately 8–10% per year in the major capital cities (Sydney, Melbourne), though this masks wide variation by suburb and period. The ASX 200 total return index has delivered similar or slightly higher nominal returns. Property has lower volatility but worse liquidity, higher transaction costs (stamp duty), and requires active management. Returns after leverage (with a mortgage) can amplify both gains and losses."
+    },
+    {
+      "q": "Are capital gains from shares taxed differently to property in Australia?",
+      "a": "Both are subject to the same CGT rules — included in assessable income and taxed at your marginal rate, with a 50% discount for assets held 12+ months. The key practical differences: shares have lower transaction costs (no stamp duty, low brokerage), are more liquid, and gains can be realised selectively. Property has higher transaction costs but can be leveraged more easily through conventional home loans."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "ASX ETF — $50,000 for 8 years, $2,000 distributions/year",
+      "text": "An investor puts $50,000 into a broad ASX index ETF. Over 8 years, the portfolio grows to $120,000 (capital) and distributes $2,000 per year in dividends ($16,000 total income). Total return: $86,000 ($70,000 capital gain + $16,000 income). CAGR on capital alone: 11.5%. Total return CAGR including income: approximately 13.5%. After 3% inflation, real CAGR is approximately 10.2%."
+    },
+    {
+      "heading": "Investment property — $600,000 for 10 years",
+      "text": "An investment property purchased for $600,000, sold for $1,050,000 after 10 years, with $24,000 average annual rent net of all expenses. Total capital gain: $450,000. Total net rental income: $240,000. Total return: $690,000. CAGR (capital): 5.75%. Total return CAGR including income: approximately 8.5%."
+    }
+  ],
+  "related": [
+    { "title": "Capital Gains Tax Calculator", "url": "/australia/capital-gains-tax-calculator/", "desc": "Calculate CGT on your investment gain" },
+    { "title": "Franking Credits Calculator", "url": "/australia/franking-credits-calculator/", "desc": "Add franking credit value to your total return" },
+    { "title": "Compound Interest Calculator", "url": "/australia/compound-interest-calculator/", "desc": "Project future value with regular contributions" }
+  ],
+  "schema": {
+    "appName": "Investment Returns Calculator Australia",
+    "appDescription": "Calculate total return, CAGR, and inflation-adjusted real return on Australian investments including shares and property"
+  }
+}

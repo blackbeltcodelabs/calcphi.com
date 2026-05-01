@@ -1,0 +1,80 @@
+{
+  "id": "income-tax-au",
+  "inputs": [
+    { "id": "taxable-income", "label": "Taxable Income (A$)", "min": 0, "max": 5000000, "step": 1000, "value": 95000, "hint": "Total income after work-related deductions but before offsets" },
+    { "id": "include-medicare", "label": "Include Medicare Levy?", "type": "select", "options": [
+      { "value": "yes", "label": "Yes (2% on taxable income)" },
+      { "value": "no", "label": "No (exempt / reduced)" }
+    ], "hint": "Most employees pay full 2% Medicare levy" },
+    { "id": "apply-lito", "label": "Apply LITO?", "type": "select", "options": [
+      { "value": "yes", "label": "Yes — resident individual" },
+      { "value": "no", "label": "No" }
+    ], "hint": "Low Income Tax Offset — up to $700 for incomes under $37,500" }
+  ],
+  "outputs": [
+    { "id": "income-tax", "label": "Income Tax Payable" },
+    { "id": "medicare-levy", "label": "Medicare Levy (2%)" },
+    { "id": "lito-offset", "label": "LITO Applied" },
+    { "id": "total-tax", "label": "Total Tax (inc. Medicare)", "highlight": true },
+    { "id": "effective-rate", "label": "Effective Tax Rate" },
+    { "id": "take-home", "label": "Estimated Annual Take-Home" }
+  ],
+  "staticTable": {
+    "caption": "Australian income tax rates FY2025–26 (Stage 3 cuts effective 1 July 2024)",
+    "headers": ["Taxable Income", "Tax Rate", "Tax on This Bracket"],
+    "rows": [
+      ["$0 – $18,200", "0%", "Nil"],
+      ["$18,201 – $45,000", "16%", "Up to $4,288"],
+      ["$45,001 – $135,000", "30%", "Up to $27,000"],
+      ["$135,001 – $190,000", "37%", "Up to $20,350"],
+      ["$190,001+", "45%", "45c per $1 over $190,000"]
+    ]
+  },
+  "howToSteps": [
+    { "name": "Enter Taxable Income", "text": "Enter your total taxable income for the financial year. This is your gross income minus work-related deductions, investment losses, and other allowable deductions — not your gross salary." },
+    { "name": "Select Medicare Levy Option", "text": "Most Australian residents pay the full 2% Medicare levy. You may be exempt or have a reduced levy if your income is below the low-income threshold ($26,000 for singles in FY2025–26) or you hold a Veterans Affairs card." },
+    { "name": "Apply LITO", "text": "The Low Income Tax Offset (LITO) reduces tax by up to $700 for incomes under $37,500, phasing out to zero at $66,667. Select 'Yes' if you are a resident individual — this is applied automatically by the ATO." },
+    { "name": "Review Your Tax Breakdown", "text": "The calculator shows income tax by bracket, Medicare levy, LITO applied, total tax payable, effective tax rate, and estimated annual take-home pay." }
+  ],
+  "faq": [
+    {
+      "q": "What are the Australian income tax rates for FY2025–26?",
+      "a": "Following the Stage 3 tax cuts effective 1 July 2024, the Australian income tax brackets for FY2025–26 are: $0–$18,200 at 0%; $18,201–$45,000 at 16%; $45,001–$135,000 at 30%; $135,001–$190,000 at 37%; $190,001+ at 45%. The Medicare levy of 2% applies to all taxable income for most residents."
+    },
+    {
+      "q": "What is the Medicare Levy Surcharge?",
+      "a": "The Medicare Levy Surcharge (MLS) is an additional charge of 1–1.5% on top of the standard 2% Medicare levy, applying to higher-income earners who do not hold appropriate private hospital cover. The MLS applies at: 1% for incomes over $93,000 (singles) or $186,000 (families); 1.25% over $108,000 / $216,000; and 1.5% over $144,000 / $288,000. This is separate to and not included in our income tax calculator."
+    },
+    {
+      "q": "What is the Low Income Tax Offset (LITO)?",
+      "a": "The LITO reduces income tax by up to $700 for Australian residents earning under $37,500. The offset phases out between $37,500 and $45,000 (at 5c per $1), and then more rapidly between $45,000 and $66,667 (at 1.5c per $1). For example, someone earning $40,000 receives a LITO of approximately $575. The LITO is applied automatically by the ATO — it does not need to be claimed separately."
+    },
+    {
+      "q": "How is tax on investment income calculated in Australia?",
+      "a": "Investment income (interest, dividends, rental income) is added to your taxable income and taxed at your marginal rate — the same as employment income. The key differences are: dividends from Australian companies may carry franking credits that offset tax; capital gains from assets held 12+ months receive a 50% CGT discount; and rental property deductions (interest, depreciation, repairs) reduce taxable rental income."
+    },
+    {
+      "q": "Does Australia have a separate capital gains tax?",
+      "a": "No — capital gains in Australia are not a separate tax. Capital gains are included in your assessable income and taxed at your marginal income tax rate. However, individuals who hold an asset for more than 12 months before disposal are entitled to a 50% CGT discount, effectively halving the taxable gain before applying the marginal rate. Use our Capital Gains Tax Calculator for full CGT calculations."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "Salary of $95,000 — full-time employee",
+      "text": "On a taxable income of $95,000 (FY2025–26): income tax is $20,797 (using the Stage 3 bracket rates). Medicare levy adds $1,900. No LITO applies above $66,667. Total tax payable is $22,697. Effective tax rate is 23.9%. Estimated annual take-home pay is approximately $72,303."
+    },
+    {
+      "heading": "Part-time worker — $40,000 taxable income",
+      "text": "On a taxable income of $40,000: income tax is $2,788 (nil on first $18,200 + 16% on $21,800). LITO of approximately $575 reduces this to $2,213. Medicare levy adds $800. Total tax is $3,013. Effective rate is 7.5%. Take-home is approximately $36,987."
+    }
+  ],
+  "related": [
+    { "title": "Salary / Take-Home Pay Calculator", "url": "/australia/salary-take-home-calculator/", "desc": "Net weekly and fortnightly pay after tax and super" },
+    { "title": "Capital Gains Tax Calculator", "url": "/australia/capital-gains-tax-calculator/", "desc": "CGT on shares and property with 50% discount" },
+    { "title": "Salary Sacrifice Calculator", "url": "/australia/salary-sacrifice-calculator/", "desc": "Reduce taxable income via super salary sacrifice" }
+  ],
+  "schema": {
+    "appName": "Australian Income Tax Calculator FY2025–26",
+    "appDescription": "Calculate Australian income tax, Medicare levy, LITO offset, and take-home pay for FY2025–26 under Stage 3 tax cut rates"
+  }
+}

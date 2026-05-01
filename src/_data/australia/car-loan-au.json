@@ -1,0 +1,62 @@
+{
+  "id": "car-loan-au",
+  "inputs": [
+    { "id": "vehicle-price", "label": "Vehicle Price (A$)", "min": 5000, "max": 500000, "step": 500, "value": 35000, "hint": "Drive-away price including on-road costs" },
+    { "id": "deposit", "label": "Deposit / Trade-in (A$)", "min": 0, "max": 200000, "step": 500, "value": 5000, "hint": "Cash deposit or trade-in value" },
+    { "id": "interest-rate", "label": "Annual Interest Rate (%)", "min": 1, "max": 30, "step": 0.1, "value": 8.5, "hint": "Average Australian car loan rate ~7–10% (secured, new vehicle)" },
+    { "id": "loan-term", "label": "Loan Term (Years)", "min": 1, "max": 7, "step": 1, "value": 5, "hint": "Most car loans are 3–7 years" }
+  ],
+  "outputs": [
+    { "id": "monthly-repayment", "label": "Monthly Repayment", "highlight": true },
+    { "id": "total-repayments", "label": "Total Repayments" },
+    { "id": "total-interest", "label": "Total Interest Paid" },
+    { "id": "loan-amount", "label": "Loan Amount" }
+  ],
+  "howToSteps": [
+    { "name": "Enter Vehicle Price", "text": "Enter the drive-away price of the vehicle, including on-road costs (registration, stamp duty on vehicle, CTP insurance, dealer delivery fees). This is the total cost before any deposit." },
+    { "name": "Set Deposit", "text": "Enter any cash deposit or trade-in value. A larger deposit reduces the loan amount, monthly repayments, and total interest paid." },
+    { "name": "Enter Interest Rate and Term", "text": "Enter your car loan interest rate. Secured loans on new vehicles range from approximately 7–8%; used vehicle loans and unsecured personal loans can be 9–14%. The loan term is typically 3–7 years." },
+    { "name": "Review Total Cost", "text": "The calculator shows monthly repayments and total interest paid over the loan term. Compare the total repayment figure (not just the monthly amount) when evaluating loan options." }
+  ],
+  "faq": [
+    {
+      "q": "What is the average car loan interest rate in Australia?",
+      "a": "As of May 2026, secured car loan rates in Australia range from approximately 6.5–8% for new vehicles from bank and credit union lenders, and 9–12% for used vehicles or loans from finance companies. Dealership finance (manufacturer finance) can be competitive for new vehicles, sometimes offering promotional rates below 5%, but may include balloon payments or other conditions. Always compare the comparison rate, which includes fees."
+    },
+    {
+      "q": "What is a balloon payment on a car loan in Australia?",
+      "a": "A balloon payment (also called residual value) is a lump sum due at the end of the loan term, typically 20–40% of the vehicle's value. Loans with balloon payments have lower monthly repayments but result in significantly more interest paid over the loan life. At the end of the term, you must either pay the balloon, refinance it, or hand the vehicle back (for finance lease / novated lease products). Balloon payments are common in dealer finance and novated leases."
+    },
+    {
+      "q": "Should I pay cash or finance a car in Australia?",
+      "a": "If your loan rate exceeds the after-tax return you could earn on invested cash, paying cash saves money. At 8.5% car loan rate vs approximately 5% on a high-interest savings account (after tax), paying cash saves roughly 3.5% p.a. However, if the car loan rate is competitive and you have higher-returning uses for cash (paying down a higher-rate mortgage, investing in super within the concessional cap), financing may be preferable."
+    },
+    {
+      "q": "Is a car loan tax-deductible in Australia?",
+      "a": "Car loan interest is not tax-deductible for personal (non-business) use vehicles. If you use the vehicle for income-producing purposes (work use, Uber, delivery), a proportion of the loan interest may be deductible based on the percentage of business use. For employees claiming work-related vehicle expenses, the ATO allows two methods: cents per kilometre or the logbook method, but neither includes personal loan interest as a deductible item."
+    },
+    {
+      "q": "What is a novated lease and how does it compare to a car loan?",
+      "a": "A novated lease is a three-way agreement between you, your employer, and a finance company, where your employer makes lease payments from your pre-tax salary, reducing your taxable income. The tax saving can be significant — especially for higher-income earners. Unlike a car loan, you do not own the vehicle; you can hand it back or pay the residual at the end of the lease. Use a salary sacrifice / novated lease calculator to compare the after-tax cost with a standard car loan."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "$35,000 new car, $5,000 deposit, 5 years at 8.5%",
+      "text": "Borrowing $30,000 for a new $35,000 vehicle (after $5,000 deposit) at 8.5% over 5 years. Monthly repayment: approximately $617. Total repayments: $37,020. Total interest paid: $7,020. The car loan adds 23.4% to the loan principal in interest over 5 years."
+    },
+    {
+      "heading": "Same loan — 3 years vs 5 years comparison",
+      "text": "Reducing the term from 5 years to 3 years on the same $30,000 at 8.5%: monthly repayment rises from $617 to $944 but total interest drops from $7,020 to $3,984 — saving $3,036. The shorter term reduces total cost significantly if you can afford the higher monthly payment."
+    }
+  ],
+  "related": [
+    { "title": "Personal Loan Calculator", "url": "/australia/personal-loan-calculator/", "desc": "Compare car loan vs unsecured personal loan costs" },
+    { "title": "Salary Sacrifice Calculator", "url": "/australia/salary-sacrifice-calculator/", "desc": "Model novated lease as a salary sacrifice alternative" },
+    { "title": "Compound Interest Calculator", "url": "/australia/compound-interest-calculator/", "desc": "See what investing the loan repayment would grow to" }
+  ],
+  "schema": {
+    "appName": "Car Loan Calculator Australia",
+    "appDescription": "Calculate monthly car loan repayments and total interest for Australian vehicle finance at current market rates"
+  }
+}

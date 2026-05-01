@@ -1,0 +1,65 @@
+{
+  "id": "super-balance",
+  "inputs": [
+    { "id": "current-age", "label": "Current Age (Years)", "min": 18, "max": 70, "step": 1, "value": 35, "hint": "" },
+    { "id": "retirement-age", "label": "Retirement Age", "min": 55, "max": 75, "step": 1, "value": 67, "hint": "Preservation age is 60; Age Pension eligibility is 67" },
+    { "id": "current-super", "label": "Current Super Balance (A$)", "min": 0, "max": 5000000, "step": 1000, "value": 85000, "hint": "Check your fund's online portal or latest statement" },
+    { "id": "annual-salary", "label": "Annual Salary (A$)", "min": 0, "max": 2000000, "step": 1000, "value": 95000, "hint": "Gross salary excluding super" },
+    { "id": "super-rate", "label": "Super Guarantee Rate (%)", "min": 9, "max": 15, "step": 0.5, "value": 12, "hint": "12% from 1 July 2025 (FY2026)" },
+    { "id": "extra-contributions", "label": "Extra Contributions / Year (A$)", "min": 0, "max": 30000, "step": 500, "value": 0, "hint": "Salary sacrifice or personal contributions on top of SG" },
+    { "id": "investment-return", "label": "Expected Investment Return (%)", "min": 1, "max": 15, "step": 0.5, "value": 7, "hint": "Balanced option long-run average ~7% before fund fees" }
+  ],
+  "outputs": [
+    { "id": "super-at-retirement", "label": "Super Balance at Retirement", "highlight": true },
+    { "id": "total-contributions", "label": "Total Contributions" },
+    { "id": "total-growth", "label": "Total Investment Growth" },
+    { "id": "annual-drawdown", "label": "Estimated Annual Drawdown (4% rule)" }
+  ],
+  "howToSteps": [
+    { "name": "Enter Your Age and Current Super Balance", "text": "Enter your current age and super balance. Check your MySuper dashboard or latest annual statement. Even small balances grow significantly over decades due to compounding." },
+    { "name": "Set Salary and Super Rate", "text": "Enter your gross salary and the applicable super guarantee rate. From 1 July 2025, the SG rate increased to 12% for all employees. If your contract says 'super on top', your employer pays this amount in addition to your salary." },
+    { "name": "Add Extra Contributions (Optional)", "text": "If you are salary sacrificing or making personal contributions above the SG, enter the additional annual amount. Extra contributions inside the $30,000 concessional cap are taxed at only 15% in the fund." },
+    { "name": "Review Projected Balance", "text": "The calculator shows your projected super balance at retirement, total contributions made, total investment growth, and an estimated annual sustainable drawdown using the 4% rule." }
+  ],
+  "faq": [
+    {
+      "q": "What is the Superannuation Guarantee rate in Australia for FY2026?",
+      "a": "The Superannuation Guarantee (SG) rate increased to 12% from 1 July 2025 (FY2026). It was 11.5% in FY2025 and 11% in FY2024. The rate will remain at 12% indefinitely under current legislation. Employers must pay this amount on top of (or as part of, depending on contract) your wages into your nominated super fund."
+    },
+    {
+      "q": "How much super should I have at my age?",
+      "a": "The Association of Superannuation Funds of Australia (ASFA) provides benchmark super balances by age. Approximate benchmarks: age 30: $50,000–$60,000; age 40: $130,000–$150,000; age 50: $260,000–$300,000; age 60: $450,000–$520,000. These are median benchmarks — many Australians have less. ASFA estimates a comfortable retirement requires $595,000 for singles and $690,000 for couples (2025 figures)."
+    },
+    {
+      "q": "What is the concessional contributions cap?",
+      "a": "The concessional contributions cap is $30,000 per financial year (FY2025–26). Concessional contributions include employer SG contributions plus any salary sacrifice contributions and personal contributions you claim a tax deduction for. Contributions within this cap are taxed at 15% in the super fund. Contributions exceeding the cap are included in your assessable income at your marginal tax rate, with a 15% tax offset."
+    },
+    {
+      "q": "When can I access my superannuation?",
+      "a": "The preservation age in Australia is 60 for anyone born after 30 June 1964. You can access your super on or after preservation age once you have retired (met a condition of release). You can also access super from age 60 while still working via a Transition to Retirement (TTR) pension. Compulsory access under the Retirement Income Covenant begins at age 65 regardless of work status. Age Pension eligibility commences at 67."
+    },
+    {
+      "q": "Should I contribute more to super or pay off my mortgage first?",
+      "a": "This is a common dilemma. Key factors: your marginal tax rate (higher earners benefit more from super's 15% contributions tax), your mortgage interest rate vs expected super return, and your time horizon. A common approach is to split: make minimum SG, pay down mortgage aggressively, then increase super contributions as the mortgage decreases. Use the Super Balance and Mortgage Calculator together to model both scenarios."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "Age 35, $85,000 salary, $85,000 current super",
+      "text": "Starting with $85,000 in super at age 35, earning $95,000/year with 12% SG contributions ($11,400/year) and 7% annual investment return. By retirement at 67 (32 years), the projected super balance is approximately $1.28 million. Total contributions: approximately $486,000 (employer SG); investment growth: approximately $709,000."
+    },
+    {
+      "heading": "Age 45, $150,000 salary, salary sacrifice $15,000/year",
+      "text": "A 45-year-old with $250,000 in super, earning $150,000/year. SG at 12% = $18,000/year. Additional salary sacrifice of $15,000/year (total concessional $33,000 — slightly above $30,000 cap; model uses $30,000 cap). Projected balance at 67: approximately $1.6 million. The salary sacrifice on top of SG reduces taxable income and accelerates super growth significantly."
+    }
+  ],
+  "related": [
+    { "title": "Salary Sacrifice Calculator", "url": "/australia/salary-sacrifice-calculator/", "desc": "Model tax savings from extra super contributions" },
+    { "title": "Age Pension Calculator", "url": "/australia/age-pension-calculator/", "desc": "Check Centrelink Age Pension entitlement at retirement" },
+    { "title": "Super Fund Comparison", "url": "/australia/super-comparison-calculator/", "desc": "See how fees and returns affect your final balance" }
+  ],
+  "schema": {
+    "appName": "Superannuation Balance Calculator Australia",
+    "appDescription": "Project your Australian superannuation balance at retirement based on current balance, salary, SG contributions, and investment return"
+  }
+}

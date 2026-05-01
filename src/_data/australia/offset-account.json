@@ -1,0 +1,62 @@
+{
+  "id": "offset-account",
+  "inputs": [
+    { "id": "loan-balance", "label": "Home Loan Balance (A$)", "min": 10000, "max": 5000000, "step": 5000, "value": 550000, "hint": "Current outstanding mortgage balance" },
+    { "id": "offset-balance", "label": "Offset Account Balance (A$)", "min": 0, "max": 2000000, "step": 1000, "value": 50000, "hint": "Average funds held in your offset account" },
+    { "id": "interest-rate", "label": "Home Loan Rate (%)", "min": 0.5, "max": 20, "step": 0.05, "value": 6.3, "hint": "Your current variable home loan interest rate" },
+    { "id": "remaining-term", "label": "Remaining Loan Term (Years)", "min": 1, "max": 30, "step": 1, "value": 28, "hint": "Years remaining on your home loan" }
+  ],
+  "outputs": [
+    { "id": "interest-saved", "label": "Total Interest Saved", "highlight": true },
+    { "id": "time-saved", "label": "Time Saved Off Loan" },
+    { "id": "monthly-saving", "label": "Monthly Interest Saving" },
+    { "id": "effective-rate", "label": "Effective Loan Rate" }
+  ],
+  "howToSteps": [
+    { "name": "Enter Loan Balance", "text": "Enter your current outstanding home loan balance. If you do not know the exact figure, check your lender's online portal or latest statement." },
+    { "name": "Enter Offset Balance", "text": "Enter the average balance you keep in your offset account. The higher this amount, the more interest you save. Many Australians keep their salary and savings parked here." },
+    { "name": "Set Your Interest Rate", "text": "Enter your home loan's variable interest rate. This is typically shown on your monthly statement. The average variable rate in Australia is approximately 6.3% (May 2026)." },
+    { "name": "Review Interest Savings", "text": "The calculator shows total interest saved over the loan life, months taken off your loan term, and your effective interest rate after the offset." }
+  ],
+  "faq": [
+    {
+      "q": "How does an offset account work in Australia?",
+      "a": "An offset account is a transaction account linked to your home loan. The balance in the offset account is subtracted from your loan balance before interest is calculated. For example, if you owe $550,000 and have $50,000 in your offset, you only pay interest on $500,000. This reduces interest without formally reducing your loan balance."
+    },
+    {
+      "q": "Is an offset account worth paying a higher interest rate for?",
+      "a": "It depends on your average offset balance. If a lender charges 0.15% extra for an offset product but you maintain $50,000 in the offset on a $550,000 loan, the offset saves approximately $3,150/year in interest while the rate premium costs approximately $825/year — clearly worthwhile. Run the numbers with your actual figures."
+    },
+    {
+      "q": "Does putting your salary into an offset account help?",
+      "a": "Yes. Parking your salary in an offset account — even temporarily before paying bills — reduces the average daily loan balance on which interest is calculated. Over a year, maintaining a higher average offset balance through this approach can save meaningful amounts of interest."
+    },
+    {
+      "q": "What is the difference between an offset account and a redraw facility?",
+      "a": "An offset account is a separate account — funds remain accessible as cash at any time. A redraw facility allows you to make extra repayments directly to the loan and redraw later, but the lender holds the funds and redraw may be restricted. Offsets typically offer more flexibility, though both reduce interest in similar ways while funds are held."
+    },
+    {
+      "q": "Are offset accounts available on fixed-rate loans?",
+      "a": "Most major Australian lenders do not offer full offset accounts on fixed-rate loans, though some provide a partial offset (e.g., up to $10,000–$20,000 offset). Full offset is generally only available on variable-rate home loans. Some split loan products allow you to fix part of the loan while keeping an offset on the variable portion."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "$50,000 offset on a $550,000 loan at 6.3%",
+      "text": "Keeping $50,000 in an offset account against a $550,000 loan at 6.3% over 28 remaining years saves approximately $87,000 in interest and cuts the loan term by approximately 3 years and 4 months. The monthly interest saving is approximately $263."
+    },
+    {
+      "heading": "$100,000 offset — dual-income household",
+      "text": "A dual-income household that parks $100,000 (combined savings and buffer) in the offset account on a $600,000 loan at 6.3% over 30 years saves approximately $195,000 in total interest and pays off the loan approximately 6.5 years earlier."
+    }
+  ],
+  "related": [
+    { "title": "Mortgage Calculator", "url": "/australia/mortgage-calculator/", "desc": "Calculate base monthly repayments for your home loan" },
+    { "title": "Refinance Calculator", "url": "/australia/refinance-calculator/", "desc": "See if refinancing to a lower rate saves more than your offset" },
+    { "title": "Compound Interest Calculator", "url": "/australia/compound-interest-calculator/", "desc": "Compare keeping savings in a high-interest account vs offset" }
+  ],
+  "schema": {
+    "appName": "Offset Account Calculator Australia",
+    "appDescription": "Calculate interest savings and time saved on your Australian home loan from maintaining funds in a mortgage offset account"
+  }
+}

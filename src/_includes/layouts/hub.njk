@@ -14,6 +14,34 @@ layout: layouts/base.njk
   <div class="hub-content">
     {{ content | safe }}
 
+    {% if market == "australia" %}
+
+    {% set auCatSlugs = {
+      "Home Loans": "home-loans",
+      "Tax": "tax",
+      "Superannuation": "superannuation",
+      "Savings & Investments": "savings-investments",
+      "Borrowing": "borrowing"
+    } %}
+
+    {% for cat in ["Home Loans", "Tax", "Superannuation", "Savings & Investments", "Borrowing"] %}
+    <div class="hub-category" id="{{ auCatSlugs[cat] }}">
+      <h2>{{ cat }}</h2>
+      <div class="hub-grid">
+        {% for calc in australia.calculators %}
+        {% if calc.category == cat %}
+        <a href="{{ calc.url }}" class="related-card">
+          <h3>{{ calc.title }}</h3>
+          <p>{{ calc.shortDescription }}</p>
+        </a>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+
+    {% else %}
+
     {% set catSlugs = {
       "Mutual Funds & Investments": "mutual-funds",
       "Tax Calculators": "tax",
@@ -41,6 +69,8 @@ layout: layouts/base.njk
       </div>
     </div>
     {% endfor %}
+
+    {% endif %}
   </div>
 
 </main>

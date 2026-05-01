@@ -1,0 +1,73 @@
+{
+  "id": "compound-interest-au",
+  "inputs": [
+    { "id": "principal", "label": "Initial Deposit (A$)", "min": 0, "max": 5000000, "step": 500, "value": 10000, "hint": "Lump sum deposited at the start" },
+    { "id": "regular-contribution", "label": "Regular Contribution (A$)", "min": 0, "max": 100000, "step": 100, "value": 500, "hint": "Amount added each period" },
+    { "id": "contribution-frequency", "label": "Contribution Frequency", "type": "select", "options": [
+      { "value": "monthly", "label": "Monthly" },
+      { "value": "fortnightly", "label": "Fortnightly" },
+      { "value": "weekly", "label": "Weekly" },
+      { "value": "annually", "label": "Annually" }
+    ], "hint": "" },
+    { "id": "interest-rate", "label": "Annual Interest / Return Rate (%)", "min": 0.1, "max": 30, "step": 0.1, "value": 4.5, "hint": "Term deposit ~4.5%; high-interest savings ~4.8%; shares ~8–10% historically" },
+    { "id": "compound-frequency", "label": "Compounding Frequency", "type": "select", "options": [
+      { "value": "monthly", "label": "Monthly" },
+      { "value": "quarterly", "label": "Quarterly" },
+      { "value": "annually", "label": "Annually" }
+    ], "hint": "" },
+    { "id": "years", "label": "Investment Period (Years)", "min": 1, "max": 50, "step": 1, "value": 10, "hint": "" }
+  ],
+  "outputs": [
+    { "id": "final-value", "label": "Final Value", "highlight": true },
+    { "id": "total-contributed", "label": "Total Contributed" },
+    { "id": "total-interest", "label": "Interest Earned" },
+    { "id": "effective-return", "label": "Effective Annual Return (EAR)" }
+  ],
+  "howToSteps": [
+    { "name": "Enter Initial Deposit and Regular Contributions", "text": "Enter your starting amount and how much you plan to add regularly. Even small regular contributions compound significantly over time." },
+    { "name": "Set Interest Rate", "text": "Enter the annual interest or return rate. Current Australian high-interest savings accounts offer approximately 4.8–5.1%; term deposits approximately 4.3–4.8%; and a diversified share portfolio approximately 7–9% long-run nominal return." },
+    { "name": "Choose Compounding Frequency", "text": "Monthly compounding is most common for savings accounts in Australia. The more frequently interest compounds, the higher the effective annual return (EAR) compared to the nominal rate." },
+    { "name": "Read the Results", "text": "The calculator shows your final value, total amount contributed, interest earned, and effective annual rate. Use this to compare savings accounts, term deposits, and investment portfolios." }
+  ],
+  "faq": [
+    {
+      "q": "What is the best compound interest account in Australia in 2026?",
+      "a": "As of May 2026, the highest savings account rates in Australia range from approximately 4.8–5.2% (base + bonus interest) from banks including ING, Macquarie, Ubank, and Up Bank, subject to monthly conditions. The RBA cash rate at 4.10% sets a floor for most high-interest accounts. Compare rates on comparison sites as rates change frequently."
+    },
+    {
+      "q": "How is compound interest calculated?",
+      "a": "Compound interest is calculated using the formula: A = P × (1 + r/n)^(nt), where A is the final amount, P is the principal, r is the annual rate (decimal), n is the number of compounding periods per year, and t is the time in years. For regular contributions, each contribution is compounded separately from the time it is made."
+    },
+    {
+      "q": "Is interest on Australian savings accounts taxable?",
+      "a": "Yes. Interest earned on savings accounts and term deposits in Australia is assessable income, included in your tax return and taxed at your marginal rate. Your bank reports interest payments to the ATO automatically. To minimise tax on savings, higher-income earners should compare after-tax returns from savings accounts vs dividend-paying shares (with franking credits) or tax-advantaged options like super."
+    },
+    {
+      "q": "What is the difference between nominal and effective interest rates?",
+      "a": "The nominal rate is the stated annual interest rate. The effective annual rate (EAR) accounts for the effect of compounding within the year. For example, a 4.8% nominal rate compounded monthly has an EAR of approximately 4.91%. The EAR is the true annual return you earn and is the correct basis for comparing accounts with different compounding frequencies."
+    },
+    {
+      "q": "Are term deposits better than high-interest savings accounts in Australia?",
+      "a": "Term deposits offer a fixed, guaranteed rate for a set period (typically 1 month to 5 years) and are APRA-guaranteed up to $250,000 per bank. High-interest savings accounts offer variable rates (with conditions) and instant access. In a rising rate environment, savings accounts let you benefit from rate increases; in a falling rate environment, locking in a term deposit is advantageous. Current 1-year term deposit rates of approximately 4.5% are competitive with savings account bonus rates."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "$10,000 starting + $500/month for 10 years at 4.5%",
+      "text": "With $10,000 initial deposit and $500/month additional contributions at 4.5% annual interest (monthly compounding) for 10 years: final value approximately $91,100. Total contributed: $70,000 ($10,000 initial + $60,000 contributions). Interest earned: approximately $21,100."
+    },
+    {
+      "heading": "$50,000 starting, no contributions, 20 years at 7% (shares)",
+      "text": "Investing $50,000 in a diversified Australian share portfolio returning 7% annually (no additional contributions) for 20 years: final value approximately $193,500. Purely through compounding, the initial $50,000 grows nearly 4x. This illustrates the power of long-term compounding even without adding more capital."
+    }
+  ],
+  "related": [
+    { "title": "Investment Returns Calculator", "url": "/australia/investment-returns-calculator/", "desc": "Calculate CAGR and inflation-adjusted returns on investments" },
+    { "title": "Super Balance Calculator", "url": "/australia/super-balance-calculator/", "desc": "Project compounding super growth over your working life" },
+    { "title": "Franking Credits Calculator", "url": "/australia/franking-credits-calculator/", "desc": "After-tax return from Australian share dividends" }
+  ],
+  "schema": {
+    "appName": "Compound Interest Calculator Australia",
+    "appDescription": "Calculate future value of Australian savings and investments with compound interest, flexible compounding frequencies, and regular contributions"
+  }
+}

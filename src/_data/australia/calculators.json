@@ -1,0 +1,142 @@
+[
+  {
+    "id": "mortgage",
+    "title": "Mortgage Calculator",
+    "url": "/australia/mortgage-calculator/",
+    "shortDescription": "Monthly repayments, total interest & amortization",
+    "category": "Home Loans"
+  },
+  {
+    "id": "offset-account",
+    "title": "Offset Account Calculator",
+    "url": "/australia/offset-account-calculator/",
+    "shortDescription": "Interest saved by holding funds in offset",
+    "category": "Home Loans"
+  },
+  {
+    "id": "lmi",
+    "title": "LMI Calculator",
+    "url": "/australia/lmi-calculator/",
+    "shortDescription": "Lenders Mortgage Insurance estimate by LVR",
+    "category": "Home Loans"
+  },
+  {
+    "id": "refinance",
+    "title": "Refinance Calculator",
+    "url": "/australia/refinance-calculator/",
+    "shortDescription": "Break-even period and savings from refinancing",
+    "category": "Home Loans"
+  },
+  {
+    "id": "rent-vs-buy",
+    "title": "Rent vs Buy Calculator",
+    "url": "/australia/rent-vs-buy-calculator/",
+    "shortDescription": "True cost of renting versus buying in Australia",
+    "category": "Home Loans"
+  },
+  {
+    "id": "first-home-buyer",
+    "title": "First Home Buyer Calculator",
+    "url": "/australia/first-home-buyer-calculator/",
+    "shortDescription": "Stamp duty, FHOG, and deposit needed",
+    "category": "Home Loans"
+  },
+  {
+    "id": "income-tax-au",
+    "title": "Income Tax Calculator",
+    "url": "/australia/income-tax-calculator/",
+    "shortDescription": "ATO tax, Medicare levy, and LITO for FY2026",
+    "category": "Tax"
+  },
+  {
+    "id": "capital-gains-au",
+    "title": "Capital Gains Tax Calculator",
+    "url": "/australia/capital-gains-tax-calculator/",
+    "shortDescription": "CGT with 50% discount for assets held 12+ months",
+    "category": "Tax"
+  },
+  {
+    "id": "salary-take-home",
+    "title": "Salary / Take-Home Pay Calculator",
+    "url": "/australia/salary-take-home-calculator/",
+    "shortDescription": "Net weekly, fortnightly, and monthly pay after tax",
+    "category": "Tax"
+  },
+  {
+    "id": "payg-withholding",
+    "title": "PAYG Withholding Calculator",
+    "url": "/australia/payg-withholding-calculator/",
+    "shortDescription": "Weekly tax withheld by employer under PAYG",
+    "category": "Tax"
+  },
+  {
+    "id": "super-balance",
+    "title": "Super Balance Calculator",
+    "url": "/australia/super-balance-calculator/",
+    "shortDescription": "Projected superannuation balance at retirement",
+    "category": "Superannuation"
+  },
+  {
+    "id": "salary-sacrifice",
+    "title": "Salary Sacrifice Calculator",
+    "url": "/australia/salary-sacrifice-calculator/",
+    "shortDescription": "Tax savings and super boost from salary sacrifice",
+    "category": "Superannuation"
+  },
+  {
+    "id": "age-pension",
+    "title": "Age Pension Calculator",
+    "url": "/australia/age-pension-calculator/",
+    "shortDescription": "Centrelink Age Pension entitlement estimate",
+    "category": "Superannuation"
+  },
+  {
+    "id": "super-comparison",
+    "title": "Super Fund Comparison",
+    "url": "/australia/super-comparison-calculator/",
+    "shortDescription": "Compare super funds by fee and return impact",
+    "category": "Superannuation"
+  },
+  {
+    "id": "compound-interest-au",
+    "title": "Compound Interest Calculator",
+    "url": "/australia/compound-interest-calculator/",
+    "shortDescription": "Future value of savings with flexible compounding",
+    "category": "Savings & Investments"
+  },
+  {
+    "id": "franking-credits",
+    "title": "Franking Credits Calculator",
+    "url": "/australia/franking-credits-calculator/",
+    "shortDescription": "Franking credit value and tax offset on dividends",
+    "category": "Savings & Investments"
+  },
+  {
+    "id": "investment-returns-au",
+    "title": "Investment Returns Calculator",
+    "url": "/australia/investment-returns-calculator/",
+    "shortDescription": "Total return, CAGR, and inflation-adjusted growth",
+    "category": "Savings & Investments"
+  },
+  {
+    "id": "car-loan-au",
+    "title": "Car Loan Calculator",
+    "url": "/australia/car-loan-calculator/",
+    "shortDescription": "Monthly repayments and total cost of a car loan",
+    "category": "Borrowing"
+  },
+  {
+    "id": "personal-loan-au",
+    "title": "Personal Loan Calculator",
+    "url": "/australia/personal-loan-calculator/",
+    "shortDescription": "Repayments and total interest on a personal loan",
+    "category": "Borrowing"
+  },
+  {
+    "id": "hecs-repayment",
+    "title": "HECS-HELP Repayment Calculator",
+    "url": "/australia/hecs-repayment-calculator/",
+    "shortDescription": "Annual HECS repayment and years to debt-free",
+    "category": "Borrowing"
+  }
+]

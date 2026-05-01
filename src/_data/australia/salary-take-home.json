@@ -1,0 +1,65 @@
+{
+  "id": "salary-take-home",
+  "inputs": [
+    { "id": "gross-salary", "label": "Annual Gross Salary (A$)", "min": 0, "max": 2000000, "step": 1000, "value": 85000, "hint": "Your total annual salary before tax (excluding super)" },
+    { "id": "super-rate", "label": "Super Guarantee Rate (%)", "min": 0, "max": 15, "step": 0.5, "value": 11.5, "hint": "11.5% for FY2025, 12% from 1 Jul 2025 (FY2026)" },
+    { "id": "salary-sacrifice-amount", "label": "Salary Sacrifice to Super (A$)", "min": 0, "max": 30000, "step": 100, "value": 0, "hint": "Extra voluntary pre-tax super contributions" },
+    { "id": "other-deductions", "label": "Other Pre-Tax Deductions (A$)", "min": 0, "max": 100000, "step": 100, "value": 0, "hint": "Novated lease, salary packaged items, etc." }
+  ],
+  "outputs": [
+    { "id": "net-annual", "label": "Net Annual Take-Home", "highlight": true },
+    { "id": "net-monthly", "label": "Net Monthly Pay" },
+    { "id": "net-fortnightly", "label": "Net Fortnightly Pay" },
+    { "id": "net-weekly", "label": "Net Weekly Pay" },
+    { "id": "income-tax-pa", "label": "Income Tax (Annual)" },
+    { "id": "medicare-levy-pa", "label": "Medicare Levy (Annual)" },
+    { "id": "super-employer", "label": "Employer Super Contribution" }
+  ],
+  "howToSteps": [
+    { "name": "Enter Gross Salary", "text": "Enter your total annual gross salary as shown on your employment contract. This is before income tax, Medicare levy, and super — it does not include the employer super contribution on top." },
+    { "name": "Set Super Rate", "text": "Enter the Superannuation Guarantee rate. From 1 July 2025, the rate increased to 12%. If your contract says 'super on top', your employer pays this separately above your salary." },
+    { "name": "Add Salary Sacrifice (Optional)", "text": "If you salary sacrifice additional amounts to super or a novated lease, enter the annual amount here. Salary sacrifice reduces your taxable income and increases your take-home pay relative to after-tax contributions." },
+    { "name": "Read Your Pay Breakdown", "text": "The calculator shows your net annual, monthly, fortnightly, and weekly take-home pay after income tax and Medicare levy, plus your employer super contribution." }
+  ],
+  "faq": [
+    {
+      "q": "What is the difference between gross salary and CTC in Australia?",
+      "a": "In Australia, salary is typically quoted as a base salary (gross) — the amount before tax. Unlike India, CTC (Cost to Company) is not a standard Australian convention, but some employers quote 'total package' or 'total employment cost' which includes the employer super contribution on top. For example, a $85,000 salary with 12% super means the employer's total cost is approximately $95,200."
+    },
+    {
+      "q": "Is super included in my Australian salary?",
+      "a": "It depends on how your employment contract is written. Some contracts say 'base salary of $85,000 plus superannuation' — meaning super is paid on top. Others say 'total package including super of $95,200' — in which case your base salary is approximately $85,000 and super is the remaining $10,200. Always clarify with your employer which basis applies."
+    },
+    {
+      "q": "How does salary sacrifice reduce my tax in Australia?",
+      "a": "Salary sacrifice to super reduces your taxable income before income tax is calculated. If you earn $85,000 and sacrifice $5,000 to super, your taxable income drops to $80,000. At a 30% marginal rate, this saves $1,500 in income tax. The $5,000 goes into super taxed at only 15% (concessional contributions tax). Net benefit is $750 per $5,000 sacrificed."
+    },
+    {
+      "q": "What is the tax-free threshold in Australia?",
+      "a": "The Australian tax-free threshold is $18,200. Income up to this amount is taxed at 0% for resident individuals. When you start a new job, you should claim the tax-free threshold on your TFN declaration form — but only with one employer at a time. Claiming it with multiple employers can result in under-withholding and a tax debt at year-end."
+    },
+    {
+      "q": "Why does my pay calculator result differ from my actual pay?",
+      "a": "The calculator uses standard ATO Schedule 1 withholding rates for employees claiming the tax-free threshold with no other adjustments. Actual PAYG withholding may differ slightly due to weekly vs fortnightly pay cycles, leave loading, bonuses, HECS debt repayments (deducted via payroll), study and training support loans, or your employer using a different withholding method. The result is a close estimate, not guaranteed to match every payslip."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "Sydney professional — $85,000 salary, FY2025–26",
+      "text": "On a gross salary of $85,000: income tax is $16,972 (using Stage 3 rates), Medicare levy is $1,700, LITO is nil (phased out above $66,667). Total tax is $18,672. Net annual take-home is $66,328, or approximately $5,527/month and $2,551/fortnight. Employer also contributes $9,775/year to superannuation at 11.5%."
+    },
+    {
+      "heading": "$120,000 salary with $10,000 salary sacrifice",
+      "text": "Sacrificing $10,000 to super reduces taxable income from $120,000 to $110,000. Tax on $110,000 is $26,497, saving approximately $3,000 vs no sacrifice. Net take-home is approximately $81,803/year ($6,817/month). Super balance grows by $23,800/year ($13,800 employer super + $10,000 sacrifice, both taxed at 15% in the fund)."
+    }
+  ],
+  "related": [
+    { "title": "Income Tax Calculator", "url": "/australia/income-tax-calculator/", "desc": "Full income tax breakdown with all offsets" },
+    { "title": "Salary Sacrifice Calculator", "url": "/australia/salary-sacrifice-calculator/", "desc": "Model tax savings from salary sacrificing to super" },
+    { "title": "PAYG Withholding Calculator", "url": "/australia/payg-withholding-calculator/", "desc": "Weekly employer tax withholding estimate" }
+  ],
+  "schema": {
+    "appName": "Australian Salary Take-Home Pay Calculator",
+    "appDescription": "Calculate net weekly, fortnightly, and monthly take-home pay after Australian income tax, Medicare levy, and super for FY2025–26"
+  }
+}

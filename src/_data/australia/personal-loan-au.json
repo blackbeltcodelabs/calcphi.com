@@ -1,0 +1,63 @@
+{
+  "id": "personal-loan-au",
+  "inputs": [
+    { "id": "loan-amount", "label": "Loan Amount (A$)", "min": 1000, "max": 200000, "step": 500, "value": 20000, "hint": "Amount you need to borrow" },
+    { "id": "interest-rate", "label": "Annual Interest Rate (%)", "min": 1, "max": 40, "step": 0.1, "value": 11.5, "hint": "Average unsecured personal loan rate ~10–15% in Australia" },
+    { "id": "loan-term", "label": "Loan Term (Years)", "min": 1, "max": 7, "step": 1, "value": 3, "hint": "Typical personal loan terms: 1–7 years" },
+    { "id": "establishment-fee", "label": "Establishment Fee (A$)", "min": 0, "max": 1000, "step": 10, "value": 250, "hint": "One-off upfront fee charged by most lenders ($0–$500)" }
+  ],
+  "outputs": [
+    { "id": "monthly-repayment", "label": "Monthly Repayment", "highlight": true },
+    { "id": "total-repayments", "label": "Total Repayments" },
+    { "id": "total-interest", "label": "Total Interest Paid" },
+    { "id": "comparison-rate", "label": "Comparison Rate (est.)" },
+    { "id": "total-cost", "label": "Total Cost of Loan" }
+  ],
+  "howToSteps": [
+    { "name": "Enter Loan Amount", "text": "Enter the amount you need to borrow. Most Australian personal loan providers lend $2,000–$100,000. Check minimum and maximum amounts for your chosen lender." },
+    { "name": "Set Interest Rate", "text": "Enter the annual interest rate offered. Australian unsecured personal loan rates typically range from 8% (best credit, secured) to 20%+ (unsecured, average credit). Check the comparison rate, which includes fees." },
+    { "name": "Choose Term and Enter Fee", "text": "Select the loan term and enter the establishment fee. A longer term reduces monthly repayments but increases total interest paid. The establishment fee is a one-off cost usually charged at settlement." },
+    { "name": "Compare Total Cost", "text": "Look at total cost (repayments + fee), not just monthly repayment. A loan with a slightly higher rate but no establishment fee may cost less than a lower-rate loan with a $500 fee on a shorter term." }
+  ],
+  "faq": [
+    {
+      "q": "What are current personal loan rates in Australia?",
+      "a": "As of May 2026, personal loan interest rates in Australia range from approximately 7.5–8.5% for secured personal loans (car, asset-backed) to 10–16% for unsecured personal loans from banks and credit unions, and up to 25–30% from some online lenders. The RBA cash rate of 4.10% influences but does not directly set personal loan rates. Always compare the comparison rate (includes fees) rather than just the advertised rate."
+    },
+    {
+      "q": "What is the comparison rate on a personal loan?",
+      "a": "The comparison rate combines the annual interest rate with the effect of standard fees (establishment fee, monthly fee) into a single percentage. It is expressed as an annual rate for a $30,000 loan over 5 years (the standard Australian comparison rate basis). The comparison rate makes it easier to compare the true cost between lenders. Fees not included in the comparison rate (such as redraw fees or early repayment charges) must still be checked separately."
+    },
+    {
+      "q": "Can I repay a personal loan early in Australia?",
+      "a": "Yes. Most Australian personal loans allow early repayment, and there is generally no early repayment penalty on variable rate personal loans. Fixed rate personal loans may have a break cost if you repay early. Always check the loan's terms and conditions — some lenders charge an early exit fee. Making extra repayments reduces your loan balance and the interest charged on it."
+    },
+    {
+      "q": "What are the credit score requirements for a personal loan in Australia?",
+      "a": "Australian lenders use credit scores from agencies including Equifax, Experian, and Illion. Most bank personal loans require a credit score of 625+ (out of 1,200 on the Equifax scale). Lower credit scores typically result in higher interest rates or loan rejection. Australians can obtain a free credit report annually from Equifax, Experian, and Illion."
+    },
+    {
+      "q": "Is debt consolidation via a personal loan worthwhile?",
+      "a": "Debt consolidation can be worthwhile if the personal loan rate is lower than the debts being consolidated. Credit card interest rates in Australia average 18–22%. Consolidating $20,000 in credit card debt at 20% into a personal loan at 11% saves approximately $9% per year on interest, plus simplifies repayments to one lender. However, extending the repayment term can increase total interest paid — calculate both scenarios before consolidating."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "$20,000 personal loan — 3 years at 11.5%",
+      "text": "Borrowing $20,000 at 11.5% over 3 years with a $250 establishment fee. Monthly repayment: approximately $660. Total repayments over 3 years: $23,760. Total interest: $3,760. Add establishment fee: total cost of loan is approximately $4,010, or 20% of the loan principal over 3 years."
+    },
+    {
+      "heading": "Credit card consolidation — $15,000 at 20% vs personal loan at 11.5%",
+      "text": "Consolidating $15,000 of credit card debt (20% p.a.) to a 3-year personal loan at 11.5%. Credit card minimum payments take approximately 11 years to repay and cost approximately $16,000 in interest. The personal loan takes exactly 3 years and costs approximately $2,820 in interest — saving approximately $13,000 and 8 years of repayments."
+    }
+  ],
+  "related": [
+    { "title": "Car Loan Calculator", "url": "/australia/car-loan-calculator/", "desc": "Secured car loan vs unsecured personal loan comparison" },
+    { "title": "HECS-HELP Repayment Calculator", "url": "/australia/hecs-repayment-calculator/", "desc": "Student loan repayments under the ATO threshold system" },
+    { "title": "Income Tax Calculator", "url": "/australia/income-tax-calculator/", "desc": "Check take-home pay to assess loan affordability" }
+  ],
+  "schema": {
+    "appName": "Personal Loan Calculator Australia",
+    "appDescription": "Calculate monthly repayments, total interest, and comparison rate on an Australian personal loan at current market rates"
+  }
+}

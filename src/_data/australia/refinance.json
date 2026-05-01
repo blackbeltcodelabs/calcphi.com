@@ -1,0 +1,63 @@
+{
+  "id": "refinance",
+  "inputs": [
+    { "id": "current-balance", "label": "Current Loan Balance (A$)", "min": 10000, "max": 5000000, "step": 5000, "value": 480000, "hint": "Your outstanding home loan balance" },
+    { "id": "current-rate", "label": "Current Interest Rate (%)", "min": 0.5, "max": 20, "step": 0.05, "value": 6.8, "hint": "Your existing variable or fixed rate" },
+    { "id": "new-rate", "label": "New Interest Rate (%)", "min": 0.5, "max": 20, "step": 0.05, "value": 6.1, "hint": "Rate offered by new lender" },
+    { "id": "remaining-term", "label": "Remaining Loan Term (Years)", "min": 1, "max": 30, "step": 1, "value": 25, "hint": "Years left on your current mortgage" },
+    { "id": "refinance-costs", "label": "Refinance Costs (A$)", "min": 0, "max": 50000, "step": 100, "value": 2500, "hint": "Discharge fee, application fee, legal costs (typically $1,500–$3,500)" }
+  ],
+  "outputs": [
+    { "id": "monthly-saving", "label": "Monthly Saving", "highlight": true },
+    { "id": "annual-saving", "label": "Annual Saving" },
+    { "id": "breakeven-months", "label": "Break-Even Period" },
+    { "id": "total-saving", "label": "Total Interest Saved" }
+  ],
+  "howToSteps": [
+    { "name": "Enter Current Loan Details", "text": "Enter your current outstanding loan balance and interest rate. These are shown on your monthly statement or in your lender's portal." },
+    { "name": "Enter New Rate", "text": "Enter the interest rate offered by the new lender. Even a 0.5% reduction can save tens of thousands over 25 years." },
+    { "name": "Estimate Refinance Costs", "text": "Include discharge fees ($150–$400), application or establishment fees ($0–$600), legal / conveyancing fees ($800–$1,500), and any break costs if leaving a fixed rate. Typical total: $1,500–$3,500." },
+    { "name": "Check Your Break-Even", "text": "The calculator shows how many months it takes for your monthly savings to recoup your refinance costs. If break-even is under 24 months and you plan to keep the loan, refinancing likely makes sense." }
+  ],
+  "faq": [
+    {
+      "q": "How often should I consider refinancing my home loan in Australia?",
+      "a": "Financial advisers generally suggest reviewing your home loan every 2–3 years. The Australian mortgage market is competitive and lenders regularly offer better rates to new customers than to existing ones. A rate difference of even 0.5% on a $500,000 loan saves approximately $2,500 per year."
+    },
+    {
+      "q": "What are the typical costs of refinancing in Australia?",
+      "a": "Typical refinance costs include a discharge fee from your existing lender ($150–$400), application or establishment fee from the new lender (often $0–$600 on competitive products), government registration fees ($100–$200), and legal fees ($600–$1,500). Total costs typically range from $1,500 to $3,500. Break costs can be significant if you break a fixed-rate loan early."
+    },
+    {
+      "q": "What is a mortgage break cost?",
+      "a": "If you refinance out of a fixed-rate loan before the end of the fixed period, your lender will charge a break cost. This is calculated based on the difference between your contracted rate and the bank's current wholesale funding rate, multiplied by the remaining fixed period. Break costs can range from a few hundred to tens of thousands of dollars."
+    },
+    {
+      "q": "Does refinancing affect my credit score?",
+      "a": "Yes, applying for refinancing triggers a hard credit enquiry, which can temporarily reduce your credit score by a small amount. Multiple applications in a short period can have a more noticeable effect. Use a mortgage broker to identify the best option before formally applying, to minimise the number of hard enquiries on your file."
+    },
+    {
+      "q": "Can I refinance to access equity in my home?",
+      "a": "Yes. If your property has increased in value or you have repaid a significant portion of the loan, you may have usable equity. Refinancing to a higher loan amount (cash-out refinancing) allows you to access this equity — typically for renovation, investment, or debt consolidation — subject to the lender's assessment and a maximum LVR of 80% to avoid LMI."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "Rate drop from 6.8% to 6.1% on $480,000 balance",
+      "text": "Refinancing a $480,000 loan with 25 years remaining from 6.8% to 6.1%, incurring $2,500 in refinance costs, saves approximately $2,052 per year ($171/month). The break-even period is approximately 14 months. Over the remaining 25 years, total interest saved is approximately $47,500."
+    },
+    {
+      "heading": "Loyalty tax — same lender, negotiate a rate cut first",
+      "text": "Before refinancing, call your lender and ask for a rate match. If your lender reduces your rate from 6.8% to 6.3% without you switching, you save approximately $1,500/year with zero costs and zero break-even period. If they refuse, refinancing to 6.1% with $2,500 in costs breaks even in 14 months."
+    }
+  ],
+  "related": [
+    { "title": "Mortgage Calculator", "url": "/australia/mortgage-calculator/", "desc": "Model repayments at your new rate" },
+    { "title": "Offset Account Calculator", "url": "/australia/offset-account-calculator/", "desc": "Check if a better offset product saves more than rate alone" },
+    { "title": "Income Tax Calculator", "url": "/australia/income-tax-calculator/", "desc": "Understand after-tax impact of mortgage interest for investors" }
+  ],
+  "schema": {
+    "appName": "Refinance Calculator Australia",
+    "appDescription": "Calculate monthly savings, break-even period, and total interest saved from refinancing your Australian home loan to a lower rate"
+  }
+}

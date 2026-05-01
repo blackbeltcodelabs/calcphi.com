@@ -1,0 +1,90 @@
+{
+  "id": "first-home-buyer",
+  "inputs": [
+    { "id": "property-price", "label": "Property Purchase Price (A$)", "min": 100000, "max": 3000000, "step": 5000, "value": 650000, "hint": "Enter the purchase price of the property" },
+    { "id": "state", "label": "State / Territory", "type": "select", "options": [
+      { "value": "NSW", "label": "New South Wales (NSW)" },
+      { "value": "VIC", "label": "Victoria (VIC)" },
+      { "value": "QLD", "label": "Queensland (QLD)" },
+      { "value": "WA", "label": "Western Australia (WA)" },
+      { "value": "SA", "label": "South Australia (SA)" },
+      { "value": "ACT", "label": "Australian Capital Territory (ACT)" },
+      { "value": "TAS", "label": "Tasmania (TAS)" },
+      { "value": "NT", "label": "Northern Territory (NT)" }
+    ], "hint": "Stamp duty and FHOG vary by state" },
+    { "id": "first-home-owner", "label": "First Home Owner?", "type": "select", "options": [
+      { "value": "yes", "label": "Yes — first home buyer" },
+      { "value": "no", "label": "No — owner-occupier / investor" }
+    ], "hint": "" },
+    { "id": "property-type", "label": "Property Type", "type": "select", "options": [
+      { "value": "established", "label": "Established / Existing" },
+      { "value": "new", "label": "New Build / Off-the-Plan" }
+    ], "hint": "New builds may qualify for additional concessions" },
+    { "id": "deposit-percent", "label": "Deposit Saved (%)", "min": 5, "max": 50, "step": 1, "value": 10, "hint": "As % of purchase price" }
+  ],
+  "outputs": [
+    { "id": "stamp-duty", "label": "Stamp Duty (Est.)", "highlight": true },
+    { "id": "fhog", "label": "First Home Owner Grant" },
+    { "id": "deposit-required", "label": "Deposit Required (A$)" },
+    { "id": "total-upfront", "label": "Total Upfront Costs" }
+  ],
+  "staticTable": {
+    "caption": "Approximate stamp duty for first home buyers — established property 2025–26",
+    "headers": ["State", "$500,000", "$650,000", "$800,000", "FHOG Amount"],
+    "rows": [
+      ["NSW", "$0 (FHB exempt under $800k)", "$0 (FHB exempt under $800k)", "$0 (FHB exempt under $800k)", "$10,000 (new builds only)"],
+      ["VIC", "$0 (FHB exempt under $600k)", "Concession ($600k–$750k)", "$31,070 (full duty)", "$10,000 (regional: $20,000)"],
+      ["QLD", "$0 (FHB exempt under $550k)", "Concession ($550k–$700k)", "$21,850", "$30,000 (new builds)"],
+      ["WA", "$0 (FHB exempt under $430k)", "Concession ($430k–$530k)", "$26,730", "$10,000 (new builds)"],
+      ["SA", "$13,150", "$20,330", "$27,330", "$15,000 (new builds)"],
+      ["ACT", "$0 (low income + FHB concession)", "~$16,750", "~$24,680", "Nil (ACT)"]
+    ]
+  },
+  "howToSteps": [
+    { "name": "Enter Property Price and State", "text": "Enter the purchase price and select your state or territory. Stamp duty rates, thresholds, and first home buyer concessions vary significantly by state." },
+    { "name": "Confirm First Home Buyer Status", "text": "Select whether you are a first home buyer. Most states offer stamp duty exemptions or concessions for first home buyers below certain price thresholds." },
+    { "name": "Select Property Type", "text": "New builds often attract the First Home Owner Grant (FHOG), while established properties may not. Select the correct type to include any applicable grants." },
+    { "name": "Review Total Upfront Costs", "text": "The calculator shows estimated stamp duty, applicable FHOG, deposit required, and total upfront cash needed — including a provision for legal fees, inspections, and loan costs." }
+  ],
+  "faq": [
+    {
+      "q": "How much is the First Home Owner Grant (FHOG) in Australia?",
+      "a": "The FHOG amount varies by state and property type. As of FY2025–26: NSW pays $10,000 for new builds only; VIC pays $10,000 ($20,000 in regional areas) for new builds; QLD pays $30,000 for new builds (temporarily increased from $15,000 until June 2025, then reverting); WA pays $10,000; SA pays $15,000. The FHOG is not available for established properties in most states."
+    },
+    {
+      "q": "What is the First Home Guarantee (FHG) and how is it different to the FHOG?",
+      "a": "The First Home Guarantee (FHG) is a federal government scheme allowing eligible first home buyers to purchase with a 5% deposit and no LMI — the government guarantees the remaining 15% to the lender. It is separate to the FHOG (a cash grant from state governments). The FHG has income caps ($125,000 single / $200,000 couple) and property price caps by location."
+    },
+    {
+      "q": "What stamp duty concessions are available in NSW for first home buyers?",
+      "a": "In NSW, first home buyers purchasing a property valued up to $800,000 for a new home or $1,000,000 for an existing home pay zero stamp duty. For properties between these thresholds and $1,000,000 (new) or $1,500,000 (existing), a partial concession applies. From January 2023, first home buyers can also opt into the NSW First Home Buyer Choice scheme (annual property tax instead of upfront stamp duty) for properties up to $1.5 million."
+    },
+    {
+      "q": "What other costs should I budget for when buying my first home?",
+      "a": "Beyond stamp duty, budget for: conveyancing / legal fees ($1,500–$3,000), building and pest inspection ($400–$800), loan application fee ($0–$600), LMI if deposit is under 20%, moving costs ($500–$2,000), and connection fees for utilities. A practical rule of thumb is to budget 3–5% of the property price for total purchase costs beyond the deposit."
+    },
+    {
+      "q": "Can I use my super to buy my first home?",
+      "a": "Yes, through the First Home Super Saver (FHSS) scheme. You can make voluntary contributions to super (up to $15,000/year, $50,000 total) and then request release of those funds plus associated earnings for a first home deposit. Contributions are taxed at 15% (concessional rate) going in, which is lower than most marginal tax rates. Not all super funds support FHSS — check with your fund."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "NSW first home buyer — $650,000 established property",
+      "text": "A first home buyer in NSW purchasing an established property for $650,000 pays zero stamp duty (under the $800,000 threshold). With a 10% deposit ($65,000), they need approximately $68,000–$70,000 in total upfront cash (deposit + legal fees + inspection + LMI capitalised on loan). No FHOG is available for established properties in NSW."
+    },
+    {
+      "heading": "QLD first home buyer — $580,000 new build",
+      "text": "A first home buyer in QLD purchasing a new build for $580,000 receives a $30,000 FHOG (QLD temporarily increased grant for new builds). Stamp duty is approximately $3,850 with first home buyer concession. With a 10% deposit, total upfront cash required is approximately $63,000 (offset by the $30,000 grant to approximately $33,000 net outlay beyond the deposit itself)."
+    }
+  ],
+  "related": [
+    { "title": "Mortgage Calculator", "url": "/australia/mortgage-calculator/", "desc": "Calculate monthly repayments on your first home loan" },
+    { "title": "LMI Calculator", "url": "/australia/lmi-calculator/", "desc": "Estimate LMI cost if your deposit is under 20%" },
+    { "title": "Salary Sacrifice Calculator", "url": "/australia/salary-sacrifice-calculator/", "desc": "Boost your deposit via the First Home Super Saver scheme" }
+  ],
+  "schema": {
+    "appName": "First Home Buyer Calculator Australia",
+    "appDescription": "Calculate stamp duty, First Home Owner Grant, deposit required, and total upfront costs for first home buyers in every Australian state and territory"
+  }
+}

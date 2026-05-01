@@ -1,0 +1,65 @@
+{
+  "id": "mortgage",
+  "inputs": [
+    { "id": "loan-amount", "label": "Loan Amount (A$)", "min": 10000, "max": 5000000, "step": 5000, "value": 600000, "hint": "Purchase price minus deposit" },
+    { "id": "interest-rate", "label": "Annual Interest Rate (%)", "min": 0.5, "max": 20, "step": 0.05, "value": 6.3, "hint": "Average variable rate ~6.3% (May 2026)" },
+    { "id": "loan-term", "label": "Loan Term (Years)", "min": 5, "max": 30, "step": 1, "value": 30, "hint": "Most Australian home loans are 25–30 years" },
+    { "id": "repayment-type", "label": "Repayment Type", "type": "select", "options": [
+      { "value": "principal-interest", "label": "Principal & Interest" },
+      { "value": "interest-only", "label": "Interest Only" }
+    ], "hint": "" }
+  ],
+  "outputs": [
+    { "id": "monthly-repayment", "label": "Monthly Repayment", "highlight": true },
+    { "id": "total-repayments", "label": "Total Repayments" },
+    { "id": "total-interest", "label": "Total Interest Paid" },
+    { "id": "fortnightly-repayment", "label": "Fortnightly Repayment" }
+  ],
+  "howToSteps": [
+    { "name": "Enter Loan Amount", "text": "Enter the amount you plan to borrow — purchase price minus your deposit. For a $750,000 property with a 20% deposit, enter $600,000." },
+    { "name": "Set Interest Rate", "text": "Enter your interest rate. The average Australian variable home loan rate is approximately 6.3% as of May 2026. Fixed rates vary by lender and term." },
+    { "name": "Choose Loan Term", "text": "Select the number of years for your mortgage. Most Australian home loans run 25–30 years. A shorter term means higher repayments but less interest paid overall." },
+    { "name": "Review Your Results", "text": "The calculator shows your monthly and fortnightly repayments, total repayments over the life of the loan, and total interest paid. Use this to compare loan options." }
+  ],
+  "faq": [
+    {
+      "q": "What is the average home loan interest rate in Australia in 2026?",
+      "a": "As of May 2026, the average variable home loan rate in Australia is approximately 6.3% per annum. The RBA cash rate target is 4.10%. Fixed rates for 2-year terms are generally available between 5.8% and 6.5% depending on the lender and LVR."
+    },
+    {
+      "q": "How much can I borrow for a home loan in Australia?",
+      "a": "Australian lenders typically allow borrowing up to 4–6 times your gross annual income, subject to Responsible Lending obligations (now under APRA/ASIC guidelines). Most lenders will also require genuine savings of at least 5% of the purchase price, plus enough to cover stamp duty and costs."
+    },
+    {
+      "q": "What is the difference between principal and interest vs interest-only repayments?",
+      "a": "Principal and interest (P&I) repayments pay down both the loan balance and the interest each month, so you build equity and the loan is repaid by end of term. Interest-only (IO) repayments cover only the interest charge, leaving the principal unchanged. IO periods are typically 1–5 years and result in higher total interest paid over the life of the loan."
+    },
+    {
+      "q": "What is LVR and why does it matter?",
+      "a": "LVR (Loan-to-Value Ratio) is your loan amount divided by the property value, expressed as a percentage. An 80% LVR means you are borrowing 80% of the property value. Lenders charge Lenders Mortgage Insurance (LMI) when LVR exceeds 80%. Borrowing below 80% LVR avoids LMI, which can save tens of thousands of dollars."
+    },
+    {
+      "q": "Is it better to pay fortnightly instead of monthly?",
+      "a": "Yes, paying fortnightly (26 payments per year instead of 12 monthly payments) effectively results in one extra monthly payment per year. On a $600,000 loan at 6.3% over 30 years, switching to fortnightly repayments can save over $70,000 in interest and cut the loan term by approximately 4–5 years."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "Sydney buyer — $750,000 property, 20% deposit",
+      "text": "A buyer purchasing a $750,000 property in Sydney with a 20% deposit ($150,000) takes a $600,000 home loan at 6.3% over 30 years. Monthly P&I repayments are approximately $3,718. Total repayments over 30 years are approximately $1,338,520, meaning total interest paid is approximately $738,520."
+    },
+    {
+      "heading": "Melbourne investor — $500,000 loan, interest-only for 5 years",
+      "text": "An investor borrowing $500,000 at 6.5% interest-only for the first 5 years pays approximately $2,708 per month during the IO period. After 5 years reverting to P&I over the remaining 25 years, repayments jump to approximately $3,372 per month. The IO period adds roughly $80,000 in extra interest over the loan life."
+    }
+  ],
+  "related": [
+    { "title": "Offset Account Calculator", "url": "/australia/offset-account-calculator/", "desc": "See how much an offset account saves on your mortgage" },
+    { "title": "Refinance Calculator", "url": "/australia/refinance-calculator/", "desc": "Calculate break-even point and savings from refinancing" },
+    { "title": "First Home Buyer Calculator", "url": "/australia/first-home-buyer-calculator/", "desc": "Stamp duty, FHOG, and total upfront costs" }
+  ],
+  "schema": {
+    "appName": "Australian Mortgage Calculator",
+    "appDescription": "Calculate monthly home loan repayments, total interest, and amortization schedule for Australian mortgages at current RBA-linked rates"
+  }
+}
