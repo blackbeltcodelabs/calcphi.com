@@ -1,0 +1,14 @@
+{#
+  Geo-routing banner — shows which country version the user is viewing.
+  Hidden by default; geo.js populates text and un-hides it at runtime.
+  Rendered on every page but only shown on /india/* and /australia/* paths.
+#}
+<div id="geo-banner" class="geo-banner" hidden role="region" aria-label="Country version indicator">
+  <div class="geo-banner__inner">
+    <span class="geo-banner__text">
+      You're viewing <strong data-geo-current></strong> calculators
+    </span>
+    <button class="geo-banner__switch" data-geo-switch type="button" aria-label="Switch country version"></button>
+    <button class="geo-banner__close" data-geo-close type="button" aria-label="Dismiss this banner">&#x2715;</button>
+  </div>
+</div>

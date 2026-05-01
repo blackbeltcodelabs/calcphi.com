@@ -14,10 +14,12 @@
 </head>
 <body>
   {% include "components/header.njk" %}
+  {% include "components/geo-banner.njk" %}
   {% include "components/breadcrumb.njk" %}
 
   {{ content | safe }}
 
   {% include "components/footer.njk" %}
+  <script src="/assets/js/geo.js" defer></script>
 </body>
 </html>

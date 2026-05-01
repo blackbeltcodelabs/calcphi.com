@@ -26,7 +26,20 @@
 <meta name="twitter:description" content="{{ description }}">
 <meta name="twitter:image" content="{{ site.url }}{{ ogImage if ogImage else site.defaultOgImage }}">
 
-<!-- Hreflang -->
+<!-- Hreflang — auto-generated from market + permalink -->
+{% if market == "india" %}
+<link rel="alternate" hreflang="en-in"    href="{{ site.url }}{{ permalink }}">
+<link rel="alternate" hreflang="en-au"    href="{{ site.url }}/australia/">
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}/india/">
+{% elif market == "australia" %}
+<link rel="alternate" hreflang="en-au"    href="{{ site.url }}{{ permalink }}">
+<link rel="alternate" hreflang="en-in"    href="{{ site.url }}/india/">
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}/australia/">
+{% else %}
+<link rel="alternate" hreflang="en-in"    href="{{ site.url }}/india/">
+<link rel="alternate" hreflang="en-au"    href="{{ site.url }}/australia/">
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}/">
+{% endif %}
 {% if hreflang %}
   {% for h in hreflang %}
   <link rel="alternate" hreflang="{{ h.lang }}" href="{{ site.url }}{{ h.url }}">

@@ -1210,3 +1210,53 @@ a.cp-mcard:hover { color: inherit; }
   margin-bottom: 3px;
   flex-shrink: 0;
 }
+
+/* ── Geo banner ────────────────────────────────────────────── */
+.geo-banner {
+  background: var(--color-primary);
+  color: #fff;
+  font-size: var(--text-sm, 0.85rem);
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  position: relative;
+  z-index: 50;
+}
+.geo-banner__inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 1.25rem;
+  flex-wrap: wrap;
+}
+.geo-banner__text { flex: 1; min-width: 0; }
+.geo-banner__switch {
+  flex-shrink: 0;
+  background: rgba(255,255,255,.15);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: var(--text-sm, 0.85rem);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .15s;
+}
+.geo-banner__switch:hover { background: rgba(255,255,255,.25); }
+.geo-banner__close {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,.6);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 2px 6px;
+  line-height: 1;
+  border-radius: 3px;
+  transition: color .15s;
+}
+.geo-banner__close:hover { color: #fff; }
+@media (max-width: 480px) {
+  .geo-banner__inner { gap: 8px; }
+  .geo-banner__text  { font-size: .8rem; }
+}
