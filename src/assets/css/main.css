@@ -170,6 +170,41 @@
 }
 .cp-hw__cta:hover { background: var(--accent-w); text-decoration: none; }
 
+/* ── Hero widget carousel ─────────────────────────────────── */
+.cp-hw-carousel {
+  display: grid;          /* grid stacks children in same cell  */
+  max-width: 420px;
+  width: 100%;
+}
+.cp-hw-carousel__slide {
+  grid-area: 1 / 1;       /* every slide occupies the same cell */
+  opacity: 0;
+  transition: opacity 0.55s ease;
+  pointer-events: none;
+  will-change: opacity;
+}
+.cp-hw-carousel__slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.cp-hw-carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 14px;
+}
+.cp-hw-carousel__dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--line-2);
+  transition: background 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+.cp-hw-carousel__dot.dot-active {
+  background: var(--ink);
+  transform: scale(1.25);
+}
+
 /* ── AU mortgage spotlight (hub page widget section) ─────── */
 .au-spotlight {
   display: grid;

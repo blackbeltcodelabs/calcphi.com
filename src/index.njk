@@ -43,56 +43,197 @@ description: "Free, accurate financial calculators for India, USA, Canada and Au
         </div>
 
         <div class="cp-hero__visual" aria-hidden="true">
-          <div class="cp-hero__widget">
-            <div class="cp-hw__header">
-              <span class="cp-hw__title">SIP Calculator</span>
-              <span class="cp-hw__badge">Live</span>
-            </div>
-            <div class="cp-hw__body">
-              <div class="cp-hw__row">
-                <span class="cp-hw__label">Monthly SIP</span>
-                <span class="cp-hw__val">₹10,000</span>
-              </div>
-              <div class="cp-hw__slider-track"><div class="cp-hw__slider-fill" style="width:60%"></div></div>
-              <div class="cp-hw__row">
-                <span class="cp-hw__label">Annual Return</span>
-                <span class="cp-hw__val">12%</span>
-              </div>
-              <div class="cp-hw__slider-track"><div class="cp-hw__slider-fill" style="width:48%"></div></div>
-              <div class="cp-hw__row">
-                <span class="cp-hw__label">Tenure</span>
-                <span class="cp-hw__val">15 Years</span>
-              </div>
-              <div class="cp-hw__slider-track"><div class="cp-hw__slider-fill" style="width:75%"></div></div>
-            </div>
-            <div class="cp-hw__result">
-              <div class="cp-hw__donut-wrap">
-                <svg width="120" height="120" viewBox="0 0 42 42" aria-label="Returns breakdown">
-                  <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="var(--line)" stroke-width="4"/>
-                  <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="var(--accent)" stroke-width="4"
-                    stroke-dasharray="63 37" stroke-dashoffset="25" stroke-linecap="round"/>
-                  <text x="21" y="19.5" text-anchor="middle" font-size="4.5" fill="var(--ink-3)" font-family="sans-serif">Returns</text>
-                  <text x="21" y="24.5" text-anchor="middle" font-size="5.5" fill="var(--ink)" font-weight="600" font-family="sans-serif">63%</text>
-                </svg>
-              </div>
-              <div class="cp-hw__stats">
-                <div class="cp-hw__stat">
-                  <span class="cp-hw__stat-l">Invested</span>
-                  <span class="cp-hw__stat-v">₹18.0L</span>
+
+          <div class="cp-hw-carousel" id="hp-carousel">
+
+            <!-- Slide 1 — India SIP (unchanged) -->
+            <div class="cp-hw-carousel__slide active" id="hp-slide-0">
+              <div class="cp-hero__widget">
+                <div class="cp-hw__header">
+                  <span class="cp-hw__title">SIP Calculator</span>
+                  <span class="cp-hw__badge">Live</span>
                 </div>
-                <div class="cp-hw__stat">
-                  <span class="cp-hw__stat-l">Returns</span>
-                  <span class="cp-hw__stat-v" style="color:var(--accent)">₹30.4L</span>
+                <div class="cp-hw__body">
+                  <div class="cp-hw__row">
+                    <span class="cp-hw__label">Monthly SIP</span>
+                    <span class="cp-hw__val">₹10,000</span>
+                  </div>
+                  <div class="cp-hw__slider-track"><div class="cp-hw__slider-fill" style="width:60%"></div></div>
+                  <div class="cp-hw__row">
+                    <span class="cp-hw__label">Annual Return</span>
+                    <span class="cp-hw__val">12%</span>
+                  </div>
+                  <div class="cp-hw__slider-track"><div class="cp-hw__slider-fill" style="width:48%"></div></div>
+                  <div class="cp-hw__row">
+                    <span class="cp-hw__label">Tenure</span>
+                    <span class="cp-hw__val">15 Years</span>
+                  </div>
+                  <div class="cp-hw__slider-track"><div class="cp-hw__slider-fill" style="width:75%"></div></div>
                 </div>
-                <div class="cp-hw__stat cp-hw__stat--big">
-                  <span class="cp-hw__stat-l">Total Value</span>
-                  <span class="cp-hw__stat-v">₹48.4L</span>
+                <div class="cp-hw__result">
+                  <div class="cp-hw__donut-wrap">
+                    <svg width="120" height="120" viewBox="0 0 42 42" aria-label="Returns breakdown">
+                      <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="var(--line)" stroke-width="4"/>
+                      <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="var(--accent)" stroke-width="4"
+                        stroke-dasharray="63 37" stroke-dashoffset="25" stroke-linecap="round"/>
+                      <text x="21" y="19.5" text-anchor="middle" font-size="4.5" fill="var(--ink-3)" font-family="sans-serif">Returns</text>
+                      <text x="21" y="24.5" text-anchor="middle" font-size="5.5" fill="var(--ink)" font-weight="600" font-family="sans-serif">63%</text>
+                    </svg>
+                  </div>
+                  <div class="cp-hw__stats">
+                    <div class="cp-hw__stat">
+                      <span class="cp-hw__stat-l">Invested</span>
+                      <span class="cp-hw__stat-v">₹18.0L</span>
+                    </div>
+                    <div class="cp-hw__stat">
+                      <span class="cp-hw__stat-l">Returns</span>
+                      <span class="cp-hw__stat-v" style="color:var(--accent)">₹30.4L</span>
+                    </div>
+                    <div class="cp-hw__stat cp-hw__stat--big">
+                      <span class="cp-hw__stat-l">Total Value</span>
+                      <span class="cp-hw__stat-v">₹48.4L</span>
+                    </div>
+                  </div>
                 </div>
+                <a href="/india/sip-calculator/" class="cp-hw__cta">Open full SIP calculator →</a>
               </div>
             </div>
-            <a href="/india/sip-calculator/" class="cp-hw__cta">Open full SIP calculator →</a>
+
+            <!-- Slide 2 — Australia Mortgage -->
+            <div class="cp-hw-carousel__slide" id="hp-slide-1">
+              <div class="cp-hero__widget">
+                <div class="cp-hw__header">
+                  <span class="cp-hw__title">🏠 Mortgage Calculator</span>
+                  <span class="cp-hw__badge">Live</span>
+                </div>
+                <div class="cp-hw__body">
+                  <div class="cp-hw__row">
+                    <span class="cp-hw__label">Loan Amount</span>
+                    <span class="cp-hw__val" id="hp-au-loan">A$650,000</span>
+                  </div>
+                  <div class="cp-hw__slider-track">
+                    <div class="cp-hw__slider-fill" id="hp-au-loan-fill" style="width:34%"></div>
+                  </div>
+                  <div class="cp-hw__row">
+                    <span class="cp-hw__label">Interest Rate</span>
+                    <span class="cp-hw__val" id="hp-au-rate">6.24% p.a.</span>
+                  </div>
+                  <div class="cp-hw__slider-track">
+                    <div class="cp-hw__slider-fill" id="hp-au-rate-fill" style="width:36%"></div>
+                  </div>
+                  <div class="cp-hw__row">
+                    <span class="cp-hw__label">Loan Term</span>
+                    <span class="cp-hw__val" id="hp-au-term">30 years</span>
+                  </div>
+                  <div class="cp-hw__slider-track">
+                    <div class="cp-hw__slider-fill" id="hp-au-term-fill" style="width:100%"></div>
+                  </div>
+                </div>
+                <div class="cp-hw__result">
+                  <div class="au-hw__monthly">
+                    <div class="au-hw__monthly-label">Monthly repayment</div>
+                    <div class="au-hw__monthly-amount" id="hp-au-monthly">A$3,998</div>
+                  </div>
+                  <div class="cp-hw__stats">
+                    <div class="cp-hw__stat">
+                      <span class="cp-hw__stat-l">Principal</span>
+                      <span class="cp-hw__stat-v" id="hp-au-principal">A$650,000</span>
+                    </div>
+                    <div class="cp-hw__stat">
+                      <span class="cp-hw__stat-l">Total Interest</span>
+                      <span class="cp-hw__stat-v" style="color:var(--accent)" id="hp-au-interest">A$789,280</span>
+                    </div>
+                    <div class="cp-hw__stat cp-hw__stat--big">
+                      <span class="cp-hw__stat-l">Total Repayment</span>
+                      <span class="cp-hw__stat-v" id="hp-au-total">A$1,439,280</span>
+                    </div>
+                  </div>
+                </div>
+                <a href="/australia/mortgage-calculator/" class="cp-hw__cta">Open full Mortgage calculator →</a>
+              </div>
+            </div>
+
+          </div><!-- /cp-hw-carousel -->
+
+          <!-- Dots -->
+          <div class="cp-hw-carousel__dots" role="tablist" aria-label="Calculator preview">
+            <span class="cp-hw-carousel__dot dot-active" id="hp-dot-0" role="tab" aria-selected="true"  aria-label="India SIP"></span>
+            <span class="cp-hw-carousel__dot"            id="hp-dot-1" role="tab" aria-selected="false" aria-label="Australia Mortgage"></span>
           </div>
+
         </div>
+
+        <script>
+        (function () {
+          var slides = [document.getElementById('hp-slide-0'), document.getElementById('hp-slide-1')];
+          var dots   = [document.getElementById('hp-dot-0'),  document.getElementById('hp-dot-1')];
+          var cur = 0;
+
+          function goTo(idx) {
+            slides[cur].classList.remove('active');
+            dots[cur].classList.remove('dot-active');
+            dots[cur].setAttribute('aria-selected','false');
+            cur = idx;
+            slides[cur].classList.add('active');
+            dots[cur].classList.add('dot-active');
+            dots[cur].setAttribute('aria-selected','true');
+          }
+
+          // Dots are clickable
+          dots.forEach(function(d, i) { d.addEventListener('click', function(){ goTo(i); }); });
+
+          // Auto-advance every 2 s
+          var timer = setInterval(function () { goTo((cur + 1) % slides.length); }, 2000);
+
+          // Pause on hover
+          var carousel = document.getElementById('hp-carousel');
+          carousel.addEventListener('mouseenter', function () { clearInterval(timer); });
+          carousel.addEventListener('mouseleave', function () {
+            timer = setInterval(function () { goTo((cur + 1) % slides.length); }, 2000);
+          });
+
+          // ── Mortgage widget animation ──────────────────────
+          var scenarios = [
+            [650000, 6.24, 30],
+            [800000, 6.50, 25],
+            [450000, 5.99, 20],
+            [1100000, 6.74, 30],
+          ];
+          var mCur = 0;
+
+          function calcMo(loan, rate, term) {
+            var r = rate / 100 / 12, n = term * 12;
+            var pv = Math.pow(1 + r, n);
+            return loan * r * pv / (pv - 1);
+          }
+          function fmt(n) { return 'A$' + Math.round(n).toLocaleString('en-AU'); }
+
+          function setMortgage(idx) {
+            var s = scenarios[idx], loan = s[0], rate = s[1], term = s[2];
+            var mo = calcMo(loan, rate, term), total = mo * term * 12, interest = total - loan;
+
+            document.getElementById('hp-au-loan-fill').style.width = ((loan-200000)/1300000*100).toFixed(1)+'%';
+            document.getElementById('hp-au-rate-fill').style.width = ((rate-3)/9*100).toFixed(1)+'%';
+            document.getElementById('hp-au-term-fill').style.width = ((term-10)/20*100).toFixed(1)+'%';
+
+            var el = document.getElementById('hp-au-monthly');
+            el.style.opacity = '0';
+            setTimeout(function () {
+              document.getElementById('hp-au-loan').textContent      = fmt(loan);
+              document.getElementById('hp-au-rate').textContent      = rate.toFixed(2)+'% p.a.';
+              document.getElementById('hp-au-term').textContent      = term+' years';
+              el.textContent                                         = fmt(mo);
+              document.getElementById('hp-au-principal').textContent = fmt(loan);
+              document.getElementById('hp-au-interest').textContent  = fmt(interest);
+              document.getElementById('hp-au-total').textContent     = fmt(total);
+              el.style.opacity = '1';
+            }, 280);
+          }
+
+          setMortgage(0);
+          setInterval(function () { mCur = (mCur+1) % scenarios.length; setMortgage(mCur); }, 3500);
+        })();
+        </script>
       </div>
     </div>
   </section>
