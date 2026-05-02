@@ -173,37 +173,37 @@ description: "Free, accurate financial calculators for India, USA, Canada and Au
           // Hero text per slide
           var heroText = [
             {
-              sub:     ‘SIPs, EMIs, taxes, retirement — every calculator you\’ll ever need, free, fast, and tuned for India.’,
-              cta1:    { text: ‘Open SIP calculator →’, href: ‘/india/sip-calculator/’ },
-              cta2:    { text: ‘Browse all 108 →’, href: ‘/india/’ },
-              metricN: ‘108’,
-              metricL: ‘India calculators’
+              sub:     'SIPs, EMIs, taxes, retirement — every calculator you\'ll ever need, free, fast, and tuned for India.',
+              cta1:    { text: 'Open SIP calculator →', href: '/india/sip-calculator/' },
+              cta2:    { text: 'Browse all 108 →', href: '/india/' },
+              metricN: '108',
+              metricL: 'India calculators'
             },
             {
-              sub:     ‘Mortgage repayments, superannuation, stamp duty, HECS-HELP — every calculator built for Australian homeowners and investors.’,
-              cta1:    { text: ‘Open Mortgage calculator →’, href: ‘/australia/mortgage-calculator/’ },
-              cta2:    { text: ‘Browse Australia →’, href: ‘/australia/’ },
-              metricN: ‘20’,
-              metricL: ‘Australia calculators’
+              sub:     'Mortgage repayments, superannuation, stamp duty, HECS-HELP — every calculator built for Australian homeowners and investors.',
+              cta1:    { text: 'Open Mortgage calculator →', href: '/australia/mortgage-calculator/' },
+              cta2:    { text: 'Browse Australia →', href: '/australia/' },
+              metricN: '20',
+              metricL: 'Australia calculators'
             }
           ];
 
-          var subEl     = document.getElementById(‘hp-hero-sub’);
-          var cta1El    = document.getElementById(‘hp-hero-cta1’);
-          var cta2El    = document.getElementById(‘hp-hero-cta2’);
-          var metricNEl = document.getElementById(‘hp-metric-n’);
-          var metricLEl = document.getElementById(‘hp-metric-l’);
+          var subEl     = document.getElementById('hp-hero-sub');
+          var cta1El    = document.getElementById('hp-hero-cta1');
+          var cta2El    = document.getElementById('hp-hero-cta2');
+          var metricNEl = document.getElementById('hp-metric-n');
+          var metricLEl = document.getElementById('hp-metric-l');
 
           function goTo(idx) {
-            slides[cur].classList.remove(‘active’);
-            dots[cur].classList.remove(‘dot-active’);
-            dots[cur].setAttribute(‘aria-selected’,’false’);
+            slides[cur].classList.remove('active');
+            dots[cur].classList.remove('dot-active');
+            dots[cur].setAttribute('aria-selected','false');
             cur = idx;
-            slides[cur].classList.add(‘active’);
-            dots[cur].classList.add(‘dot-active’);
-            dots[cur].setAttribute(‘aria-selected’,’true’);
+            slides[cur].classList.add('active');
+            dots[cur].classList.add('dot-active');
+            dots[cur].setAttribute('aria-selected','true');
             // Crossfade hero text
-            subEl.style.opacity = ‘0’;
+            subEl.style.opacity = '0';
             setTimeout(function () {
               var h = heroText[cur];
               subEl.textContent    = h.sub;
@@ -213,7 +213,7 @@ description: "Free, accurate financial calculators for India, USA, Canada and Au
               cta2El.href          = h.cta2.href;
               metricNEl.textContent = h.metricN;
               metricLEl.textContent = h.metricL;
-              subEl.style.opacity  = ‘1’;
+              subEl.style.opacity  = '1';
             }, 200);
           }
 
