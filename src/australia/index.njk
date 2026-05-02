@@ -11,3 +11,127 @@ breadcrumbs:
     url: /
   - name: Australia
 ---
+
+<!-- Live mortgage calculator spotlight -->
+<div class="au-spotlight">
+
+  <div class="au-spotlight__text">
+    <div class="cp-tag">Australia's most-used</div>
+    <h2>What will your mortgage actually cost?</h2>
+    <p>Enter your loan size, rate, and term — get your monthly repayment, total interest, and true cost of the loan instantly.</p>
+    <a href="/australia/mortgage-calculator/" class="cp-btn cp-btn-primary">Try the full calculator →</a>
+  </div>
+
+  <div class="au-spotlight__widget">
+    <div class="cp-hero__widget" style="max-width:420px">
+
+      <div class="cp-hw__header">
+        <span class="cp-hw__title">🏠 Mortgage Calculator</span>
+        <span class="cp-hw__badge">Live</span>
+      </div>
+
+      <div class="cp-hw__body">
+        <div class="cp-hw__row">
+          <span class="cp-hw__label">Loan Amount</span>
+          <span class="cp-hw__val" id="au-hw-loan">A$650,000</span>
+        </div>
+        <div class="cp-hw__slider-track">
+          <div class="cp-hw__slider-fill" id="au-hw-loan-fill" style="width:34%"></div>
+        </div>
+        <div class="cp-hw__row">
+          <span class="cp-hw__label">Interest Rate</span>
+          <span class="cp-hw__val" id="au-hw-rate">6.24% p.a.</span>
+        </div>
+        <div class="cp-hw__slider-track">
+          <div class="cp-hw__slider-fill" id="au-hw-rate-fill" style="width:36%"></div>
+        </div>
+        <div class="cp-hw__row">
+          <span class="cp-hw__label">Loan Term</span>
+          <span class="cp-hw__val" id="au-hw-term">30 years</span>
+        </div>
+        <div class="cp-hw__slider-track">
+          <div class="cp-hw__slider-fill" id="au-hw-term-fill" style="width:100%"></div>
+        </div>
+      </div>
+
+      <div class="cp-hw__result">
+        <div class="au-hw__monthly">
+          <div class="au-hw__monthly-label">Monthly repayment</div>
+          <div class="au-hw__monthly-amount" id="au-hw-monthly">A$3,998</div>
+        </div>
+        <div class="cp-hw__stats">
+          <div class="cp-hw__stat">
+            <span class="cp-hw__stat-l">Principal</span>
+            <span class="cp-hw__stat-v" id="au-hw-principal">A$650,000</span>
+          </div>
+          <div class="cp-hw__stat">
+            <span class="cp-hw__stat-l">Total Interest</span>
+            <span class="cp-hw__stat-v" style="color:var(--accent)" id="au-hw-interest">A$789,280</span>
+          </div>
+          <div class="cp-hw__stat cp-hw__stat--big">
+            <span class="cp-hw__stat-l">Total Repayment</span>
+            <span class="cp-hw__stat-v" id="au-hw-total">A$1,439,280</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="/australia/mortgage-calculator/" class="cp-hw__cta">Open full Mortgage calculator →</a>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  // [loanAUD, ratePercent, termYears]
+  var scenarios = [
+    [650000,  6.24, 30],
+    [800000,  6.50, 25],
+    [450000,  5.99, 20],
+    [1100000, 6.74, 30],
+  ];
+
+  function monthly(loan, rate, term) {
+    var r = rate / 100 / 12, n = term * 12;
+    var pv = Math.pow(1 + r, n);
+    return loan * r * pv / (pv - 1);
+  }
+
+  function fmt(n) {
+    return 'A$' + Math.round(n).toLocaleString('en-AU');
+  }
+
+  function set(idx) {
+    var s = scenarios[idx];
+    var loan = s[0], rate = s[1], term = s[2];
+    var mo = monthly(loan, rate, term);
+    var total = mo * term * 12;
+    var interest = total - loan;
+
+    // Slider %: loan 200k–1.5M, rate 3–12%, term 10–30yr
+    document.getElementById('au-hw-loan-fill').style.width  = ((loan - 200000) / 1300000 * 100).toFixed(1) + '%';
+    document.getElementById('au-hw-rate-fill').style.width  = ((rate - 3) / 9 * 100).toFixed(1) + '%';
+    document.getElementById('au-hw-term-fill').style.width  = ((term - 10) / 20 * 100).toFixed(1) + '%';
+
+    // Fade numbers during update
+    var monthly_el = document.getElementById('au-hw-monthly');
+    monthly_el.style.opacity = '0';
+    setTimeout(function () {
+      document.getElementById('au-hw-loan').textContent      = fmt(loan);
+      document.getElementById('au-hw-rate').textContent      = rate.toFixed(2) + '% p.a.';
+      document.getElementById('au-hw-term').textContent      = term + ' years';
+      monthly_el.textContent                                 = fmt(mo);
+      document.getElementById('au-hw-principal').textContent = fmt(loan);
+      document.getElementById('au-hw-interest').textContent  = fmt(interest);
+      document.getElementById('au-hw-total').textContent     = fmt(total);
+      monthly_el.style.opacity = '1';
+    }, 280);
+  }
+
+  var cur = 0;
+  set(0);
+  setInterval(function () {
+    cur = (cur + 1) % scenarios.length;
+    set(cur);
+  }, 3500);
+})();
+</script>
