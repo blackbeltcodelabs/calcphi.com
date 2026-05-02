@@ -182,14 +182,14 @@ description: "Free, accurate financial calculators for India, USA, Canada and Au
           // Dots are clickable
           dots.forEach(function(d, i) { d.addEventListener('click', function(){ goTo(i); }); });
 
-          // Auto-advance every 2 s
-          var timer = setInterval(function () { goTo((cur + 1) % slides.length); }, 2000);
+          // Auto-advance every 5 s
+          var timer = setInterval(function () { goTo((cur + 1) % slides.length); }, 5000);
 
           // Pause on hover
           var carousel = document.getElementById('hp-carousel');
           carousel.addEventListener('mouseenter', function () { clearInterval(timer); });
           carousel.addEventListener('mouseleave', function () {
-            timer = setInterval(function () { goTo((cur + 1) % slides.length); }, 2000);
+            timer = setInterval(function () { goTo((cur + 1) % slides.length); }, 5000);
           });
 
           // ── Mortgage widget animation ──────────────────────
