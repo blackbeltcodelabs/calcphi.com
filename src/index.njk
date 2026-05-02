@@ -24,8 +24,8 @@ description: "Free, accurate financial calculators for India, USA, Canada and Au
           </div>
           <div class="cp-hero__metrics">
             <div class="cp-metric">
-              <span class="cp-metric__n">108</span>
-              <span class="cp-metric__l">India calculators</span>
+              <span class="cp-metric__n" id="hp-metric-n">108</span>
+              <span class="cp-metric__l" id="hp-metric-l">India calculators</span>
             </div>
             <div class="cp-metric">
               <span class="cp-metric__n">4</span>
@@ -173,39 +173,47 @@ description: "Free, accurate financial calculators for India, USA, Canada and Au
           // Hero text per slide
           var heroText = [
             {
-              sub:  'SIPs, EMIs, taxes, retirement — every calculator you’ll ever need, free, fast, and tuned for India.',
-              cta1: { text: 'Open SIP calculator →', href: '/india/sip-calculator/' },
-              cta2: { text: 'Browse all 108 →', href: '/india/' }
+              sub:     ‘SIPs, EMIs, taxes, retirement — every calculator you’ll ever need, free, fast, and tuned for India.’,
+              cta1:    { text: ‘Open SIP calculator →’, href: ‘/india/sip-calculator/’ },
+              cta2:    { text: ‘Browse all 108 →’, href: ‘/india/’ },
+              metricN: ‘108’,
+              metricL: ‘India calculators’
             },
             {
-              sub:  'Mortgage repayments, superannuation, stamp duty, HECS-HELP — every calculator built for Australian homeowners and investors.',
-              cta1: { text: 'Open Mortgage calculator →', href: '/australia/mortgage-calculator/' },
-              cta2: { text: 'Browse Australia →', href: '/australia/' }
+              sub:     ‘Mortgage repayments, superannuation, stamp duty, HECS-HELP — every calculator built for Australian homeowners and investors.’,
+              cta1:    { text: ‘Open Mortgage calculator →’, href: ‘/australia/mortgage-calculator/’ },
+              cta2:    { text: ‘Browse Australia →’, href: ‘/australia/’ },
+              metricN: ‘20’,
+              metricL: ‘Australia calculators’
             }
           ];
 
-          var subEl  = document.getElementById('hp-hero-sub');
-          var cta1El = document.getElementById('hp-hero-cta1');
-          var cta2El = document.getElementById('hp-hero-cta2');
+          var subEl     = document.getElementById(‘hp-hero-sub’);
+          var cta1El    = document.getElementById(‘hp-hero-cta1’);
+          var cta2El    = document.getElementById(‘hp-hero-cta2’);
+          var metricNEl = document.getElementById(‘hp-metric-n’);
+          var metricLEl = document.getElementById(‘hp-metric-l’);
 
           function goTo(idx) {
-            slides[cur].classList.remove('active');
-            dots[cur].classList.remove('dot-active');
-            dots[cur].setAttribute('aria-selected','false');
+            slides[cur].classList.remove(‘active’);
+            dots[cur].classList.remove(‘dot-active’);
+            dots[cur].setAttribute(‘aria-selected’,’false’);
             cur = idx;
-            slides[cur].classList.add('active');
-            dots[cur].classList.add('dot-active');
-            dots[cur].setAttribute('aria-selected','true');
+            slides[cur].classList.add(‘active’);
+            dots[cur].classList.add(‘dot-active’);
+            dots[cur].setAttribute(‘aria-selected’,’true’);
             // Crossfade hero text
-            subEl.style.opacity = '0';
+            subEl.style.opacity = ‘0’;
             setTimeout(function () {
               var h = heroText[cur];
-              subEl.textContent   = h.sub;
-              cta1El.textContent  = h.cta1.text;
-              cta1El.href         = h.cta1.href;
-              cta2El.textContent  = h.cta2.text;
-              cta2El.href         = h.cta2.href;
-              subEl.style.opacity = '1';
+              subEl.textContent    = h.sub;
+              cta1El.textContent   = h.cta1.text;
+              cta1El.href          = h.cta1.href;
+              cta2El.textContent   = h.cta2.text;
+              cta2El.href          = h.cta2.href;
+              metricNEl.textContent = h.metricN;
+              metricLEl.textContent = h.metricL;
+              subEl.style.opacity  = ‘1’;
             }, 200);
           }
 
