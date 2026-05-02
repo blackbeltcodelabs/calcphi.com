@@ -17,10 +17,10 @@ description: "Free, accurate financial calculators for India, USA, Canada and Au
             Money maths,<br>
             <em class="cp-hero__accent">solved.</em>
           </h1>
-          <p class="cp-hero__sub">SIPs, EMIs, taxes, retirement — every calculator you'll ever need, free, fast, and tuned for India.</p>
+          <p class="cp-hero__sub" id="hp-hero-sub" style="transition:opacity .25s ease">SIPs, EMIs, taxes, retirement — every calculator you'll ever need, free, fast, and tuned for India.</p>
           <div class="cp-hero__ctas">
-            <a href="/india/sip-calculator/" class="cp-btn cp-btn-primary">Open SIP calculator →</a>
-            <a href="/india/" class="cp-btn cp-btn-ghost">Browse all 108 →</a>
+            <a href="/india/sip-calculator/" class="cp-btn cp-btn-primary" id="hp-hero-cta1">Open SIP calculator →</a>
+            <a href="/india/" class="cp-btn cp-btn-ghost" id="hp-hero-cta2">Browse all 108 →</a>
           </div>
           <div class="cp-hero__metrics">
             <div class="cp-metric">
@@ -46,7 +46,7 @@ description: "Free, accurate financial calculators for India, USA, Canada and Au
 
           <div class="cp-hw-carousel" id="hp-carousel">
 
-            <!-- Slide 1 — India SIP (unchanged) -->
+            <!-- Slide 1 — India SIP (animated) -->
             <div class="cp-hw-carousel__slide active" id="hp-slide-0">
               <div class="cp-hero__widget">
                 <div class="cp-hw__header">
@@ -56,42 +56,43 @@ description: "Free, accurate financial calculators for India, USA, Canada and Au
                 <div class="cp-hw__body">
                   <div class="cp-hw__row">
                     <span class="cp-hw__label">Monthly SIP</span>
-                    <span class="cp-hw__val">₹10,000</span>
+                    <span class="cp-hw__val" id="hp-sip-monthly">₹10,000</span>
                   </div>
-                  <div class="cp-hw__slider-track"><div class="cp-hw__slider-fill" style="width:60%"></div></div>
+                  <div class="cp-hw__slider-track"><div class="cp-hw__slider-fill" id="hp-sip-mo-fill" style="width:60%"></div></div>
                   <div class="cp-hw__row">
                     <span class="cp-hw__label">Annual Return</span>
-                    <span class="cp-hw__val">12%</span>
+                    <span class="cp-hw__val" id="hp-sip-rate">12%</span>
                   </div>
-                  <div class="cp-hw__slider-track"><div class="cp-hw__slider-fill" style="width:48%"></div></div>
+                  <div class="cp-hw__slider-track"><div class="cp-hw__slider-fill" id="hp-sip-rate-fill" style="width:48%"></div></div>
                   <div class="cp-hw__row">
                     <span class="cp-hw__label">Tenure</span>
-                    <span class="cp-hw__val">15 Years</span>
+                    <span class="cp-hw__val" id="hp-sip-term">15 Years</span>
                   </div>
-                  <div class="cp-hw__slider-track"><div class="cp-hw__slider-fill" style="width:75%"></div></div>
+                  <div class="cp-hw__slider-track"><div class="cp-hw__slider-fill" id="hp-sip-term-fill" style="width:75%"></div></div>
                 </div>
                 <div class="cp-hw__result">
                   <div class="cp-hw__donut-wrap">
                     <svg width="120" height="120" viewBox="0 0 42 42" aria-label="Returns breakdown">
                       <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="var(--line)" stroke-width="4"/>
                       <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="var(--accent)" stroke-width="4"
+                        id="hp-sip-arc"
                         stroke-dasharray="63 37" stroke-dashoffset="25" stroke-linecap="round"/>
                       <text x="21" y="19.5" text-anchor="middle" font-size="4.5" fill="var(--ink-3)" font-family="sans-serif">Returns</text>
-                      <text x="21" y="24.5" text-anchor="middle" font-size="5.5" fill="var(--ink)" font-weight="600" font-family="sans-serif">63%</text>
+                      <text x="21" y="24.5" text-anchor="middle" font-size="5.5" fill="var(--ink)" font-weight="600" font-family="sans-serif" id="hp-sip-pct">63%</text>
                     </svg>
                   </div>
                   <div class="cp-hw__stats">
                     <div class="cp-hw__stat">
                       <span class="cp-hw__stat-l">Invested</span>
-                      <span class="cp-hw__stat-v">₹18.0L</span>
+                      <span class="cp-hw__stat-v" id="hp-sip-invested">₹18.0L</span>
                     </div>
                     <div class="cp-hw__stat">
                       <span class="cp-hw__stat-l">Returns</span>
-                      <span class="cp-hw__stat-v" style="color:var(--accent)">₹30.4L</span>
+                      <span class="cp-hw__stat-v" style="color:var(--accent)" id="hp-sip-returns">₹30.4L</span>
                     </div>
                     <div class="cp-hw__stat cp-hw__stat--big">
                       <span class="cp-hw__stat-l">Total Value</span>
-                      <span class="cp-hw__stat-v">₹48.4L</span>
+                      <span class="cp-hw__stat-v" id="hp-sip-total">₹48.4L</span>
                     </div>
                   </div>
                 </div>
@@ -169,6 +170,24 @@ description: "Free, accurate financial calculators for India, USA, Canada and Au
           var dots   = [document.getElementById('hp-dot-0'),  document.getElementById('hp-dot-1')];
           var cur = 0;
 
+          // Hero text per slide
+          var heroText = [
+            {
+              sub:  'SIPs, EMIs, taxes, retirement — every calculator you’ll ever need, free, fast, and tuned for India.',
+              cta1: { text: 'Open SIP calculator →', href: '/india/sip-calculator/' },
+              cta2: { text: 'Browse all 108 →', href: '/india/' }
+            },
+            {
+              sub:  'Mortgage repayments, superannuation, stamp duty, HECS-HELP — every calculator built for Australian homeowners and investors.',
+              cta1: { text: 'Open Mortgage calculator →', href: '/australia/mortgage-calculator/' },
+              cta2: { text: 'Browse Australia →', href: '/australia/' }
+            }
+          ];
+
+          var subEl  = document.getElementById('hp-hero-sub');
+          var cta1El = document.getElementById('hp-hero-cta1');
+          var cta2El = document.getElementById('hp-hero-cta2');
+
           function goTo(idx) {
             slides[cur].classList.remove('active');
             dots[cur].classList.remove('dot-active');
@@ -177,26 +196,86 @@ description: "Free, accurate financial calculators for India, USA, Canada and Au
             slides[cur].classList.add('active');
             dots[cur].classList.add('dot-active');
             dots[cur].setAttribute('aria-selected','true');
+            // Crossfade hero text
+            subEl.style.opacity = '0';
+            setTimeout(function () {
+              var h = heroText[cur];
+              subEl.textContent   = h.sub;
+              cta1El.textContent  = h.cta1.text;
+              cta1El.href         = h.cta1.href;
+              cta2El.textContent  = h.cta2.text;
+              cta2El.href         = h.cta2.href;
+              subEl.style.opacity = '1';
+            }, 200);
           }
 
           // Dots are clickable
           dots.forEach(function(d, i) { d.addEventListener('click', function(){ goTo(i); }); });
 
-          // Auto-advance every 5 s
-          var timer = setInterval(function () { goTo((cur + 1) % slides.length); }, 5000);
+          // Auto-advance every 6 s
+          var timer = setInterval(function () { goTo((cur + 1) % slides.length); }, 6000);
 
           // Pause on hover
           var carousel = document.getElementById('hp-carousel');
           carousel.addEventListener('mouseenter', function () { clearInterval(timer); });
           carousel.addEventListener('mouseleave', function () {
-            timer = setInterval(function () { goTo((cur + 1) % slides.length); }, 5000);
+            timer = setInterval(function () { goTo((cur + 1) % slides.length); }, 6000);
           });
 
+          // ── SIP widget animation ──────────────────────────
+          var sipScenarios = [
+            [10000, 12, 15],
+            [5000,  12, 10],
+            [25000, 14, 20],
+            [15000, 10, 10],
+          ];
+          var sCur = 0;
+
+          function calcSIP(monthly, rate, years) {
+            var r = rate / 12 / 100, n = years * 12;
+            return monthly * (((Math.pow(1 + r, n) - 1) / r) * (1 + r));
+          }
+          function fmtINR(n) {
+            if (n >= 1e7) return '₹' + (n / 1e7).toFixed(1) + 'Cr';
+            if (n >= 1e5) return '₹' + (n / 1e5).toFixed(1) + 'L';
+            return '₹' + Math.round(n).toLocaleString('en-IN');
+          }
+
+          function setSIP(idx) {
+            var s = sipScenarios[idx], monthly = s[0], rate = s[1], years = s[2];
+            var maturity = calcSIP(monthly, rate, years);
+            var invested = monthly * years * 12;
+            var returns  = maturity - invested;
+            var retPct   = Math.round(returns / maturity * 100);
+
+            // Sliders: monthly 500–50000, rate 1–30%, term 1–40yr
+            document.getElementById('hp-sip-mo-fill').style.width   = ((monthly - 500) / 49500 * 100).toFixed(1) + '%';
+            document.getElementById('hp-sip-rate-fill').style.width = ((rate - 1) / 29 * 100).toFixed(1) + '%';
+            document.getElementById('hp-sip-term-fill').style.width = ((years - 1) / 39 * 100).toFixed(1) + '%';
+
+            var invEl = document.getElementById('hp-sip-invested');
+            invEl.style.opacity = '0';
+            setTimeout(function () {
+              document.getElementById('hp-sip-monthly').textContent = '₹' + monthly.toLocaleString('en-IN');
+              document.getElementById('hp-sip-rate').textContent    = rate + '%';
+              document.getElementById('hp-sip-term').textContent    = years + ' Years';
+              document.getElementById('hp-sip-arc').setAttribute('stroke-dasharray', retPct + ' ' + (100 - retPct));
+              document.getElementById('hp-sip-pct').textContent     = retPct + '%';
+              invEl.textContent                                      = fmtINR(invested);
+              document.getElementById('hp-sip-returns').textContent = fmtINR(returns);
+              document.getElementById('hp-sip-total').textContent   = fmtINR(maturity);
+              invEl.style.opacity = '1';
+            }, 280);
+          }
+
+          setSIP(0);
+          setInterval(function () { sCur = (sCur + 1) % sipScenarios.length; setSIP(sCur); }, 3500);
+
           // ── Mortgage widget animation ──────────────────────
-          var scenarios = [
-            [650000, 6.24, 30],
-            [800000, 6.50, 25],
-            [450000, 5.99, 20],
+          var mortgageScenarios = [
+            [650000,  6.24, 30],
+            [800000,  6.50, 25],
+            [450000,  5.99, 20],
             [1100000, 6.74, 30],
           ];
           var mCur = 0;
@@ -209,20 +288,20 @@ description: "Free, accurate financial calculators for India, USA, Canada and Au
           function fmt(n) { return 'A$' + Math.round(n).toLocaleString('en-AU'); }
 
           function setMortgage(idx) {
-            var s = scenarios[idx], loan = s[0], rate = s[1], term = s[2];
+            var s = mortgageScenarios[idx], loan = s[0], rate = s[1], term = s[2];
             var mo = calcMo(loan, rate, term), total = mo * term * 12, interest = total - loan;
 
-            document.getElementById('hp-au-loan-fill').style.width = ((loan-200000)/1300000*100).toFixed(1)+'%';
-            document.getElementById('hp-au-rate-fill').style.width = ((rate-3)/9*100).toFixed(1)+'%';
-            document.getElementById('hp-au-term-fill').style.width = ((term-10)/20*100).toFixed(1)+'%';
+            document.getElementById('hp-au-loan-fill').style.width = ((loan - 200000) / 1300000 * 100).toFixed(1) + '%';
+            document.getElementById('hp-au-rate-fill').style.width = ((rate - 3) / 9 * 100).toFixed(1) + '%';
+            document.getElementById('hp-au-term-fill').style.width = ((term - 10) / 20 * 100).toFixed(1) + '%';
 
             var el = document.getElementById('hp-au-monthly');
             el.style.opacity = '0';
             setTimeout(function () {
               document.getElementById('hp-au-loan').textContent      = fmt(loan);
-              document.getElementById('hp-au-rate').textContent      = rate.toFixed(2)+'% p.a.';
-              document.getElementById('hp-au-term').textContent      = term+' years';
-              el.textContent                                         = fmt(mo);
+              document.getElementById('hp-au-rate').textContent      = rate.toFixed(2) + '% p.a.';
+              document.getElementById('hp-au-term').textContent      = term + ' years';
+              el.textContent                                          = fmt(mo);
               document.getElementById('hp-au-principal').textContent = fmt(loan);
               document.getElementById('hp-au-interest').textContent  = fmt(interest);
               document.getElementById('hp-au-total').textContent     = fmt(total);
@@ -231,7 +310,7 @@ description: "Free, accurate financial calculators for India, USA, Canada and Au
           }
 
           setMortgage(0);
-          setInterval(function () { mCur = (mCur+1) % scenarios.length; setMortgage(mCur); }, 3500);
+          setInterval(function () { mCur = (mCur + 1) % mortgageScenarios.length; setMortgage(mCur); }, 3500);
         })();
         </script>
       </div>
