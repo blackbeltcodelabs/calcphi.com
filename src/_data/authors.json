@@ -200,15 +200,15 @@
     "articles": [
       {
         "title": "How Much Super Do You Need to Retire Comfortably in Australia?",
-        "url": "/blog/au/how-much-super-to-retire/"
+        "url": "/australia/blog/how-much-super-to-retire/"
       },
       {
         "title": "Salary Sacrifice Super: How to Legally Pay Less Tax and Retire Richer",
-        "url": "/blog/au/salary-sacrifice-super-guide/"
+        "url": "/australia/blog/salary-sacrifice-super-guide/"
       },
       {
-        "title": "Franking Credits Explained: How Australian Dividend Investors Get a Tax Refund",
-        "url": "/blog/au/franking-credits-explained/"
+        "title": "Franking Credits Explained: How Dividend Imputation Works in Australia",
+        "url": "/australia/blog/franking-credits-explained/"
       }
     ],
     "market": "australia"
@@ -236,16 +236,16 @@
     "linkedin": "https://www.linkedin.com/",
     "articles": [
       {
-        "title": "Australian Income Tax 2025-26: Stage 3 Tax Cuts and What They Mean for You",
-        "url": "/blog/au/australia-income-tax-2025-26/"
+        "title": "Australia Income Tax Brackets 2026-27: What Your Salary Actually Costs in Tax",
+        "url": "/australia/blog/australia-income-tax-brackets-2026/"
       },
       {
-        "title": "Capital Gains Tax Australia: How the 50% CGT Discount Works and When You Qualify",
-        "url": "/blog/au/capital-gains-tax-australia/"
+        "title": "Capital Gains Tax on Property Australia: What You Actually Pay",
+        "url": "/australia/blog/capital-gains-tax-property-australia/"
       },
       {
-        "title": "HECS-HELP Debt in 2025: Repayment Rates, Indexation, and How to Pay It Off Faster",
-        "url": "/blog/au/hecs-help-repayment-guide/"
+        "title": "HECS-HELP Repayment Guide 2026: Thresholds, Rates, and Paying It Off Faster",
+        "url": "/australia/blog/hecs-help-repayment-guide/"
       }
     ],
     "market": "australia"
@@ -273,16 +273,16 @@
     "linkedin": "https://www.linkedin.com/",
     "articles": [
       {
-        "title": "First Home Buyer Australia 2025: Grants, Stamp Duty Exemptions, and What You Actually Need",
-        "url": "/blog/au/first-home-buyer-australia-guide/"
+        "title": "First Home Buyer Grants Australia 2026: Every State Scheme Explained",
+        "url": "/australia/blog/first-home-buyer-grants-australia-2026/"
       },
       {
-        "title": "Offset Account vs Redraw: Which Is Better for Your Australian Mortgage?",
-        "url": "/blog/au/offset-account-vs-redraw/"
+        "title": "Offset Account vs Redraw: What's the Difference and Which Saves More?",
+        "url": "/australia/blog/offset-account-vs-redraw/"
       },
       {
-        "title": "Australian Age Pension 2025: Eligibility, Assets Test, and How to Maximise Your Payment",
-        "url": "/blog/au/age-pension-australia-guide/"
+        "title": "Australian Age Pension 2026: Eligibility, Assets Test, and How to Maximise Your Payment",
+        "url": "/australia/blog/age-pension-australia-guide/"
       }
     ],
     "market": "australia"
