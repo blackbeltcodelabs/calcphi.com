@@ -29,8 +29,8 @@
            {% if page.url == "/" %}aria-current="page"{% endif %}>
           Markets
         </a>
-        <a href="/blog/"
-           {% if page.url.startsWith('/blog/') %}aria-current="page"{% endif %}>
+        <a href="{% if page.url.startsWith('/australia/') %}/australia/blog/{% else %}/blog/{% endif %}"
+           {% if page.url.startsWith('/australia/blog/') or page.url.startsWith('/blog/') %}aria-current="page"{% endif %}>
           Blog
         </a>
         <a href="/help/"
@@ -80,7 +80,7 @@
     <nav id="cp-mobile-nav" class="cp-mobile-nav" aria-label="Mobile navigation" hidden>
       <a href="{% if page.url.startsWith('/australia/') %}/australia/{% elif page.url.startsWith('/usa/') %}/usa/{% else %}/india/{% endif %}">Calculators</a>
       <a href="/">Markets</a>
-      <a href="/blog/">Blog</a>
+      <a href="{% if page.url.startsWith('/australia/') %}/australia/blog/{% else %}/blog/{% endif %}">Blog</a>
       <a href="/help/">Help</a>
       <div class="cp-mobile-nav__markets">
         <a href="/india/" data-market-code="IN">🇮🇳 India</a>
