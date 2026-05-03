@@ -2,25 +2,78 @@
   <div class="container">
     <div class="cp-footer__grid">
 
-      <!-- Col 1: Brand -->
+      <!-- Col 1: Brand — always shown, content varies by market -->
       <div class="cp-footer__brand">
         <a href="/" class="cp-logo" aria-label="CalcPhi">
           <span class="cp-logo-tile">φ</span>
           <span class="cp-logo-wm">Calc<em>Phi</em></span>
         </a>
-        <p class="cp-footer__desc">
-          Free financial calculators for Australia &amp; India.
-          No login required.
-        </p>
+        {% if page.url.startsWith('/australia/') %}
+        <p class="cp-footer__desc">Financial calculators built for Australians. No login required.</p>
+        <div class="cp-footer__markets">
+          <a href="/australia/" class="cp-footer__mchip cp-footer__mchip--active" data-market-code="AU">🇦🇺 Australia</a>
+        </div>
+        <a href="/markets/" class="cp-footer__other-markets">View all markets →</a>
+        {% elif page.url.startsWith('/india/') %}
+        <p class="cp-footer__desc">Financial calculators built for India. No login required.</p>
+        <div class="cp-footer__markets">
+          <a href="/india/" class="cp-footer__mchip cp-footer__mchip--active" data-market-code="IN">🇮🇳 India</a>
+        </div>
+        <a href="/markets/" class="cp-footer__other-markets">View all markets →</a>
+        {% else %}
+        <p class="cp-footer__desc">Free financial calculators for Australia &amp; India. No login required.</p>
         <div class="cp-footer__markets">
           <a href="/australia/" class="cp-footer__mchip" data-market-code="AU">🇦🇺 Australia</a>
           <a href="/india/" class="cp-footer__mchip" data-market-code="IN">🇮🇳 India</a>
           <span class="cp-footer__mchip cp-footer__mchip--soon">🇺🇸 USA <span class="cp-soon-badge">Soon</span></span>
           <span class="cp-footer__mchip cp-footer__mchip--soon">🇨🇦 Canada <span class="cp-soon-badge">Soon</span></span>
         </div>
+        {% endif %}
       </div>
 
-      <!-- Col 2: SIP & Investments -->
+      {% if page.url.startsWith('/australia/') %}
+      {# ── AUSTRALIA FOOTER ───────────────────────────────────── #}
+
+      <div class="cp-footer__col">
+        <div class="cp-footer__head">Home Loans</div>
+        <a href="/australia/mortgage-calculator/">Mortgage Calculator</a>
+        <a href="/australia/lmi-calculator/">LMI Calculator</a>
+        <a href="/australia/refinance-calculator/">Refinance Calculator</a>
+        <a href="/australia/offset-account-calculator/">Offset Account</a>
+        <a href="/australia/personal-loan-calculator/">Personal Loan</a>
+        <a href="/australia/" class="cp-footer__view-all">All 20 Australia tools →</a>
+      </div>
+
+      <div class="cp-footer__col">
+        <div class="cp-footer__head">Super &amp; Retirement</div>
+        <a href="/australia/super-balance-calculator/">Super Balance</a>
+        <a href="/australia/salary-sacrifice-calculator/">Salary Sacrifice</a>
+        <a href="/australia/age-pension-calculator/">Age Pension</a>
+        <a href="/australia/income-tax-calculator/">Income Tax</a>
+        <a href="/australia/salary-take-home-calculator/">Salary Take-Home</a>
+      </div>
+
+      <div class="cp-footer__col">
+        <div class="cp-footer__head">Tax &amp; Investing</div>
+        <a href="/australia/capital-gains-tax-calculator/">Capital Gains Tax</a>
+        <a href="/australia/hecs-repayment-calculator/">HECS Repayment</a>
+        <a href="/australia/franking-credits-calculator/">Franking Credits</a>
+        <a href="/australia/compound-interest-calculator/">Compound Interest</a>
+        <a href="/australia/rent-vs-buy-calculator/">Rent vs Buy</a>
+      </div>
+
+      <div class="cp-footer__col">
+        <div class="cp-footer__head">Company</div>
+        <a href="/about/">About</a>
+        <a href="/australia/authors/">Australia Authors</a>
+        <a href="/australia/blog/">Australia Blog</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy/">Privacy</a>
+      </div>
+
+      {% elif page.url.startsWith('/india/') %}
+      {# ── INDIA FOOTER ───────────────────────────────────────── #}
+
       <div class="cp-footer__col">
         <div class="cp-footer__head">SIP &amp; Investments</div>
         <a href="/india/sip-calculator/">SIP Calculator</a>
@@ -31,7 +84,6 @@
         <a href="/india/#mutual-funds" class="cp-footer__view-all">All 15 investment tools →</a>
       </div>
 
-      <!-- Col 3: Loans & Tax -->
       <div class="cp-footer__col">
         <div class="cp-footer__head">Loans &amp; Tax</div>
         <a href="/india/emi-calculator/">EMI Calculator</a>
@@ -42,7 +94,6 @@
         <a href="/india/#loans" class="cp-footer__view-all">All 31 loan &amp; tax tools →</a>
       </div>
 
-      <!-- Col 4: Savings & Retirement -->
       <div class="cp-footer__col">
         <div class="cp-footer__head">Savings &amp; Retirement</div>
         <a href="/india/ppf-calculator/">PPF Calculator</a>
@@ -53,28 +104,56 @@
         <a href="/india/#government" class="cp-footer__view-all">All 35 savings &amp; retirement tools →</a>
       </div>
 
-      <!-- Col 5: Australia -->
-      <div class="cp-footer__col">
-        <div class="cp-footer__head">Australia</div>
-        <a href="/australia/mortgage-calculator/">Mortgage Calculator</a>
-        <a href="/australia/income-tax-calculator/">Income Tax</a>
-        <a href="/australia/super-balance-calculator/">Super Balance</a>
-        <a href="/australia/salary-take-home-calculator/">Salary Take-Home</a>
-        <a href="/australia/hecs-repayment-calculator/">HECS Repayment</a>
-        <a href="/australia/authors/" class="cp-footer__view-all">Australia Authors →</a>
-        <a href="/australia/" class="cp-footer__view-all">All 20 Australia tools →</a>
-      </div>
-
-      <!-- Col 6: Company -->
       <div class="cp-footer__col">
         <div class="cp-footer__head">Company</div>
         <a href="/about/">About</a>
         <a href="/india/authors/">India Authors</a>
-        <a href="/australia/authors/">Australia Authors</a>
         <a href="/blog/">Blog</a>
         <a href="/contact/">Contact</a>
         <a href="/privacy/">Privacy</a>
       </div>
+
+      {% else %}
+      {# ── HOMEPAGE / GLOBAL FOOTER ───────────────────────────── #}
+
+      <div class="cp-footer__col">
+        <div class="cp-footer__head">🇦🇺 Australia</div>
+        <a href="/australia/mortgage-calculator/">Mortgage Calculator</a>
+        <a href="/australia/super-balance-calculator/">Super Balance</a>
+        <a href="/australia/income-tax-calculator/">Income Tax</a>
+        <a href="/australia/hecs-repayment-calculator/">HECS Repayment</a>
+        <a href="/australia/salary-take-home-calculator/">Salary Take-Home</a>
+        <a href="/australia/" class="cp-footer__view-all">All 20 Australia tools →</a>
+      </div>
+
+      <div class="cp-footer__col">
+        <div class="cp-footer__head">🇮🇳 India</div>
+        <a href="/india/sip-calculator/">SIP Calculator</a>
+        <a href="/india/emi-calculator/">EMI Calculator</a>
+        <a href="/india/income-tax-calculator/">Income Tax</a>
+        <a href="/india/ppf-calculator/">PPF Calculator</a>
+        <a href="/india/fd-calculator/">FD Calculator</a>
+        <a href="/india/" class="cp-footer__view-all">All 108 India tools →</a>
+      </div>
+
+      <div class="cp-footer__col">
+        <div class="cp-footer__head">Coming Soon</div>
+        <span class="cp-footer__coming-item">🇺🇸 USA · USD</span>
+        <span class="cp-footer__coming-item">🇨🇦 Canada · CAD</span>
+        <span class="cp-footer__coming-item">🇬🇧 UK · GBP</span>
+        <p class="cp-footer__coming-note">More markets launching later in 2026.</p>
+      </div>
+
+      <div class="cp-footer__col">
+        <div class="cp-footer__head">Company</div>
+        <a href="/about/">About</a>
+        <a href="/australia/blog/">Australia Blog</a>
+        <a href="/blog/">India Blog</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy/">Privacy</a>
+      </div>
+
+      {% endif %}
 
     </div>
 
