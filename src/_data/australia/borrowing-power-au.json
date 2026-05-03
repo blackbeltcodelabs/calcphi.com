@@ -1,0 +1,63 @@
+{
+  "id": "borrowing-power-au",
+  "inputs": [
+    { "id": "annual-income", "label": "Gross Annual Income (A$)", "min": 20000, "max": 1000000, "step": 5000, "value": 100000, "hint": "Combined income if applying jointly" },
+    { "id": "monthly-expenses", "label": "Monthly Living Expenses (A$)", "min": 0, "max": 20000, "step": 100, "value": 3000, "hint": "Food, utilities, insurance, transport, subscriptions" },
+    { "id": "existing-repayments", "label": "Existing Monthly Loan Repayments (A$)", "min": 0, "max": 10000, "step": 50, "value": 0, "hint": "Car loans, personal loans, credit card minimums" },
+    { "id": "interest-rate", "label": "Home Loan Interest Rate (%)", "min": 1, "max": 15, "step": 0.05, "value": 6.3, "hint": "Lenders assess at your rate + 3% buffer (serviceability floor)" },
+    { "id": "loan-term", "label": "Loan Term (Years)", "min": 5, "max": 30, "step": 1, "value": 30, "hint": "Most Australian home loans are 25–30 years" }
+  ],
+  "outputs": [
+    { "id": "max-borrowing", "label": "Maximum Borrowing Power", "highlight": true },
+    { "id": "assessment-rate", "label": "Lender Assessment Rate (rate + 3%)", "highlight": false },
+    { "id": "monthly-repayment", "label": "Monthly Repayment at Max Borrowing", "highlight": false },
+    { "id": "max-property-price", "label": "Max Property Price (with 20% deposit)", "highlight": false }
+  ],
+  "howToSteps": [
+    { "name": "Enter Your Income", "text": "Enter your gross annual income before tax. If applying as a couple, enter your combined gross income. Lenders assess gross income and apply a net income calculation internally." },
+    { "name": "Enter Monthly Expenses", "text": "Estimate your total monthly living expenses — groceries, utilities, transport, insurance, subscriptions, and other regular outgoings. Lenders benchmark against Household Expenditure Measure (HEM) figures." },
+    { "name": "Enter Existing Repayments", "text": "Enter your total monthly repayments on any existing loans — car loans, personal loans, and minimum credit card repayments. These reduce your available serviceability capacity." },
+    { "name": "Review Borrowing Power", "text": "Your borrowing power is calculated using APRA's serviceability buffer of 3% above your actual interest rate. This floor rate ensures you can afford repayments even if rates rise significantly." }
+  ],
+  "faq": [
+    {
+      "q": "How do Australian banks calculate borrowing power?",
+      "a": "Australian lenders calculate borrowing power by assessing your net income after tax, subtracting your living expenses (benchmarked against HEM figures) and existing loan repayments, then determining the maximum loan whose repayments fit within your remaining capacity. APRA requires lenders to apply a minimum 3% interest rate buffer above the actual rate (called the serviceability assessment rate or floor rate) to ensure you can afford repayments if rates rise."
+    },
+    {
+      "q": "What is the HEM and how does it affect borrowing power?",
+      "a": "The Household Expenditure Measure (HEM) is a benchmark used by lenders to estimate living expenses if your declared expenses seem unusually low. If your declared monthly expenses are below the HEM for your household size and income level, the lender will use the HEM figure instead. HEM benchmarks are updated regularly by the Melbourne Institute and vary by household size, location, and income."
+    },
+    {
+      "q": "Does HECS debt affect borrowing power in Australia?",
+      "a": "Yes. HECS-HELP debt significantly reduces borrowing power because lenders include the compulsory HECS repayment in their serviceability calculation, even if the debt is not being actively repaid. A $50,000 HECS debt at a $100,000 income results in compulsory repayments of approximately $5,000 per year, reducing your effective income for loan serviceability purposes."
+    },
+    {
+      "q": "How can I increase my borrowing power?",
+      "a": "The most effective ways to increase borrowing power are: paying off existing debts (especially credit cards and personal loans), reducing declared living expenses to accurate levels, increasing income through salary growth or rental income, extending the loan term, and choosing a lender with a lower serviceability floor rate. Cancelling unused credit card limits also helps — lenders count the full credit limit as potential debt, not just the balance."
+    },
+    {
+      "q": "Is borrowing power the same as pre-approval?",
+      "a": "No. This calculator provides an estimate of your maximum borrowing capacity based on the inputs you provide. Formal pre-approval from a lender is based on a full credit assessment including credit history, employment verification, tax returns, bank statements, and property valuation. Pre-approval is typically valid for 90 days and gives you more certainty when making offers at auction or private sale."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "Single income earner — $120,000 salary, no debts",
+      "text": "A single buyer earning $120,000 gross annually with monthly living expenses of $3,000 and no existing debts can borrow approximately $580,000–$620,000 at a 6.3% variable rate (assessed at 9.3%). Adding a 20% deposit of $145,000–$155,000 gives a maximum property budget of approximately $730,000–$775,000. This aligns with median properties in Brisbane and Perth but falls short of Sydney median prices."
+    },
+    {
+      "heading": "Couple — combined $180,000, car loan of $400/month",
+      "text": "A couple with combined gross income of $180,000, living expenses of $5,000/month, and an existing car loan repayment of $400/month can typically borrow approximately $750,000–$800,000. Their monthly repayment at maximum borrowing would be approximately $4,600–$5,000. Adding a 20% deposit of $188,000–$200,000 gives a property budget of approximately $940,000–$1,000,000."
+    }
+  ],
+  "related": [
+    { "title": "Mortgage Calculator", "url": "/australia/mortgage-calculator/", "desc": "Monthly repayments and total interest" },
+    { "title": "LMI Calculator", "url": "/australia/lmi-calculator/", "desc": "Lenders Mortgage Insurance when deposit is under 20%" },
+    { "title": "Extra Repayment Calculator", "url": "/australia/extra-repayment-calculator/", "desc": "How extra repayments save interest and time" }
+  ],
+  "schema": {
+    "appName": "Australian Borrowing Power Calculator",
+    "appDescription": "Estimate your maximum home loan borrowing capacity based on income, expenses and APRA's 3% serviceability buffer for Australian lenders in 2026"
+  }
+}

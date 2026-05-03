@@ -138,5 +138,75 @@
     "url": "/australia/hecs-repayment-calculator/",
     "shortDescription": "Annual HECS repayment and years to debt-free",
     "category": "Borrowing"
+  },
+  {
+    "id": "stamp-duty-au",
+    "title": "Stamp Duty Calculator",
+    "url": "/australia/stamp-duty-calculator/",
+    "shortDescription": "Transfer duty for all states with FHB concessions",
+    "category": "Home Loans"
+  },
+  {
+    "id": "borrowing-power-au",
+    "title": "Borrowing Power Calculator",
+    "url": "/australia/borrowing-power-calculator/",
+    "shortDescription": "Maximum home loan with APRA 3% serviceability buffer",
+    "category": "Home Loans"
+  },
+  {
+    "id": "extra-repayment-au",
+    "title": "Extra Repayment Calculator",
+    "url": "/australia/extra-repayment-calculator/",
+    "shortDescription": "Interest saved and years cut with extra repayments",
+    "category": "Home Loans"
+  },
+  {
+    "id": "term-deposit-au",
+    "title": "Term Deposit Calculator",
+    "url": "/australia/term-deposit-calculator/",
+    "shortDescription": "Interest earned and maturity amount at current AU rates",
+    "category": "Savings & Investments"
+  },
+  {
+    "id": "savings-goal-au",
+    "title": "Savings Goal Calculator",
+    "url": "/australia/savings-goal-calculator/",
+    "shortDescription": "How long to reach a savings target with interest",
+    "category": "Savings & Investments"
+  },
+  {
+    "id": "net-worth-au",
+    "title": "Net Worth Calculator",
+    "url": "/australia/net-worth-calculator/",
+    "shortDescription": "Total assets minus liabilities with debt-to-asset ratio",
+    "category": "Savings & Investments"
+  },
+  {
+    "id": "budget-au",
+    "title": "Budget Calculator (50/30/20)",
+    "url": "/australia/budget-calculator/",
+    "shortDescription": "Monthly savings rate and 50/30/20 budget breakdown",
+    "category": "Savings & Investments"
+  },
+  {
+    "id": "rental-yield-au",
+    "title": "Rental Yield Calculator",
+    "url": "/australia/rental-yield-calculator/",
+    "shortDescription": "Gross and net yield with annual cash flow",
+    "category": "Property Investment"
+  },
+  {
+    "id": "negative-gearing-au",
+    "title": "Negative Gearing Calculator",
+    "url": "/australia/negative-gearing-calculator/",
+    "shortDescription": "Tax saving and after-tax cost of negatively geared property",
+    "category": "Property Investment"
+  },
+  {
+    "id": "redundancy-au",
+    "title": "Redundancy Calculator",
+    "url": "/australia/redundancy-calculator/",
+    "shortDescription": "Genuine redundancy tax-free threshold and ETP estimate",
+    "category": "Tax"
   }
 ]

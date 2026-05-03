@@ -1,0 +1,63 @@
+{
+  "id": "rental-yield-au",
+  "inputs": [
+    { "id": "property-value", "label": "Property Value (A$)", "min": 100000, "max": 5000000, "step": 5000, "value": 700000, "hint": "Current market value or purchase price" },
+    { "id": "weekly-rent", "label": "Weekly Rent (A$)", "min": 100, "max": 5000, "step": 10, "value": 650, "hint": "Current or expected weekly rental income" },
+    { "id": "annual-expenses", "label": "Annual Property Expenses (A$)", "min": 0, "max": 100000, "step": 500, "value": 8000, "hint": "Rates, insurance, maintenance, property management (~8–12% of rent)" },
+    { "id": "loan-amount", "label": "Loan Outstanding (A$)", "min": 0, "max": 5000000, "step": 5000, "value": 560000, "hint": "Enter 0 if property is owned outright" },
+    { "id": "loan-rate", "label": "Investment Loan Interest Rate (%)", "min": 0, "max": 15, "step": 0.05, "value": 6.5, "hint": "Investment property rates are typically 0.2–0.5% above owner-occupier rates" }
+  ],
+  "outputs": [
+    { "id": "gross-yield", "label": "Gross Rental Yield", "highlight": true },
+    { "id": "net-yield", "label": "Net Rental Yield", "highlight": false },
+    { "id": "annual-rental-income", "label": "Annual Rental Income", "highlight": false },
+    { "id": "annual-cash-flow", "label": "Annual Pre-Tax Cash Flow", "highlight": false }
+  ],
+  "howToSteps": [
+    { "name": "Enter Property Value and Rent", "text": "Enter the current market value of the property and the weekly rental income. Use actual rent if the property is already tenanted, or comparable market rent if it is vacant." },
+    { "name": "Enter Annual Expenses", "text": "Include all annual property costs: council rates ($1,500–$3,000), landlord insurance ($1,000–$2,500), property management fees (7–10% of rent), maintenance and repairs, and any body corporate fees. A typical estimate is 8–12% of annual rental income." },
+    { "name": "Enter Loan Details", "text": "Enter your outstanding loan balance and interest rate. Investment property loans typically carry a higher rate than owner-occupier loans. If you own the property outright, enter $0 for the loan." },
+    { "name": "Assess Your Yield", "text": "Compare your net yield against the risk-free rate (currently ~4.5–5% for term deposits). A higher net yield suggests better relative income performance. Remember that total return includes capital growth, which this calculator does not project." }
+  ],
+  "faq": [
+    {
+      "q": "What is a good rental yield in Australia?",
+      "a": "In Australia, a gross rental yield of 4–6% is considered reasonable for established residential property. Sydney and Melbourne inner-city properties typically yield 2.5–3.5% gross due to high property prices relative to rents. Higher yields of 5–8% are more common in regional areas, Darwin, and some parts of Perth and Adelaide. A net yield above 3% is generally considered acceptable when combined with expected capital growth."
+    },
+    {
+      "q": "What is the difference between gross and net rental yield?",
+      "a": "Gross rental yield is annual rent divided by property value, expressed as a percentage. Net rental yield accounts for all property expenses (rates, insurance, management fees, maintenance) before dividing by property value. Net yield is a more accurate measure of investment performance because it reflects actual returns after costs. Gross yield is useful for quick comparisons; net yield is what matters for cash flow analysis."
+    },
+    {
+      "q": "Is rental income taxable in Australia?",
+      "a": "Yes. Rental income must be declared in your Australian tax return and is taxed at your marginal income tax rate. However, most property-related expenses are tax deductible — including interest on the investment loan, council rates, insurance, property management fees, maintenance, and depreciation on the building and fixtures. If expenses exceed rental income, the resulting loss is deductible against other income (negative gearing)."
+    },
+    {
+      "q": "How do property management fees affect rental yield?",
+      "a": "Property management fees typically range from 7% to 10% of gross rent, plus separate fees for tenant placement (one to two weeks' rent), lease renewals, and routine inspections. On a $650/week property, a 9% management fee costs approximately $3,000 per year. This reduces gross yield by approximately 0.4 percentage points on a $700,000 property — a meaningful drag on net returns."
+    },
+    {
+      "q": "What is negative gearing and does it improve rental yield?",
+      "a": "Negative gearing occurs when the total expenses of owning an investment property (including loan interest) exceed the rental income. The resulting loss reduces your overall taxable income, providing a tax saving. This tax benefit partially offsets the cash flow shortfall. While negative gearing does not improve your rental yield, it reduces the after-tax cost of holding a property that is expected to appreciate in value over time."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "Brisbane 2-bedroom unit — $550,000, $600/week",
+      "text": "An investor buys a Brisbane unit for $550,000. Weekly rent is $600 ($31,200/year). Annual expenses total $7,500 (management, rates, insurance, maintenance). Net rental income is $23,700. Gross yield = 5.67%; Net yield = 4.31%. With an $440,000 loan at 6.5% (interest $28,600/year), the property is negatively geared by $4,900/year before tax savings."
+    },
+    {
+      "heading": "Sydney house — $1,200,000, $750/week",
+      "text": "A Sydney house purchased for $1,200,000 rents for $750/week ($39,000/year). Annual expenses are $12,000. Gross yield = 3.25%; Net yield = 2.25%. With a $960,000 loan at 6.5% (interest $62,400/year), the annual cash loss before tax benefits is $35,400. The investor is relying on capital growth to justify the investment — a common situation in Sydney's high-price, low-yield market."
+    }
+  ],
+  "related": [
+    { "title": "Negative Gearing Calculator", "url": "/australia/negative-gearing-calculator/", "desc": "Tax savings from negatively geared property" },
+    { "title": "Capital Gains Tax Calculator", "url": "/australia/capital-gains-tax-calculator/", "desc": "CGT liability when you sell the investment property" },
+    { "title": "Mortgage Calculator", "url": "/australia/mortgage-calculator/", "desc": "Monthly repayments on your investment loan" }
+  ],
+  "schema": {
+    "appName": "Australian Rental Yield Calculator",
+    "appDescription": "Calculate gross and net rental yield for Australian investment properties, including annual cash flow and expense impact for 2026"
+  }
+}

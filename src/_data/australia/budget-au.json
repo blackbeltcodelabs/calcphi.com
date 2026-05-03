@@ -1,0 +1,66 @@
+{
+  "id": "budget-au",
+  "inputs": [
+    { "id": "monthly-income", "label": "Monthly Take-Home Pay (A$)", "min": 500, "max": 50000, "step": 100, "value": 6000, "hint": "Net income after tax and super (not gross salary)" },
+    { "id": "housing", "label": "Rent / Mortgage Repayment (A$)", "min": 0, "max": 10000, "step": 50, "value": 2000, "hint": "Monthly rent or home loan repayment" },
+    { "id": "groceries", "label": "Groceries & Food (A$)", "min": 0, "max": 5000, "step": 50, "value": 600, "hint": "Weekly groceries × 4.33" },
+    { "id": "transport", "label": "Transport (A$)", "min": 0, "max": 3000, "step": 50, "value": 400, "hint": "Car repayments, fuel, Opal/Myki, ride-shares" },
+    { "id": "utilities", "label": "Bills & Utilities (A$)", "min": 0, "max": 2000, "step": 25, "value": 250, "hint": "Electricity, gas, internet, mobile" },
+    { "id": "entertainment", "label": "Dining Out & Entertainment (A$)", "min": 0, "max": 5000, "step": 50, "value": 500, "hint": "Restaurants, cafes, events, streaming" },
+    { "id": "shopping", "label": "Shopping & Personal (A$)", "min": 0, "max": 5000, "step": 50, "value": 300, "hint": "Clothing, personal care, household items" },
+    { "id": "savings-invested", "label": "Savings & Investments (A$)", "min": 0, "max": 20000, "step": 100, "value": 800, "hint": "Bank savings, ETFs, extra super contributions" }
+  ],
+  "outputs": [
+    { "id": "total-spending", "label": "Total Monthly Spending", "highlight": false },
+    { "id": "monthly-surplus", "label": "Monthly Surplus / Deficit", "highlight": true },
+    { "id": "savings-rate", "label": "Current Savings Rate", "highlight": false },
+    { "id": "needs-pct", "label": "Needs Spending (target ≤50%)", "highlight": false }
+  ],
+  "howToSteps": [
+    { "name": "Enter Your Take-Home Pay", "text": "Enter your monthly take-home pay after income tax, Medicare levy, and superannuation contributions are deducted. This is the amount that actually appears in your bank account each month." },
+    { "name": "Enter Your Spending Categories", "text": "Enter honest estimates for each spending category. Use your bank statements or banking app (most Australian banks have spending categorisation built in) to find accurate figures rather than guessing." },
+    { "name": "Review Against the 50/30/20 Rule", "text": "The 50/30/20 rule allocates 50% of income to needs (housing, groceries, transport, utilities), 30% to wants (dining, entertainment, shopping), and 20% to savings and investments. Use this as a benchmark — the right split depends on your income, cost of living area, and financial goals." },
+    { "name": "Identify Where to Cut or Redirect", "text": "The calculator shows your current savings rate and where you are over or under the 50/30/20 benchmarks. If you are overspending on needs, consider refinancing, relocating, or reducing transport costs. If wants are high, look at discretionary spending. Redirect surplus to savings or debt repayment." }
+  ],
+  "faq": [
+    {
+      "q": "What is the 50/30/20 budget rule?",
+      "a": "The 50/30/20 rule is a simple budgeting framework: allocate 50% of after-tax income to needs (essential expenses you must pay — rent/mortgage, groceries, utilities, transport, insurance, minimum loan repayments), 30% to wants (non-essential discretionary spending — dining out, entertainment, subscriptions, holidays, shopping), and 20% to savings and debt repayment (emergency fund, investments, extra mortgage repayments, super contributions). It is a guideline, not a strict rule — adjust based on your income and goals."
+    },
+    {
+      "q": "What is a good savings rate in Australia?",
+      "a": "Most financial planners recommend a minimum savings rate of 20% of after-tax income. For building wealth aggressively or saving a house deposit, 30–40% is better. The Australian household saving ratio has ranged from 5% to 20% in recent years. At the median household income of approximately $80,000 after tax, a 20% savings rate means saving $16,000/year or $1,333/month. High-income earners should target higher percentages, as fixed costs represent a smaller proportion of their income."
+    },
+    {
+      "q": "How much should Australians spend on housing?",
+      "a": "A widely used benchmark is that housing costs (rent or mortgage repayment) should not exceed 30% of gross income. At a gross income of $100,000, this is $2,500/month. In Sydney and Melbourne, housing affordability stress is common — many households spend 35–50% of income on housing. If housing costs are above 30% of gross income, focus on finding cheaper housing, increasing income, or reducing other expenses to maintain an adequate savings rate."
+    },
+    {
+      "q": "Should I include my super contributions in my savings rate?",
+      "a": "Yes. Superannuation contributions (both employer and voluntary salary sacrifice) are genuine savings for your retirement. Including the mandatory 11.5% employer SG contribution significantly boosts your effective savings rate. If you earn $80,000 and your employer contributes $9,200 in super annually, that alone represents an 11.5% savings rate before you add any personal savings. Many Australians underestimate their wealth-building rate because they overlook compulsory super accumulation."
+    },
+    {
+      "q": "What is the best budgeting app for Australians?",
+      "a": "Popular budgeting tools for Australians include: Money Brilliant (open banking integration), Frollo (bank account aggregation, free), YNAB (You Need A Budget, subscription-based, highly rated), and the built-in spending categorisation tools in most Australian bank apps (Commonwealth Bank, Westpac, ANZ, NAB all have these features). Many Australians also use a simple spreadsheet or the Pocketbook app. The best tool is the one you will actually use consistently."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "Sydney renter — $6,500 take-home, tight budget",
+      "text": "A Sydney renter takes home $6,500/month. Rent $2,400, groceries $700, transport $350, utilities $300, dining/entertainment $700, shopping $400, savings $300. Total spending: $5,150. Surplus: $1,050 (not yet saved). Actual savings rate: 4.6%. Needs (rent, groceries, transport, utilities): $3,750 = 57.7% of income — above the 50% target. Reducing rent by sharing or moving suburbs would most significantly improve the savings rate."
+    },
+    {
+      "heading": "Melbourne homeowner — $8,000 take-home, building wealth",
+      "text": "A homeowner takes home $8,000/month. Mortgage $2,200, groceries $800, transport $300, utilities $250, dining $600, shopping $350, savings $2,000. Total: $6,500. Surplus: $1,500 (emergency buffer or additional investing). Savings rate: 25%. Needs: $3,550 = 44% — within the 50% target. At this savings rate, they are building wealth rapidly through a combination of mortgage principal reduction and direct investment."
+    }
+  ],
+  "related": [
+    { "title": "Savings Goal Calculator", "url": "/australia/savings-goal-calculator/", "desc": "How long to reach your savings target" },
+    { "title": "Salary Take-Home Calculator", "url": "/australia/salary-take-home-calculator/", "desc": "Your exact net pay after tax and Medicare" },
+    { "title": "Net Worth Calculator", "url": "/australia/net-worth-calculator/", "desc": "Track your total assets minus liabilities" }
+  ],
+  "schema": {
+    "appName": "Australian Budget Calculator",
+    "appDescription": "Plan your monthly budget using the 50/30/20 rule and calculate your savings rate based on actual Australian living costs in 2026"
+  }
+}

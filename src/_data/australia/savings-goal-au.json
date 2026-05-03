@@ -1,0 +1,62 @@
+{
+  "id": "savings-goal-au",
+  "inputs": [
+    { "id": "target-amount", "label": "Savings Target (A$)", "min": 1000, "max": 5000000, "step": 1000, "value": 100000, "hint": "e.g. house deposit, emergency fund, holiday" },
+    { "id": "current-savings", "label": "Current Savings (A$)", "min": 0, "max": 5000000, "step": 500, "value": 10000, "hint": "Amount you already have saved" },
+    { "id": "monthly-savings", "label": "Monthly Savings Amount (A$)", "min": 0, "max": 50000, "step": 100, "value": 2000, "hint": "Amount you plan to save each month" },
+    { "id": "annual-return", "label": "Annual Interest Rate (%)", "min": 0, "max": 15, "step": 0.1, "value": 4.5, "hint": "High-interest savings rate ~4.5% (May 2026)" }
+  ],
+  "outputs": [
+    { "id": "months-to-goal", "label": "Time to Reach Goal", "highlight": true },
+    { "id": "total-contributions", "label": "Total Savings Contributed", "highlight": false },
+    { "id": "interest-earned", "label": "Interest Earned", "highlight": false },
+    { "id": "required-monthly", "label": "Monthly Savings Needed (in 2 years)", "highlight": false }
+  ],
+  "howToSteps": [
+    { "name": "Set Your Savings Target", "text": "Enter your savings goal. Common goals include a house deposit (typically $80,000–$200,000 in Australian cities), an emergency fund (3–6 months of expenses), or a specific purchase. Be specific — a concrete number makes it easier to stay on track." },
+    { "name": "Enter Your Starting Point", "text": "Enter how much you have already saved. Starting with existing savings gives you a significant head start and reduces the time to reach your goal." },
+    { "name": "Enter Monthly Savings", "text": "Enter how much you can realistically save each month after all expenses. The 20% rule suggests saving at least 20% of your take-home pay. Be conservative — it is better to beat your goal than to fall short." },
+    { "name": "Review Your Timeline", "text": "The calculator shows how long it will take to reach your goal and how much of the final amount is interest earned versus savings. Adjust your monthly contribution to see how saving more accelerates your timeline." }
+  ],
+  "faq": [
+    {
+      "q": "How much should I save for a house deposit in Australia?",
+      "a": "A 20% deposit is recommended to avoid Lenders Mortgage Insurance (LMI), which can cost $10,000–$35,000 on a typical Australian property. On a $750,000 property (near the Australian median), a 20% deposit is $150,000. With stamp duty (approximately $29,000 in NSW) and other costs, most first home buyers in major cities need $170,000–$200,000 in total upfront funds. Government schemes allow some buyers to purchase with as little as 5% deposit."
+    },
+    {
+      "q": "What interest rate should I use for savings in Australia?",
+      "a": "As of May 2026, high-interest savings accounts (HISA) in Australia are offering 4.5–5.5% per annum, depending on the provider and conditions (such as making a monthly deposit or not making withdrawals). Major bank savings accounts typically offer lower rates of 3.0–4.0%. Use a rate that reflects where you will actually hold your savings — often 4.0–4.5% is realistic for a consistently accessible HISA."
+    },
+    {
+      "q": "What is the best way to save money in Australia?",
+      "a": "The most effective savings strategy for Australians combines three steps: first, automate savings transfers immediately after each paycheck (pay yourself first); second, use a high-interest savings account or offset account to earn the maximum available return; third, reduce discretionary spending using a budget framework like 50/30/20 (50% needs, 30% wants, 20% savings). Automating savings is the single biggest driver of reaching savings goals."
+    },
+    {
+      "q": "Is the First Home Super Saver Scheme worth using for a deposit?",
+      "a": "The First Home Super Saver Scheme (FHSS) allows first home buyers to make voluntary contributions to super (concessional at 15% tax) and later withdraw up to $50,000 ($100,000 for couples) for a first home deposit. The main benefit is the tax saving on contributions — someone in the 32.5% bracket saves approximately 17.5% in tax on each dollar contributed. The limitation is that funds are locked in super and the withdrawal process takes 20 business days."
+    },
+    {
+      "q": "How long does it take to save a house deposit on an average Australian salary?",
+      "a": "At the Australian median household income of approximately $100,000 combined (after tax ~$80,000), saving 20% of income ($16,000/year or $1,333/month) at a 4.5% savings account rate would take approximately 7.5–8.5 years to save a $150,000 deposit from zero. In high-income households saving aggressively ($3,000–$5,000/month), the timeline can be reduced to 3–5 years."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "Saving a $150,000 house deposit",
+      "text": "A couple starting with $20,000 in savings, saving $2,500/month at 4.5% annual interest, reaches $150,000 in approximately 4 years and 4 months. Total contributions from the start date are $130,000, with interest earnings of approximately $15,000. Reducing monthly savings to $1,500 would extend the timeline to approximately 6.5 years, highlighting the significant impact of the monthly savings amount."
+    },
+    {
+      "heading": "Building a 6-month emergency fund — $25,000",
+      "text": "An individual with $5,000 already saved, targeting a $25,000 emergency fund, saving $800/month at 4.5% annual return reaches the goal in approximately 24 months (2 years). Interest earned over the period is approximately $700. The emergency fund is typically held in a liquid high-interest savings account rather than locked away in a term deposit."
+    }
+  ],
+  "related": [
+    { "title": "Compound Interest Calculator", "url": "/australia/compound-interest-calculator/", "desc": "Project long-term savings growth with compounding" },
+    { "title": "Term Deposit Calculator", "url": "/australia/term-deposit-calculator/", "desc": "Earn higher interest by locking savings away" },
+    { "title": "First Home Buyer Calculator", "url": "/australia/first-home-buyer-calculator/", "desc": "Total costs and grants for first home buyers" }
+  ],
+  "schema": {
+    "appName": "Australian Savings Goal Calculator",
+    "appDescription": "Calculate how long it takes to reach a savings target in Australia with monthly contributions and current high-interest savings account rates"
+  }
+}

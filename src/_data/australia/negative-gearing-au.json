@@ -1,0 +1,72 @@
+{
+  "id": "negative-gearing-au",
+  "inputs": [
+    { "id": "property-value", "label": "Property Value (A$)", "min": 100000, "max": 5000000, "step": 5000, "value": 700000, "hint": "Purchase price or current market value" },
+    { "id": "weekly-rent", "label": "Weekly Rent Received (A$)", "min": 100, "max": 5000, "step": 10, "value": 580, "hint": "Gross weekly rent before expenses" },
+    { "id": "loan-amount", "label": "Investment Loan Amount (A$)", "min": 0, "max": 5000000, "step": 5000, "value": 560000, "hint": "Total outstanding loan on the investment property" },
+    { "id": "loan-rate", "label": "Investment Loan Rate (%)", "min": 1, "max": 15, "step": 0.05, "value": 6.5, "hint": "Annual interest rate — investment rates are typically ~0.3% above owner-occupier rates" },
+    { "id": "annual-expenses", "label": "Annual Property Expenses (A$)", "min": 0, "max": 100000, "step": 500, "value": 9000, "hint": "Management fees, rates, insurance, maintenance, repairs" },
+    { "id": "depreciation", "label": "Annual Depreciation Claim (A$)", "min": 0, "max": 50000, "step": 500, "value": 5000, "hint": "Quantity surveyor estimate — typically $3,000–$10,000/year for modern properties" },
+    { "id": "marginal-tax-rate", "label": "Marginal Tax Rate (%)", "type": "select", "options": [
+      { "value": "0", "label": "0% (below $18,200)" },
+      { "value": "16", "label": "16% ($18,201–$45,000)" },
+      { "value": "30", "label": "30% ($45,001–$135,000)" },
+      { "value": "37", "label": "37% ($135,001–$190,000)" },
+      { "value": "45", "label": "45% (above $190,000)" }
+    ], "hint": "Your personal marginal income tax rate" }
+  ],
+  "outputs": [
+    { "id": "rental-income", "label": "Annual Rental Income", "highlight": false },
+    { "id": "total-deductions", "label": "Total Deductible Expenses", "highlight": false },
+    { "id": "tax-loss", "label": "Net Tax Loss / Income", "highlight": false },
+    { "id": "tax-saving", "label": "Annual Tax Saved (Negative Gearing Benefit)", "highlight": true },
+    { "id": "after-tax-cost", "label": "After-Tax Annual Cash Cost", "highlight": false }
+  ],
+  "howToSteps": [
+    { "name": "Enter Property and Rent Details", "text": "Enter the property value and current weekly rent. The rent determines your gross income for the year. Check comparable properties on realestate.com.au to estimate market rent if the property is vacant." },
+    { "name": "Enter Loan Details", "text": "Enter the investment loan amount and interest rate. Interest on an investment property loan is fully tax deductible. Investment loan rates are typically 0.2–0.5% higher than owner-occupier rates." },
+    { "name": "Enter Expenses and Depreciation", "text": "Include all deductible expenses: management fees, council rates, landlord insurance, repairs, and depreciation. A quantity surveyor's report (around $600–$800) unlocks depreciation deductions that can significantly boost your tax benefit." },
+    { "name": "Review Your Tax Benefit", "text": "The calculator shows your net rental loss, annual tax saving from negative gearing, and your true after-tax cost of holding the property. This helps you assess whether the tax benefit justifies the cash flow shortfall while waiting for capital growth." }
+  ],
+  "faq": [
+    {
+      "q": "What is negative gearing in Australia?",
+      "a": "Negative gearing occurs when the costs of owning an investment property — primarily loan interest, but also rates, insurance, and management fees — exceed the rental income received. Under Australian tax law, this net loss is deductible against your other income, reducing your overall tax bill. The tax saving partially offsets the cash flow shortfall, and investors rely on capital growth to make the strategy profitable long-term."
+    },
+    {
+      "q": "How much tax can I save through negative gearing?",
+      "a": "The tax saving equals your net rental loss multiplied by your marginal tax rate. If your rental loss is $15,000 and your marginal rate is 37%, your annual tax saving is $5,550. For someone in the 45% bracket with the same loss, the saving is $6,750. The higher your marginal rate, the more valuable negative gearing becomes — which is why it primarily benefits higher-income earners."
+    },
+    {
+      "q": "What expenses are tax deductible on a rental property in Australia?",
+      "a": "Fully deductible in the same year: loan interest, property management fees (7–10% of rent), council rates, landlord insurance, repairs and maintenance, land tax, advertising for tenants, strata/body corporate fees, and depreciation on fixtures. Capital works deductions (building structure) are claimed at 2.5% per year over 40 years. A quantity surveyor's depreciation schedule unlocks the full range of these deductions."
+    },
+    {
+      "q": "Does negative gearing apply to shares as well as property?",
+      "a": "Yes. Negative gearing applies to any income-producing investment where borrowing costs exceed returns — including margin loans to buy shares or managed funds. However, property is the most common vehicle for negative gearing in Australia because property prices relative to rents make cash flow losses common, lending is available at high LVRs, and capital growth expectations are high. Share margin loans are used similarly but carry higher risk due to margin call exposure."
+    },
+    {
+      "q": "Is negative gearing worth it if property values do not rise?",
+      "a": "No. Negative gearing is only profitable if the capital growth of the property exceeds the cumulative cash flow losses (after tax benefits). If a property is negatively geared by $10,000/year after tax, you need the property to grow in value by at least $100,000 over 10 years just to break even. In markets with low capital growth — such as some regional areas or oversupplied unit markets — negative gearing can destroy wealth rather than build it."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "Melbourne townhouse — $800,000, negatively geared by $14,000/year",
+      "text": "An investor in the 37% marginal bracket buys a Melbourne townhouse for $800,000 with a $640,000 investment loan at 6.5% (annual interest: $41,600). Weekly rent is $600 ($31,200/year). Annual expenses including management, rates, insurance, and maintenance: $9,000. Depreciation claim: $6,000. Total deductions: $56,600. Net loss: $25,400. Tax saving at 37%: $9,398. After-tax annual cash cost: $15,802 — or $304/week out of pocket."
+    },
+    {
+      "heading": "Sydney apartment — $650,000, positively geared after depreciation",
+      "text": "An investor buys a newer Sydney apartment for $650,000 with $520,000 in borrowings at 6.5% (interest: $33,800). Weekly rent is $700 ($36,400/year). Expenses: $8,000. Depreciation on new building: $12,000. Total deductions: $53,800. Net loss: $17,400. Tax saving at 30% bracket: $5,220. After-tax cost: $12,180/year. Without depreciation, the loss would be only $5,400 and tax saving would be $1,620 — showing how depreciation transforms the investment economics."
+    }
+  ],
+  "related": [
+    { "title": "Rental Yield Calculator", "url": "/australia/rental-yield-calculator/", "desc": "Gross and net rental yield for your investment property" },
+    { "title": "Capital Gains Tax Calculator", "url": "/australia/capital-gains-tax-calculator/", "desc": "CGT when you sell the investment property" },
+    { "title": "Income Tax Calculator", "url": "/australia/income-tax-calculator/", "desc": "Your marginal tax rate and total tax liability" }
+  ],
+  "schema": {
+    "appName": "Australian Negative Gearing Calculator",
+    "appDescription": "Calculate the tax benefit from negative gearing on an Australian investment property, including rental loss, annual tax saving, and after-tax cash cost"
+  }
+}

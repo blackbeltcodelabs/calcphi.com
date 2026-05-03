@@ -1,0 +1,61 @@
+{
+  "id": "net-worth-au",
+  "inputs": [
+    { "id": "home-value", "label": "Home / Property Value (A$)", "min": 0, "max": 10000000, "step": 5000, "value": 800000, "hint": "Current estimated market value of your primary residence and investment properties" },
+    { "id": "super-balance", "label": "Superannuation Balance (A$)", "min": 0, "max": 5000000, "step": 1000, "value": 180000, "hint": "Total balance across all your super funds" },
+    { "id": "savings-cash", "label": "Savings & Cash (A$)", "min": 0, "max": 5000000, "step": 1000, "value": 35000, "hint": "Bank accounts, term deposits, offset accounts" },
+    { "id": "shares-investments", "label": "Shares & Investments (A$)", "min": 0, "max": 5000000, "step": 1000, "value": 50000, "hint": "Shares, ETFs, managed funds at current market value" },
+    { "id": "other-assets", "label": "Other Assets (A$)", "min": 0, "max": 2000000, "step": 1000, "value": 25000, "hint": "Car, business interests, collectables, crypto" },
+    { "id": "mortgage-balance", "label": "Mortgage Balance (A$)", "min": 0, "max": 10000000, "step": 1000, "value": 550000, "hint": "Outstanding balance on all home and investment loans" },
+    { "id": "other-debt", "label": "Other Debts (A$)", "min": 0, "max": 1000000, "step": 500, "value": 8000, "hint": "Car loans, credit cards, personal loans, HECS (enter current balance)" }
+  ],
+  "outputs": [
+    { "id": "total-assets", "label": "Total Assets", "highlight": false },
+    { "id": "total-liabilities", "label": "Total Liabilities", "highlight": false },
+    { "id": "net-worth", "label": "Your Net Worth", "highlight": true },
+    { "id": "debt-ratio", "label": "Debt-to-Asset Ratio", "highlight": false }
+  ],
+  "howToSteps": [
+    { "name": "Enter Your Assets", "text": "List all your assets at current market value — property, superannuation, bank accounts, shares, and personal property. Use conservative estimates for property (check recent comparable sales on realestate.com.au) and actual balances for financial accounts." },
+    { "name": "Enter Your Liabilities", "text": "Enter all your outstanding debts — mortgage balance, car loans, personal loans, credit card balances, and your HECS-HELP balance (available via your myGov ATO account). Use current outstanding balances, not original loan amounts." },
+    { "name": "Review Your Net Worth", "text": "Net worth = total assets minus total liabilities. A positive net worth means your assets exceed your debts. Your debt-to-asset ratio measures financial risk — below 50% is generally considered healthy." },
+    { "name": "Track Changes Over Time", "text": "Calculate your net worth regularly (every 6–12 months) and compare. Growing net worth shows financial progress. Common growth drivers include mortgage principal reduction, superannuation contributions, share market returns, and property value increases." }
+  ],
+  "faq": [
+    {
+      "q": "What is a good net worth by age in Australia?",
+      "a": "Australian net worth benchmarks by age: at age 30, around $50,000–$150,000 (primarily super and savings); at age 40, around $300,000–$600,000 (property equity growing); at age 50, around $600,000–$1,200,000 (significant super and property equity); at age 60, around $1,000,000–$2,000,000 (approaching retirement). The median net worth for Australian households is approximately $570,000 (ABS 2022), though this is skewed heavily by property ownership and age."
+    },
+    {
+      "q": "Should I include super in my net worth calculation?",
+      "a": "Yes, superannuation is a genuine asset and should be included in net worth. However, it is worth noting that super is not accessible until you reach preservation age (currently 60 for most people) and retire, so it is less liquid than other assets. For financial planning purposes, many advisers calculate two net worth figures: 'liquid net worth' (excluding super and illiquid property equity) and 'total net worth' (including everything). Your super balance appears on your fund's website or on the ATO's myGov portal."
+    },
+    {
+      "q": "How do I increase my net worth in Australia?",
+      "a": "Net worth grows through three main levers: increasing assets (salary sacrifice into super, regular investing, saving for property), reducing liabilities (making extra mortgage repayments, paying off high-interest debt, not taking on unnecessary borrowing), and asset appreciation (property market growth, share market returns). The most reliable wealth builder for most Australians has been a combination of homeownership (with extra mortgage repayments) and maximising superannuation contributions."
+    },
+    {
+      "q": "Is HECS-HELP debt included in net worth?",
+      "a": "Technically yes — HECS-HELP is an outstanding debt that reduces your net worth. However, it is an unusual debt because it only repays when your income exceeds $54,435 (2025–26 threshold), it is interest-free (indexed to CPI only), and it is extinguished upon death. Many Australians exclude HECS from net worth calculations due to its unusual nature. Your HECS balance is available through the ATO on myGov."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "Australian family — 40s homeowners",
+      "text": "A couple in their mid-40s have a home worth $950,000 (mortgage $480,000), combined super of $280,000, savings of $60,000, shares of $80,000, and a car worth $30,000. Total assets: $1,400,000. Total liabilities: $480,000 + $10,000 car loan + $5,000 credit card = $495,000. Net worth: $905,000. Debt-to-asset ratio: 35% — healthy for their age. The bulk of wealth is in illiquid property equity."
+    },
+    {
+      "heading": "First home buyer just purchased",
+      "text": "A 32-year-old has just purchased a $700,000 apartment with a $630,000 mortgage (10% deposit). Super balance is $80,000, savings $15,000 (after deposit and costs), car worth $18,000. Total assets: $813,000. Total liabilities: $630,000 + $12,000 HECS = $642,000. Net worth: $171,000. Most wealth is in a single illiquid asset (the apartment) — a common and acceptable position for a recent first home buyer."
+    }
+  ],
+  "related": [
+    { "title": "Super Balance Calculator", "url": "/australia/super-balance-calculator/", "desc": "Projected superannuation balance at retirement" },
+    { "title": "Savings Goal Calculator", "url": "/australia/savings-goal-calculator/", "desc": "Track progress toward a savings target" },
+    { "title": "Extra Repayment Calculator", "url": "/australia/extra-repayment-calculator/", "desc": "Build home equity faster with extra repayments" }
+  ],
+  "schema": {
+    "appName": "Australian Net Worth Calculator",
+    "appDescription": "Calculate your total net worth including property, superannuation, savings, shares, and all liabilities for Australians in 2026"
+  }
+}

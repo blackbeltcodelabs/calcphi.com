@@ -1,0 +1,73 @@
+{
+  "id": "stamp-duty-au",
+  "inputs": [
+    { "id": "property-price", "label": "Property Purchase Price (A$)", "min": 50000, "max": 5000000, "step": 5000, "value": 750000, "hint": "Contract of sale price" },
+    { "id": "state", "label": "State / Territory", "type": "select", "options": [
+      { "value": "NSW", "label": "New South Wales (NSW)" },
+      { "value": "VIC", "label": "Victoria (VIC)" },
+      { "value": "QLD", "label": "Queensland (QLD)" },
+      { "value": "WA", "label": "Western Australia (WA)" },
+      { "value": "SA", "label": "South Australia (SA)" },
+      { "value": "TAS", "label": "Tasmania (TAS)" },
+      { "value": "ACT", "label": "Australian Capital Territory (ACT)" },
+      { "value": "NT", "label": "Northern Territory (NT)" }
+    ], "hint": "" },
+    { "id": "buyer-type", "label": "Buyer Type", "type": "select", "options": [
+      { "value": "general", "label": "General Purchaser" },
+      { "value": "fhb", "label": "First Home Buyer" }
+    ], "hint": "First home buyers may qualify for exemptions or concessions" }
+  ],
+  "outputs": [
+    { "id": "stamp-duty-gross", "label": "Standard Stamp Duty", "highlight": false },
+    { "id": "fhb-concession", "label": "First Home Buyer Concession", "highlight": false },
+    { "id": "stamp-duty-net", "label": "Stamp Duty Payable", "highlight": true },
+    { "id": "total-upfront", "label": "Estimated Total Upfront Cost", "highlight": false }
+  ],
+  "howToSteps": [
+    { "name": "Enter Purchase Price", "text": "Enter the contract price of the property you are buying. This is the price on your contract of sale, not the mortgage amount." },
+    { "name": "Select Your State", "text": "Stamp duty rates and first home buyer concessions vary significantly between states. Select the state where the property is located." },
+    { "name": "Select Buyer Type", "text": "First home buyers may qualify for full exemptions or concessions that reduce stamp duty significantly. Select 'First Home Buyer' if this applies to you." },
+    { "name": "Review Stamp Duty Payable", "text": "The calculator shows your stamp duty before and after any first home buyer concessions, plus an estimated total upfront cost (including conveyancing and other fees)." }
+  ],
+  "faq": [
+    {
+      "q": "How is stamp duty calculated in Australia?",
+      "a": "Stamp duty (also called transfer duty) is a state and territory tax applied to property purchases. Each state uses its own bracket system — similar to income tax brackets — where higher property prices attract progressively higher rates. The total duty is calculated by summing the tax on each bracket portion, not simply multiplying the purchase price by a flat rate."
+    },
+    {
+      "q": "Do first home buyers pay stamp duty in Australia?",
+      "a": "Most states offer stamp duty exemptions or concessions for first home buyers. In NSW, first home buyers pay no stamp duty on properties up to $800,000. Victoria exempts first home buyers on properties up to $600,000. Queensland and Western Australia have similar thresholds. The exact rules, income limits, and eligibility criteria vary by state and whether the property is new or established."
+    },
+    {
+      "q": "When do you pay stamp duty in Australia?",
+      "a": "Stamp duty is typically paid at settlement, which is usually 30–90 days after signing the contract of sale. In some states you can arrange deferred payment or have it paid by your lender as part of the settlement process. Failing to pay on time can result in penalties and interest charges."
+    },
+    {
+      "q": "Is stamp duty tax deductible?",
+      "a": "Stamp duty on a primary residence is not tax deductible. For investment properties, stamp duty forms part of the cost base of the asset and reduces capital gains tax when you sell — it is not deductible in the year of purchase. The stamp duty is added to the property's cost base for CGT purposes."
+    },
+    {
+      "q": "What other upfront costs apply when buying property in Australia?",
+      "a": "In addition to stamp duty, buyers should budget for conveyancing fees ($800–$2,500), building and pest inspection ($400–$800), mortgage registration fees ($100–$200), lender fees (application/valuation, $500–$1,000), and potentially Lenders Mortgage Insurance if your deposit is below 20%. Total upfront costs excluding the deposit are typically $15,000–$50,000 for a median-priced property."
+    }
+  ],
+  "examples": [
+    {
+      "heading": "Sydney buyer — $900,000 established home",
+      "text": "A general purchaser buying an $900,000 home in NSW pays stamp duty of approximately $35,835 under the standard bracket rates. A first home buyer purchasing the same property would receive a partial concession (as the property exceeds the $800,000 full exemption threshold) and pay a reduced amount. Total upfront costs including conveyancing and inspections add approximately $3,000–$5,000."
+    },
+    {
+      "heading": "Melbourne first home buyer — $580,000 apartment",
+      "text": "A first home buyer purchasing a $580,000 established apartment in Victoria qualifies for a full stamp duty exemption (threshold is $600,000 for established homes). Standard stamp duty on this property would be approximately $30,070, so the saving is substantial. If the price were $650,000, the buyer would pay a concession rate instead of the full exemption."
+    }
+  ],
+  "related": [
+    { "title": "First Home Buyer Calculator", "url": "/australia/first-home-buyer-calculator/", "desc": "Total upfront costs and grants for first home buyers" },
+    { "title": "Mortgage Calculator", "url": "/australia/mortgage-calculator/", "desc": "Monthly repayments and total interest" },
+    { "title": "LMI Calculator", "url": "/australia/lmi-calculator/", "desc": "Lenders Mortgage Insurance estimate" }
+  ],
+  "schema": {
+    "appName": "Australian Stamp Duty Calculator",
+    "appDescription": "Calculate stamp duty (transfer duty) for property purchases in all Australian states and territories, including first home buyer exemptions and concessions for 2026"
+  }
+}
