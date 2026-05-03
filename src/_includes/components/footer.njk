@@ -83,8 +83,11 @@
     <div class="cp-footer__bottom">
       <p class="cp-footer__disclaimer">
         CalcPhi calculators are for educational and estimation purposes only. Results are not financial advice.
-        For India: mutual fund investments are subject to market risks — consult a SEBI-registered advisor.
+        {% if page.url.startsWith('/australia/') %}
         For Australia: consult a licensed financial adviser (AFS licence) before making financial decisions.
+        {% else %}
+        For India: mutual fund investments are subject to market risks — consult a SEBI-registered advisor.
+        {% endif %}
       </p>
       <p class="cp-footer__copy">&copy; {{ site.year }} CalcPhi. All rights reserved.</p>
     </div>

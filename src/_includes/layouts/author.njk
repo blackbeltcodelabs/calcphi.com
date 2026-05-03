@@ -67,7 +67,7 @@ layout: layouts/base.njk
 
       <section class="author-section author-section--muted">
         <h2>Editorial Independence</h2>
-        <p>All content produced by {{ author.name }} for CalcPhi is editorially independent. Calculator results and written content are never influenced by advertising relationships or affiliate commissions. All rates and regulatory figures are sourced directly from CBDT, AMFI, RBI, SEBI, or PFRDA publications. See our <a href="/about/">editorial standards</a> for full details.</p>
+        <p>All content produced by {{ author.name }} for CalcPhi is editorially independent. Calculator results and written content are never influenced by advertising relationships or affiliate commissions. {% if author.market == "australia" %}All rates and regulatory figures are sourced directly from ATO, APRA, ASIC, RBA, or Services Australia publications.{% else %}All rates and regulatory figures are sourced directly from CBDT, AMFI, RBI, SEBI, or PFRDA publications.{% endif %} See our <a href="/about/">editorial standards</a> for full details.</p>
       </section>
 
     </div>
