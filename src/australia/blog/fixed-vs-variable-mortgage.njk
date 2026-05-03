@@ -43,8 +43,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>Fixed vs Variable Rate Mortgage Australia 2026: Which Is Better Right Now?</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">In 2021, hundreds of thousands of Australians locked into two-year fixed rates below 2.00% — and by 2023, their loans had rolled onto variable rates of 6.00%+, producing repayment shock of over $1,500 per month on a $600,000 loan. That experience highlighted how consequential the fixed-or-variable decision can be. In 2026, with the RBA cash rate at 3.85% and markets pricing in further cuts, the landscape looks very different from three years ago. Here is how to make the right call for your circumstances.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -181,6 +185,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/mortgage-calculator/">Mortgage Calculator →</a></li>

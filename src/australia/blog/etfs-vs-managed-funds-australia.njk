@@ -43,8 +43,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>ETFs vs Managed Funds Australia 2026: Which Delivers Better Returns?</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">A $100,000 investment in VAS (Vanguard's ASX 300 ETF, MER 0.07%) versus a comparable active managed fund charging 0.80% will produce a difference of over $85,000 after 20 years at 8.5% gross returns — and that is before accounting for the fact that most active funds underperform the index anyway.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -204,6 +208,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/investment-returns-calculator/">Investment Returns Calculator →</a></li>

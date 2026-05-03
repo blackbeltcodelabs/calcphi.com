@@ -44,8 +44,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>Capital Gains Tax on Property Australia: What You Actually Pay</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">Capital gains tax (CGT) on property is not a separate tax in Australia — it is the income tax you pay on the net capital gain from selling an asset. When you sell an investment property, the profit is added to your taxable income for that year and taxed at your marginal rate. If you held the property for more than 12 months, you are entitled to a 50% CGT discount — halving the capital gain before it is added to your income. The result is that selling a $1 million property for a $300,000 gain at a 47% marginal rate costs $70,500 in CGT — not $141,000.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -122,6 +126,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/income-tax-calculator/">Income Tax Calculator →</a></li>

@@ -43,8 +43,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>Dollar Cost Averaging vs Lump Sum Investing: What the Data Says for Australian Investors</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">You have $24,000 to invest. Should you put it all in today, or drip it in at $2,000 per month over 12 months? Vanguard's research across multiple markets found that investing the full lump sum immediately produces a higher final portfolio value about 67% of the time — but for most Australian investors with regular salaries, the question is academic.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -165,6 +169,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/investment-returns-calculator/">Investment Returns Calculator →</a></li>

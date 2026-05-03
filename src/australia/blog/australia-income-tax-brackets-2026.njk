@@ -43,8 +43,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>Australia Income Tax Brackets 2026-27: What Your Salary Actually Costs in Tax</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">On a $90,000 salary, you will pay approximately $20,797 in income tax and Medicare levy in 2026-27 — an effective rate of 23.1%. But your marginal rate is 34.5%. Understanding the difference between these two numbers is one of the most important things you can grasp about the Australian tax system, and it changes how you think about every pay rise, every deduction, and every salary sacrifice decision.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -233,6 +237,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/income-tax-calculator/">Income Tax Calculator →</a></li>

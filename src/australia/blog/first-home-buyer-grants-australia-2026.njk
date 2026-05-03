@@ -43,8 +43,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>First Home Buyer Grants Australia 2026: Every State Scheme Explained</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">A first home buyer purchasing a $700,000 property in Queensland in 2026 could receive a $30,000 cash grant, pay zero stamp duty, and buy with a 5% deposit without paying Lenders Mortgage Insurance — a combined benefit worth over $50,000 compared to what a non-first-home buyer pays. The catch is that these schemes come with property price caps, income limits, and eligibility rules that vary dramatically by state. Here is every grant and scheme available, what you qualify for, and how to actually apply.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -190,6 +194,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/first-home-buyer-calculator/">First Home Buyer Calculator →</a></li>

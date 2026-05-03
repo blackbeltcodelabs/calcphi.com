@@ -44,8 +44,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>10 First Home Buyer Mistakes Australians Make (and How to Avoid Them)</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">Buying a first home is the largest financial decision most Australians will ever make. It is also one they have never done before, navigating a complex process with asymmetric information — vendors and agents are experienced; buyers are not. The mistakes are predictable, repeated constantly, and preventable. Most cost between $5,000 and $100,000. Some cost the purchase itself. This guide covers the ten most common and consequential errors and exactly what to do instead.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -104,6 +108,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/mortgage-calculator/">Mortgage Calculator →</a></li>

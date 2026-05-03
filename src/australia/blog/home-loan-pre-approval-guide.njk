@@ -44,8 +44,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>Home Loan Pre-Approval Australia: How It Works and What You Need</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">Pre-approval (also called conditional approval or approval in principle) is the lender's preliminary assessment of your borrowing capacity before you have found a property. It is not a guarantee of finance — the lender still needs to assess the specific property — but it tells you the maximum loan amount you qualify for and gives real estate agents and vendors confidence that you are a serious buyer with finance arranged. In a competitive market, making an offer without pre-approval puts you at a significant disadvantage. Here is exactly how to get it.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -113,6 +117,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/mortgage-calculator/">Mortgage Calculator →</a></li>

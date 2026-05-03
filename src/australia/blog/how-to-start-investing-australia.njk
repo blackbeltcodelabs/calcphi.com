@@ -44,8 +44,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>How to Start Investing in Australia: A Complete Beginner's Guide 2026</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">Most Australians know they should invest but never start because the first step feels too complicated. It is not. You can open a brokerage account online in 10 minutes, deposit $500, and buy your first ETF on the ASX by end of day. The hard part is not starting — it is understanding the structure, tax implications, and investment choices well enough to start confidently and stay the course for 20+ years. This guide covers every step from opening an account to choosing your first investment to structuring for tax efficiency.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -114,6 +118,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/income-tax-calculator/">Income Tax Calculator →</a></li>

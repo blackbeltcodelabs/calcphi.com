@@ -44,8 +44,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>Medicare Levy Surcharge Australia: Do You Need Private Health Insurance?</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">Every Australian pays the Medicare Levy — 2% of taxable income — to fund the public healthcare system. But if your income exceeds $93,000 (singles) or $186,000 (families) and you do not hold private hospital cover, you pay an additional Medicare Levy Surcharge of 1% to 1.5% on top. The surcharge is explicitly designed to push higher-income earners toward private health insurance. For many people, the surcharge calculation determines whether buying hospital cover is a financial obligation or a genuine health decision.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -129,6 +133,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/income-tax-calculator/">Income Tax Calculator →</a></li>

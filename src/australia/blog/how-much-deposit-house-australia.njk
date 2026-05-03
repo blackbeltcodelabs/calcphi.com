@@ -43,8 +43,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>How Much Deposit Do You Need to Buy a House in Australia in 2026?</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">The number you see in first home buyer guides — 20% — is not the minimum you need to buy. In 2026, eligible first home buyers can purchase with as little as 2% or 5% deposit without paying Lenders Mortgage Insurance, thanks to federal government guarantees. But the total cash required to reach settlement is significantly more than just the deposit figure. Here is the true picture: what different deposit levels cost, what LMI adds to your loan, and the full cash required at settlement across different price points.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -275,6 +279,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/lmi-calculator/">LMI Calculator →</a></li>

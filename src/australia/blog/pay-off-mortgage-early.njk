@@ -44,8 +44,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>How to Pay Off Your Mortgage Early in Australia: 6 Strategies That Work</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">On a $600,000 mortgage at 6.20% over 30 years, total interest paid is approximately $713,000 — more than the loan itself. Every extra dollar you repay early reduces this figure, because it immediately reduces the principal balance on which future interest is calculated. Paying an extra $200 per week saves $133,000 in interest and cuts 7 years off the loan term. Here are six concrete strategies Australians use to own their home sooner.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -111,6 +115,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/mortgage-calculator/">Mortgage Calculator →</a></li>

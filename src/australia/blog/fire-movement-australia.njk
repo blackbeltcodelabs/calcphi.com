@@ -44,8 +44,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>FIRE Movement Australia: Financial Independence, Retire Early Guide 2026</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">FIRE — Financial Independence, Retire Early — is a set of principles, not a rigid formula. The core idea: save aggressively, invest passively, and build a portfolio large enough that investment returns cover your living expenses indefinitely. In Australia, FIRE has a distinctive local flavour: superannuation is a forced savings vehicle that complicates early retirement (you cannot touch it until 60 for most people), housing costs in major cities are among the world's highest, and franking credits from ASX shares provide a tax advantage unavailable elsewhere. This guide covers what FIRE actually requires in the Australian context in 2026.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -122,6 +126,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/compound-interest-calculator/">Compound Interest Calculator →</a></li>

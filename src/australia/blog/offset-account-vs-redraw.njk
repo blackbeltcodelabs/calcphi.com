@@ -43,8 +43,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>Offset Account vs Redraw: What's the Difference and Which Saves More?</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">If you have $80,000 sitting in a savings account earning 4.5% while paying 6.2% interest on your mortgage, you are losing 1.7% per year on that gap — roughly $1,360 per year after tax on $80,000. Both offset accounts and redraw facilities let you apply that money against your mortgage balance to reduce interest, but they are legally and structurally different. For property investors, choosing the wrong one can cost far more than the interest difference — it can wipe out years of tax deductions.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -160,6 +164,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/offset-account-calculator/">Offset Account Calculator →</a></li>

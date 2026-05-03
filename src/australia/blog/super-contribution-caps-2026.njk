@@ -43,8 +43,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>Super Contribution Caps 2026-27: Concessional and Non-Concessional Limits</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">The ATO sets strict annual limits on how much you can contribute to super in a tax-advantaged way. Exceed the $30,000 concessional cap or the $120,000 non-concessional cap in 2026-27 and you face penalty tax on the excess — but stay within them and you are using one of Australia's most powerful tax shelters. Here is exactly how the caps work, what counts toward each, and how to use them strategically.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -177,6 +181,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/salary-sacrifice-calculator/">Salary Sacrifice Calculator →</a></li>

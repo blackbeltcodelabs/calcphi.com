@@ -1360,6 +1360,22 @@ a.cp-mcard:hover { color: inherit; }
   letter-spacing: -0.025em;
   margin: var(--space-4) 0 var(--space-5);
 }
+.blog-byline {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+  margin: var(--space-2) 0 var(--space-5);
+  flex-wrap: wrap;
+}
+.blog-byline__author a {
+  color: var(--ink-2);
+  font-weight: 600;
+  text-decoration: none;
+}
+.blog-byline__author a:hover { text-decoration: underline; color: var(--accent); }
+.blog-byline__sep { color: var(--line-2); }
 .blog-intro {
   font-size: var(--text-lg);
   color: var(--ink-2);

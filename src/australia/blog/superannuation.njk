@@ -43,8 +43,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>Australia Superannuation Guide 2026: Everything You Need to Know About Super</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">Superannuation holds over $3.9 trillion in assets across more than 16 million Australian accounts. Yet most Australians have little idea how their super actually works, what it is invested in, or how much they need to retire. This guide fixes that — covering every aspect of super from employer contributions through to retirement income strategies, with 2026-27 figures throughout.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -208,6 +212,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/super-balance-calculator/">Super Balance Calculator →</a></li>

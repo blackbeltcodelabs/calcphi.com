@@ -44,8 +44,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>How to Save a House Deposit in Australia: A Step-by-Step 2026 Guide</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">Saving a house deposit is the single biggest financial challenge facing Australian first home buyers. At median property prices in Sydney ($1,100,000) or Melbourne ($850,000), a 20% deposit requires $220,000 or $170,000 — life-changing sums that take a decade to accumulate on average incomes. But the 20% benchmark is not the only path. Lenders Mortgage Insurance, the Home Guarantee Scheme, the First Home Super Saver Scheme, and government grants have created multiple entry points into homeownership at deposits below 20%. This guide maps every option and identifies the fastest credible path to purchase for different income and savings situations.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -122,6 +126,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/mortgage-calculator/">Mortgage Calculator →</a></li>

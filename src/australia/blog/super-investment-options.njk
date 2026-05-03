@@ -43,8 +43,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>Super Investment Options Australia: Growth, Balanced or Conservative — Which Is Right?</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">Most Australians leave their super in whatever investment option their fund assigned by default. But choosing the wrong option can cost hundreds of thousands of dollars by retirement — the difference between a High Growth and a Conservative option over 30 years on a $100,000 starting balance is well over $600,000. Here is how the options work, what they actually return, and how to choose the right one for your stage of life.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -176,6 +180,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/super-balance-calculator/">Super Balance Calculator →</a></li>

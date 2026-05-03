@@ -44,8 +44,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>Franking Credits Explained: How Dividend Imputation Works in Australia</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">Australia's dividend imputation system is one of the most investor-friendly tax structures in the world. When an Australian company pays tax on its profits and then distributes those profits as dividends, it would be unfair to tax the same money again in the hands of shareholders. Franking credits — also called imputation credits — represent the tax already paid by the company, and shareholders can use them to offset their own tax liability. For many Australian investors, particularly retirees and self-managed super fund members, franking credits represent thousands of dollars in annual tax savings or even cash refunds.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -120,6 +124,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/income-tax-calculator/">Income Tax Calculator →</a></li>

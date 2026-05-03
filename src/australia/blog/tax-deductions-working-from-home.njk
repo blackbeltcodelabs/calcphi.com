@@ -44,8 +44,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>Working From Home Tax Deductions Australia 2026: Revised Fixed Rate Method</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">The ATO's working from home deduction rules were significantly overhauled from 1 July 2022. The revised fixed rate method, now at 70 cents per hour, replaced the old 80 cents shortcut method and the old 52 cents fixed rate. Understanding which method to use — and what records to keep — can make a material difference to your tax refund. For someone working from home 40 hours per week, 48 weeks per year, the deduction is $1,344 under the fixed rate method. But you may also be able to claim additional equipment, phone, and internet costs on top.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -113,6 +117,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/income-tax-calculator/">Income Tax Calculator →</a></li>

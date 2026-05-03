@@ -43,8 +43,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>Australia Home Loans Guide 2026: Mortgages, Rates &amp; Strategies</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">Australian households carry an average mortgage balance of around $620,000 — the second-highest in the world relative to income. With variable rates sitting near 6.2% and a 30-year loan that size costing roughly $1.36 million in total repayments, the decisions you make at the start and throughout the life of your mortgage can easily be worth $100,000 or more. This guide covers everything you need to know: loan types, how the RBA cash rate flows through to your repayments, key terms, and the strategies that genuinely move the needle.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -260,6 +264,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/mortgage-calculator/">Mortgage Calculator →</a></li>

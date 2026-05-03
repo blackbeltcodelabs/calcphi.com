@@ -44,8 +44,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>Spouse Super Contributions Australia: Tax Offset and How Super Splitting Works</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">Many Australian couples retire with dramatically unequal super balances — particularly where one partner took time out of the workforce for caring responsibilities. Two ATO-approved mechanisms fix this: spouse contributions (you contribute post-tax money to your partner's super and receive a tax offset) and super splitting (you redirect your own concessional contributions into your partner's fund). Both strategies can equalise balances, reduce tax, and improve retirement outcomes for the lower-earning partner.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -101,6 +105,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/super-balance-calculator/">Super Balance Calculator →</a></li>

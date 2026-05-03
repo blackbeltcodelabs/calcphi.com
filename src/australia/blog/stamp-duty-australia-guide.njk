@@ -44,8 +44,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>Stamp Duty Australia 2026: What You Pay in Every State and Territory</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">Stamp duty is the single biggest hidden cost of buying property in Australia — and most first home buyers underestimate it by tens of thousands of dollars. On a $750,000 home in New South Wales, stamp duty is approximately $29,055. In Victoria, it's around $40,070. In Queensland, $27,090. Every state sets its own rates, thresholds, and first home buyer concessions — and the differences are enormous.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -145,6 +149,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/mortgage-calculator/">Mortgage Calculator →</a></li>

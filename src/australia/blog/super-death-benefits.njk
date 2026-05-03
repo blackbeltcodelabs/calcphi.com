@@ -44,8 +44,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>Super Death Benefits Australia: What Happens to Your Super When You Die?</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">Superannuation does not automatically become part of your estate when you die. It is held in trust by your super fund and paid out according to your binding death benefit nomination — or, if you have no binding nomination, according to the trustee's discretion. The wrong decision — or no decision — can mean your super goes to unintended recipients, triggers a 32% tax bill for your adult children, or sits in limbo while your estate is disputed. Making a binding nomination takes 10 minutes and can save your family tens of thousands of dollars.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -112,6 +116,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/super-balance-calculator/">Super Balance Calculator →</a></li>

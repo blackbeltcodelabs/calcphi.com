@@ -43,8 +43,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>Mortgage Borrowing Capacity Australia 2026: How Much Can You Actually Borrow?</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">Most Australians discover their borrowing limit only after sitting down with a lender — and the number is often lower than expected. With variable mortgage rates near 6.2% and lenders required to stress-test your finances at around 9.2% (3% above the variable rate), a $120,000 salary may support a loan of only $620,000–$680,000, depending on your debts and living expenses. Here is exactly how lenders calculate your borrowing capacity and what you can do to improve the number before you apply.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -188,6 +192,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/mortgage-calculator/">Mortgage Calculator →</a></li>

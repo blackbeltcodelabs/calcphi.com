@@ -44,8 +44,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>Building vs Buying a House in Australia: Which Costs Less in 2026?</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">The choice between building a new home and buying an established property is one of the most significant financial decisions a first home buyer makes. In outer suburban growth corridors, a house-and-land package can deliver more space for significantly less money than a comparable established home. But building comes with construction risk — cost overruns, builder insolvencies, defects, and delays are real and common in the Australian construction sector. Buying established provides certainty — what you see is what you pay. Understanding which option suits your situation requires comparing true costs, not just headline prices.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -103,6 +107,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/mortgage-calculator/">Mortgage Calculator →</a></li>

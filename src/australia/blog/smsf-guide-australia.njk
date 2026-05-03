@@ -43,8 +43,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>SMSF Australia: Is a Self-Managed Super Fund Worth It in 2026?</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">There are over 620,000 self-managed super funds in Australia holding more than $900 billion in assets. An SMSF puts you in direct control of your retirement savings — you choose what to invest in, when to buy and sell, and how to structure your estate. But that control comes with compliance obligations and costs of $3,000–$6,000 per year, regardless of your balance. Here is when an SMSF genuinely makes sense.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -195,6 +199,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/super-balance-calculator/">Super Balance Calculator →</a></li>

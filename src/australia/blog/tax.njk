@@ -43,8 +43,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>Australia Tax Guide 2026-27: Income Tax, CGT, Deductions & More</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">The average full-time Australian worker earns around $98,000 and pays roughly $24,200 in income tax and Medicare levy — about 24.7 cents in every dollar. Yet most Australians could legally reduce that bill by thousands using strategies the ATO explicitly allows. This is your complete roadmap to how Australian tax works, what you owe, and how to keep more of what you earn.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -250,6 +254,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/income-tax-calculator/">Income Tax Calculator →</a></li>

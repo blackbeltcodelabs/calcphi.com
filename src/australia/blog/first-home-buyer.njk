@@ -43,8 +43,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>First Home Buyer Australia 2026: The Complete Guide From Saving to Settlement</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">The median Australian home price reached $780,000 in 2026. A 20% deposit is $156,000 — before stamp duty, legal fees, and moving costs. But with first home buyer grants worth up to $30,000, deposit schemes that let you buy with 2–5%, and stamp duty waivers in most states, the real entry point is significantly lower than that headline number suggests. This guide walks you through every stage of the journey, from your first savings goal to the day you collect the keys.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -224,6 +228,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/first-home-buyer-calculator/">First Home Buyer Calculator →</a></li>

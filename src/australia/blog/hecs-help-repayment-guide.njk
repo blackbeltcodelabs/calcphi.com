@@ -43,8 +43,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>HECS-HELP Repayment Guide 2026: Thresholds, Rates, and Paying It Off Faster</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">Australia has approximately 3.4 million people with outstanding HECS-HELP debt, with the average balance sitting around $24,000. In June 2023, CPI indexation of 7.1% added over $1,700 to the average balance overnight — a wake-up call for millions who assumed their debt was barely growing. Here is exactly how HECS-HELP repayments work in 2026-27, what happens with indexation, and whether paying it down early makes financial sense.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -229,6 +233,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/hecs-repayment-calculator/">HECS Repayment Calculator →</a></li>

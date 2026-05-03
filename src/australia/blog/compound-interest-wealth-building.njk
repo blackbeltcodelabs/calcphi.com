@@ -43,8 +43,12 @@ breadcrumbs:
           <time datetime="2026-05-02">2 May 2026</time>
         </div>
         <h1>The Power of Compound Interest: How Australians Build Wealth Over Time</h1>
+        <div class="blog-byline">
+          <span class="blog-byline__author">By <a href="{{ authors[authorId].url }}">{{ authors[authorId].name }}</a></span>
+          <span class="blog-byline__sep">·</span>
+          <span class="blog-byline__date">Updated <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
+        </div>
         <p class="blog-intro">Albert Einstein reportedly called compound interest the "eighth wonder of the world." Whether or not he actually said it, the mathematics are genuinely remarkable: $500 invested monthly at 8% per year for 30 years grows to approximately $745,000. You contributed $180,000. The remaining $565,000 is compound returns — your money making money on itself.</p>
-        {% include "components/author-bio.njk" %}
       </header>
 
       <section>
@@ -211,6 +215,7 @@ breadcrumbs:
       </section>
 
       <div class="blog-article__related">
+        {% include "components/author-bio.njk" %}
         <h3>Related Calculators</h3>
         <ul>
           <li><a href="/australia/compound-interest-calculator/">Compound Interest Calculator →</a></li>
