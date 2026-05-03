@@ -22,7 +22,8 @@
       <!-- Primary nav -->
       {% if page.url != "/" %}
       <nav class="cp-nav" aria-label="Primary navigation">
-        <a href="{% if page.url.startsWith('/australia/') %}/australia/{% elif page.url.startsWith('/usa/') %}/usa/{% else %}/india/{% endif %}"
+        <a id="nav-calc-link"
+           href="{% if page.url.startsWith('/australia/') %}/australia/{% elif page.url.startsWith('/usa/') %}/usa/{% else %}/india/{% endif %}"
            {% if page.url.startsWith('/india/') or page.url.startsWith('/australia/') or page.url.startsWith('/usa/') %}aria-current="true"{% endif %}>
           Calculators
         </a>
@@ -30,11 +31,13 @@
            {% if page.url.startsWith('/markets/') %}aria-current="page"{% endif %}>
           Markets
         </a>
-        <a href="{% if page.url.startsWith('/australia/') %}/australia/blog/{% else %}/blog/{% endif %}"
+        <a id="nav-blog-link"
+           href="{% if page.url.startsWith('/australia/') %}/australia/blog/{% else %}/blog/{% endif %}"
            {% if page.url.startsWith('/australia/blog/') or page.url.startsWith('/blog/') %}aria-current="page"{% endif %}>
           Blog
         </a>
-        <a href="{% if page.url.startsWith('/australia/') %}/australia/help/{% elif page.url.startsWith('/india/') %}/india/help/{% else %}/help/{% endif %}"
+        <a id="nav-help-link"
+           href="{% if page.url.startsWith('/australia/') %}/australia/help/{% elif page.url.startsWith('/india/') %}/india/help/{% else %}/help/{% endif %}"
            {% if page.url.startsWith('/australia/help/') or page.url.startsWith('/india/help/') or page.url.startsWith('/help/') %}aria-current="page"{% endif %}>
           Help
         </a>
@@ -80,10 +83,10 @@
 
     <!-- Mobile nav (hidden by default) -->
     <nav id="cp-mobile-nav" class="cp-mobile-nav" aria-label="Mobile navigation" hidden>
-      <a href="{% if page.url.startsWith('/australia/') %}/australia/{% elif page.url.startsWith('/usa/') %}/usa/{% else %}/india/{% endif %}">Calculators</a>
+      <a id="mob-calc-link" href="{% if page.url.startsWith('/australia/') %}/australia/{% elif page.url.startsWith('/usa/') %}/usa/{% else %}/india/{% endif %}">Calculators</a>
       <a href="/markets/">Markets</a>
-      <a href="{% if page.url.startsWith('/australia/') %}/australia/blog/{% else %}/blog/{% endif %}">Blog</a>
-      <a href="{% if page.url.startsWith('/australia/') %}/australia/help/{% elif page.url.startsWith('/india/') %}/india/help/{% else %}/help/{% endif %}">Help</a>
+      <a id="mob-blog-link" href="{% if page.url.startsWith('/australia/') %}/australia/blog/{% else %}/blog/{% endif %}">Blog</a>
+      <a id="mob-help-link" href="{% if page.url.startsWith('/australia/') %}/australia/help/{% elif page.url.startsWith('/india/') %}/india/help/{% else %}/help/{% endif %}">Help</a>
       <div class="cp-mobile-nav__markets">
         <a href="/australia/" data-market-code="AU">🇦🇺 Australia</a>
         <a href="/india/" data-market-code="IN">🇮🇳 India</a>
@@ -106,10 +109,9 @@
     });
   }
 
-  // Dynamic market picker label
+  // Dynamic nav links — rewrite Calculators, Blog, Help based on detected market
   (function() {
     var label = document.querySelector('.cp-market-label');
-    if (!label) return;
     var path = window.location.pathname;
     var market = null;
     if (path.startsWith('/australia/')) market = 'AU';
@@ -119,13 +121,39 @@
     } else {
       try { market = localStorage.getItem('cp_market'); } catch(e) {}
     }
-    if (market === 'AU') label.textContent = '🇦🇺 Australia';
-    else if (market === 'IN') label.textContent = '🇮🇳 India';
-    // else stays "🌏 Markets"
-    // Save on any market link click
+
+    // Map each nav link to its market-specific URL
+    var navMap = {
+      calc: { AU: '/australia/', IN: '/india/' },
+      blog: { AU: '/australia/blog/', IN: '/blog/' },
+      help: { AU: '/australia/help/', IN: '/india/help/' }
+    };
+
+    function setHref(id, url) {
+      var el = document.getElementById(id);
+      if (el && url) el.href = url;
+    }
+
+    if (market) {
+      setHref('nav-calc-link', navMap.calc[market]);
+      setHref('nav-blog-link', navMap.blog[market]);
+      setHref('nav-help-link', navMap.help[market]);
+      setHref('mob-calc-link', navMap.calc[market]);
+      setHref('mob-blog-link', navMap.blog[market]);
+      setHref('mob-help-link', navMap.help[market]);
+    }
+
+    // Update market picker label
+    if (label) {
+      if (market === 'AU') label.textContent = '🇦🇺 Australia';
+      else if (market === 'IN') label.textContent = '🇮🇳 India';
+    }
+
+    // Persist market on dropdown link clicks and immediately update nav links
     document.querySelectorAll('[data-market-code]').forEach(function(el) {
       el.addEventListener('click', function() {
-        try { localStorage.setItem('cp_market', el.getAttribute('data-market-code')); } catch(e) {}
+        var code = el.getAttribute('data-market-code');
+        try { localStorage.setItem('cp_market', code); } catch(e) {}
       });
     });
   })();
