@@ -26,8 +26,8 @@
            {% if page.url.startsWith('/india/') or page.url.startsWith('/australia/') or page.url.startsWith('/usa/') %}aria-current="true"{% endif %}>
           Calculators
         </a>
-        <a href="/"
-           {% if page.url == "/" %}aria-current="page"{% endif %}>
+        <a href="/markets/"
+           {% if page.url.startsWith('/markets/') %}aria-current="page"{% endif %}>
           Markets
         </a>
         <a href="{% if page.url.startsWith('/australia/') %}/australia/blog/{% else %}/blog/{% endif %}"
@@ -56,7 +56,7 @@
       <!-- Market picker -->
       <details class="cp-market">
         <summary aria-label="Choose market">
-          🇮🇳 India
+          <span class="cp-market-label">🌏 Markets</span>
           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <polyline points="6 9 12 15 18 9"/>
           </svg>
@@ -81,7 +81,7 @@
     <!-- Mobile nav (hidden by default) -->
     <nav id="cp-mobile-nav" class="cp-mobile-nav" aria-label="Mobile navigation" hidden>
       <a href="{% if page.url.startsWith('/australia/') %}/australia/{% elif page.url.startsWith('/usa/') %}/usa/{% else %}/india/{% endif %}">Calculators</a>
-      <a href="/">Markets</a>
+      <a href="/markets/">Markets</a>
       <a href="{% if page.url.startsWith('/australia/') %}/australia/blog/{% else %}/blog/{% endif %}">Blog</a>
       <a href="/help/">Help</a>
       <div class="cp-mobile-nav__markets">
@@ -105,5 +105,29 @@
       else { nav.setAttribute('hidden', ''); btn.setAttribute('aria-expanded', 'false'); }
     });
   }
+
+  // Dynamic market picker label
+  (function() {
+    var label = document.querySelector('.cp-market-label');
+    if (!label) return;
+    var path = window.location.pathname;
+    var market = null;
+    if (path.startsWith('/australia/')) market = 'AU';
+    else if (path.startsWith('/india/')) market = 'IN';
+    if (market) {
+      try { localStorage.setItem('cp_market', market); } catch(e) {}
+    } else {
+      try { market = localStorage.getItem('cp_market'); } catch(e) {}
+    }
+    if (market === 'AU') label.textContent = '🇦🇺 Australia';
+    else if (market === 'IN') label.textContent = '🇮🇳 India';
+    // else stays "🌏 Markets"
+    // Save on any market link click
+    document.querySelectorAll('[data-market-code]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        try { localStorage.setItem('cp_market', el.getAttribute('data-market-code')); } catch(e) {}
+      });
+    });
+  })();
 })();
 </script>
