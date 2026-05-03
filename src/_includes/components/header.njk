@@ -20,6 +20,7 @@
       </a>
 
       <!-- Primary nav -->
+      {% if page.url != "/" %}
       <nav class="cp-nav" aria-label="Primary navigation">
         <a href="{% if page.url.startsWith('/australia/') %}/australia/{% elif page.url.startsWith('/usa/') %}/usa/{% else %}/india/{% endif %}"
            {% if page.url.startsWith('/india/') or page.url.startsWith('/australia/') or page.url.startsWith('/usa/') %}aria-current="true"{% endif %}>
@@ -38,6 +39,7 @@
           Help
         </a>
       </nav>
+      {% endif %}
 
       <div style="flex:1"></div>
 
@@ -60,10 +62,10 @@
           </svg>
         </summary>
         <div class="cp-market-dropdown">
+          <a href="/australia/" data-market-code="AU">🇦🇺 <strong>Australia</strong> · AUD</a>
           <a href="/india/" data-market-code="IN">🇮🇳 <strong>India</strong> · INR</a>
           <span class="cp-market-item--soon">🇺🇸 <strong>USA</strong> · USD <span class="cp-soon-badge">Soon</span></span>
           <span class="cp-market-item--soon">🇨🇦 <strong>Canada</strong> · CAD <span class="cp-soon-badge">Soon</span></span>
-          <a href="/australia/" data-market-code="AU">🇦🇺 <strong>Australia</strong> · AUD</a>
         </div>
       </details>
 
@@ -83,10 +85,10 @@
       <a href="{% if page.url.startsWith('/australia/') %}/australia/blog/{% else %}/blog/{% endif %}">Blog</a>
       <a href="/help/">Help</a>
       <div class="cp-mobile-nav__markets">
+        <a href="/australia/" data-market-code="AU">🇦🇺 Australia</a>
         <a href="/india/" data-market-code="IN">🇮🇳 India</a>
         <span class="cp-mobile-nav__market--soon">🇺🇸 USA <span class="cp-soon-badge">Soon</span></span>
         <span class="cp-mobile-nav__market--soon">🇨🇦 Canada <span class="cp-soon-badge">Soon</span></span>
-        <a href="/australia/" data-market-code="AU">🇦🇺 Australia</a>
       </div>
     </nav>
   </header>
