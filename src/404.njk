@@ -1,0 +1,57 @@
+---
+layout: layouts/base.njk
+permalink: /404.html
+title: "Page Not Found | CalcPhi"
+description: "The page you're looking for doesn't exist. Find free financial calculators for India and Australia on CalcPhi."
+---
+
+<main id="main-content" class="pg404">
+  <div class="pg404__inner">
+
+    <div class="pg404__brand">
+      <span class="pg404__phi">φ</span>
+    </div>
+
+    <p class="pg404__code">404</p>
+    <h1 class="pg404__h1">Page not found</h1>
+    <p class="pg404__sub">The URL you followed may be outdated or mistyped. The calculator or article you're looking for might have moved.</p>
+
+    <div class="pg404__actions">
+      <a href="/" class="pg404__btn pg404__btn--primary">Go to homepage</a>
+      <button class="pg404__btn pg404__btn--ghost" id="pg404-search">Search calculators</button>
+    </div>
+
+    <div class="pg404__nav">
+      <div class="pg404__market">
+        <div class="pg404__market-label">🇮🇳 India</div>
+        <div class="pg404__links">
+          <a href="/india/">All India calculators</a>
+          <a href="/india/sip-calculator/">SIP Calculator</a>
+          <a href="/india/emi-calculator/">EMI Calculator</a>
+          <a href="/india/income-tax-calculator/">Income Tax</a>
+          <a href="/india/ppf-calculator/">PPF Calculator</a>
+          <a href="/india/blog/">India Blog</a>
+        </div>
+      </div>
+      <div class="pg404__market">
+        <div class="pg404__market-label">🇦🇺 Australia</div>
+        <div class="pg404__links">
+          <a href="/australia/">All Australia calculators</a>
+          <a href="/australia/mortgage-calculator/">Mortgage Calculator</a>
+          <a href="/australia/income-tax-calculator/">Income Tax</a>
+          <a href="/australia/super-balance-calculator/">Super Balance</a>
+          <a href="/australia/hecs-repayment-calculator/">HECS Repayment</a>
+          <a href="/australia/blog/">Australia Blog</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<script>
+document.getElementById('pg404-search').addEventListener('click', function () {
+  var btn = document.getElementById('cp-search-btn');
+  if (btn) btn.click();
+});
+</script>
