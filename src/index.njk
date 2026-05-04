@@ -405,19 +405,19 @@ description: "Free, accurate financial calculators for India, USA, Canada and Au
 
       <div class="hp-why__stats">
         <div class="hp-why__stat">
-          <span class="hp-why__stat-n">259</span>
+          <span class="hp-why__stat-n" data-count="259">259</span>
           <span class="hp-why__stat-l">Free calculators</span>
         </div>
         <div class="hp-why__stat">
-          <span class="hp-why__stat-n">4</span>
+          <span class="hp-why__stat-n" data-count="2">2</span>
           <span class="hp-why__stat-l">Markets live</span>
         </div>
         <div class="hp-why__stat">
-          <span class="hp-why__stat-n">0</span>
+          <span class="hp-why__stat-n" data-count="0">0</span>
           <span class="hp-why__stat-l">Sign-ups needed</span>
         </div>
         <div class="hp-why__stat">
-          <span class="hp-why__stat-n hp-why__stat-n--accent">100%</span>
+          <span class="hp-why__stat-n hp-why__stat-n--accent" data-count="100" data-suffix="%">100%</span>
           <span class="hp-why__stat-l">Free, forever</span>
         </div>
       </div>
@@ -464,5 +464,33 @@ description: "Free, accurate financial calculators for India, USA, Canada and Au
 
     </div>
   </section>
+
+  <script>
+  (function () {
+    var els = document.querySelectorAll('[data-count]');
+    if (!els.length || !('IntersectionObserver' in window)) return;
+    function animate(el) {
+      var target = parseInt(el.getAttribute('data-count'), 10);
+      var suffix = el.getAttribute('data-suffix') || '';
+      if (target === 0) { el.textContent = '0' + suffix; return; }
+      var duration = 1000;
+      var start = null;
+      function step(ts) {
+        if (!start) start = ts;
+        var p = Math.min((ts - start) / duration, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(eased * target) + suffix;
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { animate(e.target); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.6 });
+    els.forEach(function (el) { obs.observe(el); });
+  })();
+  </script>
 
 </main>
