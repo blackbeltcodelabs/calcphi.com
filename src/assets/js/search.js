@@ -104,8 +104,6 @@
   // ── Inject modal into DOM ─────────────────────────────────────────────────
   var wrap = document.createElement('div');
   wrap.id = 'cp-search-overlay';
-  wrap.className = 'cp-search-overlay';
-  wrap.setAttribute('hidden', '');
   wrap.setAttribute('role', 'dialog');
   wrap.setAttribute('aria-modal', 'true');
   wrap.setAttribute('aria-label', 'Search calculators');
@@ -113,8 +111,8 @@
     '<div class="cp-search-modal">' +
       '<div class="cp-search-input-wrap">' +
         '<svg class="cp-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>' +
-        '<input id="cp-search-input" type="text" placeholder="Search 130+ calculators across Australia and India…" autocomplete="off" spellcheck="false">' +
-        '<button class="cp-search-close-btn" aria-label="Close search"><kbd>ESC</kbd></button>' +
+        '<input id="cp-search-input" type="text" placeholder="Search 130+ calculators — Australia & India…" autocomplete="off" spellcheck="false">' +
+        '<button class="cp-search-close-btn" aria-label="Close search">ESC</button>' +
       '</div>' +
       '<ul id="cp-search-results" class="cp-search-results" role="listbox" aria-label="Search results"></ul>' +
       '<div class="cp-search-footer">' +
@@ -130,18 +128,20 @@
   var results = document.getElementById('cp-search-results');
   var active  = -1;
 
+  function isOpen() { return overlay.classList.contains('is-open'); }
+
   // ── Open / close ──────────────────────────────────────────────────────────
   function open() {
-    overlay.removeAttribute('hidden');
+    overlay.classList.add('is-open');
     document.body.style.overflow = 'hidden';
     input.value = '';
     active = -1;
     renderDefault();
-    setTimeout(function() { input.focus(); }, 10);
+    setTimeout(function() { input.focus(); }, 20);
   }
 
   function close() {
-    overlay.setAttribute('hidden', '');
+    overlay.classList.remove('is-open');
     document.body.style.overflow = '';
     active = -1;
   }
@@ -255,10 +255,10 @@
   document.addEventListener('keydown', function(e) {
     if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
       e.preventDefault();
-      overlay.hasAttribute('hidden') ? open() : close();
+      isOpen() ? close() : open();
       return;
     }
-    if (overlay.hasAttribute('hidden')) return;
+    if (!isOpen()) return;
     switch (e.key) {
       case 'Escape':    close(); break;
       case 'ArrowDown': e.preventDefault(); setActive(active < 0 ? 0 : active + 1); break;
