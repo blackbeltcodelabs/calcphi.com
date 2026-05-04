@@ -1956,3 +1956,304 @@ a.cp-mcard:hover { color: inherit; }
   .cp-search-results { max-height: 55vh; }
   .cp-search-footer { display: none; }
 }
+
+/* ══════════════════════════════════════════════════════════
+   HOMEPAGE — By Market section
+   ══════════════════════════════════════════════════════════ */
+.hp-markets {
+  background: var(--ink);
+  padding: 80px 0 72px;
+}
+.hp-markets__head {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.hp-markets .cp-tag {
+  color: var(--accent);
+  justify-content: center;
+}
+.hp-markets .cp-tag::before { background: var(--accent); }
+.hp-markets__h2 {
+  font-family: var(--font-ed);
+  font-size: clamp(30px, 4.5vw, 52px);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  margin: 12px 0 16px;
+}
+.hp-markets__h2 em { font-style: italic; color: var(--accent); }
+.hp-markets__sub {
+  font-size: 15.5px;
+  color: rgba(255,255,255,0.48);
+  max-width: 440px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+/* ── Live cards grid ───────────────────────────────── */
+.hp-markets__live {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+.hp-mkt-card {
+  background: var(--surface);
+  border-radius: var(--r-xl);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: transform 0.22s cubic-bezier(.2,.8,.4,1), box-shadow 0.22s;
+}
+.hp-mkt-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 32px 72px rgba(0,0,0,0.42);
+  text-decoration: none;
+  color: inherit;
+}
+/* colored top accent strip */
+.hp-mkt-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+}
+.hp-mkt-card--au::before { background: linear-gradient(90deg, #0284c7, #38bdf8); }
+.hp-mkt-card--in::before { background: linear-gradient(90deg, #d96e30, #f59e0b); }
+
+.hp-mkt-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+.hp-mkt-card__flag { font-size: 38px; line-height: 1; }
+.hp-mkt-badge--live {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: #dcfce7;
+  color: #14532d;
+  border: 1px solid #bbf7d0;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+.hp-mkt-card__title {
+  font-family: var(--font-ed);
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1;
+  letter-spacing: -0.022em;
+}
+.hp-mkt-card__meta {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-3);
+  margin-top: -6px;
+}
+.hp-mkt-card__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  flex: 1;
+  padding: 6px 0;
+}
+.hp-mkt-card__chips span {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  transition: filter 0.12s;
+}
+.hp-mkt-card__chips--au span { background: #e0f2fe; color: #0369a1; border-color: #bae6fd; }
+.hp-mkt-card__chips--in span { background: #fff7ed; color: #c2410c; border-color: #fed7aa; }
+.hp-mkt-card:hover .hp-mkt-card__chips span { filter: brightness(0.96); }
+
+.hp-mkt-card__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  margin-top: 4px;
+  border-top: 1px solid var(--line);
+  color: var(--accent);
+}
+.hp-mkt-card__cta { font-size: 13.5px; font-weight: 600; }
+.hp-mkt-card__foot svg { transition: transform 0.15s; flex-shrink: 0; }
+.hp-mkt-card:hover .hp-mkt-card__foot svg { transform: translateX(4px); }
+
+/* ── Coming soon strip ─────────────────────────────── */
+.hp-markets__soon {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--r-lg);
+  padding: 18px 28px;
+  flex-wrap: wrap;
+}
+.hp-soon__label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.25);
+  padding-right: 24px;
+  border-right: 1px solid rgba(255,255,255,0.1);
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.hp-soon__list { display: flex; gap: 36px; flex-wrap: wrap; }
+.hp-soon__item { display: flex; align-items: center; gap: 8px; opacity: 0.45; }
+.hp-soon__flag { font-size: 18px; line-height: 1; }
+.hp-soon__name { font-size: 13.5px; font-weight: 600; color: #fff; }
+.hp-soon__tools { font-size: 12px; color: rgba(255,255,255,0.45); }
+
+/* ── Responsive: markets ───────────────────────────── */
+@media (max-width: 760px) {
+  .hp-markets { padding: 56px 0 48px; }
+  .hp-markets__head { margin-bottom: 32px; }
+  .hp-markets__live { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .hp-soon__list { gap: 20px; }
+  .hp-soon__tools { display: none; }
+  .hp-mkt-card { padding: 24px; }
+}
+
+/* ══════════════════════════════════════════════════════════
+   HOMEPAGE — Why CalcPhi section
+   ══════════════════════════════════════════════════════════ */
+.hp-why {
+  padding: 80px 0;
+  background: var(--bg);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+/* ── Big stats bar ─────────────────────────────────── */
+.hp-why__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  margin-bottom: 64px;
+}
+.hp-why__stat {
+  padding: 28px 28px;
+  border-right: 1px solid var(--line);
+}
+.hp-why__stat:last-child { border-right: none; }
+.hp-why__stat-n {
+  display: block;
+  font-family: var(--font-num);
+  font-size: 46px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.05em;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.hp-why__stat-n--accent { color: var(--accent); }
+.hp-why__stat-l {
+  font-size: 11.5px;
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-weight: 600;
+}
+
+/* ── Section head ──────────────────────────────────── */
+.hp-why__head { margin-bottom: 40px; }
+.hp-why__h2 {
+  font-family: var(--font-ed);
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 10px 0 10px;
+}
+.hp-why__sub {
+  font-size: 15px;
+  color: var(--ink-3);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 420px;
+}
+
+/* ── 3-column feature grid ─────────────────────────── */
+.hp-why__features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+.hp-why__feat {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 36px 32px;
+  background: var(--surface);
+}
+.hp-why__feat-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.hp-why__feat-icon--blue  { background: #dbeafe; color: #1d4ed8; }
+.hp-why__feat-icon--amber { background: #fef3c7; color: #b45309; }
+.hp-why__feat-icon--green { background: #dcfce7; color: #15803d; }
+.hp-why__feat-t {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.3;
+  margin: 2px 0 0;
+}
+.hp-why__feat-d {
+  font-size: 14px;
+  color: var(--ink-3);
+  line-height: 1.72;
+  margin: 0;
+  flex: 1;
+}
+
+/* ── Responsive: why ───────────────────────────────── */
+@media (max-width: 900px) {
+  .hp-why__stats { grid-template-columns: repeat(2, 1fr); }
+  .hp-why__stat:nth-child(2) { border-right: none; }
+  .hp-why__stat:nth-child(3) { border-top: 1px solid var(--line); }
+  .hp-why__stat:nth-child(4) { border-top: 1px solid var(--line); border-right: none; }
+  .hp-why__features { grid-template-columns: 1fr; }
+  .hp-why__feat { flex-direction: row; gap: 22px; padding: 28px 28px; }
+}
+@media (max-width: 520px) {
+  .hp-why { padding: 56px 0; }
+  .hp-why__stats { margin-bottom: 40px; }
+  .hp-why__stat { padding: 20px 18px; }
+  .hp-why__stat-n { font-size: 34px; }
+  .hp-why__feat { flex-direction: column; }
+}
