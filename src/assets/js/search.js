@@ -101,6 +101,35 @@
     { t: 'Rental Yield Calculator',     k: 'rental yield gross net investment property India',   c: 'Real Estate',        m: 'IN', u: '/india/rental-yield-calculator/' },
   ];
 
+  // ── Featured / pre-populated lists (honest search volume order) ───────────
+  var TRENDING_AU = [
+    '/australia/mortgage-calculator/',
+    '/australia/salary-take-home-calculator/',
+    '/australia/income-tax-calculator/'
+  ];
+  var POPULAR_AU = [
+    '/australia/hecs-repayment-calculator/',
+    '/australia/super-balance-calculator/',
+    '/australia/stamp-duty-calculator/'
+  ];
+  var TRENDING_IN = [
+    '/india/sip-calculator/',
+    '/india/emi-calculator/',
+    '/india/income-tax-calculator/'
+  ];
+  var POPULAR_IN = [
+    '/india/ppf-calculator/',
+    '/india/hra-calculator/',
+    '/india/fd-calculator/'
+  ];
+
+  function byUrl(url) {
+    for (var i = 0; i < INDEX.length; i++) {
+      if (INDEX[i].u === url) return INDEX[i];
+    }
+    return null;
+  }
+
   // ── Inject modal into DOM ─────────────────────────────────────────────────
   var wrap = document.createElement('div');
   wrap.id = 'cp-search-overlay';
@@ -111,7 +140,7 @@
     '<div class="cp-search-modal">' +
       '<div class="cp-search-input-wrap">' +
         '<svg class="cp-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>' +
-        '<input id="cp-search-input" type="text" placeholder="Search 130+ calculators — Australia & India…" autocomplete="off" spellcheck="false">' +
+        '<input id="cp-search-input" type="text" placeholder="Search 138+ calculators — Australia & India…" autocomplete="off" spellcheck="false">' +
         '<button class="cp-search-close-btn" aria-label="Close search">ESC</button>' +
       '</div>' +
       '<ul id="cp-search-results" class="cp-search-results" role="listbox" aria-label="Search results"></ul>' +
@@ -164,7 +193,11 @@
     try { return localStorage.getItem('cp_market') || null; } catch(e) { return null; }
   }
 
-  // ── Render ────────────────────────────────────────────────────────────────
+  function itemArrow() {
+    return '<svg class="cp-search-item__arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>';
+  }
+
+  // ── Render search results (during active query) ───────────────────────────
   function renderResults(items, query) {
     active = -1;
     results.innerHTML = '';
@@ -181,28 +214,80 @@
       li.className = 'cp-search-item';
       li.setAttribute('role', 'option');
       li.setAttribute('data-url', item.u);
-      li.setAttribute('data-idx', String(i));
       li.innerHTML =
         '<span class="cp-search-item__icon">' + (item.m === 'AU' ? '🇦🇺' : '🇮🇳') + '</span>' +
         '<span class="cp-search-item__body">' +
           '<span class="cp-search-item__title">' + highlight(item.t, query) + '</span>' +
           '<span class="cp-search-item__cat">' + esc(item.c) + ' · ' + (item.m === 'AU' ? 'Australia' : 'India') + '</span>' +
         '</span>' +
-        '<svg class="cp-search-item__arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>';
+        itemArrow();
       li.addEventListener('click', function() { go(item.u); });
-      li.addEventListener('mouseenter', function() { setActive(i); });
+      (function(idx) {
+        li.addEventListener('mouseenter', function() { setActive(idx); });
+      })(i);
       results.appendChild(li);
     });
   }
 
+  // ── Render default state (no query — section headers + trending) ──────────
   function renderDefault() {
+    active = -1;
+    results.innerHTML = '';
     var market = getMarket();
-    var sorted = INDEX.slice().sort(function(a, b) {
-      if (market && a.m === market && b.m !== market) return -1;
-      if (market && b.m === market && a.m !== market) return 1;
-      return 0;
-    });
-    renderResults(sorted, '');
+
+    // primary = user's detected market (or AU as default)
+    var primary       = (market === 'IN') ? 'IN' : 'AU';
+    var secondary     = (primary === 'AU') ? 'IN' : 'AU';
+    var primaryName   = (primary === 'AU') ? 'Australia' : 'India';
+    var secondaryName = (secondary === 'AU') ? 'Australia' : 'India';
+    var trendingPrimary   = (primary === 'AU') ? TRENDING_AU : TRENDING_IN;
+    var popularPrimary    = (primary === 'AU') ? POPULAR_AU  : POPULAR_IN;
+    var trendingSecondary = (primary === 'AU') ? TRENDING_IN : TRENDING_AU;
+
+    var idx = 0;
+
+    function addSection(label, isTrending) {
+      var li = document.createElement('li');
+      li.className = 'cp-search-section' + (isTrending ? ' cp-search-section--trending' : '');
+      li.textContent = label;
+      results.appendChild(li);
+    }
+
+    function addItem(item, isTrending) {
+      if (!item) return;
+      var thisIdx = idx++;
+      var flag = item.m === 'AU' ? '🇦🇺' : '🇮🇳';
+      var countryName = item.m === 'AU' ? 'Australia' : 'India';
+      var li = document.createElement('li');
+      li.className = 'cp-search-item';
+      li.setAttribute('role', 'option');
+      li.setAttribute('data-url', item.u);
+      li.innerHTML =
+        '<span class="cp-search-item__icon">' + flag + '</span>' +
+        '<span class="cp-search-item__body">' +
+          '<span class="cp-search-item__title">' + esc(item.t) + '</span>' +
+          '<span class="cp-search-item__cat">' + esc(item.c) + ' · ' + countryName + '</span>' +
+        '</span>' +
+        (isTrending ? '<span class="cp-search-item__trending">Most used</span>' : '') +
+        itemArrow();
+      li.addEventListener('click', function() { go(item.u); });
+      (function(i) {
+        li.addEventListener('mouseenter', function() { setActive(i); });
+      })(thisIdx);
+      results.appendChild(li);
+    }
+
+    // Section 1 — Most Used (primary market)
+    addSection('Most Used · ' + primaryName, true);
+    trendingPrimary.forEach(function(url) { addItem(byUrl(url), true); });
+
+    // Section 2 — Also popular (primary market)
+    addSection('Also popular in ' + primaryName, false);
+    popularPrimary.forEach(function(url) { addItem(byUrl(url), false); });
+
+    // Section 3 — Top picks from secondary market
+    addSection('Popular in ' + secondaryName, false);
+    trendingSecondary.forEach(function(url) { addItem(byUrl(url), false); });
   }
 
   function search(query) {
@@ -216,7 +301,6 @@
       var aT = a.t.toLowerCase().indexOf(q) !== -1 ? 0 : 1;
       var bT = b.t.toLowerCase().indexOf(q) !== -1 ? 0 : 1;
       if (aT !== bT) return aT - bT;
-      // secondary: prefer current market
       if (market) {
         if (a.m === market && b.m !== market) return -1;
         if (b.m === market && a.m !== market) return 1;
@@ -242,16 +326,12 @@
   function go(url) { window.location.href = url; }
 
   // ── Wire events ───────────────────────────────────────────────────────────
-
-  // Header search button
   var btn = document.getElementById('cp-search-btn');
   if (btn) btn.addEventListener('click', function(e) { e.preventDefault(); open(); });
 
-  // Close button inside modal
   var closeBtn = wrap.querySelector('.cp-search-close-btn');
   if (closeBtn) closeBtn.addEventListener('click', close);
 
-  // ⌘K / Ctrl+K — global shortcut
   document.addEventListener('keydown', function(e) {
     if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
       e.preventDefault();
@@ -272,12 +352,10 @@
     }
   });
 
-  // Click outside modal to close
   overlay.addEventListener('click', function(e) {
     if (e.target === overlay) close();
   });
 
-  // Real-time filtering
   input.addEventListener('input', function() { search(input.value); });
 
 })();
