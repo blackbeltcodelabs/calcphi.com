@@ -156,15 +156,20 @@ button { cursor: pointer; font: inherit; border: none; background: none; }
 .cp-logo-wm em { font-style: normal; color: var(--accent); }
 
 /* Primary nav */
-.cp-nav { display: flex; align-items: center; gap: 2px; margin-left: 8px; }
+.cp-nav { display: flex; align-items: center; gap: 1px; margin-left: 8px; }
 .cp-nav a {
   display: inline-flex; align-items: center; gap: 4px;
-  height: 34px; padding: 0 10px; border-radius: 8px;
-  font-size: 13.5px; font-weight: 500; color: var(--ink-2);
-  text-decoration: none; transition: background .12s, color .12s;
+  height: 34px; padding: 0 9px; border-radius: 8px;
+  font-size: 13px; font-weight: 500; color: var(--ink-2);
+  text-decoration: none; transition: background .12s, color .12s; white-space: nowrap;
 }
 .cp-nav a:hover { background: var(--bg-2); color: var(--ink); text-decoration: none; }
 .cp-nav a[aria-current] { color: var(--ink); }
+/* Hide About + Contact from nav on mid-size screens where space is tight */
+@media (max-width: 900px) {
+  .cp-nav a[href="/about/"],
+  .cp-nav a[href="/contact/"] { display: none; }
+}
 
 /* Search */
 .cp-search-btn {

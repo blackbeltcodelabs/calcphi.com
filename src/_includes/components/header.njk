@@ -32,14 +32,22 @@
           Markets
         </a>
         <a id="nav-blog-link"
-           href="{% if page.url.startsWith('/australia/') %}/australia/blog/{% else %}/blog/{% endif %}"
-           {% if page.url.startsWith('/australia/blog/') or page.url.startsWith('/blog/') %}aria-current="page"{% endif %}>
+           href="{% if page.url.startsWith('/australia/') %}/australia/blog/{% else %}/india/blog/{% endif %}"
+           {% if page.url.startsWith('/australia/blog/') or page.url.startsWith('/india/blog/') %}aria-current="page"{% endif %}>
           Blog
         </a>
         <a id="nav-help-link"
            href="{% if page.url.startsWith('/australia/') %}/australia/help/{% elif page.url.startsWith('/india/') %}/india/help/{% else %}/help/{% endif %}"
            {% if page.url.startsWith('/australia/help/') or page.url.startsWith('/india/help/') or page.url.startsWith('/help/') %}aria-current="page"{% endif %}>
           Help
+        </a>
+        <a href="/about/"
+           {% if page.url.startsWith('/about/') %}aria-current="page"{% endif %}>
+          About
+        </a>
+        <a href="/contact/"
+           {% if page.url.startsWith('/contact/') %}aria-current="page"{% endif %}>
+          Contact
         </a>
       </nav>
       {% endif %}
@@ -85,8 +93,10 @@
     <nav id="cp-mobile-nav" class="cp-mobile-nav" aria-label="Mobile navigation" hidden>
       <a id="mob-calc-link" href="{% if page.url.startsWith('/australia/') %}/australia/{% elif page.url.startsWith('/usa/') %}/usa/{% else %}/india/{% endif %}">Calculators</a>
       <a href="/markets/">Markets</a>
-      <a id="mob-blog-link" href="{% if page.url.startsWith('/australia/') %}/australia/blog/{% else %}/blog/{% endif %}">Blog</a>
+      <a id="mob-blog-link" href="{% if page.url.startsWith('/australia/') %}/australia/blog/{% else %}/india/blog/{% endif %}">Blog</a>
       <a id="mob-help-link" href="{% if page.url.startsWith('/australia/') %}/australia/help/{% elif page.url.startsWith('/india/') %}/india/help/{% else %}/help/{% endif %}">Help</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
       <div class="cp-mobile-nav__markets">
         <a href="/australia/" data-market-code="AU">🇦🇺 Australia</a>
         <a href="/india/" data-market-code="IN">🇮🇳 India</a>
@@ -125,7 +135,7 @@
     // Map each nav link to its market-specific URL
     var navMap = {
       calc: { AU: '/australia/', IN: '/india/' },
-      blog: { AU: '/australia/blog/', IN: '/blog/' },
+      blog: { AU: '/australia/blog/', IN: '/india/blog/' },
       help: { AU: '/australia/help/', IN: '/india/help/' }
     };
 
