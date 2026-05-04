@@ -2262,10 +2262,9 @@ a.cp-mcard:hover { color: inherit; }
   display: grid;
   place-items: center;
   flex-shrink: 0;
+  background: #fbe8d8;
+  color: #b8551d;
 }
-.hp-why__feat-icon--blue  { background: #fbe8d8; color: #b8551d; }
-.hp-why__feat-icon--amber { background: #f5ead7; color: #3a3530; }
-.hp-why__feat-icon--green { background: #d8e9df; color: #2d6a4f; }
 .hp-why__feat-t {
   font-size: 17px;
   font-weight: 600;

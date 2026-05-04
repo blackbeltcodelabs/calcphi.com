@@ -422,16 +422,10 @@ description: "Free, accurate financial calculators for India, USA, Canada and Au
         </div>
       </div>
 
-      <div class="hp-why__head">
-        <div class="cp-tag">Why CalcPhi</div>
-        <h2 class="hp-why__h2">Built like a public utility</h2>
-        <p class="hp-why__sub">No dark patterns, no paywalls, no guesswork. Just the maths you need.</p>
-      </div>
-
       <div class="hp-why__features">
 
         <div class="hp-why__feat">
-          <div class="hp-why__feat-icon hp-why__feat-icon--blue">
+          <div class="hp-why__feat-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>
           </div>
           <div>
@@ -441,7 +435,7 @@ description: "Free, accurate financial calculators for India, USA, Canada and Au
         </div>
 
         <div class="hp-why__feat">
-          <div class="hp-why__feat-icon hp-why__feat-icon--amber">
+          <div class="hp-why__feat-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>
           </div>
           <div>
@@ -451,7 +445,7 @@ description: "Free, accurate financial calculators for India, USA, Canada and Au
         </div>
 
         <div class="hp-why__feat">
-          <div class="hp-why__feat-icon hp-why__feat-icon--green">
+          <div class="hp-why__feat-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>
           </div>
           <div>
@@ -467,29 +461,57 @@ description: "Free, accurate financial calculators for India, USA, Canada and Au
 
   <script>
   (function () {
-    var els = document.querySelectorAll('[data-count]');
-    if (!els.length || !('IntersectionObserver' in window)) return;
-    function animate(el) {
-      var target = parseInt(el.getAttribute('data-count'), 10);
-      var suffix = el.getAttribute('data-suffix') || '';
-      if (target === 0) { el.textContent = '0' + suffix; return; }
-      var duration = 1000;
-      var start = null;
-      function step(ts) {
-        if (!start) start = ts;
-        var p = Math.min((ts - start) / duration, 1);
-        var eased = 1 - Math.pow(1 - p, 3);
-        el.textContent = Math.round(eased * target) + suffix;
-        if (p < 1) requestAnimationFrame(step);
+    /* target, suffix, count-up duration ms, hold at peak ms, stagger delay ms */
+    var STATS = [
+      { target: 259, suffix: '',  dur: 1400, hold: 1000, delay: 0   },
+      { target: 2,   suffix: '',  dur: 600,  hold: 1000, delay: 350 },
+      { target: 0,   suffix: '',  dur: 0,    hold: 0,    delay: 0   },
+      { target: 100, suffix: '%', dur: 1000, hold: 1000, delay: 700 }
+    ];
+
+    function loop(el, s) {
+      var t0 = null;
+      el.textContent = '0' + s.suffix;
+      function tick(ts) {
+        if (t0 === null) t0 = ts;
+        var p = Math.min((ts - t0) / s.dur, 1);
+        el.textContent = Math.round((1 - Math.pow(1 - p, 3)) * s.target) + s.suffix;
+        if (p < 1) { requestAnimationFrame(tick); }
+        else { setTimeout(function () { loop(el, s); }, s.hold); }
       }
-      requestAnimationFrame(step);
+      requestAnimationFrame(tick);
     }
-    var obs = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) { animate(e.target); obs.unobserve(e.target); }
+
+    function pulseZero(el) {
+      el.style.transition = 'opacity 0.5s ease';
+      el.style.opacity = '0.25';
+      setTimeout(function () {
+        el.style.opacity = '1';
+        setTimeout(function () { pulseZero(el); }, 2000);
+      }, 600);
+    }
+
+    function init() {
+      var els = document.querySelectorAll('[data-count]');
+      if (!els.length) return;
+      els.forEach(function (el, i) {
+        var s = STATS[i];
+        if (!s) return;
+        if (s.target === 0) {
+          el.textContent = '0';
+          pulseZero(el);
+        } else {
+          el.textContent = '0' + s.suffix;
+          setTimeout(function () { loop(el, s); }, s.delay);
+        }
       });
-    }, { threshold: 0.6 });
-    els.forEach(function (el) { obs.observe(el); });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
   })();
   </script>
 
