@@ -3,9 +3,9 @@ layout: layouts/base.njk
 permalink: /australia/blog/australian-shares-vs-property/
 authorId: james-obrien
 datePublished: "2026-05-02"
-dateModified: "2026-05-02"
+dateModified: "2026-05-05"
 title: "Australian Shares vs Property: Which Investment Wins Long-Term?"
-description: "Over 30 years, Australian shares have returned 9–10% annually vs property at 6–7%. But leverage, franking credits, and tax treatment change the comparison entirely."
+description: "Over 30 years, Australian shares return 9–10% p.a. vs property at 7–8.5%. But leverage, franking credits, and CGT rules change the comparison entirely. See the real maths."
 breadcrumbs:
   - name: Home
     url: /
@@ -18,15 +18,81 @@ breadcrumbs:
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Australian Shares vs Property: Which Investment Wins Long-Term?",
-  "description": "Over 30 years, Australian shares have returned 9–10% annually vs property at 6–7%. But leverage, franking credits, and tax treatment change the comparison entirely.",
-  "url": "{{ site.url }}/australia/blog/australian-shares-vs-property/",
-  "datePublished": "2026-05-02",
-  "dateModified": "2026-05-02",
-  "author": { "@type": "Person", "name": "James O'Brien", "url": "{{ site.url }}/about/authors/james-obrien/" },
-  "publisher": { "@type": "Organization", "name": "CalcPhi", "url": "{{ site.url }}" },
-  "mainEntityOfPage": "{{ site.url }}/australia/blog/australian-shares-vs-property/"
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Australian Shares vs Property: Which Investment Wins Long-Term?",
+      "description": "Over 30 years, Australian shares return 9–10% p.a. vs property at 7–8.5%. But leverage, franking credits, and CGT rules change the comparison entirely. See the real maths.",
+      "url": "https://www.calcphi.com/australia/blog/australian-shares-vs-property/",
+      "datePublished": "2026-05-02",
+      "dateModified": "2026-05-05",
+      "author": { "@type": "Person", "name": "James O'Brien", "url": "https://www.calcphi.com/australia/authors/james-obrien/" },
+      "publisher": { "@type": "Organization", "name": "CalcPhi", "url": "https://www.calcphi.com" },
+      "mainEntityOfPage": "https://www.calcphi.com/australia/blog/australian-shares-vs-property/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Have Australian shares or property performed better over the last 20 years?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Over the 20 years to 2025, the comparison varies significantly by measurement period and city. Sydney and Melbourne property outperformed the ASX in pure capital growth terms from 2012 to 2017, but the ASX has outperformed on total return (including reinvested dividends and franking credits) in most longer measurement windows. When leverage is applied to property and costs are excluded, property investors in major cities have often achieved superior equity returns — but that comparison is sensitive to entry and exit points, the interest rate environment, and whether negative gearing benefits are included."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is negative gearing worth it in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Negative gearing remains a legal and genuine tax benefit in Australia in 2026. For a high-income earner in the 37 or 45 percent marginal tax bracket, the ability to deduct net rental losses against ordinary income creates a meaningful tax reduction. However, negative gearing should not be treated as an investment strategy in itself — you are still making a cash loss. It only makes sense if your capital growth expectation is strong enough to more than offset the ongoing cash outflows."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use my superannuation to invest in property?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can hold direct residential property inside a self-managed superannuation fund (SMSF), but the rules are strict. The property cannot be purchased from a related party, it cannot be used by any SMSF member or related party personally, and it must meet the sole purpose test. SMSF property investing involves significant compliance obligations and costs. For most Australians not already operating an SMSF, investing in ASX shares or property ETFs inside a standard super fund is simpler and often more tax-efficient."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the minimum amount needed to start investing in shares versus property?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Shares have essentially no minimum — you can start investing in an ASX ETF with as little as $500 through most discount brokers. Property requires a deposit (typically 20 percent of the purchase price to avoid LMI), plus stamp duty, conveyancing, and inspection costs. In Sydney, that means $200,000 to $250,000 in cash to enter the investment property market for a median-priced dwelling. The low barrier to entry for shares makes them accessible to a much broader range of investors."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do shares carry more risk than property?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Shares are more volatile in the short term — the ASX can fall 30 to 40 percent during a severe downturn and recover to new highs within a few years. Property falls are smaller in percentage terms but, because investors are typically highly leveraged, a 15 percent property price decline can wipe out 75 percent or more of the equity in an 80 percent LVR investment. Both asset classes carry meaningful risk; the nature and visibility of that risk differs. Property volatility is less visible because it is not priced daily on a screen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I pay off my mortgage or invest in shares?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mathematically, if the expected after-tax return on shares exceeds the after-tax interest rate on your mortgage, investing wins. With home loan rates at 6 to 6.5 percent and ASX historical returns at 9 to 10 percent annually, the mathematics slightly favours investing — but only if you can tolerate short-term volatility while making mortgage repayments simultaneously. For most people, a balanced approach — making minimum mortgage repayments, using an offset account to reduce interest, and investing surplus cash in a low-cost index fund — provides both wealth building and psychological security."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.calcphi.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Australia", "item": "https://www.calcphi.com/australia/" },
+        { "@type": "ListItem", "position": 3, "name": "Blog", "item": "https://www.calcphi.com/australia/blog/" },
+        { "@type": "ListItem", "position": 4, "name": "Australian Shares vs Property", "item": "https://www.calcphi.com/australia/blog/australian-shares-vs-property/" }
+      ]
+    }
+  ]
 }
 </script>
 
@@ -53,73 +119,150 @@ breadcrumbs:
         By <a href="{{ author.url }}">{{ author.name }}</a><svg class="verified-badge" aria-label="Verified author" title="Verified" viewBox="0 0 20 20" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#1d9bf0"/><path d="M6 10.5l2.5 2.5L14 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>, {{ author.credentials }}
       </span>
     </div>
-    <p class="blog-article__intro">The shares versus property debate dominates Australian financial conversation like no other. It is also the wrong question. The right question is: which investment, combined with your tax situation, leverage capacity, cash flow needs, and risk tolerance, produces the best risk-adjusted after-tax outcome for you specifically? The data does not declare a clear winner — it reveals that each asset class wins under different conditions. Here is what 30 years of Australian data actually shows and what the real comparison should look like.</p>
+
+    <div class="definition-block">
+      <p>Australians are famously obsessed with property. At every barbecue, in every family WhatsApp group, and in every finance podcast, the question comes up: should I invest in shares or buy an investment property? It is one of the most debated personal finance topics in the country — and also one of the most misunderstood.</p>
+      <p>The honest answer is that neither asset class is universally superior. What determines which investment "wins" for you is a combination of how much capital you have, your tax situation, your appetite for risk, your need for income versus growth, and how hands-on you want to be. This article breaks down the real comparison: the data, the tax treatment, the leverage, the costs, the risks, and what the smartest Australian investors actually do.</p>
+    </div>
 
 
-    <h2>Long-Term Returns: What the Data Shows</h2>
+    <h2>Long-Term Performance: What 30 Years of Data Actually Shows</h2>
+    <p>Starting with raw returns is the right place, but raw returns alone are deeply misleading.</p>
+    <p>The <strong>ASX 200</strong> has delivered total returns (capital growth plus reinvested dividends) of approximately <strong>9 to 10 percent per annum</strong> over the past three decades. Capital growth alone has averaged around 6 to 6.5 percent, with dividends adding another 4 to 4.5 percent — and that dividend figure rises to 5.5 to 6 percent when you factor in the value of franking credits.</p>
+    <p><strong>Residential property</strong> in Australia has delivered national average capital growth of around <strong>5.5 to 6.5 percent per annum</strong> over the same period. Sydney and Melbourne have outperformed that national average, with Sydney's median dwelling price growing at roughly 7 to 7.5 percent annually. Adding gross rental yields of 2.5 to 3.5 percent gives a total return in the range of 8 to 10 percent — broadly comparable to shares on a raw basis.</p>
+
     <table class="data-table">
       <caption>Long-term returns comparison — Australian shares vs residential property</caption>
       <thead>
         <tr><th>Asset Class</th><th>Total Return (incl. income)</th><th>Capital Growth Only</th><th>Income Yield</th></tr>
       </thead>
       <tbody>
-        <tr><td>ASX 200 (30-year average)</td><td>9.8% p.a.</td><td>6.5% p.a.</td><td>4.0–4.5% (inc. franking)</td></tr>
-        <tr><td>Sydney residential (30-year)</td><td>8.5% p.a.</td><td>7.5% p.a.</td><td>2.5–3.5% gross</td></tr>
-        <tr><td>Melbourne residential (30-year)</td><td>8.0% p.a.</td><td>7.0% p.a.</td><td>2.5–3.0% gross</td></tr>
-        <tr><td>Australian residential (national avg)</td><td>7.0–7.5% p.a.</td><td>5.5–6.5% p.a.</td><td>2.5–3.5% gross</td></tr>
+        <tr><td>ASX 200 (30-year average)</td><td>~9–10% p.a.</td><td>~6–6.5% p.a.</td><td>4–4.5% (inc. franking)</td></tr>
+        <tr><td>Sydney residential (30-year)</td><td>~8–10% p.a.</td><td>~7–7.5% p.a.</td><td>2.5–3.5% gross</td></tr>
+        <tr><td>Melbourne residential (30-year)</td><td>~7.5–9% p.a.</td><td>~6.5–7% p.a.</td><td>2.5–3% gross</td></tr>
+        <tr><td>Australian residential (national avg)</td><td>~7–8.5% p.a.</td><td>~5.5–6.5% p.a.</td><td>2.5–3.5% gross</td></tr>
       </tbody>
     </table>
-    <p>On raw total return, shares have outperformed property in most measurement periods. The difference narrows significantly when you account for leverage — property investors typically borrow 70–80% of the purchase price, magnifying returns on their equity. A $200,000 deposit buying a $1,000,000 property at 7% capital growth per year produces an 18%+ return on equity in year one (ignoring holding costs).</p>
+
+    <p>At the highest level, Australian property and Australian shares have delivered similar total returns over long periods. The difference lies not in the headline number but in how those returns are structured, taxed, levered, and accessed.</p>
 
 
-
-    <h2>The Leverage Factor</h2>
-    <p>The biggest structural advantage of investment property is accessible leverage. You can borrow 80–90% of a property's value at residential mortgage rates (approximately 6–7% in 2026). The same leverage is available on shares through margin loans, but margin loan rates are higher (8–10%) and margin calls force involuntary selling at worst moments.</p>
-    <p>Leverage amplifies both gains and losses. If your $1,000,000 property falls 10% in value, your $200,000 deposit has lost half its value — a 50% loss on equity. If the ASX falls 10%, your unlevered $200,000 share portfolio loses $20,000.</p>
-    <p>The risk profile is fundamentally different: property investors carry significantly higher leverage risk than most share investors. The lower volatility and forced savings mechanism of property (you must make mortgage repayments) makes it psychologically easier to hold through downturns than shares, which can be sold with a single click.</p>
-
-
-
-    <h2>Tax Treatment: Where the Real Difference Lies</h2>
-    <p><strong>Shares advantages:</strong> Franking credits on dividends effectively boost the after-tax return — a 4% franked dividend is worth ~5.7% gross-equivalent for investors below the 39% marginal rate. Shares held inside super in pension phase receive both the 50% CGT discount and are fully tax-free on income, making them extremely efficient. Small regular investments are possible — you can add $500 per month without any transaction friction.</p>
-    <p><strong>Property advantages:</strong> Negative gearing deductions allow losses to offset other income, reducing the effective cost of holding a loss-making property. The 50% CGT discount applies identically to both assets held more than 12 months. The main residence exemption provides complete CGT-free growth on your primary home — a unique concession that shares do not have.</p>
-    <p><strong>Property disadvantages:</strong> Transaction costs are enormous — stamp duty (3–5% of purchase price), conveyancing, building inspections, and agent commissions on sale (2–3%) consume 6–8% of value on entry and exit. Shares cost 0.1–0.5% to buy and sell. For a $1,000,000 property, you lose $60,000–$80,000 in transaction costs before your investment earns a single dollar.</p>
+    <h2>The Leverage Advantage: Why Property Feels Like It Wins</h2>
+    <p>When you buy an investment property, you typically use a 20 percent deposit and borrow the remaining 80 percent at residential mortgage rates — approximately 6 to 6.5 percent per annum in 2026. This leverage dramatically amplifies your returns on the capital you actually contribute.</p>
+    <p>Consider this example: you invest a <strong>$200,000 deposit</strong> to purchase a <strong>$1,000,000 investment property</strong>. If that property grows at 7 percent in the first year, its value increases by $70,000. Your return on your actual $200,000 contribution is <strong>35 percent</strong> — before accounting for rental income, negative gearing tax benefits, and the cost of interest payments.</p>
+    <p>The same leverage is theoretically available for shares through margin loans. But margin loan rates are materially higher than residential mortgage rates — typically 8 to 10 percent — and margin loans come with margin calls. If the market falls and your loan-to-value ratio breaches the lender's threshold, you may be forced to sell at exactly the wrong moment. <strong>Property loans do not have margin calls.</strong> You can hold a property through a 20 percent price correction without your bank forcing a sale, as long as you continue to service the mortgage.</p>
+    <p>This is why property has created so much wealth for Australian investors — not because property outperforms shares on a raw return basis, but because ordinary Australians can access large amounts of low-cost leverage against property in a way that is psychologically and structurally far more manageable than leveraged share investing.</p>
 
 
+    <h2>Tax Treatment: The Full Picture</h2>
+    <p>Tax treatment is arguably the most important factor in determining which investment wins for a specific investor — and it varies enormously depending on your income, your structure, and the asset class.</p>
 
-    <h2>Cash Flow and Liquidity</h2>
-    <p>Australian residential property in major cities yields 2–3% gross rental. After property management fees (7–10% of rent), council rates, insurance, maintenance, and mortgage interest, most investment properties are cash-flow negative — particularly in Sydney and Melbourne. Negative gearing is not a strategy; it is the reality of cash-flow-negative property holding. You are banking on capital growth to make the investment worthwhile.</p>
-    <p>Shares are completely liquid — you can sell within seconds during market hours. Property takes weeks to months to sell and cannot be partially liquidated. If you need $50,000 from a $900,000 property portfolio, you must either refinance or sell the entire property. From a $900,000 share portfolio, you sell exactly $50,000 worth.</p>
+    <h3>Capital Gains Tax</h3>
+    <p>Both Australian shares and investment property qualify for the <strong>50 percent CGT discount</strong> if held for more than 12 months. So at the CGT level, both assets are treated equally. However, property has one unique concession that shares will never have: the <strong>main residence exemption</strong>. Your family home is entirely exempt from CGT — every dollar of growth in your primary residence is completely tax-free when you sell. A Sydney homeowner who bought a home in 2000 for $400,000 and sells it today for $1.8 million pays zero CGT on the $1.4 million gain. No other asset class in Australia offers this.</p>
 
+    <h3>Franking Credits: The Shares Advantage</h3>
+    <p>Australian listed companies pay company tax of 30 percent before distributing dividends. The ATO allows shareholders to claim a credit for that tax already paid — this is called a franking credit. A 4 percent fully franked dividend is worth approximately <strong>5.7 percent gross-equivalent</strong> to a standard taxpayer. Inside a self-managed superannuation fund (SMSF) in pension phase, those franking credits are refunded in cash — meaning shares inside super generate a materially higher after-tax return than their face yield suggests. Property earns no franking credits; rental income is fully taxable at marginal rates.</p>
 
-
-    <h2>The Practical Winner: Depends on Your Circumstances</h2>
-    <p>Shares win if: you have no access to meaningful capital to use as a deposit, you are investing inside super, you need liquidity, you are in a high marginal tax bracket and do not want negative gearing complexity, or you prefer to invest globally across multiple markets.</p>
-    <p>Property wins if: you can access 20–30% deposit, you have stable income to service debt, you are in a high income period where negative gearing losses are valuable, you are willing to actively manage a property, or you want forced savings discipline through compulsory mortgage repayments.</p>
-    <p>Most high-net-worth Australians end up holding both — a paid-off or near-paid-off primary home (tax-free main residence), an investment property or two for leverage, and a diversified share portfolio inside super and individually. The answer is not "either/or" — it is "in what proportion for my situation."</p>
-
-
-
-    <h2>Frequently Asked Questions</h2>
-    <dl>
-      <dt>Which asset class has performed better in the last 10 years?</dt>
-      <dd>In the decade to 2025, Sydney and Melbourne property outperformed the ASX significantly in capital growth terms — though the ASX recovered ground when dividend income and franking credits are included. In the decade 2014–2024, ASX total return (including reinvested dividends) was approximately 8.5% p.a. while Sydney property was approximately 6.5% p.a. total return — but Sydney investors with 80% leverage on that capital growth generated substantially higher equity returns.</dd>
-      <dt>Can I invest in both shares and property at the same time?</dt>
-      <dd>Yes, and most financial planners recommend diversification across both. A common structure is: primary home (building equity, CGT-free), investment property (leveraged capital growth, negative gearing), and share portfolio inside super (tax-efficient, diversified). The allocation between investment property and shares outside super depends on your marginal tax rate, cash flow position, and appetite for the administrative burden of property management.</dd>
-      <dt>Is property guaranteed to go up?</dt>
-      <dd>No. Australian property has experienced significant corrections — Sydney fell 15% in 2017–2019, and Melbourne 10–12% in 2022–2023 from peak. National property fell 8.5% in the RBA rate hiking cycle of 2022–2023. Regional and suburban property markets can experience prolonged stagnation or decline. The long-run average growth hides substantial short-term volatility and permanent losses in some markets.</dd>
-    </dl>
+    <h3>Negative Gearing</h3>
+    <p>When an investment property's expenses — interest, management fees, maintenance, depreciation, council rates, insurance — exceed its rental income, the resulting loss can be deducted against other income. For a high-income earner in the 45 percent marginal tax bracket, every dollar of net rental loss saves 45 cents in income tax. This is a genuine tax benefit — but it requires accepting ongoing cash-flow losses and betting on capital growth to compensate. Shares can be negatively geared through margin loans, but the interest rate differential makes this considerably less attractive.</p>
 
 
+    <h2>The Cost Comparison Nobody Talks About Enough</h2>
+    <p>Transaction costs are the silent killer of property investment returns, and most comparisons dramatically understate them.</p>
+    <p>When you buy an investment property in Australia, you face <strong>stamp duty</strong> (ranging from 3 to 5.5 percent of purchase price depending on the state, with no first home buyer concessions for investors), conveyancing fees, building and pest inspections, and mortgage establishment fees. On a $1,000,000 property purchase in New South Wales, stamp duty alone is approximately $40,000 to $42,000. <strong>Total acquisition costs commonly reach 5 to 6 percent</strong> of the purchase price before you have earned a single dollar of return.</p>
+    <p>When you sell, real estate agent commissions add another 2 to 3 percent of the sale price. These round-trip transaction costs — from purchase to sale — commonly total <strong>8 to 10 percent</strong> of the property's value.</p>
+    <p>Shares, by contrast, can be bought and sold for 0.1 to 0.5 percent through a discount broker. Exchange-traded funds (ETFs) tracking the ASX 200 can be purchased for brokerage of $10 to $20 per trade. This means property requires a significantly longer holding period just to break even on transaction costs — an investor who buys and sells within five years is very likely to have underperformed a comparable share investment, even if headline capital growth was identical.</p>
 
 
-    <div class="blog-article__cta">
-      <p>Use our Australia calculators:</p>
-      <a href="/australia/mortgage-calculator/" class="cta-link">Mortgage Calculator →</a>
-      <a href="/australia/income-tax-calculator/" class="cta-link">Income Tax Calculator →</a>
+    <h2>Cash Flow, Liquidity, and the Practical Reality</h2>
+    <p>Australian residential property in major capital cities currently yields 2 to 3 percent gross on purchase price. After property management fees (7 to 10 percent of rent), council rates, water rates, insurance, maintenance, and mortgage interest at 6 to 6.5 percent, almost every investment property in Sydney and Melbourne is <strong>cash-flow negative</strong>. For a $1,000,000 property with an 80 percent mortgage, the net annual cash deficit can easily be $20,000 to $35,000 per year.</p>
+    <p>Shares provide far more flexible cash flow. A diversified ASX ETF yields 3.5 to 4.5 percent per year in dividends, paid directly to your bank account. You can reinvest automatically or take them as income — no maintenance bills, no difficult tenants, no emergency plumbing on a Saturday night.</p>
+    <p>The <strong>liquidity difference</strong> is equally stark. If you need $60,000 from your investment portfolio, you can sell exactly $60,000 worth of shares within seconds during market hours. From a property portfolio, your options are: sell the entire property (six to twelve weeks minimum), refinance (time and fees), or take out a personal loan. Property is inherently illiquid, and that illiquidity is a real and ongoing cost.</p>
+
+
+    <h2>Superannuation: The Underrated Third Option</h2>
+    <p>Any serious discussion of shares versus property in Australia must address superannuation. Inside super in accumulation phase, earnings are taxed at just <strong>15 percent</strong> instead of your marginal rate. In pension phase (after age 60), all earnings are <strong>tax-free</strong>. The combination of concessional tax treatment and franking credit refunds makes ASX shares held inside super one of the most tax-efficient investments available to Australians.</p>
+    <p>Investment property cannot be held inside a retail super fund — only an SMSF can hold direct property, and SMSF property comes with strict rules: you cannot purchase from a related party, cannot live in it, and cannot use it personally in any way. For most Australians, super invested in diversified ASX-exposed index funds is a more tax-efficient vehicle than a personal brokerage account — the 15 percent earnings tax rate versus your marginal rate of 32.5, 37, or 45 percent makes a profound long-term difference.</p>
+
+
+    <h2>Which Investor Profile Suits Which Asset?</h2>
+    <p><strong>Shares are likely better suited</strong> to your circumstances if you have a smaller amount of capital and cannot raise a 20 percent deposit on a viable investment property, you are investing inside superannuation, you want liquidity and cannot afford to lock capital up for 10-plus years, you are already heavily leveraged through a home mortgage, or you prefer diversification across sectors and geographies.</p>
+    <p><strong>Investment property is likely better suited</strong> if you can comfortably raise a 20 percent deposit on a property with genuine rental demand, you have stable employment income to service a mortgage through market cycles, you are in a high marginal tax bracket where negative gearing deductions meaningfully reduce your tax bill, you are comfortable with the administrative reality of being a landlord, and you have a holding horizon of at least 10 years.</p>
+    <p>The most financially successful Australians typically end up holding both. A common structure is: a fully owned or near-paid-off primary residence (CGT-free main residence exemption), one or two investment properties (leveraged capital growth, negative gearing), and a diversified share portfolio inside super and individually (franking credits, liquidity, compounding returns). The question is not "either/or" — it is "in what proportion, and in what order, for my stage of life."</p>
+
+
+    <h2 class="faq-heading">Frequently Asked Questions</h2>
+    <div class="faq-list">
+
+      <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+        <h3 class="faq-q" itemprop="name">Have Australian shares or property performed better over the last 20 years?</h3>
+        <div class="faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+          <div itemprop="text">
+            <p>Over the 20 years to 2025, the performance comparison varies significantly by measurement period and city. Sydney and Melbourne property outperformed the ASX in pure capital growth terms from 2012 to 2017 — but the ASX has outperformed on total return (including reinvested dividends and franking credits) in most longer measurement windows. When leverage is applied to property and costs are excluded, property investors in major cities have often achieved superior equity returns — but that comparison is sensitive to entry and exit points, the interest rate environment, and whether negative gearing benefits are included.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+        <h3 class="faq-q" itemprop="name">Is negative gearing worth it in 2026?</h3>
+        <div class="faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+          <div itemprop="text">
+            <p>Negative gearing remains a legal and genuine tax benefit in Australia in 2026. For a high-income earner in the 37 or 45 percent marginal tax bracket, the ability to deduct net rental losses against ordinary income creates a meaningful tax reduction. However, negative gearing should not be treated as an investment strategy in itself — you are still making a cash loss. It only makes sense if your capital growth expectation is strong enough to more than offset the ongoing cash outflows. In a flat or declining property market, negative gearing alone does not save you from a poor investment.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+        <h3 class="faq-q" itemprop="name">Can I use my superannuation to invest in property?</h3>
+        <div class="faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+          <div itemprop="text">
+            <p>You can hold direct residential property inside a self-managed superannuation fund (SMSF), but the rules are strict. The property cannot be purchased from a related party, it cannot be used by any SMSF member or related party personally, and it must meet the "sole purpose test" of providing retirement benefits. SMSF property investing involves significant compliance obligations and costs. For most Australians not already operating an SMSF, investing in ASX shares or property ETFs inside a standard super fund is simpler and often more tax-efficient.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+        <h3 class="faq-q" itemprop="name">What is the minimum amount needed to start investing in shares versus property?</h3>
+        <div class="faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+          <div itemprop="text">
+            <p>Shares have essentially no minimum — you can start investing in an ASX ETF with as little as $500 through most discount brokers. Property requires a deposit (typically 20 percent of the purchase price to avoid LMI), plus stamp duty, conveyancing, and inspection costs. In Sydney, that means $200,000 to $250,000 in cash to enter the investment property market for a median-priced dwelling. The low barrier to entry for shares makes them accessible to a much broader range of investors.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+        <h3 class="faq-q" itemprop="name">Do shares carry more risk than property?</h3>
+        <div class="faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+          <div itemprop="text">
+            <p>Shares are more volatile in the short term — the ASX can fall 30 to 40 percent during a severe downturn (as in 2008–2009 and early 2020) and recover to new highs within a few years. Property falls are smaller in percentage terms but, because investors are typically highly leveraged, a 15 percent property price decline can wipe out 75 percent or more of the equity in an 80 percent LVR investment. Both asset classes carry meaningful risk; the nature and visibility of that risk differs. Property volatility is less visible because it is not priced daily on a screen.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+        <h3 class="faq-q" itemprop="name">Should I pay off my mortgage or invest in shares?</h3>
+        <div class="faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+          <div itemprop="text">
+            <p>Mathematically, if the expected after-tax return on shares exceeds the after-tax interest rate on your mortgage, investing wins. With home loan rates at 6 to 6.5 percent and ASX historical returns at 9 to 10 percent annually, the mathematics slightly favours investing — but only if you can tolerate the short-term volatility of shares while making mortgage repayments simultaneously. For most people, a balanced approach — making minimum mortgage repayments, using an offset account to reduce interest, and investing surplus cash in a low-cost index fund — provides both wealth building and psychological security.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    {% include "components/author-bio.njk" %}
+
+    <div class="definition-block" style="margin-top: 2rem;">
+      <p><strong>Disclaimer:</strong> The information in this article is intended for general educational purposes only. All figures, including historical returns, tax rates, and cost estimates, are based on publicly available data and are not tailored to individual circumstances. Past performance is not a reliable indicator of future performance. Nothing in this article constitutes financial advice. Australians should consult a qualified financial adviser, tax agent, or accountant before making any investment decision. CalcPhi's calculators are estimation tools only and do not replace professional financial guidance.</p>
+    </div>
+
+    <div class="author-bio-card" style="display:flex;gap:1rem;align-items:flex-start;background:var(--color-muted);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:1.25rem;margin-top:2rem;">
+      <img src="{{ author.image }}" alt="{{ author.name }}" width="56" height="56" style="border-radius:50%;flex-shrink:0;" loading="lazy">
+      <div>
+        <p style="margin:0 0 .25rem;font-weight:600;font-size:.95rem;">Written &amp; verified by <a href="{{ author.url }}">{{ author.name }}</a></p>
+        <p style="margin:0 0 .4rem;font-size:.82rem;color:var(--color-text-secondary);">{{ author.title }}</p>
+        <p style="margin:0;font-size:.85rem;color:var(--color-text-secondary);">{{ author.shortBio }}</p>
+      </div>
+    </div>
 
   </div>
 </main>
