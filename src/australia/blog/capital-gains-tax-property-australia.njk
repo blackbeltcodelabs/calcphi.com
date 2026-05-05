@@ -3,9 +3,9 @@ layout: layouts/base.njk
 permalink: /australia/blog/capital-gains-tax-property-australia/
 authorId: james-obrien
 datePublished: "2026-05-02"
-dateModified: "2026-05-02"
+dateModified: "2026-05-05"
 title: "Capital Gains Tax on Property Australia: What You Actually Pay"
-description: "Selling an investment property at a $200,000 gain? After the 50% CGT discount, you add $100,000 to taxable income. At 39% marginal rate, that is $39,000 in extra tax."
+description: "Selling an investment property in Australia? Learn exactly how CGT is calculated, when the 50% discount applies, and legal strategies to reduce your tax bill in 2026–27."
 breadcrumbs:
   - name: Home
     url: /
@@ -18,15 +18,81 @@ breadcrumbs:
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Capital Gains Tax on Property Australia: What You Actually Pay",
-  "description": "Selling an investment property at a $200,000 gain? After the 50% CGT discount, you add $100,000 to taxable income. At 39% marginal rate, that is $39,000 in extra tax.",
-  "url": "{{ site.url }}/australia/blog/capital-gains-tax-property-australia/",
-  "datePublished": "2026-05-02",
-  "dateModified": "2026-05-02",
-  "author": { "@type": "Person", "name": "James O'Brien", "url": "{{ site.url }}/about/authors/james-obrien/" },
-  "publisher": { "@type": "Organization", "name": "CalcPhi", "url": "{{ site.url }}" },
-  "mainEntityOfPage": "{{ site.url }}/australia/blog/capital-gains-tax-property-australia/"
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Capital Gains Tax on Property Australia: What You Actually Pay",
+      "description": "Selling an investment property in Australia? Learn exactly how CGT is calculated, when the 50% discount applies, and legal strategies to reduce your tax bill in 2026–27.",
+      "url": "https://www.calcphi.com/australia/blog/capital-gains-tax-property-australia/",
+      "datePublished": "2026-05-02",
+      "dateModified": "2026-05-05",
+      "author": { "@type": "Person", "name": "James O'Brien", "url": "https://www.calcphi.com/australia/authors/james-obrien/" },
+      "publisher": { "@type": "Organization", "name": "CalcPhi", "url": "https://www.calcphi.com" },
+      "mainEntityOfPage": "https://www.calcphi.com/australia/blog/capital-gains-tax-property-australia/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much CGT will I pay on an investment property in Australia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on your marginal tax rate and how long you held the property. If you held it for more than 12 months, your capital gain is halved under the 50% discount before being added to your income. At a 39% marginal rate (37% + Medicare Levy), you would pay 19.5 cents of tax for every dollar of capital gain on a discounted basis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I pay CGT if I sell my home?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not if it was your main residence for the entire ownership period and was never used to earn income. If you rented it out for part of the time or used it for business purposes, a partial CGT applies on the income-producing portion. The 6-year absence rule can protect you from CGT during extended periods away from your home."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What costs can I include in my CGT cost base?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your cost base includes the original purchase price, stamp duty, legal and conveyancing fees at purchase, capital improvements (not maintenance and repairs), and selling costs including real estate agent fees and legal costs at sale. Ongoing expenses like council rates, interest, and management fees are not part of the cost base — they are deducted as rental income expenses in the years they were paid."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I avoid CGT by moving back into my investment property before selling?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Moving back into your investment property before selling does not erase the CGT on the gain that accrued during the rental period. The main residence exemption is calculated proportionally over the entire ownership period. Moving back in temporarily does not reset the clock — though it does reduce the taxable fraction going forward from the date you move back in."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I sell at a loss on an investment property?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A capital loss on a property can only offset capital gains — it cannot be used to reduce your salary or rental income. If you have no other capital gains in that year, the loss is carried forward indefinitely and applied against future capital gains when they arise. Keep records of the sale carefully so the loss is properly documented for your tax return."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the CGT discount apply if I hold property in a company?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Companies do not receive the 50% CGT discount, regardless of how long they hold the asset. This is one of the key structural disadvantages of holding investment property inside a company. Trusts can access the discount if the gain is distributed to an individual beneficiary, and super funds receive a reduced discount of 33.33% in accumulation phase."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.calcphi.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Australia", "item": "https://www.calcphi.com/australia/" },
+        { "@type": "ListItem", "position": 3, "name": "Blog", "item": "https://www.calcphi.com/australia/blog/" },
+        { "@type": "ListItem", "position": 4, "name": "Capital Gains Tax on Property", "item": "https://www.calcphi.com/australia/blog/capital-gains-tax-property-australia/" }
+      ]
+    }
+  ]
 }
 </script>
 
@@ -53,90 +119,182 @@ breadcrumbs:
         By <a href="{{ author.url }}">{{ author.name }}</a><svg class="verified-badge" aria-label="Verified author" title="Verified" viewBox="0 0 20 20" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#1d9bf0"/><path d="M6 10.5l2.5 2.5L14 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>, {{ author.credentials }}
       </span>
     </div>
-    <p class="blog-article__intro">Capital gains tax (CGT) on property is not a separate tax in Australia — it is the income tax you pay on the net capital gain from selling an asset. When you sell an investment property, the profit is added to your taxable income for that year and taxed at your marginal rate. If you held the property for more than 12 months, you are entitled to a 50% CGT discount — halving the capital gain before it is added to your income. The result is that selling a $1 million property for a $300,000 gain at a 47% marginal rate costs $70,500 in CGT — not $141,000.</p>
+
+    <div class="definition-block">
+      <p>Selling an investment property can feel like a big win — until the tax bill arrives. Capital gains tax (CGT) on property catches many Australian investors off guard, not because it is complicated to understand, but because most people do not think about it until the moment of sale. The good news is that Australia's CGT rules are actually quite generous compared to many other countries, especially for individuals who hold property for more than a year. The not-so-good news is that if you get the timing or structure wrong, the ATO can take a much larger share of your profit than it needs to.</p>
+      <p>This guide walks you through exactly how CGT on property works in Australia, how much you will actually pay in real-dollar terms, which exemptions and discounts apply to your situation, and the legal strategies you can use to reduce your bill before settlement day.</p>
+    </div>
 
 
-    <h2>How CGT on Property is Calculated</h2>
-    <p>The capital gain is calculated as: <strong>Sale price − Cost base</strong></p>
-    <p>The cost base includes: original purchase price, stamp duty, conveyancing fees, building inspection costs, any capital improvements made during ownership, and selling costs (agent commission, legal fees, marketing). Running costs like council rates, property management fees, and mortgage interest are generally not part of the cost base — they are deducted as rental income expenses in the years they were incurred.</p>
-    <p>If you held the property for more than 12 months, apply the 50% CGT discount: <strong>Discounted capital gain = Net capital gain × 50%</strong></p>
-    <p>The discounted gain is added to your taxable income and taxed at your marginal rate.</p>
+    <h2>What Is Capital Gains Tax on Property?</h2>
+    <p>CGT is not a standalone tax in Australia — it is simply part of your income tax. When you sell an investment property, the profit (your capital gain) is added to your total taxable income for that financial year, and you pay income tax on that combined amount at your marginal rate.</p>
+    <p>Your <strong>marginal rate</strong> is the rate that applies to the top slice of your income. Under the 2026–27 ATO tax brackets: 19% on income between $18,201 and $45,000; 32.5% between $45,001 and $135,000; 37% between $135,001 and $190,000; and 45% above $190,000. The 2% Medicare Levy applies on top. So if a property sale pushes your income above $190,000, the gain at that tier is taxed at <strong>47 cents in the dollar</strong>.</p>
+
+
+    <h2>How to Calculate Your Capital Gain</h2>
+    <p>Your capital gain is not simply the difference between your sale price and what you paid. The ATO uses a figure called the <strong>cost base</strong>, which is a more complete measure of your total investment in the property.</p>
+    <p>The cost base includes: your original purchase price, stamp duty paid at acquisition, conveyancing and legal fees, building and pest inspection costs, capital improvement works carried out during ownership (renovations, extensions, structural repairs), and selling costs at the other end — real estate agent commission, legal fees, and marketing expenses. Operating costs like council rates, strata levies, property management fees, and mortgage interest are <strong>not</strong> part of the cost base — these are deducted as rental expenses in the years they occur.</p>
+
     <table class="data-table">
       <caption>CGT calculation example — investment property held 8 years</caption>
       <thead>
-        <tr><th>Item</th><th>Amount</th></tr>
+        <tr><th>Item</th><th>Amount (AUD)</th></tr>
       </thead>
       <tbody>
         <tr><td>Sale price</td><td>$950,000</td></tr>
         <tr><td>Purchase price</td><td>$600,000</td></tr>
-        <tr><td>Stamp duty (purchase)</td><td>$22,000</td></tr>
+        <tr><td>Stamp duty at purchase</td><td>$22,000</td></tr>
         <tr><td>Renovations (capital)</td><td>$45,000</td></tr>
         <tr><td>Selling costs</td><td>$18,000</td></tr>
-        <tr><td><strong>Cost base</strong></td><td><strong>$685,000</strong></td></tr>
-        <tr><td>Net capital gain</td><td>$265,000</td></tr>
-        <tr><td>50% discount (held 12+ months)</td><td>−$132,500</td></tr>
-        <tr><td><strong>Taxable capital gain</strong></td><td><strong>$132,500</strong></td></tr>
-        <tr><td>Additional income tax at 39% marginal rate</td><td>$51,675</td></tr>
+        <tr><td><strong>Total Cost Base</strong></td><td><strong>$685,000</strong></td></tr>
+        <tr><td><strong>Net Capital Gain</strong></td><td><strong>$265,000</strong></td></tr>
+        <tr><td>50% CGT discount (held 12+ months)</td><td>−$132,500</td></tr>
+        <tr><td><strong>Taxable Capital Gain Added to Income</strong></td><td><strong>$132,500</strong></td></tr>
+        <tr><td>Tax at 39% marginal rate (37% + 2% Medicare)</td><td><strong>$51,675</strong></td></tr>
       </tbody>
     </table>
 
+    <p>Without the 50% discount, the same seller would owe $103,350. The discount alone saves over <strong>$51,000</strong> in this scenario.</p>
 
 
-    <h2>The Main Residence Exemption</h2>
-    <p>Your primary home is fully exempt from CGT if: you lived in it for the entire ownership period, you never rented it out, and you never used it for any income-producing purpose. This is the main residence exemption — one of the most valuable tax concessions in the Australian system.</p>
-    <p><strong>Partial exemption situations:</strong></p>
-    <p>If you rented out your home for part of the ownership period, the CGT exemption applies only to the periods it was your main residence. The calculation is based on the proportion of time (in days) it was your main residence vs total ownership days.</p>
-    <p>The <strong>6-year rule</strong> (absence rule) allows you to treat your home as your main residence for up to 6 years after you vacate it, provided you do not claim any other property as your main residence during that period. This is valuable for investors who move out and rent their home — the clock starts when you move out, and you can sell within 6 years without CGT on the gain during the rental period.</p>
-    <p>If you rented out part of your home (e.g., a granny flat or spare room), a partial CGT exemption applies for the portion used for income production.</p>
+    <h2>The 50% CGT Discount: Your Biggest Advantage</h2>
+    <p>If you hold an investment property for more than 12 months before selling, the ATO halves your capital gain before adding it to your taxable income. This is the <strong>CGT discount</strong>, and it is the single most valuable tax concession available to Australian property investors.</p>
+    <p>The discount applies to individuals and trusts (when the gain is distributed to an individual beneficiary). It does not apply to companies — a critical structural consideration for anyone thinking about buying investment property inside a corporate entity.</p>
 
-
-
-    <h2>CGT Discount Rates by Entity Type</h2>
     <table class="data-table">
-      <caption>CGT discount by entity type — Australia 2026</caption>
+      <caption>CGT discount by entity type — Australia 2026–27</caption>
       <thead>
-        <tr><th>Entity</th><th>CGT Discount (12+ months)</th></tr>
+        <tr><th>Entity</th><th>CGT Discount (held 12+ months)</th></tr>
       </thead>
       <tbody>
         <tr><td>Individual</td><td>50%</td></tr>
-        <tr><td>Super fund (accumulation)</td><td>33.33%</td></tr>
-        <tr><td>Super fund (pension phase)</td><td>100% (fully exempt)</td></tr>
-        <tr><td>Trust</td><td>50% (if distributed to individual)</td></tr>
-        <tr><td>Company</td><td>0% (no CGT discount)</td></tr>
+        <tr><td>Trust (distributed to individual)</td><td>50%</td></tr>
+        <tr><td>Super fund (accumulation phase)</td><td>33.33%</td></tr>
+        <tr><td>Super fund (pension phase)</td><td>100% — fully exempt</td></tr>
+        <tr><td>Company</td><td>0% — no CGT discount</td></tr>
       </tbody>
     </table>
-    <p>Holding investment properties inside a company structure means losing the 50% CGT discount — a significant disadvantage compared to holding in individual or trust structures. Companies do, however, have a flat 25–30% tax rate, which may still be beneficial for high marginal rate individuals on the net capital gain depending on the numbers.</p>
+
+    <p>Super funds in pension phase (after age 60) pay zero CGT on investment earnings entirely — one reason many Australians hold long-term investments inside their superannuation as they approach retirement.</p>
 
 
+    <h2>The Main Residence Exemption: When You Pay Zero CGT</h2>
+    <p>Your family home — the property you actually live in as your main residence — is fully exempt from CGT in most circumstances. You pay nothing when you sell it, no matter how large the gain, provided you lived there for the entire ownership period and never used it to earn income.</p>
 
-    <h2>Reducing CGT: Legal Strategies</h2>
-    <p><strong>Timing the sale:</strong> If you sell an investment property late in the financial year, consider whether deferring settlement to the next financial year reduces your CGT bill — particularly if you expect lower income in the next year (e.g., stopping work, retiring).</p>
-    <p><strong>Carry-forward super contributions:</strong> A large carry-forward concessional super contribution in the year of the sale reduces taxable income, potentially moving the capital gain to a lower marginal rate bracket. See our guide to <a href="/australia/blog/catch-up-super-contributions/">catch-up super contributions</a> for details.</p>
-    <p><strong>Capital losses:</strong> If you have unrealised capital losses in your portfolio (shares, other properties), crystallising those losses in the same year as a capital gain directly reduces the taxable gain. Carry-forward losses from previous years can also be applied.</p>
-    <p><strong>Splitting ownership with lower-income spouse:</strong> If the property is owned jointly with a lower-income partner, the capital gain is split 50/50 — the lower-earning partner pays their marginal rate on their half. Purchasing in joint ownership is a long-term strategy, not something that can be retroactively applied at the point of sale.</p>
+    <h3>Partial Exemptions</h3>
+    <p>Things get more nuanced when the property was not purely your main residence for the whole time. If you lived in the home for part of the ownership period and rented it out for the rest, the exemption applies only to the period of residence. The taxable portion of the gain is calculated as:</p>
+    <p><strong>Taxable fraction = (Days not main residence ÷ Total days owned)</strong></p>
+    <p>For example, if you owned a property for 10 years and lived in it for 6 years before renting it out for 4 years, 40% of the gain would be taxable — then discounted by 50% if held 12+ months.</p>
 
+    <h3>The 6-Year Rule (Absence Rule)</h3>
+    <p>One of the most powerful — and underused — CGT provisions in Australian tax law is the <strong>6-year rule</strong>. If you move out of your main residence and rent it out, you can still treat it as your main residence for CGT purposes for up to 6 years, as long as you do not nominate any other property as your main residence during that time.</p>
+    <p>This means you could buy a home, live in it for 2 years, move interstate for work, rent it out for 5 years, and sell it — potentially paying zero CGT on the full gain. Miss the 6-year window by even a day and the proportional CGT calculation kicks in.</p>
 
-
-    <h2>Frequently Asked Questions</h2>
-    <dl>
-      <dt>Do I pay CGT when I inherit a property?</dt>
-      <dd>Generally not at the time of inheritance. Inheriting a property is not a CGT event for the beneficiary. CGT becomes relevant when you later sell the inherited property. If the property was the deceased's main residence and you sell within 2 years of death, the main residence exemption applies. If you hold and rent the property, CGT applies to the gain from the date of death (using the date-of-death market value as your cost base).</dd>
-      <dt>What happens if I sell at a loss?</dt>
-      <dd>A capital loss can only be used to offset capital gains — not other income. If your capital loss exceeds your capital gains in a year, the excess is carried forward to future years to offset future capital gains. Capital losses cannot reduce your ordinary income (salary, rental income, etc.).</dd>
-      <dt>Is there CGT on the family home if I also use it for Airbnb?</dt>
-      <dd>Yes, partially. If you rent out part or all of your main residence for Airbnb income, the main residence exemption is partially reduced. The proportion of your home used for income production (by floor area) and the time periods it was rented are used to calculate the taxable gain on eventual sale. The ATO has specifically addressed Airbnb and holiday letting in its guidance.</dd>
-    </dl>
+    <h3>Airbnb and Holiday Letting</h3>
+    <p>If you use any part of your main residence for Airbnb, short-term holiday letting, or any other income-producing purpose, the main residence exemption is partially lost. The ATO calculates the taxable portion based on the floor area used for income production and the proportion of time it was rented. This catches many homeowners who assumed their primary residence was fully exempt.</p>
 
 
+    <h2>CGT When You Inherit Property</h2>
+    <p>Inheriting a property does not trigger a CGT event for the beneficiary at the time of inheritance. The CGT implications arise when you later sell the inherited property. Your cost base is generally the <strong>market value of the property at the date of the deceased's death</strong>, which effectively resets the starting point for any future gain.</p>
+    <p>If the property was the deceased person's main residence and you sell it within <strong>2 years of their death</strong>, the full main residence exemption applies regardless of what you do with it in the interim. Beyond 2 years, the standard rules apply — and the 12-month holding period for the CGT discount is calculated from the date of the deceased's original acquisition, not from the date of inheritance.</p>
 
 
-    <div class="blog-article__cta">
-      <p>Use our Australia calculators:</p>
-      <a href="/australia/income-tax-calculator/" class="cta-link">Income Tax Calculator →</a>
-      <a href="/australia/stamp-duty-calculator/" class="cta-link">Stamp Duty Calculator →</a>
+    <h2>Legal Strategies to Reduce Your CGT Bill</h2>
+    <p>The ATO does not require you to pay more tax than you legally owe. These are legitimate, widely used strategies to manage CGT on property sales.</p>
+
+    <h3>Time the Settlement Date Carefully</h3>
+    <p>The CGT event occurs at the <strong>date of the contract</strong>, not settlement. If you have flexibility in negotiations, settling in a lower-income year — such as after you retire, take parental leave, or reduce work hours — can significantly reduce the marginal rate at which the gain is taxed.</p>
+
+    <h3>Make a Large Super Contribution in the Year of Sale</h3>
+    <p>If your super balance is under $500,000, you may be eligible to make carry-forward concessional contributions using unused caps from the previous five years. A large tax-deductible contribution directly reduces your taxable income in the year of the gain, potentially keeping the gain in a lower tax bracket.</p>
+
+    <h3>Offset with Capital Losses</h3>
+    <p>If you hold shares or other assets sitting at a loss, selling them in the same financial year as a property sale allows those capital losses to be applied against the capital gain. The losses must be realised — the asset must actually be sold — in the same income year.</p>
+
+    <h3>Joint Ownership with a Lower-Income Spouse</h3>
+    <p>When a property is held in joint names, each owner is assessed on their share of the capital gain. A lower-earning partner pays their marginal rate on their half, which can substantially reduce the household's overall CGT bill. This must be structured <strong>at the time of purchase</strong> — ownership proportions cannot be changed retroactively.</p>
+
+    <h3>Hold the Property in Super</h3>
+    <p>Selling investment property inside a self-managed super fund (SMSF) in accumulation phase attracts a maximum effective CGT rate of just <strong>10%</strong> (15% tax on two-thirds of the gain). In pension phase, the gain is completely tax-free. The property must be purchased inside the fund, and strict superannuation rules apply.</p>
+
+
+    <h2>CGT for Foreign Residents</h2>
+    <p>Non-residents selling Australian property do not get the 50% CGT discount. Since May 2012, foreign residents have been excluded from the discount on gains that accrued after 8 May 2012. Additionally, a <strong>12.5% foreign resident capital gains withholding tax</strong> applies to sales over $750,000 — the buyer is required to withhold this amount and remit it to the ATO at settlement.</p>
+    <p>Australian residents must apply for a <strong>clearance certificate</strong> from the ATO before settlement to confirm they are not subject to this withholding. If you were a resident for part of the ownership period and a non-resident for the rest, the rules get complex and a registered tax agent should be consulted before proceeding.</p>
+
+
+    <h2 class="faq-heading">Frequently Asked Questions</h2>
+    <div class="faq-list">
+
+      <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+        <h3 class="faq-q" itemprop="name">How much CGT will I pay on an investment property in Australia?</h3>
+        <div class="faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+          <div itemprop="text">
+            <p>It depends on your marginal tax rate and how long you held the property. If you held it for more than 12 months, your capital gain is halved under the <strong>50% discount</strong> before being added to your income. At a 39% marginal rate (37% + Medicare Levy), you would pay <strong>19.5 cents</strong> of tax for every dollar of capital gain on a discounted basis. On a $265,000 gain held 12+ months, the discounted taxable gain is $132,500 — costing approximately $51,675 in tax at that rate.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+        <h3 class="faq-q" itemprop="name">Do I pay CGT if I sell my home?</h3>
+        <div class="faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+          <div itemprop="text">
+            <p>Not if it was your main residence for the entire ownership period and was never used to earn income. If you rented it out for part of the time or used it for business purposes, a partial CGT applies on the income-producing portion. The <strong>6-year absence rule</strong> can protect you from CGT during extended periods away from your home, provided you do not nominate another property as your main residence during that time.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+        <h3 class="faq-q" itemprop="name">What costs can I include in my CGT cost base?</h3>
+        <div class="faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+          <div itemprop="text">
+            <p>Your cost base includes the <strong>original purchase price, stamp duty, legal and conveyancing fees at purchase, capital improvements</strong> (not maintenance and repairs), and selling costs including real estate agent fees and legal costs at sale. Ongoing expenses like council rates, mortgage interest, and management fees are not part of the cost base — they are deducted as rental income expenses in the years they were paid.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+        <h3 class="faq-q" itemprop="name">Can I avoid CGT by moving back into my investment property before selling?</h3>
+        <div class="faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+          <div itemprop="text">
+            <p>No. Moving back into your investment property before selling does not erase the CGT on the gain that accrued during the rental period. The main residence exemption is calculated proportionally over the entire ownership period. Moving back in temporarily does not reset the clock — though it does reduce the taxable fraction going forward from the date you move back in.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+        <h3 class="faq-q" itemprop="name">What if I sell at a loss on an investment property?</h3>
+        <div class="faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+          <div itemprop="text">
+            <p>A capital loss on a property can only offset capital gains — it cannot be used to reduce your salary or rental income. If you have no other capital gains in that year, the loss is <strong>carried forward indefinitely</strong> and applied against future capital gains when they arise. Keep records of the sale carefully so the loss is properly documented for your tax return.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+        <h3 class="faq-q" itemprop="name">Does the CGT discount apply if I hold property in a company?</h3>
+        <div class="faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+          <div itemprop="text">
+            <p>No. Companies do not receive the 50% CGT discount, regardless of how long they hold the asset. This is one of the key structural disadvantages of holding investment property inside a company. Trusts can access the discount if the gain is distributed to an individual beneficiary, and super funds receive a reduced discount of <strong>33.33%</strong> in accumulation phase — or full exemption in pension phase.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    {% include "components/author-bio.njk" %}
+
+    <div class="definition-block" style="margin-top: 2rem;">
+      <p><strong>Disclaimer:</strong> The information in this article is for educational and estimation purposes only. It does not constitute financial or tax advice. Tax outcomes depend on your individual circumstances, ownership structure, residency status, and applicable ATO rulings. Always consult a registered tax agent or licensed financial adviser (AFS licence) before making decisions based on this content.</p>
+    </div>
+
+    <div class="author-bio-card" style="display:flex;gap:1rem;align-items:flex-start;background:var(--color-muted);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:1.25rem;margin-top:2rem;">
+      <img src="{{ author.image }}" alt="{{ author.name }}" width="56" height="56" style="border-radius:50%;flex-shrink:0;" loading="lazy">
+      <div>
+        <p style="margin:0 0 .25rem;font-weight:600;font-size:.95rem;">Written &amp; verified by <a href="{{ author.url }}">{{ author.name }}</a></p>
+        <p style="margin:0 0 .4rem;font-size:.82rem;color:var(--color-text-secondary);">{{ author.title }}</p>
+        <p style="margin:0;font-size:.85rem;color:var(--color-text-secondary);">{{ author.shortBio }}</p>
+      </div>
+    </div>
 
   </div>
 </main>
