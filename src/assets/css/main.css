@@ -643,12 +643,13 @@ a.cp-mcard:hover { color: inherit; }
   margin-bottom: var(--space-3);
   overflow: hidden;
 }
-.faq-item h3 {
+.faq-item h3,
+.faq-item .faq-q {
   margin: 0;
   border: none;
   padding: 0;
 }
-.faq-q {
+.faq-item .faq-q {
   width: 100%;
   text-align: left;
   padding: var(--space-4) var(--space-5);
@@ -663,12 +664,13 @@ a.cp-mcard:hover { color: inherit; }
   line-height: var(--leading-snug);
   transition: background 0.15s;
   user-select: none;
+  margin: 0;
 }
-.faq-q:hover { background: #e8f4fd; }
-.faq-q::after {
+.faq-item .faq-q:hover { background: var(--color-muted); filter: brightness(0.97); }
+.faq-item .faq-q::after {
   content: '+';
   font-size: var(--text-xl);
-  color: var(--color-accent-dark);
+  color: var(--color-accent);
   margin-left: auto;
   flex-shrink: 0;
   line-height: 1;

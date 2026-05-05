@@ -26,7 +26,10 @@
     document.addEventListener('DOMContentLoaded', function() {
       document.querySelectorAll('.faq-q').forEach(function(q) {
         q.addEventListener('click', function() {
-          q.closest('.faq-item').classList.toggle('is-open');
+          var item = q.closest('.faq-item');
+          var isOpen = item.classList.contains('is-open');
+          item.closest('.faq-list, .faq-section') && item.closest('.faq-list, .faq-section').querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('is-open'); });
+          if (!isOpen) item.classList.add('is-open');
         });
       });
     });
