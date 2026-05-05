@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,400;0,500;1,400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,400;0,500;1,400&display=swap"></noscript>
+
+<title>Financial Planning Blog – CalcPhi</title>
+<meta name="description" content="In-depth guides on SIP, EMI, income tax, mutual funds, retirement, and personal finance for India. Practical advice with real numbers — no jargon, no fluff.">
+
+<link rel="canonical" href="https://www.calcphi.com/india/blog/">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Financial Planning Blog – CalcPhi">
+<meta property="og:description" content="In-depth guides on SIP, EMI, income tax, mutual funds, retirement, and personal finance for India. Practical advice with real numbers — no jargon, no fluff.">
+<meta property="og:url" content="https://www.calcphi.com/india/blog/">
+<meta property="og:image" content="https://www.calcphi.com/assets/images/og/calcphi-default.png">
+<meta property="og:site_name" content="CalcPhi">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Financial Planning Blog – CalcPhi">
+<meta name="twitter:description" content="In-depth guides on SIP, EMI, income tax, mutual funds, retirement, and personal finance for India. Practical advice with real numbers — no jargon, no fluff.">
+<meta name="twitter:image" content="https://www.calcphi.com/assets/images/og/calcphi-default.png">
+
+<!-- Hreflang — auto-generated from market + permalink -->
+
+<link rel="alternate" hreflang="en-in"    href="https://www.calcphi.com/india/">
+<link rel="alternate" hreflang="en-au"    href="https://www.calcphi.com/australia/">
+<link rel="alternate" hreflang="x-default" href="https://www.calcphi.com/">
+
+
+
+<!-- Language -->
+<meta name="language" content="en">
+
+<!-- Critical CSS inlined -->
+<style>/* ============================================================
+   CalcPhi — Critical CSS
+   Inlined in <head>. Covers: tokens, reset, header, nav,
+   breadcrumb, main grid, calculator card above the fold.
+   ============================================================ */
+
+:root {
+  /* ── Design tokens ────────────────────────────────────── */
+  --bg:        #fff8f0;
+  --bg-2:      #fbf2e6;
+  --bg-3:      #f5ead7;
+  --surface:   #ffffff;
+  --ink:       #1a1a1a;
+  --ink-2:     #3a3530;
+  --ink-3:     #6b6258;
+  --ink-4:     #a39a8d;
+  --line:      #e8dec9;
+  --line-2:    #d8cbb0;
+  --accent:    #d96e30;
+  --accent-2:  #b8551d;
+  --accent-w:  #fbe8d8;
+  --good:      #2d6a4f;
+  --good-w:    #d8e9df;
+
+  /* ── Compat aliases (used by older components) ────────── */
+  --color-primary:        #1a1a1a;
+  --color-primary-dark:   #3a3530;
+  --color-accent:         #d96e30;
+  --color-accent-dark:    #b8551d;
+  --color-surface:        #ffffff;
+  --color-muted:          #fbf2e6;
+  --color-text:           #1a1a1a;
+  --color-text-secondary: #6b6258;
+  --color-text-light:     #a39a8d;
+  --color-border:         #e8dec9;
+  --color-border-focus:   #d96e30;
+  --color-success:        #2d6a4f;
+  --color-highlight-bg:   #fbe8d8;
+  --color-highlight-text: #b8551d;
+
+  /* ── Typography ───────────────────────────────────────── */
+  --font-ui:   "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-num:  "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-ed:   "Source Serif 4", "Source Serif Pro", Georgia, serif;
+  --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --text-xs:   0.6875rem;
+  --text-sm:   0.8125rem;
+  --text-base: 0.875rem;
+  --text-lg:   1rem;
+  --text-xl:   1.125rem;
+  --text-2xl:  1.375rem;
+  --text-3xl:  1.75rem;
+  --text-4xl:  2.25rem;
+  --leading-tight:  1.2;
+  --leading-snug:   1.375;
+  --leading-normal: 1.6;
+
+  /* ── Radii ────────────────────────────────────────────── */
+  --r-xs: 4px;
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 14px;
+  --r-xl: 20px;
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  /* ── Spacing (4px base) ───────────────────────────────── */
+  --space-1: 0.25rem;  --space-2: 0.5rem;   --space-3: 0.75rem;
+  --space-4: 1rem;     --space-5: 1.25rem;  --space-6: 1.5rem;
+  --space-7: 1.75rem;  --space-8: 2rem;     --space-10: 2.5rem;
+  --space-12: 3rem;    --space-16: 4rem;
+
+  /* ── Shadows ──────────────────────────────────────────── */
+  --shadow-xs: 0 1px 2px rgba(0,0,0,.04);
+  --shadow-sm: 0 1px 3px rgba(40,28,12,.08);
+  --shadow-md: 0 4px 16px rgba(40,28,12,.08);
+
+  /* ── Layout ───────────────────────────────────────────── */
+  --max-width:     1280px;
+  --content-width: 800px;
+  --sidebar-width: 280px;
+  --header-height: 94px;
+}
+
+/* ── Reset ────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--font-ui);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+img, svg { display: block; max-width: 100%; }
+a { color: var(--accent-2); text-decoration: none; }
+a:hover { text-decoration: underline; }
+ul, ol { list-style: none; }
+button { cursor: pointer; font: inherit; border: none; background: none; }
+
+/* ── Skip link ────────────────────────────────────────────── */
+.skip-link {
+  position: absolute; top: -100%; left: var(--space-4);
+  padding: var(--space-2) var(--space-4);
+  background: var(--ink); color: var(--bg);
+  border-radius: var(--r-md); font-size: var(--text-sm); z-index: 9999;
+}
+.skip-link:focus { top: var(--space-2); }
+
+/* ── Container ────────────────────────────────────────────── */
+.container {
+  width: 100%; max-width: var(--max-width);
+  margin: 0 auto; padding: 0 24px;
+}
+
+/* ── Header ───────────────────────────────────────────────── */
+.cp-header-wrap {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--bg);
+}
+.cp-announce {
+  background: var(--ink); color: var(--bg);
+  font-size: 12px; padding: 7px 0;
+  text-align: center; letter-spacing: .01em;
+}
+.cp-announce-sep { opacity: .5; margin: 0 8px; }
+.cp-header {
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+}
+.cp-header__bar {
+  max-width: var(--max-width); margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; height: 64px; gap: 20px;
+}
+
+/* Logo */
+.cp-logo {
+  display: inline-flex; align-items: center; gap: 8px;
+  text-decoration: none; color: inherit; flex-shrink: 0;
+}
+.cp-logo:hover { text-decoration: none; }
+.cp-logo-tile {
+  width: 28px; height: 28px;
+  background: var(--ink); color: var(--bg);
+  border-radius: 6px; display: grid; place-items: center;
+  font-family: var(--font-ed); font-size: 17px;
+  font-style: italic; font-weight: 500; line-height: 1;
+}
+.cp-logo-wm {
+  font-size: 15px; font-weight: 600;
+  letter-spacing: -0.01em; color: var(--ink);
+}
+.cp-logo-wm em { font-style: normal; color: var(--accent); }
+
+/* Primary nav */
+.cp-nav { display: flex; align-items: center; gap: 1px; margin-left: 8px; }
+.cp-nav a {
+  display: inline-flex; align-items: center; gap: 4px;
+  height: 34px; padding: 0 9px; border-radius: 8px;
+  font-size: 13px; font-weight: 500; color: var(--ink-2);
+  text-decoration: none; transition: background .12s, color .12s; white-space: nowrap;
+}
+.cp-nav a:hover { background: var(--bg-2); color: var(--ink); text-decoration: none; }
+.cp-nav a[aria-current] { color: var(--ink); }
+/* Hide About + Contact from nav on mid-size screens where space is tight */
+@media (max-width: 900px) {
+  .cp-nav a[href="/about/"],
+  .cp-nav a[href="/contact/"] { display: none; }
+}
+
+/* Search */
+.cp-search-btn {
+  display: flex; align-items: center; gap: 8px;
+  height: 36px; padding: 0 10px; border-radius: 8px;
+  border: 1px solid var(--line); background: var(--surface);
+  color: var(--ink-3); cursor: text; min-width: 220px;
+  font-family: inherit; font-size: 12.5px; transition: border-color .12s;
+}
+.cp-search-btn:hover { border-color: var(--line-2); }
+.cp-search-spacer { flex: 1; }
+.cp-search-kbd {
+  font-family: var(--font-num); font-size: 10px;
+  padding: 2px 5px; border: 1px solid var(--line);
+  border-radius: 4px; background: var(--bg-2); color: var(--ink-4);
+}
+
+/* Market picker */
+.cp-market { position: relative; }
+.cp-market summary {
+  display: inline-flex; align-items: center; gap: 6px;
+  height: 32px; padding: 0 10px; border-radius: 6px;
+  border: 1px solid var(--line); background: var(--surface);
+  font-size: 12.5px; font-weight: 500; color: var(--ink-2);
+  cursor: pointer; list-style: none; user-select: none;
+  transition: border-color .12s;
+}
+.cp-market summary::-webkit-details-marker { display: none; }
+.cp-market summary:hover { border-color: var(--line-2); }
+.cp-market-dropdown {
+  position: absolute; top: 38px; right: 0; z-index: 200;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--r-lg); padding: 6px;
+  box-shadow: 0 8px 24px rgba(40,28,12,.12); min-width: 200px;
+}
+.cp-market-dropdown a {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 10px; border-radius: 6px; font-size: 13px;
+  color: var(--ink-2); text-decoration: none;
+  transition: background .1s;
+}
+.cp-market-dropdown a:hover { background: var(--bg-2); color: var(--ink); text-decoration: none; }
+.cp-market-item--soon {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 10px; border-radius: 6px; font-size: 13px;
+  color: var(--ink-4, #b0b8c8); cursor: not-allowed; user-select: none;
+}
+
+/* Mobile toggle */
+.cp-mobile-toggle {
+  display: none; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 8px;
+  border: 1px solid var(--line); cursor: pointer;
+}
+.cp-ham { display: flex; flex-direction: column; gap: 5px; }
+.cp-ham span {
+  display: block; width: 18px; height: 2px;
+  background: var(--ink); border-radius: 2px;
+}
+
+/* ── Breadcrumb ───────────────────────────────────────────── */
+.breadcrumb {
+  background: var(--bg-2); border-bottom: 1px solid var(--line);
+  padding: var(--space-2) var(--space-6); font-size: var(--text-sm);
+  color: var(--ink-3);
+}
+.breadcrumb__inner { max-width: var(--max-width); margin: 0 auto; }
+.breadcrumb ol { display: flex; flex-wrap: wrap; gap: var(--space-1); }
+.breadcrumb li { display: flex; align-items: center; gap: var(--space-1); }
+.breadcrumb li + li::before { content: '/'; color: var(--ink-4); }
+.breadcrumb a { color: var(--ink-3); }
+.breadcrumb a:hover { color: var(--ink); }
+.breadcrumb [aria-current="page"] { color: var(--ink); font-weight: 500; }
+
+/* ── Page layout ──────────────────────────────────────────── */
+.page-layout {
+  max-width: var(--max-width); margin: 0 auto;
+  padding: var(--space-8) var(--space-6);
+  display: grid; grid-template-columns: 1fr var(--sidebar-width);
+  gap: var(--space-10); align-items: start;
+}
+.page-content { min-width: 0; }
+.page-sidebar { position: sticky; top: calc(var(--header-height) + var(--space-4)); }
+
+/* ── Article typography ───────────────────────────────────── */
+.page-content h1 {
+  font-family: var(--font-ed); font-size: var(--text-3xl);
+  font-weight: 400; line-height: var(--leading-tight);
+  color: var(--ink); margin-bottom: var(--space-3);
+}
+.page-content h2 {
+  font-size: var(--text-2xl); font-weight: 600;
+  line-height: var(--leading-snug); color: var(--ink);
+  margin: var(--space-10) 0 var(--space-4);
+  padding-top: var(--space-4); border-top: 1px solid var(--line);
+}
+.page-content h2:first-of-type { margin-top: var(--space-8); border-top: none; }
+.page-content h3 {
+  font-size: var(--text-lg); font-weight: 600;
+  color: var(--ink); margin: var(--space-6) 0 var(--space-3);
+}
+.page-content p { margin-bottom: var(--space-4); line-height: var(--leading-normal); }
+.page-content ul, .page-content ol {
+  margin-bottom: var(--space-4); padding-left: var(--space-6);
+}
+.page-content ul { list-style: disc; }
+.page-content ol { list-style: decimal; }
+.page-content li { margin-bottom: var(--space-2); line-height: var(--leading-normal); }
+.page-content strong { font-weight: 600; }
+
+/* ── Page meta ────────────────────────────────────────────── */
+.page-meta {
+  display: flex; flex-wrap: wrap; gap: var(--space-4);
+  font-size: var(--text-sm); color: var(--ink-3);
+  margin-bottom: var(--space-6); padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--line);
+}
+.page-meta a { color: var(--accent-2); }
+
+/* ── Definition block ─────────────────────────────────────── */
+.definition-block {
+  background: var(--bg-2); border-left: 3px solid var(--accent);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+  padding: var(--space-5) var(--space-6); margin: var(--space-6) 0;
+}
+.definition-block h2 {
+  font-size: var(--text-xl); margin: 0 0 var(--space-3) 0;
+  border-top: none; padding-top: 0;
+}
+.definition-block p:last-child { margin-bottom: 0; }
+
+/* ── Calculator widget ────────────────────────────────────── */
+.calculator-widget {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--r-lg); overflow: hidden;
+  margin: var(--space-8) 0; box-shadow: var(--shadow-sm);
+}
+.calculator-widget__header {
+  background: var(--ink); color: var(--bg);
+  padding: var(--space-4) var(--space-6);
+  font-size: var(--text-lg); font-weight: 600;
+}
+.calculator-body { padding: var(--space-6); display: grid; gap: var(--space-6); }
+@media (min-width: 600px) {
+  .calculator-body { grid-template-columns: 1fr 1fr; }
+  .calculator-results { grid-column: 1 / -1; }
+}
+
+/* ── Input groups ─────────────────────────────────────────── */
+.input-group { display: flex; flex-direction: column; gap: var(--space-2); }
+.input-group label { font-size: var(--text-sm); font-weight: 600; color: var(--ink); }
+.input-group input, .input-group select {
+  width: 100%; padding: var(--space-3) var(--space-4);
+  border: 1.5px solid var(--line); border-radius: var(--r-md);
+  font-size: var(--text-base); color: var(--ink); background: var(--surface);
+  transition: border-color .15s, box-shadow .15s;
+  appearance: none; -webkit-appearance: none;
+}
+.input-group input:focus, .input-group select:focus {
+  outline: none; border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(217,110,48,.12);
+}
+.input-hint { font-size: var(--text-xs); color: var(--ink-3); }
+
+/* ── Results ──────────────────────────────────────────────── */
+.calculator-results {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: var(--space-4);
+}
+.result-card {
+  background: var(--bg-2); border: 1px solid var(--line);
+  border-radius: var(--r-md); padding: var(--space-4) var(--space-5); text-align: center;
+}
+.result-card--highlight { background: var(--accent-w); border-color: var(--accent); }
+.result-label {
+  display: block; font-size: var(--text-xs); font-weight: 600;
+  color: var(--ink-3); text-transform: uppercase; letter-spacing: .04em; margin-bottom: var(--space-2);
+}
+.result-value {
+  display: block; font-size: var(--text-2xl); font-weight: 700;
+  color: var(--ink); line-height: 1.2; font-family: var(--font-num);
+}
+.result-card--highlight .result-value { color: var(--accent-2); }
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .page-layout { grid-template-columns: 1fr; padding: var(--space-6) var(--space-4); }
+  .page-sidebar { display: none; }
+  .page-content h1 { font-size: var(--text-2xl); }
+  /* Compact icon-only search button on tablet */
+  .cp-search-btn {
+    min-width: 0; width: 40px; height: 40px;
+    padding: 0; justify-content: center; border-radius: 50%;
+  }
+  .cp-search-btn > span:not(.cp-search-spacer),
+  .cp-search-spacer,
+  .cp-search-kbd { display: none; }
+}
+@media (max-width: 640px) {
+  .cp-nav { display: none; }
+  .cp-mobile-toggle { display: flex; }
+  /* Keep search as compact icon on phones too */
+  .cp-search-btn {
+    display: flex;
+    min-width: 0; width: 36px; height: 36px;
+    padding: 0; justify-content: center; border-radius: 50%;
+    border: 1px solid var(--line);
+  }
+  .cp-search-btn > span, .cp-search-spacer, .cp-search-kbd { display: none; }
+  .cp-header__bar { gap: 8px; }
+  .cp-announce { font-size: 11px; padding: 5px 12px; }
+  .breadcrumb { padding: var(--space-2) var(--space-4); }
+}
+</style>
+
+<!-- Main stylesheet -->
+<link rel="stylesheet" href="/assets/css/main.css?v=10">
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+
+<!-- Per-page schema is injected by the layout into <body> -->
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{"@type":"ListItem","position":1,"name":"Home","item":"https://www.calcphi.com/"},{"@type":"ListItem","position":2,"name":"Blog"}]
+  }
+  </script>
+  
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+<div class="cp-header-wrap">
+  <!-- Announcement strip -->
+  <div class="cp-announce">
+    <span class="hide-mobile">All calculations run in your browser.</span>
+    No login required.
+    <span class="cp-announce-sep">·</span>
+    Updated for AY 2026-27
+  </div>
+
+  <!-- Main header bar -->
+  <header class="cp-header">
+    <div class="cp-header__bar">
+
+      <!-- Logo -->
+      <a href="/" class="cp-logo" aria-label="CalcPhi — Financial Calculators">
+        <span class="cp-logo-tile">φ</span>
+        <span class="cp-logo-wm">Calc<em>Phi</em></span>
+      </a>
+
+      <!-- Primary nav -->
+      
+      <nav class="cp-nav" aria-label="Primary navigation">
+        <a id="nav-calc-link"
+           href="/india/"
+           aria-current="true">
+          Calculators
+        </a>
+        <a href="/markets/"
+           >
+          Markets
+        </a>
+        <a id="nav-blog-link"
+           href="/india/blog/"
+           aria-current="page">
+          Blog
+        </a>
+        <a id="nav-help-link"
+           href="/india/help/"
+           >
+          Help
+        </a>
+        <a href="/about/"
+           >
+          About
+        </a>
+        <a href="/contact/"
+           >
+          Contact
+        </a>
+      </nav>
+      
+
+      <div style="flex:1"></div>
+
+      <!-- Search -->
+      <button id="cp-search-btn" class="cp-search-btn" aria-label="Search calculators" aria-haspopup="dialog">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>
+        </svg>
+        <span>Search calculators…</span>
+        <span class="cp-search-spacer"></span>
+        <kbd class="cp-search-kbd">⌘K</kbd>
+      </button>
+
+      <!-- Market picker -->
+      <details class="cp-market">
+        <summary aria-label="Choose market">
+          <span class="cp-market-label">🌏 Markets</span>
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </summary>
+        <div class="cp-market-dropdown">
+          <a href="/australia/" data-market-code="AU">🇦🇺 <strong>Australia</strong> · AUD</a>
+          <a href="/india/" data-market-code="IN">🇮🇳 <strong>India</strong> · INR</a>
+          <span class="cp-market-item--soon">🇺🇸 <strong>USA</strong> · USD <span class="cp-soon-badge">Soon</span></span>
+          <span class="cp-market-item--soon">🇨🇦 <strong>Canada</strong> · CAD <span class="cp-soon-badge">Soon</span></span>
+        </div>
+      </details>
+
+      <!-- Mobile toggle -->
+      <button class="cp-mobile-toggle" aria-label="Toggle navigation" id="nav-toggle" aria-expanded="false" aria-controls="cp-mobile-nav">
+        <span class="cp-ham">
+          <span></span><span></span><span></span>
+        </span>
+      </button>
+
+    </div>
+
+    <!-- Mobile nav (hidden by default) -->
+    <nav id="cp-mobile-nav" class="cp-mobile-nav" aria-label="Mobile navigation" hidden>
+      <a id="mob-calc-link" href="/india/">Calculators</a>
+      <a href="/markets/">Markets</a>
+      <a id="mob-blog-link" href="/india/blog/">Blog</a>
+      <a id="mob-help-link" href="/india/help/">Help</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <div class="cp-mobile-nav__markets">
+        <a href="/australia/" data-market-code="AU">🇦🇺 Australia</a>
+        <a href="/india/" data-market-code="IN">🇮🇳 India</a>
+        <span class="cp-mobile-nav__market--soon">🇺🇸 USA <span class="cp-soon-badge">Soon</span></span>
+        <span class="cp-mobile-nav__market--soon">🇨🇦 Canada <span class="cp-soon-badge">Soon</span></span>
+      </div>
+    </nav>
+  </header>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('nav-toggle');
+  var nav = document.getElementById('cp-mobile-nav');
+  if (btn && nav) {
+    btn.addEventListener('click', function() {
+      var open = nav.hasAttribute('hidden');
+      if (open) { nav.removeAttribute('hidden'); btn.setAttribute('aria-expanded', 'true'); }
+      else { nav.setAttribute('hidden', ''); btn.setAttribute('aria-expanded', 'false'); }
+    });
+  }
+
+  // Dynamic nav links — rewrite Calculators, Blog, Help based on detected market
+  (function() {
+    var label = document.querySelector('.cp-market-label');
+    var path = window.location.pathname;
+    var market = null;
+    if (path.startsWith('/australia/')) market = 'AU';
+    else if (path.startsWith('/india/')) market = 'IN';
+    if (market) {
+      try { localStorage.setItem('cp_market', market); } catch(e) {}
+    } else {
+      try { market = localStorage.getItem('cp_market'); } catch(e) {}
+    }
+
+    // Map each nav link to its market-specific URL
+    var navMap = {
+      calc: { AU: '/australia/', IN: '/india/' },
+      blog: { AU: '/australia/blog/', IN: '/india/blog/' },
+      help: { AU: '/australia/help/', IN: '/india/help/' }
+    };
+
+    function setHref(id, url) {
+      var el = document.getElementById(id);
+      if (el && url) el.href = url;
+    }
+
+    if (market) {
+      setHref('nav-calc-link', navMap.calc[market]);
+      setHref('nav-blog-link', navMap.blog[market]);
+      setHref('nav-help-link', navMap.help[market]);
+      setHref('mob-calc-link', navMap.calc[market]);
+      setHref('mob-blog-link', navMap.blog[market]);
+      setHref('mob-help-link', navMap.help[market]);
+    }
+
+    // Update market picker label
+    if (label) {
+      if (market === 'AU') label.textContent = '🇦🇺 Australia';
+      else if (market === 'IN') label.textContent = '🇮🇳 India';
+    }
+
+    // Persist market on dropdown link clicks and immediately update nav links
+    document.querySelectorAll('[data-market-code]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        var code = el.getAttribute('data-market-code');
+        try { localStorage.setItem('cp_market', code); } catch(e) {}
+      });
+    });
+  })();
+})();
+</script>
+
+  
+<div id="geo-banner" class="geo-banner" hidden role="region" aria-label="Market preference notice">
+  <div class="geo-banner__inner">
+    <span class="geo-banner__text" data-geo-text></span>
+    <button class="geo-banner__switch" data-geo-switch type="button"></button>
+    <button class="geo-banner__close" data-geo-close type="button" aria-label="Dismiss">&#x2715;</button>
+  </div>
+</div>
+
+  
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="breadcrumb__inner">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+      
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        
+          <a itemprop="item" href="/">
+            <span itemprop="name">Home</span>
+          </a>
+        
+        <meta itemprop="position" content="1">
+      </li>
+      
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        
+          <span itemprop="name" aria-current="page">Blog</span>
+        
+        <meta itemprop="position" content="2">
+      </li>
+      
+    </ol>
+  </div>
+</nav>
+
+
+
+  
+<main id="main-content">
+  <div class="hub-hero">
+    <div class="hub-hero__inner">
+      <h1>Financial Planning Blog</h1>
+      <p>Plain-English guides to help you make smarter financial decisions — with real numbers, not vague advice. Written by CFAs, CAs, and CFPs with India-specific context.</p>
+    </div>
+  </div>
+
+  <div class="hub-content">
+    <div class="blog-grid">
+
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Retirement</span>
+            <span class="blog-card__date">April 2026</span>
+            
+            <span class="blog-card__updated">Updated May 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/retire-early-india-guide/">How to Retire Early in India: Complete FIRE Planning Guide 2026</a></h2>
+          <p>What corpus do you actually need to retire at 45 or 50 in India? We calculate FI numbers for three lifestyle levels and show a step-by-step path to get there.</p>
+          <a href="/india/blog/retire-early-india-guide/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Tax</span>
+            <span class="blog-card__date">April 2026</span>
+            
+            <span class="blog-card__updated">Updated May 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/old-vs-new-tax-regime/">Old vs New Tax Regime FY 2026-27: Complete Comparison</a></h2>
+          <p>The new regime is now the default — but it isn&#39;t always better. We compare both regimes at every income level from ₹6L to ₹50L and pinpoint exactly where the crossover is.</p>
+          <a href="/india/blog/old-vs-new-tax-regime/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Savings</span>
+            <span class="blog-card__date">April 2026</span>
+            
+            <span class="blog-card__updated">Updated May 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/ppf-vs-nps-vs-fd/">PPF vs NPS vs FD: Where to Park Your Long-Term Savings?</a></h2>
+          <p>All three are &#39;safe&#39; options. Over 15–25 years, the difference in returns and tax treatment can add up to lakhs. Here&#39;s how they compare on every dimension that matters.</p>
+          <a href="/india/blog/ppf-vs-nps-vs-fd/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Investing</span>
+            <span class="blog-card__date">April 2026</span>
+            
+            <span class="blog-card__updated">Updated May 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/sip-vs-lumpsum/">SIP vs Lumpsum Investment: Which Strategy Works Better?</a></h2>
+          <p>Two investors put ₹10 lakh into the same fund — one monthly, one all at once. After 10 years, who ends up with more? We run the numbers across three market scenarios.</p>
+          <a href="/india/blog/sip-vs-lumpsum/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Real Estate</span>
+            <span class="blog-card__date">April 2026</span>
+            
+            <span class="blog-card__updated">Updated May 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/under-construction-vs-ready-to-move/">Under-Construction vs Ready-to-Move Property: A Full Financial Analysis</a></h2>
+          <p>The builder&#39;s price looks attractive. But by the time you account for delay risk, GST, and opportunity cost — which actually costs less?</p>
+          <a href="/india/blog/under-construction-vs-ready-to-move/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Real Estate</span>
+            <span class="blog-card__date">April 2026</span>
+            
+            <span class="blog-card__updated">Updated May 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/rental-property-roi-india/">How to Calculate Real ROI on Rental Property in India</a></h2>
+          <p>Rental yield in India averages 2–3%. Once you factor in maintenance, vacancy, and taxes, the real return often surprises first-time landlords.</p>
+          <a href="/india/blog/rental-property-roi-india/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Real Estate</span>
+            <span class="blog-card__date">April 2026</span>
+            
+            <span class="blog-card__updated">Updated May 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/home-loan-prepayment-vs-investing/">Home Loan Prepayment vs Investing: Which Gives You More Wealth?</a></h2>
+          <p>Prepaying your 8.5% home loan is equivalent to earning 8.5% post-tax. Can your investment beat that? The answer depends on your tax bracket and tenure left.</p>
+          <a href="/india/blog/home-loan-prepayment-vs-investing/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Salary</span>
+            <span class="blog-card__date">April 2026</span>
+            
+            <span class="blog-card__updated">Updated May 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/salary-increment-guide/">Salary Increment Negotiation: How to Frame Your Ask With Numbers</a></h2>
+          <p>Walking into an appraisal without data is leaving money on the table. Here&#39;s how to benchmark your market rate and make an ask that&#39;s hard to refuse.</p>
+          <a href="/india/blog/salary-increment-guide/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Tax</span>
+            <span class="blog-card__date">April 2026</span>
+            
+            <span class="blog-card__updated">Updated May 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/capital-gains-tax-india/">Capital Gains Tax in India 2026: STCG, LTCG, and What Changed in Budget</a></h2>
+          <p>The 2024 Budget changed LTCG rates and indexation rules. Here&#39;s how gains on equity, debt, and real estate are taxed now — with practical examples.</p>
+          <a href="/india/blog/capital-gains-tax-india/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Loans</span>
+            <span class="blog-card__date">April 2026</span>
+            
+            <span class="blog-card__updated">Updated May 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/balance-transfer-home-loan/">Home Loan Balance Transfer: When It&#39;s Worth It and When to Skip It</a></h2>
+          <p>Transferring for a 0.5% rate cut on a ₹50L loan sounds compelling. But closing charges and processing fees can wipe out years of savings — we do the full math.</p>
+          <a href="/india/blog/balance-transfer-home-loan/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Investing</span>
+            <span class="blog-card__date">April 2026</span>
+            
+            <span class="blog-card__updated">Updated May 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/sip-vs-fd-which-is-better/">SIP vs FD: Which is Better for Indian Investors in 2026?</a></h2>
+          <p>A complete comparison of SIP vs FD in India — returns, tax treatment, risk, liquidity, and who should choose which. With real numbers at every income level.</p>
+          <a href="/india/blog/sip-vs-fd-which-is-better/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Retirement</span>
+            <span class="blog-card__date">April 2026</span>
+            
+            <span class="blog-card__updated">Updated May 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/apy-vs-nps/">APY vs NPS: Which Pension Scheme Is Right for You in 2026?</a></h2>
+          <p>APY guarantees a pension; NPS lets the market work for you. Both have tax benefits. Here&#39;s how to decide based on your income level and risk tolerance.</p>
+          <a href="/india/blog/apy-vs-nps/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Savings</span>
+            <span class="blog-card__date">April 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/nsc-vs-kvp-post-office/">NSC vs KVP vs Post Office TD: Which Government Scheme Wins in 2026?</a></h2>
+          <p>NSC doubles in 6.9 years; KVP in 7.5. Both offer sovereign backing with no market risk. We compare them on returns, tax, and liquidity for FY 2026-27.</p>
+          <a href="/india/blog/nsc-vs-kvp-post-office/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Retirement</span>
+            <span class="blog-card__date">April 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/how-to-plan-retirement-india/">How to Plan Retirement in India 2026 — Step-by-Step Guide</a></h2>
+          <p>A practical step-by-step retirement planning guide: calculate your corpus target, close the savings gap, and choose the right investment mix for a secure retirement in India.</p>
+          <a href="/india/blog/how-to-plan-retirement-india/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Tax</span>
+            <span class="blog-card__date">April 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/itr-filing-guide-2026/">ITR Filing Guide for Salaried Employees: How to File Your Taxes in 2026</a></h2>
+          <p>A step-by-step walkthrough of ITR-1 filing, pre-filled data verification, and the 5 mistakes salaried employees make every year that trigger notices.</p>
+          <a href="/india/blog/itr-filing-guide-2026/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Investing</span>
+            <span class="blog-card__date">April 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/step-up-sip-power/">Step-Up SIP: Why Increasing Your SIP by 10% a Year Changes Everything</a></h2>
+          <p>Stepping up ₹10,000/month by 10% annually builds 67% more wealth over 20 years than a flat SIP. We show the exact numbers and how to set it up.</p>
+          <a href="/india/blog/step-up-sip-power/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Tax</span>
+            <span class="blog-card__date">March 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/hra-exemption-guide/">HRA Exemption in 2026: How to Claim It, Even If You Pay Rent in Cash</a></h2>
+          <p>The HRA exemption formula has three conditions — and you get the minimum. Most people claim less than they&#39;re entitled to. Here&#39;s how to calculate it correctly.</p>
+          <a href="/india/blog/hra-exemption-guide/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Tax</span>
+            <span class="blog-card__date">March 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/tds-on-salary-form-16/">TDS on Salary and Form 16: How to Read Your Tax Certificate</a></h2>
+          <p>Your Form 16 has two parts and most people only check Part A. Here&#39;s what every line in Part B means and how to use it to file your ITR correctly.</p>
+          <a href="/india/blog/tds-on-salary-form-16/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Investing</span>
+            <span class="blog-card__date">March 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/best-sip-amount-by-salary/">Best SIP Amount by Salary in India 2026 — How Much Should You Invest?</a></h2>
+          <p>Exactly how much SIP to start based on your monthly salary in India. Includes salary-wise breakdowns, corpus projections, and the step-up SIP approach.</p>
+          <a href="/india/blog/best-sip-amount-by-salary/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Real Estate</span>
+            <span class="blog-card__date">March 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/property-registration-stamp-duty/">Property Registration and Stamp Duty in India 2026: State-by-State Guide</a></h2>
+          <p>Stamp duty ranges from 3% to 8% depending on your state, gender, and property type. We break down the actual cost for 12 major states with real examples.</p>
+          <a href="/india/blog/property-registration-stamp-duty/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Savings</span>
+            <span class="blog-card__date">March 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/senior-citizen-savings-vs-fd/">Senior Citizen Savings Scheme vs FD: The Best Option After 60</a></h2>
+          <p>SCSS pays 8.2% quarterly on up to ₹30 lakhs. But the 5-year lock-in, premature withdrawal rules, and tax treatment matter. We compare every angle.</p>
+          <a href="/india/blog/senior-citizen-savings-vs-fd/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Savings</span>
+            <span class="blog-card__date">March 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/best-savings-account-interest-2026/">Best Savings Account Interest Rates in India 2026: Which Bank Pays More?</a></h2>
+          <p>Small finance banks are offering 7–9% on savings accounts while PSU banks pay 2.7%. Here&#39;s how to park your emergency fund and earn more with zero risk.</p>
+          <a href="/india/blog/best-savings-account-interest-2026/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Investing</span>
+            <span class="blog-card__date">March 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/financial-planning-30s-india/">Financial Planning in Your 30s India 2026 — 10 Money Moves That Change Everything</a></h2>
+          <p>The 10 most important financial decisions for Indians in their 30s. Home buying, retirement corpus, insurance, SIP step-up, and the biggest mistakes — with real numbers.</p>
+          <a href="/india/blog/financial-planning-30s-india/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Tax</span>
+            <span class="blog-card__date">March 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/elss-vs-ppf-tax-saving/">ELSS vs PPF: Which Is Better for 80C Tax Saving in 2026?</a></h2>
+          <p>ELSS has the shortest lock-in of any 80C investment at 3 years; PPF has the highest safety. We compare them over 15 years at different return assumptions.</p>
+          <a href="/india/blog/elss-vs-ppf-tax-saving/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Investing</span>
+            <span class="blog-card__date">March 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/cagr-vs-xirr/">CAGR vs XIRR: Which Return Metric Should You Use for Mutual Funds?</a></h2>
+          <p>CAGR flatters lumpsum investments. XIRR is what matters for SIPs. Understanding the difference stops you from comparing apples to oranges on your portfolio.</p>
+          <a href="/india/blog/cagr-vs-xirr/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Salary</span>
+            <span class="blog-card__date">March 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/epf-balance-guide/">EPF Balance: How to Check, Calculate, and Actually Maximise It</a></h2>
+          <p>Your EPF grows at 8.25% tax-free — but most employees don&#39;t know their actual balance, nominee status, or when they can withdraw without penalty.</p>
+          <a href="/india/blog/epf-balance-guide/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Tax</span>
+            <span class="blog-card__date">March 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/advance-tax-guide/">Advance Tax in India 2026: Who Needs to Pay, When, and How to Avoid Penalties</a></h2>
+          <p>If your tax liability exceeds ₹10,000 and you&#39;re not a senior citizen, advance tax applies — even if TDS is being deducted. Here&#39;s the full schedule.</p>
+          <a href="/india/blog/advance-tax-guide/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Retirement</span>
+            <span class="blog-card__date">March 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/what-is-fire-financial-independence/">What is FIRE? Financial Independence, Retire Early — Complete India Guide</a></h2>
+          <p>FIRE stands for Financial Independence, Retire Early. It&#39;s a movement where you accumulate enough invested wealth to live off returns forever. Here&#39;s how it works in India.</p>
+          <a href="/india/blog/what-is-fire-financial-independence/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Savings</span>
+            <span class="blog-card__date">March 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/rd-vs-fd/">RD vs FD: Which Is Better for Regular Savers in 2026?</a></h2>
+          <p>An RD and FD with the same rate and tenure don&#39;t earn the same interest. We explain why RD interest compounds differently and when each makes more sense.</p>
+          <a href="/india/blog/rd-vs-fd/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Salary</span>
+            <span class="blog-card__date">March 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/understanding-payslip/">Understanding Your Payslip: Every Line Item Decoded for Indian Employees</a></h2>
+          <p>Basic pay, HRA, special allowance, PF, professional tax — your payslip has 10–15 line items. Here&#39;s exactly what each one means for your take-home and taxes.</p>
+          <a href="/india/blog/understanding-payslip/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Investing</span>
+            <span class="blog-card__date">March 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/direct-vs-regular-mutual-funds/">Direct vs Regular Mutual Funds: The Hidden Cost You&#39;re Paying</a></h2>
+          <p>On a ₹10,000/month SIP over 20 years, the expense ratio difference between direct and regular can cost you over ₹30 lakhs. The math is clear.</p>
+          <a href="/india/blog/direct-vs-regular-mutual-funds/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Tax</span>
+            <span class="blog-card__date">February 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/esops-india-guide/">ESOPs in India: How to Calculate Your Real Gains and Minimise Tax</a></h2>
+          <p>ESOPs are taxed twice — at exercise and at sale. Most employees don&#39;t know when to exercise or how to time sales for the lowest tax bracket.</p>
+          <a href="/india/blog/esops-india-guide/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Tax</span>
+            <span class="blog-card__date">February 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/how-to-save-tax-80c/">How to Save Maximum Tax Under Section 80C in 2026 – A Complete Guide</a></h2>
+          <p>The ₹1.5 lakh 80C limit covers 15+ instruments. Most people default to PF and LIC. Here&#39;s how to allocate for the best after-tax returns, not just deductions.</p>
+          <a href="/india/blog/how-to-save-tax-80c/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Investing</span>
+            <span class="blog-card__date">February 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/how-to-read-mutual-fund-factsheet/">How to Read a Mutual Fund Factsheet: Every Number Decoded</a></h2>
+          <p>The factsheet tells you everything about a fund — if you know where to look. Expense ratio, Sharpe ratio, rolling returns: here&#39;s what each number means.</p>
+          <a href="/india/blog/how-to-read-mutual-fund-factsheet/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Savings</span>
+            <span class="blog-card__date">February 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/how-to-build-emergency-fund-india/">How to Build an Emergency Fund in India 2026 — The Complete Guide</a></h2>
+          <p>How much emergency fund you need in India, where to keep it, and how to build it fast — even on a tight salary.</p>
+          <a href="/india/blog/how-to-build-emergency-fund-india/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Loans</span>
+            <span class="blog-card__date">February 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/car-loan-vs-buying-outright/">Car Loan vs Paying Outright: When Does Borrowing for a Car Make Sense?</a></h2>
+          <p>If you can invest the same amount at 12% while borrowing at 9%, you come out ahead. But the math only works under specific conditions.</p>
+          <a href="/india/blog/car-loan-vs-buying-outright/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Loans</span>
+            <span class="blog-card__date">February 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/personal-loan-true-cost/">Personal Loan EMI Calculator: What That 11% Interest Rate Actually Costs You</a></h2>
+          <p>Processing fees, GST on interest, and pre-payment charges turn a 11% personal loan into an effective cost of 13–15%. We show you the full picture before you borrow.</p>
+          <a href="/india/blog/personal-loan-true-cost/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Insurance</span>
+            <span class="blog-card__date">February 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/term-insurance-india-guide/">Term Insurance India 2026 — How Much Cover Do You Actually Need?</a></h2>
+          <p>Term insurance is the simplest, cheapest, and most important financial product for any Indian with financial dependants. A ₹1 crore plan at 30 costs under ₹10,000/year.</p>
+          <a href="/india/blog/term-insurance-india-guide/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Retirement</span>
+            <span class="blog-card__date">February 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/nps-tier-1-vs-tier-2/">NPS Tier 1 vs Tier 2: How to Use NPS Smartly for Tax and Retirement</a></h2>
+          <p>Tier 1 is locked until 60 with tax benefits; Tier 2 is flexible with no tax advantage. Most employees ignore Tier 2 — but it has one powerful use case.</p>
+          <a href="/india/blog/nps-tier-1-vs-tier-2/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Investing</span>
+            <span class="blog-card__date">February 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/sip-returns-what-12-percent-means/">SIP Returns: What 12% Annual Return Actually Means Month to Month</a></h2>
+          <p>Fund ads quote 12% returns and investors expect their SIP to grow at 1% per month. Here&#39;s what 12% CAGR really translates to — and why markets rarely cooperate.</p>
+          <a href="/india/blog/sip-returns-what-12-percent-means/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Savings</span>
+            <span class="blog-card__date">February 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/fd-vs-debt-mutual-fund/">FD vs Debt Mutual Fund: Where to Park Your Short-Term Money in 2026?</a></h2>
+          <p>FDs are predictable; debt funds used to have a tax edge. After the 2023 amendment, they&#39;re taxed the same. Here&#39;s when each still makes sense.</p>
+          <a href="/india/blog/fd-vs-debt-mutual-fund/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Tax</span>
+            <span class="blog-card__date">February 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/income-tax-on-fd/">Income Tax on Fixed Deposits: How TDS Works and How to Legally Reduce It</a></h2>
+          <p>FD interest is fully taxable, and the bank deducts TDS at 10% once interest crosses ₹40,000. Here&#39;s how to split FDs to minimise the tax bite.</p>
+          <a href="/india/blog/income-tax-on-fd/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Investing</span>
+            <span class="blog-card__date">January 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/expense-ratio-explained/">Expense Ratio Explained: How Fund Charges Silently Eat Your Returns</a></h2>
+          <p>A 1% expense ratio sounds trivial. On ₹50 lakhs over 20 years, it silently costs you ₹28 lakhs in foregone growth. Here&#39;s how to compare funds fairly.</p>
+          <a href="/india/blog/expense-ratio-explained/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Salary</span>
+            <span class="blog-card__date">January 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/gratuity-calculation-guide/">Gratuity Calculation in India 2026: How Much Are You Owed and When?</a></h2>
+          <p>Gratuity is payable after 5 years of service, calculated on basic + DA. But the formula differs by company type, and the tax exemption rules are often misunderstood.</p>
+          <a href="/india/blog/gratuity-calculation-guide/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Loans</span>
+            <span class="blog-card__date">January 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/credit-score-india-guide/">Credit Score India 2026 — Complete Guide to CIBIL Score, Ranges, and How to Improve</a></h2>
+          <p>Everything about your CIBIL credit score in India — what score you need for loans, why your score might be low, and 7 proven steps to improve it fast in 2026.</p>
+          <a href="/india/blog/credit-score-india-guide/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Savings</span>
+            <span class="blog-card__date">January 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/post-office-schemes-vs-bank-fd/">Post Office Schemes vs Bank FDs: The Complete 2026 Comparison</a></h2>
+          <p>Post Office MIS, NSC, and TD offer sovereign guarantee and often better rates than FDs. But the liquidity and tax rules are different. Here&#39;s the full picture.</p>
+          <a href="/india/blog/post-office-schemes-vs-bank-fd/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Real Estate</span>
+            <span class="blog-card__date">January 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/home-loan-vs-rent/">Home Loan vs Renting in India: What the Real Numbers Say in 2026</a></h2>
+          <p>In most Indian cities, the price-to-rent ratio is 25–40x — meaning renting is often cheaper. But EMI builds equity. We calculate the break-even point for 5 cities.</p>
+          <a href="/india/blog/home-loan-vs-rent/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Investing</span>
+            <span class="blog-card__date">January 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/how-to-choose-sip-fund/">How to Choose the Best SIP Fund in 2026 – A No-Nonsense Guide</a></h2>
+          <p>With 400+ equity funds in India, choosing one by past returns alone is a trap. Here&#39;s a 5-step framework that filters out noise and finds consistent performers.</p>
+          <a href="/india/blog/how-to-choose-sip-fund/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Retirement</span>
+            <span class="blog-card__date">January 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/how-much-to-retire-at-50/">How Much Do You Need to Retire at 50 in India? The Real Math</a></h2>
+          <p>The 25x rule means ₹5L/year expenses need ₹1.25Cr corpus. But Indian inflation is 6% and life expectancy is rising. We recalculate with real Indian numbers.</p>
+          <a href="/india/blog/how-much-to-retire-at-50/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Tax</span>
+            <span class="blog-card__date">January 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/section-80d-health-insurance/">Section 80D: How to Maximise Your Health Insurance Tax Deduction</a></h2>
+          <p>Most people claim only ₹25,000 under 80D. With proper planning for self, parents, and preventive health check-ups, you can claim up to ₹75,000.</p>
+          <a href="/india/blog/section-80d-health-insurance/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Salary</span>
+            <span class="blog-card__date">January 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/ctc-vs-in-hand-salary/">CTC vs In-Hand Salary: Why Your Offer Letter Is Lying to You</a></h2>
+          <p>A ₹15 LPA offer translates to ₹90,000–₹1.05L in-hand per month after PF, gratuity, tax, and professional tax deductions. Here&#39;s the exact breakdown.</p>
+          <a href="/india/blog/ctc-vs-in-hand-salary/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+        
+        
+        
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Retirement</span>
+            <span class="blog-card__date">January 2026</span>
+            
+          </div>
+          <h2><a href="/india/blog/fire-india-retire-at-40/">FIRE in India: The Complete Math Behind Retiring at 40</a></h2>
+          <p>The 25x rule assumes 4% withdrawal. But Indian inflation runs at 6–7%, not 3%. We recalculate the real corpus needed for FIRE in India across three cities.</p>
+          <a href="/india/blog/fire-india-retire-at-40/" class="blog-card__read">Read article →</a>
+        </article>
+        
+      
+
+    </div>
+  </div>
+</main>
+
+
+  <footer class="cp-footer">
+  <div class="container">
+    <div class="cp-footer__grid">
+
+      <!-- Col 1: Brand — always shown, content varies by market -->
+      <div class="cp-footer__brand">
+        <a href="/" class="cp-logo" aria-label="CalcPhi">
+          <span class="cp-logo-tile">φ</span>
+          <span class="cp-logo-wm">Calc<em>Phi</em></span>
+        </a>
+        
+        <p class="cp-footer__desc">Financial calculators built for India. No login required.</p>
+        <div class="cp-footer__markets">
+          <a href="/india/" class="cp-footer__mchip cp-footer__mchip--active" data-market-code="IN">🇮🇳 India</a>
+        </div>
+        <a href="/markets/" class="cp-footer__other-markets">View all markets →</a>
+        
+      </div>
+
+      
+      
+
+      <div class="cp-footer__col">
+        <div class="cp-footer__head">SIP &amp; Investments</div>
+        <a href="/india/sip-calculator/">SIP Calculator</a>
+        <a href="/india/step-up-sip-calculator/">Step-Up SIP</a>
+        <a href="/india/lumpsum-calculator/">Lumpsum Calculator</a>
+        <a href="/india/elss-calculator/">ELSS Calculator</a>
+        <a href="/india/cagr-calculator/">CAGR Calculator</a>
+        <a href="/india/#mutual-funds" class="cp-footer__view-all">All 15 investment tools →</a>
+      </div>
+
+      <div class="cp-footer__col">
+        <div class="cp-footer__head">Loans &amp; Tax</div>
+        <a href="/india/emi-calculator/">EMI Calculator</a>
+        <a href="/india/home-loan-emi-calculator/">Home Loan EMI</a>
+        <a href="/india/income-tax-calculator/">Income Tax</a>
+        <a href="/india/hra-calculator/">HRA Calculator</a>
+        <a href="/india/capital-gains-calculator/">Capital Gains Tax</a>
+        <a href="/india/#loans" class="cp-footer__view-all">All 31 loan &amp; tax tools →</a>
+      </div>
+
+      <div class="cp-footer__col">
+        <div class="cp-footer__head">Savings &amp; Retirement</div>
+        <a href="/india/ppf-calculator/">PPF Calculator</a>
+        <a href="/india/fd-calculator/">FD Calculator</a>
+        <a href="/india/nps-calculator/">NPS Calculator</a>
+        <a href="/india/retirement-corpus-calculator/">Retirement Corpus</a>
+        <a href="/india/ssy-calculator/">SSY Calculator</a>
+        <a href="/india/#government" class="cp-footer__view-all">All 35 savings &amp; retirement tools →</a>
+      </div>
+
+      <div class="cp-footer__col">
+        <div class="cp-footer__head">Company</div>
+        <a href="/about/">About</a>
+        <a href="/india/authors/">India Authors</a>
+        <a href="/india/blog/">Blog</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy/">Privacy</a>
+      </div>
+
+      
+
+    </div>
+
+    <div class="cp-footer__divider"></div>
+
+    <div class="cp-footer__bottom">
+      <p class="cp-footer__disclaimer">
+        CalcPhi calculators are for educational and estimation purposes only. Results are not financial advice.
+        
+        For India: mutual fund investments are subject to market risks — consult a SEBI-registered advisor.
+        
+      </p>
+      <p class="cp-footer__copy">&copy; 2026 CalcPhi. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/ui.js" type="module" defer></script>
+
+  <script src="/assets/js/geo.js" defer></script>
+  <script src="/assets/js/search.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.faq-q').forEach(function(q) {
+        q.addEventListener('click', function() {
+          var item = q.closest('.faq-item');
+          var isOpen = item.classList.contains('is-open');
+          item.closest('.faq-list, .faq-section') && item.closest('.faq-list, .faq-section').querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('is-open'); });
+          if (!isOpen) item.classList.add('is-open');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

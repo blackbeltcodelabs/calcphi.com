@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,400;0,500;1,400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,400;0,500;1,400&display=swap"></noscript>
+
+<title>Car Loan vs Paying Outright: When Does Borrowing for a Car Make Sense? | CalcPhi</title>
+<meta name="description" content="A car loan at 9% costs you ₹1.6 lakh extra on a ₹10 lakh car. But if your investments earn 12%, you might be better off borrowing. Here&#39;s the full math.">
+
+<link rel="canonical" href="https://www.calcphi.com/india/blog/car-loan-vs-buying-outright/">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Car Loan vs Paying Outright: When Does Borrowing for a Car Make Sense?">
+<meta property="og:description" content="A car loan at 9% costs you ₹1.6 lakh extra on a ₹10 lakh car. But if your investments earn 12%, you might be better off borrowing. Here&#39;s the full math.">
+<meta property="og:url" content="https://www.calcphi.com/india/blog/car-loan-vs-buying-outright/">
+<meta property="og:image" content="https://www.calcphi.com/assets/images/og/calcphi-default.png">
+<meta property="og:site_name" content="CalcPhi">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Car Loan vs Paying Outright: When Does Borrowing for a Car Make Sense?">
+<meta name="twitter:description" content="A car loan at 9% costs you ₹1.6 lakh extra on a ₹10 lakh car. But if your investments earn 12%, you might be better off borrowing. Here&#39;s the full math.">
+<meta name="twitter:image" content="https://www.calcphi.com/assets/images/og/calcphi-default.png">
+
+<!-- Hreflang — auto-generated from market + permalink -->
+
+<link rel="alternate" hreflang="en-in"    href="https://www.calcphi.com/india/">
+<link rel="alternate" hreflang="en-au"    href="https://www.calcphi.com/australia/">
+<link rel="alternate" hreflang="x-default" href="https://www.calcphi.com/">
+
+
+
+<!-- Language -->
+<meta name="language" content="en">
+
+<!-- Critical CSS inlined -->
+<style>/* ============================================================
+   CalcPhi — Critical CSS
+   Inlined in <head>. Covers: tokens, reset, header, nav,
+   breadcrumb, main grid, calculator card above the fold.
+   ============================================================ */
+
+:root {
+  /* ── Design tokens ────────────────────────────────────── */
+  --bg:        #fff8f0;
+  --bg-2:      #fbf2e6;
+  --bg-3:      #f5ead7;
+  --surface:   #ffffff;
+  --ink:       #1a1a1a;
+  --ink-2:     #3a3530;
+  --ink-3:     #6b6258;
+  --ink-4:     #a39a8d;
+  --line:      #e8dec9;
+  --line-2:    #d8cbb0;
+  --accent:    #d96e30;
+  --accent-2:  #b8551d;
+  --accent-w:  #fbe8d8;
+  --good:      #2d6a4f;
+  --good-w:    #d8e9df;
+
+  /* ── Compat aliases (used by older components) ────────── */
+  --color-primary:        #1a1a1a;
+  --color-primary-dark:   #3a3530;
+  --color-accent:         #d96e30;
+  --color-accent-dark:    #b8551d;
+  --color-surface:        #ffffff;
+  --color-muted:          #fbf2e6;
+  --color-text:           #1a1a1a;
+  --color-text-secondary: #6b6258;
+  --color-text-light:     #a39a8d;
+  --color-border:         #e8dec9;
+  --color-border-focus:   #d96e30;
+  --color-success:        #2d6a4f;
+  --color-highlight-bg:   #fbe8d8;
+  --color-highlight-text: #b8551d;
+
+  /* ── Typography ───────────────────────────────────────── */
+  --font-ui:   "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-num:  "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-ed:   "Source Serif 4", "Source Serif Pro", Georgia, serif;
+  --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --text-xs:   0.6875rem;
+  --text-sm:   0.8125rem;
+  --text-base: 0.875rem;
+  --text-lg:   1rem;
+  --text-xl:   1.125rem;
+  --text-2xl:  1.375rem;
+  --text-3xl:  1.75rem;
+  --text-4xl:  2.25rem;
+  --leading-tight:  1.2;
+  --leading-snug:   1.375;
+  --leading-normal: 1.6;
+
+  /* ── Radii ────────────────────────────────────────────── */
+  --r-xs: 4px;
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 14px;
+  --r-xl: 20px;
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  /* ── Spacing (4px base) ───────────────────────────────── */
+  --space-1: 0.25rem;  --space-2: 0.5rem;   --space-3: 0.75rem;
+  --space-4: 1rem;     --space-5: 1.25rem;  --space-6: 1.5rem;
+  --space-7: 1.75rem;  --space-8: 2rem;     --space-10: 2.5rem;
+  --space-12: 3rem;    --space-16: 4rem;
+
+  /* ── Shadows ──────────────────────────────────────────── */
+  --shadow-xs: 0 1px 2px rgba(0,0,0,.04);
+  --shadow-sm: 0 1px 3px rgba(40,28,12,.08);
+  --shadow-md: 0 4px 16px rgba(40,28,12,.08);
+
+  /* ── Layout ───────────────────────────────────────────── */
+  --max-width:     1280px;
+  --content-width: 800px;
+  --sidebar-width: 280px;
+  --header-height: 94px;
+}
+
+/* ── Reset ────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--font-ui);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+img, svg { display: block; max-width: 100%; }
+a { color: var(--accent-2); text-decoration: none; }
+a:hover { text-decoration: underline; }
+ul, ol { list-style: none; }
+button { cursor: pointer; font: inherit; border: none; background: none; }
+
+/* ── Skip link ────────────────────────────────────────────── */
+.skip-link {
+  position: absolute; top: -100%; left: var(--space-4);
+  padding: var(--space-2) var(--space-4);
+  background: var(--ink); color: var(--bg);
+  border-radius: var(--r-md); font-size: var(--text-sm); z-index: 9999;
+}
+.skip-link:focus { top: var(--space-2); }
+
+/* ── Container ────────────────────────────────────────────── */
+.container {
+  width: 100%; max-width: var(--max-width);
+  margin: 0 auto; padding: 0 24px;
+}
+
+/* ── Header ───────────────────────────────────────────────── */
+.cp-header-wrap {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--bg);
+}
+.cp-announce {
+  background: var(--ink); color: var(--bg);
+  font-size: 12px; padding: 7px 0;
+  text-align: center; letter-spacing: .01em;
+}
+.cp-announce-sep { opacity: .5; margin: 0 8px; }
+.cp-header {
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+}
+.cp-header__bar {
+  max-width: var(--max-width); margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; height: 64px; gap: 20px;
+}
+
+/* Logo */
+.cp-logo {
+  display: inline-flex; align-items: center; gap: 8px;
+  text-decoration: none; color: inherit; flex-shrink: 0;
+}
+.cp-logo:hover { text-decoration: none; }
+.cp-logo-tile {
+  width: 28px; height: 28px;
+  background: var(--ink); color: var(--bg);
+  border-radius: 6px; display: grid; place-items: center;
+  font-family: var(--font-ed); font-size: 17px;
+  font-style: italic; font-weight: 500; line-height: 1;
+}
+.cp-logo-wm {
+  font-size: 15px; font-weight: 600;
+  letter-spacing: -0.01em; color: var(--ink);
+}
+.cp-logo-wm em { font-style: normal; color: var(--accent); }
+
+/* Primary nav */
+.cp-nav { display: flex; align-items: center; gap: 1px; margin-left: 8px; }
+.cp-nav a {
+  display: inline-flex; align-items: center; gap: 4px;
+  height: 34px; padding: 0 9px; border-radius: 8px;
+  font-size: 13px; font-weight: 500; color: var(--ink-2);
+  text-decoration: none; transition: background .12s, color .12s; white-space: nowrap;
+}
+.cp-nav a:hover { background: var(--bg-2); color: var(--ink); text-decoration: none; }
+.cp-nav a[aria-current] { color: var(--ink); }
+/* Hide About + Contact from nav on mid-size screens where space is tight */
+@media (max-width: 900px) {
+  .cp-nav a[href="/about/"],
+  .cp-nav a[href="/contact/"] { display: none; }
+}
+
+/* Search */
+.cp-search-btn {
+  display: flex; align-items: center; gap: 8px;
+  height: 36px; padding: 0 10px; border-radius: 8px;
+  border: 1px solid var(--line); background: var(--surface);
+  color: var(--ink-3); cursor: text; min-width: 220px;
+  font-family: inherit; font-size: 12.5px; transition: border-color .12s;
+}
+.cp-search-btn:hover { border-color: var(--line-2); }
+.cp-search-spacer { flex: 1; }
+.cp-search-kbd {
+  font-family: var(--font-num); font-size: 10px;
+  padding: 2px 5px; border: 1px solid var(--line);
+  border-radius: 4px; background: var(--bg-2); color: var(--ink-4);
+}
+
+/* Market picker */
+.cp-market { position: relative; }
+.cp-market summary {
+  display: inline-flex; align-items: center; gap: 6px;
+  height: 32px; padding: 0 10px; border-radius: 6px;
+  border: 1px solid var(--line); background: var(--surface);
+  font-size: 12.5px; font-weight: 500; color: var(--ink-2);
+  cursor: pointer; list-style: none; user-select: none;
+  transition: border-color .12s;
+}
+.cp-market summary::-webkit-details-marker { display: none; }
+.cp-market summary:hover { border-color: var(--line-2); }
+.cp-market-dropdown {
+  position: absolute; top: 38px; right: 0; z-index: 200;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--r-lg); padding: 6px;
+  box-shadow: 0 8px 24px rgba(40,28,12,.12); min-width: 200px;
+}
+.cp-market-dropdown a {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 10px; border-radius: 6px; font-size: 13px;
+  color: var(--ink-2); text-decoration: none;
+  transition: background .1s;
+}
+.cp-market-dropdown a:hover { background: var(--bg-2); color: var(--ink); text-decoration: none; }
+.cp-market-item--soon {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 10px; border-radius: 6px; font-size: 13px;
+  color: var(--ink-4, #b0b8c8); cursor: not-allowed; user-select: none;
+}
+
+/* Mobile toggle */
+.cp-mobile-toggle {
+  display: none; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 8px;
+  border: 1px solid var(--line); cursor: pointer;
+}
+.cp-ham { display: flex; flex-direction: column; gap: 5px; }
+.cp-ham span {
+  display: block; width: 18px; height: 2px;
+  background: var(--ink); border-radius: 2px;
+}
+
+/* ── Breadcrumb ───────────────────────────────────────────── */
+.breadcrumb {
+  background: var(--bg-2); border-bottom: 1px solid var(--line);
+  padding: var(--space-2) var(--space-6); font-size: var(--text-sm);
+  color: var(--ink-3);
+}
+.breadcrumb__inner { max-width: var(--max-width); margin: 0 auto; }
+.breadcrumb ol { display: flex; flex-wrap: wrap; gap: var(--space-1); }
+.breadcrumb li { display: flex; align-items: center; gap: var(--space-1); }
+.breadcrumb li + li::before { content: '/'; color: var(--ink-4); }
+.breadcrumb a { color: var(--ink-3); }
+.breadcrumb a:hover { color: var(--ink); }
+.breadcrumb [aria-current="page"] { color: var(--ink); font-weight: 500; }
+
+/* ── Page layout ──────────────────────────────────────────── */
+.page-layout {
+  max-width: var(--max-width); margin: 0 auto;
+  padding: var(--space-8) var(--space-6);
+  display: grid; grid-template-columns: 1fr var(--sidebar-width);
+  gap: var(--space-10); align-items: start;
+}
+.page-content { min-width: 0; }
+.page-sidebar { position: sticky; top: calc(var(--header-height) + var(--space-4)); }
+
+/* ── Article typography ───────────────────────────────────── */
+.page-content h1 {
+  font-family: var(--font-ed); font-size: var(--text-3xl);
+  font-weight: 400; line-height: var(--leading-tight);
+  color: var(--ink); margin-bottom: var(--space-3);
+}
+.page-content h2 {
+  font-size: var(--text-2xl); font-weight: 600;
+  line-height: var(--leading-snug); color: var(--ink);
+  margin: var(--space-10) 0 var(--space-4);
+  padding-top: var(--space-4); border-top: 1px solid var(--line);
+}
+.page-content h2:first-of-type { margin-top: var(--space-8); border-top: none; }
+.page-content h3 {
+  font-size: var(--text-lg); font-weight: 600;
+  color: var(--ink); margin: var(--space-6) 0 var(--space-3);
+}
+.page-content p { margin-bottom: var(--space-4); line-height: var(--leading-normal); }
+.page-content ul, .page-content ol {
+  margin-bottom: var(--space-4); padding-left: var(--space-6);
+}
+.page-content ul { list-style: disc; }
+.page-content ol { list-style: decimal; }
+.page-content li { margin-bottom: var(--space-2); line-height: var(--leading-normal); }
+.page-content strong { font-weight: 600; }
+
+/* ── Page meta ────────────────────────────────────────────── */
+.page-meta {
+  display: flex; flex-wrap: wrap; gap: var(--space-4);
+  font-size: var(--text-sm); color: var(--ink-3);
+  margin-bottom: var(--space-6); padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--line);
+}
+.page-meta a { color: var(--accent-2); }
+
+/* ── Definition block ─────────────────────────────────────── */
+.definition-block {
+  background: var(--bg-2); border-left: 3px solid var(--accent);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+  padding: var(--space-5) var(--space-6); margin: var(--space-6) 0;
+}
+.definition-block h2 {
+  font-size: var(--text-xl); margin: 0 0 var(--space-3) 0;
+  border-top: none; padding-top: 0;
+}
+.definition-block p:last-child { margin-bottom: 0; }
+
+/* ── Calculator widget ────────────────────────────────────── */
+.calculator-widget {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--r-lg); overflow: hidden;
+  margin: var(--space-8) 0; box-shadow: var(--shadow-sm);
+}
+.calculator-widget__header {
+  background: var(--ink); color: var(--bg);
+  padding: var(--space-4) var(--space-6);
+  font-size: var(--text-lg); font-weight: 600;
+}
+.calculator-body { padding: var(--space-6); display: grid; gap: var(--space-6); }
+@media (min-width: 600px) {
+  .calculator-body { grid-template-columns: 1fr 1fr; }
+  .calculator-results { grid-column: 1 / -1; }
+}
+
+/* ── Input groups ─────────────────────────────────────────── */
+.input-group { display: flex; flex-direction: column; gap: var(--space-2); }
+.input-group label { font-size: var(--text-sm); font-weight: 600; color: var(--ink); }
+.input-group input, .input-group select {
+  width: 100%; padding: var(--space-3) var(--space-4);
+  border: 1.5px solid var(--line); border-radius: var(--r-md);
+  font-size: var(--text-base); color: var(--ink); background: var(--surface);
+  transition: border-color .15s, box-shadow .15s;
+  appearance: none; -webkit-appearance: none;
+}
+.input-group input:focus, .input-group select:focus {
+  outline: none; border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(217,110,48,.12);
+}
+.input-hint { font-size: var(--text-xs); color: var(--ink-3); }
+
+/* ── Results ──────────────────────────────────────────────── */
+.calculator-results {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: var(--space-4);
+}
+.result-card {
+  background: var(--bg-2); border: 1px solid var(--line);
+  border-radius: var(--r-md); padding: var(--space-4) var(--space-5); text-align: center;
+}
+.result-card--highlight { background: var(--accent-w); border-color: var(--accent); }
+.result-label {
+  display: block; font-size: var(--text-xs); font-weight: 600;
+  color: var(--ink-3); text-transform: uppercase; letter-spacing: .04em; margin-bottom: var(--space-2);
+}
+.result-value {
+  display: block; font-size: var(--text-2xl); font-weight: 700;
+  color: var(--ink); line-height: 1.2; font-family: var(--font-num);
+}
+.result-card--highlight .result-value { color: var(--accent-2); }
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .page-layout { grid-template-columns: 1fr; padding: var(--space-6) var(--space-4); }
+  .page-sidebar { display: none; }
+  .page-content h1 { font-size: var(--text-2xl); }
+  /* Compact icon-only search button on tablet */
+  .cp-search-btn {
+    min-width: 0; width: 40px; height: 40px;
+    padding: 0; justify-content: center; border-radius: 50%;
+  }
+  .cp-search-btn > span:not(.cp-search-spacer),
+  .cp-search-spacer,
+  .cp-search-kbd { display: none; }
+}
+@media (max-width: 640px) {
+  .cp-nav { display: none; }
+  .cp-mobile-toggle { display: flex; }
+  /* Keep search as compact icon on phones too */
+  .cp-search-btn {
+    display: flex;
+    min-width: 0; width: 36px; height: 36px;
+    padding: 0; justify-content: center; border-radius: 50%;
+    border: 1px solid var(--line);
+  }
+  .cp-search-btn > span, .cp-search-spacer, .cp-search-kbd { display: none; }
+  .cp-header__bar { gap: 8px; }
+  .cp-announce { font-size: 11px; padding: 5px 12px; }
+  .breadcrumb { padding: var(--space-2) var(--space-4); }
+}
+</style>
+
+<!-- Main stylesheet -->
+<link rel="stylesheet" href="/assets/css/main.css?v=10">
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+
+<!-- Per-page schema is injected by the layout into <body> -->
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{"@type":"ListItem","position":1,"name":"Home","item":"https://www.calcphi.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.calcphi.com/blog/"},{"@type":"ListItem","position":3,"name":"Car Loan vs Buying Outright"}]
+  }
+  </script>
+  
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+<div class="cp-header-wrap">
+  <!-- Announcement strip -->
+  <div class="cp-announce">
+    <span class="hide-mobile">All calculations run in your browser.</span>
+    No login required.
+    <span class="cp-announce-sep">·</span>
+    Updated for AY 2026-27
+  </div>
+
+  <!-- Main header bar -->
+  <header class="cp-header">
+    <div class="cp-header__bar">
+
+      <!-- Logo -->
+      <a href="/" class="cp-logo" aria-label="CalcPhi — Financial Calculators">
+        <span class="cp-logo-tile">φ</span>
+        <span class="cp-logo-wm">Calc<em>Phi</em></span>
+      </a>
+
+      <!-- Primary nav -->
+      
+      <nav class="cp-nav" aria-label="Primary navigation">
+        <a id="nav-calc-link"
+           href="/india/"
+           aria-current="true">
+          Calculators
+        </a>
+        <a href="/markets/"
+           >
+          Markets
+        </a>
+        <a id="nav-blog-link"
+           href="/india/blog/"
+           aria-current="page">
+          Blog
+        </a>
+        <a id="nav-help-link"
+           href="/india/help/"
+           >
+          Help
+        </a>
+        <a href="/about/"
+           >
+          About
+        </a>
+        <a href="/contact/"
+           >
+          Contact
+        </a>
+      </nav>
+      
+
+      <div style="flex:1"></div>
+
+      <!-- Search -->
+      <button id="cp-search-btn" class="cp-search-btn" aria-label="Search calculators" aria-haspopup="dialog">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>
+        </svg>
+        <span>Search calculators…</span>
+        <span class="cp-search-spacer"></span>
+        <kbd class="cp-search-kbd">⌘K</kbd>
+      </button>
+
+      <!-- Market picker -->
+      <details class="cp-market">
+        <summary aria-label="Choose market">
+          <span class="cp-market-label">🌏 Markets</span>
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </summary>
+        <div class="cp-market-dropdown">
+          <a href="/australia/" data-market-code="AU">🇦🇺 <strong>Australia</strong> · AUD</a>
+          <a href="/india/" data-market-code="IN">🇮🇳 <strong>India</strong> · INR</a>
+          <span class="cp-market-item--soon">🇺🇸 <strong>USA</strong> · USD <span class="cp-soon-badge">Soon</span></span>
+          <span class="cp-market-item--soon">🇨🇦 <strong>Canada</strong> · CAD <span class="cp-soon-badge">Soon</span></span>
+        </div>
+      </details>
+
+      <!-- Mobile toggle -->
+      <button class="cp-mobile-toggle" aria-label="Toggle navigation" id="nav-toggle" aria-expanded="false" aria-controls="cp-mobile-nav">
+        <span class="cp-ham">
+          <span></span><span></span><span></span>
+        </span>
+      </button>
+
+    </div>
+
+    <!-- Mobile nav (hidden by default) -->
+    <nav id="cp-mobile-nav" class="cp-mobile-nav" aria-label="Mobile navigation" hidden>
+      <a id="mob-calc-link" href="/india/">Calculators</a>
+      <a href="/markets/">Markets</a>
+      <a id="mob-blog-link" href="/india/blog/">Blog</a>
+      <a id="mob-help-link" href="/india/help/">Help</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <div class="cp-mobile-nav__markets">
+        <a href="/australia/" data-market-code="AU">🇦🇺 Australia</a>
+        <a href="/india/" data-market-code="IN">🇮🇳 India</a>
+        <span class="cp-mobile-nav__market--soon">🇺🇸 USA <span class="cp-soon-badge">Soon</span></span>
+        <span class="cp-mobile-nav__market--soon">🇨🇦 Canada <span class="cp-soon-badge">Soon</span></span>
+      </div>
+    </nav>
+  </header>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('nav-toggle');
+  var nav = document.getElementById('cp-mobile-nav');
+  if (btn && nav) {
+    btn.addEventListener('click', function() {
+      var open = nav.hasAttribute('hidden');
+      if (open) { nav.removeAttribute('hidden'); btn.setAttribute('aria-expanded', 'true'); }
+      else { nav.setAttribute('hidden', ''); btn.setAttribute('aria-expanded', 'false'); }
+    });
+  }
+
+  // Dynamic nav links — rewrite Calculators, Blog, Help based on detected market
+  (function() {
+    var label = document.querySelector('.cp-market-label');
+    var path = window.location.pathname;
+    var market = null;
+    if (path.startsWith('/australia/')) market = 'AU';
+    else if (path.startsWith('/india/')) market = 'IN';
+    if (market) {
+      try { localStorage.setItem('cp_market', market); } catch(e) {}
+    } else {
+      try { market = localStorage.getItem('cp_market'); } catch(e) {}
+    }
+
+    // Map each nav link to its market-specific URL
+    var navMap = {
+      calc: { AU: '/australia/', IN: '/india/' },
+      blog: { AU: '/australia/blog/', IN: '/india/blog/' },
+      help: { AU: '/australia/help/', IN: '/india/help/' }
+    };
+
+    function setHref(id, url) {
+      var el = document.getElementById(id);
+      if (el && url) el.href = url;
+    }
+
+    if (market) {
+      setHref('nav-calc-link', navMap.calc[market]);
+      setHref('nav-blog-link', navMap.blog[market]);
+      setHref('nav-help-link', navMap.help[market]);
+      setHref('mob-calc-link', navMap.calc[market]);
+      setHref('mob-blog-link', navMap.blog[market]);
+      setHref('mob-help-link', navMap.help[market]);
+    }
+
+    // Update market picker label
+    if (label) {
+      if (market === 'AU') label.textContent = '🇦🇺 Australia';
+      else if (market === 'IN') label.textContent = '🇮🇳 India';
+    }
+
+    // Persist market on dropdown link clicks and immediately update nav links
+    document.querySelectorAll('[data-market-code]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        var code = el.getAttribute('data-market-code');
+        try { localStorage.setItem('cp_market', code); } catch(e) {}
+      });
+    });
+  })();
+})();
+</script>
+
+  
+<div id="geo-banner" class="geo-banner" hidden role="region" aria-label="Market preference notice">
+  <div class="geo-banner__inner">
+    <span class="geo-banner__text" data-geo-text></span>
+    <button class="geo-banner__switch" data-geo-switch type="button"></button>
+    <button class="geo-banner__close" data-geo-close type="button" aria-label="Dismiss">&#x2715;</button>
+  </div>
+</div>
+
+  
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="breadcrumb__inner">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+      
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        
+          <a itemprop="item" href="/">
+            <span itemprop="name">Home</span>
+          </a>
+        
+        <meta itemprop="position" content="1">
+      </li>
+      
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        
+          <a itemprop="item" href="/blog/">
+            <span itemprop="name">Blog</span>
+          </a>
+        
+        <meta itemprop="position" content="2">
+      </li>
+      
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        
+          <span itemprop="name" aria-current="page">Car Loan vs Buying Outright</span>
+        
+        <meta itemprop="position" content="3">
+      </li>
+      
+    </ol>
+  </div>
+</nav>
+
+
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Car Loan vs Buying Outright: The Complete Financial Comparison",
+  "description": "When to take a car loan vs pay cash — interest costs, opportunity cost of capital, and the numbers at different loan rates.",
+  "url": "https://calcphi.com/blog/car-loan-vs-buying-outright/",
+  "datePublished": "2026-02-15",
+  "dateModified": "2026-02-15",
+  "author": {"@type": "Person", "name": "Arjun Mehta", "url": "https://calcphi.com/about/authors/arjun-mehta/"},
+  "publisher": {"@type": "Organization", "name": "CalcPhi", "url": "https://calcphi.com"},
+  "mainEntityOfPage": "https://calcphi.com/blog/car-loan-vs-buying-outright/"
+}
+</script>
+<main id="main-content">
+  <div class="simple-page blog-article">
+    <div class="blog-article__meta"><span class="blog-card__tag">Loans</span></div>
+    <h1>Car Loan vs Paying Outright: When Does Borrowing for a Car Make Sense?</h1>
+    <div class="article-dateline">
+      <span class="article-dateline__item"><span class="article-dateline__label">Published:</span> 15 February 2026</span>
+      <span class="article-dateline__sep">·</span>
+      <span class="article-dateline__item">By <a href="/india/authors/arjun-mehta/">Arjun Mehta</a><svg class="verified-badge" aria-label="Verified author" title="Verified" viewBox="0 0 20 20" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#1d9bf0"/><path d="M6 10.5l2.5 2.5L14 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>, CA</span>
+    </div>
+    <p class="blog-article__intro">Unlike a home, a car is a depreciating asset — it loses 15–20% of its value the moment you drive it out of the showroom. This changes the calculus on car financing completely. Should you drain your savings to buy outright, or take a loan and keep your capital invested? The answer depends on your loan rate versus your investment return — and on one thing most people underestimate: the emotional weight of a car EMI on an asset that keeps losing value.</p>
+
+    <h2>The Interest Cost of a Car Loan</h2>
+    <table class="data-table">
+      <caption>Car loan interest costs — ₹8 lakh loan at various rates, 5-year tenure</caption>
+      <thead><tr><th>Interest Rate</th><th>Monthly EMI</th><th>Total Interest Paid</th><th>Total Outflow</th></tr></thead>
+      <tbody>
+        <tr><td>8.5%</td><td>₹16,396</td><td>₹1,83,760</td><td>₹9,83,760</td></tr>
+        <tr><td>9.5%</td><td>₹16,772</td><td>₹2,06,320</td><td>₹10,06,320</td></tr>
+        <tr><td>11.0%</td><td>₹17,392</td><td>₹2,43,520</td><td>₹10,43,520</td></tr>
+        <tr><td>13.0%</td><td>₹18,208</td><td>₹2,92,480</td><td>₹10,92,480</td></tr>
+      </tbody>
+    </table>
+
+    <h2>The Opportunity Cost: If You Keep ₹8 Lakh Invested</h2>
+    <p>If you have ₹8 lakh in liquid investments earning 12% CAGR, paying outright costs you the future value of that corpus. Over 5 years, ₹8 lakh at 12% becomes ₹14.1 lakh — a ₹6.1 lakh opportunity cost of paying cash. Taking a loan at 9.5% costs you ₹2.06 lakh in interest. On this math alone, taking the loan and keeping your ₹8 lakh invested is better by ₹4 lakh over 5 years.</p>
+    <p>But this logic has three important limits:</p>
+    <ul>
+      <li>Equity returns are not guaranteed — in a bad 5-year period, your corpus might not hit 12%</li>
+      <li>Most people don't actually keep the "saved" corpus invested — they spend it on other things</li>
+      <li>Car loans from dealers often come bundled with insurance, accessories, and extended warranties that inflate the true cost</li>
+    </ul>
+
+    <h2>The Down Payment Strategy</h2>
+    <p>The optimal middle path: make a large down payment (40–50%) and finance the rest. This minimises interest cost while preserving a portion of your invested corpus.</p>
+    <table class="data-table">
+      <caption>₹12 lakh car — comparing down payment strategies</caption>
+      <thead><tr><th>Down Payment</th><th>Loan Amount</th><th>EMI (9.5%, 5yr)</th><th>Total Interest</th></tr></thead>
+      <tbody>
+        <tr><td>₹2 lakh (17%)</td><td>₹10 lakh</td><td>₹20,965</td><td>₹2,57,900</td></tr>
+        <tr><td>₹5 lakh (42%)</td><td>₹7 lakh</td><td>₹14,675</td><td>₹1,80,500</td></tr>
+        <tr><td>₹8 lakh (67%)</td><td>₹4 lakh</td><td>₹8,386</td><td>₹1,03,160</td></tr>
+        <tr><td>₹12 lakh (100%)</td><td>₹0</td><td>₹0</td><td>₹0</td></tr>
+      </tbody>
+    </table>
+
+    <h2>The Car Depreciation Reality Check</h2>
+    <p>A ₹12 lakh car today is worth approximately:</p>
+    <ul>
+      <li>Year 1: ₹9.6 lakh (20% depreciation)</li>
+      <li>Year 3: ₹6.9 lakh (another 15%/year)</li>
+      <li>Year 5: ₹5.2 lakh (another 10%/year)</li>
+    </ul>
+    <p>At year 5, your car is worth ₹5.2 lakh. You've paid ₹10 lakh+ in loan + interest for an asset now worth ₹5.2 lakh. This is why financial advisors call cars "wealth destroyers" — not because you shouldn't own one, but because you should right-size your budget.</p>
+
+    <h2>FAQ</h2>
+    <h3>Is there any tax benefit on a car loan?</h3>
+    <p>For personal cars: no tax benefit. For self-employed individuals and business owners using the car for business purposes, the interest and depreciation can be claimed as business expenses. Salaried employees get no deduction on car loan interest.</p>
+    <h3>What is a good down payment percentage for a car loan?</h3>
+    <p>A minimum of 20–25% is advisable to avoid being "underwater" on the loan (owing more than the car is worth). Given rapid depreciation in Year 1, a 30–40% down payment is the sweet spot.</p>
+    <h3>Should I choose a shorter or longer car loan tenure?</h3>
+    <p>Shorter tenure (3 years) means higher EMI but much lower total interest. Longer tenure (7 years) reduces monthly burden but you'll be paying for a car that's worth very little in the final years. 5 years is the most common and often optimal for most buyers.</p>
+
+    <div class="blog-article__cta">
+      <p>Calculate your car loan EMI:</p>
+      <a href="/india/car-loan-emi-calculator/" class="cta-link">Car Loan EMI Calculator →</a>
+      <a href="/india/loan-prepayment-calculator/" class="cta-link" style="margin-left:var(--space-3)">Loan Prepayment Calculator →</a>
+    </div>
+    
+
+<div class="author-bio-card">
+  <a href="/india/authors/arjun-mehta/" class="author-bio-card__img-link">
+    <picture>
+  <source type="image/avif" srcset="/assets/images/authors/arjun-mehta-80w.avif 80w, /assets/images/authors/arjun-mehta-160w.avif 160w" sizes="80px">
+  <source type="image/webp" srcset="/assets/images/authors/arjun-mehta-80w.webp 80w, /assets/images/authors/arjun-mehta-160w.webp 160w" sizes="80px">
+  <img src="/assets/images/authors/arjun-mehta-80w.png" alt="Arjun Mehta, Chartered Accountant & Tax Consultant at CalcPhi" class="author-bio-card__photo" width="80" height="80" loading="lazy" decoding="async">
+</picture>
+  </a>
+  <div class="author-bio-card__body">
+    <p class="author-bio-card__label">Written by</p>
+    <p class="author-bio-card__name">
+      <a href="/india/authors/arjun-mehta/">Arjun Mehta</a><svg class="verified-badge" aria-label="Verified author" title="Verified" viewBox="0 0 20 20" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#1d9bf0"/><path d="M6 10.5l2.5 2.5L14 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="author-bio-card__creds">CA</span>
+    </p>
+    <p class="author-bio-card__title">Chartered Accountant &amp; Tax Consultant</p>
+    <p class="author-bio-card__bio">Arjun is a Chartered Accountant with 12 years of experience in direct taxation, income tax planning, and compliance for salaried individuals and HNIs. He advises clients on old vs new regime selection, HRA optimisation, and 80C investment planning.</p>
+    <a href="/india/authors/arjun-mehta/" class="author-bio-card__profile-link">View full profile →</a>
+  </div>
+</div>
+
+
+  </div>
+</main>
+
+
+  <footer class="cp-footer">
+  <div class="container">
+    <div class="cp-footer__grid">
+
+      <!-- Col 1: Brand — always shown, content varies by market -->
+      <div class="cp-footer__brand">
+        <a href="/" class="cp-logo" aria-label="CalcPhi">
+          <span class="cp-logo-tile">φ</span>
+          <span class="cp-logo-wm">Calc<em>Phi</em></span>
+        </a>
+        
+        <p class="cp-footer__desc">Financial calculators built for India. No login required.</p>
+        <div class="cp-footer__markets">
+          <a href="/india/" class="cp-footer__mchip cp-footer__mchip--active" data-market-code="IN">🇮🇳 India</a>
+        </div>
+        <a href="/markets/" class="cp-footer__other-markets">View all markets →</a>
+        
+      </div>
+
+      
+      
+
+      <div class="cp-footer__col">
+        <div class="cp-footer__head">SIP &amp; Investments</div>
+        <a href="/india/sip-calculator/">SIP Calculator</a>
+        <a href="/india/step-up-sip-calculator/">Step-Up SIP</a>
+        <a href="/india/lumpsum-calculator/">Lumpsum Calculator</a>
+        <a href="/india/elss-calculator/">ELSS Calculator</a>
+        <a href="/india/cagr-calculator/">CAGR Calculator</a>
+        <a href="/india/#mutual-funds" class="cp-footer__view-all">All 15 investment tools →</a>
+      </div>
+
+      <div class="cp-footer__col">
+        <div class="cp-footer__head">Loans &amp; Tax</div>
+        <a href="/india/emi-calculator/">EMI Calculator</a>
+        <a href="/india/home-loan-emi-calculator/">Home Loan EMI</a>
+        <a href="/india/income-tax-calculator/">Income Tax</a>
+        <a href="/india/hra-calculator/">HRA Calculator</a>
+        <a href="/india/capital-gains-calculator/">Capital Gains Tax</a>
+        <a href="/india/#loans" class="cp-footer__view-all">All 31 loan &amp; tax tools →</a>
+      </div>
+
+      <div class="cp-footer__col">
+        <div class="cp-footer__head">Savings &amp; Retirement</div>
+        <a href="/india/ppf-calculator/">PPF Calculator</a>
+        <a href="/india/fd-calculator/">FD Calculator</a>
+        <a href="/india/nps-calculator/">NPS Calculator</a>
+        <a href="/india/retirement-corpus-calculator/">Retirement Corpus</a>
+        <a href="/india/ssy-calculator/">SSY Calculator</a>
+        <a href="/india/#government" class="cp-footer__view-all">All 35 savings &amp; retirement tools →</a>
+      </div>
+
+      <div class="cp-footer__col">
+        <div class="cp-footer__head">Company</div>
+        <a href="/about/">About</a>
+        <a href="/india/authors/">India Authors</a>
+        <a href="/india/blog/">Blog</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy/">Privacy</a>
+      </div>
+
+      
+
+    </div>
+
+    <div class="cp-footer__divider"></div>
+
+    <div class="cp-footer__bottom">
+      <p class="cp-footer__disclaimer">
+        CalcPhi calculators are for educational and estimation purposes only. Results are not financial advice.
+        
+        For India: mutual fund investments are subject to market risks — consult a SEBI-registered advisor.
+        
+      </p>
+      <p class="cp-footer__copy">&copy; 2026 CalcPhi. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/ui.js" type="module" defer></script>
+
+  <script src="/assets/js/geo.js" defer></script>
+  <script src="/assets/js/search.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.faq-q').forEach(function(q) {
+        q.addEventListener('click', function() {
+          var item = q.closest('.faq-item');
+          var isOpen = item.classList.contains('is-open');
+          item.closest('.faq-list, .faq-section') && item.closest('.faq-list, .faq-section').querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('is-open'); });
+          if (!isOpen) item.classList.add('is-open');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

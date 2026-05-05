@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bg-dk" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#065f46"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <clipPath id="clip-dk">
+      <circle cx="200" cy="200" r="200"/>
+    </clipPath>
+  </defs>
+  <circle cx="200" cy="200" r="200" fill="url(#bg-dk)"/>
+  <circle cx="200" cy="200" r="175" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+  <circle cx="200" cy="200" r="155" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <circle cx="200" cy="155" r="68" fill="rgba(255,255,255,0.18)"/>
+  <ellipse cx="200" cy="355" rx="118" ry="90" fill="rgba(255,255,255,0.18)"/>
+  <text x="200" y="168" text-anchor="middle" dominant-baseline="middle"
+    font-family="system-ui,-apple-system,sans-serif" font-size="62"
+    font-weight="800" fill="white" opacity="0.95" letter-spacing="2">DK</text>
+  <rect x="0" y="318" width="400" height="82" fill="rgba(0,0,0,0.28)" clip-path="url(#clip-dk)"/>
+  <text x="200" y="352" text-anchor="middle"
+    font-family="system-ui,-apple-system,sans-serif" font-size="20"
+    font-weight="700" fill="white" letter-spacing="0.5">Deepa Krishnan</text>
+  <text x="200" y="378" text-anchor="middle"
+    font-family="system-ui,-apple-system,sans-serif" font-size="14"
+    font-weight="500" fill="rgba(255,255,255,0.75)" letter-spacing="1.5">CFP · SEBI-RIA</text>
+</svg>

@@ -1,0 +1,3373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,400;0,500;1,400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,400;0,500;1,400&display=swap"></noscript>
+
+<title>India Financial Calculators 2026 – SIP, EMI, PPF, Tax &amp; More | CalcPhi</title>
+<meta name="description" content="Free financial calculators for India. Calculate SIP returns, EMI, PPF maturity, income tax, FD, NPS, HRA, RD and more. Accurate formulas, 2026 rates.">
+
+<link rel="canonical" href="https://www.calcphi.com/india/">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="India Financial Calculators 2026 – SIP, EMI, PPF, Tax &amp; More">
+<meta property="og:description" content="Free financial calculators for India. Calculate SIP returns, EMI, PPF maturity, income tax, FD, NPS, HRA, RD and more. Accurate formulas, 2026 rates.">
+<meta property="og:url" content="https://www.calcphi.com/india/">
+<meta property="og:image" content="https://www.calcphi.com/assets/images/og/calcphi-default.png">
+<meta property="og:site_name" content="CalcPhi">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="India Financial Calculators 2026 – SIP, EMI, PPF, Tax &amp; More">
+<meta name="twitter:description" content="Free financial calculators for India. Calculate SIP returns, EMI, PPF maturity, income tax, FD, NPS, HRA, RD and more. Accurate formulas, 2026 rates.">
+<meta name="twitter:image" content="https://www.calcphi.com/assets/images/og/calcphi-default.png">
+
+<!-- Hreflang — auto-generated from market + permalink -->
+
+<link rel="alternate" hreflang="en-in"    href="https://www.calcphi.com/india/">
+<link rel="alternate" hreflang="en-au"    href="https://www.calcphi.com/australia/">
+<link rel="alternate" hreflang="x-default" href="https://www.calcphi.com/">
+
+
+
+<!-- Language -->
+<meta name="language" content="en">
+
+<!-- Critical CSS inlined -->
+<style>/* ============================================================
+   CalcPhi — Critical CSS
+   Inlined in <head>. Covers: tokens, reset, header, nav,
+   breadcrumb, main grid, calculator card above the fold.
+   ============================================================ */
+
+:root {
+  /* ── Design tokens ────────────────────────────────────── */
+  --bg:        #fff8f0;
+  --bg-2:      #fbf2e6;
+  --bg-3:      #f5ead7;
+  --surface:   #ffffff;
+  --ink:       #1a1a1a;
+  --ink-2:     #3a3530;
+  --ink-3:     #6b6258;
+  --ink-4:     #a39a8d;
+  --line:      #e8dec9;
+  --line-2:    #d8cbb0;
+  --accent:    #d96e30;
+  --accent-2:  #b8551d;
+  --accent-w:  #fbe8d8;
+  --good:      #2d6a4f;
+  --good-w:    #d8e9df;
+
+  /* ── Compat aliases (used by older components) ────────── */
+  --color-primary:        #1a1a1a;
+  --color-primary-dark:   #3a3530;
+  --color-accent:         #d96e30;
+  --color-accent-dark:    #b8551d;
+  --color-surface:        #ffffff;
+  --color-muted:          #fbf2e6;
+  --color-text:           #1a1a1a;
+  --color-text-secondary: #6b6258;
+  --color-text-light:     #a39a8d;
+  --color-border:         #e8dec9;
+  --color-border-focus:   #d96e30;
+  --color-success:        #2d6a4f;
+  --color-highlight-bg:   #fbe8d8;
+  --color-highlight-text: #b8551d;
+
+  /* ── Typography ───────────────────────────────────────── */
+  --font-ui:   "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-num:  "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-ed:   "Source Serif 4", "Source Serif Pro", Georgia, serif;
+  --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --text-xs:   0.6875rem;
+  --text-sm:   0.8125rem;
+  --text-base: 0.875rem;
+  --text-lg:   1rem;
+  --text-xl:   1.125rem;
+  --text-2xl:  1.375rem;
+  --text-3xl:  1.75rem;
+  --text-4xl:  2.25rem;
+  --leading-tight:  1.2;
+  --leading-snug:   1.375;
+  --leading-normal: 1.6;
+
+  /* ── Radii ────────────────────────────────────────────── */
+  --r-xs: 4px;
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 14px;
+  --r-xl: 20px;
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  /* ── Spacing (4px base) ───────────────────────────────── */
+  --space-1: 0.25rem;  --space-2: 0.5rem;   --space-3: 0.75rem;
+  --space-4: 1rem;     --space-5: 1.25rem;  --space-6: 1.5rem;
+  --space-7: 1.75rem;  --space-8: 2rem;     --space-10: 2.5rem;
+  --space-12: 3rem;    --space-16: 4rem;
+
+  /* ── Shadows ──────────────────────────────────────────── */
+  --shadow-xs: 0 1px 2px rgba(0,0,0,.04);
+  --shadow-sm: 0 1px 3px rgba(40,28,12,.08);
+  --shadow-md: 0 4px 16px rgba(40,28,12,.08);
+
+  /* ── Layout ───────────────────────────────────────────── */
+  --max-width:     1280px;
+  --content-width: 800px;
+  --sidebar-width: 280px;
+  --header-height: 94px;
+}
+
+/* ── Reset ────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--font-ui);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+img, svg { display: block; max-width: 100%; }
+a { color: var(--accent-2); text-decoration: none; }
+a:hover { text-decoration: underline; }
+ul, ol { list-style: none; }
+button { cursor: pointer; font: inherit; border: none; background: none; }
+
+/* ── Skip link ────────────────────────────────────────────── */
+.skip-link {
+  position: absolute; top: -100%; left: var(--space-4);
+  padding: var(--space-2) var(--space-4);
+  background: var(--ink); color: var(--bg);
+  border-radius: var(--r-md); font-size: var(--text-sm); z-index: 9999;
+}
+.skip-link:focus { top: var(--space-2); }
+
+/* ── Container ────────────────────────────────────────────── */
+.container {
+  width: 100%; max-width: var(--max-width);
+  margin: 0 auto; padding: 0 24px;
+}
+
+/* ── Header ───────────────────────────────────────────────── */
+.cp-header-wrap {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--bg);
+}
+.cp-announce {
+  background: var(--ink); color: var(--bg);
+  font-size: 12px; padding: 7px 0;
+  text-align: center; letter-spacing: .01em;
+}
+.cp-announce-sep { opacity: .5; margin: 0 8px; }
+.cp-header {
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+}
+.cp-header__bar {
+  max-width: var(--max-width); margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; height: 64px; gap: 20px;
+}
+
+/* Logo */
+.cp-logo {
+  display: inline-flex; align-items: center; gap: 8px;
+  text-decoration: none; color: inherit; flex-shrink: 0;
+}
+.cp-logo:hover { text-decoration: none; }
+.cp-logo-tile {
+  width: 28px; height: 28px;
+  background: var(--ink); color: var(--bg);
+  border-radius: 6px; display: grid; place-items: center;
+  font-family: var(--font-ed); font-size: 17px;
+  font-style: italic; font-weight: 500; line-height: 1;
+}
+.cp-logo-wm {
+  font-size: 15px; font-weight: 600;
+  letter-spacing: -0.01em; color: var(--ink);
+}
+.cp-logo-wm em { font-style: normal; color: var(--accent); }
+
+/* Primary nav */
+.cp-nav { display: flex; align-items: center; gap: 1px; margin-left: 8px; }
+.cp-nav a {
+  display: inline-flex; align-items: center; gap: 4px;
+  height: 34px; padding: 0 9px; border-radius: 8px;
+  font-size: 13px; font-weight: 500; color: var(--ink-2);
+  text-decoration: none; transition: background .12s, color .12s; white-space: nowrap;
+}
+.cp-nav a:hover { background: var(--bg-2); color: var(--ink); text-decoration: none; }
+.cp-nav a[aria-current] { color: var(--ink); }
+/* Hide About + Contact from nav on mid-size screens where space is tight */
+@media (max-width: 900px) {
+  .cp-nav a[href="/about/"],
+  .cp-nav a[href="/contact/"] { display: none; }
+}
+
+/* Search */
+.cp-search-btn {
+  display: flex; align-items: center; gap: 8px;
+  height: 36px; padding: 0 10px; border-radius: 8px;
+  border: 1px solid var(--line); background: var(--surface);
+  color: var(--ink-3); cursor: text; min-width: 220px;
+  font-family: inherit; font-size: 12.5px; transition: border-color .12s;
+}
+.cp-search-btn:hover { border-color: var(--line-2); }
+.cp-search-spacer { flex: 1; }
+.cp-search-kbd {
+  font-family: var(--font-num); font-size: 10px;
+  padding: 2px 5px; border: 1px solid var(--line);
+  border-radius: 4px; background: var(--bg-2); color: var(--ink-4);
+}
+
+/* Market picker */
+.cp-market { position: relative; }
+.cp-market summary {
+  display: inline-flex; align-items: center; gap: 6px;
+  height: 32px; padding: 0 10px; border-radius: 6px;
+  border: 1px solid var(--line); background: var(--surface);
+  font-size: 12.5px; font-weight: 500; color: var(--ink-2);
+  cursor: pointer; list-style: none; user-select: none;
+  transition: border-color .12s;
+}
+.cp-market summary::-webkit-details-marker { display: none; }
+.cp-market summary:hover { border-color: var(--line-2); }
+.cp-market-dropdown {
+  position: absolute; top: 38px; right: 0; z-index: 200;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--r-lg); padding: 6px;
+  box-shadow: 0 8px 24px rgba(40,28,12,.12); min-width: 200px;
+}
+.cp-market-dropdown a {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 10px; border-radius: 6px; font-size: 13px;
+  color: var(--ink-2); text-decoration: none;
+  transition: background .1s;
+}
+.cp-market-dropdown a:hover { background: var(--bg-2); color: var(--ink); text-decoration: none; }
+.cp-market-item--soon {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 10px; border-radius: 6px; font-size: 13px;
+  color: var(--ink-4, #b0b8c8); cursor: not-allowed; user-select: none;
+}
+
+/* Mobile toggle */
+.cp-mobile-toggle {
+  display: none; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 8px;
+  border: 1px solid var(--line); cursor: pointer;
+}
+.cp-ham { display: flex; flex-direction: column; gap: 5px; }
+.cp-ham span {
+  display: block; width: 18px; height: 2px;
+  background: var(--ink); border-radius: 2px;
+}
+
+/* ── Breadcrumb ───────────────────────────────────────────── */
+.breadcrumb {
+  background: var(--bg-2); border-bottom: 1px solid var(--line);
+  padding: var(--space-2) var(--space-6); font-size: var(--text-sm);
+  color: var(--ink-3);
+}
+.breadcrumb__inner { max-width: var(--max-width); margin: 0 auto; }
+.breadcrumb ol { display: flex; flex-wrap: wrap; gap: var(--space-1); }
+.breadcrumb li { display: flex; align-items: center; gap: var(--space-1); }
+.breadcrumb li + li::before { content: '/'; color: var(--ink-4); }
+.breadcrumb a { color: var(--ink-3); }
+.breadcrumb a:hover { color: var(--ink); }
+.breadcrumb [aria-current="page"] { color: var(--ink); font-weight: 500; }
+
+/* ── Page layout ──────────────────────────────────────────── */
+.page-layout {
+  max-width: var(--max-width); margin: 0 auto;
+  padding: var(--space-8) var(--space-6);
+  display: grid; grid-template-columns: 1fr var(--sidebar-width);
+  gap: var(--space-10); align-items: start;
+}
+.page-content { min-width: 0; }
+.page-sidebar { position: sticky; top: calc(var(--header-height) + var(--space-4)); }
+
+/* ── Article typography ───────────────────────────────────── */
+.page-content h1 {
+  font-family: var(--font-ed); font-size: var(--text-3xl);
+  font-weight: 400; line-height: var(--leading-tight);
+  color: var(--ink); margin-bottom: var(--space-3);
+}
+.page-content h2 {
+  font-size: var(--text-2xl); font-weight: 600;
+  line-height: var(--leading-snug); color: var(--ink);
+  margin: var(--space-10) 0 var(--space-4);
+  padding-top: var(--space-4); border-top: 1px solid var(--line);
+}
+.page-content h2:first-of-type { margin-top: var(--space-8); border-top: none; }
+.page-content h3 {
+  font-size: var(--text-lg); font-weight: 600;
+  color: var(--ink); margin: var(--space-6) 0 var(--space-3);
+}
+.page-content p { margin-bottom: var(--space-4); line-height: var(--leading-normal); }
+.page-content ul, .page-content ol {
+  margin-bottom: var(--space-4); padding-left: var(--space-6);
+}
+.page-content ul { list-style: disc; }
+.page-content ol { list-style: decimal; }
+.page-content li { margin-bottom: var(--space-2); line-height: var(--leading-normal); }
+.page-content strong { font-weight: 600; }
+
+/* ── Page meta ────────────────────────────────────────────── */
+.page-meta {
+  display: flex; flex-wrap: wrap; gap: var(--space-4);
+  font-size: var(--text-sm); color: var(--ink-3);
+  margin-bottom: var(--space-6); padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--line);
+}
+.page-meta a { color: var(--accent-2); }
+
+/* ── Definition block ─────────────────────────────────────── */
+.definition-block {
+  background: var(--bg-2); border-left: 3px solid var(--accent);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+  padding: var(--space-5) var(--space-6); margin: var(--space-6) 0;
+}
+.definition-block h2 {
+  font-size: var(--text-xl); margin: 0 0 var(--space-3) 0;
+  border-top: none; padding-top: 0;
+}
+.definition-block p:last-child { margin-bottom: 0; }
+
+/* ── Calculator widget ────────────────────────────────────── */
+.calculator-widget {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--r-lg); overflow: hidden;
+  margin: var(--space-8) 0; box-shadow: var(--shadow-sm);
+}
+.calculator-widget__header {
+  background: var(--ink); color: var(--bg);
+  padding: var(--space-4) var(--space-6);
+  font-size: var(--text-lg); font-weight: 600;
+}
+.calculator-body { padding: var(--space-6); display: grid; gap: var(--space-6); }
+@media (min-width: 600px) {
+  .calculator-body { grid-template-columns: 1fr 1fr; }
+  .calculator-results { grid-column: 1 / -1; }
+}
+
+/* ── Input groups ─────────────────────────────────────────── */
+.input-group { display: flex; flex-direction: column; gap: var(--space-2); }
+.input-group label { font-size: var(--text-sm); font-weight: 600; color: var(--ink); }
+.input-group input, .input-group select {
+  width: 100%; padding: var(--space-3) var(--space-4);
+  border: 1.5px solid var(--line); border-radius: var(--r-md);
+  font-size: var(--text-base); color: var(--ink); background: var(--surface);
+  transition: border-color .15s, box-shadow .15s;
+  appearance: none; -webkit-appearance: none;
+}
+.input-group input:focus, .input-group select:focus {
+  outline: none; border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(217,110,48,.12);
+}
+.input-hint { font-size: var(--text-xs); color: var(--ink-3); }
+
+/* ── Results ──────────────────────────────────────────────── */
+.calculator-results {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: var(--space-4);
+}
+.result-card {
+  background: var(--bg-2); border: 1px solid var(--line);
+  border-radius: var(--r-md); padding: var(--space-4) var(--space-5); text-align: center;
+}
+.result-card--highlight { background: var(--accent-w); border-color: var(--accent); }
+.result-label {
+  display: block; font-size: var(--text-xs); font-weight: 600;
+  color: var(--ink-3); text-transform: uppercase; letter-spacing: .04em; margin-bottom: var(--space-2);
+}
+.result-value {
+  display: block; font-size: var(--text-2xl); font-weight: 700;
+  color: var(--ink); line-height: 1.2; font-family: var(--font-num);
+}
+.result-card--highlight .result-value { color: var(--accent-2); }
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .page-layout { grid-template-columns: 1fr; padding: var(--space-6) var(--space-4); }
+  .page-sidebar { display: none; }
+  .page-content h1 { font-size: var(--text-2xl); }
+  /* Compact icon-only search button on tablet */
+  .cp-search-btn {
+    min-width: 0; width: 40px; height: 40px;
+    padding: 0; justify-content: center; border-radius: 50%;
+  }
+  .cp-search-btn > span:not(.cp-search-spacer),
+  .cp-search-spacer,
+  .cp-search-kbd { display: none; }
+}
+@media (max-width: 640px) {
+  .cp-nav { display: none; }
+  .cp-mobile-toggle { display: flex; }
+  /* Keep search as compact icon on phones too */
+  .cp-search-btn {
+    display: flex;
+    min-width: 0; width: 36px; height: 36px;
+    padding: 0; justify-content: center; border-radius: 50%;
+    border: 1px solid var(--line);
+  }
+  .cp-search-btn > span, .cp-search-spacer, .cp-search-kbd { display: none; }
+  .cp-header__bar { gap: 8px; }
+  .cp-announce { font-size: 11px; padding: 5px 12px; }
+  .breadcrumb { padding: var(--space-2) var(--space-4); }
+}
+</style>
+
+<!-- Main stylesheet -->
+<link rel="stylesheet" href="/assets/css/main.css?v=10">
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+
+<!-- Per-page schema is injected by the layout into <body> -->
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{"@type":"ListItem","position":1,"name":"Home","item":"https://www.calcphi.com/"},{"@type":"ListItem","position":2,"name":"India"}]
+  }
+  </script>
+  
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+<div class="cp-header-wrap">
+  <!-- Announcement strip -->
+  <div class="cp-announce">
+    <span class="hide-mobile">All calculations run in your browser.</span>
+    No login required.
+    <span class="cp-announce-sep">·</span>
+    Updated for AY 2026-27
+  </div>
+
+  <!-- Main header bar -->
+  <header class="cp-header">
+    <div class="cp-header__bar">
+
+      <!-- Logo -->
+      <a href="/" class="cp-logo" aria-label="CalcPhi — Financial Calculators">
+        <span class="cp-logo-tile">φ</span>
+        <span class="cp-logo-wm">Calc<em>Phi</em></span>
+      </a>
+
+      <!-- Primary nav -->
+      
+      <nav class="cp-nav" aria-label="Primary navigation">
+        <a id="nav-calc-link"
+           href="/india/"
+           aria-current="true">
+          Calculators
+        </a>
+        <a href="/markets/"
+           >
+          Markets
+        </a>
+        <a id="nav-blog-link"
+           href="/india/blog/"
+           >
+          Blog
+        </a>
+        <a id="nav-help-link"
+           href="/india/help/"
+           >
+          Help
+        </a>
+        <a href="/about/"
+           >
+          About
+        </a>
+        <a href="/contact/"
+           >
+          Contact
+        </a>
+      </nav>
+      
+
+      <div style="flex:1"></div>
+
+      <!-- Search -->
+      <button id="cp-search-btn" class="cp-search-btn" aria-label="Search calculators" aria-haspopup="dialog">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>
+        </svg>
+        <span>Search calculators…</span>
+        <span class="cp-search-spacer"></span>
+        <kbd class="cp-search-kbd">⌘K</kbd>
+      </button>
+
+      <!-- Market picker -->
+      <details class="cp-market">
+        <summary aria-label="Choose market">
+          <span class="cp-market-label">🌏 Markets</span>
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </summary>
+        <div class="cp-market-dropdown">
+          <a href="/australia/" data-market-code="AU">🇦🇺 <strong>Australia</strong> · AUD</a>
+          <a href="/india/" data-market-code="IN">🇮🇳 <strong>India</strong> · INR</a>
+          <span class="cp-market-item--soon">🇺🇸 <strong>USA</strong> · USD <span class="cp-soon-badge">Soon</span></span>
+          <span class="cp-market-item--soon">🇨🇦 <strong>Canada</strong> · CAD <span class="cp-soon-badge">Soon</span></span>
+        </div>
+      </details>
+
+      <!-- Mobile toggle -->
+      <button class="cp-mobile-toggle" aria-label="Toggle navigation" id="nav-toggle" aria-expanded="false" aria-controls="cp-mobile-nav">
+        <span class="cp-ham">
+          <span></span><span></span><span></span>
+        </span>
+      </button>
+
+    </div>
+
+    <!-- Mobile nav (hidden by default) -->
+    <nav id="cp-mobile-nav" class="cp-mobile-nav" aria-label="Mobile navigation" hidden>
+      <a id="mob-calc-link" href="/india/">Calculators</a>
+      <a href="/markets/">Markets</a>
+      <a id="mob-blog-link" href="/india/blog/">Blog</a>
+      <a id="mob-help-link" href="/india/help/">Help</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <div class="cp-mobile-nav__markets">
+        <a href="/australia/" data-market-code="AU">🇦🇺 Australia</a>
+        <a href="/india/" data-market-code="IN">🇮🇳 India</a>
+        <span class="cp-mobile-nav__market--soon">🇺🇸 USA <span class="cp-soon-badge">Soon</span></span>
+        <span class="cp-mobile-nav__market--soon">🇨🇦 Canada <span class="cp-soon-badge">Soon</span></span>
+      </div>
+    </nav>
+  </header>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('nav-toggle');
+  var nav = document.getElementById('cp-mobile-nav');
+  if (btn && nav) {
+    btn.addEventListener('click', function() {
+      var open = nav.hasAttribute('hidden');
+      if (open) { nav.removeAttribute('hidden'); btn.setAttribute('aria-expanded', 'true'); }
+      else { nav.setAttribute('hidden', ''); btn.setAttribute('aria-expanded', 'false'); }
+    });
+  }
+
+  // Dynamic nav links — rewrite Calculators, Blog, Help based on detected market
+  (function() {
+    var label = document.querySelector('.cp-market-label');
+    var path = window.location.pathname;
+    var market = null;
+    if (path.startsWith('/australia/')) market = 'AU';
+    else if (path.startsWith('/india/')) market = 'IN';
+    if (market) {
+      try { localStorage.setItem('cp_market', market); } catch(e) {}
+    } else {
+      try { market = localStorage.getItem('cp_market'); } catch(e) {}
+    }
+
+    // Map each nav link to its market-specific URL
+    var navMap = {
+      calc: { AU: '/australia/', IN: '/india/' },
+      blog: { AU: '/australia/blog/', IN: '/india/blog/' },
+      help: { AU: '/australia/help/', IN: '/india/help/' }
+    };
+
+    function setHref(id, url) {
+      var el = document.getElementById(id);
+      if (el && url) el.href = url;
+    }
+
+    if (market) {
+      setHref('nav-calc-link', navMap.calc[market]);
+      setHref('nav-blog-link', navMap.blog[market]);
+      setHref('nav-help-link', navMap.help[market]);
+      setHref('mob-calc-link', navMap.calc[market]);
+      setHref('mob-blog-link', navMap.blog[market]);
+      setHref('mob-help-link', navMap.help[market]);
+    }
+
+    // Update market picker label
+    if (label) {
+      if (market === 'AU') label.textContent = '🇦🇺 Australia';
+      else if (market === 'IN') label.textContent = '🇮🇳 India';
+    }
+
+    // Persist market on dropdown link clicks and immediately update nav links
+    document.querySelectorAll('[data-market-code]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        var code = el.getAttribute('data-market-code');
+        try { localStorage.setItem('cp_market', code); } catch(e) {}
+      });
+    });
+  })();
+})();
+</script>
+
+  
+<div id="geo-banner" class="geo-banner" hidden role="region" aria-label="Market preference notice">
+  <div class="geo-banner__inner">
+    <span class="geo-banner__text" data-geo-text></span>
+    <button class="geo-banner__switch" data-geo-switch type="button"></button>
+    <button class="geo-banner__close" data-geo-close type="button" aria-label="Dismiss">&#x2715;</button>
+  </div>
+</div>
+
+  
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="breadcrumb__inner">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+      
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        
+          <a itemprop="item" href="/">
+            <span itemprop="name">Home</span>
+          </a>
+        
+        <meta itemprop="position" content="1">
+      </li>
+      
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        
+          <span itemprop="name" aria-current="page">India</span>
+        
+        <meta itemprop="position" content="2">
+      </li>
+      
+    </ol>
+  </div>
+</nav>
+
+
+
+  <main id="main-content">
+
+  <div class="hub-hero">
+    <div class="hub-hero__inner">
+      <div class="cp-tag">Financial Calculators</div>
+      <h1>India Financial Calculators</h1>
+      <p>Free, accurate calculators for Indian investors and taxpayers. Updated for 2026.</p>
+    </div>
+  </div>
+
+  <div class="hub-content">
+    
+Browse all India calculators below, organised by category. Each calculator uses current 2026 rates and includes worked examples, formula explanations, and an FAQ.
+
+
+    
+
+    
+
+    
+    <div class="hub-category" id="mutual-funds">
+      <h2>Mutual Funds &amp; Investments</h2>
+      <div class="hub-grid">
+        
+        
+        <a href="/india/sip-calculator/" class="related-card">
+          <h3>SIP Calculator</h3>
+          <p>Monthly SIP returns &amp; maturity</p>
+        </a>
+        
+        
+        
+        <a href="/india/step-up-sip-calculator/" class="related-card">
+          <h3>Step-Up SIP Calculator</h3>
+          <p>Increasing SIP with annual hike</p>
+        </a>
+        
+        
+        
+        <a href="/india/lumpsum-calculator/" class="related-card">
+          <h3>Lumpsum Calculator</h3>
+          <p>One-time investment growth</p>
+        </a>
+        
+        
+        
+        <a href="/india/goal-sip-calculator/" class="related-card">
+          <h3>Goal-Based SIP</h3>
+          <p>SIP needed to reach your goal</p>
+        </a>
+        
+        
+        
+        <a href="/india/sip-vs-lumpsum-calculator/" class="related-card">
+          <h3>SIP vs Lumpsum</h3>
+          <p>Compare SIP and lumpsum returns</p>
+        </a>
+        
+        
+        
+        <a href="/india/sip-delay-cost-calculator/" class="related-card">
+          <h3>Cost of SIP Delay</h3>
+          <p>Wealth lost by delaying SIP</p>
+        </a>
+        
+        
+        
+        <a href="/india/direct-vs-regular-calculator/" class="related-card">
+          <h3>Direct vs Regular MF</h3>
+          <p>Direct plan savings vs regular</p>
+        </a>
+        
+        
+        
+        <a href="/india/expense-ratio-calculator/" class="related-card">
+          <h3>Expense Ratio Impact</h3>
+          <p>True cost of MF expense ratio</p>
+        </a>
+        
+        
+        
+        <a href="/india/elss-calculator/" class="related-card">
+          <h3>ELSS Calculator</h3>
+          <p>ELSS returns + 80C tax savings</p>
+        </a>
+        
+        
+        
+        <a href="/india/mf-returns-calculator/" class="related-card">
+          <h3>MF Returns Calculator</h3>
+          <p>Absolute return &amp; CAGR from NAV</p>
+        </a>
+        
+        
+        
+        <a href="/india/nav-calculator/" class="related-card">
+          <h3>NAV Calculator</h3>
+          <p>Current value of MF units held</p>
+        </a>
+        
+        
+        
+        <a href="/india/cagr-calculator/" class="related-card">
+          <h3>CAGR Calculator</h3>
+          <p>Annualised return on any investment</p>
+        </a>
+        
+        
+        
+        <a href="/india/stp-calculator/" class="related-card">
+          <h3>STP Calculator</h3>
+          <p>Systematic transfer plan returns</p>
+        </a>
+        
+        
+        
+        <a href="/india/inflation-adjusted-returns-calculator/" class="related-card">
+          <h3>Inflation-Adjusted Returns</h3>
+          <p>Real return after inflation</p>
+        </a>
+        
+        
+        
+        <a href="/india/ulip-calculator/" class="related-card">
+          <h3>ULIP Calculator</h3>
+          <p>ULIP vs mutual fund comparison</p>
+        </a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </div>
+    </div>
+    
+    <div class="hub-category" id="tax">
+      <h2>Tax Calculators</h2>
+      <div class="hub-grid">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <a href="/india/income-tax-calculator/" class="related-card">
+          <h3>Income Tax Calculator</h3>
+          <p>FY 2026-27 tax under old &amp; new regime</p>
+        </a>
+        
+        
+        
+        <a href="/india/new-vs-old-regime-calculator/" class="related-card">
+          <h3>New vs Old Tax Regime</h3>
+          <p>Compare both regimes instantly</p>
+        </a>
+        
+        
+        
+        <a href="/india/hra-calculator/" class="related-card">
+          <h3>HRA Calculator</h3>
+          <p>HRA exemption &amp; tax savings</p>
+        </a>
+        
+        
+        
+        <a href="/india/capital-gains-calculator/" class="related-card">
+          <h3>Capital Gains Tax</h3>
+          <p>LTCG &amp; STCG on equity and property</p>
+        </a>
+        
+        
+        
+        <a href="/india/advance-tax-calculator/" class="related-card">
+          <h3>Advance Tax Calculator</h3>
+          <p>Quarterly instalment obligations</p>
+        </a>
+        
+        
+        
+        <a href="/india/section-80c-calculator/" class="related-card">
+          <h3>Section 80C Deductions</h3>
+          <p>PPF, ELSS, LIC 80C savings</p>
+        </a>
+        
+        
+        
+        <a href="/india/section-80d-calculator/" class="related-card">
+          <h3>Section 80D Deductions</h3>
+          <p>Health insurance tax savings</p>
+        </a>
+        
+        
+        
+        <a href="/india/home-loan-tax-calculator/" class="related-card">
+          <h3>Home Loan Tax Benefit</h3>
+          <p>Section 24B + 80C savings</p>
+        </a>
+        
+        
+        
+        <a href="/india/surcharge-calculator/" class="related-card">
+          <h3>Income Tax Surcharge</h3>
+          <p>Surcharge + cess for high income</p>
+        </a>
+        
+        
+        
+        <a href="/india/tds-calculator/" class="related-card">
+          <h3>TDS Calculator</h3>
+          <p>TDS on fees, rent, and contracts</p>
+        </a>
+        
+        
+        
+        <a href="/india/tds-on-fd-calculator/" class="related-card">
+          <h3>TDS on FD Interest</h3>
+          <p>FD interest after TDS deduction</p>
+        </a>
+        
+        
+        
+        <a href="/india/tds-on-salary-calculator/" class="related-card">
+          <h3>TDS on Salary</h3>
+          <p>Monthly TDS and net in-hand</p>
+        </a>
+        
+        
+        
+        <a href="/india/gst-calculator/" class="related-card">
+          <h3>GST Calculator</h3>
+          <p>Add GST to base price instantly</p>
+        </a>
+        
+        
+        
+        <a href="/india/gst-reverse-calculator/" class="related-card">
+          <h3>Reverse GST Calculator</h3>
+          <p>Extract base price from GST-inclusive</p>
+        </a>
+        
+        
+        
+        <a href="/india/professional-tax-calculator/" class="related-card">
+          <h3>Professional Tax</h3>
+          <p>State-wise monthly deduction</p>
+        </a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </div>
+    </div>
+    
+    <div class="hub-category" id="loans">
+      <h2>Loans &amp; Borrowing</h2>
+      <div class="hub-grid">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <a href="/india/emi-calculator/" class="related-card">
+          <h3>EMI Calculator</h3>
+          <p>Loan EMI for any amount &amp; tenure</p>
+        </a>
+        
+        
+        
+        <a href="/india/home-loan-emi-calculator/" class="related-card">
+          <h3>Home Loan EMI</h3>
+          <p>Housing loan monthly instalment</p>
+        </a>
+        
+        
+        
+        <a href="/india/car-loan-emi-calculator/" class="related-card">
+          <h3>Car Loan EMI</h3>
+          <p>Auto loan EMI calculator</p>
+        </a>
+        
+        
+        
+        <a href="/india/personal-loan-emi-calculator/" class="related-card">
+          <h3>Personal Loan EMI</h3>
+          <p>Personal loan repayment</p>
+        </a>
+        
+        
+        
+        <a href="/india/business-loan-emi-calculator/" class="related-card">
+          <h3>Business Loan EMI</h3>
+          <p>SME &amp; MSME loan EMI</p>
+        </a>
+        
+        
+        
+        <a href="/india/education-loan-emi-calculator/" class="related-card">
+          <h3>Education Loan EMI</h3>
+          <p>Student loan repayment</p>
+        </a>
+        
+        
+        
+        <a href="/india/two-wheeler-loan-calculator/" class="related-card">
+          <h3>Two-Wheeler Loan EMI</h3>
+          <p>Bike &amp; scooter loan EMI</p>
+        </a>
+        
+        
+        
+        <a href="/india/gold-loan-calculator/" class="related-card">
+          <h3>Gold Loan EMI</h3>
+          <p>Gold-backed loan instalment</p>
+        </a>
+        
+        
+        
+        <a href="/india/loan-against-property-calculator/" class="related-card">
+          <h3>Loan Against Property</h3>
+          <p>LAP EMI calculator</p>
+        </a>
+        
+        
+        
+        <a href="/india/loan-eligibility-calculator/" class="related-card">
+          <h3>Loan Eligibility</h3>
+          <p>Max loan based on income &amp; FOIR</p>
+        </a>
+        
+        
+        
+        <a href="/india/loan-prepayment-calculator/" class="related-card">
+          <h3>Loan Prepayment</h3>
+          <p>Interest saved by part-payment</p>
+        </a>
+        
+        
+        
+        <a href="/india/balance-transfer-calculator/" class="related-card">
+          <h3>Balance Transfer</h3>
+          <p>Savings from switching lender</p>
+        </a>
+        
+        
+        
+        <a href="/india/mortgage-refinance-calculator/" class="related-card">
+          <h3>Mortgage Refinance</h3>
+          <p>Home loan refinance savings</p>
+        </a>
+        
+        
+        
+        <a href="/india/flat-vs-reducing-calculator/" class="related-card">
+          <h3>Flat vs Reducing Rate</h3>
+          <p>True cost of flat-rate loans</p>
+        </a>
+        
+        
+        
+        <a href="/india/credit-card-emi-calculator/" class="related-card">
+          <h3>Credit Card EMI</h3>
+          <p>Cost of CC EMI conversion</p>
+        </a>
+        
+        
+        
+        <a href="/india/moratorium-calculator/" class="related-card">
+          <h3>Moratorium Interest</h3>
+          <p>Extra cost of payment holiday</p>
+        </a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </div>
+    </div>
+    
+    <div class="hub-category" id="banking">
+      <h2>Banking &amp; Fixed Income</h2>
+      <div class="hub-grid">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <a href="/india/fd-calculator/" class="related-card">
+          <h3>FD Calculator</h3>
+          <p>Fixed deposit maturity &amp; interest</p>
+        </a>
+        
+        
+        
+        <a href="/india/rd-calculator/" class="related-card">
+          <h3>RD Calculator</h3>
+          <p>Recurring deposit maturity value</p>
+        </a>
+        
+        
+        
+        <a href="/india/fd-vs-rd-calculator/" class="related-card">
+          <h3>FD vs RD Comparison</h3>
+          <p>Which earns more — FD or RD?</p>
+        </a>
+        
+        
+        
+        <a href="/india/senior-citizen-fd-calculator/" class="related-card">
+          <h3>Senior Citizen FD</h3>
+          <p>FD with 0.5% extra senior rate</p>
+        </a>
+        
+        
+        
+        <a href="/india/nre-fd-calculator/" class="related-card">
+          <h3>NRE FD Calculator</h3>
+          <p>Tax-free NRI FD returns</p>
+        </a>
+        
+        
+        
+        <a href="/india/tax-saver-fd-calculator/" class="related-card">
+          <h3>Tax Saver FD</h3>
+          <p>5-year FD with 80C deduction</p>
+        </a>
+        
+        
+        
+        <a href="/india/sweep-in-fd-calculator/" class="related-card">
+          <h3>Sweep-In FD</h3>
+          <p>Savings linked to FD returns</p>
+        </a>
+        
+        
+        
+        <a href="/india/flexi-deposit-calculator/" class="related-card">
+          <h3>Flexi Deposit</h3>
+          <p>Variable RD with flexible amounts</p>
+        </a>
+        
+        
+        
+        <a href="/india/bank-rate-comparison-calculator/" class="related-card">
+          <h3>Bank FD Rate Comparison</h3>
+          <p>Compare SBI, HDFC, ICICI rates</p>
+        </a>
+        
+        
+        
+        <a href="/india/savings-account-calculator/" class="related-card">
+          <h3>Savings Account Interest</h3>
+          <p>Monthly interest on savings balance</p>
+        </a>
+        
+        
+        
+        <a href="/india/overdraft-calculator/" class="related-card">
+          <h3>Overdraft Interest</h3>
+          <p>Daily cost of OD facility</p>
+        </a>
+        
+        
+        
+        <a href="/india/compound-interest-calculator/" class="related-card">
+          <h3>Compound Interest</h3>
+          <p>Annual/quarterly compounding growth</p>
+        </a>
+        
+        
+        
+        <a href="/india/simple-interest-calculator/" class="related-card">
+          <h3>Simple Interest</h3>
+          <p>Basic SI calculation</p>
+        </a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </div>
+    </div>
+    
+    <div class="hub-category" id="government">
+      <h2>Government Schemes</h2>
+      <div class="hub-grid">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <a href="/india/ppf-calculator/" class="related-card">
+          <h3>PPF Calculator</h3>
+          <p>15-year PPF maturity at 7.1%</p>
+        </a>
+        
+        
+        
+        <a href="/india/nps-calculator/" class="related-card">
+          <h3>NPS Calculator</h3>
+          <p>Pension corpus &amp; monthly payout</p>
+        </a>
+        
+        
+        
+        <a href="/india/ssy-calculator/" class="related-card">
+          <h3>SSY Calculator</h3>
+          <p>Sukanya Samriddhi for girl child</p>
+        </a>
+        
+        
+        
+        <a href="/india/apy-calculator/" class="related-card">
+          <h3>APY Calculator</h3>
+          <p>Atal Pension Yojana contributions</p>
+        </a>
+        
+        
+        
+        <a href="/india/epf-calculator/" class="related-card">
+          <h3>EPF Calculator</h3>
+          <p>Provident fund corpus at retirement</p>
+        </a>
+        
+        
+        
+        <a href="/india/ppf-epf-nps-compare-calculator/" class="related-card">
+          <h3>PPF vs EPF vs NPS</h3>
+          <p>Side-by-side retirement scheme comparison</p>
+        </a>
+        
+        
+        
+        <a href="/india/kvp-calculator/" class="related-card">
+          <h3>KVP Calculator</h3>
+          <p>Kisan Vikas Patra doubling period</p>
+        </a>
+        
+        
+        
+        <a href="/india/nsc-calculator/" class="related-card">
+          <h3>NSC Calculator</h3>
+          <p>National Savings Certificate 5-year</p>
+        </a>
+        
+        
+        
+        <a href="/india/scss-calculator/" class="related-card">
+          <h3>SCSS Calculator</h3>
+          <p>Senior Citizen Savings Scheme</p>
+        </a>
+        
+        
+        
+        <a href="/india/post-office-mis-calculator/" class="related-card">
+          <h3>Post Office MIS</h3>
+          <p>Monthly income scheme payout</p>
+        </a>
+        
+        
+        
+        <a href="/india/post-office-td-calculator/" class="related-card">
+          <h3>Post Office TD</h3>
+          <p>Post office time deposit</p>
+        </a>
+        
+        
+        
+        <a href="/india/post-office-rd-calculator/" class="related-card">
+          <h3>Post Office RD</h3>
+          <p>Post office recurring deposit</p>
+        </a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </div>
+    </div>
+    
+    <div class="hub-category" id="retirement">
+      <h2>Retirement Planning</h2>
+      <div class="hub-grid">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <a href="/india/retirement-corpus-calculator/" class="related-card">
+          <h3>Retirement Corpus</h3>
+          <p>Total corpus needed to retire</p>
+        </a>
+        
+        
+        
+        <a href="/india/fire-number-calculator/" class="related-card">
+          <h3>FIRE Number</h3>
+          <p>Financial independence target corpus</p>
+        </a>
+        
+        
+        
+        <a href="/india/early-retirement-calculator/" class="related-card">
+          <h3>Early Retirement</h3>
+          <p>Retire before 60 — corpus needed</p>
+        </a>
+        
+        
+        
+        <a href="/india/retirement-timeline-calculator/" class="related-card">
+          <h3>Retirement Timeline</h3>
+          <p>When can you retire?</p>
+        </a>
+        
+        
+        
+        <a href="/india/swp-calculator/" class="related-card">
+          <h3>SWP Calculator</h3>
+          <p>Sustainable monthly withdrawal</p>
+        </a>
+        
+        
+        
+        <a href="/india/swp-retirement-calculator/" class="related-card">
+          <h3>SWP — How Long Corpus Lasts</h3>
+          <p>How many years your corpus lasts</p>
+        </a>
+        
+        
+        
+        <a href="/india/annuity-calculator/" class="related-card">
+          <h3>Annuity Calculator</h3>
+          <p>Monthly pension from annuity</p>
+        </a>
+        
+        
+        
+        <a href="/india/pension-income-calculator/" class="related-card">
+          <h3>Pension Income</h3>
+          <p>Monthly income from corpus</p>
+        </a>
+        
+        
+        
+        <a href="/india/inflation-retirement-calculator/" class="related-card">
+          <h3>Inflation Impact</h3>
+          <p>Purchasing power erosion</p>
+        </a>
+        
+        
+        
+        <a href="/india/ppf-epf-nps-compare-calculator/" class="related-card">
+          <h3>PPF vs EPF vs NPS</h3>
+          <p>Compare retirement schemes</p>
+        </a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </div>
+    </div>
+    
+    <div class="hub-category" id="salary">
+      <h2>Salary &amp; Employment</h2>
+      <div class="hub-grid">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <a href="/india/ctc-to-in-hand-calculator/" class="related-card">
+          <h3>CTC to In-Hand Salary</h3>
+          <p>Net take-home from CTC</p>
+        </a>
+        
+        
+        
+        <a href="/india/salary-hike-calculator/" class="related-card">
+          <h3>Salary Hike Calculator</h3>
+          <p>New CTC &amp; in-hand after increment</p>
+        </a>
+        
+        
+        
+        <a href="/india/gratuity-calculator/" class="related-card">
+          <h3>Gratuity Calculator</h3>
+          <p>Gratuity on resignation/retirement</p>
+        </a>
+        
+        
+        
+        <a href="/india/leave-encashment-calculator/" class="related-card">
+          <h3>Leave Encashment</h3>
+          <p>Earned leave payout &amp; tax</p>
+        </a>
+        
+        
+        
+        <a href="/india/epf-contribution-calculator/" class="related-card">
+          <h3>EPF Contribution Breakup</h3>
+          <p>Employee &amp; employer PF split</p>
+        </a>
+        
+        
+        
+        <a href="/india/eps-pension-calculator/" class="related-card">
+          <h3>EPS Pension</h3>
+          <p>Monthly pension at retirement</p>
+        </a>
+        
+        
+        
+        <a href="/india/overtime-calculator/" class="related-card">
+          <h3>Overtime Pay</h3>
+          <p>OT pay at double rate (Factories Act)</p>
+        </a>
+        
+        
+        
+        <a href="/india/vrs-calculator/" class="related-card">
+          <h3>VRS Calculator</h3>
+          <p>Voluntary retirement package</p>
+        </a>
+        
+        
+        
+        <a href="/india/esop-calculator/" class="related-card">
+          <h3>ESOP Calculator</h3>
+          <p>Stock option tax on exercise &amp; sale</p>
+        </a>
+        
+        
+        
+        <a href="/india/bonus-after-tax-calculator/" class="related-card">
+          <h3>Bonus Tax Calculator</h3>
+          <p>Net bonus after TDS deduction</p>
+        </a>
+        
+        
+        
+        <a href="/india/professional-tax-calc-calculator/" class="related-card">
+          <h3>Professional Tax (Calc)</h3>
+          <p>State-wise PT deduction</p>
+        </a>
+        
+        
+        
+        <a href="/india/bonus-tax-calculator/" class="related-card">
+          <h3>Bonus After Tax</h3>
+          <p>TDS and net bonus received</p>
+        </a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </div>
+    </div>
+    
+    <div class="hub-category" id="real-estate">
+      <h2>Real Estate</h2>
+      <div class="hub-grid">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <a href="/india/rent-vs-buy-calculator/" class="related-card">
+          <h3>Rent vs Buy</h3>
+          <p>Should you rent or buy a home?</p>
+        </a>
+        
+        
+        
+        <a href="/india/home-affordability-calculator/" class="related-card">
+          <h3>Home Affordability</h3>
+          <p>Max property price on your income</p>
+        </a>
+        
+        
+        
+        <a href="/india/stamp-duty-calculator/" class="related-card">
+          <h3>Stamp Duty</h3>
+          <p>State-wise property stamp duty</p>
+        </a>
+        
+        
+        
+        <a href="/india/property-registration-calculator/" class="related-card">
+          <h3>Property Registration Cost</h3>
+          <p>Total registration charges</p>
+        </a>
+        
+        
+        
+        <a href="/india/rental-yield-calculator/" class="related-card">
+          <h3>Rental Yield</h3>
+          <p>Gross &amp; net yield on property</p>
+        </a>
+        
+        
+        
+        <a href="/india/real-estate-roi-calculator/" class="related-card">
+          <h3>Real Estate ROI</h3>
+          <p>Total return on property investment</p>
+        </a>
+        
+        
+        
+        <a href="/india/property-tax-calculator/" class="related-card">
+          <h3>Property Tax</h3>
+          <p>Annual municipal property tax</p>
+        </a>
+        
+        
+        
+        <a href="/india/property-appreciation-calculator/" class="related-card">
+          <h3>Property Appreciation</h3>
+          <p>Future value of property investment</p>
+        </a>
+        
+        
+        
+        <a href="/india/under-construction-calculator/" class="related-card">
+          <h3>Under-Construction EMI</h3>
+          <p>Pre-EMI, GST, and total cost</p>
+        </a>
+        
+        
+        
+        <a href="/india/mortgage-refinance-calculator/" class="related-card">
+          <h3>Mortgage Refinance</h3>
+          <p>Savings from rate reduction</p>
+        </a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </div>
+    </div>
+    
+    <div class="hub-category" id="insurance">
+      <h2>Insurance</h2>
+      <div class="hub-grid">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <a href="/india/term-insurance-calculator/" class="related-card">
+          <h3>Term Insurance Cover</h3>
+          <p>Recommended life cover amount</p>
+        </a>
+        
+        
+        
+        <a href="/india/life-insurance-needs-calculator/" class="related-card">
+          <h3>Life Insurance Needs</h3>
+          <p>HLV-based cover calculation</p>
+        </a>
+        
+        
+        
+        <a href="/india/health-insurance-calculator/" class="related-card">
+          <h3>Health Insurance Cover</h3>
+          <p>Right cover for family size &amp; city</p>
+        </a>
+        
+        
+        
+        <a href="/india/critical-illness-calculator/" class="related-card">
+          <h3>Critical Illness Cover</h3>
+          <p>CI cover for cancer, cardiac events</p>
+        </a>
+        
+        
+        
+        <a href="/india/motor-insurance-idv-calculator/" class="related-card">
+          <h3>Motor Insurance IDV</h3>
+          <p>Car/bike insured declared value</p>
+        </a>
+        
+        
+        
+        <a href="/india/home-loan-insurance-calculator/" class="related-card">
+          <h3>Home Loan Insurance</h3>
+          <p>HLPP cost vs term insurance</p>
+        </a>
+        
+        
+        
+        <a href="/india/child-education-plan-calculator/" class="related-card">
+          <h3>Child Education Plan</h3>
+          <p>Monthly savings for future education</p>
+        </a>
+        
+        
+      </div>
+    </div>
+    
+
+    
+  </div>
+
+</main>
+
+
+  <footer class="cp-footer">
+  <div class="container">
+    <div class="cp-footer__grid">
+
+      <!-- Col 1: Brand — always shown, content varies by market -->
+      <div class="cp-footer__brand">
+        <a href="/" class="cp-logo" aria-label="CalcPhi">
+          <span class="cp-logo-tile">φ</span>
+          <span class="cp-logo-wm">Calc<em>Phi</em></span>
+        </a>
+        
+        <p class="cp-footer__desc">Financial calculators built for India. No login required.</p>
+        <div class="cp-footer__markets">
+          <a href="/india/" class="cp-footer__mchip cp-footer__mchip--active" data-market-code="IN">🇮🇳 India</a>
+        </div>
+        <a href="/markets/" class="cp-footer__other-markets">View all markets →</a>
+        
+      </div>
+
+      
+      
+
+      <div class="cp-footer__col">
+        <div class="cp-footer__head">SIP &amp; Investments</div>
+        <a href="/india/sip-calculator/">SIP Calculator</a>
+        <a href="/india/step-up-sip-calculator/">Step-Up SIP</a>
+        <a href="/india/lumpsum-calculator/">Lumpsum Calculator</a>
+        <a href="/india/elss-calculator/">ELSS Calculator</a>
+        <a href="/india/cagr-calculator/">CAGR Calculator</a>
+        <a href="/india/#mutual-funds" class="cp-footer__view-all">All 15 investment tools →</a>
+      </div>
+
+      <div class="cp-footer__col">
+        <div class="cp-footer__head">Loans &amp; Tax</div>
+        <a href="/india/emi-calculator/">EMI Calculator</a>
+        <a href="/india/home-loan-emi-calculator/">Home Loan EMI</a>
+        <a href="/india/income-tax-calculator/">Income Tax</a>
+        <a href="/india/hra-calculator/">HRA Calculator</a>
+        <a href="/india/capital-gains-calculator/">Capital Gains Tax</a>
+        <a href="/india/#loans" class="cp-footer__view-all">All 31 loan &amp; tax tools →</a>
+      </div>
+
+      <div class="cp-footer__col">
+        <div class="cp-footer__head">Savings &amp; Retirement</div>
+        <a href="/india/ppf-calculator/">PPF Calculator</a>
+        <a href="/india/fd-calculator/">FD Calculator</a>
+        <a href="/india/nps-calculator/">NPS Calculator</a>
+        <a href="/india/retirement-corpus-calculator/">Retirement Corpus</a>
+        <a href="/india/ssy-calculator/">SSY Calculator</a>
+        <a href="/india/#government" class="cp-footer__view-all">All 35 savings &amp; retirement tools →</a>
+      </div>
+
+      <div class="cp-footer__col">
+        <div class="cp-footer__head">Company</div>
+        <a href="/about/">About</a>
+        <a href="/india/authors/">India Authors</a>
+        <a href="/india/blog/">Blog</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy/">Privacy</a>
+      </div>
+
+      
+
+    </div>
+
+    <div class="cp-footer__divider"></div>
+
+    <div class="cp-footer__bottom">
+      <p class="cp-footer__disclaimer">
+        CalcPhi calculators are for educational and estimation purposes only. Results are not financial advice.
+        
+        For India: mutual fund investments are subject to market risks — consult a SEBI-registered advisor.
+        
+      </p>
+      <p class="cp-footer__copy">&copy; 2026 CalcPhi. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/ui.js" type="module" defer></script>
+
+  <script src="/assets/js/geo.js" defer></script>
+  <script src="/assets/js/search.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.faq-q').forEach(function(q) {
+        q.addEventListener('click', function() {
+          var item = q.closest('.faq-item');
+          var isOpen = item.classList.contains('is-open');
+          item.closest('.faq-list, .faq-section') && item.closest('.faq-list, .faq-section').querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('is-open'); });
+          if (!isOpen) item.classList.add('is-open');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
