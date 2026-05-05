@@ -78,6 +78,42 @@ module.exports = function (eleventyConfig) {
     return d.toISOString().split("T")[0];
   });
 
+  // Date filter — "May 2026" format for blog cards
+  eleventyConfig.addFilter("monthYear", function (dateStr) {
+    if (!dateStr) return '';
+    const s = String(dateStr);
+    const parts = s.split('-');
+    if (parts.length < 2) return s;
+    const d = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2] || 1));
+    return d.toLocaleDateString("en-GB", { month: "long", year: "numeric" });
+  });
+
+  // Collections: India blog posts
+  eleventyConfig.addCollection("indiaBlog", function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob("src/blog/*.njk")
+      .filter(p => !p.inputPath.endsWith("/index.njk"))
+      .sort((a, b) => {
+        const da = new Date(a.data.datePublished || "2020-01-01");
+        const db = new Date(b.data.datePublished || "2020-01-01");
+        if (db - da !== 0) return db - da;
+        return a.fileSlug.localeCompare(b.fileSlug);
+      });
+  });
+
+  // Collections: Australia blog posts
+  eleventyConfig.addCollection("auBlog", function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob("src/australia/blog/*.njk")
+      .filter(p => !p.inputPath.endsWith("/index.njk"))
+      .sort((a, b) => {
+        const da = new Date(a.data.datePublished || "2020-01-01");
+        const db = new Date(b.data.datePublished || "2020-01-01");
+        if (db - da !== 0) return db - da;
+        return a.fileSlug.localeCompare(b.fileSlug);
+      });
+  });
+
   // Collections: India calculators
   eleventyConfig.addCollection("indiaCalcs", function (collectionApi) {
     return collectionApi
