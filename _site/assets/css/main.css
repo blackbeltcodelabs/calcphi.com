@@ -635,6 +635,9 @@ a.cp-mcard:hover { color: inherit; }
 .breakdown-details[open] summary::before { transform: rotate(90deg); }
 .breakdown-details .data-table { margin: 0; border: none; border-radius: 0; }
 
+/* ── Blog article image (hidden until images are available) ── */
+.blog-article__image { display: none; }
+
 /* ── FAQ section ──────────────────────────────────────────── */
 .faq-section { margin: var(--space-8) 0; }
 .faq-item {
