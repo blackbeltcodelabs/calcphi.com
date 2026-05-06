@@ -8,6 +8,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.calcphi.com/india/blog/nsc-vs-kvp-post-office/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.calcphi.com/india/blog/old-vs-new-tax-regime/</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -202,12 +208,6 @@
   <url>
     <loc>https://www.calcphi.com/india/blog/personal-loan-true-cost/</loc>
     <lastmod>2026-02-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.calcphi.com/india/blog/nsc-vs-kvp-post-office/</loc>
-    <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
