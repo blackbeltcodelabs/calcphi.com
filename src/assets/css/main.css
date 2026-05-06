@@ -635,6 +635,20 @@ a.cp-mcard:hover { color: inherit; }
 .breakdown-details[open] summary::before { transform: rotate(90deg); }
 .breakdown-details .data-table { margin: 0; border: none; border-radius: 0; }
 
+/* ── Blog article feature image (top of article) ─────────── */
+.blog-article__feature {
+  margin: var(--space-6) 0 var(--space-8);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  line-height: 0;
+}
+.blog-article__feature img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-md);
+}
+
 /* ── Blog article image (hidden until images are available) ── */
 .blog-article__image { display: none; }
 
