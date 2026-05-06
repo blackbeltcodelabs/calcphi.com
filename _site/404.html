@@ -507,7 +507,7 @@ button { cursor: pointer; font: inherit; border: none; background: none; }
       <!-- Market picker -->
       <details class="cp-market">
         <summary aria-label="Choose market">
-          <span class="cp-market-label">🌏 Markets</span>
+          <span class="cp-market-label">🌐 Select Country</span>
           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <polyline points="6 9 12 15 18 9"/>
           </svg>
@@ -561,7 +561,6 @@ button { cursor: pointer; font: inherit; border: none; background: none; }
 
   // Dynamic nav links — rewrite Calculators, Blog, Help based on detected market
   (function() {
-    var label = document.querySelector('.cp-market-label');
     var path = window.location.pathname;
     var market = null;
     if (path.startsWith('/australia/')) market = 'AU';
@@ -591,12 +590,6 @@ button { cursor: pointer; font: inherit; border: none; background: none; }
       setHref('mob-calc-link', navMap.calc[market]);
       setHref('mob-blog-link', navMap.blog[market]);
       setHref('mob-help-link', navMap.help[market]);
-    }
-
-    // Update market picker label
-    if (label) {
-      if (market === 'AU') label.textContent = '🇦🇺 Australia';
-      else if (market === 'IN') label.textContent = '🇮🇳 India';
     }
 
     // Persist market on dropdown link clicks and immediately update nav links
