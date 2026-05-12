@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const Image = require("@11ty/eleventy-img");
+const CleanCSS = require("clean-css");
 
 async function authorImageShortcode(src, alt, widthPx, className, loading) {
   const fullSrc = path.join(__dirname, "src", src);
@@ -45,13 +46,28 @@ module.exports = function (eleventyConfig) {
   // Author image shortcode — generates AVIF + WebP + PNG <picture> element
   eleventyConfig.addAsyncShortcode("authorImage", authorImageShortcode);
 
-  // Inline critical CSS shortcode
+  // Inline critical CSS shortcode (minified)
   eleventyConfig.addShortcode("inlineCss", function (filepath) {
     const fullPath = path.join(__dirname, "src/assets/css", filepath);
     try {
-      return `<style>${fs.readFileSync(fullPath, "utf8")}</style>`;
+      const raw = fs.readFileSync(fullPath, "utf8");
+      const minified = new CleanCSS({ level: 2 }).minify(raw).styles;
+      return `<style>${minified}</style>`;
     } catch (e) {
       return `<!-- CSS not found: ${filepath} -->`;
+    }
+  });
+
+  // Minify main.css (and any other external CSS) after build
+  eleventyConfig.on("eleventy.after", async () => {
+    const cssDir = path.join(__dirname, "_site/assets/css");
+    if (!fs.existsSync(cssDir)) return;
+    const files = fs.readdirSync(cssDir).filter(f => f.endsWith(".css"));
+    for (const file of files) {
+      const filePath = path.join(cssDir, file);
+      const raw = fs.readFileSync(filePath, "utf8");
+      const result = new CleanCSS({ level: 2 }).minify(raw);
+      fs.writeFileSync(filePath, result.styles);
     }
   });
 
