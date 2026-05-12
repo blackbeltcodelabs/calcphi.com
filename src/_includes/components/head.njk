@@ -52,8 +52,9 @@
 <!-- Critical CSS inlined -->
 {% inlineCss "critical.css" %}
 
-<!-- Main stylesheet -->
-<link rel="stylesheet" href="/assets/css/main.css?v=10">
+<!-- Main stylesheet (non-render-blocking) -->
+<link rel="preload" as="style" href="/assets/css/main.css?v=10" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/assets/css/main.css?v=10"></noscript>
 
 <!-- Favicon (inline SVG data URI) -->
 <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">

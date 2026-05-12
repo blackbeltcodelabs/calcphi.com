@@ -12,6 +12,8 @@
     { "source": "/ca/", "destination": "/canada/", "permanent": true },
     { "source": "/au", "destination": "/australia/", "permanent": true },
     { "source": "/au/", "destination": "/australia/", "permanent": true },
+    { "source": "/in/blog/retire-early-india-guide.html", "destination": "/india/blog/retire-early-india-guide/", "permanent": true },
+    { "source": "/in/privacy.html", "destination": "/privacy/", "permanent": true },
     { "source": "/in/:path*", "destination": "/india/:path*", "permanent": true },
     { "source": "/us/:path*", "destination": "/usa/:path*", "permanent": true },
     { "source": "/ca/:path*", "destination": "/canada/:path*", "permanent": true },
