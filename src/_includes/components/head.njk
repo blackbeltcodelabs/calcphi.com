@@ -10,10 +10,9 @@
   gtag('config', 'G-94D5DND9LS');
 </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,400;0,500;1,400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,400;0,500;1,400&display=swap"></noscript>
+<!-- Self-hosted fonts — preload the two most LCP-critical files -->
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/source-serif4-regular-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/geist-latin.woff2" crossorigin>
 
 <title>{{ title }}{% if "CalcPhi" not in title %} | CalcPhi{% endif %}</title>
 <meta name="description" content="{{ description }}">
