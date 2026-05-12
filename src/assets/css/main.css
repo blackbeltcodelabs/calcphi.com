@@ -2480,3 +2480,125 @@ a.cp-mcard:hover { color: inherit; }
   .pg404__btn { width: 100%; justify-content: center; }
   .pg404__actions { flex-direction: column; }
 }
+
+/* ── Homepage: What we cover list ───────────────────────── */
+.hp-why__covers {
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid var(--line);
+}
+.hp-why__covers-h {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-2);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: 18px;
+}
+.hp-why__covers-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 40px;
+}
+.hp-why__covers-list li {
+  font-size: 13.5px;
+  color: var(--ink-2);
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.55;
+}
+.hp-why__covers-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 12px;
+  top: 1px;
+}
+
+/* ── Homepage: From the blog ─────────────────────────────── */
+.hp-blog {
+  padding: 80px 0;
+  border-top: 1px solid var(--line);
+}
+.hp-blog__head {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.hp-blog__h2 {
+  font-family: var(--font-ed);
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 400;
+  color: var(--ink);
+  margin: 10px 0 12px;
+  line-height: 1.15;
+}
+.hp-blog__head > p {
+  max-width: 520px;
+  margin: 0 auto;
+  font-size: 15px;
+  color: var(--ink-3);
+  line-height: 1.6;
+}
+.hp-blog__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.hp-blog__card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow .15s, border-color .15s;
+  display: flex;
+  flex-direction: column;
+}
+.hp-blog__card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--line-2);
+  text-decoration: none;
+}
+.hp-blog__card img {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  display: block;
+}
+.hp-blog__card-body {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.hp-blog__card-tag {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--accent-2);
+}
+.hp-blog__card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.35;
+}
+.hp-blog__card-desc {
+  font-size: 13px;
+  color: var(--ink-3);
+  line-height: 1.55;
+  margin-top: 4px;
+}
+@media (max-width: 900px) {
+  .hp-blog__grid { grid-template-columns: 1fr 1fr; }
+  .hp-why__covers-list { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .hp-blog { padding: 48px 0; }
+  .hp-blog__grid { grid-template-columns: 1fr; gap: 16px; }
+}
