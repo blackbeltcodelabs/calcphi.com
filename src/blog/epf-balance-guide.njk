@@ -3,28 +3,96 @@ layout: layouts/base.njk
 permalink: /india/blog/epf-balance-guide/
 authorId: priya-sharma
 datePublished: "2026-03-12"
-dateModified: "2026-03-12"
-title: "EPF Balance: How to Check, Calculate, and Actually Maximise Your Corpus"
-description: "Most employees ignore their EPF until they resign. But EPF at 8.15% compounded is one of the best guaranteed returns in India. Here's how to track and grow it."
+dateModified: "2026-05-13"
+title: "EPF Balance: How to Check, Calculate, and Maximise Your Corpus | CalcPhi"
+description: "Complete guide to EPF in 2026 — how to check your balance across 5 channels, calculate your corpus, understand the 8.25% interest rate, and maximise returns through VPF and smart strategies."
 breadcrumbs:
   - name: Home
     url: /
+  - name: India
+    url: /india/
   - name: Blog
-    url: /blog/
+    url: /india/blog/
   - name: EPF Balance Guide
 ---
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "EPF Balance: How to Check, Calculate, and Maximise Your Corpus",
-  "description": "Complete guide to EPF — how contributions work, how to check your balance, EPF vs VPF, and common mistakes to avoid.",
-  "url": "https://calcphi.com/blog/epf-balance-guide/",
-  "datePublished": "2026-03-12",
-  "dateModified": "2026-03-12",
-  "author": {"@type": "Person", "name": "Priya Sharma", "url": "https://calcphi.com/about/authors/priya-sharma/"},
-  "publisher": {"@type": "Organization", "name": "CalcPhi", "url": "https://calcphi.com"},
-  "mainEntityOfPage": "https://calcphi.com/blog/epf-balance-guide/"
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "EPF Balance: How to Check, Calculate, and Actually Maximise Your Corpus",
+      "description": "Complete guide to EPF in 2026 — how to check your balance across 5 channels, calculate your corpus, understand the 8.25% interest rate, and maximise returns through VPF and smart strategies.",
+      "url": "https://www.calcphi.com/india/blog/epf-balance-guide/",
+      "datePublished": "2026-03-12",
+      "dateModified": "2026-05-13",
+      "author": { "@type": "Person", "name": "Priya Sharma", "url": "https://www.calcphi.com/india/authors/priya-sharma/" },
+      "publisher": { "@type": "Organization", "name": "CalcPhi", "url": "https://www.calcphi.com" },
+      "mainEntityOfPage": "https://www.calcphi.com/india/blog/epf-balance-guide/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the current EPF interest rate for FY 2024-25?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The EPFO board has proposed 8.25% for FY 2024-25, consistent with the previous year. The official rate is notified by the Ministry of Finance and is credited annually at the end of March."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I check EPF balance without UAN?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Technically yes — via SMS or missed call if your mobile number was registered by your employer. However, for full passbook access and claims, UAN activation is mandatory. Activate at the EPFO Unified Member Portal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does EPF interest compound monthly or annually?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Interest is computed on the monthly running balance but credited annually at the end of the financial year (March). It then compounds year-on-year, making early contributions more valuable than late-year contributions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to my EPF if I am unemployed for more than 2 months?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your EPF balance continues to earn interest. You can choose to withdraw it after 2 months of unemployment, but it is advisable to leave it invested if you plan to rejoin employment, as premature withdrawal resets your compounding clock."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is VPF better than PPF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For salaried employees, VPF offers the same 8.25% interest rate versus PPF's 7.1%, with the same EEE tax status — making VPF superior for those who are eligible. PPF has the advantage of being accessible to non-salaried individuals and having a more flexible 15-year tenure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the maximum EPF pension I can receive?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The EPS pension is calculated as: (Pensionable Salary × Pensionable Service) / 70. The maximum pensionable salary is capped at ₹15,000/month, so the maximum EPS pension works out to approximately ₹7,500/month for 35 years of service."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.calcphi.com/" },
+        { "@type": "ListItem", "position": 2, "name": "India", "item": "https://www.calcphi.com/india/" },
+        { "@type": "ListItem", "position": 3, "name": "Blog", "item": "https://www.calcphi.com/india/blog/" },
+        { "@type": "ListItem", "position": 4, "name": "EPF Balance Guide", "item": "https://www.calcphi.com/india/blog/epf-balance-guide/" }
+      ]
+    }
+  ]
 }
 </script>
 
@@ -35,68 +103,233 @@ breadcrumbs:
     </div>
     <h1>EPF Balance: How to Check, Calculate, and Actually Maximise Your Corpus</h1>
     <div class="article-dateline">
-      <span class="article-dateline__item"><span class="article-dateline__label">Published:</span> 5 November 2026</span>
+      <span class="article-dateline__item">
+        <span class="article-dateline__label">Published:</span> {{ datePublished | dateDisplay }}
+      </span>
       <span class="article-dateline__sep">·</span>
-      <span class="article-dateline__item">{% set author = authors[authorId] %}By <a href="{{ author.url }}">{{ author.name }}</a><svg class="verified-badge" aria-label="Verified author" title="Verified" viewBox="0 0 20 20" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#1d9bf0"/><path d="M6 10.5l2.5 2.5L14 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>, {{ author.credentials }}</span>
+      <span class="article-dateline__item">
+        <span class="article-dateline__label">Last updated:</span> {{ dateModified | dateDisplay }}
+      </span>
+      <span class="article-dateline__sep">·</span>
+      <span class="article-dateline__item">
+        {% set author = authors[authorId] %}
+        By <a href="{{ author.url }}">{{ author.name }}</a><svg class="verified-badge" aria-label="Verified author" title="Verified" viewBox="0 0 20 20" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#1d9bf0"/><path d="M6 10.5l2.5 2.5L14 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>, {{ author.credentials }}
+      </span>
     </div>
 
-    <p class="blog-article__intro">Most salaried Indians treat EPF like a forgotten savings account — they know money goes in, but they've never checked the balance or understood how it works. That's a mistake. At 8.15% guaranteed, tax-free returns, EPF is one of the best fixed-income instruments in the country. Here's everything you need to know to actually use it intelligently.</p>
+    <div class="definition-block">
+      <p>Every month, a slice of your salary quietly flows into an account you rarely think about — your <strong>Employee Provident Fund (EPF)</strong>. Over a working career of 30–35 years, this silent accumulation can become one of the largest financial assets you own. Yet most salaried employees have never checked their EPF balance, let alone understood how the corpus is calculated or how to grow it faster.</p>
+      <p>This guide covers everything you need to know: how to check your EPF balance across every available channel, how to manually calculate it, what the current interest rate means for you, and — most importantly — the practical strategies to maximise your EPF corpus before retirement.</p>
+    </div>
 
-    <h2>How EPF Contributions Work</h2>
-    <p>Every month, 12% of your basic salary goes into EPF from your side. Your employer matches it — but not entirely into EPF. Of the employer's 12%:</p>
-    <ul>
-      <li>8.33% goes to EPS (Employee Pension Scheme) — capped at ₹15,000 basic, so maximum ₹1,250/month</li>
-      <li>3.67% goes to your EPF account (plus the excess of 8.33% if your basic exceeds ₹15,000)</li>
-      <li>0.5% goes to EDLI (Employee Deposit Linked Insurance)</li>
-    </ul>
-    <p>If your basic salary is ₹50,000/month, your monthly EPF contributions look like this:</p>
-    <table class="data-table">
-      <caption>Monthly EPF contribution — ₹50,000 basic salary</caption>
-      <thead><tr><th>Source</th><th>Rate</th><th>Monthly Amount</th></tr></thead>
-      <tbody>
-        <tr><td>Employee contribution</td><td>12% of basic</td><td>₹6,000</td></tr>
-        <tr><td>Employer → EPF</td><td>3.67% + excess over EPS cap</td><td>₹5,583</td></tr>
-        <tr><td>Employer → EPS</td><td>8.33% (capped at ₹1,250)</td><td>₹1,250</td></tr>
-        <tr><td><strong>Total to your EPF</strong></td><td></td><td><strong>₹11,583</strong></td></tr>
-      </tbody>
-    </table>
-
-    <h2>EPF Interest Rate and Tax Treatment</h2>
-    <p>The current EPF interest rate is <strong>8.15% per annum</strong> (FY 2023-24), declared annually by the EPFO board and notified by the government. It has ranged from 8.1% to 8.65% over the past decade.</p>
-    <p>Tax treatment: EPF contributions are tax-free under 80C (up to ₹1.5L), interest is tax-free if contributions stay below ₹2.5 lakh/year per employee. Maturity is completely tax-free after 5 continuous years of service. This makes EPF an EEE instrument — one of the most tax-efficient in India.</p>
+    <h2>What Is EPF and Why Does It Matter?</h2>
+    <p>The <strong>Employee Provident Fund</strong> is a government-mandated retirement savings scheme governed by the <strong>Employees' Provident Fund Organisation (EPFO)</strong>. It is applicable to every establishment with 20 or more employees.</p>
+    <p>Under the EPF scheme, <strong>you (the employee)</strong> contribute <strong>12% of your basic salary + dearness allowance (DA)</strong> every month. Your employer also contributes 12% of your basic + DA, but this is split: 3.67% goes into your EPF account, and 8.33% goes into the <strong>Employees' Pension Scheme (EPS)</strong> — capped at a salary of ₹15,000/month (maximum ₹1,250/month to EPS).</p>
+    <p>Over time, your EPF corpus earns compounding interest declared annually by the EPFO, making it one of the most reliable debt instruments available to salaried Indians. It qualifies for triple tax exemption (EEE status, subject to conditions), is guaranteed by the Government of India, and enforces savings discipline through mandatory monthly deductions.</p>
 
     <h2>How to Check Your EPF Balance</h2>
-    <ol>
-      <li><strong>EPFO portal (epfindia.gov.in):</strong> Log in with UAN and password → Member Passbook → view balance and transaction history</li>
-      <li><strong>SMS:</strong> Send EPFOHO UAN ENG to 7738299899 from your registered mobile number</li>
-      <li><strong>Missed call:</strong> Dial 011-22901406 from your registered mobile — you'll receive an SMS with balance</li>
-      <li><strong>UMANG app:</strong> Available on Android and iOS — full EPF passbook and claims interface</li>
-    </ol>
+    <p>EPFO provides multiple ways to check your EPF balance. Here are all the available methods:</p>
 
-    <h2>The Power of VPF (Voluntary Provident Fund)</h2>
-    <p>VPF is the voluntary extension of EPF. You can contribute above the mandatory 12% — any percentage up to 100% of basic salary — and it earns the same 8.15% interest, tax-free, with the same EEE status.</p>
-    <p>Compare: PPF at 7.1% (publicly available) vs VPF at 8.15% (same tax treatment, but only for salaried employees). VPF is 100–105 basis points better than PPF — and most people don't know it exists.</p>
-    <p>To activate VPF, submit a request to your HR or payroll team. It takes effect from the next month.</p>
+    <h3>Method 1: EPFO Member Portal (Recommended)</h3>
+    <p>The most comprehensive way to check your balance and download your passbook. Visit <strong>passbook.epfindia.gov.in</strong>, log in using your UAN (Universal Account Number) and password, click "View Passbook," and select the relevant Member ID to view your balance and full transaction history. Your UAN must be activated and linked to your mobile number and Aadhaar.</p>
+
+    <h3>Method 2: UMANG App</h3>
+    <p>The Unified Mobile Application for New-age Governance (UMANG) is the official government mobile platform for EPF services. Download the app, log in with your mobile number, navigate to <strong>EPFO → Employee Centric Services → View Passbook</strong>, and enter your UAN and OTP.</p>
+
+    <h3>Method 3: SMS Balance Check</h3>
+    <p>Send an SMS from your <strong>registered mobile number</strong> to <strong>7738299899</strong> with the message: <strong>EPFOHO UAN ENG</strong> (replace ENG with your preferred language code, e.g., HIN for Hindi). You'll receive your last contribution and current EPF balance by SMS. This only works if your UAN is seeded with your mobile number and KYC is complete.</p>
+
+    <h3>Method 4: Missed Call Service</h3>
+    <p>Give a <strong>missed call to 011-22901406</strong> from your registered mobile number. You'll receive an SMS with your EPF balance within minutes — no internet needed. The simplest method for a quick balance check.</p>
+
+    <h3>Method 5: EPFO Member e-Sewa Portal</h3>
+    <p>For full account management including balance, claim status, and KYC updates, log into <strong>unifiedportal-mem.epfindia.gov.in</strong> with your UAN and password, then navigate to View → Passbook.</p>
+
+    <p>If your balance isn't updating, common reasons include the employer not depositing contributions on time (EPFO deadline: 15th of each month), KYC not linked, or a recent job change where UAN isn't linked to the new employer. You can raise a grievance at epfigms.gov.in if your contributions are delayed.</p>
+
+    <h2>Understanding Your EPF Passbook</h2>
+    <p>Your EPF passbook shows a detailed transaction history. Here's what each column means:</p>
+    <table class="data-table">
+      <caption>EPF passbook columns explained</caption>
+      <thead>
+        <tr><th>Column</th><th>What It Means</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Wage Month</td><td>The month for which the contribution was made</td></tr>
+        <tr><td>Employee Share</td><td>Your 12% contribution</td></tr>
+        <tr><td>Employer Share</td><td>Employer's 3.67% EPF contribution</td></tr>
+        <tr><td>Pension Contribution</td><td>8.33% going to EPS (not part of EPF corpus)</td></tr>
+        <tr><td>Employee Interest</td><td>Interest earned on your contributions</td></tr>
+        <tr><td>Employer Interest</td><td>Interest earned on employer's EPF contribution</td></tr>
+        <tr><td>Closing Balance</td><td>Total EPF corpus at end of that transaction</td></tr>
+      </tbody>
+    </table>
+    <p>The EPS (Employees' Pension Scheme) column is separate. That money goes toward a monthly pension after retirement — it is <strong>not</strong> part of your withdrawable EPF corpus.</p>
+
+    <h2>How to Calculate Your EPF Balance</h2>
+    <p>Your EPF balance grows from two sources: contributions and interest.</p>
+    <p><strong>EPF Corpus = (Cumulative Employee Contributions + Cumulative Employer EPF Contributions) + Interest Accrued on Both</strong></p>
+    <p>Here's a worked example for a basic salary of ₹30,000/month:</p>
+    <ul>
+      <li>Employee contribution: 12% × ₹30,000 = <strong>₹3,600/month</strong></li>
+      <li>Employer EPF contribution: 3.67% × ₹30,000 = <strong>₹1,101/month</strong></li>
+      <li>Total monthly deposit to EPF: ₹4,701/month</li>
+      <li>Annual EPF interest rate: 8.25% → monthly rate: 0.6875%</li>
+    </ul>
+    <p>EPFO calculates interest on the <strong>monthly running balance</strong> but credits it only <strong>once a year</strong> at the end of the financial year. In Year 1, annual contributions of ₹56,412 earn approximately ₹2,327 in interest, giving a closing balance of around ₹58,739. This interest compounds every year — over 30 years, even small monthly contributions result in a significant corpus due to the power of compounding.</p>
+
+    <h2>EPF Interest Rate: Current Rate and Historical Trend</h2>
+    <p>The EPF interest rate is declared annually by the Central Board of Trustees of EPFO and notified by the Ministry of Finance. The current rate of <strong>8.25% per annum</strong> makes it one of the highest-yielding, risk-free fixed-income instruments in India.</p>
+    <table class="data-table">
+      <caption>EPF interest rates — recent financial years</caption>
+      <thead>
+        <tr><th>Financial Year</th><th>EPF Interest Rate</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>FY 2023–24</td><td><strong>8.25%</strong></td></tr>
+        <tr><td>FY 2022–23</td><td>8.15%</td></tr>
+        <tr><td>FY 2021–22</td><td>8.10% (lowest in 4 decades)</td></tr>
+        <tr><td>FY 2020–21</td><td>8.50%</td></tr>
+        <tr><td>FY 2019–20</td><td>8.50%</td></tr>
+        <tr><td>FY 2018–19</td><td>8.65%</td></tr>
+      </tbody>
+    </table>
+    <p>EPFO computes interest on the monthly running balance, but credits the total to your account at the end of March each year. Key insight: contributions made early in the financial year earn more interest than those made in March. Ask your HR if salary revisions can be applied from April rather than later months.</p>
+
+    <h2>EPF vs VPF: Should You Contribute More?</h2>
+    <p><strong>VPF — Voluntary Provident Fund</strong> — allows you to voluntarily contribute more than the mandatory 12% of your basic salary to your EPF account. There is no upper cap on how much you can contribute via VPF, and it earns the same 8.25% interest with the same EEE tax status.</p>
+    <table class="data-table">
+      <caption>EPF vs VPF vs PPF vs Debt Mutual Fund — comparison</caption>
+      <thead>
+        <tr><th>Feature</th><th>EPF</th><th>VPF</th><th>PPF</th><th>Debt Mutual Fund</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Who can contribute</td><td>Salaried employees</td><td>Salaried employees</td><td>All</td><td>All</td></tr>
+        <tr><td>Interest Rate</td><td>8.25%</td><td>8.25%</td><td>7.1%</td><td>Market-linked</td></tr>
+        <tr><td>Tax on returns</td><td>EEE*</td><td>EEE*</td><td>EEE</td><td>Taxable</td></tr>
+        <tr><td>Lock-in</td><td>Until retirement</td><td>Until retirement</td><td>15 years</td><td>None</td></tr>
+        <tr><td>Liquidity</td><td>Partial withdrawals</td><td>Partial withdrawals</td><td>Partial after 7 years</td><td>High</td></tr>
+        <tr><td>Risk</td><td>Zero</td><td>Zero</td><td>Zero</td><td>Low–Moderate</td></tr>
+      </tbody>
+    </table>
+    <p>*Subject to annual contribution limits for tax-free interest. For salaried employees in the 30% tax bracket seeking safe, high-return instruments, <strong>VPF is one of the best options available</strong>. To activate VPF, submit a request to your HR or payroll team — it takes effect from the next month.</p>
+
+    <h2>How to Maximise Your EPF Corpus</h2>
+
+    <h3>Strategy 1: Opt for VPF Contributions</h3>
+    <p>VPF at 8.25% tax-free is exceptional. Even increasing your contribution by ₹2,000–₹5,000/month can add tens of lakhs over a 25–30 year career. An extra VPF of ₹3,000/month at 8.25% over 25 years adds approximately <strong>₹29 lakhs</strong> to your retirement corpus.</p>
+
+    <h3>Strategy 2: Never Withdraw EPF Between Jobs</h3>
+    <p>This is the single biggest mistake that erodes EPF wealth. When you change jobs, do not withdraw your EPF balance — <strong>transfer it</strong> to your new employer's EPF account using the online transfer facility on the EPFO portal (Form 13 online). Every withdrawal resets your compounding clock. A ₹3 lakh withdrawal at age 30 means losing <strong>₹26+ lakhs</strong> by retirement (at 8.25% for 30 years).</p>
+
+    <h3>Strategy 3: Link Your UAN Across All Employers</h3>
+    <p>Many employees have multiple Member IDs from different jobs. Linking all of them to a single UAN and consolidating balances ensures all previous contributions earn interest and no dormant accounts stop earning. Log into the EPFO portal → <strong>One Member – One EPF Account</strong> service to merge old accounts.</p>
+
+    <h3>Strategy 4: Keep KYC Updated</h3>
+    <p>Outdated KYC (especially Aadhaar and PAN linkage) can delay employer deposits, block interest crediting, and prevent online withdrawals or transfers. Check KYC status under <strong>Manage → KYC</strong> on the EPFO member portal and ensure all three — Aadhaar, PAN, and bank account — are verified.</p>
+
+    <h3>Strategy 5: Monitor Employer Deposits Monthly</h3>
+    <p>Your employer is required to deposit your EPF contribution by the <strong>15th of the following month</strong>. Verify this on the passbook monthly. Consistently late deposits not only delay your balance updates — they deprive you of months of compounding interest. If you notice missing deposits, escalate via the EPFO Grievance Portal.</p>
+
+    <h3>Strategy 6: Avoid Non-Emergency Withdrawals</h3>
+    <p>EPF allows partial withdrawals for home purchase, medical emergencies, higher education, and marriage. While legitimate, each withdrawal reduces your principal and the compounding that would have grown on it. <strong>Treat EPF as retirement money — not an accessible savings account.</strong> Build a separate emergency fund instead.</p>
+
+    <h3>Strategy 7: Factor In Salary Increments</h3>
+    <p>As your basic salary grows, so do your EPF contributions (12% of a higher base). Resist the temptation to shift to cost-to-company structures that reduce basic salary — common in startups — purely for take-home pay. A higher basic salary directly increases your EPF corpus over a career.</p>
+
+    <h2>Tax Benefits on EPF Contributions</h2>
+    <p>EPF enjoys <strong>triple tax exemption (EEE)</strong> under the Indian Income Tax Act:</p>
+    <table class="data-table">
+      <caption>EPF tax treatment — EEE status explained</caption>
+      <thead>
+        <tr><th>Stage</th><th>Tax Treatment</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Contribution</td><td>Deductible under Section 80C (up to ₹1.5 lakh/year)</td></tr>
+        <tr><td>Interest Earned</td><td>Tax-free (up to ₹2.5 lakh annual employee contribution)</td></tr>
+        <tr><td>Withdrawal</td><td>Tax-free (if employed for 5+ continuous years)</td></tr>
+      </tbody>
+    </table>
+    <p>From FY 2021-22, interest on employee EPF contributions <strong>exceeding ₹2.5 lakh per year</strong> is taxable at your income tax slab rate. For government employees, this limit is ₹5 lakh. If you withdraw before completing 5 continuous years of service, the entire amount (principal + interest) is taxable, with TDS deducted at 10% (or 30% without PAN). VPF contributions also qualify for Section 80C deduction within the ₹1.5 lakh annual cap.</p>
+
+    <h2>EPF Withdrawal Rules You Should Know</h2>
+    <p>You can withdraw your <strong>entire EPF balance</strong> only at retirement (age 58), after 2+ months of unemployment, on permanent migration outside India, or in the event of death (nominee receives the balance).</p>
+    <p>EPFO allows <strong>partial withdrawals</strong> without employer attestation for specific purposes:</p>
+    <table class="data-table">
+      <caption>EPF partial withdrawal rules by purpose</caption>
+      <thead>
+        <tr><th>Purpose</th><th>Minimum Service</th><th>Maximum Amount</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Medical treatment</td><td>None</td><td>6× monthly wages or employee + employer share (lower)</td></tr>
+        <tr><td>Home purchase</td><td>5 years</td><td>24× monthly wages</td></tr>
+        <tr><td>Home construction</td><td>5 years</td><td>36× monthly wages</td></tr>
+        <tr><td>Home loan repayment</td><td>10 years</td><td>36× monthly wages or total PF (lower)</td></tr>
+        <tr><td>Marriage</td><td>7 years</td><td>50% of employee's share</td></tr>
+        <tr><td>Education</td><td>7 years</td><td>50% of employee's share</td></tr>
+      </tbody>
+    </table>
+    <p>To withdraw online: log into the EPFO member portal → Online Services → Claim (Form-31, 19, 10C & 10D) → enter bank details → select claim type → submit. Amounts are typically credited within 15–20 working days. Ensure your Aadhaar is linked to UAN for a fully digital, employer-attestation-free process.</p>
 
     <h2>Common EPF Mistakes to Avoid</h2>
-    <p><strong>Not linking all EPF accounts:</strong> If you've changed jobs and have multiple UANs or old EPF accounts, get them merged. Dormant accounts stop earning interest after 36 months (from EPFO rule change in 2023).</p>
-    <p><strong>Withdrawing EPF before 5 years:</strong> Premature withdrawal (before 5 continuous years) makes the entire EPF amount taxable in the year of withdrawal — plus you lose the compounding. If you're switching jobs, transfer, don't withdraw.</p>
-    <p><strong>Not updating nominees:</strong> Update your EPF nominee on the EPFO portal. In case of death, an unnominated account creates legal complications for your family.</p>
+    <p><strong>Withdrawing EPF every time you change jobs:</strong> The most common and costly mistake. Even a ₹3 lakh withdrawal at 30 costs you ₹26+ lakhs by retirement due to lost compounding. Always transfer, never withdraw.</p>
+    <p><strong>Not activating UAN:</strong> Many first-time employees never activate their UAN. Without activation, you cannot check your balance, transfer accounts, or file claims online. Activate at the EPFO Unified Member Portal.</p>
+    <p><strong>Ignoring dormant accounts:</strong> EPF accounts become inoperative if no contributions are made for 36 months. After September 2023, EPFO brought back interest on inoperative accounts — but consolidating old accounts is still the right move.</p>
+    <p><strong>Not updating nominee details:</strong> If you haven't nominated anyone, your family may face legal hurdles claiming the amount after your death. Update nominees at: EPFO portal → Manage → e-Nomination.</p>
+    <p><strong>Not checking for employer defaults:</strong> Some smaller employers deduct EPF from salaries but don't deposit it with EPFO. Always verify monthly on your passbook and escalate any missing contributions immediately.</p>
 
-    <h2>FAQ</h2>
-    <h3>What is the EPF interest rate for FY 2024-25?</h3>
-    <p>The EPFO Central Board of Trustees declared 8.15% for FY 2024-25 (same as 2023-24), pending government notification. The final credited rate is confirmed annually, usually between March and September.</p>
-    <h3>Can I withdraw EPF without leaving my job?</h3>
-    <p>Yes — partial withdrawals are allowed for specific purposes: medical emergency (up to 6 months' basic+DA), home purchase or construction (up to 90% of balance), education (50% of employee contribution), marriage (50%), and home loan repayment (90%).</p>
-    <h3>Does EPF interest stop if I don't contribute after leaving a job?</h3>
-    <p>From June 2023, EPFO changed the rule: inoperative accounts (no contribution for 36+ months) will stop earning interest. Transfer or withdraw your old EPF promptly when you change jobs.</p>
+    <h2 class="faq-heading">Frequently Asked Questions</h2>
+    <div class="faq-list">
 
-    <div class="blog-article__cta">
-      <p>Calculate your EPF corpus at retirement:</p>
-      <a href="/india/epf-calculator/" class="cta-link">EPF Calculator →</a>
-      <a href="/india/ppf-calculator/" class="cta-link" style="margin-left:var(--space-3)">PPF Calculator →</a>
+      <div class="faq-item">
+        <h3 class="faq-q">What is the current EPF interest rate for FY 2024-25?</h3>
+        <p class="faq-a">The EPFO board has proposed 8.25% for FY 2024-25, consistent with the previous year (FY 2023-24). The official rate is notified by the Ministry of Finance and is credited to member accounts annually at the end of March.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">Can I check EPF balance without UAN?</h3>
+        <p class="faq-a">Technically yes — via SMS (7738299899) or missed call (011-22901406) if your mobile number was registered by your employer. However, for full passbook access, claims, or transfers, UAN activation is mandatory. Activate at the EPFO Unified Member Portal using your Aadhaar and mobile number.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">Does EPF interest compound monthly or annually?</h3>
+        <p class="faq-a">Interest is computed on the monthly running balance but credited annually at the end of the financial year (March). It then compounds year-on-year. This means contributions made in April earn more interest than those made in March — so invest early in the financial year where possible.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">What happens to my EPF if I am unemployed for more than 2 months?</h3>
+        <p class="faq-a">Your EPF balance continues to earn interest. You can choose to withdraw it after 2 months of unemployment, but it is advisable to leave it invested if you plan to rejoin employment. Premature withdrawal is taxable if you haven't completed 5 continuous years of service and permanently resets your compounding.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">Is VPF better than PPF?</h3>
+        <p class="faq-a">For salaried employees, VPF offers 8.25% interest versus PPF's 7.1%, with the same EEE tax status — making VPF superior for those who are eligible. PPF has the advantage of being accessible to non-salaried individuals and having a more predictable 15-year structure. If you are salaried, VPF should be your first choice for additional retirement savings.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">Can NRIs contribute to EPF?</h3>
+        <p class="faq-a">If an NRI is employed by an eligible organisation in India, EPF contributions continue as normal. However, once you permanently migrate, you can withdraw the full balance. NRIs cannot open a new PPF account, but EPF continues under active Indian employment regardless of residential status.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">What is the maximum EPF pension I can receive?</h3>
+        <p class="faq-a">The EPS pension is calculated as: (Pensionable Salary × Pensionable Service) / 70. The maximum pensionable salary is capped at ₹15,000/month, so the maximum EPS pension works out to approximately ₹7,500/month for 35 years of service. Note that EPS pension and EPF corpus are separate — the pension comes from EPS, while the lump sum at retirement comes from your EPF balance.</p>
+      </div>
+
     </div>
 
-    {% include "components/author-bio.njk" %}
+    <div class="definition-block" style="margin-top: 2rem;">
+      <p><strong>Disclaimer:</strong> This article is for informational and educational purposes only. EPF rules, interest rates, and tax provisions are subject to change and are declared periodically by the Ministry of Finance and EPFO. All figures are based on publicly available data as of May 2026. Please consult a qualified financial advisor or visit the official EPFO website (epfindia.gov.in) for the most current information before making financial decisions.</p>
+    </div>
+
+    <div class="author-bio-card" style="display:flex;gap:1rem;align-items:flex-start;background:var(--color-muted);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:1.25rem;margin-top:2rem;">
+      <img src="{{ author.image }}" alt="{{ author.name }}" width="56" height="56" style="border-radius:50%;flex-shrink:0;" loading="lazy">
+      <div>
+        <p style="margin:0 0 .25rem;font-weight:600;font-size:.95rem;">Written &amp; verified by <a href="{{ author.url }}">{{ author.name }}</a></p>
+        <p style="margin:0 0 .4rem;font-size:.82rem;color:var(--color-text-secondary);">{{ author.title }}</p>
+        <p style="margin:0;font-size:.85rem;color:var(--color-text-secondary);">{{ author.shortBio }}</p>
+      </div>
+    </div>
+
   </div>
 </main>
