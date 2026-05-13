@@ -3,91 +3,238 @@ layout: layouts/base.njk
 permalink: /india/blog/cagr-vs-xirr/
 authorId: priya-sharma
 datePublished: "2026-03-15"
-dateModified: "2026-03-15"
-title: "CAGR vs XIRR: Which Return Metric Should You Use for Mutual Funds?"
-description: "Your mutual fund statement shows 18% CAGR. Your SIP's XIRR is 14%. Both are correct — but they're measuring different things."
+dateModified: "2026-05-13"
+title: "CAGR vs XIRR for Mutual Funds: Which to Use? | CalcPhi"
+description: "CAGR and XIRR both measure mutual fund returns — but they're not interchangeable. Learn which metric to use for SIPs, lumpsums, and real-world portfolios."
 breadcrumbs:
   - name: Home
     url: /
+  - name: India
+    url: /india/
   - name: Blog
-    url: /blog/
-  - name: CAGR vs XIRR
+    url: /india/blog/
+  - name: CAGR vs XIRR for Mutual Funds
 ---
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "CAGR vs XIRR: Which Return Metric to Use for Mutual Funds?",
-  "description": "The difference between CAGR and XIRR — when each applies, why they give different numbers, and how to interpret your mutual fund returns correctly.",
-  "url": "https://calcphi.com/blog/cagr-vs-xirr/",
-  "datePublished": "2026-03-15",
-  "dateModified": "2026-03-15",
-  "author": {"@type": "Person", "name": "Priya Sharma", "url": "https://calcphi.com/about/authors/priya-sharma/"},
-  "publisher": {"@type": "Organization", "name": "CalcPhi", "url": "https://calcphi.com"},
-  "mainEntityOfPage": "https://calcphi.com/blog/cagr-vs-xirr/"
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "CAGR vs XIRR: Which Return Metric Should You Use for Mutual Funds?",
+      "description": "CAGR and XIRR both measure mutual fund returns — but they're not interchangeable. Learn which metric to use for SIPs, lumpsums, and real-world portfolios.",
+      "url": "https://www.calcphi.com/india/blog/cagr-vs-xirr/",
+      "datePublished": "2026-03-15",
+      "dateModified": "2026-05-13",
+      "author": { "@type": "Person", "name": "Priya Sharma", "url": "https://www.calcphi.com/india/authors/priya-sharma/" },
+      "publisher": { "@type": "Organization", "name": "CalcPhi", "url": "https://www.calcphi.com" },
+      "mainEntityOfPage": "https://www.calcphi.com/india/blog/cagr-vs-xirr/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is XIRR always higher than CAGR for a SIP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not necessarily. XIRR can be higher or lower than a naive CAGR estimate, depending on the timing of cash flows and the pattern of market returns during the investment period. In rising markets, XIRR often appears lower than the fund's own CAGR because later instalments — which have had less time to grow — form a larger share of your investment. In markets that rose sharply in the early years, XIRR can appear higher."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I calculate XIRR without Excel or a finance app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can calculate XIRR in Google Sheets using the =XIRR(values, dates) function for free. Most mutual fund platforms in India, including MF Central, Zerodha Coin, and Groww, also compute XIRR automatically for your portfolio and display it in the dashboard."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which metric should I use to compare two mutual funds?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use CAGR to compare two funds based on their published historical performance, since both funds report returns based on NAV growth. Use XIRR only to compare your personal experience with each fund, factoring in your actual investment dates and amounts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does my SIP return in the app look different from the fund's stated returns?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The fund's stated return is based on NAV CAGR — how much ₹1 grew to over a specific period. Your app shows XIRR, which reflects how your actual investments grew given the specific dates and amounts you invested. These will almost always differ and both figures are correct for their respective purposes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is XIRR relevant for fixed deposits and PPF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For regular FDs and PPF contributions, most platforms calculate returns using standard compound interest formulas. However, if you have made irregular PPF contributions over the years, XIRR can still give you a useful picture of your personalised annualised return."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a good XIRR for an equity mutual fund SIP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For a large-cap equity fund, a long-term XIRR of 10–13% is generally considered solid, broadly in line with Nifty 50 historical returns. Mid-cap and small-cap funds may deliver 13–18% XIRR over long periods, but with higher volatility. Anything above 18% sustained over 10+ years would be exceptional. Always benchmark against the fund's category average rather than an absolute number."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.calcphi.com/" },
+        { "@type": "ListItem", "position": 2, "name": "India", "item": "https://www.calcphi.com/india/" },
+        { "@type": "ListItem", "position": 3, "name": "Blog", "item": "https://www.calcphi.com/india/blog/" },
+        { "@type": "ListItem", "position": 4, "name": "CAGR vs XIRR for Mutual Funds", "item": "https://www.calcphi.com/india/blog/cagr-vs-xirr/" }
+      ]
+    }
+  ]
 }
 </script>
+
 <main id="main-content">
   <div class="simple-page blog-article">
-    <div class="blog-article__meta"><span class="blog-card__tag">Investing</span></div>
+    <div class="blog-article__meta">
+      <span class="blog-card__tag">Investing</span>
+    </div>
     <h1>CAGR vs XIRR: Which Return Metric Should You Use for Mutual Funds?</h1>
     <div class="article-dateline">
-      <span class="article-dateline__item"><span class="article-dateline__label">Published:</span> 15 March 2026</span>
+      <span class="article-dateline__item">
+        <span class="article-dateline__label">Published:</span> {{ datePublished | dateDisplay }}
+      </span>
       <span class="article-dateline__sep">·</span>
-      <span class="article-dateline__item">{% set author = authors[authorId] %}By <a href="{{ author.url }}">{{ author.name }}</a><svg class="verified-badge" aria-label="Verified author" title="Verified" viewBox="0 0 20 20" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#1d9bf0"/><path d="M6 10.5l2.5 2.5L14 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>, {{ author.credentials }}</span>
+      <span class="article-dateline__item">
+        <span class="article-dateline__label">Last updated:</span> {{ dateModified | dateDisplay }}
+      </span>
+      <span class="article-dateline__sep">·</span>
+      <span class="article-dateline__item">
+        {% set author = authors[authorId] %}
+        By <a href="{{ author.url }}">{{ author.name }}</a><svg class="verified-badge" aria-label="Verified author" title="Verified" viewBox="0 0 20 20" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#1d9bf0"/><path d="M6 10.5l2.5 2.5L14 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>, {{ author.credentials }}
+      </span>
     </div>
-    <p class="blog-article__intro">Your fund statement shows "18% CAGR since inception." Your personal XIRR from the same fund's SIP is 13.5%. Neither number is wrong — they're measuring completely different things. Understanding the difference will stop you from comparing funds unfairly and help you accurately track whether your investment is actually doing what you think it is.</p>
 
-    <h2>CAGR: The Fund's Return, Not Yours</h2>
-    <p>CAGR (Compound Annual Growth Rate) measures the growth rate of ₹1 invested as a lump sum at the fund's inception (or any start date), growing to its current NAV. It's a single-point calculation: (End NAV / Start NAV)^(1/years) - 1.</p>
-    <p>If a fund's NAV grew from ₹10 to ₹55 over 10 years: CAGR = (55/10)^(1/10) - 1 = 18.6%. This is the fund's performance — not what you actually earned if you invested via SIP.</p>
+    <div class="definition-block">
+      <p>You just checked your mutual fund statement and found two different return numbers sitting right next to each other — one labelled CAGR and another labelled XIRR. They are both measuring the same investment over the same period, yet they show different figures. Which one should you trust? More importantly, which one actually tells you how your money performed?</p>
+      <p>This is one of the most common points of confusion for Indian investors, and it matters far more than most people realise. Using the wrong metric to evaluate a fund can make a poor investment look great — or cause you to exit a well-performing fund too early. This article breaks down both metrics in plain language, explains exactly when to use each one, and shows you how to calculate them without a finance degree.</p>
+    </div>
 
-    <h2>XIRR: Your Personal Return</h2>
-    <p>XIRR (Extended Internal Rate of Return) accounts for the exact timing and amount of every cashflow — every SIP instalment, every additional lumpsum, every partial withdrawal. It calculates the discount rate that makes the present value of all inflows equal to all outflows.</p>
-    <p>Why XIRR differs from CAGR on a SIP: Your first SIP instalment earns the fund's full 10-year return. Your last instalment earns just a few months. XIRR averages these, weighted by holding period. It is always lower than the fund's point-to-point CAGR for SIPs in rising markets.</p>
+    <h2>What Is CAGR and How Does It Work?</h2>
+    <p>CAGR stands for Compound Annual Growth Rate. It measures how much an investment has grown on an annualised basis, assuming the growth happened at a perfectly steady rate each year.</p>
+    <p>The formula is straightforward: take the final value of your investment, divide it by the initial amount you put in, raise it to the power of 1 divided by the number of years, and subtract 1. That gives you the annualised growth rate.</p>
+    <p>For example, if you invested ₹1,00,000 in a lumpsum and it grew to ₹2,00,000 in 6 years, the CAGR would be approximately 12.25% per annum. This means that if your investment had grown at exactly 12.25% each year without a single deviation, you would have arrived at the same final amount. You can use <a href="/india/cagr-calculator/">CalcPhi's free CAGR Calculator</a> to calculate the annualised return on any one-time investment instantly — no spreadsheet required.</p>
+    <p>CAGR is particularly useful when you want to compare two lumpsum investments made at the same point in time, or when you want to benchmark how a fund has performed over a fixed period. It is clean, easy to understand, and straightforward to compute.</p>
 
-    <h2>A Concrete Example</h2>
+    <h3>Where CAGR Falls Short</h3>
+    <p>CAGR has one significant blind spot: it assumes a single investment made at one point in time. The moment you start adding or withdrawing money at irregular intervals — which is exactly what most investors do through SIPs, top-ups, or partial redemptions — CAGR stops being an accurate picture of your actual returns.</p>
+    <p>Think about it this way. If you invest ₹10,000 each month through a SIP, every monthly instalment is invested at a different NAV and has been in the market for a different length of time. The first instalment has been working for 10 years while the last instalment has been working for only one month. Calculating a single CAGR across all of this as if it were one lumpsum would be mathematically incorrect and misleading.</p>
+
+    <h2>What Is XIRR and Why Does It Exist?</h2>
+    <p>XIRR stands for Extended Internal Rate of Return. It is designed specifically to handle investments and withdrawals that happen at irregular intervals over time.</p>
+    <p>Where CAGR assumes a single cash flow, XIRR accounts for every single cash flow — every SIP instalment, every additional top-up, every dividend reinvestment, and every partial withdrawal — and calculates the annualised rate of return that ties all of those movements together. It does this by finding the rate at which the net present value of all cash flows equals zero.</p>
+    <p>In practical terms, XIRR answers the question: "If I account for every rupee that went in, on every date it went in, and compare it to the final value today — what is my true annual return?" Most mutual fund apps and CAMS/Karvy statements in India show XIRR as the default return metric for SIP portfolios, and there is a very good reason for that. It is simply the more honest number when multiple transactions are involved.</p>
+
+    <h2>CAGR vs XIRR: The Core Difference</h2>
+    <p>The fundamental difference comes down to cash flow complexity. CAGR is built for a single investment at a single point in time. XIRR is built for real-world investing, where money moves in and out at different dates throughout the investment period.</p>
+    <p>Suppose you started a monthly SIP of ₹5,000 in January 2020. Over five years you made 60 instalments, and in January 2025 your total portfolio value is ₹4,85,000. Your total investment was ₹3,00,000 and your profit was ₹1,85,000.</p>
+    <p>If you used a simple CAGR by plugging in ₹3,00,000 as the starting value and ₹4,85,000 as the ending value over 5 years, you would get a return of approximately 10.1%. But this is misleading, because not all ₹3,00,000 was in the market for 5 years. Most of it was invested much later and had far less time to grow.</p>
+    <p>XIRR corrects for this by treating each ₹5,000 instalment as a separate cash flow with its own date. The result is a noticeably different — and more accurate — annualised return figure that reflects the actual time each rupee spent in the market. To see exactly how your own SIP is performing, try <a href="/india/sip-calculator/">CalcPhi's SIP Calculator</a>. It shows your total invested amount, expected maturity value, and estimated returns in seconds.</p>
+
+    <h2>When Should You Use CAGR?</h2>
+    <p>Use CAGR when you are evaluating a mutual fund's historical performance as reported by the fund house. When a fund says it has delivered 15% returns over 10 years, it is using CAGR based on the fund's NAV movement. This is a fair way to compare two funds because it normalises performance to an annualised rate on a like-for-like basis.</p>
+    <p>Use CAGR when you made a single lumpsum investment and have not added to or withdrawn from it since. In this case, your entire investment entered the market at one point, and CAGR gives you a clean picture of how that money grew. <a href="/india/lumpsum-calculator/">CalcPhi's Lumpsum Calculator</a> uses this principle to project the growth of a one-time investment over any time horizon.</p>
+    <p>Use CAGR when comparing the performance of different asset classes — for instance, equities vs gold vs fixed deposits — over the same historical period. Since you are comparing the growth of a notional single investment in each asset, CAGR is the appropriate tool.</p>
+
+    <h2>When Should You Use XIRR?</h2>
+    <p>Use XIRR whenever your investment involves multiple cash flows at different points in time.</p>
+    <p>If you invest through a monthly SIP, XIRR is the only metric that accurately measures your personal rate of return. Every instalment entered the market on a different date and has been compounding for a different duration. XIRR accounts for all of this.</p>
+    <p>If you have made ad hoc top-ups to your mutual fund over the years — say, an extra ₹50,000 during a market dip in October 2022 and another ₹30,000 in March 2023 — CAGR cannot account for these. XIRR can.</p>
+    <p>If you have made partial redemptions, XIRR can incorporate those outflows as well, giving you a true picture of what your money earned net of withdrawals.</p>
+    <p>For anyone doing a Step-Up SIP — where you increase your SIP amount by a fixed percentage each year — XIRR is essential because each year's instalments are at different amounts. <a href="/india/step-up-sip-calculator/">CalcPhi's Step-Up SIP Calculator</a> helps you visualise the compounding power of annual SIP increases, and your actual return on such a plan would only be accurately captured by XIRR.</p>
+
+    <h2>A Practical Example: Why the Numbers Diverge</h2>
+    <p>Anjali started a SIP of ₹10,000 per month in January 2021. She increased it to ₹15,000 per month in January 2023. In December 2024, her portfolio was worth ₹6,20,000. Her total investment over these four years was approximately ₹4,80,000.</p>
+    <p>If she naively calculated CAGR using ₹4,80,000 as the base and ₹6,20,000 as the end value over 4 years, she would get a CAGR of around 6.6%. This looks unimpressive and might make her question whether her fund is underperforming.</p>
+    <p>But XIRR tells a different story. The early instalments — the ₹10,000 she put in from January 2021 — have been invested for nearly 4 years and have had significantly more time to compound. When XIRR accounts for the timing of every single cash flow, the actual annualised return might be closer to 11–12%, which is a healthy outcome for an equity fund.</p>
+    <p>This is precisely why SEBI and most mutual fund platforms in India default to XIRR for SIP performance reporting. CAGR would systematically understate or misstate returns for periodic investors. Want to see how your own lumpsum investments are growing? Head over to <a href="/india/mf-returns-calculator/">CalcPhi's MF Returns Calculator</a> to calculate the absolute return and CAGR from your NAV data.</p>
+
+    <h2>How Are CAGR and XIRR Calculated?</h2>
+    <p>You do not need to calculate either of these manually. But understanding the mechanics helps you interpret them better.</p>
+    <p>CAGR uses a simple formula: [(Final Value / Initial Value) ^ (1/Number of Years)] − 1. It requires only three inputs and gives one clean annualised number.</p>
+    <p>XIRR, on the other hand, is an iterative calculation. It uses each cash flow and its corresponding date to find the discount rate at which all cash flows — positive and negative — sum to zero in present value terms. This is why spreadsheet tools like Microsoft Excel and Google Sheets have a dedicated XIRR function that requires a column of amounts and a corresponding column of dates.</p>
+    <p>Most mutual fund platforms in India compute XIRR automatically in the background. If you are pulling data from CAMS or Karvy, the consolidated account statement will typically show XIRR as the overall portfolio return.</p>
+
+    <h2>Common Mistakes Investors Make With These Metrics</h2>
+    <p>One of the most frequent mistakes is comparing a fund's advertised CAGR (which reflects the fund's NAV growth) with your personal portfolio return, which is based on actual cash flows. These are two completely different things. A fund can have a 15% CAGR over 10 years, but your personal XIRR on the same fund could be lower if you invested heavily right before a correction, or higher if you happened to time some purchases well.</p>
+    <p>Another mistake is using CAGR to evaluate SIP performance in isolation. Many investors look at a simple absolute return — "I put in ₹6 lakhs and I have ₹8 lakhs, so I made 33%" — without annualising it, which makes short-duration investments look worse and long-duration investments look better than they are. Always annualise.</p>
+    <p>A third mistake is ignoring the impact of withdrawals on overall return calculations. If you redeemed a portion of your portfolio midway, that outflow must be included in the XIRR calculation. Leaving it out inflates your apparent return figure.</p>
+
+    <h2>CAGR vs XIRR: Quick Reference Summary</h2>
     <table class="data-table">
-      <caption>₹10,000/month SIP for 5 years — CAGR vs XIRR illustration</caption>
-      <thead><tr><th>Metric</th><th>What It Measures</th><th>Example Value</th></tr></thead>
+      <caption>When to use CAGR vs XIRR — quick reference</caption>
+      <thead>
+        <tr><th>Situation</th><th>Use</th><th>Why</th></tr>
+      </thead>
       <tbody>
-        <tr><td>Fund CAGR (5-year)</td><td>₹1 lump sum invested 5 years ago</td><td>18%</td></tr>
-        <tr><td>SIP XIRR (same fund, same period)</td><td>₹10K/month over 5 years</td><td>14.5%</td></tr>
-        <tr><td>Total invested</td><td>₹10K × 60 months</td><td>₹6,00,000</td></tr>
-        <tr><td>Current value</td><td>Calculated at 14.5% XIRR</td><td>₹8,91,000</td></tr>
+        <tr><td>Lumpsum investment, no subsequent transactions</td><td>CAGR</td><td>Single cash flow — CAGR is accurate and simple</td></tr>
+        <tr><td>Monthly SIP with any number of instalments</td><td>XIRR</td><td>Each instalment has its own investment date</td></tr>
+        <tr><td>Comparing two funds' published performance</td><td>CAGR</td><td>NAV-based, like-for-like comparison</td></tr>
+        <tr><td>Portfolio with top-ups or partial redemptions</td><td>XIRR</td><td>Only metric that handles irregular cash flows correctly</td></tr>
+        <tr><td>Step-Up SIP with increasing annual amounts</td><td>XIRR</td><td>Different amounts invested at different times</td></tr>
+        <tr><td>Benchmarking your return vs FD or PPF</td><td>XIRR vs compound rate</td><td>XIRR is your actual earned return — apples to apples</td></tr>
       </tbody>
     </table>
-    <p>The fund returned 18% — but <em>your money</em> returned 14.5% because most of your instalments were invested for far less than 5 years.</p>
 
-    <h2>When to Use Which Metric</h2>
-    <table class="data-table">
-      <caption>CAGR vs XIRR — correct use cases</caption>
-      <thead><tr><th>Situation</th><th>Use</th><th>Why</th></tr></thead>
-      <tbody>
-        <tr><td>Comparing two funds' performance</td><td>CAGR</td><td>Apples-to-apples on fund quality, regardless of when you invested</td></tr>
-        <tr><td>Measuring your personal portfolio return</td><td>XIRR</td><td>Accounts for actual timing of your cashflows</td></tr>
-        <tr><td>Deciding if a fund manager is skilled</td><td>CAGR vs benchmark</td><td>Fund CAGR vs Nifty/category CAGR over same period</td></tr>
-        <tr><td>Comparing your SIP vs FD alternative</td><td>XIRR vs FD rate</td><td>XIRR is what you actually earned; compare to FD's compound rate</td></tr>
-        <tr><td>Checking if your goal is on track</td><td>XIRR</td><td>Your actual return, not the fund's return</td></tr>
-      </tbody>
-    </table>
+    <h2 class="faq-heading">Frequently Asked Questions</h2>
+    <div class="faq-list">
 
-    <h2>How to Calculate XIRR for Your Portfolio</h2>
-    <p>In Excel or Google Sheets, use the XIRR function: =XIRR(cashflows, dates). List every SIP debit as a negative number and the current portfolio value as a positive number on today's date. The function returns your annualised personal return. Most investment platforms (Kuvera, Groww, Zerodha) show XIRR directly on your portfolio dashboard.</p>
+      <div class="faq-item">
+        <h3 class="faq-q">Is XIRR always higher than CAGR for a SIP?</h3>
+        <p class="faq-a">Not necessarily. XIRR can be higher or lower than a naive CAGR estimate, depending on the timing of cash flows and the pattern of market returns during the investment period. In rising markets, XIRR often appears lower than the fund's own CAGR because later instalments — which have had less time to grow — form a larger share of your investment. In markets that rose sharply in the early years, XIRR can appear higher.</p>
+      </div>
 
-    <h2>FAQ</h2>
-    <h3>Is a 14% XIRR good for an equity SIP?</h3>
-    <p>Yes — excellent. For a SIP in a diversified equity fund over 5–10 years, XIRR of 12–16% is the realistic range in healthy markets. Below 10% suggests either poor fund selection, bad market timing (short horizon), or both.</p>
-    <h3>Why does my fund app show CAGR but my financial advisor uses XIRR?</h3>
-    <p>Fund apps display CAGR to showcase fund performance (always looks better than XIRR for SIPs in rising markets). Advisors use XIRR because it reflects what you actually earned. Both are correct — use XIRR for personal decisions.</p>
-    <h3>Can XIRR be negative?</h3>
-    <p>Yes — if you're redeeming after a market crash and most of your SIP instalments are below current NAV. A negative XIRR means you got back less than you invested in real compound terms.</p>
+      <div class="faq-item">
+        <h3 class="faq-q">Can I calculate XIRR without Excel or a finance app?</h3>
+        <p class="faq-a">Yes. You can calculate XIRR in Google Sheets using the =XIRR(values, dates) function for free. Most mutual fund platforms in India, including MF Central, Zerodha Coin, and Groww, also compute XIRR automatically for your portfolio and display it in the dashboard.</p>
+      </div>
 
-    <div class="blog-article__cta">
-      <p>Calculate your SIP returns:</p>
-      <a href="/india/sip-calculator/" class="cta-link">SIP Calculator →</a>
-      <a href="/india/cagr-calculator/" class="cta-link" style="margin-left:var(--space-3)">CAGR Calculator →</a>
+      <div class="faq-item">
+        <h3 class="faq-q">Which metric should I use to compare two mutual funds?</h3>
+        <p class="faq-a">Use CAGR to compare two funds based on their published historical performance, since both funds report returns based on NAV growth. Use XIRR only to compare your personal experience with each fund, factoring in your actual investment dates and amounts.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">Why does my SIP return in the app look different from the fund's stated returns?</h3>
+        <p class="faq-a">The fund's stated return is based on NAV CAGR — how much ₹1 grew to over a specific period. Your app shows XIRR, which reflects how your actual investments grew given the specific dates and amounts you invested. These will almost always differ and both figures are correct for their respective purposes.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">Is XIRR relevant for fixed deposits and PPF?</h3>
+        <p class="faq-a">For regular FDs and PPF contributions, most platforms calculate returns using standard compound interest formulas. However, if you have made irregular PPF contributions over the years, XIRR can still give you a useful picture of your personalised annualised return. <a href="/india/ppf-calculator/">CalcPhi's PPF Calculator</a> models PPF growth using standard compounding rules.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">What is a good XIRR for an equity mutual fund SIP?</h3>
+        <p class="faq-a">For a large-cap equity fund, a long-term XIRR of 10–13% is generally considered solid, broadly in line with Nifty 50 historical returns. Mid-cap and small-cap funds may deliver 13–18% XIRR over long periods, but with higher volatility. Anything above 18% sustained over 10+ years would be exceptional. Always benchmark against the fund's category average rather than an absolute number.</p>
+      </div>
+
     </div>
-    {% include "components/author-bio.njk" %}
+
+    <div class="definition-block" style="margin-top: 2rem;">
+      <p><strong>Disclaimer:</strong> The information in this article is for educational and estimation purposes only. All financial figures, examples, and return benchmarks are illustrative and do not constitute investment advice or a guarantee of returns. Mutual fund investments are subject to market risk. Please read all scheme-related documents carefully and consult a SEBI-registered financial advisor before making any investment decisions.</p>
+    </div>
+
+    <div class="author-bio-card" style="display:flex;gap:1rem;align-items:flex-start;background:var(--color-muted);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:1.25rem;margin-top:2rem;">
+      <img src="{{ author.image }}" alt="{{ author.name }}" width="56" height="56" style="border-radius:50%;flex-shrink:0;" loading="lazy">
+      <div>
+        <p style="margin:0 0 .25rem;font-weight:600;font-size:.95rem;">Written &amp; verified by <a href="{{ author.url }}">{{ author.name }}</a></p>
+        <p style="margin:0 0 .4rem;font-size:.82rem;color:var(--color-text-secondary);">{{ author.title }}</p>
+        <p style="margin:0;font-size:.85rem;color:var(--color-text-secondary);">{{ author.shortBio }}</p>
+      </div>
+    </div>
+
   </div>
 </main>
