@@ -28,6 +28,8 @@
 
     { "source": "/blog/term-insurance-guide-india.html", "destination": "/india/blog/term-insurance-india-guide/", "permanent": true },
     { "source": "/blog/term-insurance-guide-india", "destination": "/india/blog/term-insurance-india-guide/", "permanent": true },
+    { "source": "/india/blog/term-insurance-guide-india/", "destination": "/india/blog/term-insurance-india-guide/", "permanent": true },
+    { "source": "/india/blog/term-insurance-guide-india", "destination": "/india/blog/term-insurance-india-guide/", "permanent": true },
     { "source": "/india/blog/:slug.html", "destination": "/india/blog/:slug/", "permanent": true },
     { "source": "/india/blog/financial-planning-30s-india.html", "destination": "/india/blog/financial-planning-30s-india/", "permanent": true },
     { "source": "/blog/financial-planning-30s-india.html", "destination": "/india/blog/financial-planning-30s-india/", "permanent": true },
