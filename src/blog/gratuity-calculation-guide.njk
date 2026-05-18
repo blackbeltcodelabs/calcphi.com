@@ -3,28 +3,78 @@ layout: layouts/base.njk
 permalink: /india/blog/gratuity-calculation-guide/
 authorId: arjun-mehta
 datePublished: "2026-01-27"
-dateModified: "2026-01-27"
-title: "Gratuity Calculation in India 2026: How Much Are You Owed and When?"
-description: "Gratuity is a statutory right after 5 years of service. Here's the exact formula, what counts as 'continuous service,' tax treatment, and how to claim it."
+dateModified: "2026-05-15"
+title: "Gratuity Calculation India 2026: Formula, 240-Day Rule & Tax | CalcPhi"
+description: "Learn how gratuity is calculated in India 2026 — formula, the 4-year 240-day rule, tax exemption limits, and how to claim it. With worked examples."
 breadcrumbs:
   - name: Home
     url: /
+  - name: India
+    url: /india/
   - name: Blog
-    url: /blog/
+    url: /india/blog/
   - name: Gratuity Calculation Guide
 ---
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Gratuity Calculation India 2026: Complete Guide",
-  "description": "How gratuity is calculated, who is eligible, what counts as continuous service, and how it's taxed in India.",
-  "url": "https://calcphi.com/blog/gratuity-calculation-guide/",
-  "datePublished": "2026-01-27",
-  "dateModified": "2026-01-27",
-  "author": {"@type": "Person", "name": "Arjun Mehta", "url": "https://calcphi.com/about/authors/arjun-mehta/"},
-  "publisher": {"@type": "Organization", "name": "CalcPhi", "url": "https://calcphi.com"},
-  "mainEntityOfPage": "https://calcphi.com/blog/gratuity-calculation-guide/"
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Gratuity Calculation in India 2026: How Much Are You Owed and When?",
+      "description": "Learn how gratuity is calculated in India 2026 — formula, the 4-year 240-day rule, tax exemption limits, and how to claim it. With worked examples.",
+      "url": "https://calcphi.com/india/blog/gratuity-calculation-guide/",
+      "datePublished": "2026-01-27",
+      "dateModified": "2026-05-15",
+      "author": {"@type": "Person", "name": "Arjun Mehta", "url": "https://calcphi.com/india/authors/arjun-mehta/"},
+      "publisher": {"@type": "Organization", "name": "CalcPhi", "url": "https://calcphi.com"},
+      "mainEntityOfPage": "https://calcphi.com/india/blog/gratuity-calculation-guide/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does the 5-year rule apply to employees who were transferred between group companies?",
+          "acceptedAnswer": {"@type": "Answer", "text": "It depends. If the transfer was between entities under the same legal employer, continuous service is generally counted from the original date of joining. If the transfer involved a change in legal employer with a fresh appointment letter, the clock typically resets. Check your appointment and transfer documentation carefully."}
+        },
+        {
+          "@type": "Question",
+          "name": "Is gratuity compulsory even if it is not mentioned in my offer letter?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes. If your employer is covered under the Payment of Gratuity Act, gratuity is a statutory right — the offer letter does not need to mention it. The law overrides any contractual silence on the matter."}
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to my gratuity if my employer goes bankrupt?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Gratuity is treated as a preferential debt under Indian insolvency law, meaning employee dues including gratuity are paid before most other creditors during liquidation. However, recovery can be slow in practice. Many large employers fund gratuity through a Group Gratuity Scheme with an insurer like LIC, which provides some protection."}
+        },
+        {
+          "@type": "Question",
+          "name": "Can my employer deduct from my gratuity for damages or misconduct?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes, but only in limited circumstances. The Payment of Gratuity Act allows forfeiture of gratuity (fully or partially) if an employee is dismissed for moral turpitude, riotous conduct, or if the employee caused damage to the employer's property. A simple poor performance dismissal does not qualify for forfeiture. The employer must prove the specific misconduct."}
+        },
+        {
+          "@type": "Question",
+          "name": "Is gratuity calculated on last drawn salary or average salary?",
+          "acceptedAnswer": {"@type": "Answer", "text": "The formula uses last drawn salary — specifically the basic salary and DA as of the final working month. It does not use an average across the tenure, which means a recent salary hike before you leave can meaningfully increase your gratuity."}
+        },
+        {
+          "@type": "Question",
+          "name": "Is gratuity compulsory for companies with fewer than 10 employees?",
+          "acceptedAnswer": {"@type": "Answer", "text": "The Payment of Gratuity Act applies only to establishments with 10 or more employees. However, once an organisation crosses the 10-employee threshold, the Act applies permanently — even if headcount later falls below 10. Employers with fewer than 10 employees can pay gratuity voluntarily, and many do."}
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcphi.com/"},
+        {"@type": "ListItem", "position": 2, "name": "India", "item": "https://calcphi.com/india/"},
+        {"@type": "ListItem", "position": 3, "name": "Blog", "item": "https://calcphi.com/india/blog/"},
+        {"@type": "ListItem", "position": 4, "name": "Gratuity Calculation Guide", "item": "https://calcphi.com/india/blog/gratuity-calculation-guide/"}
+      ]
+    }
+  ]
 }
 </script>
 <main id="main-content">
@@ -32,68 +82,121 @@ breadcrumbs:
     <div class="blog-article__meta"><span class="blog-card__tag">Salary</span></div>
     <h1>Gratuity Calculation in India 2026: How Much Are You Owed and When?</h1>
     <div class="article-dateline">
-      <span class="article-dateline__item"><span class="article-dateline__label">Published:</span> 15 September 2026</span>
+      <span class="article-dateline__item"><span class="article-dateline__label">Published:</span> {{ datePublished | dateDisplay }}</span>
+      <span class="article-dateline__sep">·</span>
+      <span class="article-dateline__item"><span class="article-dateline__label">Updated:</span> {{ dateModified | dateDisplay }}</span>
       <span class="article-dateline__sep">·</span>
       <span class="article-dateline__item">{% set author = authors[authorId] %}By <a href="{{ author.url }}">{{ author.name }}</a><svg class="verified-badge" aria-label="Verified author" title="Verified" viewBox="0 0 20 20" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#1d9bf0"/><path d="M6 10.5l2.5 2.5L14 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>, {{ author.credentials }}</span>
     </div>
-    <p class="blog-article__intro">Most employees vaguely know that "you get gratuity after 5 years." But they rarely calculate what that actually means in rupees — or know that the 5-year rule has an important exception. If you've worked 4 years and 240 days, you may already qualify. Here's the complete picture.</p>
 
-    <h2>The Gratuity Formula</h2>
-    <p>Under the Payment of Gratuity Act, 1972, the formula is:</p>
-    <p style="background:var(--color-muted);padding:var(--space-3);border-radius:var(--radius-md);font-family:monospace"><strong>Gratuity = (Last drawn basic salary + DA) × 15/26 × Number of completed years of service</strong></p>
-    <p>Where 15 represents 15 days' wages, and 26 represents working days in a month (total days minus 4 Sundays).</p>
+    <div class="definition-block">
+      <p>You've spent years building your career at one company. You resign, retire, or move on — and suddenly someone mentions "gratuity." Most employees nod along without knowing exactly what that means in rupees, whether they truly qualify, or how the number gets calculated. This guide answers all of that, with real worked examples, the tax rules that apply for AY 2026-27, and the one exception to the 5-year rule that could make you eligible right now even if you think you aren't.</p>
+    </div>
+
+    <h2>What Is Gratuity and Why Does It Exist?</h2>
+    <p>Gratuity is a statutory payment made by an employer to an employee as a reward for long and continuous service. Think of it as a loyalty bonus mandated by law — not a gift your employer can choose to withhold. It is governed by the <strong>Payment of Gratuity Act, 1972</strong>, which applies to every factory, mine, oilfield, plantation, port, railway, shop, or establishment with 10 or more employees.</p>
+    <p>Even if your company has fewer than 10 employees, your employer can still choose to pay gratuity voluntarily. Once an organisation crosses the 10-employee threshold, the Act applies permanently — even if the headcount later falls below 10.</p>
+
+    <h2>Who Is Eligible for Gratuity?</h2>
+    <p>To be eligible, you must have completed at least <strong>five years of continuous service</strong> with the same employer. The Act covers all categories of employees — permanent, contractual, and those on fixed-term agreements. The Supreme Court confirmed in 2016 that fixed-term contract workers who complete five years are equally entitled.</p>
+    <p>The payment is triggered in four situations: on retirement or superannuation; on resignation after the qualifying period; on death or total disablement (in which case there is no minimum service requirement and the amount is paid to the nominee or legal heir); and on retrenchment or layoff if the employee has served for five or more years.</p>
+
+    <h2>The 4 Years and 240 Days Rule — The Exception That Changes Everything</h2>
+    <p>Here is the rule most employees and even many HR departments get wrong. The Madras High Court ruled — and the Supreme Court upheld — that an employee who completes 4 years and 240 days of service is considered to have completed five years for gratuity purposes.</p>
+    <p>Why 240 days? Under the Payment of Gratuity Act, a "year of service" is deemed complete once an employee has worked at least 240 days in that year (or 190 days for employees working underground in mines). So even though a calendar year has 365 days, only 240 working days are needed for a year of continuous service to be recognised.</p>
+    <p><strong>Practical example:</strong> Say you joined a company on 1 April 2020. You resign on 30 November 2024. That is 4 years and 8 months. Your fifth year — running from April 2024 to November 2024 — has more than 240 working days. Under the law, you have completed five years. You are entitled to gratuity for the full 5-year period, not just four. If your resignation is coming up and you are close to this threshold, check your dates carefully before submitting your notice.</p>
+
+    <h2>The Gratuity Formula Explained Simply</h2>
+    <p>For employees covered under the Payment of Gratuity Act, the formula is:</p>
+    <p style="background:var(--color-muted);padding:var(--space-3);border-radius:var(--radius-md);font-family:monospace"><strong>Gratuity = (Last drawn Basic Salary + DA) × 15/26 × Number of completed years of service</strong></p>
+    <p>Breaking this down: 15 represents 15 days of wages, and 26 represents the number of working days in a month (30 days minus 4 Sundays). So essentially, for every year of service, you receive half a month's salary — calculated only on Basic + DA, not your full CTC.</p>
+    <p>For employees in organisations not covered under the Act (fewer than 10 employees), a slightly different formula applies:</p>
+    <p style="background:var(--color-muted);padding:var(--space-3);border-radius:var(--radius-md);font-family:monospace"><strong>Gratuity = (Last drawn Basic Salary + DA) × ½ month × Number of completed years</strong></p>
 
     <h2>Worked Examples at Different Salary Levels</h2>
     <table class="data-table">
-      <caption>Gratuity payable after different tenures — calculated on basic+DA</caption>
-      <thead><tr><th>Last Basic+DA</th><th>Service (Years)</th><th>Gratuity Payable</th></tr></thead>
+      <caption>Gratuity payable at different salary levels and tenures (covered under the Act)</caption>
+      <thead><tr><th>Scenario</th><th>Basic + DA</th><th>Service</th><th>Gratuity Payable</th></tr></thead>
       <tbody>
-        <tr><td>₹40,000/month</td><td>5</td><td>₹1,15,385</td></tr>
-        <tr><td>₹40,000/month</td><td>10</td><td>₹2,30,769</td></tr>
-        <tr><td>₹80,000/month</td><td>10</td><td>₹4,61,538</td></tr>
-        <tr><td>₹1,50,000/month</td><td>15</td><td>₹12,98,077</td></tr>
-        <tr><td>₹2,00,000/month</td><td>20</td><td>₹23,07,692</td></tr>
+        <tr><td>Early-career employee</td><td>₹30,000/month</td><td>5 years</td><td>₹86,538</td></tr>
+        <tr><td>Mid-level professional</td><td>₹50,000/month</td><td>7 years</td><td>₹2,01,923</td></tr>
+        <tr><td>Senior professional</td><td>₹90,000/month</td><td>12 years</td><td>₹6,23,077</td></tr>
+        <tr><td>Manager</td><td>₹1,40,000/month</td><td>15 years</td><td>₹12,11,538</td></tr>
+        <tr><td>Senior manager (at cap)</td><td>₹2,00,000/month</td><td>20 years</td><td>₹20,00,000 (capped)</td></tr>
       </tbody>
     </table>
-    <p>Note: The maximum gratuity payable under the Act is ₹20 lakh. This cap was raised from ₹10 lakh in 2018. Many private companies pay above this as an ex-gratia, but the statutory maximum under the Act is ₹20 lakh.</p>
-
-    <h2>The 4 Years 240 Days Rule — The Exception Most People Miss</h2>
-    <p>The Madras High Court (upheld by the Supreme Court) ruled that an employee completing 4 years and 240 days (approximately 4 years and 8 months) qualifies for gratuity — because a working year under the Act is considered complete once 240 days of service have been rendered in that year.</p>
-    <p>Practical implication: If you join on April 1, 2020 and leave on November 30, 2024 — that's 4 years and 8 months. The 5th year has 240+ working days. You are entitled to gratuity for 5 years, not 4.</p>
-
-    <h2>When Is Gratuity Payable?</h2>
-    <ul>
-      <li>On resignation or retirement after 5+ years (or 4 years 240+ days)</li>
-      <li>On death or disablement — paid to nominee/legal heir, no minimum tenure required</li>
-      <li>On retrenchment/layoff — if tenure exceeds 5 years</li>
-      <li>Employer must pay within 30 days of the due date. Delay attracts simple interest at 10% per annum.</li>
-    </ul>
-
-    <h2>Tax Treatment of Gratuity</h2>
-    <table class="data-table">
-      <caption>Gratuity tax exemption limits by employee type</caption>
-      <thead><tr><th>Employee Type</th><th>Tax-Free Limit</th><th>Excess Taxed As</th></tr></thead>
-      <tbody>
-        <tr><td>Government employees</td><td>Fully exempt</td><td>N/A</td></tr>
-        <tr><td>Private sector (covered under Gratuity Act)</td><td>Least of: ₹20L, actual gratuity, or 15/26 × basic × years</td><td>Income from salary</td></tr>
-        <tr><td>Private sector (not covered under Act)</td><td>Least of: ₹10L, actual, or ½ month's salary × years</td><td>Income from salary</td></tr>
-      </tbody>
-    </table>
-    <p>Practically, for most private sector employees, gratuity under ₹20 lakh is completely tax-free.</p>
-
-    <h2>FAQ</h2>
-    <h3>Does gratuity apply if I am on a fixed-term contract?</h3>
-    <p>Yes — the Supreme Court ruled in 2016 that fixed-term contract employees are also eligible for gratuity if they complete 5+ years of continuous service with the same employer.</p>
-    <h3>Does basic salary include allowances for gratuity calculation?</h3>
-    <p>No. Gratuity is calculated on basic salary + Dearness Allowance only. HRA, special allowance, and other components are excluded. This is why it's important to know your basic salary — not just your CTC.</p>
-    <h3>What happens if my employer refuses to pay gratuity?</h3>
-    <p>File a complaint with the Controlling Authority (typically the Labour Commissioner of your state) under Section 7 of the Payment of Gratuity Act. They can compel payment plus interest. The process is generally employee-friendly.</p>
+    <p>The statutory maximum is ₹20 lakh. Any amount above this paid voluntarily by the employer is classified as ex-gratia and is taxable.</p>
 
     <div class="blog-article__cta">
-      <p>Calculate your gratuity amount:</p>
+      <p>Calculate your exact gratuity in seconds:</p>
       <a href="/india/gratuity-calculator/" class="cta-link">Gratuity Calculator →</a>
-      <a href="/india/ctc-to-in-hand-calculator/" class="cta-link" style="margin-left:var(--space-3)">CTC to In-Hand Calculator →</a>
     </div>
-    {% include "components/author-bio.njk" %}
+
+    <h2>What "Basic Salary" Means for Gratuity — and Why It Matters</h2>
+    <p>The formula uses only <strong>Basic Salary + Dearness Allowance (DA)</strong>. HRA, special allowances, performance bonuses, conveyance, medical reimbursements, and any other components are excluded. This is why understanding your payslip structure matters — if a large portion of your CTC is in allowances rather than basic salary, your gratuity will be proportionally lower.</p>
+    <p>Use <a href="/india/ctc-to-in-hand-calculator/">CalcPhi's CTC to In-Hand Salary Calculator</a> to see exactly how your CTC breaks down into components and what counts toward your gratuity.</p>
+
+    <h2>How Gratuity Is Taxed in AY 2026-27</h2>
+    <table class="data-table">
+      <caption>Gratuity tax exemption by employee type — AY 2026-27</caption>
+      <thead><tr><th>Employee Type</th><th>Exemption</th><th>Excess Taxed As</th></tr></thead>
+      <tbody>
+        <tr><td>Government employees</td><td>Fully exempt — no upper limit</td><td>N/A</td></tr>
+        <tr><td>Private sector (covered under Gratuity Act)</td><td>Least of: actual gratuity, ₹20 lakh, or 15/26 × basic+DA × years</td><td>Income from salary</td></tr>
+        <tr><td>Private sector (not covered under Act)</td><td>Least of: actual gratuity, ₹10 lakh, or ½ month's salary × years</td><td>Income from salary</td></tr>
+      </tbody>
+    </table>
+    <p>For most private sector employees, the entire gratuity received is tax-free since it typically falls within the ₹20 lakh limit. If you earn ₹80,000/month basic and have worked 10 years at a private firm covered under the Act, your gratuity of roughly ₹4.6 lakh would be entirely exempt — you would owe nothing. Use <a href="/india/income-tax-calculator/">CalcPhi's Income Tax Calculator for FY 2026-27</a> to factor any taxable portion into your annual tax planning.</p>
+
+    <h2>When Must Your Employer Pay Gratuity?</h2>
+    <p>Under the law, an employer must pay gratuity within <strong>30 days</strong> of it becoming due. If there is a dispute about the amount, the undisputed portion must still be paid within 30 days, and the disputed amount must be deposited with the Controlling Authority. If the employer fails to pay within 30 days, they are liable to pay <strong>simple interest at 10% per annum</strong> from the due date until the date of actual payment — paid from the employer's own funds, not deducted from the gratuity.</p>
+
+    <h2>How to Claim Gratuity — The Process Step by Step</h2>
+    <p>Submit <strong>Form I</strong> (Application for Gratuity by an Employee) to your employer within 30 days of the date gratuity becomes payable. If gratuity is payable on death or disablement, the nominee or legal heir submits Form J or Form K respectively.</p>
+    <p>Within 15 days of receiving the application, the employer must acknowledge receipt and indicate the amount payable. Payment must follow within 30 days. If you do not receive your gratuity within 30 days and no valid dispute has been raised, you can file a complaint with the <strong>Controlling Authority</strong> — typically the Labour Commissioner or Assistant Labour Commissioner of your state. The Controlling Authority has the power to direct payment, impose interest, and penalise the employer.</p>
+
+    <h2>Gratuity and Your Retirement Planning Picture</h2>
+    <p>Gratuity is one piece of your employee retirement benefits — but only one. Your EPF corpus, NPS balance (if applicable), and personal investments together form the complete picture. After 30 years of service at a basic salary of ₹1 lakh, your gratuity could be around ₹17.3 lakh — meaningful, but not sufficient as a standalone retirement fund. Use <a href="/india/retirement-corpus-calculator/">CalcPhi's Retirement Corpus Calculator</a> to see the total amount you need based on your age, expenses, and target retirement age.</p>
+
+    <h2 class="faq-heading">Frequently Asked Questions</h2>
+    <ul class="faq-list">
+      <li class="faq-item">
+        <h3 class="faq-q">Does the 5-year rule apply to employees transferred between group companies?</h3>
+        <div class="faq-a"><p>It depends. If the transfer was between entities under the same legal employer, continuous service is generally counted from the original date of joining. If the transfer involved a change in legal employer with a fresh appointment letter, the clock typically resets. Check your appointment and transfer documentation carefully.</p></div>
+      </li>
+      <li class="faq-item">
+        <h3 class="faq-q">Is gratuity compulsory even if it is not mentioned in my offer letter?</h3>
+        <div class="faq-a"><p>Yes. If your employer is covered under the Payment of Gratuity Act, gratuity is a statutory right — the offer letter does not need to mention it. The law overrides any contractual silence on the matter.</p></div>
+      </li>
+      <li class="faq-item">
+        <h3 class="faq-q">What happens to my gratuity if my employer goes bankrupt?</h3>
+        <div class="faq-a"><p>Gratuity is treated as a preferential debt under Indian insolvency law, meaning employee dues including gratuity are paid before most other creditors during liquidation. However, recovery can be slow in practice. Many large employers fund gratuity through a Group Gratuity Scheme with an insurer like LIC, which provides some protection.</p></div>
+      </li>
+      <li class="faq-item">
+        <h3 class="faq-q">Can my employer deduct from my gratuity for damages or misconduct?</h3>
+        <div class="faq-a"><p>Yes, but only in limited circumstances. The Payment of Gratuity Act allows forfeiture of gratuity if an employee is dismissed for moral turpitude, riotous conduct, or if the employee caused damage to the employer's property. A simple poor performance dismissal does not qualify for forfeiture. The employer must prove the specific misconduct.</p></div>
+      </li>
+      <li class="faq-item">
+        <h3 class="faq-q">Is gratuity calculated on last drawn salary or average salary?</h3>
+        <div class="faq-a"><p>The formula uses last drawn salary — specifically the basic salary and DA as of the final working month. It does not use an average across the tenure, which means a recent salary hike before you leave can meaningfully increase your gratuity.</p></div>
+      </li>
+      <li class="faq-item">
+        <h3 class="faq-q">Is gratuity compulsory for companies with fewer than 10 employees?</h3>
+        <div class="faq-a"><p>The Payment of Gratuity Act applies only to establishments with 10 or more employees. However, once an organisation crosses the 10-employee threshold, the Act applies permanently — even if headcount later falls below 10. Employers with fewer than 10 employees can pay gratuity voluntarily, and many do.</p></div>
+      </li>
+    </ul>
+
+    <div class="blog-article__disclaimer">
+      <p><strong>Disclaimer:</strong> The information in this article is for educational and estimation purposes only and does not constitute financial, legal, or tax advice. Gratuity entitlements can vary based on your employment terms, jurisdiction, and company type. Consult a qualified Chartered Accountant or labour law expert for guidance specific to your situation.</p>
+    </div>
+
+    <div class="author-bio-card" style="display:flex;gap:1rem;align-items:flex-start;margin-top:2rem;padding:1.25rem;background:var(--color-muted);border-radius:var(--radius-md);border:1px solid var(--color-border);">
+      <img src="{{ author.image }}" alt="{{ author.name }}" width="56" height="56" style="border-radius:50%;flex-shrink:0;object-fit:cover;">
+      <div>
+        <p style="margin:0 0 0.25rem;font-weight:600;">Written &amp; verified by <a href="{{ author.url }}">{{ author.name }}</a>, {{ author.credentials }}</p>
+        <p style="margin:0 0 0.25rem;font-size:0.875rem;color:var(--color-text-secondary);">{{ author.title }}</p>
+        <p style="margin:0;font-size:0.875rem;">{{ author.shortBio }}</p>
+      </div>
+    </div>
   </div>
 </main>
