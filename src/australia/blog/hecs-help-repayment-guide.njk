@@ -3,9 +3,9 @@ layout: layouts/base.njk
 permalink: /australia/blog/hecs-help-repayment-guide/
 authorId: james-obrien
 datePublished: "2026-05-02"
-dateModified: "2026-05-02"
+dateModified: "2026-05-19"
 title: "HECS-HELP Repayment Guide 2026: Thresholds, Rates, and Paying It Off Faster"
-description: "HECS-HELP repayments start at 1% of income once you earn $54,435 in 2026-27. Here is how repayments are calculated, indexed, and how to clear your debt faster."
+description: "HECS-HELP repayments start at 1% when you earn $54,435 in 2026-27. Learn how thresholds, indexation, and voluntary payments work — and how to pay off faster."
 breadcrumbs:
   - name: Home
     url: /
@@ -18,15 +18,54 @@ breadcrumbs:
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "HECS-HELP Repayment Guide 2026: Thresholds, Rates, and Paying It Off Faster",
-  "description": "HECS-HELP repayments start at 1% of income once you earn $54,435 in 2026-27. Here is how repayments are calculated, indexed, and how to clear your debt faster.",
-  "url": "{{ site.url }}/australia/blog/hecs-help-repayment-guide/",
-  "datePublished": "2026-05-02",
-  "dateModified": "2026-05-02",
-  "author": { "@type": "Person", "name": "James O'Brien", "url": "{{ site.url }}/about/authors/james-obrien/" },
-  "publisher": { "@type": "Organization", "name": "CalcPhi", "url": "{{ site.url }}" },
-  "mainEntityOfPage": "{{ site.url }}/australia/blog/hecs-help-repayment-guide/"
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "HECS-HELP Repayment Guide 2026: Thresholds, Rates, and Paying It Off Faster",
+      "description": "HECS-HELP repayments start at 1% when you earn $54,435 in 2026-27. Learn how thresholds, indexation, and voluntary payments work — and how to pay off faster.",
+      "url": "{{ site.url }}/australia/blog/hecs-help-repayment-guide/",
+      "datePublished": "2026-05-02",
+      "dateModified": "2026-05-19",
+      "author": { "@type": "Person", "name": "James O'Brien", "url": "{{ site.url }}/about/authors/james-obrien/" },
+      "publisher": { "@type": "Organization", "name": "CalcPhi", "url": "{{ site.url }}" },
+      "mainEntityOfPage": "{{ site.url }}/australia/blog/hecs-help-repayment-guide/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the HECS-HELP repayment threshold for 2026-27?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The minimum repayment income threshold for FY2025–26 is $54,435. If your taxable income is below this amount, no HECS repayment is required for that financial year. The threshold is adjusted annually by the ATO in line with wage growth and is published as part of the annual tax schedule." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does my HECS debt affect my take-home pay?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Once your income exceeds $54,435, your employer withholds an additional percentage from each payslip on top of regular income tax. This HECS withholding is separate from PAYG tax withholding and appears as a line item on your payslip. For someone earning $80,000, this amounts to roughly $266 per month being withheld toward HECS." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is HECS-HELP debt cancelled if I die or become permanently incapacitated?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The ATO will waive or cancel a HECS-HELP debt if the borrower dies, is permanently unable to work, or if a doctor certifies that the debt is causing permanent financial hardship in extreme circumstances. This must be formally applied for through the Study Assist process administered by the Department of Education." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I claim a tax deduction for HECS-HELP repayments?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Compulsory HECS-HELP repayments are not tax-deductible because the debt was used for personal education, not for income-producing purposes. However, if you paid course fees out-of-pocket for a course directly related to your current job — and did not use HELP — those fees may qualify as a self-education expense deduction under ATO rules." }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I overpay my HECS through payroll withholding?",
+          "acceptedAnswer": { "@type": "Answer", "text": "If your employer withholds more than your actual compulsory repayment — which can happen if your income varies through the year — the ATO reconciles this at tax time and either credits the overpayment to your HECS balance or issues a tax refund, depending on your overall tax position. Lodging your tax return on time each year ensures this is handled correctly." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I check my current HECS-HELP balance?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Log in to your myGov account and navigate to the ATO section. Under Tax and then Loan accounts, you can see your current HECS-HELP balance including any changes from indexation and the repayments applied from your most recent tax return. This is the most accurate and up-to-date figure available." }
+        }
+      ]
+    }
+  ]
 }
 </script>
 
@@ -53,200 +92,142 @@ breadcrumbs:
         By <a href="{{ author.url }}">{{ author.name }}</a><svg class="verified-badge" aria-label="Verified author" title="Verified" viewBox="0 0 20 20" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#1d9bf0"/><path d="M6 10.5l2.5 2.5L14 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>, {{ author.credentials }}
       </span>
     </div>
-    <p class="blog-article__intro">Australia has approximately 3.4 million people with outstanding HECS-HELP debt, with the average balance sitting around $24,000. In June 2023, CPI indexation of 7.1% added over $1,700 to the average balance overnight — a wake-up call for millions who assumed their debt was barely growing. Here is exactly how HECS-HELP repayments work in 2026-27, what happens with indexation, and whether paying it down early makes financial sense.</p>
+
+    <div class="definition-block">
+      <p>If you studied at university or TAFE in Australia, there is a good chance you graduated with a HECS-HELP debt sitting quietly in the background. For many Australians, it is the largest debt they carry before they even consider a home loan. Yet unlike a credit card or personal loan, HECS-HELP works very differently — and misunderstanding how it works can cost you years of unnecessary repayments or hundreds of dollars in avoidable indexation. This guide breaks down exactly how HECS-HELP repayments work in 2026-27, what the current income thresholds are, how indexation affects your balance, and what smart strategies can help you clear your debt faster.</p>
+    </div>
 
 
-    <h2>What Is HECS-HELP?</h2>
-    <p>HECS-HELP is a Commonwealth Government loan scheme that allows eligible Australian students to defer paying their tuition fees for Commonwealth Supported Places (CSP) at universities and certain other higher education providers. Instead of paying upfront, the debt is recorded with the ATO and repaid once your income crosses a threshold.</p>
-    <p>Key characteristics of HECS-HELP debt:</p>
-    <ul>
-      <li>No interest in the traditional sense — the balance does not compound with an interest rate</li>
-      <li>Instead, the balance is <strong>indexed annually to the Consumer Price Index (CPI)</strong> on 1 June each year, which maintains the real purchasing power of the debt</li>
-      <li>Repayments are compulsory once your repayment income exceeds the annual threshold</li>
-      <li>The debt is collected via the PAYG withholding system through your employer, or via your annual tax return</li>
-      <li>The debt is <strong>written off at death</strong> — it does not pass to your estate</li>
-      <li>The debt is only repaid in Australia — if you move overseas, repayments are still required once you earn above the threshold (the overseas repayment obligations were introduced from 2017)</li>
-    </ul>
+    <h2>What Is HECS-HELP and How Does It Work?</h2>
+    <p>HECS-HELP stands for Higher Education Contribution Scheme — Higher Education Loan Program. When you enrol as a Commonwealth Supported Place (CSP) student at an Australian university, the government covers part of your tuition fees upfront and creates a debt in your name. That debt is recorded by the Australian Taxation Office (ATO) and sits interest-free — but it is not completely frozen.</p>
+    <p>Instead of charging interest, the government applies <strong>indexation</strong> to your balance each year on 1 June. Indexation means your debt grows in line with inflation, so the purchasing power of what you owe stays roughly constant over time. It is not the same as interest — but if the rate of indexation is high (as it was in 2023), your balance can grow faster than your repayments reduce it.</p>
+    <p>Repayments are <strong>income-contingent</strong>, meaning you only repay when you earn above a minimum income threshold. There is no fixed monthly repayment schedule. Your employer withholds the compulsory repayment amount from your salary each payslip once you notify them you have a HECS-HELP debt, and the ATO reconciles everything at tax time.</p>
 
 
-
-    <h2>2026-27 HECS-HELP Repayment Thresholds and Rates</h2>
-    <p>Repayments are based on your <strong>repayment income</strong>, which is your taxable income plus any total net investment loss, total reportable fringe benefits, and reportable employer super contributions. This is broader than just your salary.</p>
+    <h2>HECS-HELP Repayment Thresholds for FY2025–26</h2>
+    <p>The repayment threshold is the income level at which you are legally required to start making HECS-HELP repayments. For FY2025–26, that threshold is <strong>$54,435</strong>. Below that figure, you owe nothing — even if you have a large outstanding balance.</p>
+    <p>Above $54,435, a percentage of your total income is applied as a compulsory repayment. The rate increases progressively as your income rises. It is important to understand that the repayment rate applies to your <strong>entire income</strong>, not just the amount above the threshold. So if you earn $65,000, your compulsory repayment is 2.0% of $65,000 — which equals $1,300 — not just 2% of the amount above $54,435.</p>
     <table class="data-table">
       <thead>
         <tr>
-          <th>Repayment Income</th>
+          <th>Annual Income</th>
           <th>Repayment Rate</th>
-          <th>Annual Repayment on Threshold Income</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Below $54,435</td>
-          <td>Nil</td>
-          <td>$0</td>
-        </tr>
-        <tr>
-          <td>$54,435 – $62,849</td>
-          <td>1.0%</td>
-          <td>$544 – $628</td>
-        </tr>
-        <tr>
-          <td>$62,850 – $66,620</td>
-          <td>2.0%</td>
-          <td>$1,257 – $1,332</td>
-        </tr>
-        <tr>
-          <td>$66,621 – $70,617</td>
-          <td>2.5%</td>
-          <td>$1,665 – $1,765</td>
-        </tr>
-        <tr>
-          <td>$70,618 – $74,855</td>
-          <td>3.0%</td>
-          <td>$2,119 – $2,246</td>
-        </tr>
-        <tr>
-          <td>$74,856 – $79,346</td>
-          <td>3.5%</td>
-          <td>$2,620 – $2,777</td>
-        </tr>
-        <tr>
-          <td>$79,347 – $84,107</td>
-          <td>4.0%</td>
-          <td>$3,174 – $3,364</td>
-        </tr>
-        <tr>
-          <td>$84,108 – $89,154</td>
-          <td>4.5%</td>
-          <td>$3,785 – $4,012</td>
-        </tr>
-        <tr>
-          <td>$89,155 – $94,503</td>
-          <td>5.0%</td>
-          <td>$4,458 – $4,725</td>
-        </tr>
-        <tr>
-          <td>$94,504 – $100,174</td>
-          <td>5.5%</td>
-          <td>$5,198 – $5,510</td>
-        </tr>
-        <tr>
-          <td>$100,175 – $106,185</td>
-          <td>6.0%</td>
-          <td>$6,011 – $6,371</td>
-        </tr>
-        <tr>
-          <td>$106,186 – $112,556</td>
-          <td>6.5%</td>
-          <td>$6,902 – $7,316</td>
-        </tr>
-        <tr>
-          <td>$112,557 – $119,309</td>
-          <td>7.0%</td>
-          <td>$7,879 – $8,352</td>
-        </tr>
-        <tr>
-          <td>$119,310 – $126,467</td>
-          <td>7.5%</td>
-          <td>$8,948 – $9,485</td>
-        </tr>
-        <tr>
-          <td>$126,468 – $134,056</td>
-          <td>8.0%</td>
-          <td>$10,117 – $10,724</td>
-        </tr>
-        <tr>
-          <td>$134,057 – $142,100</td>
-          <td>8.5%</td>
-          <td>$11,395 – $12,079</td>
-        </tr>
-        <tr>
-          <td>$142,101 – $150,626</td>
-          <td>9.0%</td>
-          <td>$12,789 – $13,556</td>
-        </tr>
-        <tr>
-          <td>$150,627 – $159,663</td>
-          <td>9.5%</td>
-          <td>$14,310 – $15,168</td>
-        </tr>
-        <tr>
-          <td>$159,664 and above</td>
-          <td>10.0%</td>
-          <td>$15,966+</td>
-        </tr>
+        <tr><td>Below $54,435</td><td>Nil</td></tr>
+        <tr><td>$54,435 – $62,998</td><td>1.0%</td></tr>
+        <tr><td>$62,999 – $66,819</td><td>2.0%</td></tr>
+        <tr><td>$66,820 – $70,539</td><td>2.5%</td></tr>
+        <tr><td>$70,540 – $74,919</td><td>3.0%</td></tr>
+        <tr><td>$74,920 – $79,489</td><td>3.5%</td></tr>
+        <tr><td>$79,490 – $84,268</td><td>4.0%</td></tr>
+        <tr><td>$84,269 – $89,524</td><td>4.5%</td></tr>
+        <tr><td>$89,525 – $95,092</td><td>5.0%</td></tr>
+        <tr><td>$95,093 – $100,996</td><td>5.5%</td></tr>
+        <tr><td>$100,997 – $107,214</td><td>6.0%</td></tr>
+        <tr><td>$107,215 – $113,847</td><td>6.5%</td></tr>
+        <tr><td>$113,848 – $120,899</td><td>7.0%</td></tr>
+        <tr><td>$120,900 – $128,392</td><td>7.5%</td></tr>
+        <tr><td>$128,393 – $136,331</td><td>8.0%</td></tr>
+        <tr><td>$136,332 – $144,730</td><td>8.5%</td></tr>
+        <tr><td>$144,731 – $151,200</td><td>9.0%</td></tr>
+        <tr><td>$151,201 and above</td><td>10.0%</td></tr>
       </tbody>
     </table>
-    <p>Note: The repayment is calculated on your <em>entire</em> repayment income at the applicable rate — not just the income above the threshold band. This means crossing into a new band can increase your repayment on all income, not just the extra portion.</p>
+    <p>Want to see your exact repayment amount and how many years until you are debt-free? Use <a href="/australia/hecs-repayment-calculator/">CalcPhi's free HECS-HELP Repayment Calculator</a> — enter your income, balance, and expected income growth to get a year-by-year projection instantly.</p>
 
 
-
-    <h2>How Repayments Are Collected: PAYG Withholding</h2>
-    <p>When you complete your Tax File Number Declaration with a new employer, you indicate whether you have a HELP debt. Your employer then uses ATO withholding tables that include an additional HECS component, withholding extra tax each pay period to cover the estimated annual repayment.</p>
-    <p>This additional withholding is not labelled "HECS repayment" on your payslip — it is simply folded into total tax withheld. When you lodge your tax return, the ATO calculates your precise repayment obligation based on actual annual income and reconciles it against the amounts withheld. If too little was withheld, you owe the balance. If too much was withheld, you receive a refund of the excess.</p>
-    <p>If you have multiple jobs, the HECS withholding may not be applied by the secondary employer. Ensure your total annual income is considered when estimating your liability to avoid a surprise bill at tax time.</p>
-
+    <h2>How HECS-HELP Indexation Works in 2026</h2>
+    <p>Indexation is the mechanism that adjusts your HECS-HELP balance in line with the cost of living. It is applied on <strong>1 June each year</strong> to your outstanding balance. Before 2023, the indexation rate was tied solely to the Consumer Price Index (CPI). In 2023, that resulted in a 7.1% increase — the highest in decades — which shocked many borrowers whose balances grew by thousands of dollars overnight.</p>
+    <p>The government responded by legislating a change: from 2024 onwards, indexation is applied at the <strong>lower of CPI or the Wage Price Index (WPI)</strong>. For 2024-25, the indexation rate came down to approximately 4.0–4.7%. For 2025-26, analysts expect it to sit in the range of 3.0–3.5%, in line with moderating inflation. This is still not zero, though. On a $40,000 balance, a 3.2% indexation rate adds $1,280 to your debt in a single day — before any repayments offset it.</p>
+    <p>This is why understanding the interplay between your repayment rate and the indexation rate matters so much. If your income is near the lower end of the threshold bands, your annual repayment may be only slightly higher than what indexation adds back. Progress can feel painfully slow.</p>
 
 
-    <h2>CPI Indexation: The Silent Debt Grower</h2>
-    <p>On 1 June each year, outstanding HECS-HELP balances are increased by the CPI movement for the 12 months to the preceding March quarter. In low-inflation years (2015–2021), this was typically 1.5–2.5%, adding a few hundred dollars to an average balance. In June 2023, CPI ran at 7.1% — adding approximately $1,700 to a $24,000 balance overnight.</p>
-    <p>Indexation is applied to your balance as at 1 June. Any voluntary repayments made before 1 June reduce the balance before indexation is calculated. For example, if your balance is $30,000 on 1 May and CPI is 4%, making a $5,000 voluntary repayment in May reduces the indexed amount to $25,000 × 4% = $1,000 of indexation — saving $200 compared to indexing on the full $30,000.</p>
-    <p>The former 5% voluntary repayment bonus (where a $500 contribution only cost $476) was removed in 2022-23. There is no longer a financial incentive to voluntarily repay beyond avoiding indexation on the repaid amount.</p>
+    <h2>Real-World Repayment Examples</h2>
+
+    <h3>Graduate earning $72,000 with a $35,000 debt</h3>
+    <p>At $72,000 income, the repayment rate is 3.5%, giving a compulsory repayment of $2,520 per year. With indexation at 3.2%, approximately $1,120 is added back to the $35,000 balance. The net annual reduction is around $1,400. At this rate, with modest income growth of 3.5% per year, it would take approximately 12 years to clear the debt — with total repayments of around $38,500.</p>
+
+    <h3>Mid-career professional earning $110,000 with a $55,000 debt</h3>
+    <p>At $110,000, the repayment rate jumps to 6.5%, meaning $7,150 is withheld annually. Indexation at 3.2% adds around $1,760 to the $55,000 balance. The net reduction is approximately $5,390 per year, and the debt would be cleared in roughly 8 years. These examples illustrate how significantly income affects your repayment trajectory — a salary increase that moves you into a higher threshold band can shave years off your debt.</p>
 
 
-
-    <h2>HECS-HELP and Mortgage Borrowing Capacity</h2>
-    <p>HECS-HELP debt has a significant but often underestimated effect on your mortgage borrowing capacity. Lenders treat your annual HECS repayment obligation as a committed recurring expense, similar to a personal loan repayment. This reduces the amount of income available to service a mortgage.</p>
-    <p>The impact in practice: someone earning $90,000 with a $40,000 HECS balance has a repayment rate of 5% = $4,500 per year ($375/month). The bank treats this $375 as an ongoing expense. Using a rough borrowing capacity rule of 5–6 times income, the HECS repayment can reduce borrowing capacity by $30,000–$40,000 depending on the lender's serviceability model.</p>
-    <p>The only way to eliminate this impact is to fully repay the HECS debt before applying for a mortgage. Some borrowers in their late 20s and early 30s make this a priority — not because the HECS debt has high interest, but because it directly improves their home borrowing position.</p>
-
+    <h2>Does HECS-HELP Debt Affect Your Home Loan?</h2>
+    <p>Yes — and this surprises many first-home buyers. When a lender assesses your borrowing capacity, they treat your compulsory HECS repayment as a committed expense, just like a car loan repayment. It reduces your disposable income, which in turn reduces how much the bank will lend you.</p>
+    <p>On a $95,000 income with a 5.5% repayment rate, your HECS commitment is $5,225 per year — or about $435 per month. Depending on the lender's methodology, that could reduce your borrowing capacity by $80,000 to $100,000. If you are saving for your first home and wondering why your borrowing estimate feels lower than expected, your HECS-HELP debt may be a contributing factor.</p>
+    <p>Use <a href="/australia/salary-take-home-calculator/">CalcPhi's Salary Take-Home Pay Calculator</a> to understand your true take-home pay after both tax and HECS withholding — this gives you a much clearer picture of what you can actually afford to borrow and repay.</p>
 
 
-    <h2>Should You Pay Off HECS Faster?</h2>
-    <p>This is genuinely a personal finance question without a universal answer. The factors to weigh:</p>
-    <ul>
-      <li><strong>Expected CPI:</strong> If inflation stays high (4%+), voluntary repayments save real money. If CPI returns to 2–2.5%, the "cost" of holding HECS is minimal.</li>
-      <li><strong>Mortgage plans:</strong> If buying a home in the next 2–3 years, clearing HECS improves your borrowing capacity. This can easily be worth more than the indexation saved.</li>
-      <li><strong>Opportunity cost:</strong> A $10,000 voluntary HECS repayment versus $10,000 into a high-interest savings account (currently 5%+) or additional super contributions (potential 15–39% tax saving) — in a low-CPI environment, the savings account or super often wins mathematically.</li>
-      <li><strong>Career trajectory:</strong> If you expect to earn below the repayment threshold for an extended period (e.g., you are a part-time worker or plan a career break), the compulsory repayments will be lower or zero, and CPI indexation is the main cost. Faster voluntary repayment becomes more compelling.</li>
-    </ul>
-    <p>The most common strategic approach: make voluntary repayments to clear HECS when the outstanding balance is small enough that indexation is irritating but the total cost to clear is manageable, or in the period immediately before applying for a mortgage.</p>
+    <h2>Should You Pay Off HECS-HELP Early?</h2>
+    <p>HECS-HELP is not a traditional debt. It does not accrue interest. The only cost is indexation, which in a normal inflation environment runs at 3–4% per year. That is relatively cheap compared to mortgage rates (currently 5.5–6.5%), credit card rates (18–22%), or personal loan rates (8–15%).</p>
+    <p>From a purely financial perspective, voluntary HECS repayments only make sense if the effective "cost" of your HECS debt — the indexation rate — is higher than the after-tax return you could earn by investing that money elsewhere. In a high-inflation year like 2023 when indexation hit 7.1%, that calculation shifted significantly toward paying off HECS. In a more normal 3–3.5% environment, many Australians are financially better off putting spare cash into super, an offset account on their mortgage, or an investment portfolio.</p>
+    <p>Note that the ATO used to offer a 5% discount on voluntary repayments of $500 or more. That incentive was abolished in January 2017 and has not returned. That said, there is a psychological value to being debt-free — and reducing your HECS balance does improve your borrowing capacity for a home loan, which has real financial consequences for many people in their late twenties and thirties.</p>
 
 
+    <h2>4 Practical Strategies to Pay Off HECS Faster</h2>
 
-    <h2>HECS vs HELP: Are They the Same?</h2>
-    <p>HECS (Higher Education Contribution Scheme) was the original name of the scheme, introduced in 1989. HELP (Higher Education Loan Program) is the current umbrella name under which several loan types operate, including HECS-HELP (for Commonwealth Supported Places), FEE-HELP (for full-fee domestic students), VET Student Loans, and others. In everyday usage, most Australians still say "HECS" to refer to any student loan managed by the ATO, including FEE-HELP balances. The repayment thresholds and indexation rules are the same across all HELP loan types.</p>
+    <h3>1. Make voluntary lump-sum payments</h3>
+    <p>You can make voluntary repayments at any time through the ATO's online services via myGov. There is no minimum amount and no penalty. If you receive a work bonus, an inheritance, or a tax refund, redirecting part of it to your HECS balance is a simple way to accelerate repayment — particularly in periods of high indexation.</p>
+
+    <h3>2. Salary sacrifice into super</h3>
+    <p>Salary sacrificing into super reduces your taxable income, which can drop you into a lower HECS repayment bracket. For example, if you earn $85,000 and salary sacrifice $5,000 into super, your taxable income falls to $80,000 — dropping your repayment rate from 4.5% to 3.5%. That saves you roughly $475 in HECS repayments while also building your retirement balance. Use <a href="/australia/salary-sacrifice-calculator/">CalcPhi's Salary Sacrifice Calculator</a> to model this.</p>
+
+    <h3>3. Check your withholding closely</h3>
+    <p>Your employer withholds an estimated HECS repayment each payslip based on an annualised income figure. If your income varies — through overtime, commissions, or part-year work — the withholding can be off. Check your PAYG summary and tax return carefully each year to ensure the ATO's reconciliation is accurate.</p>
+
+    <h3>4. Keep an eye on the June 1 indexation date</h3>
+    <p>If you have spare cash and indexation is expected to be high in a given year, making a voluntary payment before 1 June means you pay indexation on a lower balance. Timing a lump-sum payment a few days before 1 June can save you a meaningful amount — particularly on large balances.</p>
+
     <div class="blog-article__image" style="margin: 2.5rem 0;">
       <img src="/assets/images/blog/hecs-help-repayment-guide.png" alt="Hecs Help Repayment Guide — key insights infographic" style="width:100%;height:auto;border-radius:var(--radius-md);border:1px solid var(--color-border);" loading="lazy">
     </div>
 
 
+    <h2>What Happens to Your HECS Debt If You Live Overseas?</h2>
+    <p>From 1 January 2016, the ATO extended the repayment obligation to Australians living and working overseas. If your worldwide income exceeds the repayment threshold — currently $54,435 — you are required to submit a Worldwide Income Assessment each year and make repayments accordingly. The same threshold table applies regardless of whether your income is earned in Australia or abroad.</p>
+    <p>Before this change, it was common for Australians living overseas to simply ignore their HECS debt for years. That loophole is now closed, and penalties apply for non-compliance.</p>
 
 
     <h2>Frequently Asked Questions</h2>
-    <dl>
-      <dt>Does HECS-HELP affect my credit score?</dt>
-      <dd>No. HECS-HELP is a government debt, not a credit product. It does not appear on your credit file with Equifax, Experian, or Illion. It will not affect your credit score or credit history. However, as described above, lenders include HECS repayments in their serviceability assessment when calculating how much they will lend you for a mortgage.</dd>
-
-      <dt>What happens to my HECS debt if I move overseas?</dt>
-      <dd>Since 2017, Australians with HECS-HELP debt living overseas are required to make repayments if their worldwide income exceeds the repayment threshold. You must notify the ATO if you will be overseas for 183 days or more in any 12-month period. The ATO enforces this via the overseas registration system, and non-compliance can result in penalties and interest charges.</dd>
-
-      <dt>Can my employer pay my HECS debt?</dt>
-      <dd>Yes, as a fringe benefit — but it is complex. Some employers (particularly universities and certain public sector bodies) offer salary sacrifice arrangements to pay HECS debts. The fringe benefit is assessed as a reportable fringe benefit, which is included in your repayment income calculation, potentially actually increasing your compulsory repayment obligation. This requires careful modelling before proceeding.</dd>
-
-      <dt>What is the fastest way to pay off HECS?</dt>
-      <dd>The most efficient timing for voluntary repayments is in late May — after the balance for the year is known but before the 1 June indexation date. This ensures maximum reduction of the balance before indexation is applied. You can make voluntary repayments via ATO online services (myGov) by BPAY or credit card at any time.</dd>
-    </dl>
-
-
+    <ul class="faq-list">
+      <li class="faq-item">
+        <h3 class="faq-q">What is the HECS-HELP repayment threshold for 2026-27?</h3>
+        <p class="faq-a">The minimum repayment income threshold for FY2025–26 is $54,435. If your taxable income is below this amount, no HECS repayment is required for that financial year. The threshold is adjusted annually by the ATO in line with wage growth and is published as part of the annual tax schedule.</p>
+      </li>
+      <li class="faq-item">
+        <h3 class="faq-q">Does my HECS debt affect my take-home pay?</h3>
+        <p class="faq-a">Yes. Once your income exceeds $54,435, your employer withholds an additional percentage from each payslip on top of regular income tax. This HECS withholding is separate from PAYG tax withholding and appears as a line item on your payslip. For someone earning $80,000, this amounts to roughly $266 per month being withheld toward HECS.</p>
+      </li>
+      <li class="faq-item">
+        <h3 class="faq-q">Is HECS-HELP debt cancelled if I die or become permanently incapacitated?</h3>
+        <p class="faq-a">Yes. The ATO will waive or cancel a HECS-HELP debt if the borrower dies, is permanently unable to work, or if a doctor certifies that the debt is causing permanent financial hardship in extreme circumstances. This must be formally applied for through the Study Assist process administered by the Department of Education.</p>
+      </li>
+      <li class="faq-item">
+        <h3 class="faq-q">Can I claim a tax deduction for HECS-HELP repayments?</h3>
+        <p class="faq-a">No. Compulsory HECS-HELP repayments are not tax-deductible because the debt was used for personal education, not for income-producing purposes. However, if you paid course fees out-of-pocket for a course directly related to your current job — and did not use HELP — those fees may qualify as a self-education expense deduction under ATO rules.</p>
+      </li>
+      <li class="faq-item">
+        <h3 class="faq-q">What happens if I overpay my HECS through payroll withholding?</h3>
+        <p class="faq-a">If your employer withholds more than your actual compulsory repayment — which can happen if your income varies through the year — the ATO reconciles this at tax time and either credits the overpayment to your HECS balance or issues a tax refund, depending on your overall tax position. Lodging your tax return on time each year ensures this is handled correctly.</p>
+      </li>
+      <li class="faq-item">
+        <h3 class="faq-q">How do I check my current HECS-HELP balance?</h3>
+        <p class="faq-a">Log in to your myGov account and navigate to the ATO section. Under "Tax" and then "Loan accounts," you can see your current HECS-HELP balance including any changes from indexation and the repayments applied from your most recent tax return. This is the most accurate and up-to-date figure available.</p>
+      </li>
+    </ul>
 
 
     <div class="blog-article__cta">
       <p>Use our Australia calculators:</p>
       <a href="/australia/hecs-repayment-calculator/" class="cta-link">HECS Repayment Calculator →</a>
-      <a href="/australia/income-tax-calculator/" class="cta-link">Income Tax Calculator →</a>
       <a href="/australia/salary-take-home-calculator/" class="cta-link">Salary Take-Home Calculator →</a>
+      <a href="/australia/salary-sacrifice-calculator/" class="cta-link">Salary Sacrifice Calculator →</a>
+      <a href="/australia/income-tax-calculator/" class="cta-link">Income Tax Calculator →</a>
+    </div>
+
+    <div class="blog-article__disclaimer">
+      <p><strong>Disclaimer:</strong> The information in this article is for educational and general guidance purposes only. All repayment figures and threshold amounts are based on ATO-published data for FY2025–26 and are subject to change by the government. Nothing in this article constitutes financial advice. Individual circumstances vary significantly, and you should consult a qualified financial adviser (holding an Australian Financial Services Licence) for personalised guidance on managing your HECS-HELP debt and broader financial strategy.</p>
     </div>
 
     {% include "components/author-bio.njk" %}
