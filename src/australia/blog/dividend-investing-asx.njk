@@ -3,9 +3,9 @@ layout: layouts/base.njk
 permalink: /australia/blog/dividend-investing-asx/
 authorId: james-obrien
 datePublished: "2026-05-02"
-dateModified: "2026-05-02"
-title: "Dividend Investing on the ASX: High-Yield Shares, Franking Credits and Strategy"
-description: "The ASX has some of the highest dividend yields in the world. Australian bank dividends yield 4.5–6% fully franked — equivalent to 6.4–8.6% grossed up. Here is the dividend investing framework."
+dateModified: "2026-05-19"
+title: "ASX Dividend Investing: High-Yield Shares & Franking Credits 2026"
+description: "Learn how to build a high-yield ASX dividend portfolio in 2026. Covers franking credits, top dividend sectors, DRPs, and tax-smart strategy for Australian investors."
 breadcrumbs:
   - name: Home
     url: /
@@ -18,15 +18,72 @@ breadcrumbs:
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Dividend Investing on the ASX: High-Yield Shares, Franking Credits and Strategy",
-  "description": "The ASX has some of the highest dividend yields in the world. Australian bank dividends yield 4.5–6% fully franked — equivalent to 6.4–8.6% grossed up. Here is the dividend investing framework.",
-  "url": "{{ site.url }}/australia/blog/dividend-investing-asx/",
-  "datePublished": "2026-05-02",
-  "dateModified": "2026-05-02",
-  "author": { "@type": "Person", "name": "James O'Brien", "url": "{{ site.url }}/about/authors/james-obrien/" },
-  "publisher": { "@type": "Organization", "name": "CalcPhi", "url": "{{ site.url }}" },
-  "mainEntityOfPage": "{{ site.url }}/australia/blog/dividend-investing-asx/"
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "ASX Dividend Investing: High-Yield Shares & Franking Credits 2026",
+      "description": "Learn how to build a high-yield ASX dividend portfolio in 2026. Covers franking credits, top dividend sectors, DRPs, and tax-smart strategy for Australian investors.",
+      "url": "{{ site.url }}/australia/blog/dividend-investing-asx/",
+      "datePublished": "2026-05-02",
+      "dateModified": "2026-05-19",
+      "author": { "@type": "Person", "name": "James O'Brien", "url": "{{ site.url }}/about/authors/james-obrien/" },
+      "publisher": { "@type": "Organization", "name": "CalcPhi", "url": "{{ site.url }}" },
+      "mainEntityOfPage": "{{ site.url }}/australia/blog/dividend-investing-asx/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a good dividend yield on the ASX?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For most Australian investors, a fully franked yield of 4–6% is considered attractive and realistic from quality ASX businesses. When grossed up for franking credits at the 30% corporate tax rate, this translates to an effective pre-tax yield of 5.7–8.6%. Be cautious of yields above 8% on individual stocks — these often signal that the market expects a dividend cut."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are franking credit refunds still available in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The dividend imputation system and cash refunds for excess franking credits remain intact under Australian tax law as of 2026. The ATO processes franking credit refunds as part of your annual tax return. Low-income earners, retirees, and pension-phase super funds benefit most from the refund mechanism."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often do ASX companies pay dividends?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most large ASX companies pay dividends twice per year — an interim dividend (typically February/March) and a final dividend (typically August/September). Some smaller companies pay quarterly or annually. REITs often pay quarterly distributions. Unlike the US market, ASX companies do not typically pay monthly dividends, though a growing number of dividend ETFs distribute quarterly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to hold shares for a minimum period to receive franking credits?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The ATO's 45-day rule requires you to hold shares 'at risk' for at least 45 days around the ex-dividend date (excluding the day you buy and the day you sell) to be entitled to claim the franking credit offset. Small investors with total franking credits under $5,000 per year are exempt from this rule."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I invest in ASX dividend shares directly or through an ETF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both approaches work. Direct share ownership lets you customise your portfolio — maximising franking, excluding sectors you dislike, and selecting the companies you believe in. ETFs offer instant diversification, low cost, and simplicity. A common approach is to use a dividend ETF as the core of the portfolio and add individual high-conviction positions around it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do dividends interact with my income tax return?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dividends must be declared in your annual tax return as assessable income. The grossed-up amount (cash dividend plus franking credit) is included as taxable income, and the franking credit is applied as an offset against your total tax liability. If the offset exceeds your tax bill, the ATO refunds the excess. Your broker's annual tax statement will provide the dividend income and franking credit totals you need to complete your return."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 
@@ -53,81 +110,173 @@ breadcrumbs:
         By <a href="{{ author.url }}">{{ author.name }}</a><svg class="verified-badge" aria-label="Verified author" title="Verified" viewBox="0 0 20 20" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#1d9bf0"/><path d="M6 10.5l2.5 2.5L14 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>, {{ author.credentials }}
       </span>
     </div>
-    <p class="blog-article__intro">Australia has one of the highest equity dividend yields in the developed world. This is partly structural — the large-cap ASX is dominated by mature banks, miners, and consumer staples businesses that generate reliable cash flows and return most of it to shareholders. It is partly a tax incentive — franking credits encourage companies to distribute profits as fully franked dividends rather than retaining them. For income-focused investors, particularly retirees and self-funded superannuation members, the ASX's dividend culture is a compelling advantage. A $1 million portfolio in ASX dividend shares can reasonably generate $40,000–$60,000 in annual cash income plus franking credit refunds.</p>
+
+    <div class="definition-block">
+      <p>Australia is one of the most dividend-friendly markets on the planet. While US investors celebrate a 1.5% yield on the S&P 500, ASX investors routinely collect 4–6% in cash dividends — and that's before accounting for franking credits, which can push the effective return significantly higher. For income investors, retirees, and anyone looking to build a passive income stream from the share market, the ASX deserves serious attention.</p>
+      <p>This guide walks through how dividend investing works on the ASX, how franking credits make Australian dividends uniquely powerful, which sectors consistently pay the highest yields, and how to build a dividend portfolio that actually holds up through different market cycles.</p>
+    </div>
 
 
-    <h2>Why Australian Dividends Are Different</h2>
-    <p>The combination of high cash yields and franking credits makes Australian dividend shares uniquely attractive in global context. A share yielding 5% cash that is fully franked at the 30% corporate tax rate has an effective grossed-up yield of 7.14% before personal tax. For investors in the 0% or low tax environment (pension-phase super, low-income retirees), that grossed-up yield translates directly into cash when franking credits are refunded.</p>
+    <h2>What Is Dividend Investing and Why Does It Work on the ASX?</h2>
+    <p>Dividend investing is a strategy where you build a portfolio of shares that pay regular income — typically twice a year for ASX companies — rather than focusing solely on capital growth. The goal is to generate a reliable cash flow from your investments without having to sell any shares.</p>
+    <p>What makes the ASX particularly suited to this strategy is its sector composition. The Australian share market is heavily weighted towards mature, cash-generative businesses: the big four banks, major miners, supermarkets, utilities, and infrastructure businesses. These companies don't need to reinvest every dollar of profit into growth — they generate more cash than they can deploy, and they return it to shareholders as dividends.</p>
+    <p>This structure is reinforced by Australia's unique dividend imputation system, which we'll cover in detail shortly. Together, high cash yields and franking credits make Australian dividend shares one of the most tax-efficient income sources available to Australian investors.</p>
+
+
+    <h2>Understanding Franking Credits: The Hidden Bonus in ASX Dividends</h2>
+    <p>Franking credits (sometimes called imputation credits) are perhaps the most important concept for any Australian dividend investor. Here's how they work in plain language.</p>
+    <p>When an Australian company earns a profit, it pays 30% corporate tax to the ATO. When it then pays a dividend to shareholders, the ATO doesn't want to tax that same profit again at your personal tax rate. So the company attaches franking credits to the dividend — essentially a certificate that says "this income has already been taxed at 30%."</p>
+    <p>You then include the grossed-up dividend (cash dividend plus franking credit) in your personal tax return. If your marginal tax rate is higher than 30%, you pay the difference. If your marginal tax rate is lower than 30%, the ATO refunds the excess credits to you in cash.</p>
+    <p>This is enormously valuable for low-tax investors. A retiree drawing from a pension-phase superannuation account pays 0% tax. Every dollar of franking credit they receive is refunded in full by the ATO. This transforms a 5% cash yield into an effective 7.14% return once franking credits are included — with no additional risk.</p>
+    <p>To understand exactly how much you'd receive in franking credit refunds based on your tax situation, use CalcPhi's free <a href="/australia/franking-credits-calculator/">Franking Credits Calculator</a>.</p>
+
     <table class="data-table">
-      <caption>Grossed-up yield comparison — cash yield at 30% corporate tax rate</caption>
+      <caption>Grossed-up yield by cash dividend — fully franked, 30% corporate tax rate</caption>
       <thead>
-        <tr><th>Cash Dividend Yield</th><th>Franking Credit (per $)</th><th>Grossed-Up Yield</th></tr>
+        <tr><th>Cash Dividend Yield</th><th>Franking Credit</th><th>Grossed-Up Yield</th></tr>
       </thead>
       <tbody>
         <tr><td>3.0%</td><td>1.29%</td><td>4.29%</td></tr>
         <tr><td>4.0%</td><td>1.71%</td><td>5.71%</td></tr>
         <tr><td>5.0%</td><td>2.14%</td><td>7.14%</td></tr>
         <tr><td>6.0%</td><td>2.57%</td><td>8.57%</td></tr>
-        <tr><td>7.0%</td><td>3.00%</td><td>10.0%</td></tr>
+        <tr><td>7.0%</td><td>3.00%</td><td>10.00%</td></tr>
       </tbody>
     </table>
-    <p>Franking credit refunds explained: in pension-phase super (0% tax), all franking credits convert to cash refunds. A $1 million portfolio in 5% fully franked shares generates $50,000 in cash dividends plus a $21,400 ATO refund — $71,400 total annual income. See our detailed guide to <a href="/australia/blog/franking-credits-explained/">franking credits</a> for the calculation mechanics.</p>
+
+    <h3>Fully Franked vs Partially Franked vs Unfranked</h3>
+    <p>"Fully franked" means 100% of the dividend carries a franking credit, reflecting that the company paid the full 30% corporate tax rate. "Partially franked" means only a portion of the dividend is franked — common in dual-listed companies like BHP (which also lists on the London Stock Exchange and pays part of its tax offshore). "Unfranked" means no credits at all — typical of companies that operate primarily offshore or REITs, where income comes from rent rather than company profits.</p>
+    <p>For Australian resident investors, fully franked dividends are generally the most valuable. When comparing dividend yields across different stocks, always look at the grossed-up yield, not just the raw cash yield. A 4% fully franked dividend is worth considerably more after tax than a 4.5% unfranked dividend for most Australian taxpayers.</p>
 
 
+    <h2>High-Yield Sectors on the ASX</h2>
 
-    <h2>High-Dividend Sectors on the ASX</h2>
-    <p><strong>Major banks (CBA, NAB, ANZ, Westpac):</strong> Australia's big four banks are among the largest dividend payers globally. Historical dividend yields of 4.5–6.5% fully franked. Highly profitable, regulated businesses with predictable earnings. Concentration risk: overexposure to one sector or to Australian property market cycles.</p>
-    <p><strong>Miners (BHP, Rio Tinto, Fortescue):</strong> Variable dividends tied to commodity prices. Can be spectacular in supercycle years (BHP's 2022 dividend was extraordinary) and disappointing in down cycles. Partially franked for BHP (dual-listed structure reduces Australian tax component). Not suitable for investors seeking stable, predictable income.</p>
-    <p><strong>Consumer staples (Wesfarmers, Woolworths, Coles):</strong> Reliable, moderate yields (2.5–3.5%) fully franked. Defensive businesses that maintain dividends through recessions. Wesfarmers has grown its dividend every year for over a decade. Lower yield but higher reliability than cyclical sectors.</p>
-    <p><strong>Infrastructure and utilities (APA Group, Transurban, AGL):</strong> Mixed franking (some unfranked or partially franked due to tax depreciation shields). Regulated, inflation-linked revenues. Yields 3–5%. Suitable for income-focused investors who can tolerate moderate franking levels.</p>
-    <p><strong>REITs (Real Estate Investment Trusts):</strong> By law, REITs must distribute 90%+ of income. Yields of 4–6% but often unfranked — income is derived from rental receipts rather than company profits. No franking credits, but consistent income stream with inflation linkage.</p>
+    <h3>The Big Four Banks</h3>
+    <p>Commonwealth Bank (CBA), NAB, ANZ, and Westpac are the bedrock of most Australian dividend portfolios. These businesses generate extraordinary amounts of cash, operate in a highly regulated duopoly, and have maintained or grown their dividends over most of the past two decades. Dividend yields typically sit between 4.5% and 6.5%, almost always fully franked.</p>
+    <p>The risk is concentration. If you hold all four major banks and Australian property market stress materialises, your dividend income could fall simultaneously across your whole portfolio. Most experienced dividend investors limit their total bank exposure to 30–40% of their portfolio and diversify into other sectors alongside.</p>
 
+    <h3>Miners and Resources</h3>
+    <p>BHP, Rio Tinto, and Fortescue are capable of extraordinary dividends in commodity supercycle years. BHP paid over A$3.50 per share in dividends in FY2022 — a yield of more than 12% at mid-year share prices. However, resource dividends are explicitly variable. BHP uses a progressive dividend policy with a minimum floor, meaning payments fall significantly when commodity prices drop. Fortescue links its payout directly to earnings — when iron ore prices are high, the dividend is generous; when they fall, so does the dividend.</p>
+    <p>Resource stocks suit investors who want high total return including variable income, but they're poor choices for investors who need a stable, predictable income stream each year.</p>
 
+    <h3>Consumer Staples: Reliability Over Yield</h3>
+    <p>Wesfarmers, Woolworths, and Coles offer lower yields (typically 2.5–3.5% fully franked) but extraordinary dividend consistency. Wesfarmers has grown its dividend in most years for over a decade and maintained payments through the 2020 COVID downturn. These businesses sell groceries and hardware regardless of what interest rates or commodity prices are doing. If income stability matters more than maximum yield, a meaningful allocation to consumer staples makes your portfolio more resilient.</p>
 
-    <h2>Dividend ETF Alternatives</h2>
-    <p>For investors who prefer diversification over individual stock selection, ASX-listed dividend ETFs provide exposure to high-yield shares without single-company risk:</p>
-    <table class="data-table">
-      <caption>Key ASX dividend ETFs — 2026</caption>
-      <thead>
-        <tr><th>ETF</th><th>Strategy</th><th>Approx. Yield</th><th>Franking Level</th><th>MER</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>VHY (Vanguard High Yield)</td><td>Australian high-yield shares</td><td>4.5–5.5%</td><td>Mostly franked</td><td>0.25%</td></tr>
-        <tr><td>IHD (iShares Dividend)</td><td>S&P/ASX Dividend Opportunities</td><td>4.0–5.0%</td><td>Mostly franked</td><td>0.30%</td></tr>
-        <tr><td>SYI (SPDR S&P/ASX 200 Listed Property)</td><td>REIT exposure</td><td>4.0–5.0%</td><td>Low/unfranked</td><td>0.40%</td></tr>
-      </tbody>
-    </table>
-    <p>Dividend ETFs have a structural limitation: they select for current high yield, which can lead to value traps — companies with high yields because the market expects the dividend to be cut. VHY excludes the lowest-quality high-yield stocks using quality screens, but some exposure remains.</p>
+    <h3>Infrastructure and Utilities</h3>
+    <p>APA Group, Transurban, and AGL occupy a unique space. They have regulated or contracted revenues — often indexed to inflation — making their income reliable. However, their dividends are sometimes partially franked or unfranked because they use significant tax depreciation to shelter income. Yields of 3–5% are common. These stocks act as bond-like income in a portfolio, particularly valuable during periods of economic uncertainty.</p>
+
+    <h3>REITs: Income Without Franking</h3>
+    <p>Australian Real Estate Investment Trusts (REITs) like Scentre Group, Charter Hall, and GPT Group are required by law to distribute at least 90% of their taxable income to unitholders. This produces yields of 4–6%, but distributions are typically unfranked because rental income doesn't go through the corporate tax system in the same way. REITs are still useful income investments — especially for investors in higher tax brackets who benefit less from franking anyway — but their tax treatment is different.</p>
 
 
+    <h2>Building a Dividend Portfolio: A Practical Framework</h2>
 
-    <h2>The Dividend Reinvestment Plan (DRP)</h2>
-    <p>Most major ASX companies offer a Dividend Reinvestment Plan that automatically uses dividend payments to buy additional shares, usually at a 1–2.5% discount to market price and with no brokerage. DRPs are an efficient way to compound income during the accumulation phase — you receive the franking credit offset at tax time while building a larger holding.</p>
-    <p>In retirement, switching from DRP to cash dividends provides the income stream without selling shares. This flexibility — accumulate via DRP, then switch to cash income — is one of the structural advantages of dividend investing over growth investing.</p>
-    <div class="blog-article__image" style="margin: 2.5rem 0;">
-      <img src="/assets/images/blog/dividend-investing-asx.png" alt="Dividend Investing Asx — key insights infographic" style="width:100%;height:auto;border-radius:var(--radius-md);border:1px solid var(--color-border);" loading="lazy">
+    <h3>Step 1 — Define Your Income Target</h3>
+    <p>Before selecting any stocks, work out how much income you need and how much capital you're investing. If you have A$500,000 and need A$25,000 per year in income, you need an effective grossed-up yield of 5%. That's achievable with a diversified ASX dividend portfolio. Use CalcPhi's <a href="/australia/investment-returns-calculator/">Investment Returns Calculator</a> to model different yield and capital combinations.</p>
+
+    <h3>Step 2 — Diversify Across Sectors</h3>
+    <p>A common mistake is building a portfolio that is essentially four bank stocks and BHP. This gives you high yield but enormous concentration risk. A more resilient structure spreads income across banks (30–35%), consumer staples (15–20%), infrastructure and utilities (15–20%), resources (10–15%), and healthcare or REITs (10–15%). This won't always maximise your yield in a good year, but it means a cyclical downturn in one sector doesn't devastate your income.</p>
+
+    <h3>Step 3 — Account for Tax in Your Calculations</h3>
+    <p>Your after-tax dividend income depends heavily on your personal tax rate. For a high-income earner in the 45% bracket, receiving franking credits means paying additional tax on dividends rather than receiving refunds. For a retiree in pension-phase super at 0% tax, every franking credit is a cash bonus. Know your marginal tax rate before building your strategy — it materially affects which stocks deliver the best after-tax return. CalcPhi's <a href="/australia/income-tax-calculator/">Income Tax Calculator</a> can help you model your exact marginal rate.</p>
+
+    <h3>Step 4 — Consider Dividend ETFs for Simplicity</h3>
+    <p>If selecting individual stocks feels overwhelming or you'd prefer to avoid single-company risk, ASX dividend ETFs offer a practical alternative. Vanguard's VHY (Australian High Yield ETF) tracks the highest-yielding ASX shares, currently paying around 4.5–5.5% with mostly franked distributions and a management expense ratio of just 0.25% per year. BlackRock's IHD tracks the S&P/ASX Dividend Opportunities Index with similar characteristics.</p>
+    <p>ETFs don't let you customise your franking level or exclude specific companies, but they offer instant diversification, low cost, and genuine simplicity. For most first-time dividend investors, starting with a dividend ETF and building individual stock positions over time is a sound approach.</p>
+    <p>Want to see exactly how your dividend portfolio would grow over time if you reinvest distributions? Use CalcPhi's <a href="/australia/compound-interest-calculator/">Compound Interest Calculator</a> to run the numbers — you can model annual contributions and see projected growth at any yield.</p>
+
+    <div style="margin: 2.5rem 0;">
+      <img src="/assets/images/blog/dividend-investing-asx.png" alt="ASX dividend investing — franking credits, high-yield sectors and portfolio strategy" style="width:100%;height:auto;border-radius:var(--radius-md);border:1px solid var(--color-border);" loading="lazy">
     </div>
 
 
+    <h2>The Dividend Reinvestment Plan (DRP): Compounding Without Brokerage</h2>
+    <p>Most major ASX companies offer Dividend Reinvestment Plans that automatically convert dividend payments into additional shares — usually at a 1–2.5% discount to market price and with no brokerage fee. During the accumulation phase of investing, DRPs are a powerful compounding tool. Instead of receiving $3,000 in cash dividends and then deciding when to reinvest, the DRP does it automatically at the ex-dividend price, often at a discount.</p>
+    <p>When you transition into retirement and need cash income, most companies allow you to switch off DRP participation at any time. This gives you flexibility: reinvest during accumulation, switch to cash distributions when you need income. This is one of the genuine structural advantages of dividend investing over growth investing for long-term wealth building.</p>
 
 
-    <h2>Frequently Asked Questions</h2>
-    <dl>
-      <dt>Is dividend investing better than total return investing?</dt>
-      <dd>Mathematically, they are equivalent. A company that pays a $1 dividend reduces its share price by $1 on the ex-dividend date — dividends are not "free money." Total return investing (holding growth-oriented companies, selling a small portion annually for income) produces the same outcome as dividend investing. The practical advantage of dividend investing is psychological and tax-related: regular income payments without selling, plus franking credit refunds for low-tax investors. Many investors find dividend income easier to manage than deciding when and how much to sell.</dd>
-      <dt>What happens to dividends during a recession?</dt>
-      <dd>Australian bank dividends were cut by 20–50% during COVID-19 in 2020 as the banks conserved capital under APRA guidance. They subsequently recovered. Resource sector dividends are highly cyclical — BHP's dividend in 2016 fell 75% from 2015 levels. Defensive sector dividends (Wesfarmers, Coles) were largely maintained. A diversified dividend portfolio across multiple sectors provides more resilience than bank-heavy concentration.</dd>
-      <dt>Do I need to hold shares on the record date to receive the dividend?</dt>
-      <dd>You must hold shares before the ex-dividend date (usually 2 business days before the record date) to be entitled to the dividend. If you buy on or after the ex-dividend date, you do not receive the upcoming dividend. The share price typically falls approximately by the dividend amount on the ex-dividend date, reflecting the cash leaving the company. Buying shares immediately before the ex-dividend date purely to capture a dividend is generally a zero-sum transaction.</dd>
-    </dl>
+    <h2>Dividend Investing in Superannuation</h2>
+    <p>Dividend shares inside superannuation are particularly tax-efficient. In accumulation phase, the super fund's earnings tax rate is 15% — meaning franking credits at 30% produce an excess credit refund of 15% of the grossed-up dividend. In pension phase, earnings tax drops to 0% and all franking credits are refunded in full.</p>
+    <p>A self-managed super fund (SMSF) or industry fund in pension phase holding $800,000 in fully franked ASX shares at 5% yield would receive $40,000 in cash dividends plus approximately $17,000 in ATO franking credit refunds — $57,000 in total annual income from an $800,000 investment. That's an effective return of over 7% with no active management required.</p>
+    <p>To model your superannuation balance and estimate what portfolio size you'd need to generate a target income, use CalcPhi's <a href="/australia/super-balance-calculator/">Super Balance Calculator</a>.</p>
 
 
+    <h2>Common Mistakes to Avoid</h2>
+    <p><strong>Chasing the highest yield</strong> is the most common dividend investing error. A share yielding 9% might look extraordinary — but ask yourself why the market has priced it to yield that much. Often it's because the market expects the dividend to be cut. A dividend cut triggers a share price fall and income reduction simultaneously — the worst outcome for an income investor. Sustainable dividends come from companies with strong cash flow, manageable payout ratios (dividends as a percentage of earnings), and a track record of maintaining payments through business cycles.</p>
+    <p><strong>Ignoring capital</strong> — assuming dividends make total return irrelevant — is the second major mistake. A company that pays a 6% dividend but whose share price falls 3% per year is delivering 3% total return, not 6%. Monitor the underlying businesses in your portfolio, not just the dividend cheques arriving in your account.</p>
 
 
     <div class="blog-article__cta">
-      <p>Use our Australia calculators:</p>
+      <p>Model your ASX dividend strategy with CalcPhi's free Australian calculators:</p>
+      <a href="/australia/franking-credits-calculator/" class="cta-link">Franking Credits Calculator →</a>
       <a href="/australia/income-tax-calculator/" class="cta-link">Income Tax Calculator →</a>
       <a href="/australia/super-balance-calculator/" class="cta-link">Super Balance Calculator →</a>
+      <a href="/australia/investment-returns-calculator/" class="cta-link">Investment Returns Calculator →</a>
+    </div>
+
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+
+      <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+        <h3 class="faq-q" itemprop="name">What is a good dividend yield on the ASX?</h3>
+        <div class="faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+          <div itemprop="text">
+            <p>A "good" yield depends on your tax situation and investment goals. For most Australian investors, a fully franked yield of 4–6% is considered attractive and realistic from quality ASX businesses. When grossed up for franking credits at the 30% corporate tax rate, this translates to an effective pre-tax yield of 5.7–8.6%. Be cautious of yields above 8% on individual stocks — these often signal that the market expects a dividend cut.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+        <h3 class="faq-q" itemprop="name">Are franking credit refunds still available in 2026?</h3>
+        <div class="faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+          <div itemprop="text">
+            <p>Yes. The dividend imputation system and cash refunds for excess franking credits remain intact under Australian tax law as of 2026. The ATO processes franking credit refunds as part of your annual tax return. Low-income earners, retirees, and pension-phase super funds benefit most from the refund mechanism.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+        <h3 class="faq-q" itemprop="name">How often do ASX companies pay dividends?</h3>
+        <div class="faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+          <div itemprop="text">
+            <p>Most large ASX companies pay dividends twice per year — an interim dividend (typically February/March) and a final dividend (typically August/September). Some smaller companies pay quarterly or annually. REITs often pay quarterly distributions. Unlike the US market, ASX companies do not typically pay monthly dividends, though a growing number of dividend ETFs distribute quarterly.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+        <h3 class="faq-q" itemprop="name">Do I need to hold shares for a minimum period to receive franking credits?</h3>
+        <div class="faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+          <div itemprop="text">
+            <p>Yes. The ATO's "45-day rule" requires you to hold shares "at risk" for at least 45 days around the ex-dividend date (excluding the day you buy and the day you sell) to be entitled to claim the franking credit offset. Small investors with total franking credits under $5,000 per year are exempt from this rule. The rule is designed to prevent investors from briefly buying shares, capturing the franking credit, and immediately selling.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+        <h3 class="faq-q" itemprop="name">Should I invest in ASX dividend shares directly or through an ETF?</h3>
+        <div class="faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+          <div itemprop="text">
+            <p>Both approaches work. Direct share ownership lets you customise your portfolio — maximising franking, excluding sectors you dislike, and selecting the companies you believe in. ETFs offer instant diversification, low cost, and simplicity. A common approach is to use a dividend ETF as the core of the portfolio and add individual high-conviction positions around it.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+        <h3 class="faq-q" itemprop="name">How do dividends interact with my income tax return?</h3>
+        <div class="faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+          <div itemprop="text">
+            <p>Dividends must be declared in your annual tax return as assessable income. The grossed-up amount (cash dividend plus franking credit) is included as taxable income, and the franking credit is applied as an offset against your total tax liability. If the offset exceeds your tax bill, the ATO refunds the excess. Your broker's annual tax statement will provide the dividend income and franking credit totals you need to complete your return.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="blog-article__disclaimer">
+      <p><strong>Disclaimer:</strong> The information in this article is for educational and estimation purposes only. It does not constitute financial advice, and the CalcPhi calculators referenced throughout are tools to assist your understanding — not personalised recommendations. Tax rules, dividend yields, and franking levels change over time. Always consult a qualified financial adviser and registered tax agent before making investment decisions.</p>
     </div>
 
     {% include "components/author-bio.njk" %}
