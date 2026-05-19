@@ -21,18 +21,19 @@ breadcrumbs:
 
   <div class="hub-content">
 
-    <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2rem;">
-      <span style="display:inline-block;padding:0.3rem 0.85rem;border-radius:2rem;font-size:0.8rem;font-weight:600;background:var(--color-muted);border:1px solid var(--color-border);color:var(--color-text-secondary);">Tax &mdash; 11</span>
-      <span style="display:inline-block;padding:0.3rem 0.85rem;border-radius:2rem;font-size:0.8rem;font-weight:600;background:var(--color-muted);border:1px solid var(--color-border);color:var(--color-text-secondary);">Investing &mdash; 11</span>
-      <span style="display:inline-block;padding:0.3rem 0.85rem;border-radius:2rem;font-size:0.8rem;font-weight:600;background:var(--color-muted);border:1px solid var(--color-border);color:var(--color-text-secondary);">Savings &mdash; 8</span>
-      <span style="display:inline-block;padding:0.3rem 0.85rem;border-radius:2rem;font-size:0.8rem;font-weight:600;background:var(--color-muted);border:1px solid var(--color-border);color:var(--color-text-secondary);">Retirement &mdash; 7</span>
-      <span style="display:inline-block;padding:0.3rem 0.85rem;border-radius:2rem;font-size:0.8rem;font-weight:600;background:var(--color-muted);border:1px solid var(--color-border);color:var(--color-text-secondary);">Real Estate &mdash; 5</span>
-      <span style="display:inline-block;padding:0.3rem 0.85rem;border-radius:2rem;font-size:0.8rem;font-weight:600;background:var(--color-muted);border:1px solid var(--color-border);color:var(--color-text-secondary);">Salary &mdash; 5</span>
-      <span style="display:inline-block;padding:0.3rem 0.85rem;border-radius:2rem;font-size:0.8rem;font-weight:600;background:var(--color-muted);border:1px solid var(--color-border);color:var(--color-text-secondary);">Loans &mdash; 4</span>
-      <span style="display:inline-block;padding:0.3rem 0.85rem;border-radius:2rem;font-size:0.8rem;font-weight:600;background:var(--color-muted);border:1px solid var(--color-border);color:var(--color-text-secondary);">Insurance &mdash; 1</span>
+    <div id="blog-filters" style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2rem;">
+      <button class="blog-filter-btn blog-filter-btn--active" data-category="all">All &mdash; 52</button>
+      <button class="blog-filter-btn" data-category="Tax">Tax &mdash; 11</button>
+      <button class="blog-filter-btn" data-category="Investing">Investing &mdash; 11</button>
+      <button class="blog-filter-btn" data-category="Savings">Savings &mdash; 8</button>
+      <button class="blog-filter-btn" data-category="Retirement">Retirement &mdash; 7</button>
+      <button class="blog-filter-btn" data-category="Real Estate">Real Estate &mdash; 5</button>
+      <button class="blog-filter-btn" data-category="Salary">Salary &mdash; 5</button>
+      <button class="blog-filter-btn" data-category="Loans">Loans &mdash; 4</button>
+      <button class="blog-filter-btn" data-category="Insurance">Insurance &mdash; 1</button>
     </div>
 
-    <div class="blog-grid">
+    <div class="blog-grid" id="blog-grid">
 
       {% for post in collections.indiaBlog %}
         {% set slug = post.url | replace("/india/blog/", "") | replace("/", "") %}
@@ -56,3 +57,52 @@ breadcrumbs:
     </div>
   </div>
 </main>
+
+<style>
+.blog-filter-btn {
+  display: inline-block;
+  padding: 0.3rem 0.85rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: var(--color-muted);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.blog-filter-btn:hover {
+  background: var(--color-border);
+  color: var(--color-text);
+}
+.blog-filter-btn--active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+</style>
+
+<script>
+(function () {
+  const btns = document.querySelectorAll('.blog-filter-btn');
+  const cards = document.querySelectorAll('#blog-grid .blog-card');
+
+  btns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const cat = btn.dataset.category;
+
+      btns.forEach(function (b) { b.classList.remove('blog-filter-btn--active'); });
+      btn.classList.add('blog-filter-btn--active');
+
+      cards.forEach(function (card) {
+        if (cat === 'all') {
+          card.style.display = '';
+        } else {
+          const tag = card.querySelector('.blog-card__tag');
+          card.style.display = (tag && tag.textContent.trim() === cat) ? '' : 'none';
+        }
+      });
+    });
+  });
+})();
+</script>

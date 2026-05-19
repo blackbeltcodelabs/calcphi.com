@@ -271,16 +271,23 @@ breadcrumbs:
       <strong>Related reading:</strong> <a href="/india/blog/how-to-save-tax-80c/">How to Save Maximum Tax Under Section 80C in 2026</a> · <a href="/india/blog/old-vs-new-tax-regime/">Old vs New Tax Regime FY 2026-27: Complete Comparison</a> · <a href="/india/blog/term-insurance-india-guide/">Term Insurance India 2026 — How Much Cover Do You Actually Need?</a>
     </div>
 
-    <div style="margin-top:1.5rem;padding:1rem 1.25rem;background:var(--color-muted);border-left:3px solid var(--color-border);border-radius:var(--radius-md);font-size:0.85rem;color:var(--color-text-secondary);">
-      <strong>Disclaimer:</strong> The information in this article is for educational and estimation purposes only and is accurate to the best of our knowledge for AY 2026-27. Tax laws can change, and individual circumstances vary significantly. Nothing in this article constitutes personalised financial or tax advice. Please consult a qualified Chartered Accountant or SEBI-registered financial advisor before making decisions based on your specific situation.
-    </div>
-
-    <div style="display:flex;align-items:flex-start;gap:1rem;margin-top:2.5rem;padding:1.5rem;background:var(--color-muted);border-radius:var(--radius-md);border:1px solid var(--color-border);">
-      <div style="width:48px;height:48px;border-radius:50%;background:#b45309;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:white;font-weight:700;font-size:1rem;">AM</div>
-      <div>
-        <div style="font-weight:600;color:var(--color-text);">Arjun Mehta, CA</div>
-        <div style="font-size:0.85rem;color:var(--color-text-secondary);margin-top:0.25rem;">Arjun is a Chartered Accountant with 12 years of experience in Indian taxation, home loans, and personal finance. He specialises in income tax planning, loan structuring, and financial compliance for salaried professionals and business owners.</div>
+        {% set author = authors[authorId] %}
+    <div class="author-bio-card">
+      <a href="{{ author.url }}" class="author-bio-card__img-link" aria-label="{{ author.name }}">
+        <img src="{{ author.image }}" alt="{{ author.name }}, {{ author.credentials }}" class="author-bio-card__photo" width="80" height="80" loading="lazy">
+      </a>
+      <div class="author-bio-card__body">
+        <p class="author-bio-card__label">Written &amp; verified by</p>
+        <p class="author-bio-card__name">
+          <a href="{{ author.url }}">{{ author.name }}</a><svg class="verified-badge" aria-label="Verified author" title="Verified" viewBox="0 0 20 20" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#1d9bf0"/><path d="M6 10.5l2.5 2.5L14 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="author-bio-card__creds">{{ author.credentials }}</span>
+        </p>
+        <p class="author-bio-card__title">{{ author.title }}</p>
+        <p class="author-bio-card__bio">{{ author.shortBio }}</p>
+        <a href="{{ author.url }}" class="author-bio-card__profile-link">View full profile →</a>
       </div>
+    </div>
+  </div>
     </div>
   </div>
 </main>
