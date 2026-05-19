@@ -98,7 +98,7 @@
     { "source": "/about.html", "destination": "/about/", "permanent": true },
     { "source": "/contact.html", "destination": "/contact/", "permanent": true },
     { "source": "/privacy.html", "destination": "/privacy/", "permanent": true },
-    { "source": "/about/authors/", "destination": "/india/authors/", "permanent": false },
+    { "source": "/about/authors/", "destination": "/india/authors/", "permanent": true },
     { "source": "/about/authors/priya-sharma/", "destination": "/india/authors/priya-sharma/", "permanent": true },
     { "source": "/about/authors/arjun-mehta/", "destination": "/india/authors/arjun-mehta/", "permanent": true },
     { "source": "/about/authors/deepa-krishnan/", "destination": "/india/authors/deepa-krishnan/", "permanent": true },

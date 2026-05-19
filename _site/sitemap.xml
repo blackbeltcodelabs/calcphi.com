@@ -734,12 +734,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.calcphi.com/about/authors/</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://www.calcphi.com/australia/authors/emma-hartley/</loc>
     <lastmod>2026-05-01</lastmod>
     <changefreq>yearly</changefreq>
@@ -780,24 +774,6 @@
     <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.calcphi.com/about/authors/emma-hartley/</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.calcphi.com/about/authors/james-obrien/</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.calcphi.com/about/authors/sarah-mitchell/</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.calcphi.com/australia/hecs-repayment-calculator/</loc>
@@ -1506,24 +1482,6 @@
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.calcphi.com/about/authors/deepa-krishnan/</loc>
-    <lastmod>2026-04-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.calcphi.com/about/authors/arjun-mehta/</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.calcphi.com/about/authors/priya-sharma/</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.calcphi.com/canada/</loc>
