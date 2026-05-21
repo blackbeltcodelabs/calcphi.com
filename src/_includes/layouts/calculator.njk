@@ -54,10 +54,6 @@ layout: layouts/base.njk
       }
     },
     {
-      "@type": "BreadcrumbList",
-      "itemListElement": [{% for crumb in breadcrumbs %}{"@type":"ListItem","position":{{ loop.index }},"name":{{ crumb.name | dump | safe }}{% if crumb.url %},"item":"{{ site.url }}{{ crumb.url }}"{% endif %}}{% if not loop.last %},{% endif %}{% endfor %}]
-    },
-    {
       "@type": "SpeakableSpecification",
       "cssSelector": [".definition-block", ".faq-a"]
     },
