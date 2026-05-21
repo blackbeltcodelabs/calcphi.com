@@ -32,7 +32,7 @@ layout: layouts/base.njk
       "@type": "Article",
       "headline": {{ h1 | dump | safe }},
       "description": {{ description | dump | safe }},
-      "datePublished": "{{ dateModified }}",
+      "datePublished": "{{ datePublished | default(dateModified) }}",
       "dateModified": "{{ dateModified }}",
       "author": {
         "@type": "Person",
