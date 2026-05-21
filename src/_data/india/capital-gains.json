@@ -74,46 +74,70 @@
   ],
   "howToSteps": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the inputs for the Capital Gains Tax Calculator."
+      "name": "Enter your purchase and sale prices",
+      "text": "Type the original purchase price and the sale price of your asset in rupees. For property, include stamp duty and registration costs in the purchase price — these are part of your cost of acquisition and reduce your taxable gain."
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time."
+      "name": "Set the holding period",
+      "text": "Enter how long you held the asset in years. The threshold that separates LTCG from STCG is 12 months for equity shares and equity mutual funds, and 24 months for property and gold. Getting this right determines which tax rate applies."
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year table."
+      "name": "Select the asset type",
+      "text": "Choose from Equity Shares / Equity MF, Debt MF / Bonds, Property / Real Estate, or Gold. The asset type determines the applicable tax rate: equity LTCG at 12.5% (above ₹1.25 lakh exemption), equity STCG at 20%, property LTCG at 12.5%, and debt at your income slab rate."
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust inputs to compare options."
+      "name": "Read your capital gains tax and net gain",
+      "text": "The calculator shows your total capital gain, whether it is classified as LTCG or STCG, the tax due, and your net gain after tax. For equity LTCG, the ₹1.25 lakh annual exemption is automatically applied. Use the year-by-year breakdown to see how the holding period affects your result."
     }
   ],
   "faq": [
     {
-      "q": "What are the capital gains tax rates in India 2026?",
-      "a": "Equity shares/MF (Budget 2024): LTCG (>1 year) at 12.5% above ₹1.25 lakh/year exemption; STCG (<1 year) at 20%. Debt MF/bonds: taxed at income slab rate (no LTCG/STCG distinction from FY 2024). Property: LTCG (>2 years) at 12.5% without indexation or 20% with indexation; STCG at slab rate."
+      "q": "What are the capital gains tax rates in India for FY 2025-26?",
+      "a": "For FY 2025–26 (AY 2026–27): equity LTCG (held over 12 months) is taxed at 12.5% on gains above ₹1.25 lakh per year; equity STCG (held 12 months or less) is taxed at 20% under Section 111A. Property LTCG (held over 24 months) is taxed at 12.5% without indexation for sales on or after July 23, 2024. Debt mutual funds (purchased from April 1, 2023) are taxed at your income slab rate regardless of holding period. These rates apply after Budget 2024 changes."
     },
     {
       "q": "What is the LTCG exemption limit for equity in India?",
-      "a": "Budget 2024 increased LTCG exemption to ₹1.25 lakh/year (from ₹1 lakh). Any equity LTCG above ₹1.25 lakh is taxed at 12.5%. For example, if you have ₹2 lakh LTCG: taxable = ₹75,000, tax = ₹9,375. You can plan redemptions across financial years to stay within the exemption."
+      "a": "Budget 2024 raised the annual LTCG exemption to ₹1.25 lakh per financial year, up from ₹1 lakh. This applies only to long-term gains on listed equity shares and equity-oriented mutual funds. The exemption resets on April 1 each year and cannot be carried forward. For example, if your equity LTCG is ₹2 lakh in FY 2025–26, only ₹75,000 is taxable at 12.5%, giving a tax of ₹9,375."
     },
     {
       "q": "Can I save LTCG tax on property sale?",
-      "a": "Yes. LTCG on property sale (held >2 years) can be reinvested: (a) in a new residential property (Section 54) within 2 years/3 years under construction, (b) in NHAI or REC bonds (Section 54EC) within 6 months — maximum ₹50 lakh, (c) Capital Gains Account Scheme while arranging reinvestment."
+      "a": "Yes, through two main routes. Under Section 54, reinvest the capital gains in a new residential property within 2 years (or construct within 3 years) and the reinvested amount is exempt — provided you do not own more than two residential houses at the time of sale. Under Section 54EC, invest up to ₹50 lakh in NHAI or REC bonds within 6 months of sale; the invested amount is exempt from LTCG tax with a 5-year lock-in period. Both exemptions require the property to have been held for over 24 months."
     },
     {
-      "q": "Is the Capital Gains Tax Calculator free?",
-      "a": "Yes, completely free on CalcPhi."
+      "q": "What is short-term capital gains tax on equity mutual funds?",
+      "a": "Short-term capital gains on equity-oriented mutual funds — those held for 12 months or less — are taxed at 20% under Section 111A of the Income Tax Act (revised upward from 15% by Budget 2024, effective July 23, 2024). STT must have been paid at the time of redemption, which it is automatically for all regular mutual fund transactions through exchanges or AMCs. This 20% rate is a flat rate, independent of your income tax slab."
     },
     {
-      "q": "Are my inputs stored?",
-      "a": "No. Calculations run in your browser."
+      "q": "How is LTCG calculated on the sale of shares?",
+      "a": "LTCG on listed shares (held over 12 months) = Sale price minus purchase price minus brokerage and transaction costs. Subtract ₹1.25 lakh annual exemption. Multiply the remaining amount by 12.5%. For shares purchased before January 31, 2018, the cost is the higher of the actual purchase price or the fair market value (FMV) as on January 31, 2018 — this is the grandfathering rule under Section 112A, which protects gains that accrued before the LTCG tax was reintroduced."
     },
     {
-      "q": "Is it mobile-friendly?",
-      "a": "Yes. Works on all smartphones."
+      "q": "What is Section 111A of the Income Tax Act?",
+      "a": "Section 111A governs short-term capital gains on listed equity shares, units of equity-oriented mutual funds, and units of a business trust, where Securities Transaction Tax (STT) has been paid. The tax rate under Section 111A is 20% for FY 2025–26 (raised from 15% by Budget 2024). This rate applies regardless of your income tax bracket. If the STT condition is not met — for example, off-market transfers — the gain is taxed at your applicable slab rate instead."
+    },
+    {
+      "q": "Does the ₹1.25 lakh LTCG exemption apply per transaction or per year?",
+      "a": "Per financial year, not per transaction. All your long-term equity gains across all stocks and equity mutual funds in a financial year are added together. The first ₹1.25 lakh of that combined total is tax-free; anything above is taxed at 12.5%. If you have gains of ₹60,000 from shares and ₹80,000 from equity mutual funds in FY 2025–26, your combined LTCG is ₹1.40 lakh, of which ₹15,000 is taxable at 12.5% — a tax of ₹1,875."
+    },
+    {
+      "q": "Is LTCG tax applicable on debt mutual funds?",
+      "a": "No, not in the traditional LTCG/STCG sense. Debt mutual funds purchased on or after April 1, 2023 are taxed entirely at your income slab rate — the holding period no longer matters. There is no separate LTCG rate or exemption for these funds. Debt funds purchased before April 1, 2023 retain the old treatment: LTCG (held over 36 months) at 20% with indexation. This change, introduced by the Finance Act 2023, significantly reduced the tax efficiency of debt funds for investors in higher tax brackets."
+    },
+    {
+      "q": "What changed in capital gains tax after Budget 2024?",
+      "a": "Budget 2024 (effective July 23, 2024) made four key changes: (1) STCG on listed equity rose from 15% to 20%. (2) LTCG on listed equity rose from 10% to 12.5%. (3) The annual LTCG exemption was raised from ₹1 lakh to ₹1.25 lakh. (4) Indexation benefit was removed for property sales on or after July 23, 2024 — sellers can no longer choose between 20% with indexation and 12.5% without; only 12.5% without indexation applies. Property sold before July 23, 2024 retains the choice between both methods."
+    },
+    {
+      "q": "How do I calculate capital gains on property sold in India?",
+      "a": "For property sold on or after July 23, 2024: Capital gain = Sale price minus (purchase price + stamp duty + registration + improvement costs). If held over 24 months, tax = gain × 12.5%. For property sold before July 23, 2024: you can index the purchase price using the Cost Inflation Index (CII). Indexed cost = purchase price × (CII of sale year ÷ CII of purchase year). Tax on indexed gain = 20%; tax on unindexed gain = 12.5%. Choose whichever results in lower tax. Transfer costs such as brokerage and legal fees reduce the taxable gain in all cases."
+    },
+    {
+      "q": "Can I use capital gains from property to buy another property and save tax?",
+      "a": "Yes, under Section 54 of the Income Tax Act. If you sell a residential property (held over 24 months) and reinvest the long-term capital gains — not the full sale proceeds, only the gains — in a new residential property, the reinvested amount is exempt from LTCG tax. The new property must be purchased within 2 years of sale or constructed within 3 years. You must not own more than two residential houses at the time of sale. The exemption amount is limited to the actual capital gains reinvested; any surplus gain is taxable at 12.5%."
+    },
+    {
+      "q": "What is Section 54EC and how does it save LTCG on property?",
+      "a": "Section 54EC allows you to invest long-term capital gains from the sale of any capital asset (not just property) into notified bonds — currently NHAI (National Highways Authority of India) and REC (Rural Electrification Corporation) bonds — within 6 months of the sale. The amount invested in these bonds is deducted from your taxable LTCG, up to a maximum of ₹50 lakh per financial year. The bonds carry a 5-year lock-in; redeeming them early triggers tax on the exempted gains. Interest earned on the bonds is taxable at your slab rate."
     }
   ],
   "examples": [
