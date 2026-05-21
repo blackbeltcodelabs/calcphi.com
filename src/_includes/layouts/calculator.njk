@@ -29,6 +29,31 @@ layout: layouts/base.njk
       "mainEntity": [{% for item in calcData.faq %}{"@type":"Question","name":{{ item.q | dump | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ item.a | dump | safe }}}}{% if not loop.last %},{% endif %}{% endfor %}]
     },
     {
+      "@type": "Article",
+      "headline": {{ h1 | dump | safe }},
+      "description": {{ description | dump | safe }},
+      "datePublished": "{{ dateModified }}",
+      "dateModified": "{{ dateModified }}",
+      "author": {
+        "@type": "Person",
+        "name": "{{ author }}",
+        "url": "https://www.calcphi.com{{ authorUrl }}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CalcPhi",
+        "url": "https://www.calcphi.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.calcphi.com/assets/images/calcphi-logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.calcphi.com{{ permalink }}"
+      }
+    },
+    {
       "@type": "BreadcrumbList",
       "itemListElement": [{% for crumb in breadcrumbs %}{"@type":"ListItem","position":{{ loop.index }},"name":{{ crumb.name | dump | safe }}{% if crumb.url %},"item":"{{ site.url }}{{ crumb.url }}"{% endif %}}{% if not loop.last %},{% endif %}{% endfor %}]
     },

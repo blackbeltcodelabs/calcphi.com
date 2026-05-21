@@ -2,6 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.calcphi.com/india/nps-calculator/</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.calcphi.com/australia/blog/dividend-investing-asx/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.calcphi.com/australia/blog/conveyancing-australia-guide/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.calcphi.com/australia/blog/compound-interest-wealth-building/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.calcphi.com/australia/blog/catch-up-super-contributions/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.calcphi.com/australia/blog/how-much-deposit-house-australia/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>yearly</changefreq>
@@ -75,30 +105,6 @@
   </url>
   <url>
     <loc>https://www.calcphi.com/australia/blog/dollar-cost-averaging-australia/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.calcphi.com/australia/blog/dividend-investing-asx/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.calcphi.com/australia/blog/conveyancing-australia-guide/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.calcphi.com/australia/blog/compound-interest-wealth-building/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.calcphi.com/australia/blog/catch-up-super-contributions/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
@@ -1551,12 +1557,6 @@
   </url>
   <url>
     <loc>https://www.calcphi.com/india/step-up-sip-calculator/</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.calcphi.com/india/nps-calculator/</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

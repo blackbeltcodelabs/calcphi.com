@@ -15,10 +15,10 @@
     { "id": "nps-monthly-pension", "label": "Estimated Monthly Pension" }
   ],
   "taxBenefits": [
-    "Contributions up to ₹1.5 lakh deductible under Section 80C",
-    "Additional ₹50,000 deductible under Section 80CCD(1B) — exclusive to NPS",
-    "Employer contributions up to 10% of salary deductible under Section 80CCD(2)",
-    "60% lump sum withdrawal at retirement is completely tax-free"
+    "Own contributions up to ₹1.5 lakh deductible under Section 80C (old tax regime only)",
+    "Additional ₹50,000 deductible under Section 80CCD(1B) — exclusive to NPS, old tax regime only",
+    "Employer NPS contributions up to 14% of basic salary deductible under Section 80CCD(2) — available in both old and new tax regimes (as of FY 2025–26)",
+    "Lump sum withdrawal at retirement is tax-free up to 60% of corpus; additional withdrawal permitted under December 2025 PFRDA reforms for non-government subscribers"
   ],
   "examples": [
     {
@@ -55,13 +55,13 @@
     },
     {
       "question": "Can you exit NPS before retirement?",
-      "answer": "Premature exit from NPS (Tier I) before age 60 requires at least 80% of the corpus to be used for annuity purchase — only 20% can be withdrawn as lump sum. This is less favourable than normal exit. After age 60, you can withdraw 60% tax-free. Full premature exit is allowed only for specific medical reasons."
+      "answer": "Premature exit from NPS Tier I before completing 15 years or reaching age 60 requires 80% of the corpus to go toward annuity — only 20% can be taken as lump sum. If the corpus is ₹5 lakh or less, 100% can be withdrawn. At normal exit (age 60+, after 15 years), the December 2025 PFRDA amendment now allows non-government subscribers to withdraw up to 80% as lump sum, with only 20% mandatory annuity — a significant improvement over the previous 60:40 rule. Government employees retain the 60:40 structure. Adjust the annuity slider in this calculator to model both scenarios."
     }
   ],
   "faq": [
     {
       "q": "What is the NPS scheme in India?",
-      "a": "NPS (National Pension System) is a government-regulated retirement savings scheme in India. Open to all Indian citizens aged 18–70, it allows market-linked investments across equity, corporate bonds, and government securities. At retirement (age 60), 60% of the corpus can be withdrawn tax-free; 40% must be used to buy an annuity for regular pension."
+      "a": "NPS (National Pension System) is a defined-contribution pension scheme regulated by PFRDA under the PFRDA Act, 2013. Open to all Indian citizens aged 18–70, it allows market-linked investments across equity, corporate bonds, and government securities. Following PFRDA's December 2025 amendments, non-government subscribers can withdraw up to 80% of their corpus as a lump sum at retirement, with only 20% mandatory annuity. Government employees retain the 60% lump sum / 40% annuity structure."
     },
     {
       "q": "What is the additional NPS tax benefit under 80CCD(1B)?",
@@ -73,7 +73,7 @@
     },
     {
       "q": "How much pension will I get from NPS?",
-      "a": "Pension from NPS depends on: (1) total corpus accumulated at retirement; (2) 40% of the corpus used for annuity; (3) annuity rate at the time of purchase (typically 5–7%). A ₹50 lakh annuity corpus at 6% annuity rate generates approximately ₹25,000/month in pension."
+      "a": "Your NPS pension depends on: (1) the total corpus you accumulate by retirement; (2) how much of that corpus goes to annuity — a minimum of 20% for non-government subscribers and 40% for government employees under PFRDA's December 2025 rules; (3) the annuity rate at the time of purchase, which typically ranges from 5–7% annually. As an example: a ₹50 lakh annuity corpus at 6% generates approximately ₹25,000/month. Use the calculator above to model your own numbers based on your contribution and timeline."
     },
     {
       "q": "Is NPS better than PPF for retirement?",
@@ -82,6 +82,30 @@
     {
       "q": "Can I have both EPF and NPS?",
       "a": "Yes. EPF and NPS are complementary retirement savings tools. EPF contributions are mandatory for most salaried employees. NPS is voluntary and provides an additional tax deduction under 80CCD(1B) not available through EPF. Most financial planners recommend both."
+    },
+    {
+      "q": "What is NPS Tier 1 and Tier 2 in India?",
+      "a": "NPS Tier I is the primary retirement account — contributions are tax-deductible, withdrawals are restricted until age 60, and at least 20% of the corpus (40% for government employees) must be used to buy an annuity at exit. NPS Tier II is a voluntary savings account with no tax deduction on contributions (except for central government employees), no lock-in, and no mandatory annuity — you can withdraw the full amount at any time. Tier I is where the tax benefits and retirement structure apply; Tier II is optional and works more like a flexible mutual fund. Use this calculator to model your Tier I retirement corpus."
+    },
+    {
+      "q": "Can I get NPS tax benefit under the new tax regime?",
+      "a": "Partly. The ₹50,000 additional deduction under Section 80CCD(1B) is available only under the old tax regime — it cannot be claimed if you opt for the new regime. Your own contributions under Section 80CCD(1) are also not deductible in the new regime. However, employer NPS contributions under Section 80CCD(2) are deductible even in the new tax regime — up to 14% of basic salary for both government and non-government employees as of FY 2025–26. If your employer offers NPS contributions, the new regime still gives you this benefit."
+    },
+    {
+      "q": "Can I withdraw NPS before 60?",
+      "a": "Premature exit from NPS Tier I (before age 60 and before completing 15 years) requires a minimum 80% of the corpus to be used for annuity purchase — only 20% can be withdrawn as a lump sum. If the total corpus is ₹5 lakh or less, 100% can be withdrawn. Partial withdrawals of up to 25% of your own contributions are allowed after 3 years for specific reasons — medical emergencies, children's education, home purchase, or skill development. Full premature exit is significantly less favourable than waiting until 60; use this calculator to see the corpus difference."
+    },
+    {
+      "q": "What happens to my NPS if I die before retirement?",
+      "a": "If an NPS subscriber dies before age 60, the entire accumulated corpus is paid to the registered nominee or legal heir as a lump sum — there is no mandatory annuity purchase requirement. The nominee receives 100% of the corpus, and the amount is fully tax-free in their hands. This is why registering a nominee in your NPS account is essential — without a nominee, the corpus goes through a legal heir claim process that can take significantly longer. You can nominate up to three nominees with different percentage allocations."
+    },
+    {
+      "q": "Which NPS fund manager gives the best returns?",
+      "a": "As of March 2025, for Tier I Scheme E (Equity), HDFC Pension Fund reported a 5-year return of approximately 23.56%, while Kotak Mahindra Pension (20.24%), ICICI Prudential Pension (20.16%), and UTI Pension (20.05%) outperformed the 5-year benchmark of 19.76%. Over longer periods (15+ years), ICICI Prudential, UTI Pension, and SBI Pension have compounded at 11–13% annually. Past returns do not guarantee future performance, and PFRDA allows you to switch fund managers once per year at no cost. Check PFRDA's weekly NAV data on the NPS Trust website for the latest figures."
+    },
+    {
+      "q": "How is NPS different from EPF?",
+      "a": "EPF (Employees' Provident Fund) is mandatory for salaried employees earning under ₹15,000/month (basic), offers a guaranteed return set by the EPFO board (8.25% for FY 2023–24), and allows 100% tax-free withdrawal after 5 years of continuous service. NPS is voluntary (for most), offers market-linked returns that have historically ranged from 10–13% for equity-heavy funds, but mandates that 20–40% of the corpus go to an annuity at exit — earning a lower guaranteed rate of 5–7%. Both qualify for Section 80C deductions up to ₹1.5 lakh, but only NPS gives the additional ₹50,000 under Section 80CCD(1B) in the old tax regime. For retirement planning, most financial planners treat EPF and NPS as complementary, not competing options."
     }
   ],
   "related": [
@@ -93,7 +117,7 @@
     { "name": "Enter Monthly Contribution", "text": "Enter how much you plan to contribute to NPS every month. ₹4,167/month claims the full ₹50,000 Section 80CCD(1B) deduction." },
     { "name": "Set Your Age Details", "text": "Enter your current age and planned retirement age. More years = significantly more corpus due to compounding." },
     { "name": "Set Return and Annuity Rates", "text": "Enter expected annual return (10% is reasonable for an equity-heavy allocation). Annuity rate of 6% is a realistic current estimate." },
-    { "name": "View Corpus and Pension", "text": "The calculator shows total corpus, the 60% lump sum withdrawal, annuity corpus (40%), and estimated monthly pension." }
+    { "name": "View Corpus and Pension", "text": "The calculator shows total corpus, the lump sum withdrawal, annuity corpus, and estimated monthly pension. Non-government subscribers can now withdraw up to 80% as lump sum under PFRDA's December 2025 amendment — adjust the annuity percentage to model the 80:20 or 60:40 scenario that applies to you." }
   ],
   "schema": {
     "appName": "NPS Calculator India",
