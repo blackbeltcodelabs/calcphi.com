@@ -114,6 +114,30 @@
     {
       "q": "What is the surcharge on income tax in India?",
       "a": "Surcharge applies on income above ₹50 lakh: ₹50L–₹1Cr: 10% surcharge on tax; ₹1Cr–₹2Cr: 15%; ₹2Cr–₹5Cr: 25%; above ₹5Cr: 37%. A health and education cess of 4% applies on (tax + surcharge) for all taxpayers."
+    },
+    {
+      "q": "What is the maximum total deduction I can claim under the old regime?",
+      "a": "For a salaried employee under the old regime, the maximum commonly available deductions are: ₹50,000 standard deduction, ₹1,50,000 under 80C, ₹50,000 under 80CCD(1B) for NPS, ₹75,000 under 80D (self + senior citizen parents), ₹2,00,000 under Section 24b (home loan interest), plus HRA exemption which varies by salary and city. Excluding HRA, this totals ₹5,25,000. Adding a meaningful HRA exemption can push total deductions to ₹6–8 lakh for metro residents."
+    },
+    {
+      "q": "Do I need to declare my chosen tax regime to my employer?",
+      "a": "Yes. At the start of each financial year, you need to inform your employer which regime you want to use for TDS calculation. If you do not declare, the employer deducts TDS under the new regime by default (since FY 2024-25). If you switch at ITR filing time, any difference is refunded or paid as a tax demand — but your monthly take-home salary is affected throughout the year, so it is better to declare upfront."
+    },
+    {
+      "q": "Is health insurance premium for parents deductible under the new tax regime?",
+      "a": "No. Section 80D deductions — including health insurance premiums for yourself, your spouse, children, and parents — are not available under the new tax regime. All deductions under Chapter VI-A (which includes 80C, 80D, 80CCD(1B)) are disallowed under the new regime. Only the ₹75,000 standard deduction, the employer's NPS contribution (80CCD(2)), and a few specific exemptions like gratuity and leave encashment survive."
+    },
+    {
+      "q": "What is marginal relief on surcharge and how does it work?",
+      "a": "Marginal relief prevents a situation where crossing a surcharge threshold results in paying more tax-plus-surcharge than the excess income. For example, if your income is ₹50.5 lakh (₹50,000 above the ₹50L threshold), the surcharge should not exceed ₹50,000. The calculator applies marginal relief automatically at each surcharge boundary. This relief is particularly relevant for incomes in the ₹50L–₹52L range."
+    },
+    {
+      "q": "How does Section 87A rebate work — is it deducted from income or from tax?",
+      "a": "Section 87A is a rebate on tax, not a deduction from income. It is applied after computing your tax liability on the full income using the applicable slabs. Under the new regime for FY 2026-27: if your taxable income (after standard deduction) is ₹12 lakh or below, the computed tax is fully cancelled by the 87A rebate, making your final tax liability zero. If income exceeds ₹12 lakh by even ₹1, the rebate does not apply and the full slab-rate tax is payable."
+    },
+    {
+      "q": "What is the income tax on ₹15 lakh under the new regime after standard deduction?",
+      "a": "Under the new tax regime for FY 2026-27: Gross salary ₹15,00,000 minus standard deduction ₹75,000 = taxable income ₹14,25,000. Tax on slabs: 0 on first ₹4L + ₹20,000 (5% on ₹4L–₹8L) + ₹40,000 (10% on ₹8L–₹12L) + ₹33,750 (15% on ₹12L–₹14.25L) = ₹93,750 base tax. Add 4% cess: total tax ₹97,500. No surcharge applies below ₹50L."
     }
   ],
   "related": [

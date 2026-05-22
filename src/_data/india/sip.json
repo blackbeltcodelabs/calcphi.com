@@ -81,6 +81,30 @@
     {
       "q": "What is the best SIP duration for maximum returns?",
       "a": "Longer durations always produce higher returns due to compounding. A 20-year SIP generates 4–5x more wealth than a 10-year SIP at the same monthly amount and return rate. Start as early as possible and stay invested through market cycles for best results."
+    },
+    {
+      "q": "What is LTCG tax on SIP equity mutual fund redemptions in 2026?",
+      "a": "Under current rules (FY 2026-27), equity mutual fund SIP units held for more than 12 months attract Long Term Capital Gains (LTCG) tax at 12.5% on gains exceeding ₹1.25 lakh in a financial year. Units redeemed within 12 months are taxed at 20% (Short Term Capital Gains). Since every monthly SIP instalment has its own 12-month holding period, only instalments older than one year qualify for LTCG treatment at the time of redemption."
+    },
+    {
+      "q": "What is a step-up SIP and is it worth doing?",
+      "a": "A step-up SIP (also called top-up SIP) automatically increases your monthly investment by a fixed percentage — typically 10–15% — each year. Starting at ₹10,000/month at 12% return for 20 years builds approximately ₹99 lakh. The same SIP with a 10% annual step-up grows to approximately ₹1.9 crore — nearly double — because the increasing contributions compound over time. Step-up SIPs are especially effective when your income grows annually."
+    },
+    {
+      "q": "Is SIP in an ELSS fund eligible for Section 80C deduction?",
+      "a": "Yes. SIP investments in ELSS (Equity Linked Savings Scheme) mutual funds qualify for Section 80C deduction under the old tax regime, up to a combined 80C limit of ₹1.5 lakh per year. ELSS has a 3-year lock-in on each instalment — each monthly SIP instalment is locked in for 3 years from its investment date. After the lock-in, the units can be redeemed and LTCG tax applies at 12.5% on gains above ₹1.25 lakh."
+    },
+    {
+      "q": "What happens to my SIP if the market falls sharply?",
+      "a": "A market fall actually benefits a long-term SIP investor through rupee cost averaging: your fixed monthly amount buys more units when prices are lower, reducing your average cost per unit over time. Historically, Indian equity markets have recovered from every downturn over a 5+ year period. Stopping a SIP during a market fall locks in the loss and removes the recovery upside. Unless you need the money urgently, staying invested through volatility is the mathematically sound approach."
+    },
+    {
+      "q": "Can I run multiple SIPs in different mutual funds?",
+      "a": "Yes. You can run as many simultaneous SIPs as you want across different AMCs and fund categories. A common approach is to split your monthly investment across a large-cap index fund, a flexi-cap fund, and a mid-cap fund for diversification. There is no regulatory limit on the number of SIPs you can hold. Each SIP is tracked separately with its own holding period for tax purposes."
+    },
+    {
+      "q": "What is the difference between a direct and a regular SIP plan?",
+      "a": "A direct plan SIP is bought directly from the AMC (Asset Management Company) without a distributor. It has a lower expense ratio — typically 0.5–1.0% lower than the regular plan — because no distributor commission is paid. A regular plan is bought through a bank, broker, or app that earns commission from the AMC. Over 20 years, a 1% difference in expense ratio on a ₹10,000/month SIP can reduce the final corpus by ₹15–25 lakh. Use direct plans unless you are paying for active financial advice that justifies the higher cost."
     }
   ],
   "related": [
