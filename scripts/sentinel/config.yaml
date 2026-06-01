@@ -1,0 +1,45 @@
+site:
+  base_url: "https://www.calcphi.com"
+  sitemap: "https://www.calcphi.com/sitemap.xml"
+  crawl_delay_seconds: 0.5
+  max_pages: 300
+
+thresholds:
+  min_word_count: 500
+  max_dup_similarity: 0.85
+  max_dup_pct_of_page: 0.40
+  min_pass_rate: 0.95
+  max_dup_clusters: 2
+
+scoring_weights:
+  word_count: 15
+  info_gain: 25
+  editorial_depth: 15
+  eeat: 15
+  js_dependency: 10
+  meta_unique: 5
+  not_placeholder: 5
+  internal_links: 5
+  layout_readiness: 5
+
+strip_selectors:
+  - "nav"
+  - "footer"
+  - ".calculator-links"
+  - ".sidebar"
+  - ".breadcrumb"
+  - "[aria-label='breadcrumb']"
+  - ".related-calculators"
+
+placeholder_signals:
+  - "coming soon"
+  - "launching 2026"
+  - "under construction"
+  - "stay tuned"
+
+editorial_blocks:
+  intro_heading_patterns: ["h1", "h2"]
+  example_patterns: ["real-world", "example", "scenario", "case"]
+  methodology_patterns: ["how it works", "formula", "calculation", "method"]
+  faq_min_items: 3
+  usage_patterns: ["how to use", "what to do", "next step"]
