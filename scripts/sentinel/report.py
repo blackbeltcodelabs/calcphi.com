@@ -308,6 +308,8 @@ def run_report():
         "site": cfg["site"]["base_url"],
         "rollup": rollup,
         "pages": scores,
+        "failing_pages": failing_pages,
+        "clusters": clusters.get("clusters", []),
     }
 
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
