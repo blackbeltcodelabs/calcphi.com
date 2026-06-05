@@ -13,6 +13,27 @@ If the SEO Orchestrator agent is present, it should read
 reports/adsense/latest.json after each run and surface the 
 adsense_ready boolean and blocking_reasons as action items.
 
+## Legal Rescan
+
+Rescan a single page after applying a compliance fix and update its verdict.
+
+Trigger: "rescan legal compliance for <url>"
+Example: "rescan legal compliance for /australia/blog/australia-income-tax-brackets-2026/"
+
+Execution order:
+1. Run `python3 scripts/legal/rescan.py <url>` — reads _site/ HTML, runs
+   rule-based compliance check for the known issue type, updates verdict in
+   war-room/data/legal/issues.json (green if pass, unchanged if still failing).
+2. Run `python3 scripts/legal/rescan.py --show` to see current all verdicts.
+3. Copy updated data to war-room and push:
+   cp reports/legal/rescan_report.json /Users/rahulbhattacharya/Desktop/war-room/data/legal/rescan_report.json
+   cd /Users/rahulbhattacharya/Desktop/war-room && git add data/legal/ && git commit -m "Legal: rescan" && git push
+
+To rescan ALL pages at once: `python3 scripts/legal/rescan.py --all`
+
+Note: The command `/legal-rescan` is NOT a registered slash command. Use the
+natural language trigger above or run the python script directly.
+
 ## Legal Fixer
 
 The legal-fixer agent reads war-room/data/legal/issues.json and fixes every
