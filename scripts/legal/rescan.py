@@ -355,8 +355,9 @@ def main():
         print(f"  Written: {SUMMARY_PATH}")
 
         REPORT_DIR.mkdir(parents=True, exist_ok=True)
+        now = datetime.now(timezone.utc)
         report = {
-            "run_at": datetime.now(timezone.utc).isoformat(),
+            "run_at": now.isoformat(),
             "urls_scanned": len(urls_to_scan),
             "verdicts_changed": changed_count,
             "results": results,
@@ -364,6 +365,31 @@ def main():
         out = REPORT_DIR / "rescan_report.json"
         out.write_text(json.dumps(report, indent=2, ensure_ascii=False))
         print(f"  Report: {out}")
+
+        # Append to scan-log.jsonl so the war-room history table stays current
+        scan_id = now.strftime("%Y-%m-%dT%H%M%SZ")
+        scope_url = urls_to_scan[0] if len(urls_to_scan) == 1 else None
+        country = "all"
+        if scope_url:
+            if "/india/" in scope_url:
+                country = "india"
+            elif "/australia/" in scope_url:
+                country = "australia"
+        log_entry = {
+            "scanId": scan_id,
+            "date": now.strftime("%Y-%m-%d"),
+            "type": "rescan",
+            "country": country,
+            "url": scope_url,
+            "pagesScanned": len(urls_to_scan),
+            "red": summary["red"],
+            "orange": summary["orange"],
+            "green": summary["green"],
+        }
+        log_path = WAR_ROOM / "data" / "legal" / "scan-log.jsonl"
+        if log_path.exists():
+            with open(log_path, "a") as f:
+                f.write(json.dumps(log_entry) + "\n")
 
         print(f"\n  Next — push to War Room:")
         print(f"    cp {out} /Users/rahulbhattacharya/Desktop/war-room/data/legal/rescan_report.json")
