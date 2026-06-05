@@ -66,7 +66,20 @@ def fetch_raw(url: str) -> str:
 
 
 def fetch_rendered(url: str, page) -> str:
-    page.goto(url, wait_until="networkidle", timeout=30000)
+    """
+    Fetch the JS-rendered HTML for a URL.
+    Strategy:
+      1. Try networkidle with 60s — catches fully-loaded pages.
+      2. On timeout, fall back to domcontentloaded with 30s — faster,
+         still captures all static content (good enough for scoring).
+      3. If both fail, raise so the caller can skip gracefully.
+    """
+    try:
+        page.goto(url, wait_until="networkidle", timeout=60000)
+    except Exception:
+        # networkidle timed out (common on Vercel cold-start with analytics/font requests).
+        # domcontentloaded completes as soon as the HTML is parsed — sufficient for prose scoring.
+        page.goto(url, wait_until="domcontentloaded", timeout=30000)
     return page.content()
 
 
@@ -127,14 +140,20 @@ def crawl():
             rendered_path = CACHE_RENDERED / f"{slug}.html"
 
             try:
-                # Raw (no JS)
+                # Raw HTML (no JS — fast requests-based fetch)
                 raw_html = fetch_raw(url)
                 raw_path.write_text(raw_html, encoding="utf-8")
 
-                # Rendered (with JS)
-                rendered_html = fetch_rendered(url, page)
-                rendered_path.write_text(rendered_html, encoding="utf-8")
+                # Rendered HTML (with JS — Playwright with fallback strategy)
+                try:
+                    rendered_html = fetch_rendered(url, page)
+                except Exception:
+                    # Both networkidle and domcontentloaded failed.
+                    # Use raw HTML as rendered fallback so the page still gets scored.
+                    rendered_html = raw_html
+                    print(f"\n  WARN {url}: Playwright timed out twice — using raw HTML for rendered cache")
 
+                rendered_path.write_text(rendered_html, encoding="utf-8")
                 url_map[url] = slug
             except Exception as e:
                 print(f"\n  ERROR {url}: {e}")
