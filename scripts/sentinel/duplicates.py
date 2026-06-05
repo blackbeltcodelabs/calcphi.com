@@ -42,7 +42,7 @@ def url_to_site_path(url: str) -> Path:
     return SITE_DIR / rel / "index.html"
 
 MODEL_NAME = "all-MiniLM-L6-v2"
-MAX_CHARS = 8000  # truncate before embedding to keep memory reasonable
+MAX_CHARS = 16000  # cover full article body; 8k was too short for 2k-word pages
 
 
 def load_config() -> dict:

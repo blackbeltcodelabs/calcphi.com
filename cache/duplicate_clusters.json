@@ -1,0 +1,34 @@
+{
+  "total_clusters": 2,
+  "threshold_used": 0.85,
+  "clusters": [
+    [
+      {
+        "url": "https://www.calcphi.com/australia/blog/first-home-buyer/",
+        "slug": "0d93c1cd243d06d878dd4f64fc4947a3",
+        "score": 25,
+        "max_similarity": 0.9164254069328308
+      },
+      {
+        "url": "https://www.calcphi.com/australia/blog/how-to-save-house-deposit-australia-2026/",
+        "slug": "c196b7d14c476d0bb3a9e12312c4137e",
+        "score": 25,
+        "max_similarity": 0.9164254069328308
+      }
+    ],
+    [
+      {
+        "url": "https://www.calcphi.com/india/blog/how-much-to-retire-at-50/",
+        "slug": "b88847d3d2bf03b0fda17659e9ff1c1c",
+        "score": 25,
+        "max_similarity": 0.8900951147079468
+      },
+      {
+        "url": "https://www.calcphi.com/india/blog/how-to-plan-retirement-india/",
+        "slug": "0514b07ac1ce6cc56f5e0e5be16c0e41",
+        "score": 25,
+        "max_similarity": 0.8900951147079468
+      }
+    ]
+  ]
+}

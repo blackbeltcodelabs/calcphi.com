@@ -1,0 +1,2442 @@
+{
+  "run_at": "2026-06-05T13:48:38.027264+00:00",
+  "dry_run": false,
+  "pages_evaluated": 269,
+  "pages_fixed": 1,
+  "pages_now_pass": 1,
+  "pages_still_fail": 4,
+  "pages_skipped": 266,
+  "pages": [
+    {
+      "url": "https://www.calcphi.com/india/blog/section-111a/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/capital-gains-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/nps-tax-benefits/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/nps-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/dividend-investing-asx/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/conveyancing-australia-guide/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/compound-interest-wealth-building/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/catch-up-super-contributions/",
+      "original_score": 100,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 100,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/how-much-deposit-house-australia/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/home-loan-pre-approval-guide/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/hecs-help-repayment-guide/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/franking-credits-explained/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/fixed-vs-variable-mortgage/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/first-home-buyer-mistakes/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/first-home-buyer/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/fire-movement-australia/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/etfs-vs-managed-funds-australia/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/emergency-fund-australia/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/dollar-cost-averaging-australia/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/fire-india-retire-at-40/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/ctc-vs-in-hand-salary/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/section-80d-health-insurance/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/how-to-choose-sip-fund/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/how-much-to-retire-at-50/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/home-loan-vs-rent/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/post-office-schemes-vs-bank-fd/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/credit-score-india-guide/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/gratuity-calculation-guide/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/expense-ratio-explained/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/income-tax-on-fd/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/fd-vs-debt-mutual-fund/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/sip-returns-what-12-percent-means/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/nps-tier-1-vs-tier-2/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/term-insurance-india-guide/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/personal-loan-true-cost/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/car-loan-vs-buying-outright/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/car-loan-vs-paying-outright-australia/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/how-to-build-emergency-fund-india/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/how-to-read-mutual-fund-factsheet/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/how-to-save-tax-80c/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/direct-vs-regular-mutual-funds/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/esops-india-guide/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/understanding-payslip/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/rd-vs-fd/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/what-is-fire-financial-independence/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/advance-tax-guide/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/epf-balance-guide/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/cagr-vs-xirr/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/elss-vs-ppf-tax-saving/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/financial-planning-30s-india/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/best-savings-account-interest-2026/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/senior-citizen-savings-vs-fd/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/property-registration-stamp-duty/",
+      "original_score": 100,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 100,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/under-construction-vs-ready-to-move/",
+      "original_score": 100,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 100,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/tds-on-salary-form-16/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/step-up-sip-power/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/sip-vs-lumpsum/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/retire-early-india-guide/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/rental-property-roi-india/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/ppf-vs-nps-vs-fd/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/old-vs-new-tax-regime/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/nsc-vs-kvp-post-office/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/itr-filing-guide-2026/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/hra-exemption-guide/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/how-to-plan-retirement-india/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/best-sip-amount-by-salary/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/apy-vs-nps/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/when-can-i-access-super/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/tax-deductions-working-from-home/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/super-investment-options/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/super-death-benefits/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/stamp-duty-australia-guide/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/interest-only-loans-australia/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/how-to-start-investing-australia/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/how-to-refinance-mortgage/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/how-to-reduce-tax-australia/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/how-much-super-to-retire/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/capital-gains-tax-property-australia/",
+      "original_score": 80,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 80,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/buying-vs-renting-australia/",
+      "original_score": 80,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 80,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/building-vs-buying-house-australia/",
+      "original_score": 80,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 80,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/australian-shares-vs-property/",
+      "original_score": 80,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 80,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/australia-income-tax-brackets-2026/",
+      "original_score": 80,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 80,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/age-pension-australia-guide/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/blog/au/salary-sacrifice-super-guide/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/blog/au/capital-gains-tax-australia/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/blog/au/first-home-buyer-australia-guide/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/balance-transfer-home-loan/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/capital-gains-tax-india/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/salary-increment-guide/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/home-loan-prepayment-vs-investing/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/blog/sip-vs-fd-which-is-better/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/404.html",
+      "original_score": 50,
+      "fixes_applied": [],
+      "fixes_skipped": [
+        "Placeholder page \u2014 requires content development, not auto-fixed"
+      ],
+      "status": "placeholder_skip",
+      "projected_score": 50,
+      "projected_status": "FAIL"
+    },
+    {
+      "url": "https://www.calcphi.com/india/help/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/help/",
+      "original_score": 80,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 80,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/markets/",
+      "original_score": 45,
+      "fixes_applied": [],
+      "fixes_skipped": [
+        "Placeholder page \u2014 requires content development, not auto-fixed"
+      ],
+      "status": "placeholder_skip",
+      "projected_score": 45,
+      "projected_status": "FAIL"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/budget-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/net-worth-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/redundancy-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/negative-gearing-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/savings-goal-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/rental-yield-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/term-deposit-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/extra-repayment-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/borrowing-power-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/stamp-duty-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/authors/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/authors/emma-hartley/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/authors/james-obrien/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/authors/sarah-mitchell/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/authors/deepa-krishnan/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/authors/arjun-mehta/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/authors/priya-sharma/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/authors/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/hecs-repayment-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/personal-loan-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/car-loan-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/investment-returns-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/franking-credits-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/compound-interest-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/super-comparison-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/age-pension-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/salary-sacrifice-calculator/",
+      "original_score": 60,
+      "fixes_applied": [],
+      "fixes_skipped": [
+        "F1:regulatory_source (already present in HTML)"
+      ],
+      "status": "no_fix_available",
+      "projected_score": 60,
+      "projected_status": "FAIL"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/super-balance-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/payg-withholding-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/salary-take-home-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/capital-gains-tax-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/income-tax-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/first-home-buyer-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/rent-vs-buy-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/refinance-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/lmi-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/offset-account-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/mortgage-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/moratorium-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/gst-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/apy-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/surcharge-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/scss-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/nsc-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/tds-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/nav-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/ssy-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/annuity-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/vrs-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/kvp-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/esop-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/ulip-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/overdraft-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/epf-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/tds-on-salary-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/professional-tax-calc-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/overtime-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/salary-hike-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/property-tax-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/mortgage-refinance-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/leave-encashment-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/gratuity-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/epf-contribution-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/ctc-to-in-hand-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/bonus-tax-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/under-construction-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/stamp-duty-calculator/",
+      "original_score": 60,
+      "fixes_applied": [],
+      "fixes_skipped": [
+        "F1:regulatory_source (already present in HTML)"
+      ],
+      "status": "no_fix_available",
+      "projected_score": 60,
+      "projected_status": "FAIL"
+    },
+    {
+      "url": "https://www.calcphi.com/india/rental-yield-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/rent-vs-buy-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/real-estate-roi-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/property-registration-calculator/",
+      "original_score": 60,
+      "fixes_applied": [
+        "F1:regulatory_source+author+date"
+      ],
+      "fixes_skipped": [],
+      "status": "fixed",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/property-appreciation-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/home-loan-insurance-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/home-affordability-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/term-insurance-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/motor-insurance-idv-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/life-insurance-needs-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/health-insurance-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/early-retirement-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/critical-illness-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/child-education-plan-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/swp-retirement-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/retirement-timeline-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/retirement-corpus-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/ppf-epf-nps-compare-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/pension-income-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/inflation-retirement-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/fire-number-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/two-wheeler-loan-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/loan-prepayment-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/loan-eligibility-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/flat-vs-reducing-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/credit-card-emi-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/balance-transfer-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/personal-loan-emi-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/loan-against-property-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/home-loan-emi-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/gold-loan-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/flexi-deposit-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/education-loan-emi-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/car-loan-emi-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/business-loan-emi-calculator/",
+      "original_score": 100,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 100,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/sweep-in-fd-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/simple-interest-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/savings-account-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/nre-fd-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/fd-vs-rd-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/compound-interest-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/bank-rate-comparison-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/tax-saver-fd-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/senior-citizen-fd-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/eps-pension-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/post-office-td-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/post-office-rd-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/post-office-mis-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/tds-on-fd-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/section-80d-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/professional-tax-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/new-vs-old-regime-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/home-loan-tax-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/bonus-after-tax-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/section-80c-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/gst-reverse-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/advance-tax-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/stp-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/sip-vs-lumpsum-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/sip-delay-cost-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/mf-returns-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/inflation-adjusted-returns-calculator/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/goal-sip-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/expense-ratio-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/direct-vs-regular-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/swp-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/elss-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/cagr-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/canada/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/usa/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/help/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/privacy/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/contact/",
+      "original_score": 100,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 100,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/about/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/hra-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/income-tax-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/rd-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/lumpsum-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/step-up-sip-calculator/",
+      "original_score": 100,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 100,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/fd-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/ppf-calculator/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/emi-calculator/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/india/sip-calculator/",
+      "original_score": 100,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 100,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/first-home-buyer-grants-australia-2026/",
+      "original_score": 100,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 100,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/lenders-mortgage-insurance-australia/",
+      "original_score": 100,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 100,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/australia-tax-guide-2026-27/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/australia-superannuation-guide-2026/",
+      "original_score": 100,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 100,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/super-investment-options-australia/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/pay-off-mortgage-early-australia/",
+      "original_score": 100,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 100,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/offset-account-vs-redraw-australia/",
+      "original_score": 100,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 100,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/negative-gearing-australia-2026/",
+      "original_score": 100,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 100,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/mortgage-borrowing-capacity-australia-2026/",
+      "original_score": 100,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 100,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/medicare-levy-surcharge-australia/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/how-to-save-house-deposit-australia-2026/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/australia-home-loans-guide-2026/",
+      "original_score": 100,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 100,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/super-contribution-caps-2026-27/",
+      "original_score": 100,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 100,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/super-death-benefits-australia/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/stamp-duty-australia-2026-state-by-state-guide/",
+      "original_score": 70,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 70,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/spouse-super-contributions-australia/",
+      "original_score": 100,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 100,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/smsf-australia-worth-it-2026/",
+      "original_score": 100,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 100,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/salary-sacrifice-super-australia/",
+      "original_score": 75,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 75,
+      "projected_status": "PASS"
+    },
+    {
+      "url": "https://www.calcphi.com/australia/blog/investing-guide-australia/",
+      "original_score": 85,
+      "fixes_applied": [],
+      "fixes_skipped": [],
+      "status": "already_passing",
+      "projected_score": 85,
+      "projected_status": "PASS"
+    }
+  ]
+}

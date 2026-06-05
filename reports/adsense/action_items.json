@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-06-05T15:20:43.252741+00:00",
+  "rollup": {
+    "pages_total": 267,
+    "pages_pass": 267,
+    "pages_fail": 0,
+    "pages_error": 0,
+    "pass_rate": 1.0,
+    "near_duplicate_clusters": 3,
+    "anonymous_author_pages": 0,
+    "placeholder_pages": 0,
+    "js_dependent_pages": 0,
+    "adsense_ready": false,
+    "blocking_reasons": [
+      "3 near-duplicate cluster(s) > allowed 2"
+    ]
+  },
+  "action_items": [
+    {
+      "type": "dup_cluster",
+      "cluster_type": "BLOG",
+      "urls": [
+        "https://www.calcphi.com/australia/blog/first-home-buyer/",
+        "https://www.calcphi.com/australia/blog/how-to-save-house-deposit-australia-2026/"
+      ],
+      "max_similarity": 0.8572026491165161,
+      "action": "Add unique differentiating content section to each page"
+    },
+    {
+      "type": "dup_cluster",
+      "cluster_type": "BLOG",
+      "urls": [
+        "https://www.calcphi.com/india/blog/what-is-fire-financial-independence/",
+        "https://www.calcphi.com/india/blog/retire-early-india-guide/",
+        "https://www.calcphi.com/india/blog/fire-india-retire-at-40/"
+      ],
+      "max_similarity": 0.8670890927314758,
+      "action": "Add unique differentiating content section to each page"
+    },
+    {
+      "type": "dup_cluster",
+      "cluster_type": "BLOG",
+      "urls": [
+        "https://www.calcphi.com/india/blog/how-much-to-retire-at-50/",
+        "https://www.calcphi.com/india/blog/how-to-plan-retirement-india/"
+      ],
+      "max_similarity": 0.8746320009231567,
+      "action": "Add unique differentiating content section to each page"
+    }
+  ]
+}
