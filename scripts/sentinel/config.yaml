@@ -76,6 +76,16 @@ dup_family_zones:
     urls:
       - "https://www.calcphi.com/australia/stamp-duty-calculator/"
       - "https://www.calcphi.com/australia/first-home-buyer-calculator/"
+  # Blog companion series — topically related articles serving distinct user intents.
+  # High semantic similarity is expected and correct; not thin/duplicate content.
+  - name: "Australia First Home Buyer Series"
+    urls:
+      - "https://www.calcphi.com/australia/blog/first-home-buyer/"
+      - "https://www.calcphi.com/australia/blog/how-to-save-house-deposit-australia-2026/"
+  - name: "India Retirement Planning Series"
+    urls:
+      - "https://www.calcphi.com/india/blog/how-much-to-retire-at-50/"
+      - "https://www.calcphi.com/india/blog/how-to-plan-retirement-india/"
 
 scoring_weights:
   word_count: 15

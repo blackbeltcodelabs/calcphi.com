@@ -92,14 +92,14 @@
     "title": "Capital Gains Tax Calculator India 2026 \u2013 LTCG & STCG | CalcPhi",
     "score": 100,
     "status": "PASS",
-    "word_count": 2222,
+    "word_count": 2245,
     "is_placeholder": false,
     "is_js_dependent": false,
     "has_author": true,
     "signals": [
       {
         "signal": "word_count",
-        "value": 2222,
+        "value": 2245,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -266,14 +266,14 @@
     "title": "NPS Calculator India 2026 \u2013 Pension & Corpus | CalcPhi",
     "score": 100,
     "status": "PASS",
-    "word_count": 2376,
+    "word_count": 2386,
     "is_placeholder": false,
     "is_js_dependent": false,
     "has_author": true,
     "signals": [
       {
         "signal": "word_count",
-        "value": 2376,
+        "value": 2386,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -1199,14 +1199,14 @@
     "title": "First Home Buyer Australia 2026: The Complete Guide From Saving to Settlement | CalcPhi",
     "score": 100,
     "status": "PASS",
-    "word_count": 3639,
+    "word_count": 4078,
     "is_placeholder": false,
     "is_js_dependent": false,
     "has_author": true,
     "signals": [
       {
         "signal": "word_count",
-        "value": 3639,
+        "value": 4078,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -2061,14 +2061,14 @@
     "title": "Retire at 50 in India: Exact Corpus Needed & How to Build It | CalcPhi",
     "score": 100,
     "status": "PASS",
-    "word_count": 3251,
+    "word_count": 3543,
     "is_placeholder": false,
     "is_js_dependent": false,
     "has_author": true,
     "signals": [
       {
         "signal": "word_count",
-        "value": 3251,
+        "value": 3543,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -5240,14 +5240,14 @@
     "title": "Old vs New Tax Regime FY 2026-27: Which Saves More? | CalcPhi",
     "score": 100,
     "status": "PASS",
-    "word_count": 2275,
+    "word_count": 2284,
     "is_placeholder": false,
     "is_js_dependent": false,
     "has_author": true,
     "signals": [
       {
         "signal": "word_count",
-        "value": 2275,
+        "value": 2284,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -5588,14 +5588,14 @@
     "title": "How to Plan Retirement in India 2026 \u2014 Step-by-Step Guide | CalcPhi",
     "score": 100,
     "status": "PASS",
-    "word_count": 3175,
+    "word_count": 3476,
     "is_placeholder": false,
     "is_js_dependent": false,
     "has_author": true,
     "signals": [
       {
         "signal": "word_count",
-        "value": 3175,
+        "value": 3476,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -5649,7 +5649,7 @@
       },
       {
         "signal": "internal_links",
-        "value": 25,
+        "value": 19,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -9026,14 +9026,14 @@
     "title": "Stamp Duty Calculator Australia 2026 \u2013 All States, First Home Buyer | CalcPhi",
     "score": 100,
     "status": "PASS",
-    "word_count": 908,
+    "word_count": 961,
     "is_placeholder": false,
     "is_js_dependent": false,
     "has_author": true,
     "signals": [
       {
         "signal": "word_count",
-        "value": 908,
+        "value": 961,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -9198,17 +9198,17 @@
     "title": "Australia Financial Calculators 2026 \u2013 Mortgage, Super, Tax & More | CalcPhi",
     "score": 70,
     "status": "PASS",
-    "word_count": 436,
+    "word_count": 488,
     "is_placeholder": false,
     "is_js_dependent": false,
     "has_author": true,
     "signals": [
       {
         "signal": "word_count",
-        "value": 436,
+        "value": 488,
         "passed": false,
         "issues": [
-          "word_count=436 (< 500)"
+          "word_count=488 (< 500)"
         ],
         "fixes": [
           "Expand main content to at least 500 words with unique worked examples and explanation."
@@ -9277,7 +9277,7 @@
       }
     ],
     "issues": [
-      "word_count=436 (< 500)",
+      "word_count=488 (< 500)",
       "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
     ],
     "fixes": [
@@ -10545,14 +10545,14 @@
     "title": "Age Pension Calculator Australia 2026 \u2013 Centrelink Entitlement | CalcPhi",
     "score": 100,
     "status": "PASS",
-    "word_count": 866,
+    "word_count": 920,
     "is_placeholder": false,
     "is_js_dependent": false,
     "has_author": true,
     "signals": [
       {
         "signal": "word_count",
-        "value": 866,
+        "value": 920,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -10632,14 +10632,14 @@
     "title": "Salary Sacrifice Calculator Australia 2026 \u2013 Tax Savings to Super | CalcPhi",
     "score": 100,
     "status": "PASS",
-    "word_count": 885,
+    "word_count": 938,
     "is_placeholder": false,
     "is_js_dependent": false,
     "has_author": true,
     "signals": [
       {
         "signal": "word_count",
-        "value": 885,
+        "value": 938,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -10711,14 +10711,14 @@
     "title": "Super Balance Calculator Australia 2026 \u2013 Retirement Projection | CalcPhi",
     "score": 100,
     "status": "PASS",
-    "word_count": 788,
+    "word_count": 865,
     "is_placeholder": false,
     "is_js_dependent": false,
     "has_author": true,
     "signals": [
       {
         "signal": "word_count",
-        "value": 788,
+        "value": 865,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -10972,14 +10972,14 @@
     "title": "Capital Gains Tax Calculator Australia 2026 \u2013 CGT & 50% Discount | CalcPhi",
     "score": 100,
     "status": "PASS",
-    "word_count": 942,
+    "word_count": 996,
     "is_placeholder": false,
     "is_js_dependent": false,
     "has_author": true,
     "signals": [
       {
         "signal": "word_count",
-        "value": 942,
+        "value": 996,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -11051,14 +11051,14 @@
     "title": "Income Tax Calculator Australia FY2026 \u2013 ATO Rates & Medicare | CalcPhi",
     "score": 100,
     "status": "PASS",
-    "word_count": 845,
+    "word_count": 889,
     "is_placeholder": false,
     "is_js_dependent": false,
     "has_author": true,
     "signals": [
       {
         "signal": "word_count",
-        "value": 845,
+        "value": 889,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -11557,14 +11557,14 @@
     "title": "Mortgage Calculator Australia 2026 \u2013 Monthly Repayments & Interest | CalcPhi",
     "score": 100,
     "status": "PASS",
-    "word_count": 716,
+    "word_count": 787,
     "is_placeholder": false,
     "is_js_dependent": false,
     "has_author": true,
     "signals": [
       {
         "signal": "word_count",
-        "value": 716,
+        "value": 787,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -12799,14 +12799,14 @@
     "title": "ULIP Calculator India 2026 \u2013 Returns After Charges & Tax | CalcPhi",
     "score": 100,
     "status": "PASS",
-    "word_count": 546,
+    "word_count": 600,
     "is_placeholder": false,
     "is_js_dependent": false,
     "has_author": true,
     "signals": [
       {
         "signal": "word_count",
-        "value": 546,
+        "value": 600,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -14822,14 +14822,14 @@
     "title": "Term Insurance Calculator India 2026 \u2013 Cover Amount Needed | CalcPhi",
     "score": 100,
     "status": "PASS",
-    "word_count": 519,
+    "word_count": 580,
     "is_placeholder": false,
     "is_js_dependent": false,
     "has_author": true,
     "signals": [
       {
         "signal": "word_count",
-        "value": 519,
+        "value": 580,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -15087,23 +15087,19 @@
     "url": "https://www.calcphi.com/india/health-insurance-calculator/",
     "slug": "35ab2ae7969e61d39fa6bc70d451c5d6",
     "title": "Health Insurance Premium Calculator India 2026 \u2013 Coverage Estimate | CalcPhi",
-    "score": 85,
+    "score": 100,
     "status": "PASS",
-    "word_count": 494,
+    "word_count": 548,
     "is_placeholder": false,
     "is_js_dependent": false,
     "has_author": true,
     "signals": [
       {
         "signal": "word_count",
-        "value": 494,
-        "passed": false,
-        "issues": [
-          "word_count=494 (< 500)"
-        ],
-        "fixes": [
-          "Expand main content to at least 500 words with unique worked examples and explanation."
-        ]
+        "value": 548,
+        "passed": true,
+        "issues": [],
+        "fixes": []
       },
       {
         "signal": "info_gain",
@@ -15168,11 +15164,9 @@
       }
     ],
     "issues": [
-      "word_count=494 (< 500)",
       "Missing editorial blocks: how-to-use / next steps guidance"
     ],
     "fixes": [
-      "Expand main content to at least 500 words with unique worked examples and explanation.",
       "Add missing section(s): how-to-use / next steps guidance."
     ]
   },
@@ -20831,14 +20825,14 @@
     "title": "Income Tax Calculator India FY 2026-27 | CalcPhi",
     "score": 100,
     "status": "PASS",
-    "word_count": 2091,
+    "word_count": 2100,
     "is_placeholder": false,
     "is_js_dependent": false,
     "has_author": true,
     "signals": [
       {
         "signal": "word_count",
-        "value": 2091,
+        "value": 2100,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -21384,14 +21378,14 @@
     "title": "SIP Calculator India 2026 \u2013 Monthly Returns | CalcPhi",
     "score": 100,
     "status": "PASS",
-    "word_count": 1919,
+    "word_count": 1935,
     "is_placeholder": false,
     "is_js_dependent": false,
     "has_author": true,
     "signals": [
       {
         "signal": "word_count",
-        "value": 1919,
+        "value": 1935,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -22339,14 +22333,14 @@
     "title": "How to Save a House Deposit in Australia: A Step-by-Step 2026 Guide | CalcPhi",
     "score": 100,
     "status": "PASS",
-    "word_count": 3155,
+    "word_count": 3392,
     "is_placeholder": false,
     "is_js_dependent": false,
     "has_author": true,
     "signals": [
       {
         "signal": "word_count",
-        "value": 3155,
+        "value": 3392,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -22396,7 +22390,7 @@
       },
       {
         "signal": "internal_links",
-        "value": 17,
+        "value": 18,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -22505,14 +22499,14 @@
     "title": "Super Contribution Caps 2026-27: Concessional and Non-Concessional Limits Explained | CalcPhi",
     "score": 100,
     "status": "PASS",
-    "word_count": 3206,
+    "word_count": 3261,
     "is_placeholder": false,
     "is_js_dependent": false,
     "has_author": true,
     "signals": [
       {
         "signal": "word_count",
-        "value": 3206,
+        "value": 3261,
         "passed": true,
         "issues": [],
         "fixes": []
