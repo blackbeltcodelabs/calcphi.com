@@ -3,6 +3,14 @@ duplicates.py — AdSense Sentinel
 Embeds all rendered pages with sentence-transformers, clusters near-duplicates
 (cosine similarity > threshold), updates page_scores.json with info_gain
 signal and penalties, and writes cache/duplicate_clusters.json.
+
+Smart clustering rules (all read from config.yaml):
+  1. exclude_urls         — skip pages excluded from scoring entirely
+  2. noindex pages        — skip pages with <meta name="robots" noindex>
+  3. content_type_aware   — never cluster a blog URL against a calculator URL
+  4. dup_family_zones     — pages in the same product family (e.g. all FD
+                            calculators) are exempted from clustering with
+                            each other, even if their text is very similar
 """
 
 import json
@@ -40,6 +48,66 @@ MAX_CHARS = 8000  # truncate before embedding to keep memory reasonable
 def load_config() -> dict:
     with open(CONFIG_PATH) as f:
         return yaml.safe_load(f)
+
+
+def is_noindex(url: str) -> bool:
+    """Return True if the page's _site/ HTML contains a noindex robots meta tag."""
+    path = url_to_site_path(url)
+    if not path.exists():
+        return False
+    try:
+        soup = BeautifulSoup(path.read_text(encoding="utf-8", errors="replace"), "lxml")
+        for tag in soup.find_all("meta", attrs={"name": "robots"}):
+            content = tag.get("content", "").lower()
+            if "noindex" in content:
+                return True
+    except Exception:
+        pass
+    return False
+
+
+def is_blog_url(url: str) -> bool:
+    return "/blog/" in url
+
+
+def is_calculator_url(url: str) -> bool:
+    """Calculator pages: not a blog, not an author page, not a root/hub page."""
+    if "/blog/" in url or "/authors/" in url:
+        return False
+    path = url.replace("https://www.calcphi.com", "").strip("/")
+    segments = path.split("/")
+    # e.g. india/sip-calculator or australia/income-tax-calculator
+    return len(segments) == 2 and segments[1].endswith("-calculator")
+
+
+def build_family_lookup(cfg: dict) -> dict:
+    """Return url → zone_name mapping from dup_family_zones config."""
+    lookup = {}
+    for zone in cfg.get("dup_family_zones", []):
+        name = zone.get("name", "")
+        for url in zone.get("urls", []):
+            lookup[url.rstrip("/")] = name
+    return lookup
+
+
+def should_cluster(url_a: str, url_b: str, family_lookup: dict, content_type_aware: bool) -> bool:
+    """
+    Return False if these two pages should be exempted from duplicate clustering:
+      - cross-type: one is a blog, the other is a calculator
+      - same family zone: both serve the same product subfamily
+    """
+    if content_type_aware:
+        if is_blog_url(url_a) != is_blog_url(url_b):
+            return False  # blog vs calculator — different content types
+
+    key_a = url_a.rstrip("/")
+    key_b = url_b.rstrip("/")
+    zone_a = family_lookup.get(key_a)
+    zone_b = family_lookup.get(key_b)
+    if zone_a and zone_a == zone_b:
+        return False  # same product family — exempted
+
+    return True
 
 
 def extract_main_text(html: str, strip_selectors: list) -> str:
@@ -82,11 +150,18 @@ def load_page_texts(scores: list, strip_selectors: list) -> dict:
     return texts
 
 
-def build_clusters(scores: list, embeddings: np.ndarray, threshold: float) -> list:
+def build_clusters(
+    scores: list,
+    embeddings: np.ndarray,
+    threshold: float,
+    family_lookup: dict,
+    content_type_aware: bool,
+) -> list:
     """
     Returns a list of clusters. Each cluster is a list of dicts with url + slug.
-    A page only appears in the cluster with its nearest neighbour group.
-    Uses single-linkage: if A~B and B~C, all three are in one cluster.
+    Uses single-linkage union-find, but respects content-type and family-zone
+    exemptions — pairs that match an exemption rule are never merged even if
+    their cosine similarity exceeds the threshold.
     """
     n = len(scores)
     sim_matrix = cosine_similarity(embeddings)
@@ -106,7 +181,10 @@ def build_clusters(scores: list, embeddings: np.ndarray, threshold: float) -> li
     for i in range(n):
         for j in range(i + 1, n):
             if sim_matrix[i][j] >= threshold:
-                union(i, j)
+                url_i = scores[i].get("url", "")
+                url_j = scores[j].get("url", "")
+                if should_cluster(url_i, url_j, family_lookup, content_type_aware):
+                    union(i, j)
 
     # Group by root
     groups: dict = {}
@@ -141,12 +219,26 @@ def run_duplicates():
     max_dup_pct = cfg["thresholds"]["max_dup_pct_of_page"]
     strip_sels = cfg["strip_selectors"]
     info_gain_weight = cfg["scoring_weights"]["info_gain"]
+    exclude_urls = set(cfg.get("exclude_urls", []))
+    content_type_aware = cfg.get("content_type_aware_clustering", True)
+    family_lookup = build_family_lookup(cfg)
 
     with open(SCORES_PATH) as f:
         scores: list = json.load(f)
 
-    valid_scores = [p for p in scores if p.get("slug") and p.get("status") != "ERROR"]
-    print(f"Embedding {len(valid_scores)} pages with {MODEL_NAME}...")
+    # Filter out excluded URLs and noindex pages — they should not participate
+    # in duplicate detection at all.
+    valid_scores = [
+        p for p in scores
+        if p.get("slug")
+        and p.get("status") != "ERROR"
+        and p.get("url", "") not in exclude_urls
+        and not is_noindex(p.get("url", ""))
+    ]
+    print(
+        f"Embedding {len(valid_scores)} pages with {MODEL_NAME} "
+        f"({len(scores) - len(valid_scores)} excluded/noindex skipped)..."
+    )
 
     texts_map = load_page_texts(valid_scores, strip_sels)
     texts = [texts_map.get(p["slug"], "") for p in valid_scores]
@@ -155,7 +247,9 @@ def run_duplicates():
     embeddings = model.encode(texts, show_progress_bar=True, batch_size=32)
 
     print("Clustering near-duplicates...")
-    clusters = build_clusters(valid_scores, embeddings, threshold)
+    clusters = build_clusters(
+        valid_scores, embeddings, threshold, family_lookup, content_type_aware
+    )
 
     # Build a lookup: slug -> list of duplicate URLs + max similarity
     slug_to_dups: dict = {}

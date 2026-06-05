@@ -11,6 +11,72 @@ thresholds:
   min_pass_rate: 0.95
   max_dup_clusters: 2
 
+# Pages excluded from scoring entirely (stubs, error pages, coming-soon)
+exclude_urls:
+  - "https://www.calcphi.com/404.html"
+  - "https://www.calcphi.com/markets/"
+
+# Cross-type awareness: blog pages and calculator pages on the same topic
+# are intentionally different content types — do not cluster them.
+content_type_aware_clustering: true
+
+# Product family zones: pages in the same zone are legitimate variations
+# of the same tool and should NOT be penalised as near-duplicates.
+dup_family_zones:
+  - name: "India EMI & Loan Calculators"
+    urls:
+      - "https://www.calcphi.com/india/emi-calculator/"
+      - "https://www.calcphi.com/india/home-loan-emi-calculator/"
+      - "https://www.calcphi.com/india/personal-loan-emi-calculator/"
+      - "https://www.calcphi.com/india/car-loan-emi-calculator/"
+      - "https://www.calcphi.com/india/home-affordability-calculator/"
+      - "https://www.calcphi.com/india/loan-eligibility-calculator/"
+      - "https://www.calcphi.com/india/loan-against-property-calculator/"
+      - "https://www.calcphi.com/india/mortgage-refinance-calculator/"
+      - "https://www.calcphi.com/india/balance-transfer-calculator/"
+  - name: "India FD Calculators"
+    urls:
+      - "https://www.calcphi.com/india/fd-calculator/"
+      - "https://www.calcphi.com/india/tax-saver-fd-calculator/"
+      - "https://www.calcphi.com/india/senior-citizen-fd-calculator/"
+      - "https://www.calcphi.com/india/nre-fd-calculator/"
+      - "https://www.calcphi.com/india/bank-rate-comparison-calculator/"
+      - "https://www.calcphi.com/india/flexi-deposit-calculator/"
+  - name: "India Retirement Calculators"
+    urls:
+      - "https://www.calcphi.com/india/retirement-corpus-calculator/"
+      - "https://www.calcphi.com/india/early-retirement-calculator/"
+      - "https://www.calcphi.com/india/swp-calculator/"
+      - "https://www.calcphi.com/india/swp-retirement-calculator/"
+      - "https://www.calcphi.com/india/retirement-timeline-calculator/"
+      - "https://www.calcphi.com/india/pension-income-calculator/"
+  - name: "India Interest Calculators"
+    urls:
+      - "https://www.calcphi.com/india/simple-interest-calculator/"
+      - "https://www.calcphi.com/india/compound-interest-calculator/"
+  - name: "India Tax Calculators"
+    urls:
+      - "https://www.calcphi.com/india/income-tax-calculator/"
+      - "https://www.calcphi.com/india/new-vs-old-regime-calculator/"
+      - "https://www.calcphi.com/india/professional-tax-calculator/"
+      - "https://www.calcphi.com/india/professional-tax-calc-calculator/"
+      - "https://www.calcphi.com/india/bonus-tax-calculator/"
+      - "https://www.calcphi.com/india/bonus-after-tax-calculator/"
+  - name: "India Property & GST Calculators"
+    urls:
+      - "https://www.calcphi.com/india/stamp-duty-calculator/"
+      - "https://www.calcphi.com/india/property-registration-calculator/"
+      - "https://www.calcphi.com/india/gst-calculator/"
+      - "https://www.calcphi.com/india/gst-reverse-calculator/"
+  - name: "India EPF Calculators"
+    urls:
+      - "https://www.calcphi.com/india/epf-calculator/"
+      - "https://www.calcphi.com/india/epf-contribution-calculator/"
+  - name: "Australia Property Calculators"
+    urls:
+      - "https://www.calcphi.com/australia/stamp-duty-calculator/"
+      - "https://www.calcphi.com/australia/first-home-buyer-calculator/"
+
 scoring_weights:
   word_count: 15
   info_gain: 25

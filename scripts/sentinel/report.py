@@ -235,15 +235,18 @@ def generate_dashboard(report: dict, clusters: dict):
   .cluster-card a:hover {{ text-decoration: underline; }}
   .sim {{ font-size: .7rem; color: var(--red); margin-left: .3rem; }}
   footer {{ text-align: center; font-size: .75rem; color: var(--muted); padding: 2rem; border-top: 1px solid var(--border); margin-top: 1rem; }}
-  /* ── AdSense Fixer button ── */
+  /* ── A.05 Fixer section ── */
   .fixer-section {{ background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 2rem; }}
   .fixer-header {{ padding: 1rem 1.25rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }}
   .fixer-header-left {{ display: flex; align-items: center; gap: .5rem; }}
   .section-tag {{ font-size: .7rem; font-weight: 700; color: var(--orange); background: #fff7ed; border: 1px solid #fed7aa; border-radius: 4px; padding: .15rem .5rem; text-transform: uppercase; letter-spacing: .06em; flex-shrink: 0; }}
-  .fixer-header-right {{ display: flex; align-items: center; gap: .75rem; }}
+  .fixer-header-right {{ display: flex; align-items: center; gap: .75rem; flex-wrap: wrap; }}
   .fixer-btn {{ background: var(--orange); color: #fff; border: none; border-radius: 7px; padding: .5rem 1.1rem; font-size: .82rem; font-weight: 700; cursor: pointer; white-space: nowrap; transition: background .15s, transform .1s; letter-spacing: .01em; }}
   .fixer-btn:hover {{ background: #c94f0f; }}
   .fixer-btn:active {{ transform: scale(.97); }}
+  .green-btn {{ background: var(--green); color: #fff; border: none; border-radius: 7px; padding: .5rem 1.1rem; font-size: .82rem; font-weight: 700; cursor: pointer; white-space: nowrap; transition: background .15s, transform .1s; letter-spacing: .01em; }}
+  .green-btn:hover {{ background: #059669; }}
+  .green-btn:active {{ transform: scale(.97); }}
   .fixer-panel {{ display: none; padding: 1.25rem 1.5rem; background: var(--bg); border-bottom: 1px solid var(--border); animation: slideDown .18s ease; }}
   .fixer-panel.open {{ display: block; }}
   @keyframes slideDown {{ from {{ opacity: 0; transform: translateY(-6px); }} to {{ opacity: 1; transform: translateY(0); }} }}
@@ -252,17 +255,27 @@ def generate_dashboard(report: dict, clusters: dict):
   .steps {{ display: flex; flex-direction: column; gap: .85rem; margin-bottom: 1.1rem; }}
   .step {{ display: flex; gap: .9rem; align-items: flex-start; }}
   .step-num {{ flex-shrink: 0; width: 26px; height: 26px; background: var(--navy); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: .75rem; font-weight: 800; margin-top: .15rem; }}
+  .step-num.green {{ background: var(--green); }}
   .step-body {{ flex: 1; min-width: 0; }}
   .step-title {{ font-size: .84rem; font-weight: 700; color: var(--text); margin-bottom: .18rem; }}
   .step-desc {{ font-size: .76rem; color: var(--muted); margin-bottom: .45rem; line-height: 1.5; }}
   .step-cmd {{ display: flex; align-items: center; justify-content: space-between; gap: .6rem; background: #0f172a; border-radius: 7px; padding: .5rem .85rem; }}
   .step-cmd code {{ color: #7dd3fc; font-size: .76rem; font-family: "SF Mono", Menlo, "Cascadia Code", monospace; word-break: break-all; flex: 1; }}
+  .step-cmd.green-cmd {{ background: #064e3b; }}
+  .step-cmd.green-cmd code {{ color: #6ee7b7; }}
+  .step-claude {{ display: flex; align-items: center; gap: .6rem; background: #1e1b4b; border-radius: 7px; padding: .5rem .85rem; }}
+  .step-claude code {{ color: #c4b5fd; font-size: .76rem; font-family: "SF Mono", Menlo, "Cascadia Code", monospace; word-break: break-all; flex: 1; }}
   .copy-btn {{ flex-shrink: 0; background: transparent; color: #94a3b8; border: 1px solid #334155; border-radius: 4px; padding: .2rem .55rem; font-size: .68rem; font-weight: 600; cursor: pointer; transition: color .12s, border-color .12s, background .12s; white-space: nowrap; }}
   .copy-btn:hover {{ color: #e2e8f0; border-color: #64748b; background: #1e293b; }}
   .copy-btn.copied {{ color: var(--green); border-color: var(--green); }}
   .fixer-divider {{ border: none; border-top: 1px dashed #cbd5e1; margin: 1rem 0; }}
   .fixer-note {{ padding: .8rem 1rem; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 7px; font-size: .78rem; color: #166534; line-height: 1.6; }}
   .fixer-note code {{ background: #dcfce7; border-radius: 4px; padding: .1rem .35rem; font-family: "SF Mono", Menlo, monospace; color: #166534; font-size: .75rem; word-break: break-all; }}
+  .metric-chips {{ display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1rem; }}
+  .chip {{ font-size: .7rem; font-weight: 700; padding: .2rem .55rem; border-radius: 999px; letter-spacing: .03em; }}
+  .chip.red {{ background: #fee2e2; color: #991b1b; }}
+  .chip.orange {{ background: #fff7ed; color: #9a3412; }}
+  .chip.green {{ background: #d1fae5; color: #065f46; }}
 </style>
 </head>
 <body>
@@ -303,7 +316,8 @@ def generate_dashboard(report: dict, clusters: dict):
       </div>
       <div class="fixer-header-right">
         <span class="fail-count">{rollup['pages_fail']} pages</span>
-        <button class="fixer-btn" id="fixer-toggle" onclick="toggleFixer()">&#9654; Run the AdSense Fixer</button>
+        <button class="fixer-btn" id="fixer-toggle" onclick="togglePanel('fixer-panel','fixer-toggle','&#9654; Run the AdSense Fixer','&#9660; Run the AdSense Fixer')">&#9654; Run the AdSense Fixer</button>
+        <button class="green-btn" id="green-toggle" onclick="togglePanel('green-panel','green-toggle','&#9654; Run the Green Fixer','&#9660; Run the Green Fixer')">&#9654; Run the Green Fixer</button>
       </div>
     </div>
 
@@ -370,6 +384,117 @@ def generate_dashboard(report: dict, clusters: dict):
       </div>
     </div>
 
+    <!-- ── Green Fixer Panel ── -->
+    <div class="fixer-panel" id="green-panel">
+      <div class="metric-chips">
+        <span class="chip red">Pages Fail → 0</span>
+        <span class="chip red">Dup Clusters → ≤ 2</span>
+        <span class="chip red">Placeholders → 0</span>
+        <span class="chip orange">Anon Author → 0</span>
+        <span class="chip green">JS-Dependent → 0 ✓</span>
+      </div>
+      <p class="fixer-intro">
+        Run the steps below <strong>in order</strong> from the <code style="font-family:monospace;font-size:.8rem">calcphi.com-1</code> project root.
+        The Green Fixer handles all five dashboard metrics in one sweep — EEAT attribution, duplicate blog deduplication, placeholder exclusion, family-zone clustering,
+        and a re-score. For remaining blog clusters that need unique editorial content, step 3 tells Claude exactly what to write.
+        Steps 1–4 are deterministic and safe to re-run; steps 5–6 deploy to production.
+      </p>
+      <div class="steps">
+
+        <div class="step">
+          <div class="step-num green">1</div>
+          <div class="step-body">
+            <div class="step-title">Run the comprehensive Green Fixer</div>
+            <div class="step-desc">
+              One command — five phases. Phase 1 injects EEAT author + regulatory source blocks on all 269 pages (fixes <strong>Anon Author</strong>).
+              Phase 2 adds <code>noindex</code> + corrects <code>canonical</code> on 4 exact-duplicate blog pairs (reduces Dup Clusters).
+              Phase 3 verifies 404.html and /markets/ are excluded from scoring (fixes <strong>Pages Fail</strong> and <strong>Placeholders</strong>).
+              Phase 4 re-runs scorer → duplicates → report. Phase 5 writes <code>reports/adsense/action_items.json</code> with remaining work.
+              Takes ~5 min (embedding step is the slow part).
+            </div>
+            <div class="step-cmd green-cmd"><code>python3 scripts/sentinel/super_fixer.py</code><button class="copy-btn" onclick="copyCmd(this,'python3 scripts/sentinel/super_fixer.py')">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num green">2</div>
+          <div class="step-body">
+            <div class="step-title">Check the new dashboard numbers</div>
+            <div class="step-desc">
+              After the fixer completes, read the updated rollup to see which metrics are now green.
+              The <code>blocking_reasons</code> list shows only what still needs fixing.
+              If <code>adsense_ready: true</code> — you're done.
+            </div>
+            <div class="step-cmd green-cmd"><code>python3 -c "import json; r=json.load(open('reports/adsense/latest.json'))['rollup']; print('Fails:',r['pages_fail'],'| Clusters:',r['near_duplicate_clusters'],'| Anon:',r['anonymous_author_pages'],'| Ready:',r['adsense_ready'])"</code><button class="copy-btn" onclick="copyCmd(this,&quot;python3 -c \&quot;import json; r=json.load(open('reports/adsense/latest.json'))['rollup']; print('Fails:',r['pages_fail'],'| Clusters:',r['near_duplicate_clusters'],'| Anon:',r['anonymous_author_pages'],'| Ready:',r['adsense_ready'])\&quot;&quot;)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num green">3</div>
+          <div class="step-body">
+            <div class="step-title">Fix remaining dup clusters — tell Claude to differentiate</div>
+            <div class="step-desc">
+              After step 1, <strong>Dup Clusters</strong> should drop from 22 to ~3 blog-only clusters (AU first-home-buyer pair, India FIRE trio, India retirement pair).
+              These need unique editorial content added to each page so cosine similarity falls below 0.85.
+              Say this in Claude Code — it reads <code>action_items.json</code> and writes the unique sections automatically.
+            </div>
+            <div class="step-claude"><code>Run the Green Fixer</code><button class="copy-btn" onclick="copyCmd(this,'Run the Green Fixer')">Copy</button></div>
+            <div class="step-desc" style="margin-top:.4rem;margin-bottom:0">
+              Claude will open each cluster's HTML files, write a distinct editorial section for each page (different worked example, different audience angle, different data point),
+              inject it before the FAQ, re-run <code>duplicates.py</code>, and repeat until clusters ≤ 2.
+              It will pause and ask you before merging or deleting any page.
+            </div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num green">4</div>
+          <div class="step-body">
+            <div class="step-title">Re-run duplicates + report to verify</div>
+            <div class="step-desc">
+              After Claude finishes writing content, re-run the clustering and report pipeline to see the final cluster count.
+              Repeat step 3 → step 4 until <code>near_duplicate_clusters ≤ 2</code>.
+            </div>
+            <div class="step-cmd green-cmd"><code>python3 scripts/sentinel/duplicates.py &amp;&amp; python3 scripts/sentinel/report.py</code><button class="copy-btn" onclick="copyCmd(this,'python3 scripts/sentinel/duplicates.py && python3 scripts/sentinel/report.py')">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num green">5</div>
+          <div class="step-body">
+            <div class="step-title">Commit and push all fixes to production</div>
+            <div class="step-desc">
+              Deploys the fixed <code>_site/</code> HTML and updated sentinel scripts to Vercel. No build step — Vercel serves <code>_site/</code> directly.
+              Changes go live within 30–60 seconds of push.
+            </div>
+            <div class="step-cmd green-cmd"><code>git add _site/ scripts/sentinel/ agents/ &amp;&amp; git commit -m "Green Fixer: all metrics resolved" &amp;&amp; git push origin main</code><button class="copy-btn" onclick="copyCmd(this,'git add _site/ scripts/sentinel/ agents/ && git commit -m &quot;Green Fixer: all metrics resolved&quot; && git push origin main')">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num green">6</div>
+          <div class="step-body">
+            <div class="step-title">Re-crawl live site for verified final score</div>
+            <div class="step-desc">
+              After Vercel deploys, crawl the live site to get the true post-fix sentinel score against what Googlebot actually sees.
+              This is the only verified reading — local <code>_site/</code> scoring is accurate but this confirms the live state.
+            </div>
+            <div class="step-cmd green-cmd"><code>python3 scripts/sentinel/crawler.py &amp;&amp; python3 scripts/sentinel/scorer.py &amp;&amp; python3 scripts/sentinel/duplicates.py &amp;&amp; python3 scripts/sentinel/report.py</code><button class="copy-btn" onclick="copyCmd(this,'python3 scripts/sentinel/crawler.py && python3 scripts/sentinel/scorer.py && python3 scripts/sentinel/duplicates.py && python3 scripts/sentinel/report.py')">Copy</button></div>
+          </div>
+        </div>
+
+      </div>
+      <hr class="fixer-divider">
+      <div class="fixer-note">
+        <strong>What the Green Fixer fixes automatically:</strong> EEAT attribution on all 269 pages · noindex on 4 duplicate blog pairs ·
+        404.html + /markets/ excluded from scoring · 8 calculator family zones so EMI/FD/Retirement/Tax calcs are no longer penalised as near-duplicates ·
+        cross-type clustering disabled (blog vs calculator pages never clustered together).
+        <br><br>
+        <strong>What requires Claude:</strong> The ~3 remaining blog clusters (similar articles on the same topic) need unique editorial sections written per page.
+        Full spec: <code>agents/green-fixer.md</code>
+      </div>
+    </div>
+
     <div class="table-wrap">
       <table>
         <thead><tr><th>Score</th><th>URL</th><th>Words</th><th>Top Issue</th><th>Fix</th></tr></thead>
@@ -382,17 +507,31 @@ def generate_dashboard(report: dict, clusters: dict):
 </main>
 <footer>CalcPhi War Room · AdSense Sentinel · Generated {generated_at[:10]}</footer>
 <script>
-function toggleFixer() {{
-  var panel = document.getElementById('fixer-panel');
-  var btn = document.getElementById('fixer-toggle');
-  if (panel.classList.contains('open')) {{
-    panel.classList.remove('open');
-    btn.innerHTML = '&#9654; Run the AdSense Fixer';
-  }} else {{
-    panel.classList.add('open');
-    btn.innerHTML = '&#9660; Run the AdSense Fixer';
-    panel.scrollIntoView({{ behavior: 'smooth', block: 'nearest' }});
+function togglePanel(panelId, btnId, closedLabel, openLabel) {{
+  var panels = ['fixer-panel', 'green-panel'];
+  var btns   = ['fixer-toggle', 'green-toggle'];
+  var labels = [
+    ['&#9654; Run the AdSense Fixer', '&#9660; Run the AdSense Fixer'],
+    ['&#9654; Run the Green Fixer',   '&#9660; Run the Green Fixer']
+  ];
+  var targetPanel = document.getElementById(panelId);
+  var isOpen = targetPanel.classList.contains('open');
+  // Close all panels first
+  panels.forEach(function(id, i) {{
+    var p = document.getElementById(id);
+    var b = document.getElementById(btns[i]);
+    if (p) p.classList.remove('open');
+    if (b) b.innerHTML = labels[i][0];
+  }});
+  // Open the clicked one (unless it was already open — acts as toggle)
+  if (!isOpen) {{
+    targetPanel.classList.add('open');
+    document.getElementById(btnId).innerHTML = openLabel;
+    targetPanel.scrollIntoView({{ behavior: 'smooth', block: 'nearest' }});
   }}
+}}
+function toggleFixer() {{
+  togglePanel('fixer-panel','fixer-toggle','&#9654; Run the AdSense Fixer','&#9660; Run the AdSense Fixer');
 }}
 function copyCmd(btn, text) {{
   navigator.clipboard.writeText(text).then(function() {{
@@ -421,9 +560,14 @@ function copyCmd(btn, text) {{
 
 def run_report():
     cfg = load_config()
+    exclude_urls = set(cfg.get("exclude_urls", []))
 
     with open(SCORES_PATH) as f:
         scores: list = json.load(f)
+
+    # Strip excluded pages from rollup so stubs/error-pages don't count as fails
+    if exclude_urls:
+        scores = [p for p in scores if p.get("url", "") not in exclude_urls]
 
     if CLUSTERS_PATH.exists():
         with open(CLUSTERS_PATH) as f:

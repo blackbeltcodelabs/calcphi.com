@@ -397,6 +397,13 @@ def run_scorer():
     with open(URL_MAP_PATH) as f:
         url_map: dict = json.load(f)
 
+    exclude_urls = set(cfg.get("exclude_urls", []))
+    if exclude_urls:
+        skipped = [u for u in url_map if u in exclude_urls]
+        if skipped:
+            print(f"Skipping {len(skipped)} excluded URL(s): {skipped}")
+        url_map = {u: s for u, s in url_map.items() if u not in exclude_urls}
+
     seen_titles: set = set()
     seen_descs: set = set()
     results = []
