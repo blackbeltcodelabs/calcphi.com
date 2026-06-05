@@ -13,6 +13,26 @@ If the SEO Orchestrator agent is present, it should read
 reports/adsense/latest.json after each run and surface the 
 adsense_ready boolean and blocking_reasons as action items.
 
+## Legal Fixer
+
+The legal-fixer agent reads war-room/data/legal/issues.json and fixes every
+red and orange issue in _site/ — ASIC general advice warnings, IRDAI regulatory
+notices, PFRDA corrections, text softening. One manual issue (AU tax rates blog)
+requires user confirmation before the rates are changed.
+
+Trigger it by saying: "Run the Legal Fixer"
+
+Execution order:
+1. Run `python3 scripts/legal/fixer.py` — handles all automatable fixes in one pass.
+2. Read fix report. For any MANUAL_FLAG issues, verify against the regulator's
+   official site and ask the user to confirm before writing.
+3. Commit _site/ changes and push to Vercel.
+4. Copy updated data to war-room and push to update the dashboard.
+
+Full protocol in agents/legal-fixer.md. Dashboard button at L.04 in Legal Room.
+
+Do not claim issues are fixed until the fix report shows status=fixed for all entries.
+
 ## Green Fixer (comprehensive — use this)
 
 The green-fixer agent fixes ALL five dashboard metrics: page fails, dup clusters,
