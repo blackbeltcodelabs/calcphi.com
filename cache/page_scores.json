@@ -19,11 +19,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -106,11 +105,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -193,11 +191,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -280,11 +277,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -359,11 +355,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -446,11 +441,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -533,11 +527,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -612,11 +605,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -691,11 +683,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -778,11 +769,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -865,11 +855,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -952,11 +941,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -1039,11 +1027,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -1126,11 +1113,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -1213,11 +1199,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -1300,11 +1285,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -1387,11 +1371,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -1474,11 +1457,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -1561,11 +1543,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -1648,11 +1629,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -1735,11 +1715,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -1822,11 +1801,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -1909,11 +1887,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -1996,11 +1973,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -2075,11 +2051,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -2162,11 +2137,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -2249,11 +2223,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -2336,11 +2309,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -2423,11 +2395,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -2510,11 +2481,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -2597,11 +2567,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -2684,11 +2653,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -2771,11 +2739,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -2858,11 +2825,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -2937,11 +2903,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -3024,11 +2989,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -3111,11 +3075,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -3198,11 +3161,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -3285,11 +3247,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -3372,11 +3333,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -3459,11 +3419,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -3546,11 +3505,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -3633,11 +3591,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -3720,11 +3677,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -3807,11 +3763,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -3886,11 +3841,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -3973,11 +3927,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -4060,11 +4013,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -4147,11 +4099,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -4234,11 +4185,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -4313,11 +4263,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -4400,11 +4349,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -4487,11 +4435,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -4574,11 +4521,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -4661,11 +4607,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -4748,11 +4693,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -4827,11 +4771,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -4914,11 +4857,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -5001,11 +4943,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -5080,11 +5021,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -5167,11 +5107,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -5254,11 +5193,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -5341,11 +5279,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -5428,11 +5365,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -5515,11 +5451,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -5602,11 +5537,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -5689,11 +5623,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -5776,11 +5709,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -5855,11 +5787,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -5942,11 +5873,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -6029,11 +5959,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -6116,11 +6045,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -6195,11 +6123,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -6274,11 +6201,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -6361,11 +6287,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -6448,11 +6373,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -6527,11 +6451,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -6614,11 +6537,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -6701,11 +6623,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -6788,11 +6709,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -6875,11 +6795,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -6962,11 +6881,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -7049,11 +6967,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -7136,11 +7053,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -7223,11 +7139,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -7302,11 +7217,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -7389,11 +7303,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -7476,11 +7389,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -7563,11 +7475,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -7650,11 +7561,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -7729,11 +7639,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -7816,11 +7725,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -7903,11 +7811,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -7990,11 +7897,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -8077,11 +7983,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -8164,11 +8069,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -8257,11 +8161,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -8344,11 +8247,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -8431,11 +8333,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -8518,11 +8419,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -8605,11 +8505,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -8692,11 +8591,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -8779,11 +8677,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -8866,11 +8763,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -8953,11 +8849,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -9040,11 +8935,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -9123,11 +9017,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -9216,11 +9109,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -9309,11 +9201,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -9402,11 +9293,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -9495,11 +9385,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -9584,11 +9473,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -9675,11 +9563,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -9768,11 +9655,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -9861,11 +9747,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -9950,11 +9835,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -10037,11 +9921,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -10124,11 +10007,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -10211,11 +10093,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -10298,11 +10179,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -10385,11 +10265,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -10472,11 +10351,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -10559,11 +10437,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -10646,11 +10523,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -10725,11 +10601,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -10812,11 +10687,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -10899,11 +10773,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -10986,11 +10859,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -11065,11 +10937,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -11152,11 +11023,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -11231,11 +11101,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -11318,11 +11187,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -11397,11 +11265,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -11484,11 +11351,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -11571,11 +11437,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -11658,11 +11523,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -11745,11 +11609,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -11836,11 +11699,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -11929,11 +11791,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -12018,11 +11879,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -12105,11 +11965,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -12192,11 +12051,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -12283,11 +12141,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -12372,11 +12229,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -12459,11 +12315,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -12546,11 +12401,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -12637,11 +12491,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -12726,11 +12579,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -12813,11 +12665,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -12900,11 +12751,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -12987,11 +12837,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -13074,11 +12923,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -13161,11 +13009,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -13252,11 +13099,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -13345,11 +13191,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -13434,11 +13279,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -13521,11 +13365,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -13608,11 +13451,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -13699,11 +13541,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -13788,11 +13629,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -13875,11 +13715,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -13962,11 +13801,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -14053,11 +13891,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -14142,11 +13979,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -14221,11 +14057,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -14308,11 +14143,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -14395,11 +14229,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -14482,11 +14315,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -14573,11 +14405,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -14662,11 +14493,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -14749,11 +14579,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -14836,11 +14665,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -14923,11 +14751,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -15014,11 +14841,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -15103,11 +14929,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -15190,11 +15015,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -15277,11 +15101,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -15364,11 +15187,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -15451,11 +15273,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -15538,11 +15359,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -15625,11 +15445,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -15712,11 +15531,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -15799,11 +15617,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -15886,11 +15703,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -15973,11 +15789,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -16064,11 +15879,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -16153,11 +15967,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -16232,11 +16045,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -16319,11 +16131,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -16406,11 +16217,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -16493,11 +16303,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -16580,11 +16389,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -16667,11 +16475,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -16754,11 +16561,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -16845,11 +16651,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -16934,11 +16739,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -17025,11 +16829,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -17114,11 +16917,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -17201,11 +17003,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -17292,11 +17093,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -17381,11 +17181,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -17468,11 +17267,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -17555,11 +17353,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -17642,11 +17439,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -17729,11 +17525,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -17816,11 +17611,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -17895,11 +17689,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -17982,11 +17775,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -18069,11 +17861,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -18156,11 +17947,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -18247,11 +18037,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -18336,11 +18125,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -18423,11 +18211,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -18510,11 +18297,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -18597,11 +18383,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -18684,11 +18469,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -18771,11 +18555,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -18858,11 +18641,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -18955,11 +18737,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -19042,11 +18823,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -19129,11 +18909,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -19216,11 +18995,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -19303,11 +19081,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -19382,11 +19159,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -19473,11 +19249,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -19562,11 +19337,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -19649,11 +19423,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -19728,11 +19501,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -19807,11 +19579,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -19886,11 +19657,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -19973,11 +19743,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -20052,11 +19821,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -20143,11 +19911,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -20236,11 +20003,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -20325,11 +20091,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -20412,11 +20177,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -20499,11 +20263,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -20586,11 +20349,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -20673,11 +20435,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -20760,11 +20521,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -20839,11 +20599,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -20918,11 +20677,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -20997,11 +20755,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -21076,11 +20833,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -21155,11 +20911,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -21234,11 +20989,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -21313,11 +21067,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -21392,11 +21145,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -21471,11 +21223,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -21558,11 +21309,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -21645,11 +21395,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -21732,11 +21481,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -21819,11 +21567,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -21912,11 +21659,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -21999,11 +21745,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -22086,11 +21831,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -22173,11 +21917,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -22260,11 +22003,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -22347,11 +22089,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -22426,11 +22167,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -22513,11 +22253,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -22600,11 +22339,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -22693,11 +22431,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -22780,11 +22517,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -22867,11 +22603,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -22954,11 +22689,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -23041,11 +22775,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.5,
+        "value": 0.0,
         "passed": true,
         "issues": [],
-        "fixes": [],
-        "_placeholder": true
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
