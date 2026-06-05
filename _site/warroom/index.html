@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CalcPhi War Room — AdSense Sentinel</title>
+<style>
+  :root {
+    --navy: #1a3d6e;
+    --orange: #e8611a;
+    --green: #10b981;
+    --red: #ef4444;
+    --yellow: #f59e0b;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #0f172a;
+    --muted: #64748b;
+    --radius: 10px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--text); }
+  header { background: var(--navy); color: #fff; padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+  header h1 { font-size: 1.2rem; font-weight: 700; letter-spacing: .02em; }
+  header .subtitle { font-size: .8rem; opacity: .7; }
+  .generated { font-size: .75rem; opacity: .6; }
+  main { max-width: 1280px; margin: 0 auto; padding: 2rem 1.5rem; }
+  h2 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: .05em; }
+  .status-banner { border-radius: var(--radius); padding: 1.5rem 2rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 1.5rem; }
+  .status-banner.ready { background: #d1fae5; border: 2px solid var(--green); }
+  .status-banner.not-ready { background: #fee2e2; border: 2px solid var(--red); }
+  .status-label { font-size: 1.5rem; font-weight: 800; }
+  .status-banner.ready .status-label { color: #065f46; }
+  .status-banner.not-ready .status-label { color: #991b1b; }
+  .status-desc { font-size: .85rem; color: var(--muted); }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+  .tile { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem 1rem; text-align: center; }
+  .tile .val { font-size: 2rem; font-weight: 800; line-height: 1; }
+  .tile .lbl { font-size: .72rem; color: var(--muted); margin-top: .35rem; text-transform: uppercase; letter-spacing: .04em; }
+  .tile.green .val { color: var(--green); }
+  .tile.red .val { color: var(--red); }
+  .tile.orange .val { color: var(--orange); }
+  .tile.yellow .val { color: var(--yellow); }
+  .tile.navy .val { color: var(--navy); }
+  .rate-section { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin-bottom: 2rem; }
+  .rate-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: .75rem; }
+  .rate-pct { font-size: 1.75rem; font-weight: 800; color: var(--green); }
+  .rate-target { font-size: .8rem; color: var(--muted); }
+  .bar-track { background: #e2e8f0; border-radius: 999px; height: 14px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 999px; background: var(--green); width: 98.5%; }
+  .blocking { background: #fef2f2; border: 1px solid #fecaca; border-radius: var(--radius); padding: 1rem 1.25rem; margin-bottom: 2rem; }
+  .blocking h3 { color: #991b1b; margin-bottom: .5rem; font-size: .9rem; }
+  .blocking ul { padding-left: 1.25rem; }
+  .blocking li { font-size: .85rem; color: #7f1d1d; line-height: 1.7; }
+  .table-section { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 2rem; }
+  .table-header { padding: 1rem 1.25rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+  .fail-count { font-size: .8rem; background: #fee2e2; color: #991b1b; padding: .2rem .6rem; border-radius: 999px; font-weight: 600; }
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: .8rem; }
+  th { background: #f8fafc; padding: .6rem .75rem; text-align: left; font-size: .7rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); border-bottom: 1px solid var(--border); white-space: nowrap; }
+  td { padding: .55rem .75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #f8fafc; }
+  td a { color: var(--navy); text-decoration: none; word-break: break-all; }
+  td a:hover { text-decoration: underline; }
+  .score-badge { display: inline-block; padding: .15rem .5rem; border-radius: 6px; font-weight: 700; font-size: .8rem; min-width: 2.5rem; text-align: center; }
+  .score-badge.pass { background: #d1fae5; color: #065f46; }
+  .score-badge.warn { background: #fef3c7; color: #92400e; }
+  .score-badge.fail { background: #fee2e2; color: #991b1b; }
+  .issue-cell { color: var(--red); font-size: .75rem; max-width: 280px; }
+  .fix-cell { color: #0369a1; font-size: .75rem; max-width: 280px; }
+  .clusters-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+  .cluster-card { background: var(--card); border: 1px solid #fde68a; border-radius: var(--radius); padding: 1rem; }
+  .cluster-card h4 { font-size: .8rem; font-weight: 700; color: #92400e; margin-bottom: .5rem; }
+  .cluster-card ul { padding-left: 1.1rem; }
+  .cluster-card li { font-size: .75rem; color: var(--muted); line-height: 1.8; }
+  .cluster-card a { color: var(--navy); text-decoration: none; }
+  .cluster-card a:hover { text-decoration: underline; }
+  .sim { font-size: .7rem; color: var(--red); margin-left: .3rem; }
+  footer { text-align: center; font-size: .75rem; color: var(--muted); padding: 2rem; border-top: 1px solid var(--border); margin-top: 1rem; }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <div class="subtitle">WAR ROOM</div>
+    <h1>CalcPhi — AdSense Sentinel</h1>
+  </div>
+  <div class="generated">Last audit: 2026-06-05 08:42:13 UTC</div>
+</header>
+<main>
+  <div class="status-banner not-ready">
+    <div class="status-label">❌ NOT READY</div>
+    <div class="status-desc">Do not re-apply to AdSense until all blocking reasons are resolved.</div>
+  </div>
+  <div class="rate-section">
+    <div class="rate-header">
+      <h2 style="margin:0">Pass Rate</h2>
+      <div><span class="rate-pct">98.5%</span><span class="rate-target"> — target ≥ 95%</span></div>
+    </div>
+    <div class="bar-track"><div class="bar-fill"></div></div>
+  </div>
+  <div class="tiles">
+    <div class="tile navy"><div class="val">266</div><div class="lbl">Pages Total</div></div>
+    <div class="tile green"><div class="val">262</div><div class="lbl">Pages Pass</div></div>
+    <div class="tile red"><div class="val">4</div><div class="lbl">Pages Fail</div></div>
+    <div class="tile red"><div class="val">19</div><div class="lbl">Dup Clusters</div></div>
+    <div class="tile red"><div class="val">2</div><div class="lbl">Placeholders</div></div>
+    <div class="tile orange"><div class="val">194</div><div class="lbl">Anon Author</div></div>
+    <div class="tile yellow"><div class="val">3</div><div class="lbl">JS-Dependent</div></div>
+  </div>
+  <div class="blocking"><h3>Blocking Reasons</h3><ul><li>2 placeholder page(s) must be removed or developed</li><li>19 near-duplicate cluster(s) > allowed 2</li></ul></div>
+  <div class="table-section">
+    <div class="table-header">
+      <h2 style="margin:0">Failing Pages</h2>
+      <span class="fail-count">4 pages</span>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Score</th><th>URL</th><th>Words</th><th>Top Issue</th><th>Fix</th></tr></thead>
+        <tbody>
+        <tr>
+          <td><span class="score-badge fail">45</span></td>
+          <td><a href="https://www.calcphi.com/australia/blog/super-contribution-caps-2026/" target="_blank">/australia/blog/super-contribution-caps-2026/</a></td>
+          <td>1844</td>
+          <td class="issue-cell">Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions</td>
+          <td class="fix-cell">Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions.</td>
+        </tr>
+        <tr>
+          <td><span class="score-badge fail">45</span></td>
+          <td><a href="https://www.calcphi.com/australia/blog/salary-sacrifice-super-guide/" target="_blank">/australia/blog/salary-sacrifice-super-guide/</a></td>
+          <td>1447</td>
+          <td class="issue-cell">Missing editorial blocks: FAQ with >= 3 questions, how-to-use / next steps guidance</td>
+          <td class="fix-cell">Add missing section(s): FAQ with >= 3 questions, how-to-use / next steps guidance.</td>
+        </tr>
+        <tr>
+          <td><span class="score-badge fail">45</span></td>
+          <td><a href="https://www.calcphi.com/markets/" target="_blank">/markets/</a></td>
+          <td>177</td>
+          <td class="issue-cell">word_count=177 (< 500)</td>
+          <td class="fix-cell">Expand main content to at least 500 words with unique worked examples and explanation.</td>
+        </tr>
+        <tr>
+          <td><span class="score-badge warn">50</span></td>
+          <td><a href="https://www.calcphi.com/404.html" target="_blank">/404.html</a></td>
+          <td>59</td>
+          <td class="issue-cell">word_count=59 (< 500)</td>
+          <td class="fix-cell">Expand main content to at least 500 words with unique worked examples and explanation.</td>
+        </tr></tbody>
+      </table>
+    </div>
+  </div>
+  <h2>Near-Duplicate Clusters <span style="font-weight:400;color:var(--muted);font-size:.8rem;text-transform:none;">(scaled-content risk)</span></h2>
+  <div class="clusters-grid"><div class="cluster-card"><h4>Cluster 1 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/australia/blog/catch-up-super-contributions/" target="_blank">/australia/blog/catch-up-super-contributions/</a> <span class="sim">sim=0.86</span></li><li><a href="https://www.calcphi.com/australia/blog/super-contribution-caps-2026/" target="_blank">/australia/blog/super-contribution-caps-2026/</a> <span class="sim">sim=0.86</span></li></ul></div><div class="cluster-card"><h4>Cluster 2 — 3 pages</h4><ul><li><a href="https://www.calcphi.com/india/blog/what-is-fire-financial-independence/" target="_blank">/india/blog/what-is-fire-financial-independence/</a> <span class="sim">sim=0.87</span></li><li><a href="https://www.calcphi.com/india/blog/retire-early-india-guide/" target="_blank">/india/blog/retire-early-india-guide/</a> <span class="sim">sim=0.87</span></li><li><a href="https://www.calcphi.com/india/blog/fire-india-retire-at-40/" target="_blank">/india/blog/fire-india-retire-at-40/</a> <span class="sim">sim=0.85</span></li></ul></div><div class="cluster-card"><h4>Cluster 3 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/india/blog/section-80d-health-insurance/" target="_blank">/india/blog/section-80d-health-insurance/</a> <span class="sim">sim=0.89</span></li><li><a href="https://www.calcphi.com/india/section-80d-calculator/" target="_blank">/india/section-80d-calculator/</a> <span class="sim">sim=0.89</span></li></ul></div><div class="cluster-card"><h4>Cluster 4 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/india/blog/how-much-to-retire-at-50/" target="_blank">/india/blog/how-much-to-retire-at-50/</a> <span class="sim">sim=0.87</span></li><li><a href="https://www.calcphi.com/india/blog/how-to-plan-retirement-india/" target="_blank">/india/blog/how-to-plan-retirement-india/</a> <span class="sim">sim=0.87</span></li></ul></div><div class="cluster-card"><h4>Cluster 5 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/india/blog/rental-property-roi-india/" target="_blank">/india/blog/rental-property-roi-india/</a> <span class="sim">sim=0.90</span></li><li><a href="https://www.calcphi.com/india/rental-yield-calculator/" target="_blank">/india/rental-yield-calculator/</a> <span class="sim">sim=0.90</span></li></ul></div><div class="cluster-card"><h4>Cluster 6 — 3 pages</h4><ul><li><a href="https://www.calcphi.com/australia/stamp-duty-calculator/" target="_blank">/australia/stamp-duty-calculator/</a> <span class="sim">sim=0.88</span></li><li><a href="https://www.calcphi.com/australia/first-home-buyer-calculator/" target="_blank">/australia/first-home-buyer-calculator/</a> <span class="sim">sim=0.88</span></li><li><a href="https://www.calcphi.com/australia/blog/stamp-duty-australia-guide/" target="_blank">/australia/blog/stamp-duty-australia-guide/</a> <span class="sim">sim=0.87</span></li></ul></div><div class="cluster-card"><h4>Cluster 7 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/australia/blog/salary-sacrifice-super-guide/" target="_blank">/australia/blog/salary-sacrifice-super-guide/</a> <span class="sim">sim=0.90</span></li><li><a href="https://www.calcphi.com/blog/au/salary-sacrifice-super-guide/" target="_blank">/blog/au/salary-sacrifice-super-guide/</a> <span class="sim">sim=0.90</span></li></ul></div><div class="cluster-card"><h4>Cluster 8 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/australia/blog/how-to-refinance-mortgage/" target="_blank">/australia/blog/how-to-refinance-mortgage/</a> <span class="sim">sim=0.87</span></li><li><a href="https://www.calcphi.com/australia/refinance-calculator/" target="_blank">/australia/refinance-calculator/</a> <span class="sim">sim=0.87</span></li></ul></div><div class="cluster-card"><h4>Cluster 9 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/blog/au/capital-gains-tax-australia/" target="_blank">/blog/au/capital-gains-tax-australia/</a> <span class="sim">sim=0.89</span></li><li><a href="https://www.calcphi.com/australia/capital-gains-tax-calculator/" target="_blank">/australia/capital-gains-tax-calculator/</a> <span class="sim">sim=0.89</span></li></ul></div><div class="cluster-card"><h4>Cluster 10 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/india/gst-calculator/" target="_blank">/india/gst-calculator/</a> <span class="sim">sim=0.87</span></li><li><a href="https://www.calcphi.com/india/gst-reverse-calculator/" target="_blank">/india/gst-reverse-calculator/</a> <span class="sim">sim=0.87</span></li></ul></div><div class="cluster-card"><h4>Cluster 11 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/india/epf-calculator/" target="_blank">/india/epf-calculator/</a> <span class="sim">sim=0.91</span></li><li><a href="https://www.calcphi.com/india/epf-contribution-calculator/" target="_blank">/india/epf-contribution-calculator/</a> <span class="sim">sim=0.91</span></li></ul></div><div class="cluster-card"><h4>Cluster 12 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/india/professional-tax-calc-calculator/" target="_blank">/india/professional-tax-calc-calculator/</a> <span class="sim">sim=0.87</span></li><li><a href="https://www.calcphi.com/india/professional-tax-calculator/" target="_blank">/india/professional-tax-calculator/</a> <span class="sim">sim=0.87</span></li></ul></div><div class="cluster-card"><h4>Cluster 13 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/india/mortgage-refinance-calculator/" target="_blank">/india/mortgage-refinance-calculator/</a> <span class="sim">sim=0.88</span></li><li><a href="https://www.calcphi.com/india/balance-transfer-calculator/" target="_blank">/india/balance-transfer-calculator/</a> <span class="sim">sim=0.88</span></li></ul></div><div class="cluster-card"><h4>Cluster 14 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/india/bonus-tax-calculator/" target="_blank">/india/bonus-tax-calculator/</a> <span class="sim">sim=0.93</span></li><li><a href="https://www.calcphi.com/india/bonus-after-tax-calculator/" target="_blank">/india/bonus-after-tax-calculator/</a> <span class="sim">sim=0.93</span></li></ul></div><div class="cluster-card"><h4>Cluster 15 — 7 pages</h4><ul><li><a href="https://www.calcphi.com/india/loan-against-property-calculator/" target="_blank">/india/loan-against-property-calculator/</a> <span class="sim">sim=0.92</span></li><li><a href="https://www.calcphi.com/india/home-loan-emi-calculator/" target="_blank">/india/home-loan-emi-calculator/</a> <span class="sim">sim=0.92</span></li><li><a href="https://www.calcphi.com/india/emi-calculator/" target="_blank">/india/emi-calculator/</a> <span class="sim">sim=0.90</span></li><li><a href="https://www.calcphi.com/india/personal-loan-emi-calculator/" target="_blank">/india/personal-loan-emi-calculator/</a> <span class="sim">sim=0.89</span></li><li><a href="https://www.calcphi.com/india/home-affordability-calculator/" target="_blank">/india/home-affordability-calculator/</a> <span class="sim">sim=0.88</span></li><li><a href="https://www.calcphi.com/india/loan-eligibility-calculator/" target="_blank">/india/loan-eligibility-calculator/</a> <span class="sim">sim=0.88</span></li><li><a href="https://www.calcphi.com/india/car-loan-emi-calculator/" target="_blank">/india/car-loan-emi-calculator/</a> <span class="sim">sim=0.87</span></li></ul></div><div class="cluster-card"><h4>Cluster 16 — 6 pages</h4><ul><li><a href="https://www.calcphi.com/india/early-retirement-calculator/" target="_blank">/india/early-retirement-calculator/</a> <span class="sim">sim=0.93</span></li><li><a href="https://www.calcphi.com/india/retirement-corpus-calculator/" target="_blank">/india/retirement-corpus-calculator/</a> <span class="sim">sim=0.93</span></li><li><a href="https://www.calcphi.com/india/swp-retirement-calculator/" target="_blank">/india/swp-retirement-calculator/</a> <span class="sim">sim=0.92</span></li><li><a href="https://www.calcphi.com/india/swp-calculator/" target="_blank">/india/swp-calculator/</a> <span class="sim">sim=0.92</span></li><li><a href="https://www.calcphi.com/india/retirement-timeline-calculator/" target="_blank">/india/retirement-timeline-calculator/</a> <span class="sim">sim=0.88</span></li><li><a href="https://www.calcphi.com/india/pension-income-calculator/" target="_blank">/india/pension-income-calculator/</a> <span class="sim">sim=0.86</span></li></ul></div><div class="cluster-card"><h4>Cluster 17 — 6 pages</h4><ul><li><a href="https://www.calcphi.com/india/tax-saver-fd-calculator/" target="_blank">/india/tax-saver-fd-calculator/</a> <span class="sim">sim=0.90</span></li><li><a href="https://www.calcphi.com/india/senior-citizen-fd-calculator/" target="_blank">/india/senior-citizen-fd-calculator/</a> <span class="sim">sim=0.90</span></li><li><a href="https://www.calcphi.com/india/fd-calculator/" target="_blank">/india/fd-calculator/</a> <span class="sim">sim=0.89</span></li><li><a href="https://www.calcphi.com/india/nre-fd-calculator/" target="_blank">/india/nre-fd-calculator/</a> <span class="sim">sim=0.88</span></li><li><a href="https://www.calcphi.com/india/bank-rate-comparison-calculator/" target="_blank">/india/bank-rate-comparison-calculator/</a> <span class="sim">sim=0.88</span></li><li><a href="https://www.calcphi.com/india/flexi-deposit-calculator/" target="_blank">/india/flexi-deposit-calculator/</a> <span class="sim">sim=0.87</span></li></ul></div><div class="cluster-card"><h4>Cluster 18 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/india/simple-interest-calculator/" target="_blank">/india/simple-interest-calculator/</a> <span class="sim">sim=0.89</span></li><li><a href="https://www.calcphi.com/india/compound-interest-calculator/" target="_blank">/india/compound-interest-calculator/</a> <span class="sim">sim=0.89</span></li></ul></div><div class="cluster-card"><h4>Cluster 19 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/india/new-vs-old-regime-calculator/" target="_blank">/india/new-vs-old-regime-calculator/</a> <span class="sim">sim=0.85</span></li><li><a href="https://www.calcphi.com/india/income-tax-calculator/" target="_blank">/india/income-tax-calculator/</a> <span class="sim">sim=0.85</span></li></ul></div></div>
+</main>
+<footer>CalcPhi War Room · AdSense Sentinel · Generated 2026-06-05</footer>
+</body>
+</html>

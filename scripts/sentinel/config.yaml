@@ -34,7 +34,8 @@ strip_selectors:
 placeholder_signals:
   - "coming soon"
   - "launching 2026"
-  - "under construction"
+  - "page under construction"
+  - "site under construction"
   - "stay tuned"
 
 editorial_blocks:

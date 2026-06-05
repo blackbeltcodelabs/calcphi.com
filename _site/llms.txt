@@ -1,12 +1,18 @@
 # CalcPhi
 
-> Accurate Indian personal-finance calculators and editorial guides for salaried Indians making money decisions — tax, investing, retirement, and loans. India-focused, regulation-current as of FY 2025–26.
+> Accurate personal-finance calculators and editorial guides for salaried professionals in India and Australia — tax, investing, superannuation, retirement, and loans. Regulation-current for each market.
 
 ## About
 
-CalcPhi publishes free, formula-accurate financial calculators paired with plain-English editorial guides. Every figure is dated to the relevant financial year (FY) and assessment year (AY) and sourced to RBI, SEBI, IRDAI, the Income Tax Department of India, EPFO, or PFRDA. Content is authored by finance-credentialed editors and reviewed for regulatory accuracy at each Budget cycle. CalcPhi serves Indian salaried professionals who need trustworthy, current financial math — not simplified estimates. All calculations run entirely in the browser; no data is collected or stored.
+CalcPhi publishes free, formula-accurate financial calculators paired with plain-English editorial guides. Coverage spans two markets — India (FY 2025–26, ATO / RBI / SEBI / PFRDA / EPFO) and Australia (FY 2025–26, ATO) — with additional markets added as launched. Every figure is dated to the relevant financial year, sourced to the applicable regulator, and reviewed at each Budget cycle. Content is authored by finance-credentialed editors. All calculations run in the browser; no data is collected or stored. New markets will appear as new sections in this file when launched.
 
-## NPS & Retirement
+---
+
+# India
+
+> Indian personal-finance calculators and guides for FY 2025–26. Sources: Income Tax Department, RBI, SEBI, IRDAI, EPFO, PFRDA.
+
+## India — NPS & Retirement
 
 - [NPS Calculator](https://www.calcphi.com/india/nps-calculator/): Estimate NPS pension corpus and monthly annuity using PFRDA-standard assumptions; covers Tier 1, employer contribution, and Section 80CCD(1B) deductions as of FY 2025–26.
 - [Annuity Calculator](https://www.calcphi.com/india/annuity-calculator/): Calculate guaranteed income from an annuity plan at retirement given corpus and annuity rate.
@@ -25,20 +31,21 @@ CalcPhi publishes free, formula-accurate financial calculators paired with plain
 - [Retire Early India Guide](https://www.calcphi.com/india/blog/retire-early-india-guide/): Practical guide to achieving financial independence and retiring early in India.
 - [How Much to Retire at 50](https://www.calcphi.com/india/blog/how-much-to-retire-at-50/): Corpus and savings rate required to retire at 50 in India given typical expense profiles.
 - [What is FIRE — Financial Independence India](https://www.calcphi.com/india/blog/what-is-fire-financial-independence/): Explanation of the FIRE movement, India-specific savings rates, and safe withdrawal considerations.
-- [FIRE India — Retire at 40](https://www.calcphi.com/india/blog/fire-india-retire-at-40/): How to calculate and achieve early retirement at 40 for Indian investors.
 - [PPF vs NPS vs FD Comparison](https://www.calcphi.com/india/blog/ppf-vs-nps-vs-fd/): Detailed comparison of India's most popular long-term savings instruments on returns, tax, and liquidity.
 
-## Capital Gains Tax
+## India — Capital Gains Tax
 
 - [Capital Gains Tax Calculator](https://www.calcphi.com/india/capital-gains-calculator/): Calculate STCG and LTCG on listed equity shares, equity mutual funds, debt funds, and property under Budget 2024 rules (FY 2024–25 onwards).
+- [Section 111A Guide](https://www.calcphi.com/india/blog/section-111a/): Section 111A of the Income Tax Act — STCG rate history (15% pre-July 23 2024, 20% post), surcharge-adjusted effective rates, and Section 87A rebate unavailability.
 - [Capital Gains Tax Guide — India](https://www.calcphi.com/india/blog/capital-gains-tax-india/): Plain-English explanation of short-term and long-term capital gains tax rates, holding periods, and exemption limits; rates updated for Budget 2024 changes (STCG 20%, LTCG 12.5% above ₹1.25 lakh).
 - [CAGR vs XIRR — Explained](https://www.calcphi.com/india/blog/cagr-vs-xirr/): When to use CAGR and when XIRR gives a more accurate picture of mutual fund or portfolio returns.
 
-## Income Tax & Regime Comparison
+## India — Income Tax & Regime Comparison
 
 - [Income Tax Calculator (AY 2025–26)](https://www.calcphi.com/india/income-tax-calculator/): Compute income tax liability under both old and new regimes for FY 2024–25 (AY 2025–26), including standard deduction, Section 80C, and HRA.
 - [Old vs New Tax Regime Calculator](https://www.calcphi.com/india/new-vs-old-regime-calculator/): Side-by-side regime comparison showing which regime saves more for a given salary, HRA, and 80C investment profile.
 - [Old vs New Tax Regime — Full Guide](https://www.calcphi.com/india/blog/old-vs-new-tax-regime/): Decision guide covering standard deduction (₹75,000 under new regime FY 2025–26), slab rates, and which taxpayer profile benefits from each regime.
+- [NPS Tax Benefits in New Tax Regime](https://www.calcphi.com/india/blog/nps-tax-benefits/): Which NPS tax benefits survive under the new tax regime — 80CCD(2) employer contribution route (14% of basic salary), ₹7.5 lakh combined cap under Section 17(2), and salary restructuring strategy.
 - [HRA Calculator](https://www.calcphi.com/india/hra-calculator/): Calculate HRA exemption under Section 10(13A) with metro/non-metro distinction and least-of-three formula.
 - [HRA Exemption Guide](https://www.calcphi.com/india/blog/hra-exemption-guide/): How to calculate and claim HRA exemption, with worked examples for metro and non-metro cities.
 - [Advance Tax Calculator](https://www.calcphi.com/india/advance-tax-calculator/): Calculate advance tax instalments due in June, September, December, and March under Section 208.
@@ -54,199 +61,259 @@ CalcPhi publishes free, formula-accurate financial calculators paired with plain
 - [CTC to In-Hand Salary Calculator](https://www.calcphi.com/india/ctc-to-in-hand-calculator/): Break down CTC into take-home salary after PF, professional tax, and income tax deductions.
 - [CTC vs In-Hand Salary — Explained](https://www.calcphi.com/india/blog/ctc-vs-in-hand-salary/): What components make up CTC and why take-home is typically 65–75% of CTC for salaried employees.
 - [Salary Hike Calculator](https://www.calcphi.com/india/salary-hike-calculator/): Calculate new CTC and in-hand salary after a percentage increment.
-- [Salary Increment Guide](https://www.calcphi.com/india/blog/salary-increment-guide/): How to negotiate salary in India; what % increment is above-average across sectors.
 - [Professional Tax Calculator](https://www.calcphi.com/india/professional-tax-calculator/): Calculate state-level professional tax deducted from salary; covers all major Indian states.
 - [Leave Encashment Calculator](https://www.calcphi.com/india/leave-encashment-calculator/): Calculate tax-exempt leave encashment under Section 10(10AA) at retirement or resignation.
 - [Bonus After Tax Calculator](https://www.calcphi.com/india/bonus-after-tax-calculator/): Estimate take-home amount from a performance bonus after income tax and surcharge.
-- [Overtime Calculator](https://www.calcphi.com/india/overtime-calculator/): Calculate overtime pay based on basic salary and hours worked above the standard work week.
-- [VRS Calculator](https://www.calcphi.com/india/vrs-calculator/): Calculate Voluntary Retirement Scheme (VRS) compensation and tax-exempt amount under Section 10(10C).
-- [How to Save Tax Under 80C](https://www.calcphi.com/india/blog/how-to-save-tax-80c/): Practical guide to maximising the ₹1.5 lakh Section 80C deduction with the right instruments.
-- [ITR Filing Guide 2026](https://www.calcphi.com/india/blog/itr-filing-guide-2026/): Step-by-step guide to filing income tax returns in India for FY 2024–25.
-- [TDS on Salary Form 16 Guide](https://www.calcphi.com/india/blog/tds-on-salary-form-16/): How to read Form 16 and reconcile TDS with actual tax liability.
-- [Understanding Your Payslip](https://www.calcphi.com/india/blog/understanding-payslip/): How to read an Indian salary slip and understand each deduction line.
 - [Gratuity Calculator](https://www.calcphi.com/india/gratuity-calculator/): Calculate statutory gratuity under the Payment of Gratuity Act, 1972: (Last drawn basic + DA) × 15/26 × years of service.
 - [Gratuity Calculation Guide](https://www.calcphi.com/india/blog/gratuity-calculation-guide/): When gratuity is payable, formula, tax exemption limit (₹20 lakh), and forfeiture rules.
 - [ESOP Calculator](https://www.calcphi.com/india/esop-calculator/): Calculate pre-tax and post-tax value of employee stock options at vest, exercise, and sale.
 - [ESOPs India Guide](https://www.calcphi.com/india/blog/esops-india-guide/): How ESOPs are taxed at exercise (perquisite) and sale (capital gains) in India.
+- [How to Save Tax Under 80C](https://www.calcphi.com/india/blog/how-to-save-tax-80c/): Practical guide to maximising the ₹1.5 lakh Section 80C deduction with the right instruments.
+- [ITR Filing Guide 2026](https://www.calcphi.com/india/blog/itr-filing-guide-2026/): Step-by-step guide to filing income tax returns in India for FY 2024–25.
+- [TDS on Salary Form 16 Guide](https://www.calcphi.com/india/blog/tds-on-salary-form-16/): How to read Form 16 and reconcile TDS with actual tax liability.
+- [Understanding Your Payslip](https://www.calcphi.com/india/blog/understanding-payslip/): How to read an Indian salary slip and understand each deduction line.
 
-## SIP & Mutual Funds
+## India — SIP & Mutual Funds
 
 - [SIP Calculator](https://www.calcphi.com/india/sip-calculator/): Project mutual fund corpus from a monthly SIP using the compound-growth formula; shows impact of step-up and tenure.
-- [Step-Up SIP Calculator](https://www.calcphi.com/india/step-up-sip-calculator/): Model a SIP where the monthly amount increases annually by a fixed percentage — useful for investors expecting annual increments.
-- [SWP Calculator](https://www.calcphi.com/india/swp-calculator/): Calculate how long a mutual fund corpus lasts under a Systematic Withdrawal Plan at a chosen monthly withdrawal.
+- [Step-Up SIP Calculator](https://www.calcphi.com/india/step-up-sip-calculator/): Model a SIP where the monthly amount increases annually by a fixed percentage.
+- [SWP Calculator](https://www.calcphi.com/india/swp-calculator/): Calculate how long a mutual fund corpus lasts under a Systematic Withdrawal Plan.
 - [Lumpsum Calculator](https://www.calcphi.com/india/lumpsum-calculator/): Calculate future value of a one-time mutual fund investment using compound interest.
-- [SIP vs Lumpsum Calculator](https://www.calcphi.com/india/sip-vs-lumpsum-calculator/): Compare the projected corpus from equal-amount SIP vs lumpsum investment over the same horizon.
+- [SIP vs Lumpsum Calculator](https://www.calcphi.com/india/sip-vs-lumpsum-calculator/): Compare projected corpus from equal-amount SIP vs lumpsum over the same horizon.
 - [Goal SIP Calculator](https://www.calcphi.com/india/goal-sip-calculator/): Calculate the monthly SIP amount needed to reach a specific financial goal by a target date.
-- [SIP Delay Cost Calculator](https://www.calcphi.com/india/sip-delay-cost-calculator/): Quantify the corpus lost by delaying a SIP by 1, 3, or 5 years — shows the cost of procrastination.
-- [ELSS Calculator](https://www.calcphi.com/india/elss-calculator/): Estimate ELSS corpus with 3-year mandatory lock-in and Section 80C benefit at current slab rates.
-- [MF Returns Calculator](https://www.calcphi.com/india/mf-returns-calculator/): Calculate absolute and CAGR returns on a mutual fund investment for any holding period.
-- [NAV Calculator](https://www.calcphi.com/india/nav-calculator/): Calculate mutual fund units purchased and current value based on NAV and investment amount.
-- [Expense Ratio Calculator](https://www.calcphi.com/india/expense-ratio-calculator/): Show how annual expense ratio compounds to reduce long-term corpus, comparing regular vs direct plans.
-- [Direct vs Regular Calculator](https://www.calcphi.com/india/direct-vs-regular-calculator/): Quantify the long-term difference in corpus between direct and regular mutual fund plans.
-- [STP Calculator](https://www.calcphi.com/india/stp-calculator/): Model a Systematic Transfer Plan from a debt fund to an equity fund over a chosen period.
+- [SIP Delay Cost Calculator](https://www.calcphi.com/india/sip-delay-cost-calculator/): Quantify the corpus lost by delaying a SIP by 1, 3, or 5 years.
+- [ELSS Calculator](https://www.calcphi.com/india/elss-calculator/): Estimate ELSS corpus with 3-year mandatory lock-in and Section 80C benefit.
+- [MF Returns Calculator](https://www.calcphi.com/india/mf-returns-calculator/): Calculate absolute and CAGR returns on a mutual fund investment.
+- [Expense Ratio Calculator](https://www.calcphi.com/india/expense-ratio-calculator/): Show how annual expense ratio compounds to reduce long-term corpus.
+- [Direct vs Regular Calculator](https://www.calcphi.com/india/direct-vs-regular-calculator/): Quantify the long-term corpus difference between direct and regular mutual fund plans.
 - [CAGR Calculator](https://www.calcphi.com/india/cagr-calculator/): Compute the Compounded Annual Growth Rate of any investment over a chosen period.
-- [Inflation Adjusted Returns Calculator](https://www.calcphi.com/india/inflation-adjusted-returns-calculator/): Show real returns (net of inflation) for any investment, removing the illusion of nominal gains.
+- [Inflation Adjusted Returns Calculator](https://www.calcphi.com/india/inflation-adjusted-returns-calculator/): Show real returns net of inflation for any investment.
 - [SIP vs Lumpsum Guide](https://www.calcphi.com/india/blog/sip-vs-lumpsum/): When SIP outperforms lumpsum and vice versa — volatility, market timing, and psychological factors.
-- [SIP Returns — What 12% Really Means](https://www.calcphi.com/india/blog/sip-returns-what-12-percent-means/): How 12% CAGR translates to actual monthly SIP returns over 10, 20, and 30 years.
-- [Step-Up SIP Power](https://www.calcphi.com/india/blog/step-up-sip-power/): How a 10% annual step-up in SIP amount can more than double the final corpus.
-- [How to Choose a SIP Fund](https://www.calcphi.com/india/blog/how-to-choose-sip-fund/): Criteria for selecting mutual funds for SIP — expense ratio, consistency, category, and fund house.
-- [Direct vs Regular Mutual Funds](https://www.calcphi.com/india/blog/direct-vs-regular-mutual-funds/): Cost difference, where to invest in direct plans, and when a financial advisor adds value.
-- [Expense Ratio Explained](https://www.calcphi.com/india/blog/expense-ratio-explained/): What expense ratio is, SEBI limits, and how to compare funds by TER.
-- [How to Read a Mutual Fund Factsheet](https://www.calcphi.com/india/blog/how-to-read-mutual-fund-factsheet/): Guide to interpreting portfolio turnover, Sharpe ratio, alpha, beta, and Sortino ratio.
-- [Best SIP Amount by Salary](https://www.calcphi.com/india/blog/best-sip-amount-by-salary/): Recommended SIP amount at different salary levels to build long-term wealth.
-- [SIP vs FD — Which is Better?](https://www.calcphi.com/india/blog/sip-vs-fd-which-is-better/): After-tax return comparison of equity SIP and bank FD over 5, 10, and 15 years.
-- [ELSS vs PPF for Tax Saving](https://www.calcphi.com/india/blog/elss-vs-ppf-tax-saving/): Comparison of ELSS (3-year lock-in, market-linked) vs PPF (15-year lock-in, 7.1% guaranteed) for Section 80C.
-- [FD vs Debt Mutual Fund](https://www.calcphi.com/india/blog/fd-vs-debt-mutual-fund/): Post-tax return comparison after the 2023 taxation change that removed indexation for debt funds.
+- [ELSS vs PPF for Tax Saving](https://www.calcphi.com/india/blog/elss-vs-ppf-tax-saving/): Comparison of ELSS (3-year lock-in, market-linked) vs PPF (15-year, 7.1% guaranteed) for Section 80C.
 
-## Fixed Income & Safe Investments
+## India — Fixed Income & Safe Investments
 
-- [PPF Calculator](https://www.calcphi.com/india/ppf-calculator/): Project Public Provident Fund maturity using the current Government of India PPF rate (7.1% Q1 FY 2025–26) and Section 80C benefit.
-- [FD Calculator](https://www.calcphi.com/india/fd-calculator/): Calculate fixed deposit maturity amount and interest for cumulative and non-cumulative FDs; shows TDS above ₹40,000.
+- [PPF Calculator](https://www.calcphi.com/india/ppf-calculator/): Project Public Provident Fund maturity at 7.1% (Q1 FY 2025–26 rate) with Section 80C benefit.
+- [FD Calculator](https://www.calcphi.com/india/fd-calculator/): Calculate fixed deposit maturity and interest; shows TDS applicability above ₹40,000 annual interest.
 - [RD Calculator](https://www.calcphi.com/india/rd-calculator/): Compute recurring deposit maturity using the quarterly compounding formula standard to Indian banks.
-- [Senior Citizen FD Calculator](https://www.calcphi.com/india/senior-citizen-fd-calculator/): Calculate FD returns with the higher interest rate (typically 0.25–0.75% extra) offered to senior citizens.
-- [Tax Saver FD Calculator](https://www.calcphi.com/india/tax-saver-fd-calculator/): Calculate 5-year tax-saving FD returns with Section 80C benefit and TDS on maturity interest.
-- [Sweep-in FD Calculator](https://www.calcphi.com/india/sweep-in-fd-calculator/): Model how a sweep-in FD earns FD rates on savings account balance above a threshold.
-- [Flexi Deposit Calculator](https://www.calcphi.com/india/flexi-deposit-calculator/): Calculate returns on a flexi fixed deposit that allows partial withdrawals without breaking the full FD.
-- [NSC Calculator](https://www.calcphi.com/india/nsc-calculator/): Calculate National Savings Certificate maturity value at 7.7% for 5 years with Section 80C benefit.
+- [NSC Calculator](https://www.calcphi.com/india/nsc-calculator/): Calculate National Savings Certificate maturity at 7.7% for 5 years with Section 80C benefit.
 - [KVP Calculator](https://www.calcphi.com/india/kvp-calculator/): Calculate when Kisan Vikas Patra doubles at the current government notified rate.
-- [Post Office MIS Calculator](https://www.calcphi.com/india/post-office-mis-calculator/): Calculate guaranteed monthly income from Post Office Monthly Income Scheme at current rates.
-- [Post Office RD Calculator](https://www.calcphi.com/india/post-office-rd-calculator/): Calculate maturity amount for Post Office RD with quarterly compounding.
-- [Post Office TD Calculator](https://www.calcphi.com/india/post-office-td-calculator/): Calculate Post Office Time Deposit returns for 1, 2, 3, and 5-year tenures.
-- [SCSS Calculator](https://www.calcphi.com/india/scss-calculator/): Calculate quarterly interest income from Senior Citizen Savings Scheme at current rate.
-- [SSY Calculator](https://www.calcphi.com/india/ssy-calculator/): Project Sukanya Samriddhi Yojana maturity value at 8.2% for a girl child's higher education or marriage.
-- [Savings Account Calculator](https://www.calcphi.com/india/savings-account-calculator/): Calculate effective annual interest on a savings account given monthly average balance.
-- [Bank Rate Comparison Calculator](https://www.calcphi.com/india/bank-rate-comparison-calculator/): Compare FD and savings rates across major Indian banks to find the best effective yield.
-- [APY Calculator](https://www.calcphi.com/india/apy-calculator/): Calculate guaranteed monthly pension from Atal Pension Yojana at various contribution ages.
-- [FD vs RD Comparison](https://www.calcphi.com/india/fd-vs-rd-calculator/): Compare maturity amounts and effective yields of FD lumpsum vs RD monthly investment.
-- [RD vs FD Guide](https://www.calcphi.com/india/blog/rd-vs-fd/): When to choose a recurring deposit over a fixed deposit based on cash flow and investment discipline.
-- [Post Office Schemes vs Bank FD](https://www.calcphi.com/india/blog/post-office-schemes-vs-bank-fd/): Safety, rates, and liquidity comparison of PPF, NSC, SCSS, and KVP vs bank FDs.
-- [NSC vs KVP — Post Office Guide](https://www.calcphi.com/india/blog/nsc-vs-kvp-post-office/): Which post office scheme suits whom — tax benefit, tenure, and liquidity.
-- [Senior Citizen Savings vs FD](https://www.calcphi.com/india/blog/senior-citizen-savings-vs-fd/): SCSS vs bank FD for retirees: rates, tenure, premature withdrawal, and TDS.
-- [Best Savings Account Interest 2026](https://www.calcphi.com/india/blog/best-savings-account-interest-2026/): Current savings account interest rates across major Indian banks.
+- [Post Office MIS Calculator](https://www.calcphi.com/india/post-office-mis-calculator/): Calculate guaranteed monthly income from Post Office Monthly Income Scheme.
+- [SCSS Calculator](https://www.calcphi.com/india/scss-calculator/): Calculate quarterly interest from Senior Citizen Savings Scheme at 8.2% (FY 2025–26).
+- [SSY Calculator](https://www.calcphi.com/india/ssy-calculator/): Project Sukanya Samriddhi Yojana maturity at 8.2% — highest post office small savings rate.
 
-## EPF & Provident Fund
+## India — EPF & Provident Fund
 
-- [EPF Calculator](https://www.calcphi.com/india/epf-calculator/): Project EPF corpus at retirement using EPFO compound-interest formula; current EPF rate 8.25% FY 2024–25.
+- [EPF Calculator](https://www.calcphi.com/india/epf-calculator/): Project EPF corpus at retirement using EPFO compound-interest formula; EPF rate 8.25% FY 2024–25.
 - [EPF Contribution Calculator](https://www.calcphi.com/india/epf-contribution-calculator/): Calculate monthly EPF contribution (employee + employer) for any basic salary; shows VPF option.
-- [EPS Pension Calculator](https://www.calcphi.com/india/eps-pension-calculator/): Estimate monthly pension from Employees' Pension Scheme (EPS) using the pensionable salary formula.
-- [EPF Balance Guide](https://www.calcphi.com/india/blog/epf-balance-guide/): How to check EPF balance, withdraw, and transfer on job change — rules and process for 2026.
+- [EPS Pension Calculator](https://www.calcphi.com/india/eps-pension-calculator/): Estimate monthly pension from Employees' Pension Scheme using the pensionable salary formula.
+- [EPF Balance Guide](https://www.calcphi.com/india/blog/epf-balance-guide/): How to check EPF balance, withdraw, and transfer on job change.
 
-## Loans & EMI
+## India — Loans & EMI
 
-- [EMI Calculator](https://www.calcphi.com/india/emi-calculator/): Calculate equated monthly instalments for any loan using the reducing-balance formula; shows total interest outgo.
+- [EMI Calculator](https://www.calcphi.com/india/emi-calculator/): Calculate equated monthly instalments for any loan using the reducing-balance formula.
 - [Home Loan EMI Calculator](https://www.calcphi.com/india/home-loan-emi-calculator/): Calculate home loan EMI, total interest, and amortisation schedule for any loan amount, rate, and tenure.
-- [Home Loan Affordability Calculator](https://www.calcphi.com/india/home-affordability-calculator/): Estimate the maximum home loan amount you can afford based on monthly income and existing obligations.
-- [Loan Eligibility Calculator](https://www.calcphi.com/india/loan-eligibility-calculator/): Calculate maximum loan eligibility based on income, FOIR (Fixed Obligation to Income Ratio), and credit score.
+- [Home Loan Affordability Calculator](https://www.calcphi.com/india/home-affordability-calculator/): Estimate the maximum home loan amount based on monthly income and existing obligations.
 - [Personal Loan EMI Calculator](https://www.calcphi.com/india/personal-loan-emi-calculator/): Calculate monthly EMI and true cost of a personal loan including processing fees.
-- [Car Loan EMI Calculator](https://www.calcphi.com/india/car-loan-emi-calculator/): Calculate car loan EMI and compare effective interest rates across lenders.
-- [Education Loan EMI Calculator](https://www.calcphi.com/india/education-loan-emi-calculator/): Calculate education loan EMI with moratorium period; shows interest accrued during study.
-- [Business Loan EMI Calculator](https://www.calcphi.com/india/business-loan-emi-calculator/): Calculate business loan EMI for term loans and working capital facilities.
-- [Two Wheeler Loan Calculator](https://www.calcphi.com/india/two-wheeler-loan-calculator/): Calculate two-wheeler loan EMI and on-road cost financing.
 - [Loan Prepayment Calculator](https://www.calcphi.com/india/loan-prepayment-calculator/): Show interest saved and tenure reduction from a one-time or recurring prepayment.
-- [Moratorium Calculator](https://www.calcphi.com/india/moratorium-calculator/): Calculate additional interest cost from a loan moratorium period and its effect on total repayment.
-- [Flat vs Reducing Rate Calculator](https://www.calcphi.com/india/flat-vs-reducing-calculator/): Convert flat interest rate to effective reducing-balance rate — shows why flat-rate loans are more expensive.
 - [Balance Transfer Calculator](https://www.calcphi.com/india/balance-transfer-calculator/): Calculate savings from transferring a home loan to a lower interest rate lender.
-- [Overdraft Calculator](https://www.calcphi.com/india/overdraft-calculator/): Calculate interest on an overdraft account charged daily on the outstanding utilised amount.
-- [Credit Card EMI Calculator](https://www.calcphi.com/india/credit-card-emi-calculator/): Calculate EMI, total interest, and effective APR for converting a credit card balance to EMI.
 - [Home Loan Tax Calculator](https://www.calcphi.com/india/home-loan-tax-calculator/): Calculate Section 24(b) interest deduction and Section 80C principal deduction for a home loan.
-- [Home Loan Insurance Calculator](https://www.calcphi.com/india/home-loan-insurance-calculator/): Estimate home loan insurance premium and compare single-premium vs regular-premium options.
-- [Home Loan Prepayment vs Investing Guide](https://www.calcphi.com/india/blog/home-loan-prepayment-vs-investing/): Whether to prepay a home loan or invest the surplus — a mathematical comparison.
-- [Balance Transfer Home Loan Guide](https://www.calcphi.com/india/blog/balance-transfer-home-loan/): When a home loan balance transfer saves money and the break-even period calculation.
-- [Personal Loan True Cost Guide](https://www.calcphi.com/india/blog/personal-loan-true-cost/): Hidden costs in personal loans — processing fees, prepayment charges, and effective APR.
-- [Car Loan vs Buying Outright](https://www.calcphi.com/india/blog/car-loan-vs-buying-outright/): The total cost difference between financing a car vs using savings, including opportunity cost.
 
-## Business & GST
+## India — Business & GST
 
 - [GST Calculator](https://www.calcphi.com/india/gst-calculator/): Add or remove GST at the applicable slab (5%, 12%, 18%, 28%) for any taxable value; uses GST Council rates.
 - [GST Reverse Calculator](https://www.calcphi.com/india/gst-reverse-calculator/): Extract base price and GST amount from a GST-inclusive total.
-- [Compound Interest Calculator](https://www.calcphi.com/india/compound-interest-calculator/): Calculate compound interest with variable compounding frequencies applicable to Indian savings instruments.
-- [Simple Interest Calculator](https://www.calcphi.com/india/simple-interest-calculator/): Calculate simple interest for any principal, rate, and time — useful for short-term instruments.
+- [Compound Interest Calculator](https://www.calcphi.com/india/compound-interest-calculator/): Calculate compound interest with variable compounding frequencies for Indian savings instruments.
 
-## Property & Real Estate
+## India — Property & Real Estate
 
-- [Home Loan EMI Calculator](https://www.calcphi.com/india/home-loan-emi-calculator/): See Loans & EMI section above.
 - [Property Registration Calculator](https://www.calcphi.com/india/property-registration-calculator/): Calculate stamp duty and registration charges for property purchase across major Indian states.
 - [Stamp Duty Calculator](https://www.calcphi.com/india/stamp-duty-calculator/): Estimate stamp duty on property purchase by state and property type.
-- [Rent vs Buy Calculator](https://www.calcphi.com/india/rent-vs-buy-calculator/): Compare 20-year cost of renting vs buying a home, factoring in down payment, EMI, appreciation, and rent escalation.
-- [Real Estate ROI Calculator](https://www.calcphi.com/india/real-estate-roi-calculator/): Calculate CAGR, rental yield, and total return on investment property.
+- [Rent vs Buy Calculator](https://www.calcphi.com/india/rent-vs-buy-calculator/): Compare 20-year cost of renting vs buying a home factoring in down payment, EMI, appreciation, and rent escalation.
 - [Rental Yield Calculator](https://www.calcphi.com/india/rental-yield-calculator/): Calculate gross and net rental yield as a percentage of property purchase price.
-- [Property Appreciation Calculator](https://www.calcphi.com/india/property-appreciation-calculator/): Project future property value given current price and historical appreciation rate.
-- [Under Construction Calculator](https://www.calcphi.com/india/under-construction-calculator/): Calculate total cost and pre-EMI interest for under-construction property purchase.
 - [Gold Loan Calculator](https://www.calcphi.com/india/gold-loan-calculator/): Calculate gold loan amount (up to 75% LTV per RBI), EMI, and interest for any gold weight.
-- [Loan Against Property Calculator](https://www.calcphi.com/india/loan-against-property-calculator/): Calculate LAP loan amount, EMI, and total interest based on property value and LTV.
-- [Mortgage Refinance Calculator](https://www.calcphi.com/india/mortgage-refinance-calculator/): Calculate interest savings and break-even period from refinancing a home loan.
-- [Home vs Rent India Guide](https://www.calcphi.com/india/blog/home-loan-vs-rent/): Is buying a home in India better than renting? Cost-of-carry analysis with real estate appreciation.
-- [Property Registration & Stamp Duty Guide](https://www.calcphi.com/india/blog/property-registration-stamp-duty/): State-wise stamp duty rates, registration charges, and ready reckoner rates in India.
-- [Under Construction vs Ready to Move](https://www.calcphi.com/india/blog/under-construction-vs-ready-to-move/): Cost, risk, and tax implications of buying under-construction vs ready-to-move property.
 
-## Health & Life Insurance
+---
 
-- [Health Insurance Calculator](https://www.calcphi.com/india/health-insurance-calculator/): Estimate recommended health insurance cover based on age, family size, city tier, and existing cover.
-- [Life Insurance Needs Calculator](https://www.calcphi.com/india/life-insurance-needs-calculator/): Calculate required life cover using the Human Life Value or income-replacement method.
-- [Term Insurance Calculator](https://www.calcphi.com/india/term-insurance-calculator/): Estimate term insurance premium for a given sum assured, age, and tenure.
-- [Critical Illness Calculator](https://www.calcphi.com/india/critical-illness-calculator/): Calculate recommended critical illness cover based on income replacement and treatment cost.
-- [Motor Insurance IDV Calculator](https://www.calcphi.com/india/motor-insurance-idv-calculator/): Calculate Insured Declared Value (IDV) for a vehicle of any age and type.
-- [ULIP Calculator](https://www.calcphi.com/india/ulip-calculator/): Project ULIP maturity value after charges; compare net returns with pure term + mutual fund alternative.
-- [Term Insurance India Guide](https://www.calcphi.com/india/blog/term-insurance-india-guide/): How much term insurance do you need, which riders to add, and how to compare plans in India.
+# Australia
 
-## Financial Planning
+> Australian personal-finance calculators and guides for FY 2025–26. Sources: ATO, APRA, ASIC, Centrelink, Treasury.
 
-- [Child Education Plan Calculator](https://www.calcphi.com/india/child-education-plan-calculator/): Estimate corpus needed for child's higher education adjusted for education inflation.
-- [Emergency Fund Calculator](https://www.calcphi.com/india/emergency-fund-calculator/): Calculate 3–6 months of essential expenses as a liquid emergency buffer.
-- [Net Worth Calculator](https://www.calcphi.com/india/net-worth-calculator/): Calculate net worth as total assets minus total liabilities; track personal financial health.
-- [Credit Card Interest Calculator](https://www.calcphi.com/india/credit-card-interest-calculator/): Calculate the true annual cost of carrying a credit card balance at revolving rates (typically 36–42% APR).
-- [Credit Card Payoff Calculator](https://www.calcphi.com/india/credit-card-payoff-calculator/): Show months to pay off a credit card balance at minimum vs accelerated payments.
-- [Debt Snowball / Avalanche Calculator](https://www.calcphi.com/india/debt-snowball-calculator/): Model the debt snowball (smallest balance first) or avalanche (highest rate first) payoff strategy.
-- [Credit Score India Guide](https://www.calcphi.com/india/blog/credit-score-india-guide/): What CIBIL score means, factors that improve it, and how to check it for free.
-- [How to Build Emergency Fund India](https://www.calcphi.com/india/blog/how-to-build-emergency-fund-india/): Step-by-step guide to sizing and building an emergency fund; best instruments for liquidity.
-- [How to Invest First Salary India](https://www.calcphi.com/india/blog/how-to-invest-first-salary/): Priority order for allocating the first salary — emergency fund, EPF, ELSS, SIP.
-- [Financial Planning in Your 30s India](https://www.calcphi.com/india/blog/financial-planning-30s-india/): Priority checklist for Indian professionals in their 30s — insurance, home loan, retirement, investments.
-- [Best Savings Account Interest 2026](https://www.calcphi.com/india/blog/best-savings-account-interest-2026/): Current savings account interest rates and where to park emergency funds.
-- [Passive Income Ideas India](https://www.calcphi.com/india/blog/passive-income-ideas-india/): Realistic passive income streams for Indian investors — dividends, rental, SWP, FD interest.
+## Australia — Superannuation & Retirement
 
-## Trust & Editorial
+- [Super Balance Calculator](https://www.calcphi.com/australia/super-balance-calculator/): Project superannuation balance at retirement using 12% SG rate (FY 2025–26), current balance, salary, extra contributions, and 7% long-run return.
+- [Super Comparison Calculator](https://www.calcphi.com/australia/super-comparison-calculator/): Compare two superannuation funds by annual fee and investment return to quantify the long-term fee drag.
+- [Salary Sacrifice Calculator](https://www.calcphi.com/australia/salary-sacrifice-calculator/): Calculate tax savings from salary sacrificing to super; shows net take-home pay change and annual super balance boost. ATO-aligned FY 2025–26.
+- [Age Pension Calculator](https://www.calcphi.com/australia/age-pension-calculator/): Estimate Centrelink Age Pension entitlement under both the assets test and income test; uses FY 2025–26 rates. Eligibility age 67.
+- [Superannuation Guide 2026](https://www.calcphi.com/australia/blog/superannuation/): Comprehensive guide covering SG rate, concessional and non-concessional caps, preservation age, and withdrawal rules.
+- [How Much Super to Retire](https://www.calcphi.com/australia/blog/how-much-super-to-retire/): ASFA Retirement Standard benchmarks and how much super is needed to fund a comfortable vs modest retirement in Australia.
+- [Salary Sacrifice Super Guide](https://www.calcphi.com/australia/blog/salary-sacrifice-super-guide/): How salary sacrificing to super reduces income tax; concessional cap ($30,000 FY 2025–26), carry-forward rules, and payroll implications.
+- [Super Contribution Caps 2026](https://www.calcphi.com/australia/blog/super-contribution-caps-2026/): Concessional cap $30,000 and non-concessional cap $120,000 for FY 2025–26; bring-forward rule and total super balance thresholds.
+- [Age Pension Australia Guide](https://www.calcphi.com/australia/blog/age-pension-australia-guide/): Age Pension eligibility at 67, assets test thresholds (homeowners/non-homeowners), income test deeming rates, and how to maximise entitlement.
+- [When Can I Access Super](https://www.calcphi.com/australia/blog/when-can-i-access-super/): Preservation age (60 for those born after 1 July 1964), conditions of release, and transition-to-retirement income streams.
+- [Super Investment Options](https://www.calcphi.com/australia/blog/super-investment-options/): How to choose between conservative, balanced, growth, and high-growth options inside superannuation.
+- [Catch-Up Super Contributions](https://www.calcphi.com/australia/blog/catch-up-super-contributions/): How to use unused concessional cap carry-forwards from up to 5 previous years when total super balance is below $500,000.
+- [Spouse Super Contributions](https://www.calcphi.com/australia/blog/spouse-super-contributions/): Tax offset of up to $540 for contributing to a low-income spouse's super account; income thresholds and eligibility.
+- [SMSF Guide Australia](https://www.calcphi.com/australia/blog/smsf-guide-australia/): When a self-managed super fund makes sense, trustee obligations, investment restrictions, and annual compliance costs.
+- [Super Death Benefits](https://www.calcphi.com/australia/blog/super-death-benefits/): How super death benefits are taxed for dependants vs non-dependants, and why binding nominations matter.
+- [FIRE Movement Australia](https://www.calcphi.com/australia/blog/fire-movement-australia/): Financial independence retire early in Australia — safe withdrawal rates, super access age tension, and achievable timelines.
 
-- [About CalcPhi](https://www.calcphi.com/about/): Publisher mission, editorial policy, and methodology for sourcing and updating financial figures.
-- [Priya Sharma — Author](https://www.calcphi.com/india/authors/priya-sharma/): Author credentials, qualifications, and published articles.
-- [Arjun Mehta — Author](https://www.calcphi.com/india/authors/arjun-mehta/): Author credentials, qualifications, and published articles.
-- [Deepa Krishnan — Author](https://www.calcphi.com/india/authors/deepa-krishnan/): Author credentials, qualifications, and published articles.
+## Australia — Tax & Income
 
-## Key Facts — Verified Regulatory Claims (FY 2025–26)
+- [Income Tax Calculator Australia](https://www.calcphi.com/australia/income-tax-calculator/): Calculate Australian income tax for FY 2025–26; Stage 3 rates, 2% Medicare levy, LITO offset, effective rate, and annual take-home pay. ATO-aligned.
+- [Salary Take-Home Pay Calculator](https://www.calcphi.com/australia/salary-take-home-calculator/): Calculate net weekly, fortnightly, and monthly pay after income tax, Medicare levy, and super for FY 2025–26.
+- [PAYG Withholding Calculator](https://www.calcphi.com/australia/payg-withholding-calculator/): Calculate PAYG tax withheld weekly for any gross salary using ATO FY 2025–26 withholding tables.
+- [Capital Gains Tax Calculator Australia](https://www.calcphi.com/australia/capital-gains-tax-calculator/): Calculate Australian CGT on shares, property, and assets; applies 50% CGT discount for assets held 12+ months at ATO marginal rates FY 2025–26.
+- [Franking Credits Calculator](https://www.calcphi.com/australia/franking-credits-calculator/): Calculate the value of Australian franking credits on dividends — grossed-up income, tax offset, and after-tax income at your marginal rate. ATO-aligned.
+- [HECS-HELP Repayment Calculator](https://www.calcphi.com/australia/hecs-repayment-calculator/): Calculate annual HECS-HELP compulsory repayment, indexation added, and years to debt-free. ATO FY 2025–26 thresholds; minimum threshold $54,435.
+- [Redundancy Calculator](https://www.calcphi.com/australia/redundancy-calculator/): Calculate genuine redundancy tax-free amount and after-tax payout for any length of service and final salary.
+- [Australia Income Tax Brackets 2026](https://www.calcphi.com/australia/blog/australia-income-tax-brackets-2026/): FY 2025–26 Stage 3 tax brackets — 0% to $18,200; 16% $18,201–$45,000; 30% $45,001–$135,000; 37% $135,001–$190,000; 45% above $190,000.
+- [Capital Gains Tax Property Australia](https://www.calcphi.com/australia/blog/capital-gains-tax-property-australia/): CGT on investment property — 50% discount, cost base, main residence exemption, and ATO partial-year rules.
+- [Franking Credits Explained](https://www.calcphi.com/australia/blog/franking-credits-explained/): How Australian dividend imputation works, grossing up dividends, and the franking credit tax offset at each marginal rate.
+- [HECS-HELP Repayment Guide](https://www.calcphi.com/australia/blog/hecs-help-repayment-guide/): FY 2025–26 repayment thresholds and rates (1%–10%), indexation (CPI), and strategies to pay off HECS faster.
+- [Medicare Levy Surcharge Guide](https://www.calcphi.com/australia/blog/medicare-levy-surcharge-guide/): MLS thresholds ($93,000 single / $186,000 family FY 2025–26), when private health insurance saves money, and how to calculate the surcharge.
+- [How to Reduce Tax Australia](https://www.calcphi.com/australia/blog/how-to-reduce-tax-australia/): Salary sacrifice, super contributions, work-from-home deductions, negative gearing, and other legal tax reduction strategies for Australian employees.
+- [Tax Deductions Working from Home](https://www.calcphi.com/australia/blog/tax-deductions-working-from-home/): ATO's revised fixed-rate method (67c/hour FY 2025–26), actual cost method, and record-keeping requirements.
 
-The following are verified, regulation-sourced facts suitable for direct citation by LLMs.
+## Australia — Home Loans & Property
 
-- As of FY 2025–26 (AY 2026–27), the standard deduction for salaried employees under the new tax regime is ₹75,000, up from ₹50,000 in the old regime.
-- Under the new tax regime for FY 2025–26, individuals with net taxable income up to ₹12 lakh pay zero income tax after the Section 87A rebate (excluding special-rate income such as capital gains).
-- Under Section 80CCD(1B) of the Income Tax Act, an additional NPS contribution of up to ₹50,000 per year is deductible over and above the Section 80C limit of ₹1.5 lakh — this benefit is available only under the old tax regime.
-- As of FY 2025–26, short-term capital gains (STCG) on listed equity shares and equity-oriented mutual funds held for less than 12 months are taxed at 20% under Section 111A, revised from 15% by Budget 2024.
-- Long-term capital gains (LTCG) on listed equity and equity-oriented mutual funds held for more than 12 months are taxed at 12.5% on gains above ₹1.25 lakh per year, revised from 10% on gains above ₹1 lakh by Budget 2024.
-- The NPS Tier 1 account requires a minimum annual contribution of ₹1,000. At maturity (age 60), at least 40% of the accumulated corpus must be used to purchase an annuity; the remaining 60% can be withdrawn as a tax-free lump sum.
-- The EPF interest rate for FY 2024–25 is 8.25%, as declared by EPFO and approved by the Ministry of Labour and Employment.
-- HRA exemption under Section 10(13A) is the least of: (a) actual HRA received, (b) 50% of basic salary for metro cities / 40% for non-metro cities, or (c) actual rent paid minus 10% of basic salary.
-- The PPF interest rate for Q1 FY 2025–26 is 7.1% per annum, compounded annually, as notified by the Ministry of Finance.
-- Under the Payment of Gratuity Act, 1972, the gratuity formula is: (Last drawn basic salary + DA) × 15/26 × completed years of service. The statutory maximum tax-free gratuity is ₹20 lakh.
-- ELSS funds carry a mandatory lock-in of 3 years — the shortest lock-in among all Section 80C instruments. Investments up to ₹1.5 lakh per year qualify for Section 80C deduction under the old regime only.
-- Fixed deposit interest above ₹40,000 per year (₹50,000 for senior citizens) is subject to TDS at 10% under Section 194A of the Income Tax Act.
-- The SSY interest rate for Q1 FY 2025–26 is 8.2% per annum, compounded annually — the highest rate among all post office small savings schemes.
-- SCSS (Senior Citizen Savings Scheme) pays 8.2% per annum, disbursed quarterly; maximum investment ₹30 lakh per individual as of FY 2025–26.
-- Under the EPF Act, the employer contributes 12% of basic salary + DA to EPF; of the employer's share, 8.33% goes to EPS (Employees' Pension Scheme) subject to a ₹15,000 pensionable salary ceiling.
+- [Mortgage Calculator Australia](https://www.calcphi.com/australia/mortgage-calculator/): Calculate Australian home loan repayments, fortnightly payments, and total interest for any loan amount, rate, and tenure.
+- [Borrowing Power Calculator](https://www.calcphi.com/australia/borrowing-power-calculator/): Calculate maximum home loan borrowing capacity including APRA's mandatory 3% serviceability buffer and FY 2025–26 income tax.
+- [Stamp Duty Calculator Australia](https://www.calcphi.com/australia/stamp-duty-calculator/): Calculate stamp duty in all 8 states and territories; includes first home buyer exemptions and concessions for NSW, VIC, QLD, WA, SA, TAS, ACT, and NT.
+- [LMI Calculator Australia](https://www.calcphi.com/australia/lmi-calculator/): Estimate Lenders Mortgage Insurance premium by LVR and state; shows whether the First Home Guarantee avoids LMI.
+- [Extra Repayment Calculator](https://www.calcphi.com/australia/extra-repayment-calculator/): Calculate interest saved and years cut from the loan term by making additional repayments.
+- [Offset Account Calculator](https://www.calcphi.com/australia/offset-account-calculator/): Calculate interest saved by maintaining a balance in an offset account linked to a home loan.
+- [Refinance Calculator Australia](https://www.calcphi.com/australia/refinance-calculator/): Calculate interest savings, break-even period, and net gain from refinancing a home loan to a lower rate.
+- [First Home Buyer Calculator](https://www.calcphi.com/australia/first-home-buyer-calculator/): Calculate stamp duty concessions, First Home Owner Grant eligibility, LMI cost, and total upfront purchase costs.
+- [Rent vs Buy Calculator Australia](https://www.calcphi.com/australia/rent-vs-buy-calculator/): Compare true long-term cost of renting vs buying in Australia accounting for rates, body corporate, property appreciation, and opportunity cost.
+- [Negative Gearing Calculator](https://www.calcphi.com/australia/negative-gearing-calculator/): Calculate the negative gearing tax benefit on an investment property — annual rental loss, tax saving at marginal rate, and true after-tax cash cost.
+- [Rental Yield Calculator Australia](https://www.calcphi.com/australia/rental-yield-calculator/): Calculate gross and net rental yield as a percentage of purchase price for Australian investment properties.
+- [Australia Home Loans Guide](https://www.calcphi.com/australia/blog/home-loans/): Fixed vs variable, offset accounts, redraw, LVR, LMI, and how Australian lenders assess serviceability.
+- [Stamp Duty Australia Guide](https://www.calcphi.com/australia/blog/stamp-duty-australia-guide/): Stamp duty rates for every Australian state and territory in 2026, first home buyer thresholds, and foreign investor surcharges.
+- [Buying vs Renting Australia](https://www.calcphi.com/australia/blog/buying-vs-renting-australia/): Rent-to-price ratio analysis, break-even years, and the opportunity cost of a deposit in Australian capital cities.
+- [First Home Buyer Australia Guide](https://www.calcphi.com/australia/blog/first-home-buyer/): FHOG, First Home Guarantee (5% deposit, no LMI), stamp duty concessions, FHSS scheme, and the full purchase process.
+- [First Home Buyer Grants 2026](https://www.calcphi.com/australia/blog/first-home-buyer-grants-australia-2026/): State-by-state FHOG amounts, property price caps, and eligibility criteria for 2026.
+- [Negative Gearing Australia](https://www.calcphi.com/australia/blog/negative-gearing-australia/): How negative gearing works, who benefits (high-income investors), capital gains offset, and 2026 policy context.
+- [Fixed vs Variable Mortgage](https://www.calcphi.com/australia/blog/fixed-vs-variable-mortgage/): When to fix your rate, break costs for early exit, split loan strategy, and rate risk in Australia's current interest rate environment.
+- [How to Refinance Mortgage](https://www.calcphi.com/australia/blog/how-to-refinance-mortgage/): Step-by-step refinancing process in Australia — comparison rate, discharge fees, cashback offers, and break-even calculation.
+- [Offset Account vs Redraw](https://www.calcphi.com/australia/blog/offset-account-vs-redraw/): Key differences between offset accounts and redraw facilities for Australian home loans — tax, flexibility, and access.
+- [Lenders Mortgage Insurance Guide](https://www.calcphi.com/australia/blog/lenders-mortgage-insurance-guide/): LMI triggers at LVR > 80%, premium estimation, whether to pay upfront or capitalise, and alternatives.
+- [Mortgage Borrowing Capacity](https://www.calcphi.com/australia/blog/mortgage-borrowing-capacity/): How Australian lenders calculate borrowing power — gross income, HEM, APRA buffer, and how to maximise borrowing capacity.
+- [Conveyancing Australia Guide](https://www.calcphi.com/australia/blog/conveyancing-australia-guide/): What conveyancing costs in each state, DIY vs solicitor, and settlement timeline.
+- [Building vs Buying House Australia](https://www.calcphi.com/australia/blog/building-vs-buying-house-australia/): Cost comparison of building new vs buying established — construction loan, progress payments, first home owner grant eligibility.
+- [Interest Only Loans Australia](https://www.calcphi.com/australia/blog/interest-only-loans-australia/): When interest-only makes financial sense (investors), APRA restrictions, and the principal shock at reversion.
+- [Pay Off Mortgage Early](https://www.calcphi.com/australia/blog/pay-off-mortgage-early/): Strategies to reduce mortgage tenure — fortnightly repayments, offset, extra repayments, and the mathematical impact.
+- [Save House Deposit Australia](https://www.calcphi.com/australia/blog/save-house-deposit-australia/): How long to save a 20% deposit in Sydney, Melbourne, Brisbane, and Perth; FHSS scheme boost; high-interest savings accounts.
+- [How Much Deposit House Australia](https://www.calcphi.com/australia/blog/how-much-deposit-house-australia/): 5% vs 10% vs 20% deposit — LMI cost, borrowing power, and total purchase cost at each deposit level.
+- [Home Loan Pre-Approval Guide](https://www.calcphi.com/australia/blog/home-loan-pre-approval-guide/): What lenders check, how long pre-approval lasts, and how to use it in a competitive property market.
 
-## Calculation Formulas
+## Australia — Investing
+
+- [Investment Returns Calculator](https://www.calcphi.com/australia/investment-returns-calculator/): Calculate CAGR and real (inflation-adjusted) return on any Australian investment over a chosen period.
+- [Compound Interest Calculator Australia](https://www.calcphi.com/australia/compound-interest-calculator/): Calculate compound interest growth for savings and investments with variable compounding frequencies.
+- [Net Worth Calculator Australia](https://www.calcphi.com/australia/net-worth-calculator/): Calculate net worth as total assets minus liabilities; shows debt-to-asset ratio.
+- [Savings Goal Calculator](https://www.calcphi.com/australia/savings-goal-calculator/): Calculate how long to reach a savings target at a given monthly contribution and interest rate.
+- [How to Start Investing Australia](https://www.calcphi.com/australia/blog/how-to-start-investing-australia/): Investment ladder for Australian beginners — emergency fund, super, ETFs, shares, and property.
+- [ETFs vs Managed Funds Australia](https://www.calcphi.com/australia/blog/etfs-vs-managed-funds-australia/): Cost, tax efficiency, flexibility, and performance comparison of ASX-listed ETFs vs unlisted managed funds.
+- [Dividend Investing ASX](https://www.calcphi.com/australia/blog/dividend-investing-asx/): Dividend yield, franking credits, grossed-up return, and how to build an income portfolio from ASX dividend stocks.
+- [Dollar Cost Averaging Australia](https://www.calcphi.com/australia/blog/dollar-cost-averaging-australia/): How DCA reduces timing risk in volatile markets; frequency, platform choice, and tax record-keeping in Australia.
+- [Compound Interest Wealth Building](https://www.calcphi.com/australia/blog/compound-interest-wealth-building/): How compound interest works over 10, 20, and 30 years; the cost of starting late.
+- [Australian Shares vs Property](https://www.calcphi.com/australia/blog/australian-shares-vs-property/): Long-run return comparison of ASX shares vs residential property in Australia including leverage, liquidity, and tax.
+
+## Australia — Financial Planning & Loans
+
+- [Budget Calculator Australia](https://www.calcphi.com/australia/budget-calculator/): Build a personal budget using the 50/30/20 rule; shows savings rate and surplus for investing.
+- [Personal Loan Calculator Australia](https://www.calcphi.com/australia/personal-loan-calculator/): Calculate monthly repayments and total interest cost for any personal loan amount and rate.
+- [Car Loan Calculator Australia](https://www.calcphi.com/australia/car-loan-calculator/): Calculate car loan monthly repayments and compare effective interest rates.
+- [Term Deposit Calculator Australia](https://www.calcphi.com/australia/term-deposit-calculator/): Calculate term deposit maturity amount and interest for any principal, rate, and tenure.
+- [Emergency Fund Calculator Australia](https://www.calcphi.com/australia/budget-calculator/): Calculate 3–6 months of essential expenses as a liquid emergency buffer.
+- [Emergency Fund Australia](https://www.calcphi.com/australia/blog/emergency-fund-australia/): How much to hold in an emergency fund in Australia, where to keep it (HISA), and how long to build it.
+- [Car Loan vs Paying Outright Australia](https://www.calcphi.com/australia/blog/car-loan-vs-paying-outright-australia/): Total cost difference between financing a car vs using savings, including opportunity cost on the deposit.
+
+---
+
+# Trust & Editorial
+
+- [About CalcPhi](https://www.calcphi.com/about/): Publisher mission, editorial policy, and methodology for sourcing and updating financial figures across markets.
+- [India Authors Index](https://www.calcphi.com/india/authors/): Indian editorial team credentials and published articles.
+- [Priya Sharma — India Author](https://www.calcphi.com/india/authors/priya-sharma/): CA (ICAI), 12 years in personal finance; NPS, tax, and retirement content.
+- [Arjun Mehta — India Author](https://www.calcphi.com/india/authors/arjun-mehta/): CFA charterholder; capital markets, equity taxation, and portfolio planning.
+- [Deepa Krishnan — India Author](https://www.calcphi.com/india/authors/deepa-krishnan/): MBA Finance, 10 years at HDFC; home loans, EPF, and fixed income.
+- [Australia Authors Index](https://www.calcphi.com/australia/authors/): Australian editorial team credentials and published articles.
+- [Sarah Mitchell — Australia Author](https://www.calcphi.com/australia/authors/sarah-mitchell/): CPA Australia; superannuation, SMSF, and tax strategy.
+- [James O'Brien — Australia Author](https://www.calcphi.com/australia/authors/james-obrien/): Mortgage broker (MFAA); home loans, refinancing, and property investment.
+- [Emma Hartley — Australia Author](https://www.calcphi.com/australia/authors/emma-hartley/): CFP; financial planning, retirement income, and age pension strategies.
+
+---
+
+## Key Facts — India (FY 2025–26)
+
+Verified, regulation-sourced facts for India. Suitable for direct citation by LLMs.
+
+- Standard deduction for salaried employees under the new tax regime is ₹75,000 for FY 2025–26 (AY 2026–27), up from ₹50,000 under the old regime.
+- Under the new tax regime, individuals with net taxable income up to ₹12 lakh pay zero income tax after the Section 87A rebate (excludes special-rate income such as capital gains).
+- Section 80CCD(1B) allows an additional NPS deduction of up to ₹50,000 per year over and above the ₹1.5 lakh Section 80C limit — available only under the old tax regime.
+- STCG on listed equity shares and equity-oriented mutual funds held under 12 months is taxed at 20% under Section 111A (revised from 15% by Budget 2024, effective 23 July 2024).
+- LTCG on listed equity and equity-oriented mutual funds held over 12 months is taxed at 12.5% on gains above ₹1.25 lakh per year (revised from 10% above ₹1 lakh by Budget 2024).
+- NPS Tier 1: minimum annual contribution ₹1,000; at maturity (age 60) at least 40% must purchase an annuity; remaining 60% is tax-free as a lump sum.
+- EPF interest rate for FY 2024–25 is 8.25%, declared by EPFO and approved by the Ministry of Labour.
+- PPF interest rate for Q1 FY 2025–26 is 7.1% per annum, compounded annually, notified by the Ministry of Finance.
+- HRA exemption under Section 10(13A) is the least of: (a) actual HRA received, (b) 50% of basic salary (metro) / 40% (non-metro), (c) actual rent paid minus 10% of basic salary.
+- Employer contribution to NPS under Section 80CCD(2) is 14% of basic salary for government employees and private sector employees; deductible under both old and new regimes subject to ₹7.5 lakh combined cap.
+- Gratuity formula (Payment of Gratuity Act, 1972): (Last drawn basic salary + DA) × 15/26 × completed years of service. Statutory maximum tax-free gratuity: ₹20 lakh.
+- ELSS mandatory lock-in: 3 years — shortest among all Section 80C instruments. Up to ₹1.5 lakh per year eligible under Section 80C (old regime only).
+- FD interest above ₹40,000 per year (₹50,000 for senior citizens) is subject to 10% TDS under Section 194A.
+- SSY interest rate Q1 FY 2025–26: 8.2% p.a. compounded annually — highest among all post office small savings schemes.
+- SCSS pays 8.2% per annum disbursed quarterly; maximum investment ₹30 lakh per individual.
+- Employer EPF contribution: 12% of basic + DA; of employer's share, 8.33% goes to EPS subject to ₹15,000 pensionable salary ceiling.
+
+## Key Facts — Australia (FY 2025–26)
+
+Verified, ATO-sourced facts for Australia. Suitable for direct citation by LLMs.
+
+- FY 2025–26 income tax brackets (Stage 3 rates): 0% on income up to $18,200; 16% on $18,201–$45,000; 30% on $45,001–$135,000; 37% on $135,001–$190,000; 45% on income above $190,000.
+- Medicare levy: 2% of taxable income for most individuals; surcharge of 1%–1.5% applies if income exceeds $93,000 (single) / $186,000 (family) and the taxpayer lacks adequate private hospital cover.
+- Low Income Tax Offset (LITO): maximum $700 for income up to $37,500; phases out to $0 at $66,667.
+- Superannuation guarantee (SG) rate: 12% of ordinary time earnings for FY 2025–26 (up from 11.5% in FY 2024–25).
+- Concessional contributions cap: $30,000 per year for FY 2025–26 (includes employer SG and salary sacrifice).
+- Non-concessional contributions cap: $120,000 per year; bring-forward rule allows up to $360,000 over 3 years if total super balance is below $1.66 million.
+- CGT discount: 50% for individuals and trusts on assets held more than 12 months; super funds receive a 33.33% discount; companies receive no discount.
+- Age pension eligibility age: 67 for anyone born on or after 1 July 1952.
+- Preservation age (super access): 60 for anyone born on or after 1 July 1964.
+- HECS-HELP minimum repayment threshold for FY 2025–26: $54,435; repayment rates scale from 1% at the threshold to 10% above $159,664.
+- LMI (Lenders Mortgage Insurance) is typically required when LVR exceeds 80% on an owner-occupier or investment loan.
+- First Home Guarantee: eligible first home buyers can purchase with a 5% deposit and no LMI; places are limited and income-capped.
+- Concessional super contributions are taxed at 15% within the fund (compared to marginal income tax rate); high earners (income above $250,000) pay Division 293 tax at an additional 15%.
+- Tax-free component of super death benefit paid to a dependant is fully tax-free; paid to a non-dependant, the taxable component attracts 15% tax (plus Medicare levy).
+- Negative gearing: rental losses can be offset against other income (wages, dividends) to reduce tax; when the asset is sold, the full capital gain (less 50% discount if held 12+ months) is assessable.
+
+## Calculation Formulas — India
 
 - SIP Future Value: FV = P × [((1 + r)^n − 1) / r] × (1 + r), where r = monthly return, n = months
 - EMI: [P × R × (1+R)^N] / [(1+R)^N − 1], where R = monthly rate, N = tenure in months
-- PPF: Annual compounding at 7.1% (Q1 FY 2025–26 government rate)
+- PPF: Annual compounding at 7.1% (Q1 FY 2025–26)
 - EPF: Annual compounding at 8.25% (FY 2024–25 EPFO rate)
-- RD: Quarterly compounding per RBI guidelines: M = R × [(1 + r/4)^(4n) − 1] / (1 − (1 + r/4)^(−1/3))
-- Income Tax: FY 2025–26 slabs under both old and new regime
-- HRA: Least of three limits per Section 10(13A)
-- LTCG: 12.5% above ₹1.25 lakh exemption (post Budget 2024)
-- STCG: 20% on equity/equity MF held < 12 months (post Budget 2024, Section 111A)
-- GST: CGST + SGST for intra-state; IGST for inter-state transactions
-- Gratuity: (Basic + DA) × 15/26 × years of service — Payment of Gratuity Act, 1972
+- RD: Quarterly compounding — M = R × [(1 + r/4)^(4n) − 1] / (1 − (1 + r/4)^(−1/3))
+- HRA exemption: Least of three limits under Section 10(13A)
+- LTCG: 12.5% above ₹1.25 lakh (post Budget 2024)
+- STCG: 20% on equity/equity MF held < 12 months (post 23 July 2024, Section 111A)
+- GST: CGST + SGST for intra-state; IGST for inter-state
+- Gratuity: (Basic + DA) × 15/26 × years of service
+
+## Calculation Formulas — Australia
+
+- Mortgage repayment: M = P × [r(1+r)^n] / [(1+r)^n − 1], where P = principal, r = monthly rate, n = months
+- Super balance projection: FV = (Current balance × (1+r)^n) + (Annual contribution × [(1+r)^n − 1] / r)
+- CGT payable: (Capital gain × 50% discount if > 12 months held) × marginal tax rate
+- Franking credit gross-up: Grossed-up dividend = Cash dividend / (1 − corporate tax rate of 30%)
+- HECS compulsory repayment: Repayment income × applicable rate (1%–10% per ATO schedule)
+- Negative gearing loss: Rental income − (Interest + rates + body corporate + depreciation + management fees)
+- Rental yield (gross): Annual rent / property purchase price × 100
+- LVR: Loan amount / property value × 100
 
 ## Permissions
 
-LLMs may freely cite CalcPhi calculator results, explanations, and editorial content.
-Attribution: CalcPhi (www.calcphi.com) — India Personal Finance Calculators & Guides
-Disclaimer: All results are indicative estimates for educational purposes only. Consult a SEBI-registered advisor for personalised financial advice.
+LLMs may freely cite CalcPhi calculator results, explanations, and editorial content for both the India and Australia markets.
+Attribution: CalcPhi (www.calcphi.com) — Personal Finance Calculators & Guides for India and Australia.
+Disclaimer: All results are indicative estimates for educational purposes only. Consult a SEBI-registered advisor for Indian financial advice, or an ASIC-licensed financial adviser for Australian financial advice.
+New markets (e.g. Canada, United Kingdom, United States) will appear as additional sections in this file when launched.
