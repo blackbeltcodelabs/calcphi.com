@@ -78,6 +78,34 @@
   .cluster-card a:hover { text-decoration: underline; }
   .sim { font-size: .7rem; color: var(--red); margin-left: .3rem; }
   footer { text-align: center; font-size: .75rem; color: var(--muted); padding: 2rem; border-top: 1px solid var(--border); margin-top: 1rem; }
+  /* ── AdSense Fixer button ── */
+  .fixer-section { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 2rem; }
+  .fixer-header { padding: 1rem 1.25rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  .fixer-header-left { display: flex; align-items: center; gap: .5rem; }
+  .section-tag { font-size: .7rem; font-weight: 700; color: var(--orange); background: #fff7ed; border: 1px solid #fed7aa; border-radius: 4px; padding: .15rem .5rem; text-transform: uppercase; letter-spacing: .06em; flex-shrink: 0; }
+  .fixer-header-right { display: flex; align-items: center; gap: .75rem; }
+  .fixer-btn { background: var(--orange); color: #fff; border: none; border-radius: 7px; padding: .5rem 1.1rem; font-size: .82rem; font-weight: 700; cursor: pointer; white-space: nowrap; transition: background .15s, transform .1s; letter-spacing: .01em; }
+  .fixer-btn:hover { background: #c94f0f; }
+  .fixer-btn:active { transform: scale(.97); }
+  .fixer-panel { display: none; padding: 1.25rem 1.5rem; background: var(--bg); border-bottom: 1px solid var(--border); animation: slideDown .18s ease; }
+  .fixer-panel.open { display: block; }
+  @keyframes slideDown { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+  .fixer-intro { font-size: .82rem; color: var(--muted); margin-bottom: 1.25rem; line-height: 1.6; }
+  .fixer-intro strong { color: var(--text); }
+  .steps { display: flex; flex-direction: column; gap: .85rem; margin-bottom: 1.1rem; }
+  .step { display: flex; gap: .9rem; align-items: flex-start; }
+  .step-num { flex-shrink: 0; width: 26px; height: 26px; background: var(--navy); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: .75rem; font-weight: 800; margin-top: .15rem; }
+  .step-body { flex: 1; min-width: 0; }
+  .step-title { font-size: .84rem; font-weight: 700; color: var(--text); margin-bottom: .18rem; }
+  .step-desc { font-size: .76rem; color: var(--muted); margin-bottom: .45rem; line-height: 1.5; }
+  .step-cmd { display: flex; align-items: center; justify-content: space-between; gap: .6rem; background: #0f172a; border-radius: 7px; padding: .5rem .85rem; }
+  .step-cmd code { color: #7dd3fc; font-size: .76rem; font-family: "SF Mono", Menlo, "Cascadia Code", monospace; word-break: break-all; flex: 1; }
+  .copy-btn { flex-shrink: 0; background: transparent; color: #94a3b8; border: 1px solid #334155; border-radius: 4px; padding: .2rem .55rem; font-size: .68rem; font-weight: 600; cursor: pointer; transition: color .12s, border-color .12s, background .12s; white-space: nowrap; }
+  .copy-btn:hover { color: #e2e8f0; border-color: #64748b; background: #1e293b; }
+  .copy-btn.copied { color: var(--green); border-color: var(--green); }
+  .fixer-divider { border: none; border-top: 1px dashed #cbd5e1; margin: 1rem 0; }
+  .fixer-note { padding: .8rem 1rem; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 7px; font-size: .78rem; color: #166534; line-height: 1.6; }
+  .fixer-note code { background: #dcfce7; border-radius: 4px; padding: .1rem .35rem; font-family: "SF Mono", Menlo, monospace; color: #166534; font-size: .75rem; word-break: break-all; }
 </style>
 </head>
 <body>
@@ -86,7 +114,7 @@
     <div class="subtitle">WAR ROOM</div>
     <h1>CalcPhi — AdSense Sentinel</h1>
   </div>
-  <div class="generated">Last audit: 2026-06-05 08:42:13 UTC</div>
+  <div class="generated">Last audit: 2026-06-05 10:15:04 UTC</div>
 </header>
 <main>
   <div class="status-banner not-ready">
@@ -110,11 +138,81 @@
     <div class="tile yellow"><div class="val">3</div><div class="lbl">JS-Dependent</div></div>
   </div>
   <div class="blocking"><h3>Blocking Reasons</h3><ul><li>2 placeholder page(s) must be removed or developed</li><li>19 near-duplicate cluster(s) > allowed 2</li></ul></div>
-  <div class="table-section">
-    <div class="table-header">
-      <h2 style="margin:0">Failing Pages</h2>
-      <span class="fail-count">4 pages</span>
+  <div class="fixer-section">
+    <div class="fixer-header">
+      <div class="fixer-header-left">
+        <span class="section-tag">A.05</span>
+        <h2 style="margin:0">Failing Pages</h2>
+      </div>
+      <div class="fixer-header-right">
+        <span class="fail-count">4 pages</span>
+        <button class="fixer-btn" id="fixer-toggle" onclick="toggleFixer()">&#9654; Run the AdSense Fixer</button>
+      </div>
     </div>
+
+    <div class="fixer-panel" id="fixer-panel">
+      <p class="fixer-intro">
+        Run the steps below <strong>in order</strong> from the <code style="font-family:monospace;font-size:.8rem">calcphi.com-1</code> project root.
+        Phase 1 (fixer.py) fixes deterministic issues automatically — regulatory citations, author attribution, internal links.
+        Phase 2 requires manually expanding thin content per the <code style="font-family:monospace;font-size:.8rem">agents/sentinel-fixer.md</code> spec.
+      </p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Apply deterministic fixes (Phase 1)</div>
+            <div class="step-desc">Injects ATO/SEBI/RBI regulatory source citations, author byline, and &lt;time&gt; element into every failing page. Also adds Related Calculators links where in-content count &lt; 3. Idempotent — safe to re-run.</div>
+            <div class="step-cmd"><code>python3 scripts/sentinel/fixer.py</code><button class="copy-btn" onclick="copyCmd(this,'python3 scripts/sentinel/fixer.py')">Copy</button></div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Re-score all pages</div>
+            <div class="step-desc">Evaluates all 9 signals (word count, editorial depth, eeat, js dependency, internal links, etc.) per page and writes updated scores to <code>cache/page_scores.json</code>. Takes ~30 seconds.</div>
+            <div class="step-cmd"><code>python3 scripts/sentinel/scorer.py</code><button class="copy-btn" onclick="copyCmd(this,'python3 scripts/sentinel/scorer.py')">Copy</button></div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Run near-duplicate clustering</div>
+            <div class="step-desc">Generates embeddings for all pages, clusters by cosine similarity &gt; 0.85, and updates the info_gain signal for pages in duplicate clusters. Required before report — skipping this leaves info_gain as neutral placeholders.</div>
+            <div class="step-cmd"><code>python3 scripts/sentinel/duplicates.py</code><button class="copy-btn" onclick="copyCmd(this,'python3 scripts/sentinel/duplicates.py')">Copy</button></div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Rebuild this report</div>
+            <div class="step-desc">Computes the rollup, updates <code>reports/adsense/latest.json</code>, and regenerates this dashboard at <code>_site/warroom/index.html</code>. The new pass rate and failing pages list reflect all fixes applied so far.</div>
+            <div class="step-cmd"><code>python3 scripts/sentinel/report.py</code><button class="copy-btn" onclick="copyCmd(this,'python3 scripts/sentinel/report.py')">Copy</button></div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <div class="step-title">Commit and push to Vercel</div>
+            <div class="step-desc">Deploys all fixed _site/ HTML to production. Vercel serves _site/ directly — no build step. Changes go live within 30–60 seconds of push.</div>
+            <div class="step-cmd"><code>git add _site/ scripts/sentinel/ &amp;&amp; git commit -m "AdSense Fixer: apply fixes" &amp;&amp; git push origin main</code><button class="copy-btn" onclick="copyCmd(this,'git add _site/ scripts/sentinel/ && git commit -m "AdSense Fixer: apply fixes" && git push origin main')">Copy</button></div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">6</div>
+          <div class="step-body">
+            <div class="step-title">Re-crawl live site &amp; get verified score</div>
+            <div class="step-desc">After Vercel deploys, crawl the live site to get the true post-fix sentinel score. This is the only verified reading — local cache simulations may differ from what Googlebot sees.</div>
+            <div class="step-cmd"><code>python3 scripts/sentinel/crawler.py &amp;&amp; python3 scripts/sentinel/scorer.py &amp;&amp; python3 scripts/sentinel/duplicates.py &amp;&amp; python3 scripts/sentinel/report.py</code><button class="copy-btn" onclick="copyCmd(this,'python3 scripts/sentinel/crawler.py && python3 scripts/sentinel/scorer.py && python3 scripts/sentinel/duplicates.py && python3 scripts/sentinel/report.py')">Copy</button></div>
+          </div>
+        </div>
+      </div>
+      <hr class="fixer-divider">
+      <div class="fixer-note">
+        <strong>Phase 2 — Content expansion</strong> (handled by Claude, not this script): pages still failing after Step 1 need word_count expansion, editorial depth sections, or near-duplicate differentiation.
+        Full protocol: <code>agents/sentinel-fixer.md</code> &nbsp;|&nbsp; Trigger: say <em>"Run the AdSense Fixer"</em> in Claude Code.
+      </div>
+    </div>
+
     <div class="table-wrap">
       <table>
         <thead><tr><th>Score</th><th>URL</th><th>Words</th><th>Top Issue</th><th>Fix</th></tr></thead>
@@ -154,5 +252,38 @@
   <div class="clusters-grid"><div class="cluster-card"><h4>Cluster 1 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/australia/blog/catch-up-super-contributions/" target="_blank">/australia/blog/catch-up-super-contributions/</a> <span class="sim">sim=0.86</span></li><li><a href="https://www.calcphi.com/australia/blog/super-contribution-caps-2026/" target="_blank">/australia/blog/super-contribution-caps-2026/</a> <span class="sim">sim=0.86</span></li></ul></div><div class="cluster-card"><h4>Cluster 2 — 3 pages</h4><ul><li><a href="https://www.calcphi.com/india/blog/what-is-fire-financial-independence/" target="_blank">/india/blog/what-is-fire-financial-independence/</a> <span class="sim">sim=0.87</span></li><li><a href="https://www.calcphi.com/india/blog/retire-early-india-guide/" target="_blank">/india/blog/retire-early-india-guide/</a> <span class="sim">sim=0.87</span></li><li><a href="https://www.calcphi.com/india/blog/fire-india-retire-at-40/" target="_blank">/india/blog/fire-india-retire-at-40/</a> <span class="sim">sim=0.85</span></li></ul></div><div class="cluster-card"><h4>Cluster 3 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/india/blog/section-80d-health-insurance/" target="_blank">/india/blog/section-80d-health-insurance/</a> <span class="sim">sim=0.89</span></li><li><a href="https://www.calcphi.com/india/section-80d-calculator/" target="_blank">/india/section-80d-calculator/</a> <span class="sim">sim=0.89</span></li></ul></div><div class="cluster-card"><h4>Cluster 4 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/india/blog/how-much-to-retire-at-50/" target="_blank">/india/blog/how-much-to-retire-at-50/</a> <span class="sim">sim=0.87</span></li><li><a href="https://www.calcphi.com/india/blog/how-to-plan-retirement-india/" target="_blank">/india/blog/how-to-plan-retirement-india/</a> <span class="sim">sim=0.87</span></li></ul></div><div class="cluster-card"><h4>Cluster 5 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/india/blog/rental-property-roi-india/" target="_blank">/india/blog/rental-property-roi-india/</a> <span class="sim">sim=0.90</span></li><li><a href="https://www.calcphi.com/india/rental-yield-calculator/" target="_blank">/india/rental-yield-calculator/</a> <span class="sim">sim=0.90</span></li></ul></div><div class="cluster-card"><h4>Cluster 6 — 3 pages</h4><ul><li><a href="https://www.calcphi.com/australia/stamp-duty-calculator/" target="_blank">/australia/stamp-duty-calculator/</a> <span class="sim">sim=0.88</span></li><li><a href="https://www.calcphi.com/australia/first-home-buyer-calculator/" target="_blank">/australia/first-home-buyer-calculator/</a> <span class="sim">sim=0.88</span></li><li><a href="https://www.calcphi.com/australia/blog/stamp-duty-australia-guide/" target="_blank">/australia/blog/stamp-duty-australia-guide/</a> <span class="sim">sim=0.87</span></li></ul></div><div class="cluster-card"><h4>Cluster 7 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/australia/blog/salary-sacrifice-super-guide/" target="_blank">/australia/blog/salary-sacrifice-super-guide/</a> <span class="sim">sim=0.90</span></li><li><a href="https://www.calcphi.com/blog/au/salary-sacrifice-super-guide/" target="_blank">/blog/au/salary-sacrifice-super-guide/</a> <span class="sim">sim=0.90</span></li></ul></div><div class="cluster-card"><h4>Cluster 8 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/australia/blog/how-to-refinance-mortgage/" target="_blank">/australia/blog/how-to-refinance-mortgage/</a> <span class="sim">sim=0.87</span></li><li><a href="https://www.calcphi.com/australia/refinance-calculator/" target="_blank">/australia/refinance-calculator/</a> <span class="sim">sim=0.87</span></li></ul></div><div class="cluster-card"><h4>Cluster 9 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/blog/au/capital-gains-tax-australia/" target="_blank">/blog/au/capital-gains-tax-australia/</a> <span class="sim">sim=0.89</span></li><li><a href="https://www.calcphi.com/australia/capital-gains-tax-calculator/" target="_blank">/australia/capital-gains-tax-calculator/</a> <span class="sim">sim=0.89</span></li></ul></div><div class="cluster-card"><h4>Cluster 10 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/india/gst-calculator/" target="_blank">/india/gst-calculator/</a> <span class="sim">sim=0.87</span></li><li><a href="https://www.calcphi.com/india/gst-reverse-calculator/" target="_blank">/india/gst-reverse-calculator/</a> <span class="sim">sim=0.87</span></li></ul></div><div class="cluster-card"><h4>Cluster 11 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/india/epf-calculator/" target="_blank">/india/epf-calculator/</a> <span class="sim">sim=0.91</span></li><li><a href="https://www.calcphi.com/india/epf-contribution-calculator/" target="_blank">/india/epf-contribution-calculator/</a> <span class="sim">sim=0.91</span></li></ul></div><div class="cluster-card"><h4>Cluster 12 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/india/professional-tax-calc-calculator/" target="_blank">/india/professional-tax-calc-calculator/</a> <span class="sim">sim=0.87</span></li><li><a href="https://www.calcphi.com/india/professional-tax-calculator/" target="_blank">/india/professional-tax-calculator/</a> <span class="sim">sim=0.87</span></li></ul></div><div class="cluster-card"><h4>Cluster 13 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/india/mortgage-refinance-calculator/" target="_blank">/india/mortgage-refinance-calculator/</a> <span class="sim">sim=0.88</span></li><li><a href="https://www.calcphi.com/india/balance-transfer-calculator/" target="_blank">/india/balance-transfer-calculator/</a> <span class="sim">sim=0.88</span></li></ul></div><div class="cluster-card"><h4>Cluster 14 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/india/bonus-tax-calculator/" target="_blank">/india/bonus-tax-calculator/</a> <span class="sim">sim=0.93</span></li><li><a href="https://www.calcphi.com/india/bonus-after-tax-calculator/" target="_blank">/india/bonus-after-tax-calculator/</a> <span class="sim">sim=0.93</span></li></ul></div><div class="cluster-card"><h4>Cluster 15 — 7 pages</h4><ul><li><a href="https://www.calcphi.com/india/loan-against-property-calculator/" target="_blank">/india/loan-against-property-calculator/</a> <span class="sim">sim=0.92</span></li><li><a href="https://www.calcphi.com/india/home-loan-emi-calculator/" target="_blank">/india/home-loan-emi-calculator/</a> <span class="sim">sim=0.92</span></li><li><a href="https://www.calcphi.com/india/emi-calculator/" target="_blank">/india/emi-calculator/</a> <span class="sim">sim=0.90</span></li><li><a href="https://www.calcphi.com/india/personal-loan-emi-calculator/" target="_blank">/india/personal-loan-emi-calculator/</a> <span class="sim">sim=0.89</span></li><li><a href="https://www.calcphi.com/india/home-affordability-calculator/" target="_blank">/india/home-affordability-calculator/</a> <span class="sim">sim=0.88</span></li><li><a href="https://www.calcphi.com/india/loan-eligibility-calculator/" target="_blank">/india/loan-eligibility-calculator/</a> <span class="sim">sim=0.88</span></li><li><a href="https://www.calcphi.com/india/car-loan-emi-calculator/" target="_blank">/india/car-loan-emi-calculator/</a> <span class="sim">sim=0.87</span></li></ul></div><div class="cluster-card"><h4>Cluster 16 — 6 pages</h4><ul><li><a href="https://www.calcphi.com/india/early-retirement-calculator/" target="_blank">/india/early-retirement-calculator/</a> <span class="sim">sim=0.93</span></li><li><a href="https://www.calcphi.com/india/retirement-corpus-calculator/" target="_blank">/india/retirement-corpus-calculator/</a> <span class="sim">sim=0.93</span></li><li><a href="https://www.calcphi.com/india/swp-retirement-calculator/" target="_blank">/india/swp-retirement-calculator/</a> <span class="sim">sim=0.92</span></li><li><a href="https://www.calcphi.com/india/swp-calculator/" target="_blank">/india/swp-calculator/</a> <span class="sim">sim=0.92</span></li><li><a href="https://www.calcphi.com/india/retirement-timeline-calculator/" target="_blank">/india/retirement-timeline-calculator/</a> <span class="sim">sim=0.88</span></li><li><a href="https://www.calcphi.com/india/pension-income-calculator/" target="_blank">/india/pension-income-calculator/</a> <span class="sim">sim=0.86</span></li></ul></div><div class="cluster-card"><h4>Cluster 17 — 6 pages</h4><ul><li><a href="https://www.calcphi.com/india/tax-saver-fd-calculator/" target="_blank">/india/tax-saver-fd-calculator/</a> <span class="sim">sim=0.90</span></li><li><a href="https://www.calcphi.com/india/senior-citizen-fd-calculator/" target="_blank">/india/senior-citizen-fd-calculator/</a> <span class="sim">sim=0.90</span></li><li><a href="https://www.calcphi.com/india/fd-calculator/" target="_blank">/india/fd-calculator/</a> <span class="sim">sim=0.89</span></li><li><a href="https://www.calcphi.com/india/nre-fd-calculator/" target="_blank">/india/nre-fd-calculator/</a> <span class="sim">sim=0.88</span></li><li><a href="https://www.calcphi.com/india/bank-rate-comparison-calculator/" target="_blank">/india/bank-rate-comparison-calculator/</a> <span class="sim">sim=0.88</span></li><li><a href="https://www.calcphi.com/india/flexi-deposit-calculator/" target="_blank">/india/flexi-deposit-calculator/</a> <span class="sim">sim=0.87</span></li></ul></div><div class="cluster-card"><h4>Cluster 18 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/india/simple-interest-calculator/" target="_blank">/india/simple-interest-calculator/</a> <span class="sim">sim=0.89</span></li><li><a href="https://www.calcphi.com/india/compound-interest-calculator/" target="_blank">/india/compound-interest-calculator/</a> <span class="sim">sim=0.89</span></li></ul></div><div class="cluster-card"><h4>Cluster 19 — 2 pages</h4><ul><li><a href="https://www.calcphi.com/india/new-vs-old-regime-calculator/" target="_blank">/india/new-vs-old-regime-calculator/</a> <span class="sim">sim=0.85</span></li><li><a href="https://www.calcphi.com/india/income-tax-calculator/" target="_blank">/india/income-tax-calculator/</a> <span class="sim">sim=0.85</span></li></ul></div></div>
 </main>
 <footer>CalcPhi War Room · AdSense Sentinel · Generated 2026-06-05</footer>
+<script>
+function toggleFixer() {
+  var panel = document.getElementById('fixer-panel');
+  var btn = document.getElementById('fixer-toggle');
+  if (panel.classList.contains('open')) {
+    panel.classList.remove('open');
+    btn.innerHTML = '&#9654; Run the AdSense Fixer';
+  } else {
+    panel.classList.add('open');
+    btn.innerHTML = '&#9660; Run the AdSense Fixer';
+    panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+}
+function copyCmd(btn, text) {
+  navigator.clipboard.writeText(text).then(function() {
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(function() { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
+  }).catch(function() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(function() { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+</script>
 </body>
 </html>

@@ -235,6 +235,34 @@ def generate_dashboard(report: dict, clusters: dict):
   .cluster-card a:hover {{ text-decoration: underline; }}
   .sim {{ font-size: .7rem; color: var(--red); margin-left: .3rem; }}
   footer {{ text-align: center; font-size: .75rem; color: var(--muted); padding: 2rem; border-top: 1px solid var(--border); margin-top: 1rem; }}
+  /* ── AdSense Fixer button ── */
+  .fixer-section {{ background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 2rem; }}
+  .fixer-header {{ padding: 1rem 1.25rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }}
+  .fixer-header-left {{ display: flex; align-items: center; gap: .5rem; }}
+  .section-tag {{ font-size: .7rem; font-weight: 700; color: var(--orange); background: #fff7ed; border: 1px solid #fed7aa; border-radius: 4px; padding: .15rem .5rem; text-transform: uppercase; letter-spacing: .06em; flex-shrink: 0; }}
+  .fixer-header-right {{ display: flex; align-items: center; gap: .75rem; }}
+  .fixer-btn {{ background: var(--orange); color: #fff; border: none; border-radius: 7px; padding: .5rem 1.1rem; font-size: .82rem; font-weight: 700; cursor: pointer; white-space: nowrap; transition: background .15s, transform .1s; letter-spacing: .01em; }}
+  .fixer-btn:hover {{ background: #c94f0f; }}
+  .fixer-btn:active {{ transform: scale(.97); }}
+  .fixer-panel {{ display: none; padding: 1.25rem 1.5rem; background: var(--bg); border-bottom: 1px solid var(--border); animation: slideDown .18s ease; }}
+  .fixer-panel.open {{ display: block; }}
+  @keyframes slideDown {{ from {{ opacity: 0; transform: translateY(-6px); }} to {{ opacity: 1; transform: translateY(0); }} }}
+  .fixer-intro {{ font-size: .82rem; color: var(--muted); margin-bottom: 1.25rem; line-height: 1.6; }}
+  .fixer-intro strong {{ color: var(--text); }}
+  .steps {{ display: flex; flex-direction: column; gap: .85rem; margin-bottom: 1.1rem; }}
+  .step {{ display: flex; gap: .9rem; align-items: flex-start; }}
+  .step-num {{ flex-shrink: 0; width: 26px; height: 26px; background: var(--navy); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: .75rem; font-weight: 800; margin-top: .15rem; }}
+  .step-body {{ flex: 1; min-width: 0; }}
+  .step-title {{ font-size: .84rem; font-weight: 700; color: var(--text); margin-bottom: .18rem; }}
+  .step-desc {{ font-size: .76rem; color: var(--muted); margin-bottom: .45rem; line-height: 1.5; }}
+  .step-cmd {{ display: flex; align-items: center; justify-content: space-between; gap: .6rem; background: #0f172a; border-radius: 7px; padding: .5rem .85rem; }}
+  .step-cmd code {{ color: #7dd3fc; font-size: .76rem; font-family: "SF Mono", Menlo, "Cascadia Code", monospace; word-break: break-all; flex: 1; }}
+  .copy-btn {{ flex-shrink: 0; background: transparent; color: #94a3b8; border: 1px solid #334155; border-radius: 4px; padding: .2rem .55rem; font-size: .68rem; font-weight: 600; cursor: pointer; transition: color .12s, border-color .12s, background .12s; white-space: nowrap; }}
+  .copy-btn:hover {{ color: #e2e8f0; border-color: #64748b; background: #1e293b; }}
+  .copy-btn.copied {{ color: var(--green); border-color: var(--green); }}
+  .fixer-divider {{ border: none; border-top: 1px dashed #cbd5e1; margin: 1rem 0; }}
+  .fixer-note {{ padding: .8rem 1rem; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 7px; font-size: .78rem; color: #166534; line-height: 1.6; }}
+  .fixer-note code {{ background: #dcfce7; border-radius: 4px; padding: .1rem .35rem; font-family: "SF Mono", Menlo, monospace; color: #166534; font-size: .75rem; word-break: break-all; }}
 </style>
 </head>
 <body>
@@ -267,11 +295,81 @@ def generate_dashboard(report: dict, clusters: dict):
     <div class="tile {'yellow' if rollup['js_dependent_pages'] > 0 else 'green'}"><div class="val">{rollup['js_dependent_pages']}</div><div class="lbl">JS-Dependent</div></div>
   </div>
   {blocking_html}
-  <div class="table-section">
-    <div class="table-header">
-      <h2 style="margin:0">Failing Pages</h2>
-      <span class="fail-count">{rollup['pages_fail']} pages</span>
+  <div class="fixer-section">
+    <div class="fixer-header">
+      <div class="fixer-header-left">
+        <span class="section-tag">A.05</span>
+        <h2 style="margin:0">Failing Pages</h2>
+      </div>
+      <div class="fixer-header-right">
+        <span class="fail-count">{rollup['pages_fail']} pages</span>
+        <button class="fixer-btn" id="fixer-toggle" onclick="toggleFixer()">&#9654; Run the AdSense Fixer</button>
+      </div>
     </div>
+
+    <div class="fixer-panel" id="fixer-panel">
+      <p class="fixer-intro">
+        Run the steps below <strong>in order</strong> from the <code style="font-family:monospace;font-size:.8rem">calcphi.com-1</code> project root.
+        Phase 1 (fixer.py) fixes deterministic issues automatically — regulatory citations, author attribution, internal links.
+        Phase 2 requires manually expanding thin content per the <code style="font-family:monospace;font-size:.8rem">agents/sentinel-fixer.md</code> spec.
+      </p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Apply deterministic fixes (Phase 1)</div>
+            <div class="step-desc">Injects ATO/SEBI/RBI regulatory source citations, author byline, and &lt;time&gt; element into every failing page. Also adds Related Calculators links where in-content count &lt; 3. Idempotent — safe to re-run.</div>
+            <div class="step-cmd"><code>python3 scripts/sentinel/fixer.py</code><button class="copy-btn" onclick="copyCmd(this,'python3 scripts/sentinel/fixer.py')">Copy</button></div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Re-score all pages</div>
+            <div class="step-desc">Evaluates all 9 signals (word count, editorial depth, eeat, js dependency, internal links, etc.) per page and writes updated scores to <code>cache/page_scores.json</code>. Takes ~30 seconds.</div>
+            <div class="step-cmd"><code>python3 scripts/sentinel/scorer.py</code><button class="copy-btn" onclick="copyCmd(this,'python3 scripts/sentinel/scorer.py')">Copy</button></div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Run near-duplicate clustering</div>
+            <div class="step-desc">Generates embeddings for all pages, clusters by cosine similarity &gt; 0.85, and updates the info_gain signal for pages in duplicate clusters. Required before report — skipping this leaves info_gain as neutral placeholders.</div>
+            <div class="step-cmd"><code>python3 scripts/sentinel/duplicates.py</code><button class="copy-btn" onclick="copyCmd(this,'python3 scripts/sentinel/duplicates.py')">Copy</button></div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Rebuild this report</div>
+            <div class="step-desc">Computes the rollup, updates <code>reports/adsense/latest.json</code>, and regenerates this dashboard at <code>_site/warroom/index.html</code>. The new pass rate and failing pages list reflect all fixes applied so far.</div>
+            <div class="step-cmd"><code>python3 scripts/sentinel/report.py</code><button class="copy-btn" onclick="copyCmd(this,'python3 scripts/sentinel/report.py')">Copy</button></div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <div class="step-title">Commit and push to Vercel</div>
+            <div class="step-desc">Deploys all fixed _site/ HTML to production. Vercel serves _site/ directly — no build step. Changes go live within 30–60 seconds of push.</div>
+            <div class="step-cmd"><code>git add _site/ scripts/sentinel/ &amp;&amp; git commit -m "AdSense Fixer: apply fixes" &amp;&amp; git push origin main</code><button class="copy-btn" onclick="copyCmd(this,'git add _site/ scripts/sentinel/ && git commit -m \"AdSense Fixer: apply fixes\" && git push origin main')">Copy</button></div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">6</div>
+          <div class="step-body">
+            <div class="step-title">Re-crawl live site &amp; get verified score</div>
+            <div class="step-desc">After Vercel deploys, crawl the live site to get the true post-fix sentinel score. This is the only verified reading — local cache simulations may differ from what Googlebot sees.</div>
+            <div class="step-cmd"><code>python3 scripts/sentinel/crawler.py &amp;&amp; python3 scripts/sentinel/scorer.py &amp;&amp; python3 scripts/sentinel/duplicates.py &amp;&amp; python3 scripts/sentinel/report.py</code><button class="copy-btn" onclick="copyCmd(this,'python3 scripts/sentinel/crawler.py && python3 scripts/sentinel/scorer.py && python3 scripts/sentinel/duplicates.py && python3 scripts/sentinel/report.py')">Copy</button></div>
+          </div>
+        </div>
+      </div>
+      <hr class="fixer-divider">
+      <div class="fixer-note">
+        <strong>Phase 2 — Content expansion</strong> (handled by Claude, not this script): pages still failing after Step 1 need word_count expansion, editorial depth sections, or near-duplicate differentiation.
+        Full protocol: <code>agents/sentinel-fixer.md</code> &nbsp;|&nbsp; Trigger: say <em>"Run the AdSense Fixer"</em> in Claude Code.
+      </div>
+    </div>
+
     <div class="table-wrap">
       <table>
         <thead><tr><th>Score</th><th>URL</th><th>Words</th><th>Top Issue</th><th>Fix</th></tr></thead>
@@ -283,6 +381,39 @@ def generate_dashboard(report: dict, clusters: dict):
   <div class="clusters-grid">{cluster_cards if cluster_cards else '<p style="color:var(--muted);font-size:.85rem;">No duplicate clusters found.</p>'}</div>
 </main>
 <footer>CalcPhi War Room · AdSense Sentinel · Generated {generated_at[:10]}</footer>
+<script>
+function toggleFixer() {{
+  var panel = document.getElementById('fixer-panel');
+  var btn = document.getElementById('fixer-toggle');
+  if (panel.classList.contains('open')) {{
+    panel.classList.remove('open');
+    btn.innerHTML = '&#9654; Run the AdSense Fixer';
+  }} else {{
+    panel.classList.add('open');
+    btn.innerHTML = '&#9660; Run the AdSense Fixer';
+    panel.scrollIntoView({{ behavior: 'smooth', block: 'nearest' }});
+  }}
+}}
+function copyCmd(btn, text) {{
+  navigator.clipboard.writeText(text).then(function() {{
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(function() {{ btn.textContent = 'Copy'; btn.classList.remove('copied'); }}, 2000);
+  }}).catch(function() {{
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(function() {{ btn.textContent = 'Copy'; btn.classList.remove('copied'); }}, 2000);
+  }});
+}}
+</script>
 </body>
 </html>"""
     return html
