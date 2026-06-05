@@ -24,6 +24,14 @@ CACHE_RENDERED = ROOT_DIR / "cache" / "rendered"
 SCORES_PATH = ROOT_DIR / "cache" / "page_scores.json"
 CLUSTERS_PATH = ROOT_DIR / "cache" / "duplicate_clusters.json"
 CONFIG_PATH = SCRIPT_DIR / "config.yaml"
+SITE_DIR = ROOT_DIR / "_site"
+
+
+def url_to_site_path(url: str) -> Path:
+    rel = url.replace("https://www.calcphi.com", "").lstrip("/")
+    if rel.endswith(".html"):
+        return SITE_DIR / rel
+    return SITE_DIR / rel / "index.html"
 
 MODEL_NAME = "all-MiniLM-L6-v2"
 MAX_CHARS = 8000  # truncate before embedding to keep memory reasonable
@@ -46,16 +54,30 @@ def extract_main_text(html: str, strip_selectors: list) -> str:
 
 
 def load_page_texts(scores: list, strip_selectors: list) -> dict:
+    """
+    Load main-content text for embedding.
+    Prefer _site/ (committed HTML, stable) over cache/rendered/ (Playwright,
+    includes calculator widget UI that inflates word counts and shifts similarity).
+    Fall back to cache/rendered/ for pages not in _site/ (e.g. 404, /markets/).
+    """
     texts = {}
     for page in tqdm(scores, desc="Loading rendered HTML"):
         slug = page.get("slug")
+        url = page.get("url", "")
         if not slug:
             continue
+
+        site_path = url_to_site_path(url)
         rendered_path = CACHE_RENDERED / f"{slug}.html"
-        if not rendered_path.exists():
+
+        if site_path.exists():
+            html = site_path.read_text(encoding="utf-8", errors="replace")
+        elif rendered_path.exists():
+            html = rendered_path.read_text(encoding="utf-8", errors="replace")
+        else:
             texts[slug] = ""
             continue
-        html = rendered_path.read_text(encoding="utf-8", errors="replace")
+
         texts[slug] = extract_main_text(html, strip_selectors)
     return texts
 

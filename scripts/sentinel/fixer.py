@@ -22,6 +22,7 @@ Outputs:
 
 import argparse
 import json
+import shutil
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -340,6 +341,13 @@ def fix_page(page: dict, dry_run: bool = False) -> dict:
     # Write if changed
     if changed and not dry_run:
         html_path.write_text(html, encoding="utf-8")
+        # Sync to cache/raw/ as well (belt-and-suspenders; scorer now reads _site/ directly
+        # but keeping cache/raw/ in sync avoids confusion for any tool reading it).
+        slug = page.get("slug", "")
+        if slug:
+            raw_cache = ROOT_DIR / "cache" / "raw" / f"{slug}.html"
+            if raw_cache.parent.exists():
+                shutil.copy2(html_path, raw_cache)
         result["status"] = "fixed"
     elif changed and dry_run:
         result["status"] = "dry_run_would_fix"

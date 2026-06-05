@@ -23,6 +23,15 @@ CACHE_RENDERED = ROOT_DIR / "cache" / "rendered"
 URL_MAP_PATH = ROOT_DIR / "cache" / "url_map.json"
 SCORES_PATH = ROOT_DIR / "cache" / "page_scores.json"
 CONFIG_PATH = SCRIPT_DIR / "config.yaml"
+SITE_DIR = ROOT_DIR / "_site"  # source of truth for committed HTML
+
+
+def url_to_site_path(url: str) -> Path:
+    """Map a calcphi.com URL to its committed _site/ HTML file."""
+    rel = url.replace("https://www.calcphi.com", "").lstrip("/")
+    if rel.endswith(".html"):
+        return SITE_DIR / rel
+    return SITE_DIR / rel / "index.html"
 
 
 def load_config() -> dict:
@@ -305,15 +314,32 @@ def compute_score(signals: list, weights: dict) -> int:
 def score_page(url: str, slug: str, cfg: dict, seen_titles: set, seen_descs: set) -> dict:
     raw_path = ROOT_DIR / "cache" / "raw" / f"{slug}.html"
     rendered_path = ROOT_DIR / "cache" / "rendered" / f"{slug}.html"
+    site_path = url_to_site_path(url)
 
-    if not raw_path.exists() or not rendered_path.exists():
+    # Source of truth: _site/ (committed HTML, stable, reflects all applied fixes).
+    # Using _site/ for BOTH raw and rendered makes every scoring signal deterministic —
+    # scores change only when _site/ changes via a git commit, not when the crawler runs.
+    #
+    # js_dependency with _site/ as rendered: ratio = raw_wc / _site_wc = 1.0 (always
+    # passes). This is correct for a statically-built site — if substantial prose is in
+    # _site/, that prose is indexable without JS.
+    #
+    # Fallback chain: _site/ → cache/raw/ (covers deleted/redirected URLs).
+    if site_path.exists():
+        raw_html = site_path.read_text(encoding="utf-8", errors="replace")
+        rendered_html = raw_html  # same source → deterministic, crawler-independent
+    elif raw_path.exists():
+        raw_html = raw_path.read_text(encoding="utf-8", errors="replace")
+        rendered_html = (
+            rendered_path.read_text(encoding="utf-8", errors="replace")
+            if rendered_path.exists()
+            else raw_html
+        )
+    else:
         return {
-            "url": url, "slug": slug, "error": "cache missing",
+            "url": url, "slug": slug, "error": "no source (not in _site/ or cache/raw/)",
             "score": 0, "status": "ERROR", "signals": [], "issues": [], "fixes": [],
         }
-
-    raw_html = raw_path.read_text(encoding="utf-8", errors="replace")
-    rendered_html = rendered_path.read_text(encoding="utf-8", errors="replace")
     strip_sels = cfg["strip_selectors"]
     rendered_text = extract_main_text(rendered_html, strip_sels)
     title, desc = extract_meta(rendered_html)
