@@ -23,7 +23,8 @@ SITE_DIR  = ROOT_DIR / "_site"
 OUT_DIR   = WAR_ROOM / "data" / "hercules"
 ERRORS_F  = OUT_DIR / "errors.json"
 TRACKED_F = OUT_DIR / "tracked.json"
-SITE_URL  = "https://www.calcphi.com"
+SITE_URL    = "https://www.calcphi.com"
+GSC_INSPECT = "https://search.google.com/search-console/inspect?resource_id=https%3A%2F%2Fwww.calcphi.com%2F&id="
 
 REDIRECT_TEMPLATE = """\
 <!DOCTYPE html>
@@ -163,9 +164,21 @@ def main():
         TRACKED_F.write_text(json.dumps(tracked, indent=2, ensure_ascii=False))
         print(f"\n  ✓ errors.json updated  ({fixed_count} fixed)")
         print(f"  ✓ tracked.json updated ({fixed_count} pages added to monitoring)")
-        print(f"\n  Next steps:")
-        print(f"  1. git add _site/ && git commit -m 'Hercules: apply crawl fixes' && git push")
-        print(f"  2. cd {WAR_ROOM} && git add data/hercules/ && git commit -m 'Hercules: fix log' && git push")
+        print(f"\n  ── NEXT STEPS ──────────────────────────────────────────────")
+        print(f"  1. Deploy fix to Vercel:")
+        print(f"     git add _site/ && git commit -m 'Hercules: apply crawl fixes' && git push")
+        print(f"\n  2. Push Hercules data to War Room:")
+        print(f"     cd {WAR_ROOM} && git add data/hercules/ && git commit -m 'Hercules: fix log' && git push")
+        print(f"\n  3. VALIDATE IN GOOGLE SEARCH CONSOLE:")
+        print(f"     For each fixed page, open the GSC URL Inspection link and click 'Request Indexing'")
+        for e in errors:
+            if e.get('fixStatus') == 'FIX_APPLIED':
+                import urllib.parse
+                gsc_url = GSC_INSPECT + urllib.parse.quote(f"{SITE_URL}{e['url']}", safe='')
+                print(f"     → {e['url']}")
+                print(f"       {gsc_url}")
+        print(f"\n  4. Run Hercules Quick Check in 2–7 days to confirm pages are indexed:")
+        print(f"     python3 scripts/hercules/check_indexing.py --tracked")
     elif fixed_count == 0:
         print(f"\n  No automated fixes were applied.")
 

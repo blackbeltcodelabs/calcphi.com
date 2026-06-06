@@ -206,6 +206,57 @@ def fetch_search_analytics(service, days: int = 28) -> dict:
         return {}
 
 
+def build_errors(pages: list) -> list:
+    """Generate errors.json from pages scan — real issues extracted from GSC states."""
+    import urllib.parse
+    errors, idx = [], 0
+    site = SITE_URL.rstrip("/")
+    gsc_base = "https://search.google.com/search-console/inspect?resource_id=https%3A%2F%2Fwww.calcphi.com%2F&id="
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+    for page in pages:
+        state = page.get("coverageState", "")
+        s     = state.lower()
+
+        if any(x in s for x in ["not found", "404"]):
+            idx += 1
+            errors.append({"id": f"err-{idx:03}", "url": page["url"], "errorType": "NOT_FOUND_404",
+                "httpStatus": 404, "firstDetected": today, "lastDetected": today,
+                "fixStatus": "UNFIXED", "fixAppliedAt": None, "fixDescription": None, "priority": "HIGH",
+                "suggestedFix": "Page returns 404. Add a 301 redirect to the correct URL.",
+                "googleMessage": state,
+                "gscInspectUrl": gsc_base + urllib.parse.quote(f"{site}{page['url']}", safe="")})
+
+        elif "soft 404" in s:
+            idx += 1
+            errors.append({"id": f"err-{idx:03}", "url": page["url"], "errorType": "SOFT_404",
+                "httpStatus": 200, "firstDetected": today, "lastDetected": today,
+                "fixStatus": "UNFIXED", "fixAppliedAt": None, "fixDescription": None, "priority": "MEDIUM",
+                "suggestedFix": "Page returns 200 but Google treats it as empty. Expand content to 800+ words.",
+                "googleMessage": state,
+                "gscInspectUrl": gsc_base + urllib.parse.quote(f"{site}{page['url']}", safe="")})
+
+        elif "unknown to google" in s:
+            idx += 1
+            errors.append({"id": f"unk-{idx:03}", "url": page["url"], "errorType": "UNDISCOVERED",
+                "httpStatus": None, "firstDetected": today, "lastDetected": today,
+                "fixStatus": "UNFIXED", "fixAppliedAt": None, "fixDescription": None, "priority": "HIGH",
+                "suggestedFix": "Google has never seen this page. Add internal links from indexed pages, confirm it is in sitemap.xml, then request indexing via GSC.",
+                "googleMessage": state,
+                "gscInspectUrl": gsc_base + urllib.parse.quote(f"{site}{page['url']}", safe="")})
+
+        elif "discovered" in s and "not indexed" in s:
+            idx += 1
+            errors.append({"id": f"disc-{idx:03}", "url": page["url"], "errorType": "DISCOVERED_NOT_INDEXED",
+                "httpStatus": None, "firstDetected": today, "lastDetected": today,
+                "fixStatus": "UNFIXED", "fixAppliedAt": None, "fixDescription": None, "priority": "MEDIUM",
+                "suggestedFix": "Google found this page but chose not to index it — usually thin content, near-duplicate, or low E-E-A-T. Expand to 800+ words, strengthen author attribution, add 3+ internal links.",
+                "googleMessage": state,
+                "gscInspectUrl": gsc_base + urllib.parse.quote(f"{site}{page['url']}", safe="")})
+
+    return errors
+
+
 def build_coverage(pages: list, sitemap_total: int) -> dict:
     from collections import Counter
 
@@ -292,6 +343,10 @@ def main():
         coverage = build_coverage(pages, len(urls))
         (OUT_DIR / "coverage.json").write_text(json.dumps(coverage, indent=2))
         print(f"  ✓ coverage.json written")
+
+        errors = build_errors(pages)
+        (OUT_DIR / "errors.json").write_text(json.dumps(errors, indent=2, ensure_ascii=False))
+        print(f"  ✓ errors.json written ({len(errors)} issues)")
 
     if args.all or args.analytics:
         print(f"\n  Fetching search analytics (last 28 days)...")
