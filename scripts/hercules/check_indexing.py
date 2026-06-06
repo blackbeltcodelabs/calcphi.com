@@ -28,11 +28,10 @@ SITE_URL  = os.environ.get("GSC_SITE_URL", "https://www.calcphi.com/")
 
 
 def build_service():
-    from google.oauth2 import service_account
+    import google.auth
     from googleapiclient.discovery import build
-    creds = service_account.Credentials.from_service_account_file(
-        os.environ["GOOGLE_APPLICATION_CREDENTIALS"],
-        scopes=["https://www.googleapis.com/auth/webmasters"],
+    creds, _ = google.auth.default(
+        scopes=["https://www.googleapis.com/auth/webmasters"]
     )
     return build("searchconsole", "v1", credentials=creds)
 
@@ -78,10 +77,10 @@ def main():
     parser.add_argument("--request-indexing",  action="store_true", help="Request priority indexing for specified URLs")
     args = parser.parse_args()
 
-    creds_path = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")
-    if not creds_path or not Path(creds_path).exists():
-        print("❌  GOOGLE_APPLICATION_CREDENTIALS not set or file not found.")
-        print("    Run fetch_gsc.py for setup instructions.")
+    adc_path = Path.home() / ".config" / "gcloud" / "application_default_credentials.json"
+    if not adc_path.exists():
+        print("❌  No Application Default Credentials found.")
+        print("    Run: gcloud auth application-default login --scopes=https://www.googleapis.com/auth/webmasters.readonly,https://www.googleapis.com/auth/cloud-platform")
         sys.exit(1)
 
     service = build_service()

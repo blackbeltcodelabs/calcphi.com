@@ -44,30 +44,20 @@ SITE_URL = os.environ.get("GSC_SITE_URL", "https://www.calcphi.com/")
 
 
 def check_credentials():
-    creds_path = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")
-    if not creds_path:
-        print("\n❌  GOOGLE_APPLICATION_CREDENTIALS not set.\n")
-        print("Setup steps:")
-        print("  1. Go to https://console.cloud.google.com/")
-        print("  2. Create or select a project → Enable 'Google Search Console API'")
-        print("  3. IAM & Admin → Service Accounts → Create service account → Download JSON key")
-        print("  4. In GSC: Settings → Users & permissions → Add (service account email, Full)")
-        print(f"  5. export GOOGLE_APPLICATION_CREDENTIALS=/path/to/key.json")
-        print(f"  6. export GSC_SITE_URL=https://www.calcphi.com/\n")
+    adc_path = Path.home() / ".config" / "gcloud" / "application_default_credentials.json"
+    if not adc_path.exists():
+        print("\n❌  No Application Default Credentials found.\n")
+        print("Run this command first:")
+        print("  gcloud auth application-default login --scopes=https://www.googleapis.com/auth/webmasters.readonly,https://www.googleapis.com/auth/cloud-platform\n")
         sys.exit(1)
-    if not Path(creds_path).exists():
-        print(f"\n❌  Credentials file not found: {creds_path}\n")
-        sys.exit(1)
-    return creds_path
 
 
 def build_service():
-    from google.oauth2 import service_account
+    import google.auth
     from googleapiclient.discovery import build
 
-    creds = service_account.Credentials.from_service_account_file(
-        os.environ["GOOGLE_APPLICATION_CREDENTIALS"],
-        scopes=["https://www.googleapis.com/auth/webmasters.readonly"],
+    creds, _ = google.auth.default(
+        scopes=["https://www.googleapis.com/auth/webmasters.readonly"]
     )
     return build("searchconsole", "v1", credentials=creds)
 
@@ -128,15 +118,17 @@ def fetch_url_inspection(service, url: str) -> dict:
 
 
 def _map_category(state: str) -> str:
-    if "INDEXED" in state and "NOT" not in state and "ALTERNATE" not in state and "DUPLICATE" not in state:
+    s = state.lower()
+    # Human-readable strings returned by URL Inspection API
+    if "submitted and indexed" in s or ("indexed" in s and "not" not in s and "alternate" not in s and "duplicate" not in s):
         return "INDEXED"
-    if any(x in state for x in ["404", "SOFT", "5XX", "REDIRECT_ERROR", "SERVER_ERROR"]):
+    if any(x in s for x in ["not found", "404", "soft 404", "server error", "redirect error", "5xx"]):
         return "ERROR"
-    if any(x in state for x in ["NOT_INDEXED", "DISCOVERED", "CRAWLED_CURRENTLY"]):
+    if any(x in s for x in ["not indexed", "discovered", "crawled", "unknown to google", "unknown"]):
         return "NOT_INDEXED"
-    if any(x in state for x in ["ALTERNATE", "DUPLICATE", "ROBOTS", "MANUAL"]):
+    if any(x in s for x in ["alternate", "duplicate", "blocked", "robots", "manual", "excluded"]):
         return "WARNING"
-    return "UNKNOWN"
+    return "NOT_INDEXED"  # safe default — better to investigate than to overclaim
 
 
 def _extract_issues(idx: dict) -> list:
