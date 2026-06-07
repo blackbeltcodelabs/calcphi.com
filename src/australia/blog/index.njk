@@ -25,20 +25,21 @@ breadcrumbs:
       {% for post in collections.auBlog %}
         {% set slug = post.url | replace("/australia/blog/", "") | replace("/", "") %}
         {% set meta = australia.blogMeta[slug] %}
-        {% if meta %}
+        {% set cardTitle = post.data.cardTitle or meta.cardTitle or post.data.title | replace(" | CalcPhi", "") %}
+        {% set cardSummary = post.data.cardSummary or meta.cardSummary or post.data.description %}
+        {% set displayCategory = post.data.category or meta.category or "General" %}
         <article class="blog-card">
           <div class="blog-card__meta">
-            <span class="blog-card__tag">{{ meta.category }}</span>
+            <span class="blog-card__tag">{{ displayCategory }}</span>
             <span class="blog-card__date">{{ post.data.datePublished | monthYear }}</span>
             {% if post.data.dateModified and post.data.dateModified != post.data.datePublished %}
             <span class="blog-card__updated">Updated {{ post.data.dateModified | monthYear }}</span>
             {% endif %}
           </div>
-          <h2><a href="{{ post.url }}">{{ meta.cardTitle }}</a></h2>
-          <p>{{ meta.cardSummary }}</p>
+          <h2><a href="{{ post.url }}">{{ cardTitle }}</a></h2>
+          <p>{{ cardSummary }}</p>
           <a href="{{ post.url }}" class="blog-card__read">Read article →</a>
         </article>
-        {% endif %}
       {% endfor %}
 
     </div>

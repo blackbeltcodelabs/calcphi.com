@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 permalink: /india/blog/
-title: "India Personal Finance Blog — 52 Guides | CalcPhi"
+title: "India Personal Finance Blog | CalcPhi"
 description: "In-depth guides on income tax, SIP returns, NPS, FD, term insurance, home loans, and retirement planning for India. Real numbers, current rules, no jargon — written by CFAs, CAs, and CFPs."
 breadcrumbs:
   - name: Home
@@ -15,22 +15,22 @@ breadcrumbs:
   <div class="hub-hero">
     <div class="hub-hero__inner">
       <h1>India Personal Finance Blog</h1>
-      <p>52 guides covering income tax, mutual funds, FD, NPS, term insurance, home loans, and retirement planning. Real numbers, current regulations, written by CFAs, CAs, and CFPs.</p>
+      <p>{{ collections.indiaBlog | length }} guides covering income tax, mutual funds, FD, NPS, term insurance, home loans, and retirement planning. Real numbers, current regulations, written by CFAs, CAs, and CFPs.</p>
     </div>
   </div>
 
   <div class="hub-content">
 
     <div id="blog-filters" style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2rem;">
-      <button class="blog-filter-btn blog-filter-btn--active" data-category="all">All &mdash; 52</button>
-      <button class="blog-filter-btn" data-category="Tax">Tax &mdash; 11</button>
-      <button class="blog-filter-btn" data-category="Investing">Investing &mdash; 11</button>
-      <button class="blog-filter-btn" data-category="Savings">Savings &mdash; 8</button>
-      <button class="blog-filter-btn" data-category="Retirement">Retirement &mdash; 7</button>
-      <button class="blog-filter-btn" data-category="Real Estate">Real Estate &mdash; 5</button>
-      <button class="blog-filter-btn" data-category="Salary">Salary &mdash; 5</button>
-      <button class="blog-filter-btn" data-category="Loans">Loans &mdash; 4</button>
-      <button class="blog-filter-btn" data-category="Insurance">Insurance &mdash; 1</button>
+      <button class="blog-filter-btn blog-filter-btn--active" data-category="all">All &mdash; {{ collections.indiaBlog | length }}</button>
+      <button class="blog-filter-btn" data-category="Tax">Tax</button>
+      <button class="blog-filter-btn" data-category="Investing">Investing</button>
+      <button class="blog-filter-btn" data-category="Savings">Savings</button>
+      <button class="blog-filter-btn" data-category="Retirement">Retirement</button>
+      <button class="blog-filter-btn" data-category="Real Estate">Real Estate</button>
+      <button class="blog-filter-btn" data-category="Salary">Salary</button>
+      <button class="blog-filter-btn" data-category="Loans">Loans</button>
+      <button class="blog-filter-btn" data-category="Insurance">Insurance</button>
     </div>
 
     <div class="blog-grid" id="blog-grid">
@@ -38,20 +38,21 @@ breadcrumbs:
       {% for post in collections.indiaBlog %}
         {% set slug = post.url | replace("/india/blog/", "") | replace("/", "") %}
         {% set meta = india.blogMeta[slug] %}
-        {% if meta %}
+        {% set cardTitle = post.data.cardTitle or meta.cardTitle or post.data.title | replace(" | CalcPhi", "") %}
+        {% set cardSummary = post.data.cardSummary or meta.cardSummary or post.data.description %}
+        {% set displayCategory = post.data.category or meta.category or "General" %}
         <article class="blog-card">
           <div class="blog-card__meta">
-            <span class="blog-card__tag">{{ meta.category }}</span>
+            <span class="blog-card__tag">{{ displayCategory }}</span>
             <span class="blog-card__date">{{ post.data.datePublished | monthYear }}</span>
             {% if post.data.dateModified and post.data.dateModified != post.data.datePublished %}
             <span class="blog-card__updated">Updated {{ post.data.dateModified | monthYear }}</span>
             {% endif %}
           </div>
-          <h2><a href="{{ post.url }}">{{ meta.cardTitle }}</a></h2>
-          <p>{{ meta.cardSummary }}</p>
+          <h2><a href="{{ post.url }}">{{ cardTitle }}</a></h2>
+          <p>{{ cardSummary }}</p>
           <a href="{{ post.url }}" class="blog-card__read">Read article →</a>
         </article>
-        {% endif %}
       {% endfor %}
 
     </div>
