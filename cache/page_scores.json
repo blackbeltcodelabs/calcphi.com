@@ -5969,7 +5969,7 @@
     "url": "https://www.calcphi.com/australia/blog/super-investment-options/",
     "slug": "f8376c7d8631528031c6124af43fce72",
     "title": "Super Investment Options Australia: Growth vs Balanced vs Conservative | CalcPhi",
-    "score": 75,
+    "score": 100,
     "status": "PASS",
     "word_count": 2374,
     "is_placeholder": false,
@@ -5985,14 +5985,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 1.0,
-        "passed": false,
-        "issues": [
-          "100% content similarity with: https://www.calcphi.com/australia/blog/super-investment-options-australia/ (scaled content risk)"
-        ],
-        "fixes": [
-          "Merge duplicate pages or add substantial unique content: different worked examples, market-specific data, or distinct editorial angle."
-        ]
+        "value": 0.0,
+        "passed": true,
+        "issues": [],
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -6049,12 +6045,10 @@
       }
     ],
     "issues": [
-      "Missing editorial blocks: how-to-use / next steps guidance",
-      "100% content similarity with: https://www.calcphi.com/australia/blog/super-investment-options-australia/ (scaled content risk)"
+      "Missing editorial blocks: how-to-use / next steps guidance"
     ],
     "fixes": [
-      "Add missing section(s): how-to-use / next steps guidance.",
-      "Merge duplicate pages or add substantial unique content: different worked examples, market-specific data, or distinct editorial angle."
+      "Add missing section(s): how-to-use / next steps guidance."
     ]
   },
   {
@@ -6147,7 +6141,7 @@
     "url": "https://www.calcphi.com/australia/blog/stamp-duty-australia-guide/",
     "slug": "dfe8ae323e505cd1719a97d1c2d0452a",
     "title": "Stamp Duty Australia 2026: All States Compared | CalcPhi",
-    "score": 75,
+    "score": 100,
     "status": "PASS",
     "word_count": 2731,
     "is_placeholder": false,
@@ -6163,14 +6157,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.98,
-        "passed": false,
-        "issues": [
-          "98% content similarity with: https://www.calcphi.com/australia/blog/stamp-duty-australia-2026-state-by-state-guide/ (scaled content risk)"
-        ],
-        "fixes": [
-          "Merge duplicate pages or add substantial unique content: different worked examples, market-specific data, or distinct editorial angle."
-        ]
+        "value": 0.0,
+        "passed": true,
+        "issues": [],
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -6227,12 +6217,10 @@
       }
     ],
     "issues": [
-      "Missing editorial blocks: how-to-use / next steps guidance",
-      "98% content similarity with: https://www.calcphi.com/australia/blog/stamp-duty-australia-2026-state-by-state-guide/ (scaled content risk)"
+      "Missing editorial blocks: how-to-use / next steps guidance"
     ],
     "fixes": [
-      "Add missing section(s): how-to-use / next steps guidance.",
-      "Merge duplicate pages or add substantial unique content: different worked examples, market-specific data, or distinct editorial angle."
+      "Add missing section(s): how-to-use / next steps guidance."
     ]
   },
   {
@@ -7301,16 +7289,16 @@
     "url": "https://www.calcphi.com/blog/au/capital-gains-tax-australia/",
     "slug": "74a8b3d56fdc6be0c15f327dc3621820",
     "title": "Capital Gains Tax Australia 2025-26: The 50% CGT Discount, How It Works, and What You Owe | CalcPhi",
-    "score": 85,
+    "score": 100,
     "status": "PASS",
-    "word_count": 768,
+    "word_count": 812,
     "is_placeholder": false,
     "is_js_dependent": false,
-    "has_author": false,
+    "has_author": true,
     "signals": [
       {
         "signal": "word_count",
-        "value": 768,
+        "value": 812,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -7335,106 +7323,10 @@
       },
       {
         "signal": "eeat",
-        "value": 2,
-        "passed": false,
-        "issues": [
-          "No regulatory/government source cited (YMYL requirement)"
-        ],
-        "fixes": [
-          "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
-        ]
-      },
-      {
-        "signal": "js_dependency",
-        "value": 1.0,
+        "value": 3,
         "passed": true,
         "issues": [],
         "fixes": []
-      },
-      {
-        "signal": "meta_unique",
-        "value": true,
-        "passed": true,
-        "issues": [],
-        "fixes": []
-      },
-      {
-        "signal": "not_placeholder",
-        "value": true,
-        "passed": true,
-        "issues": [],
-        "fixes": []
-      },
-      {
-        "signal": "internal_links",
-        "value": 4,
-        "passed": true,
-        "issues": [],
-        "fixes": []
-      },
-      {
-        "signal": "layout_readiness",
-        "value": -0.0,
-        "passed": true,
-        "issues": [],
-        "fixes": []
-      }
-    ],
-    "issues": [
-      "Missing editorial blocks: FAQ with >= 3 questions",
-      "No regulatory/government source cited (YMYL requirement)"
-    ],
-    "fixes": [
-      "Add missing section(s): FAQ with >= 3 questions.",
-      "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
-    ]
-  },
-  {
-    "url": "https://www.calcphi.com/blog/au/first-home-buyer-australia-guide/",
-    "slug": "d7f298bc814232d22b69477938e65c64",
-    "title": "First Home Buyer Australia 2025: Grants, Stamp Duty Exemptions, and What You Actually Need | CalcPhi",
-    "score": 70,
-    "status": "PASS",
-    "word_count": 788,
-    "is_placeholder": false,
-    "is_js_dependent": false,
-    "has_author": false,
-    "signals": [
-      {
-        "signal": "word_count",
-        "value": 788,
-        "passed": true,
-        "issues": [],
-        "fixes": []
-      },
-      {
-        "signal": "info_gain",
-        "value": 0.0,
-        "passed": true,
-        "issues": [],
-        "fixes": []
-      },
-      {
-        "signal": "editorial_depth",
-        "value": 2,
-        "passed": false,
-        "issues": [
-          "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
-        ],
-        "fixes": [
-          "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
-        ]
-      },
-      {
-        "signal": "eeat",
-        "value": 2,
-        "passed": false,
-        "issues": [
-          "No regulatory/government source cited (YMYL requirement)"
-        ],
-        "fixes": [
-          "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
-        ]
       },
       {
         "signal": "js_dependency",
@@ -7473,12 +7365,96 @@
       }
     ],
     "issues": [
-      "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance",
-      "No regulatory/government source cited (YMYL requirement)"
+      "Missing editorial blocks: FAQ with >= 3 questions"
     ],
     "fixes": [
-      "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance.",
-      "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
+      "Add missing section(s): FAQ with >= 3 questions."
+    ]
+  },
+  {
+    "url": "https://www.calcphi.com/blog/au/first-home-buyer-australia-guide/",
+    "slug": "d7f298bc814232d22b69477938e65c64",
+    "title": "First Home Buyer Australia 2025: Grants, Stamp Duty Exemptions, and What You Actually Need | CalcPhi",
+    "score": 85,
+    "status": "PASS",
+    "word_count": 832,
+    "is_placeholder": false,
+    "is_js_dependent": false,
+    "has_author": true,
+    "signals": [
+      {
+        "signal": "word_count",
+        "value": 832,
+        "passed": true,
+        "issues": [],
+        "fixes": []
+      },
+      {
+        "signal": "info_gain",
+        "value": 0.0,
+        "passed": true,
+        "issues": [],
+        "fixes": []
+      },
+      {
+        "signal": "editorial_depth",
+        "value": 2,
+        "passed": false,
+        "issues": [
+          "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
+        ],
+        "fixes": [
+          "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
+        ]
+      },
+      {
+        "signal": "eeat",
+        "value": 3,
+        "passed": true,
+        "issues": [],
+        "fixes": []
+      },
+      {
+        "signal": "js_dependency",
+        "value": 1.0,
+        "passed": true,
+        "issues": [],
+        "fixes": []
+      },
+      {
+        "signal": "meta_unique",
+        "value": true,
+        "passed": true,
+        "issues": [],
+        "fixes": []
+      },
+      {
+        "signal": "not_placeholder",
+        "value": true,
+        "passed": true,
+        "issues": [],
+        "fixes": []
+      },
+      {
+        "signal": "internal_links",
+        "value": 6,
+        "passed": true,
+        "issues": [],
+        "fixes": []
+      },
+      {
+        "signal": "layout_readiness",
+        "value": -0.0,
+        "passed": true,
+        "issues": [],
+        "fixes": []
+      }
+    ],
+    "issues": [
+      "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
+    ],
+    "fixes": [
+      "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
     ]
   },
   {
@@ -7999,16 +7975,16 @@
     "url": "https://www.calcphi.com/",
     "slug": "2b5f4dd4ec6ba57eb7235d8b4a5f3514",
     "title": "Free Financial Calculators \u2013 India, USA, Canada, Australia | CalcPhi",
-    "score": 70,
+    "score": 85,
     "status": "PASS",
-    "word_count": 579,
+    "word_count": 618,
     "is_placeholder": false,
     "is_js_dependent": false,
-    "has_author": false,
+    "has_author": true,
     "signals": [
       {
         "signal": "word_count",
-        "value": 579,
+        "value": 618,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -8033,16 +8009,10 @@
       },
       {
         "signal": "eeat",
-        "value": 1,
-        "passed": false,
-        "issues": [
-          "No named author byline detected (YMYL page requires E-E-A-T)",
-          "No regulatory/government source cited (YMYL requirement)"
-        ],
-        "fixes": [
-          "Add named author with credentials and bio link.",
-          "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
-        ]
+        "value": 3,
+        "passed": true,
+        "issues": [],
+        "fixes": []
       },
       {
         "signal": "js_dependency",
@@ -8067,7 +8037,7 @@
       },
       {
         "signal": "internal_links",
-        "value": 9,
+        "value": 10,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -8081,14 +8051,10 @@
       }
     ],
     "issues": [
-      "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance",
-      "No named author byline detected (YMYL page requires E-E-A-T)",
-      "No regulatory/government source cited (YMYL requirement)"
+      "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
     ],
     "fixes": [
-      "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance.",
-      "Add named author with credentials and bio link.",
-      "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
+      "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
     ]
   },
   {
@@ -20747,16 +20713,16 @@
     "url": "https://www.calcphi.com/help/",
     "slug": "d9a851531aee4c54396ba52c768c96fe",
     "title": "Help & FAQs \u2013 CalcPhi",
-    "score": 85,
+    "score": 100,
     "status": "PASS",
-    "word_count": 947,
+    "word_count": 986,
     "is_placeholder": false,
     "is_js_dependent": false,
-    "has_author": false,
+    "has_author": true,
     "signals": [
       {
         "signal": "word_count",
-        "value": 947,
+        "value": 986,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -20781,16 +20747,10 @@
       },
       {
         "signal": "eeat",
-        "value": 1,
-        "passed": false,
-        "issues": [
-          "No named author byline detected (YMYL page requires E-E-A-T)",
-          "No regulatory/government source cited (YMYL requirement)"
-        ],
-        "fixes": [
-          "Add named author with credentials and bio link.",
-          "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
-        ]
+        "value": 3,
+        "passed": true,
+        "issues": [],
+        "fixes": []
       },
       {
         "signal": "js_dependency",
@@ -20815,7 +20775,7 @@
       },
       {
         "signal": "internal_links",
-        "value": 4,
+        "value": 5,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -20829,14 +20789,10 @@
       }
     ],
     "issues": [
-      "Missing editorial blocks: how-to-use / next steps guidance",
-      "No named author byline detected (YMYL page requires E-E-A-T)",
-      "No regulatory/government source cited (YMYL requirement)"
+      "Missing editorial blocks: how-to-use / next steps guidance"
     ],
     "fixes": [
-      "Add missing section(s): how-to-use / next steps guidance.",
-      "Add named author with credentials and bio link.",
-      "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
+      "Add missing section(s): how-to-use / next steps guidance."
     ]
   },
   {
@@ -22317,7 +22273,7 @@
     "url": "https://www.calcphi.com/australia/blog/super-investment-options-australia/",
     "slug": "dd58176bcc964da62efbd5b4b46634a3",
     "title": "Super Investment Options Australia: Growth, Balanced or Conservative \u2014 Which Is Right? | CalcPhi",
-    "score": 70,
+    "score": 95,
     "status": "PASS",
     "word_count": 2301,
     "is_placeholder": false,
@@ -22333,14 +22289,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 1.0,
-        "passed": false,
-        "issues": [
-          "100% content similarity with: https://www.calcphi.com/australia/blog/super-investment-options/ (scaled content risk)"
-        ],
-        "fixes": [
-          "Merge duplicate pages or add substantial unique content: different worked examples, market-specific data, or distinct editorial angle."
-        ]
+        "value": 0.0,
+        "passed": true,
+        "issues": [],
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -22402,13 +22354,11 @@
     ],
     "issues": [
       "Missing editorial blocks: how-to-use / next steps guidance",
-      "Duplicate meta description: 'Growth, Balanced or Conservative super \u2014 which option suits your age and goals? '",
-      "100% content similarity with: https://www.calcphi.com/australia/blog/super-investment-options/ (scaled content risk)"
+      "Duplicate meta description: 'Growth, Balanced or Conservative super \u2014 which option suits your age and goals? '"
     ],
     "fixes": [
       "Add missing section(s): how-to-use / next steps guidance.",
-      "Write a unique meta description specific to this page's content.",
-      "Merge duplicate pages or add substantial unique content: different worked examples, market-specific data, or distinct editorial angle."
+      "Write a unique meta description specific to this page's content."
     ]
   },
   {
@@ -23187,7 +23137,7 @@
     "url": "https://www.calcphi.com/australia/blog/stamp-duty-australia-2026-state-by-state-guide/",
     "slug": "f36196e0e7061a19b7417ea8397d7191",
     "title": "Stamp Duty Australia 2026: What You Pay in Every State and Territory | CalcPhi",
-    "score": 75,
+    "score": 100,
     "status": "PASS",
     "word_count": 2831,
     "is_placeholder": false,
@@ -23203,14 +23153,10 @@
       },
       {
         "signal": "info_gain",
-        "value": 0.98,
-        "passed": false,
-        "issues": [
-          "98% content similarity with: https://www.calcphi.com/australia/blog/stamp-duty-australia-guide/ (scaled content risk)"
-        ],
-        "fixes": [
-          "Merge duplicate pages or add substantial unique content: different worked examples, market-specific data, or distinct editorial angle."
-        ]
+        "value": 0.0,
+        "passed": true,
+        "issues": [],
+        "fixes": []
       },
       {
         "signal": "editorial_depth",
@@ -23262,12 +23208,8 @@
         "fixes": []
       }
     ],
-    "issues": [
-      "98% content similarity with: https://www.calcphi.com/australia/blog/stamp-duty-australia-guide/ (scaled content risk)"
-    ],
-    "fixes": [
-      "Merge duplicate pages or add substantial unique content: different worked examples, market-specific data, or distinct editorial angle."
-    ]
+    "issues": [],
+    "fixes": []
   },
   {
     "url": "https://www.calcphi.com/australia/blog/spouse-super-contributions-australia/",

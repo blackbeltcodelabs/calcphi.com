@@ -1,5 +1,5 @@
 {
-  "total_clusters": 3,
+  "total_clusters": 1,
   "threshold_used": 0.85,
   "clusters": [
     [
@@ -20,34 +20,6 @@
         "slug": "4f9a02156799b6bc843d5a4da1d00426",
         "score": 100,
         "max_similarity": 0.8530538082122803
-      }
-    ],
-    [
-      {
-        "url": "https://www.calcphi.com/australia/blog/super-investment-options/",
-        "slug": "f8376c7d8631528031c6124af43fce72",
-        "score": 100,
-        "max_similarity": 1.0
-      },
-      {
-        "url": "https://www.calcphi.com/australia/blog/super-investment-options-australia/",
-        "slug": "dd58176bcc964da62efbd5b4b46634a3",
-        "score": 95,
-        "max_similarity": 1.0
-      }
-    ],
-    [
-      {
-        "url": "https://www.calcphi.com/australia/blog/stamp-duty-australia-guide/",
-        "slug": "dfe8ae323e505cd1719a97d1c2d0452a",
-        "score": 100,
-        "max_similarity": 0.9800691604614258
-      },
-      {
-        "url": "https://www.calcphi.com/australia/blog/stamp-duty-australia-2026-state-by-state-guide/",
-        "slug": "f36196e0e7061a19b7417ea8397d7191",
-        "score": 100,
-        "max_similarity": 0.9800691604614258
       }
     ]
   ]
