@@ -19,6 +19,12 @@
 
   {{ content | safe }}
 
+  {% if "/india/" in page.url %}
+  <div class="data-source" style="margin-top:1.5rem;padding:0.75rem 1rem;background:var(--bg-2,#fbf2e6);border:1px solid var(--line,#e8dec9);border-radius:8px;font-size:0.8125rem;color:var(--ink-3,#6b6258);line-height:1.5"><strong>Data sources:</strong> Rates and regulations sourced from the <a href="https://www.sebi.gov.in" rel="noopener noreferrer" target="_blank">Securities and Exchange Board of India (SEBI)</a>, the <a href="https://www.rbi.org.in" rel="noopener noreferrer" target="_blank">Reserve Bank of India (RBI)</a>, and the <a href="https://incometax.gov.in" rel="noopener noreferrer" target="_blank">Income Tax Department of India</a>. Updated for FY 2026-27. For personalised advice, consult a SEBI-registered investment adviser.</div>
+  {% elif "/australia/" in page.url %}
+  <div class="data-source" style="margin-top:1.5rem;padding:0.75rem 1rem;background:var(--bg-2,#fbf2e6);border:1px solid var(--line,#e8dec9);border-radius:8px;font-size:0.8125rem;color:var(--ink-3,#6b6258);line-height:1.5"><strong>Data sources:</strong> Tax rates and thresholds sourced from the <a href="https://www.ato.gov.au" rel="noopener noreferrer" target="_blank">Australian Taxation Office (ATO)</a> and <a href="https://moneysmart.gov.au" rel="noopener noreferrer" target="_blank">ASIC MoneySmart</a>. Updated for FY 2025-26. For personalised advice, consult a licensed financial adviser (AFS licence).</div>
+  {% endif %}
+
   {% include "components/footer.njk" %}
   <script src="/assets/js/geo.js" defer></script>
   <script src="/assets/js/search.js" defer></script>
