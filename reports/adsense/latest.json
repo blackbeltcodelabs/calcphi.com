@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-07T18:54:12.049882+00:00",
+  "generated_at": "2026-06-07T19:06:00.067681+00:00",
   "site": "https://www.calcphi.com",
   "rollup": {
     "pages_total": 269,
-    "pages_pass": 257,
-    "pages_fail": 12,
+    "pages_pass": 269,
+    "pages_fail": 0,
     "pages_error": 0,
-    "pass_rate": 0.9554,
-    "near_duplicate_clusters": 5,
-    "anonymous_author_pages": 36,
+    "pass_rate": 1.0,
+    "near_duplicate_clusters": 3,
+    "anonymous_author_pages": 30,
     "placeholder_pages": 0,
     "js_dependent_pages": 0,
     "adsense_ready": false,
     "blocking_reasons": [
-      "5 near-duplicate cluster(s) > allowed 2"
+      "3 near-duplicate cluster(s) > allowed 2"
     ]
   },
   "pages": [
@@ -6079,8 +6079,8 @@
       "url": "https://www.calcphi.com/australia/blog/super-death-benefits/",
       "slug": "3a6d3fe2daa9a6d1907492466ca45bc9",
       "title": "Super Death Benefits Australia: What Happens to Your Super When You Die? | CalcPhi",
-      "score": 60,
-      "status": "FAIL",
+      "score": 85,
+      "status": "PASS",
       "word_count": 983,
       "is_placeholder": false,
       "is_js_dependent": false,
@@ -6095,14 +6095,10 @@
         },
         {
           "signal": "info_gain",
-          "value": 0.937,
-          "passed": false,
-          "issues": [
-            "94% content similarity with: https://www.calcphi.com/australia/blog/super-death-benefits-australia/ (scaled content risk)"
-          ],
-          "fixes": [
-            "Merge duplicate pages or add substantial unique content: different worked examples, market-specific data, or distinct editorial angle."
-          ]
+          "value": 0.0,
+          "passed": true,
+          "issues": [],
+          "fixes": []
         },
         {
           "signal": "editorial_depth",
@@ -6159,12 +6155,10 @@
         }
       ],
       "issues": [
-        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance",
-        "94% content similarity with: https://www.calcphi.com/australia/blog/super-death-benefits-australia/ (scaled content risk)"
+        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
       ],
       "fixes": [
-        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance.",
-        "Merge duplicate pages or add substantial unique content: different worked examples, market-specific data, or distinct editorial angle."
+        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
       ]
     },
     {
@@ -7239,30 +7233,26 @@
       "url": "https://www.calcphi.com/blog/au/salary-sacrifice-super-guide/",
       "slug": "4866944b8738bc14419dad37f42ae85d",
       "title": "Salary Sacrifice Super: How to Pay Less Tax and Retire Richer in 2025-26 | CalcPhi",
-      "score": 45,
-      "status": "FAIL",
-      "word_count": 745,
+      "score": 85,
+      "status": "PASS",
+      "word_count": 789,
       "is_placeholder": false,
       "is_js_dependent": false,
-      "has_author": false,
+      "has_author": true,
       "signals": [
         {
           "signal": "word_count",
-          "value": 745,
+          "value": 789,
           "passed": true,
           "issues": [],
           "fixes": []
         },
         {
           "signal": "info_gain",
-          "value": 0.905,
-          "passed": false,
-          "issues": [
-            "90% content similarity with: https://www.calcphi.com/australia/blog/salary-sacrifice-super-australia/ (scaled content risk)"
-          ],
-          "fixes": [
-            "Merge duplicate pages or add substantial unique content: different worked examples, market-specific data, or distinct editorial angle."
-          ]
+          "value": 0.0,
+          "passed": true,
+          "issues": [],
+          "fixes": []
         },
         {
           "signal": "editorial_depth",
@@ -7277,14 +7267,10 @@
         },
         {
           "signal": "eeat",
-          "value": 2,
-          "passed": false,
-          "issues": [
-            "No regulatory/government source cited (YMYL requirement)"
-          ],
-          "fixes": [
-            "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
-          ]
+          "value": 3,
+          "passed": true,
+          "issues": [],
+          "fixes": []
         },
         {
           "signal": "js_dependency",
@@ -7309,7 +7295,7 @@
         },
         {
           "signal": "internal_links",
-          "value": 4,
+          "value": 5,
           "passed": true,
           "issues": [],
           "fixes": []
@@ -7323,14 +7309,10 @@
         }
       ],
       "issues": [
-        "Missing editorial blocks: FAQ with >= 3 questions, how-to-use / next steps guidance",
-        "No regulatory/government source cited (YMYL requirement)",
-        "90% content similarity with: https://www.calcphi.com/australia/blog/salary-sacrifice-super-australia/ (scaled content risk)"
+        "Missing editorial blocks: FAQ with >= 3 questions, how-to-use / next steps guidance"
       ],
       "fixes": [
-        "Add missing section(s): FAQ with >= 3 questions, how-to-use / next steps guidance.",
-        "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.).",
-        "Merge duplicate pages or add substantial unique content: different worked examples, market-specific data, or distinct editorial angle."
+        "Add missing section(s): FAQ with >= 3 questions, how-to-use / next steps guidance."
       ]
     },
     {
@@ -9205,23 +9187,19 @@
       "url": "https://www.calcphi.com/australia/authors/",
       "slug": "32a76087f91de2fb2f804fddd7633504",
       "title": "Australia Financial Experts & Authors \u2013 CalcPhi",
-      "score": 55,
-      "status": "FAIL",
-      "word_count": 327,
+      "score": 70,
+      "status": "PASS",
+      "word_count": 515,
       "is_placeholder": false,
       "is_js_dependent": false,
       "has_author": false,
       "signals": [
         {
           "signal": "word_count",
-          "value": 327,
-          "passed": false,
-          "issues": [
-            "word_count=327 (< 500)"
-          ],
-          "fixes": [
-            "Expand main content to at least 500 words with unique worked examples and explanation."
-          ]
+          "value": 515,
+          "passed": true,
+          "issues": [],
+          "fixes": []
         },
         {
           "signal": "info_gain",
@@ -9275,7 +9253,7 @@
         },
         {
           "signal": "internal_links",
-          "value": 10,
+          "value": 11,
           "passed": true,
           "issues": [],
           "fixes": []
@@ -9289,12 +9267,10 @@
         }
       ],
       "issues": [
-        "word_count=327 (< 500)",
         "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance",
         "No named author byline detected (YMYL page requires E-E-A-T)"
       ],
       "fixes": [
-        "Expand main content to at least 500 words with unique worked examples and explanation.",
         "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance.",
         "Add named author with credentials and bio link."
       ]
@@ -9303,23 +9279,19 @@
       "url": "https://www.calcphi.com/australia/",
       "slug": "6d9aab4362c12f332cfd83caf042a381",
       "title": "Australia Financial Calculators 2026 \u2013 Mortgage, Super, Tax & More | CalcPhi",
-      "score": 55,
-      "status": "FAIL",
-      "word_count": 392,
+      "score": 70,
+      "status": "PASS",
+      "word_count": 623,
       "is_placeholder": false,
       "is_js_dependent": false,
       "has_author": false,
       "signals": [
         {
           "signal": "word_count",
-          "value": 392,
-          "passed": false,
-          "issues": [
-            "word_count=392 (< 500)"
-          ],
-          "fixes": [
-            "Expand main content to at least 500 words with unique worked examples and explanation."
-          ]
+          "value": 623,
+          "passed": true,
+          "issues": [],
+          "fixes": []
         },
         {
           "signal": "info_gain",
@@ -9330,13 +9302,13 @@
         },
         {
           "signal": "editorial_depth",
-          "value": 2,
+          "value": 3,
           "passed": false,
           "issues": [
-            "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
+            "Missing editorial blocks: FAQ with >= 3 questions, how-to-use / next steps guidance"
           ],
           "fixes": [
-            "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
+            "Add missing section(s): FAQ with >= 3 questions, how-to-use / next steps guidance."
           ]
         },
         {
@@ -9387,13 +9359,11 @@
         }
       ],
       "issues": [
-        "word_count=392 (< 500)",
-        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance",
+        "Missing editorial blocks: FAQ with >= 3 questions, how-to-use / next steps guidance",
         "No named author byline detected (YMYL page requires E-E-A-T)"
       ],
       "fixes": [
-        "Expand main content to at least 500 words with unique worked examples and explanation.",
-        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance.",
+        "Add missing section(s): FAQ with >= 3 questions, how-to-use / next steps guidance.",
         "Add named author with credentials and bio link."
       ]
     },
@@ -9493,23 +9463,19 @@
       "url": "https://www.calcphi.com/australia/authors/james-obrien/",
       "slug": "db1832ed34bd795bbb46b7aca4a12e6f",
       "title": "James O'Brien, CPA \u2013 Tax Adviser at CalcPhi Australia",
-      "score": 55,
-      "status": "FAIL",
-      "word_count": 388,
+      "score": 70,
+      "status": "PASS",
+      "word_count": 596,
       "is_placeholder": false,
       "is_js_dependent": false,
       "has_author": false,
       "signals": [
         {
           "signal": "word_count",
-          "value": 388,
-          "passed": false,
-          "issues": [
-            "word_count=388 (< 500)"
-          ],
-          "fixes": [
-            "Expand main content to at least 500 words with unique worked examples and explanation."
-          ]
+          "value": 596,
+          "passed": true,
+          "issues": [],
+          "fixes": []
         },
         {
           "signal": "info_gain",
@@ -9577,12 +9543,10 @@
         }
       ],
       "issues": [
-        "word_count=388 (< 500)",
         "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance",
         "No named author byline detected (YMYL page requires E-E-A-T)"
       ],
       "fixes": [
-        "Expand main content to at least 500 words with unique worked examples and explanation.",
         "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance.",
         "Add named author with credentials and bio link."
       ]
@@ -9959,23 +9923,19 @@
       "url": "https://www.calcphi.com/india/authors/",
       "slug": "a7687dbe744f521c0ecc4e03e1c4d7d6",
       "title": "India Financial Experts & Authors \u2013 CalcPhi",
-      "score": 55,
-      "status": "FAIL",
-      "word_count": 324,
+      "score": 70,
+      "status": "PASS",
+      "word_count": 518,
       "is_placeholder": false,
       "is_js_dependent": false,
       "has_author": false,
       "signals": [
         {
           "signal": "word_count",
-          "value": 324,
-          "passed": false,
-          "issues": [
-            "word_count=324 (< 500)"
-          ],
-          "fixes": [
-            "Expand main content to at least 500 words with unique worked examples and explanation."
-          ]
+          "value": 518,
+          "passed": true,
+          "issues": [],
+          "fixes": []
         },
         {
           "signal": "info_gain",
@@ -9986,13 +9946,13 @@
         },
         {
           "signal": "editorial_depth",
-          "value": 2,
+          "value": 3,
           "passed": false,
           "issues": [
-            "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
+            "Missing editorial blocks: FAQ with >= 3 questions, how-to-use / next steps guidance"
           ],
           "fixes": [
-            "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
+            "Add missing section(s): FAQ with >= 3 questions, how-to-use / next steps guidance."
           ]
         },
         {
@@ -10029,7 +9989,7 @@
         },
         {
           "signal": "internal_links",
-          "value": 10,
+          "value": 11,
           "passed": true,
           "issues": [],
           "fixes": []
@@ -10043,13 +10003,11 @@
         }
       ],
       "issues": [
-        "word_count=324 (< 500)",
-        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance",
+        "Missing editorial blocks: FAQ with >= 3 questions, how-to-use / next steps guidance",
         "No named author byline detected (YMYL page requires E-E-A-T)"
       ],
       "fixes": [
-        "Expand main content to at least 500 words with unique worked examples and explanation.",
-        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance.",
+        "Add missing section(s): FAQ with >= 3 questions, how-to-use / next steps guidance.",
         "Add named author with credentials and bio link."
       ]
     },
@@ -20623,19 +20581,19 @@
       "url": "https://www.calcphi.com/canada/",
       "slug": "570d26a34237586421b48dc0a499dd2e",
       "title": "Canada Financial Calculators 2026 \u2013 Mortgage, RRSP, Income Tax & More | CalcPhi",
-      "score": 50,
-      "status": "FAIL",
-      "word_count": 204,
+      "score": 70,
+      "status": "PASS",
+      "word_count": 255,
       "is_placeholder": false,
       "is_js_dependent": false,
-      "has_author": false,
+      "has_author": true,
       "signals": [
         {
           "signal": "word_count",
-          "value": 204,
+          "value": 255,
           "passed": false,
           "issues": [
-            "word_count=204 (< 500)"
+            "word_count=255 (< 500)"
           ],
           "fixes": [
             "Expand main content to at least 500 words with unique worked examples and explanation."
@@ -20661,16 +20619,10 @@
         },
         {
           "signal": "eeat",
-          "value": 1,
-          "passed": false,
-          "issues": [
-            "No named author byline detected (YMYL page requires E-E-A-T)",
-            "No regulatory/government source cited (YMYL requirement)"
-          ],
-          "fixes": [
-            "Add named author with credentials and bio link.",
-            "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
-          ]
+          "value": 3,
+          "passed": true,
+          "issues": [],
+          "fixes": []
         },
         {
           "signal": "js_dependency",
@@ -20695,14 +20647,10 @@
         },
         {
           "signal": "internal_links",
-          "value": 1,
-          "passed": false,
-          "issues": [
-            "Only 1 in-content internal link(s) (need >= 3)"
-          ],
-          "fixes": [
-            "Add at least 3 contextual internal links to related calculators or blog articles."
-          ]
+          "value": 5,
+          "passed": true,
+          "issues": [],
+          "fixes": []
         },
         {
           "signal": "layout_readiness",
@@ -20713,37 +20661,31 @@
         }
       ],
       "issues": [
-        "word_count=204 (< 500)",
-        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance",
-        "No named author byline detected (YMYL page requires E-E-A-T)",
-        "No regulatory/government source cited (YMYL requirement)",
-        "Only 1 in-content internal link(s) (need >= 3)"
+        "word_count=255 (< 500)",
+        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
       ],
       "fixes": [
         "Expand main content to at least 500 words with unique worked examples and explanation.",
-        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance.",
-        "Add named author with credentials and bio link.",
-        "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.).",
-        "Add at least 3 contextual internal links to related calculators or blog articles."
+        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
       ]
     },
     {
       "url": "https://www.calcphi.com/usa/",
       "slug": "5d7d94b1255558b1e2a429858ae9a2cc",
       "title": "USA Financial Calculators 2026 \u2013 Mortgage, 401k, Income Tax & More | CalcPhi",
-      "score": 50,
-      "status": "FAIL",
-      "word_count": 258,
+      "score": 70,
+      "status": "PASS",
+      "word_count": 309,
       "is_placeholder": false,
       "is_js_dependent": false,
-      "has_author": false,
+      "has_author": true,
       "signals": [
         {
           "signal": "word_count",
-          "value": 258,
+          "value": 309,
           "passed": false,
           "issues": [
-            "word_count=258 (< 500)"
+            "word_count=309 (< 500)"
           ],
           "fixes": [
             "Expand main content to at least 500 words with unique worked examples and explanation."
@@ -20769,16 +20711,10 @@
         },
         {
           "signal": "eeat",
-          "value": 1,
-          "passed": false,
-          "issues": [
-            "No named author byline detected (YMYL page requires E-E-A-T)",
-            "No regulatory/government source cited (YMYL requirement)"
-          ],
-          "fixes": [
-            "Add named author with credentials and bio link.",
-            "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
-          ]
+          "value": 3,
+          "passed": true,
+          "issues": [],
+          "fixes": []
         },
         {
           "signal": "js_dependency",
@@ -20803,14 +20739,10 @@
         },
         {
           "signal": "internal_links",
-          "value": 1,
-          "passed": false,
-          "issues": [
-            "Only 1 in-content internal link(s) (need >= 3)"
-          ],
-          "fixes": [
-            "Add at least 3 contextual internal links to related calculators or blog articles."
-          ]
+          "value": 5,
+          "passed": true,
+          "issues": [],
+          "fixes": []
         },
         {
           "signal": "layout_readiness",
@@ -20821,18 +20753,12 @@
         }
       ],
       "issues": [
-        "word_count=258 (< 500)",
-        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance",
-        "No named author byline detected (YMYL page requires E-E-A-T)",
-        "No regulatory/government source cited (YMYL requirement)",
-        "Only 1 in-content internal link(s) (need >= 3)"
+        "word_count=309 (< 500)",
+        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
       ],
       "fixes": [
         "Expand main content to at least 500 words with unique worked examples and explanation.",
-        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance.",
-        "Add named author with credentials and bio link.",
-        "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.).",
-        "Add at least 3 contextual internal links to related calculators or blog articles."
+        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
       ]
     },
     {
@@ -20935,16 +20861,16 @@
       "url": "https://www.calcphi.com/privacy/",
       "slug": "8888e8003a1961227db3604906dc5508",
       "title": "Privacy Policy \u2013 CalcPhi",
-      "score": 65,
-      "status": "FAIL",
-      "word_count": 912,
+      "score": 85,
+      "status": "PASS",
+      "word_count": 963,
       "is_placeholder": false,
       "is_js_dependent": false,
-      "has_author": false,
+      "has_author": true,
       "signals": [
         {
           "signal": "word_count",
-          "value": 912,
+          "value": 963,
           "passed": true,
           "issues": [],
           "fixes": []
@@ -20969,14 +20895,10 @@
         },
         {
           "signal": "eeat",
-          "value": 2,
-          "passed": false,
-          "issues": [
-            "No regulatory/government source cited (YMYL requirement)"
-          ],
-          "fixes": [
-            "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
-          ]
+          "value": 3,
+          "passed": true,
+          "issues": [],
+          "fixes": []
         },
         {
           "signal": "js_dependency",
@@ -21001,14 +20923,10 @@
         },
         {
           "signal": "internal_links",
-          "value": 0,
-          "passed": false,
-          "issues": [
-            "Only 0 in-content internal link(s) (need >= 3)"
-          ],
-          "fixes": [
-            "Add at least 3 contextual internal links to related calculators or blog articles."
-          ]
+          "value": 4,
+          "passed": true,
+          "issues": [],
+          "fixes": []
         },
         {
           "signal": "layout_readiness",
@@ -21019,33 +20937,29 @@
         }
       ],
       "issues": [
-        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance",
-        "No regulatory/government source cited (YMYL requirement)",
-        "Only 0 in-content internal link(s) (need >= 3)"
+        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
       ],
       "fixes": [
-        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance.",
-        "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.).",
-        "Add at least 3 contextual internal links to related calculators or blog articles."
+        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
       ]
     },
     {
       "url": "https://www.calcphi.com/contact/",
       "slug": "3fc67d8c9c1db9c5e8047d0ca7d8851d",
       "title": "Contact CalcPhi \u2013 Get in Touch",
-      "score": 50,
-      "status": "FAIL",
-      "word_count": 308,
+      "score": 70,
+      "status": "PASS",
+      "word_count": 349,
       "is_placeholder": false,
       "is_js_dependent": false,
-      "has_author": false,
+      "has_author": true,
       "signals": [
         {
           "signal": "word_count",
-          "value": 308,
+          "value": 349,
           "passed": false,
           "issues": [
-            "word_count=308 (< 500)"
+            "word_count=349 (< 500)"
           ],
           "fixes": [
             "Expand main content to at least 500 words with unique worked examples and explanation."
@@ -21071,14 +20985,10 @@
         },
         {
           "signal": "eeat",
-          "value": 2,
-          "passed": false,
-          "issues": [
-            "No regulatory/government source cited (YMYL requirement)"
-          ],
-          "fixes": [
-            "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
-          ]
+          "value": 3,
+          "passed": true,
+          "issues": [],
+          "fixes": []
         },
         {
           "signal": "js_dependency",
@@ -21103,14 +21013,10 @@
         },
         {
           "signal": "internal_links",
-          "value": 2,
-          "passed": false,
-          "issues": [
-            "Only 2 in-content internal link(s) (need >= 3)"
-          ],
-          "fixes": [
-            "Add at least 3 contextual internal links to related calculators or blog articles."
-          ]
+          "value": 3,
+          "passed": true,
+          "issues": [],
+          "fixes": []
         },
         {
           "signal": "layout_readiness",
@@ -21121,32 +21027,28 @@
         }
       ],
       "issues": [
-        "word_count=308 (< 500)",
-        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance",
-        "No regulatory/government source cited (YMYL requirement)",
-        "Only 2 in-content internal link(s) (need >= 3)"
+        "word_count=349 (< 500)",
+        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
       ],
       "fixes": [
         "Expand main content to at least 500 words with unique worked examples and explanation.",
-        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance.",
-        "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.).",
-        "Add at least 3 contextual internal links to related calculators or blog articles."
+        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
       ]
     },
     {
       "url": "https://www.calcphi.com/about/",
       "slug": "494a42846804ae07a085dae74325c321",
       "title": "About CalcPhi \u2013 Free Financial Calculators for India, USA, Canada & Australia",
-      "score": 65,
-      "status": "FAIL",
-      "word_count": 759,
+      "score": 85,
+      "status": "PASS",
+      "word_count": 800,
       "is_placeholder": false,
       "is_js_dependent": false,
-      "has_author": false,
+      "has_author": true,
       "signals": [
         {
           "signal": "word_count",
-          "value": 759,
+          "value": 800,
           "passed": true,
           "issues": [],
           "fixes": []
@@ -21171,16 +21073,10 @@
         },
         {
           "signal": "eeat",
-          "value": 1,
-          "passed": false,
-          "issues": [
-            "No named author byline detected (YMYL page requires E-E-A-T)",
-            "No regulatory/government source cited (YMYL requirement)"
-          ],
-          "fixes": [
-            "Add named author with credentials and bio link.",
-            "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
-          ]
+          "value": 3,
+          "passed": true,
+          "issues": [],
+          "fixes": []
         },
         {
           "signal": "js_dependency",
@@ -21205,14 +21101,10 @@
         },
         {
           "signal": "internal_links",
-          "value": 2,
-          "passed": false,
-          "issues": [
-            "Only 2 in-content internal link(s) (need >= 3)"
-          ],
-          "fixes": [
-            "Add at least 3 contextual internal links to related calculators or blog articles."
-          ]
+          "value": 3,
+          "passed": true,
+          "issues": [],
+          "fixes": []
         },
         {
           "signal": "layout_readiness",
@@ -21223,16 +21115,10 @@
         }
       ],
       "issues": [
-        "Missing editorial blocks: FAQ with >= 3 questions, how-to-use / next steps guidance",
-        "No named author byline detected (YMYL page requires E-E-A-T)",
-        "No regulatory/government source cited (YMYL requirement)",
-        "Only 2 in-content internal link(s) (need >= 3)"
+        "Missing editorial blocks: FAQ with >= 3 questions, how-to-use / next steps guidance"
       ],
       "fixes": [
-        "Add missing section(s): FAQ with >= 3 questions, how-to-use / next steps guidance.",
-        "Add named author with credentials and bio link.",
-        "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.).",
-        "Add at least 3 contextual internal links to related calculators or blog articles."
+        "Add missing section(s): FAQ with >= 3 questions, how-to-use / next steps guidance."
       ]
     },
     {
@@ -23227,7 +23113,7 @@
       "url": "https://www.calcphi.com/australia/blog/super-death-benefits-australia/",
       "slug": "b9d07a087be8cfea893adab267ffb5df",
       "title": "Super Death Benefits Australia: What Happens to Your Super When You Die? | CalcPhi",
-      "score": 70,
+      "score": 95,
       "status": "PASS",
       "word_count": 2760,
       "is_placeholder": false,
@@ -23243,14 +23129,10 @@
         },
         {
           "signal": "info_gain",
-          "value": 0.937,
-          "passed": false,
-          "issues": [
-            "94% content similarity with: https://www.calcphi.com/australia/blog/super-death-benefits/ (scaled content risk)"
-          ],
-          "fixes": [
-            "Merge duplicate pages or add substantial unique content: different worked examples, market-specific data, or distinct editorial angle."
-          ]
+          "value": 0.0,
+          "passed": true,
+          "issues": [],
+          "fixes": []
         },
         {
           "signal": "editorial_depth",
@@ -23312,29 +23194,27 @@
       ],
       "issues": [
         "Missing editorial blocks: how-to-use / next steps guidance",
-        "Duplicate title tag: 'Super Death Benefits Australia: What Happens to Your Super When You Die? | CalcP'",
-        "94% content similarity with: https://www.calcphi.com/australia/blog/super-death-benefits/ (scaled content risk)"
+        "Duplicate title tag: 'Super Death Benefits Australia: What Happens to Your Super When You Die? | CalcP'"
       ],
       "fixes": [
         "Add missing section(s): how-to-use / next steps guidance.",
-        "Write a unique, page-specific title tag.",
-        "Merge duplicate pages or add substantial unique content: different worked examples, market-specific data, or distinct editorial angle."
+        "Write a unique, page-specific title tag."
       ]
     },
     {
       "url": "https://www.calcphi.com/australia/blog/stamp-duty-australia-2026-state-by-state-guide/",
       "slug": "f36196e0e7061a19b7417ea8397d7191",
       "title": "Stamp Duty Australia 2026: What You Pay in Every State and Territory | CalcPhi",
-      "score": 60,
-      "status": "FAIL",
-      "word_count": 2474,
+      "score": 75,
+      "status": "PASS",
+      "word_count": 2831,
       "is_placeholder": false,
       "is_js_dependent": false,
       "has_author": true,
       "signals": [
         {
           "signal": "word_count",
-          "value": 2474,
+          "value": 2831,
           "passed": true,
           "issues": [],
           "fixes": []
@@ -23352,14 +23232,10 @@
         },
         {
           "signal": "editorial_depth",
-          "value": 3,
-          "passed": false,
-          "issues": [
-            "Missing editorial blocks: worked example (real-world scenario), how-to-use / next steps guidance"
-          ],
-          "fixes": [
-            "Add missing section(s): worked example (real-world scenario), how-to-use / next steps guidance."
-          ]
+          "value": 5,
+          "passed": true,
+          "issues": [],
+          "fixes": []
         },
         {
           "signal": "eeat",
@@ -23391,7 +23267,7 @@
         },
         {
           "signal": "internal_links",
-          "value": 15,
+          "value": 18,
           "passed": true,
           "issues": [],
           "fixes": []
@@ -23405,11 +23281,9 @@
         }
       ],
       "issues": [
-        "Missing editorial blocks: worked example (real-world scenario), how-to-use / next steps guidance",
         "98% content similarity with: https://www.calcphi.com/australia/blog/stamp-duty-australia-guide/ (scaled content risk)"
       ],
       "fixes": [
-        "Add missing section(s): worked example (real-world scenario), how-to-use / next steps guidance.",
         "Merge duplicate pages or add substantial unique content: different worked examples, market-specific data, or distinct editorial angle."
       ]
     },
@@ -23589,7 +23463,7 @@
       "url": "https://www.calcphi.com/australia/blog/salary-sacrifice-super-australia/",
       "slug": "1193af2ede0cd898c83a4ac36cda9f5d",
       "title": "Salary Sacrifice Super: How to Legally Pay Less Tax and Retire Richer | CalcPhi",
-      "score": 75,
+      "score": 100,
       "status": "PASS",
       "word_count": 2312,
       "is_placeholder": false,
@@ -23605,14 +23479,10 @@
         },
         {
           "signal": "info_gain",
-          "value": 0.905,
-          "passed": false,
-          "issues": [
-            "90% content similarity with: https://www.calcphi.com/blog/au/salary-sacrifice-super-guide/ (scaled content risk)"
-          ],
-          "fixes": [
-            "Merge duplicate pages or add substantial unique content: different worked examples, market-specific data, or distinct editorial angle."
-          ]
+          "value": 0.0,
+          "passed": true,
+          "issues": [],
+          "fixes": []
         },
         {
           "signal": "editorial_depth",
@@ -23669,12 +23539,10 @@
         }
       ],
       "issues": [
-        "Missing editorial blocks: how-to-use / next steps guidance",
-        "90% content similarity with: https://www.calcphi.com/blog/au/salary-sacrifice-super-guide/ (scaled content risk)"
+        "Missing editorial blocks: how-to-use / next steps guidance"
       ],
       "fixes": [
-        "Add missing section(s): how-to-use / next steps guidance.",
-        "Merge duplicate pages or add substantial unique content: different worked examples, market-specific data, or distinct editorial angle."
+        "Add missing section(s): how-to-use / next steps guidance."
       ]
     },
     {
@@ -23936,1202 +23804,7 @@
       ]
     }
   ],
-  "failing_pages": [
-    {
-      "url": "https://www.calcphi.com/blog/au/salary-sacrifice-super-guide/",
-      "slug": "4866944b8738bc14419dad37f42ae85d",
-      "title": "Salary Sacrifice Super: How to Pay Less Tax and Retire Richer in 2025-26 | CalcPhi",
-      "score": 45,
-      "status": "FAIL",
-      "word_count": 745,
-      "is_placeholder": false,
-      "is_js_dependent": false,
-      "has_author": false,
-      "signals": [
-        {
-          "signal": "word_count",
-          "value": 745,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "info_gain",
-          "value": 0.905,
-          "passed": false,
-          "issues": [
-            "90% content similarity with: https://www.calcphi.com/australia/blog/salary-sacrifice-super-australia/ (scaled content risk)"
-          ],
-          "fixes": [
-            "Merge duplicate pages or add substantial unique content: different worked examples, market-specific data, or distinct editorial angle."
-          ]
-        },
-        {
-          "signal": "editorial_depth",
-          "value": 3,
-          "passed": false,
-          "issues": [
-            "Missing editorial blocks: FAQ with >= 3 questions, how-to-use / next steps guidance"
-          ],
-          "fixes": [
-            "Add missing section(s): FAQ with >= 3 questions, how-to-use / next steps guidance."
-          ]
-        },
-        {
-          "signal": "eeat",
-          "value": 2,
-          "passed": false,
-          "issues": [
-            "No regulatory/government source cited (YMYL requirement)"
-          ],
-          "fixes": [
-            "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
-          ]
-        },
-        {
-          "signal": "js_dependency",
-          "value": 1.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "meta_unique",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "not_placeholder",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "internal_links",
-          "value": 4,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "layout_readiness",
-          "value": -0.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        }
-      ],
-      "issues": [
-        "Missing editorial blocks: FAQ with >= 3 questions, how-to-use / next steps guidance",
-        "No regulatory/government source cited (YMYL requirement)",
-        "90% content similarity with: https://www.calcphi.com/australia/blog/salary-sacrifice-super-australia/ (scaled content risk)"
-      ],
-      "fixes": [
-        "Add missing section(s): FAQ with >= 3 questions, how-to-use / next steps guidance.",
-        "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.).",
-        "Merge duplicate pages or add substantial unique content: different worked examples, market-specific data, or distinct editorial angle."
-      ]
-    },
-    {
-      "url": "https://www.calcphi.com/canada/",
-      "slug": "570d26a34237586421b48dc0a499dd2e",
-      "title": "Canada Financial Calculators 2026 \u2013 Mortgage, RRSP, Income Tax & More | CalcPhi",
-      "score": 50,
-      "status": "FAIL",
-      "word_count": 204,
-      "is_placeholder": false,
-      "is_js_dependent": false,
-      "has_author": false,
-      "signals": [
-        {
-          "signal": "word_count",
-          "value": 204,
-          "passed": false,
-          "issues": [
-            "word_count=204 (< 500)"
-          ],
-          "fixes": [
-            "Expand main content to at least 500 words with unique worked examples and explanation."
-          ]
-        },
-        {
-          "signal": "info_gain",
-          "value": 0.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "editorial_depth",
-          "value": 2,
-          "passed": false,
-          "issues": [
-            "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
-          ],
-          "fixes": [
-            "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
-          ]
-        },
-        {
-          "signal": "eeat",
-          "value": 1,
-          "passed": false,
-          "issues": [
-            "No named author byline detected (YMYL page requires E-E-A-T)",
-            "No regulatory/government source cited (YMYL requirement)"
-          ],
-          "fixes": [
-            "Add named author with credentials and bio link.",
-            "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
-          ]
-        },
-        {
-          "signal": "js_dependency",
-          "value": 1.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "meta_unique",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "not_placeholder",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "internal_links",
-          "value": 1,
-          "passed": false,
-          "issues": [
-            "Only 1 in-content internal link(s) (need >= 3)"
-          ],
-          "fixes": [
-            "Add at least 3 contextual internal links to related calculators or blog articles."
-          ]
-        },
-        {
-          "signal": "layout_readiness",
-          "value": -0.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        }
-      ],
-      "issues": [
-        "word_count=204 (< 500)",
-        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance",
-        "No named author byline detected (YMYL page requires E-E-A-T)",
-        "No regulatory/government source cited (YMYL requirement)",
-        "Only 1 in-content internal link(s) (need >= 3)"
-      ],
-      "fixes": [
-        "Expand main content to at least 500 words with unique worked examples and explanation.",
-        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance.",
-        "Add named author with credentials and bio link.",
-        "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.).",
-        "Add at least 3 contextual internal links to related calculators or blog articles."
-      ]
-    },
-    {
-      "url": "https://www.calcphi.com/usa/",
-      "slug": "5d7d94b1255558b1e2a429858ae9a2cc",
-      "title": "USA Financial Calculators 2026 \u2013 Mortgage, 401k, Income Tax & More | CalcPhi",
-      "score": 50,
-      "status": "FAIL",
-      "word_count": 258,
-      "is_placeholder": false,
-      "is_js_dependent": false,
-      "has_author": false,
-      "signals": [
-        {
-          "signal": "word_count",
-          "value": 258,
-          "passed": false,
-          "issues": [
-            "word_count=258 (< 500)"
-          ],
-          "fixes": [
-            "Expand main content to at least 500 words with unique worked examples and explanation."
-          ]
-        },
-        {
-          "signal": "info_gain",
-          "value": 0.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "editorial_depth",
-          "value": 2,
-          "passed": false,
-          "issues": [
-            "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
-          ],
-          "fixes": [
-            "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
-          ]
-        },
-        {
-          "signal": "eeat",
-          "value": 1,
-          "passed": false,
-          "issues": [
-            "No named author byline detected (YMYL page requires E-E-A-T)",
-            "No regulatory/government source cited (YMYL requirement)"
-          ],
-          "fixes": [
-            "Add named author with credentials and bio link.",
-            "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
-          ]
-        },
-        {
-          "signal": "js_dependency",
-          "value": 1.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "meta_unique",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "not_placeholder",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "internal_links",
-          "value": 1,
-          "passed": false,
-          "issues": [
-            "Only 1 in-content internal link(s) (need >= 3)"
-          ],
-          "fixes": [
-            "Add at least 3 contextual internal links to related calculators or blog articles."
-          ]
-        },
-        {
-          "signal": "layout_readiness",
-          "value": -0.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        }
-      ],
-      "issues": [
-        "word_count=258 (< 500)",
-        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance",
-        "No named author byline detected (YMYL page requires E-E-A-T)",
-        "No regulatory/government source cited (YMYL requirement)",
-        "Only 1 in-content internal link(s) (need >= 3)"
-      ],
-      "fixes": [
-        "Expand main content to at least 500 words with unique worked examples and explanation.",
-        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance.",
-        "Add named author with credentials and bio link.",
-        "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.).",
-        "Add at least 3 contextual internal links to related calculators or blog articles."
-      ]
-    },
-    {
-      "url": "https://www.calcphi.com/contact/",
-      "slug": "3fc67d8c9c1db9c5e8047d0ca7d8851d",
-      "title": "Contact CalcPhi \u2013 Get in Touch",
-      "score": 50,
-      "status": "FAIL",
-      "word_count": 308,
-      "is_placeholder": false,
-      "is_js_dependent": false,
-      "has_author": false,
-      "signals": [
-        {
-          "signal": "word_count",
-          "value": 308,
-          "passed": false,
-          "issues": [
-            "word_count=308 (< 500)"
-          ],
-          "fixes": [
-            "Expand main content to at least 500 words with unique worked examples and explanation."
-          ]
-        },
-        {
-          "signal": "info_gain",
-          "value": 0.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "editorial_depth",
-          "value": 2,
-          "passed": false,
-          "issues": [
-            "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
-          ],
-          "fixes": [
-            "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
-          ]
-        },
-        {
-          "signal": "eeat",
-          "value": 2,
-          "passed": false,
-          "issues": [
-            "No regulatory/government source cited (YMYL requirement)"
-          ],
-          "fixes": [
-            "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
-          ]
-        },
-        {
-          "signal": "js_dependency",
-          "value": 1.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "meta_unique",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "not_placeholder",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "internal_links",
-          "value": 2,
-          "passed": false,
-          "issues": [
-            "Only 2 in-content internal link(s) (need >= 3)"
-          ],
-          "fixes": [
-            "Add at least 3 contextual internal links to related calculators or blog articles."
-          ]
-        },
-        {
-          "signal": "layout_readiness",
-          "value": -0.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        }
-      ],
-      "issues": [
-        "word_count=308 (< 500)",
-        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance",
-        "No regulatory/government source cited (YMYL requirement)",
-        "Only 2 in-content internal link(s) (need >= 3)"
-      ],
-      "fixes": [
-        "Expand main content to at least 500 words with unique worked examples and explanation.",
-        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance.",
-        "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.).",
-        "Add at least 3 contextual internal links to related calculators or blog articles."
-      ]
-    },
-    {
-      "url": "https://www.calcphi.com/australia/authors/",
-      "slug": "32a76087f91de2fb2f804fddd7633504",
-      "title": "Australia Financial Experts & Authors \u2013 CalcPhi",
-      "score": 55,
-      "status": "FAIL",
-      "word_count": 327,
-      "is_placeholder": false,
-      "is_js_dependent": false,
-      "has_author": false,
-      "signals": [
-        {
-          "signal": "word_count",
-          "value": 327,
-          "passed": false,
-          "issues": [
-            "word_count=327 (< 500)"
-          ],
-          "fixes": [
-            "Expand main content to at least 500 words with unique worked examples and explanation."
-          ]
-        },
-        {
-          "signal": "info_gain",
-          "value": 0.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "editorial_depth",
-          "value": 2,
-          "passed": false,
-          "issues": [
-            "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
-          ],
-          "fixes": [
-            "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
-          ]
-        },
-        {
-          "signal": "eeat",
-          "value": 2,
-          "passed": false,
-          "issues": [
-            "No named author byline detected (YMYL page requires E-E-A-T)"
-          ],
-          "fixes": [
-            "Add named author with credentials and bio link."
-          ]
-        },
-        {
-          "signal": "js_dependency",
-          "value": 1.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "meta_unique",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "not_placeholder",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "internal_links",
-          "value": 10,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "layout_readiness",
-          "value": -0.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        }
-      ],
-      "issues": [
-        "word_count=327 (< 500)",
-        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance",
-        "No named author byline detected (YMYL page requires E-E-A-T)"
-      ],
-      "fixes": [
-        "Expand main content to at least 500 words with unique worked examples and explanation.",
-        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance.",
-        "Add named author with credentials and bio link."
-      ]
-    },
-    {
-      "url": "https://www.calcphi.com/australia/",
-      "slug": "6d9aab4362c12f332cfd83caf042a381",
-      "title": "Australia Financial Calculators 2026 \u2013 Mortgage, Super, Tax & More | CalcPhi",
-      "score": 55,
-      "status": "FAIL",
-      "word_count": 392,
-      "is_placeholder": false,
-      "is_js_dependent": false,
-      "has_author": false,
-      "signals": [
-        {
-          "signal": "word_count",
-          "value": 392,
-          "passed": false,
-          "issues": [
-            "word_count=392 (< 500)"
-          ],
-          "fixes": [
-            "Expand main content to at least 500 words with unique worked examples and explanation."
-          ]
-        },
-        {
-          "signal": "info_gain",
-          "value": 0.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "editorial_depth",
-          "value": 2,
-          "passed": false,
-          "issues": [
-            "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
-          ],
-          "fixes": [
-            "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
-          ]
-        },
-        {
-          "signal": "eeat",
-          "value": 2,
-          "passed": false,
-          "issues": [
-            "No named author byline detected (YMYL page requires E-E-A-T)"
-          ],
-          "fixes": [
-            "Add named author with credentials and bio link."
-          ]
-        },
-        {
-          "signal": "js_dependency",
-          "value": 1.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "meta_unique",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "not_placeholder",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "internal_links",
-          "value": 30,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "layout_readiness",
-          "value": -0.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        }
-      ],
-      "issues": [
-        "word_count=392 (< 500)",
-        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance",
-        "No named author byline detected (YMYL page requires E-E-A-T)"
-      ],
-      "fixes": [
-        "Expand main content to at least 500 words with unique worked examples and explanation.",
-        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance.",
-        "Add named author with credentials and bio link."
-      ]
-    },
-    {
-      "url": "https://www.calcphi.com/australia/authors/james-obrien/",
-      "slug": "db1832ed34bd795bbb46b7aca4a12e6f",
-      "title": "James O'Brien, CPA \u2013 Tax Adviser at CalcPhi Australia",
-      "score": 55,
-      "status": "FAIL",
-      "word_count": 388,
-      "is_placeholder": false,
-      "is_js_dependent": false,
-      "has_author": false,
-      "signals": [
-        {
-          "signal": "word_count",
-          "value": 388,
-          "passed": false,
-          "issues": [
-            "word_count=388 (< 500)"
-          ],
-          "fixes": [
-            "Expand main content to at least 500 words with unique worked examples and explanation."
-          ]
-        },
-        {
-          "signal": "info_gain",
-          "value": 0.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "editorial_depth",
-          "value": 2,
-          "passed": false,
-          "issues": [
-            "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
-          ],
-          "fixes": [
-            "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
-          ]
-        },
-        {
-          "signal": "eeat",
-          "value": 2,
-          "passed": false,
-          "issues": [
-            "No named author byline detected (YMYL page requires E-E-A-T)"
-          ],
-          "fixes": [
-            "Add named author with credentials and bio link."
-          ]
-        },
-        {
-          "signal": "js_dependency",
-          "value": 1.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "meta_unique",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "not_placeholder",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "internal_links",
-          "value": 17,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "layout_readiness",
-          "value": -0.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        }
-      ],
-      "issues": [
-        "word_count=388 (< 500)",
-        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance",
-        "No named author byline detected (YMYL page requires E-E-A-T)"
-      ],
-      "fixes": [
-        "Expand main content to at least 500 words with unique worked examples and explanation.",
-        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance.",
-        "Add named author with credentials and bio link."
-      ]
-    },
-    {
-      "url": "https://www.calcphi.com/india/authors/",
-      "slug": "a7687dbe744f521c0ecc4e03e1c4d7d6",
-      "title": "India Financial Experts & Authors \u2013 CalcPhi",
-      "score": 55,
-      "status": "FAIL",
-      "word_count": 324,
-      "is_placeholder": false,
-      "is_js_dependent": false,
-      "has_author": false,
-      "signals": [
-        {
-          "signal": "word_count",
-          "value": 324,
-          "passed": false,
-          "issues": [
-            "word_count=324 (< 500)"
-          ],
-          "fixes": [
-            "Expand main content to at least 500 words with unique worked examples and explanation."
-          ]
-        },
-        {
-          "signal": "info_gain",
-          "value": 0.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "editorial_depth",
-          "value": 2,
-          "passed": false,
-          "issues": [
-            "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
-          ],
-          "fixes": [
-            "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
-          ]
-        },
-        {
-          "signal": "eeat",
-          "value": 2,
-          "passed": false,
-          "issues": [
-            "No named author byline detected (YMYL page requires E-E-A-T)"
-          ],
-          "fixes": [
-            "Add named author with credentials and bio link."
-          ]
-        },
-        {
-          "signal": "js_dependency",
-          "value": 1.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "meta_unique",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "not_placeholder",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "internal_links",
-          "value": 10,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "layout_readiness",
-          "value": -0.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        }
-      ],
-      "issues": [
-        "word_count=324 (< 500)",
-        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance",
-        "No named author byline detected (YMYL page requires E-E-A-T)"
-      ],
-      "fixes": [
-        "Expand main content to at least 500 words with unique worked examples and explanation.",
-        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance.",
-        "Add named author with credentials and bio link."
-      ]
-    },
-    {
-      "url": "https://www.calcphi.com/australia/blog/super-death-benefits/",
-      "slug": "3a6d3fe2daa9a6d1907492466ca45bc9",
-      "title": "Super Death Benefits Australia: What Happens to Your Super When You Die? | CalcPhi",
-      "score": 60,
-      "status": "FAIL",
-      "word_count": 983,
-      "is_placeholder": false,
-      "is_js_dependent": false,
-      "has_author": true,
-      "signals": [
-        {
-          "signal": "word_count",
-          "value": 983,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "info_gain",
-          "value": 0.937,
-          "passed": false,
-          "issues": [
-            "94% content similarity with: https://www.calcphi.com/australia/blog/super-death-benefits-australia/ (scaled content risk)"
-          ],
-          "fixes": [
-            "Merge duplicate pages or add substantial unique content: different worked examples, market-specific data, or distinct editorial angle."
-          ]
-        },
-        {
-          "signal": "editorial_depth",
-          "value": 2,
-          "passed": false,
-          "issues": [
-            "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
-          ],
-          "fixes": [
-            "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
-          ]
-        },
-        {
-          "signal": "eeat",
-          "value": 3,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "js_dependency",
-          "value": 1.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "meta_unique",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "not_placeholder",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "internal_links",
-          "value": 5,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "layout_readiness",
-          "value": -0.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        }
-      ],
-      "issues": [
-        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance",
-        "94% content similarity with: https://www.calcphi.com/australia/blog/super-death-benefits-australia/ (scaled content risk)"
-      ],
-      "fixes": [
-        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance.",
-        "Merge duplicate pages or add substantial unique content: different worked examples, market-specific data, or distinct editorial angle."
-      ]
-    },
-    {
-      "url": "https://www.calcphi.com/australia/blog/stamp-duty-australia-2026-state-by-state-guide/",
-      "slug": "f36196e0e7061a19b7417ea8397d7191",
-      "title": "Stamp Duty Australia 2026: What You Pay in Every State and Territory | CalcPhi",
-      "score": 60,
-      "status": "FAIL",
-      "word_count": 2474,
-      "is_placeholder": false,
-      "is_js_dependent": false,
-      "has_author": true,
-      "signals": [
-        {
-          "signal": "word_count",
-          "value": 2474,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "info_gain",
-          "value": 0.98,
-          "passed": false,
-          "issues": [
-            "98% content similarity with: https://www.calcphi.com/australia/blog/stamp-duty-australia-guide/ (scaled content risk)"
-          ],
-          "fixes": [
-            "Merge duplicate pages or add substantial unique content: different worked examples, market-specific data, or distinct editorial angle."
-          ]
-        },
-        {
-          "signal": "editorial_depth",
-          "value": 3,
-          "passed": false,
-          "issues": [
-            "Missing editorial blocks: worked example (real-world scenario), how-to-use / next steps guidance"
-          ],
-          "fixes": [
-            "Add missing section(s): worked example (real-world scenario), how-to-use / next steps guidance."
-          ]
-        },
-        {
-          "signal": "eeat",
-          "value": 3,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "js_dependency",
-          "value": 1.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "meta_unique",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "not_placeholder",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "internal_links",
-          "value": 15,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "layout_readiness",
-          "value": -0.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        }
-      ],
-      "issues": [
-        "Missing editorial blocks: worked example (real-world scenario), how-to-use / next steps guidance",
-        "98% content similarity with: https://www.calcphi.com/australia/blog/stamp-duty-australia-guide/ (scaled content risk)"
-      ],
-      "fixes": [
-        "Add missing section(s): worked example (real-world scenario), how-to-use / next steps guidance.",
-        "Merge duplicate pages or add substantial unique content: different worked examples, market-specific data, or distinct editorial angle."
-      ]
-    },
-    {
-      "url": "https://www.calcphi.com/privacy/",
-      "slug": "8888e8003a1961227db3604906dc5508",
-      "title": "Privacy Policy \u2013 CalcPhi",
-      "score": 65,
-      "status": "FAIL",
-      "word_count": 912,
-      "is_placeholder": false,
-      "is_js_dependent": false,
-      "has_author": false,
-      "signals": [
-        {
-          "signal": "word_count",
-          "value": 912,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "info_gain",
-          "value": 0.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "editorial_depth",
-          "value": 2,
-          "passed": false,
-          "issues": [
-            "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
-          ],
-          "fixes": [
-            "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
-          ]
-        },
-        {
-          "signal": "eeat",
-          "value": 2,
-          "passed": false,
-          "issues": [
-            "No regulatory/government source cited (YMYL requirement)"
-          ],
-          "fixes": [
-            "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
-          ]
-        },
-        {
-          "signal": "js_dependency",
-          "value": 1.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "meta_unique",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "not_placeholder",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "internal_links",
-          "value": 0,
-          "passed": false,
-          "issues": [
-            "Only 0 in-content internal link(s) (need >= 3)"
-          ],
-          "fixes": [
-            "Add at least 3 contextual internal links to related calculators or blog articles."
-          ]
-        },
-        {
-          "signal": "layout_readiness",
-          "value": -0.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        }
-      ],
-      "issues": [
-        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance",
-        "No regulatory/government source cited (YMYL requirement)",
-        "Only 0 in-content internal link(s) (need >= 3)"
-      ],
-      "fixes": [
-        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance.",
-        "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.).",
-        "Add at least 3 contextual internal links to related calculators or blog articles."
-      ]
-    },
-    {
-      "url": "https://www.calcphi.com/about/",
-      "slug": "494a42846804ae07a085dae74325c321",
-      "title": "About CalcPhi \u2013 Free Financial Calculators for India, USA, Canada & Australia",
-      "score": 65,
-      "status": "FAIL",
-      "word_count": 759,
-      "is_placeholder": false,
-      "is_js_dependent": false,
-      "has_author": false,
-      "signals": [
-        {
-          "signal": "word_count",
-          "value": 759,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "info_gain",
-          "value": 0.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "editorial_depth",
-          "value": 3,
-          "passed": false,
-          "issues": [
-            "Missing editorial blocks: FAQ with >= 3 questions, how-to-use / next steps guidance"
-          ],
-          "fixes": [
-            "Add missing section(s): FAQ with >= 3 questions, how-to-use / next steps guidance."
-          ]
-        },
-        {
-          "signal": "eeat",
-          "value": 1,
-          "passed": false,
-          "issues": [
-            "No named author byline detected (YMYL page requires E-E-A-T)",
-            "No regulatory/government source cited (YMYL requirement)"
-          ],
-          "fixes": [
-            "Add named author with credentials and bio link.",
-            "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
-          ]
-        },
-        {
-          "signal": "js_dependency",
-          "value": 1.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "meta_unique",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "not_placeholder",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "internal_links",
-          "value": 2,
-          "passed": false,
-          "issues": [
-            "Only 2 in-content internal link(s) (need >= 3)"
-          ],
-          "fixes": [
-            "Add at least 3 contextual internal links to related calculators or blog articles."
-          ]
-        },
-        {
-          "signal": "layout_readiness",
-          "value": -0.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        }
-      ],
-      "issues": [
-        "Missing editorial blocks: FAQ with >= 3 questions, how-to-use / next steps guidance",
-        "No named author byline detected (YMYL page requires E-E-A-T)",
-        "No regulatory/government source cited (YMYL requirement)",
-        "Only 2 in-content internal link(s) (need >= 3)"
-      ],
-      "fixes": [
-        "Add missing section(s): FAQ with >= 3 questions, how-to-use / next steps guidance.",
-        "Add named author with credentials and bio link.",
-        "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.).",
-        "Add at least 3 contextual internal links to related calculators or blog articles."
-      ]
-    }
-  ],
+  "failing_pages": [],
   "clusters": [
     [
       {
@@ -25169,20 +23842,6 @@
     ],
     [
       {
-        "url": "https://www.calcphi.com/australia/blog/super-death-benefits/",
-        "slug": "3a6d3fe2daa9a6d1907492466ca45bc9",
-        "score": 85,
-        "max_similarity": 0.9366099834442139
-      },
-      {
-        "url": "https://www.calcphi.com/australia/blog/super-death-benefits-australia/",
-        "slug": "b9d07a087be8cfea893adab267ffb5df",
-        "score": 95,
-        "max_similarity": 0.9366099834442139
-      }
-    ],
-    [
-      {
         "url": "https://www.calcphi.com/australia/blog/stamp-duty-australia-guide/",
         "slug": "dfe8ae323e505cd1719a97d1c2d0452a",
         "score": 100,
@@ -25191,22 +23850,8 @@
       {
         "url": "https://www.calcphi.com/australia/blog/stamp-duty-australia-2026-state-by-state-guide/",
         "slug": "f36196e0e7061a19b7417ea8397d7191",
-        "score": 85,
-        "max_similarity": 0.9800691604614258
-      }
-    ],
-    [
-      {
-        "url": "https://www.calcphi.com/blog/au/salary-sacrifice-super-guide/",
-        "slug": "4866944b8738bc14419dad37f42ae85d",
-        "score": 70,
-        "max_similarity": 0.9046285152435303
-      },
-      {
-        "url": "https://www.calcphi.com/australia/blog/salary-sacrifice-super-australia/",
-        "slug": "1193af2ede0cd898c83a4ac36cda9f5d",
         "score": 100,
-        "max_similarity": 0.9046285152435303
+        "max_similarity": 0.9800691604614258
       }
     ]
   ]

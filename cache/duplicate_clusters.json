@@ -1,5 +1,5 @@
 {
-  "total_clusters": 5,
+  "total_clusters": 3,
   "threshold_used": 0.85,
   "clusters": [
     [
@@ -38,20 +38,6 @@
     ],
     [
       {
-        "url": "https://www.calcphi.com/australia/blog/super-death-benefits/",
-        "slug": "3a6d3fe2daa9a6d1907492466ca45bc9",
-        "score": 85,
-        "max_similarity": 0.9366099834442139
-      },
-      {
-        "url": "https://www.calcphi.com/australia/blog/super-death-benefits-australia/",
-        "slug": "b9d07a087be8cfea893adab267ffb5df",
-        "score": 95,
-        "max_similarity": 0.9366099834442139
-      }
-    ],
-    [
-      {
         "url": "https://www.calcphi.com/australia/blog/stamp-duty-australia-guide/",
         "slug": "dfe8ae323e505cd1719a97d1c2d0452a",
         "score": 100,
@@ -60,22 +46,8 @@
       {
         "url": "https://www.calcphi.com/australia/blog/stamp-duty-australia-2026-state-by-state-guide/",
         "slug": "f36196e0e7061a19b7417ea8397d7191",
-        "score": 85,
-        "max_similarity": 0.9800691604614258
-      }
-    ],
-    [
-      {
-        "url": "https://www.calcphi.com/blog/au/salary-sacrifice-super-guide/",
-        "slug": "4866944b8738bc14419dad37f42ae85d",
-        "score": 70,
-        "max_similarity": 0.9046285152435303
-      },
-      {
-        "url": "https://www.calcphi.com/australia/blog/salary-sacrifice-super-australia/",
-        "slug": "1193af2ede0cd898c83a4ac36cda9f5d",
         "score": 100,
-        "max_similarity": 0.9046285152435303
+        "max_similarity": 0.9800691604614258
       }
     ]
   ]
