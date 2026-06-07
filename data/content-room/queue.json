@@ -1,0 +1,102 @@
+{
+  "india": [
+    {
+      "id": "huf-tax-benefits",
+      "slug": "huf-tax-benefits",
+      "title_hint": "HUF Tax Benefits India 2026: How Hindu Undivided Family Saves Tax",
+      "primary_keyword": "huf",
+      "secondary_keywords": ["huf account", "huf meaning", "huf in income tax", "huf full form", "hindu undivided family tax benefits", "huf pan card"],
+      "search_volume": 18100,
+      "kd": 31,
+      "author_id": "arjun-mehta",
+      "category": "Tax Planning",
+      "priority": "P1",
+      "status": "published",
+      "added": "2026-06-07",
+      "published": "2026-06-07",
+      "file": "src/blog/huf-tax-benefits.njk",
+      "url": "/india/blog/huf-tax-benefits/",
+      "notes": "P1 priority — no page exists. HUF cluster has lowest avg KD (24.7). Entry via 'huf' 18.1K/KD31."
+    },
+    {
+      "id": "nre-vs-nro-account",
+      "slug": "nre-vs-nro-account",
+      "title_hint": "NRE vs NRO Account India 2026: Key Differences for NRIs",
+      "primary_keyword": "nre and nro account",
+      "secondary_keywords": ["nre account", "nro account", "nri account types india", "nre vs nro difference", "nre account interest rate", "nro account repatriation"],
+      "search_volume": 6600,
+      "kd": 25,
+      "author_id": "arjun-mehta",
+      "category": "NRI Finance",
+      "priority": "P1",
+      "status": "queued",
+      "added": "2026-06-07",
+      "notes": "NRI cluster — 60 keywords, 91K vol. One comparison guide covers the cluster."
+    },
+    {
+      "id": "nfo-meaning",
+      "slug": "nfo-meaning",
+      "title_hint": "NFO Meaning: What Is a New Fund Offer and Should You Invest?",
+      "primary_keyword": "nfo meaning",
+      "secondary_keywords": ["new fund offer", "nfo in mutual fund", "should i invest in nfo", "nfo vs existing fund", "nfo ipo difference"],
+      "search_volume": 14800,
+      "kd": 25,
+      "author_id": "priya-sharma",
+      "category": "Mutual Funds",
+      "priority": "P1",
+      "status": "queued",
+      "added": "2026-06-07",
+      "notes": "SIP/mutual fund cluster quick-win. 14,800/KD25."
+    }
+  ],
+  "australia": [
+    {
+      "id": "income-protection-insurance-australia",
+      "slug": "income-protection-insurance-australia",
+      "title_hint": "Income Protection Insurance Australia 2026: Tax Deductions, Waiting Periods, and What to Buy",
+      "primary_keyword": "income protection insurance australia",
+      "secondary_keywords": ["income protection insurance", "income protection tax deductible australia", "income protection waiting period", "best income protection insurance australia 2026", "income protection vs life insurance australia"],
+      "search_volume": 14800,
+      "kd": 28,
+      "author_id": "emma-hartley",
+      "category": "Insurance",
+      "priority": "P1",
+      "status": "published",
+      "added": "2026-06-07",
+      "published": "2026-06-07",
+      "file": "src/australia/blog/income-protection-insurance-australia.njk",
+      "url": "/australia/blog/income-protection-insurance-australia/",
+      "notes": "Not yet covered. High relevance for wage-earner audience. Tax deductibility angle differentiates from product-comparison sites."
+    },
+    {
+      "id": "debt-recycling-australia",
+      "slug": "debt-recycling-australia",
+      "title_hint": "Debt Recycling Australia 2026: Turn Your Mortgage Into a Tax Deduction",
+      "primary_keyword": "debt recycling australia",
+      "secondary_keywords": ["debt recycling strategy", "debt recycling tax benefits", "debt recycling mortgage", "investment loan tax deductible australia", "debt recycling risks"],
+      "search_volume": 8100,
+      "kd": 22,
+      "author_id": "james-obrien",
+      "category": "Investment Strategy",
+      "priority": "P1",
+      "status": "queued",
+      "added": "2026-06-07",
+      "notes": "Sophisticated property-investor topic. KD22 — winnable. Pairs with negative-gearing and mortgage articles."
+    },
+    {
+      "id": "tax-offsets-australia",
+      "slug": "tax-offsets-australia-guide",
+      "title_hint": "Tax Offsets Australia 2026-27: LITO, LMITO, and SAPTO Explained",
+      "primary_keyword": "tax offsets australia",
+      "secondary_keywords": ["low income tax offset", "lito australia 2026", "sapto seniors", "tax offset vs deduction", "low and middle income tax offset"],
+      "search_volume": 5400,
+      "kd": 20,
+      "author_id": "james-obrien",
+      "category": "Tax",
+      "priority": "P1",
+      "status": "queued",
+      "added": "2026-06-07",
+      "notes": "KD20 quick win. Complements income tax brackets article already published."
+    }
+  ]
+}

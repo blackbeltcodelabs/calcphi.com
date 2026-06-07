@@ -1,0 +1,24 @@
+[
+  {
+    "id": "huf-tax-benefits-feature",
+    "slug": "huf-tax-benefits",
+    "market": "india",
+    "file_name": "huf-tax-benefits-feature.png",
+    "file_path": "public/assets/images/blog/huf-tax-benefits-feature.png",
+    "status": "pending",
+    "created": "2026-06-07",
+    "prompt": "Flat editorial illustration showing two separate tax filing stacks side by side on a clean white background. Left stack labeled 'Individual' shows a single tax form with a higher rupee total (₹3,38,520) highlighted in red-orange. Right stack labeled 'HUF' shows two forms — one individual and one HUF — with combined total (₹2,00,720) in teal green. A downward arrow between the two stacks labeled 'Annual Saving ₹1,37,800' in deep navy. Small family silhouette (no faces, parents and adult daughter) in the upper right corner. Indian number format with ₹ symbol throughout. Brand colours: deep navy #1a3d6e, sky blue #0284c7, teal #0d9488. Clean grid lines on background. Professional financial editorial style. 1200x630 landscape. --ar 1.9:1 --q 2",
+    "style_notes": "Emphasise dual-entity tax split. Both 'Individual' and 'HUF' boxes should be clearly readable. Include the daughter silhouette to signal the 2005 Daughters as Coparceners angle."
+  },
+  {
+    "id": "income-protection-insurance-australia-feature",
+    "slug": "income-protection-insurance-australia",
+    "market": "australia",
+    "file_name": "income-protection-insurance-australia-feature.png",
+    "file_path": "public/assets/images/blog/income-protection-insurance-australia-feature.png",
+    "status": "pending",
+    "created": "2026-06-07",
+    "prompt": "Clean flat editorial illustration of income protection insurance cost after tax deduction. Central element: a premium receipt showing '$2,800 annual premium' with an arrow pointing right to a net cost badge reading '$1,834 after tax' in teal. Above it, a horizontal bar showing 34.5% marginal rate in sky blue. Below, two columns: 'Inside Super' (showing 15% fund deduction, eroding super balance with small downward bar chart) vs 'Outside Super' (showing 34.5% personal deduction, green checkmark). Australian dollar $ symbol throughout. Subtle Sydney Harbour Bridge silhouette in far background, very low opacity. White background with light grid. Professional financial editorial style, no human faces. Brand colours: deep navy #1a3d6e, teal #0d9488, sky blue #0284c7, warm orange #b45309. 1200x630 landscape. --ar 1.9:1 --q 2",
+    "style_notes": "The tax deductibility angle is the key visual — net $1,834 cost after deduction should be the hero number. Inside vs outside super comparison should be secondary but visible."
+  }
+]

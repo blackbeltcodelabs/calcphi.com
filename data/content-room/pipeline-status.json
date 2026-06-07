@@ -1,0 +1,22 @@
+{
+  "last_run": "2026-06-07T00:00:00Z",
+  "runs": [
+    {
+      "date": "2026-06-07",
+      "india": {
+        "slug": "huf-tax-benefits",
+        "status": "published",
+        "eeat": "PASS (16/16)",
+        "seo": "10/10",
+        "file": "src/blog/huf-tax-benefits.njk"
+      },
+      "australia": {
+        "slug": "income-protection-insurance-australia",
+        "status": "published",
+        "eeat": "PASS (16/16)",
+        "seo": "10/10",
+        "file": "src/australia/blog/income-protection-insurance-australia.njk"
+      }
+    }
+  ]
+}
