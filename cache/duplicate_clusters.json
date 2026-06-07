@@ -1,5 +1,82 @@
 {
-  "total_clusters": 0,
+  "total_clusters": 5,
   "threshold_used": 0.85,
-  "clusters": []
+  "clusters": [
+    [
+      {
+        "url": "https://www.calcphi.com/india/blog/what-is-fire-financial-independence/",
+        "slug": "647c74fc201bffdd2b46468f6f6c9693",
+        "score": 100,
+        "max_similarity": 0.8670890927314758
+      },
+      {
+        "url": "https://www.calcphi.com/india/blog/retire-early-india-guide/",
+        "slug": "d25d72dba32dbd9b5c64a7f34d27cba2",
+        "score": 100,
+        "max_similarity": 0.8670890927314758
+      },
+      {
+        "url": "https://www.calcphi.com/india/blog/fire-india-retire-at-40/",
+        "slug": "4f9a02156799b6bc843d5a4da1d00426",
+        "score": 100,
+        "max_similarity": 0.8530538082122803
+      }
+    ],
+    [
+      {
+        "url": "https://www.calcphi.com/australia/blog/super-investment-options/",
+        "slug": "f8376c7d8631528031c6124af43fce72",
+        "score": 100,
+        "max_similarity": 1.0
+      },
+      {
+        "url": "https://www.calcphi.com/australia/blog/super-investment-options-australia/",
+        "slug": "dd58176bcc964da62efbd5b4b46634a3",
+        "score": 95,
+        "max_similarity": 1.0
+      }
+    ],
+    [
+      {
+        "url": "https://www.calcphi.com/australia/blog/super-death-benefits/",
+        "slug": "3a6d3fe2daa9a6d1907492466ca45bc9",
+        "score": 85,
+        "max_similarity": 0.9366099834442139
+      },
+      {
+        "url": "https://www.calcphi.com/australia/blog/super-death-benefits-australia/",
+        "slug": "b9d07a087be8cfea893adab267ffb5df",
+        "score": 95,
+        "max_similarity": 0.9366099834442139
+      }
+    ],
+    [
+      {
+        "url": "https://www.calcphi.com/australia/blog/stamp-duty-australia-guide/",
+        "slug": "dfe8ae323e505cd1719a97d1c2d0452a",
+        "score": 100,
+        "max_similarity": 0.9800691604614258
+      },
+      {
+        "url": "https://www.calcphi.com/australia/blog/stamp-duty-australia-2026-state-by-state-guide/",
+        "slug": "f36196e0e7061a19b7417ea8397d7191",
+        "score": 85,
+        "max_similarity": 0.9800691604614258
+      }
+    ],
+    [
+      {
+        "url": "https://www.calcphi.com/blog/au/salary-sacrifice-super-guide/",
+        "slug": "4866944b8738bc14419dad37f42ae85d",
+        "score": 70,
+        "max_similarity": 0.9046285152435303
+      },
+      {
+        "url": "https://www.calcphi.com/australia/blog/salary-sacrifice-super-australia/",
+        "slug": "1193af2ede0cd898c83a4ac36cda9f5d",
+        "score": 100,
+        "max_similarity": 0.9046285152435303
+      }
+    ]
+  ]
 }
