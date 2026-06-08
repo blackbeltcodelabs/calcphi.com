@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-07T19:09:50.261588+00:00",
+  "generated_at": "2026-06-08T04:14:45.888288+00:00",
   "site": "https://www.calcphi.com",
   "rollup": {
-    "pages_total": 269,
-    "pages_pass": 269,
+    "pages_total": 267,
+    "pages_pass": 267,
     "pages_fail": 0,
     "pages_error": 0,
     "pass_rate": 1.0,
@@ -1723,14 +1723,14 @@
       "title": "FIRE in India: The Math Behind Retiring at 40 | CalcPhi",
       "score": 75,
       "status": "PASS",
-      "word_count": 2663,
+      "word_count": 2994,
       "is_placeholder": false,
       "is_js_dependent": false,
       "has_author": true,
       "signals": [
         {
           "signal": "word_count",
-          "value": 2663,
+          "value": 2994,
           "passed": true,
           "issues": [],
           "fixes": []
@@ -1748,14 +1748,10 @@
         },
         {
           "signal": "editorial_depth",
-          "value": 4,
+          "value": 5,
           "passed": true,
-          "issues": [
-            "Missing editorial blocks: how-to-use / next steps guidance"
-          ],
-          "fixes": [
-            "Add missing section(s): how-to-use / next steps guidance."
-          ]
+          "issues": [],
+          "fixes": []
         },
         {
           "signal": "eeat",
@@ -1787,7 +1783,7 @@
         },
         {
           "signal": "internal_links",
-          "value": 15,
+          "value": 17,
           "passed": true,
           "issues": [],
           "fixes": []
@@ -1801,11 +1797,9 @@
         }
       ],
       "issues": [
-        "Missing editorial blocks: how-to-use / next steps guidance",
         "85% content similarity with: https://www.calcphi.com/india/blog/what-is-fire-financial-independence/, https://www.calcphi.com/india/blog/retire-early-india-guide/ (scaled content risk)"
       ],
       "fixes": [
-        "Add missing section(s): how-to-use / next steps guidance.",
         "Merge duplicate pages or add substantial unique content: different worked examples, market-specific data, or distinct editorial angle."
       ]
     },
@@ -3855,14 +3849,14 @@
       "title": "FIRE in India: What It Is & How to Achieve It (2026) | CalcPhi",
       "score": 75,
       "status": "PASS",
-      "word_count": 2505,
+      "word_count": 2906,
       "is_placeholder": false,
       "is_js_dependent": false,
       "has_author": true,
       "signals": [
         {
           "signal": "word_count",
-          "value": 2505,
+          "value": 2906,
           "passed": true,
           "issues": [],
           "fixes": []
@@ -3880,14 +3874,10 @@
         },
         {
           "signal": "editorial_depth",
-          "value": 4,
+          "value": 5,
           "passed": true,
-          "issues": [
-            "Missing editorial blocks: how-to-use / next steps guidance"
-          ],
-          "fixes": [
-            "Add missing section(s): how-to-use / next steps guidance."
-          ]
+          "issues": [],
+          "fixes": []
         },
         {
           "signal": "eeat",
@@ -3919,7 +3909,7 @@
         },
         {
           "signal": "internal_links",
-          "value": 11,
+          "value": 14,
           "passed": true,
           "issues": [],
           "fixes": []
@@ -3933,11 +3923,9 @@
         }
       ],
       "issues": [
-        "Missing editorial blocks: how-to-use / next steps guidance",
         "87% content similarity with: https://www.calcphi.com/india/blog/retire-early-india-guide/, https://www.calcphi.com/india/blog/fire-india-retire-at-40/ (scaled content risk)"
       ],
       "fixes": [
-        "Add missing section(s): how-to-use / next steps guidance.",
         "Merge duplicate pages or add substantial unique content: different worked examples, market-specific data, or distinct editorial angle."
       ]
     },
@@ -7990,17 +7978,17 @@
     {
       "url": "https://www.calcphi.com/",
       "slug": "2b5f4dd4ec6ba57eb7235d8b4a5f3514",
-      "title": "Free Financial Calculators \u2013 India, USA, Canada, Australia | CalcPhi",
+      "title": "Free Financial Calculators \u2013 India & Australia | CalcPhi",
       "score": 85,
       "status": "PASS",
-      "word_count": 618,
+      "word_count": 587,
       "is_placeholder": false,
       "is_js_dependent": false,
       "has_author": true,
       "signals": [
         {
           "signal": "word_count",
-          "value": 618,
+          "value": 587,
           "passed": true,
           "issues": [],
           "fixes": []
@@ -9245,14 +9233,14 @@
       "title": "Australia Financial Calculators 2026 \u2013 Mortgage, Super, Tax & More | CalcPhi",
       "score": 70,
       "status": "PASS",
-      "word_count": 623,
+      "word_count": 633,
       "is_placeholder": false,
       "is_js_dependent": false,
       "has_author": false,
       "signals": [
         {
           "signal": "word_count",
-          "value": 623,
+          "value": 633,
           "passed": true,
           "issues": [],
           "fixes": []
@@ -9335,23 +9323,19 @@
       "url": "https://www.calcphi.com/australia/authors/emma-hartley/",
       "slug": "c215789eadfcfa84eddc74390e127161",
       "title": "Emma Hartley, CFP \u2013 Mortgage & Retirement Specialist at CalcPhi Australia",
-      "score": 70,
+      "score": 85,
       "status": "PASS",
-      "word_count": 399,
+      "word_count": 563,
       "is_placeholder": false,
       "is_js_dependent": false,
       "has_author": true,
       "signals": [
         {
           "signal": "word_count",
-          "value": 399,
-          "passed": false,
-          "issues": [
-            "word_count=399 (< 500)"
-          ],
-          "fixes": [
-            "Expand main content to at least 500 words with unique worked examples and explanation."
-          ]
+          "value": 563,
+          "passed": true,
+          "issues": [],
+          "fixes": []
         },
         {
           "signal": "info_gain",
@@ -9415,11 +9399,9 @@
         }
       ],
       "issues": [
-        "word_count=399 (< 500)",
         "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
       ],
       "fixes": [
-        "Expand main content to at least 500 words with unique worked examples and explanation.",
         "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
       ]
     },
@@ -9429,14 +9411,14 @@
       "title": "James O'Brien, CPA \u2013 Tax Adviser at CalcPhi Australia",
       "score": 70,
       "status": "PASS",
-      "word_count": 596,
+      "word_count": 552,
       "is_placeholder": false,
       "is_js_dependent": false,
       "has_author": false,
       "signals": [
         {
           "signal": "word_count",
-          "value": 596,
+          "value": 552,
           "passed": true,
           "issues": [],
           "fixes": []
@@ -9519,23 +9501,19 @@
       "url": "https://www.calcphi.com/australia/authors/sarah-mitchell/",
       "slug": "9e394e8863a9b65e8fd7447994d245c5",
       "title": "Sarah Mitchell, CFA \u2013 Superannuation Analyst at CalcPhi Australia",
-      "score": 70,
+      "score": 85,
       "status": "PASS",
-      "word_count": 348,
+      "word_count": 512,
       "is_placeholder": false,
       "is_js_dependent": false,
       "has_author": true,
       "signals": [
         {
           "signal": "word_count",
-          "value": 348,
-          "passed": false,
-          "issues": [
-            "word_count=348 (< 500)"
-          ],
-          "fixes": [
-            "Expand main content to at least 500 words with unique worked examples and explanation."
-          ]
+          "value": 512,
+          "passed": true,
+          "issues": [],
+          "fixes": []
         },
         {
           "signal": "info_gain",
@@ -9599,11 +9577,9 @@
         }
       ],
       "issues": [
-        "word_count=348 (< 500)",
         "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions"
       ],
       "fixes": [
-        "Expand main content to at least 500 words with unique worked examples and explanation.",
         "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions."
       ]
     },
@@ -9611,23 +9587,19 @@
       "url": "https://www.calcphi.com/india/authors/deepa-krishnan/",
       "slug": "3ce25e5acbc9bd2e72ccaf5a4ad3b56e",
       "title": "Deepa Krishnan, CFP \u2013 Retirement & Savings Specialist at CalcPhi India",
-      "score": 70,
+      "score": 85,
       "status": "PASS",
-      "word_count": 446,
+      "word_count": 610,
       "is_placeholder": false,
       "is_js_dependent": false,
       "has_author": true,
       "signals": [
         {
           "signal": "word_count",
-          "value": 446,
-          "passed": false,
-          "issues": [
-            "word_count=446 (< 500)"
-          ],
-          "fixes": [
-            "Expand main content to at least 500 words with unique worked examples and explanation."
-          ]
+          "value": 610,
+          "passed": true,
+          "issues": [],
+          "fixes": []
         },
         {
           "signal": "info_gain",
@@ -9638,13 +9610,13 @@
         },
         {
           "signal": "editorial_depth",
-          "value": 2,
+          "value": 3,
           "passed": false,
           "issues": [
-            "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
+            "Missing editorial blocks: FAQ with >= 3 questions, how-to-use / next steps guidance"
           ],
           "fixes": [
-            "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
+            "Add missing section(s): FAQ with >= 3 questions, how-to-use / next steps guidance."
           ]
         },
         {
@@ -9691,35 +9663,29 @@
         }
       ],
       "issues": [
-        "word_count=446 (< 500)",
-        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
+        "Missing editorial blocks: FAQ with >= 3 questions, how-to-use / next steps guidance"
       ],
       "fixes": [
-        "Expand main content to at least 500 words with unique worked examples and explanation.",
-        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
+        "Add missing section(s): FAQ with >= 3 questions, how-to-use / next steps guidance."
       ]
     },
     {
       "url": "https://www.calcphi.com/india/authors/arjun-mehta/",
       "slug": "681b34733d5b5bff3ffbb1a7e3d095ae",
       "title": "Arjun Mehta, CA \u2013 Chartered Accountant & Tax Adviser at CalcPhi India",
-      "score": 70,
+      "score": 85,
       "status": "PASS",
-      "word_count": 431,
+      "word_count": 595,
       "is_placeholder": false,
       "is_js_dependent": false,
       "has_author": true,
       "signals": [
         {
           "signal": "word_count",
-          "value": 431,
-          "passed": false,
-          "issues": [
-            "word_count=431 (< 500)"
-          ],
-          "fixes": [
-            "Expand main content to at least 500 words with unique worked examples and explanation."
-          ]
+          "value": 595,
+          "passed": true,
+          "issues": [],
+          "fixes": []
         },
         {
           "signal": "info_gain",
@@ -9730,13 +9696,13 @@
         },
         {
           "signal": "editorial_depth",
-          "value": 2,
+          "value": 3,
           "passed": false,
           "issues": [
-            "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
+            "Missing editorial blocks: FAQ with >= 3 questions, how-to-use / next steps guidance"
           ],
           "fixes": [
-            "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
+            "Add missing section(s): FAQ with >= 3 questions, how-to-use / next steps guidance."
           ]
         },
         {
@@ -9783,35 +9749,29 @@
         }
       ],
       "issues": [
-        "word_count=431 (< 500)",
-        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
+        "Missing editorial blocks: FAQ with >= 3 questions, how-to-use / next steps guidance"
       ],
       "fixes": [
-        "Expand main content to at least 500 words with unique worked examples and explanation.",
-        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
+        "Add missing section(s): FAQ with >= 3 questions, how-to-use / next steps guidance."
       ]
     },
     {
       "url": "https://www.calcphi.com/india/authors/priya-sharma/",
       "slug": "d960dffbf1a8a11b054784a9a314ae20",
       "title": "Priya Sharma, CFA \u2013 Investment Analyst at CalcPhi India",
-      "score": 70,
+      "score": 100,
       "status": "PASS",
-      "word_count": 386,
+      "word_count": 550,
       "is_placeholder": false,
       "is_js_dependent": false,
       "has_author": true,
       "signals": [
         {
           "signal": "word_count",
-          "value": 386,
-          "passed": false,
-          "issues": [
-            "word_count=386 (< 500)"
-          ],
-          "fixes": [
-            "Expand main content to at least 500 words with unique worked examples and explanation."
-          ]
+          "value": 550,
+          "passed": true,
+          "issues": [],
+          "fixes": []
         },
         {
           "signal": "info_gain",
@@ -9822,13 +9782,13 @@
         },
         {
           "signal": "editorial_depth",
-          "value": 3,
-          "passed": false,
+          "value": 4,
+          "passed": true,
           "issues": [
-            "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions"
+            "Missing editorial blocks: FAQ with >= 3 questions"
           ],
           "fixes": [
-            "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions."
+            "Add missing section(s): FAQ with >= 3 questions."
           ]
         },
         {
@@ -9875,12 +9835,10 @@
         }
       ],
       "issues": [
-        "word_count=386 (< 500)",
-        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions"
+        "Missing editorial blocks: FAQ with >= 3 questions"
       ],
       "fixes": [
-        "Expand main content to at least 500 words with unique worked examples and explanation.",
-        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions."
+        "Add missing section(s): FAQ with >= 3 questions."
       ]
     },
     {
@@ -20542,190 +20500,6 @@
       ]
     },
     {
-      "url": "https://www.calcphi.com/canada/",
-      "slug": "570d26a34237586421b48dc0a499dd2e",
-      "title": "Canada Financial Calculators 2026 \u2013 Mortgage, RRSP, Income Tax & More | CalcPhi",
-      "score": 70,
-      "status": "PASS",
-      "word_count": 255,
-      "is_placeholder": false,
-      "is_js_dependent": false,
-      "has_author": true,
-      "signals": [
-        {
-          "signal": "word_count",
-          "value": 255,
-          "passed": false,
-          "issues": [
-            "word_count=255 (< 500)"
-          ],
-          "fixes": [
-            "Expand main content to at least 500 words with unique worked examples and explanation."
-          ]
-        },
-        {
-          "signal": "info_gain",
-          "value": 0.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "editorial_depth",
-          "value": 2,
-          "passed": false,
-          "issues": [
-            "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
-          ],
-          "fixes": [
-            "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
-          ]
-        },
-        {
-          "signal": "eeat",
-          "value": 3,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "js_dependency",
-          "value": 1.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "meta_unique",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "not_placeholder",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "internal_links",
-          "value": 5,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "layout_readiness",
-          "value": -0.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        }
-      ],
-      "issues": [
-        "word_count=255 (< 500)",
-        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
-      ],
-      "fixes": [
-        "Expand main content to at least 500 words with unique worked examples and explanation.",
-        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
-      ]
-    },
-    {
-      "url": "https://www.calcphi.com/usa/",
-      "slug": "5d7d94b1255558b1e2a429858ae9a2cc",
-      "title": "USA Financial Calculators 2026 \u2013 Mortgage, 401k, Income Tax & More | CalcPhi",
-      "score": 70,
-      "status": "PASS",
-      "word_count": 309,
-      "is_placeholder": false,
-      "is_js_dependent": false,
-      "has_author": true,
-      "signals": [
-        {
-          "signal": "word_count",
-          "value": 309,
-          "passed": false,
-          "issues": [
-            "word_count=309 (< 500)"
-          ],
-          "fixes": [
-            "Expand main content to at least 500 words with unique worked examples and explanation."
-          ]
-        },
-        {
-          "signal": "info_gain",
-          "value": 0.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "editorial_depth",
-          "value": 2,
-          "passed": false,
-          "issues": [
-            "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
-          ],
-          "fixes": [
-            "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
-          ]
-        },
-        {
-          "signal": "eeat",
-          "value": 3,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "js_dependency",
-          "value": 1.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "meta_unique",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "not_placeholder",
-          "value": true,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "internal_links",
-          "value": 5,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        },
-        {
-          "signal": "layout_readiness",
-          "value": -0.0,
-          "passed": true,
-          "issues": [],
-          "fixes": []
-        }
-      ],
-      "issues": [
-        "word_count=309 (< 500)",
-        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
-      ],
-      "fixes": [
-        "Expand main content to at least 500 words with unique worked examples and explanation.",
-        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
-      ]
-    },
-    {
       "url": "https://www.calcphi.com/help/",
       "slug": "d9a851531aee4c54396ba52c768c96fe",
       "title": "Help & FAQs \u2013 CalcPhi",
@@ -20815,16 +20589,16 @@
       "url": "https://www.calcphi.com/privacy/",
       "slug": "8888e8003a1961227db3604906dc5508",
       "title": "Privacy Policy \u2013 CalcPhi",
-      "score": 85,
+      "score": 80,
       "status": "PASS",
-      "word_count": 963,
+      "word_count": 951,
       "is_placeholder": false,
       "is_js_dependent": false,
       "has_author": true,
       "signals": [
         {
           "signal": "word_count",
-          "value": 963,
+          "value": 951,
           "passed": true,
           "issues": [],
           "fixes": []
@@ -20877,10 +20651,14 @@
         },
         {
           "signal": "internal_links",
-          "value": 4,
-          "passed": true,
-          "issues": [],
-          "fixes": []
+          "value": 1,
+          "passed": false,
+          "issues": [
+            "Only 1 in-content internal link(s) (need >= 3)"
+          ],
+          "fixes": [
+            "Add at least 3 contextual internal links to related calculators or blog articles."
+          ]
         },
         {
           "signal": "layout_readiness",
@@ -20891,10 +20669,12 @@
         }
       ],
       "issues": [
-        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
+        "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance",
+        "Only 1 in-content internal link(s) (need >= 3)"
       ],
       "fixes": [
-        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
+        "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance.",
+        "Add at least 3 contextual internal links to related calculators or blog articles."
       ]
     },
     {
@@ -20903,17 +20683,17 @@
       "title": "Contact CalcPhi \u2013 Get in Touch",
       "score": 70,
       "status": "PASS",
-      "word_count": 349,
+      "word_count": 347,
       "is_placeholder": false,
       "is_js_dependent": false,
       "has_author": true,
       "signals": [
         {
           "signal": "word_count",
-          "value": 349,
+          "value": 347,
           "passed": false,
           "issues": [
-            "word_count=349 (< 500)"
+            "word_count=347 (< 500)"
           ],
           "fixes": [
             "Expand main content to at least 500 words with unique worked examples and explanation."
@@ -20981,7 +20761,7 @@
         }
       ],
       "issues": [
-        "word_count=349 (< 500)",
+        "word_count=347 (< 500)",
         "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
       ],
       "fixes": [
@@ -20995,14 +20775,14 @@
       "title": "About CalcPhi \u2013 Free Financial Calculators for India, USA, Canada & Australia",
       "score": 85,
       "status": "PASS",
-      "word_count": 800,
+      "word_count": 798,
       "is_placeholder": false,
       "is_js_dependent": false,
       "has_author": true,
       "signals": [
         {
           "signal": "word_count",
-          "value": 800,
+          "value": 798,
           "passed": true,
           "issues": [],
           "fixes": []
@@ -23153,16 +22933,16 @@
       "url": "https://www.calcphi.com/australia/blog/stamp-duty-australia-2026-state-by-state-guide/",
       "slug": "f36196e0e7061a19b7417ea8397d7191",
       "title": "Stamp Duty Australia 2026: What You Pay in Every State and Territory | CalcPhi",
-      "score": 100,
+      "score": 85,
       "status": "PASS",
-      "word_count": 2831,
+      "word_count": 2474,
       "is_placeholder": false,
       "is_js_dependent": false,
       "has_author": true,
       "signals": [
         {
           "signal": "word_count",
-          "value": 2831,
+          "value": 2474,
           "passed": true,
           "issues": [],
           "fixes": []
@@ -23176,10 +22956,14 @@
         },
         {
           "signal": "editorial_depth",
-          "value": 5,
-          "passed": true,
-          "issues": [],
-          "fixes": []
+          "value": 3,
+          "passed": false,
+          "issues": [
+            "Missing editorial blocks: worked example (real-world scenario), how-to-use / next steps guidance"
+          ],
+          "fixes": [
+            "Add missing section(s): worked example (real-world scenario), how-to-use / next steps guidance."
+          ]
         },
         {
           "signal": "eeat",
@@ -23211,7 +22995,7 @@
         },
         {
           "signal": "internal_links",
-          "value": 18,
+          "value": 15,
           "passed": true,
           "issues": [],
           "fixes": []
@@ -23224,8 +23008,12 @@
           "fixes": []
         }
       ],
-      "issues": [],
-      "fixes": []
+      "issues": [
+        "Missing editorial blocks: worked example (real-world scenario), how-to-use / next steps guidance"
+      ],
+      "fixes": [
+        "Add missing section(s): worked example (real-world scenario), how-to-use / next steps guidance."
+      ]
     },
     {
       "url": "https://www.calcphi.com/australia/blog/spouse-super-contributions-australia/",

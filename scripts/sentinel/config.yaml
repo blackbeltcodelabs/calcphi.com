@@ -15,6 +15,8 @@ thresholds:
 exclude_urls:
   - "https://www.calcphi.com/404.html"
   - "https://www.calcphi.com/markets/"
+  - "https://www.calcphi.com/usa/"
+  - "https://www.calcphi.com/canada/"
 
 # Cross-type awareness: blog pages and calculator pages on the same topic
 # are intentionally different content types — do not cluster them.
