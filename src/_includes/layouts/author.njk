@@ -70,6 +70,19 @@ layout: layouts/base.njk
         <p>All content produced by {{ author.name }} for CalcPhi is editorially independent. Calculator results and written content are never influenced by advertising relationships or affiliate commissions. {% if author.market == "australia" %}All rates and regulatory figures are sourced directly from ATO, APRA, ASIC, RBA, or Services Australia publications.{% else %}All rates and regulatory figures are sourced directly from CBDT, AMFI, RBI, SEBI, or PFRDA publications.{% endif %} See our <a href="/about/">editorial standards</a> for full details.</p>
       </section>
 
+      <section class="author-section">
+        <h2>Approach to Financial Guidance</h2>
+        <p>{{ author.name }} approaches every article by asking: what does a financially literate reader actually need to make this decision with confidence? That means going beyond regulatory definitions to explain practical implications — who benefits, who doesn't, and what the numbers look like across typical income and wealth levels.</p>
+        {% if author.market == "australia" %}
+        <p>All figures are cross-checked against the ATO's individual tax rates schedule, APRA's quarterly statistics, and ASIC's MoneySmart guidance before publication. Super balance projections account for the contributions tax, the earnings tax inside accumulation phase, and the correct concessional cap for each financial year — not simplified approximations.</p>
+        <p>Mortgage and property content uses actual reducing-balance amortisation, correctly accounts for the APRA serviceability buffer in borrowing capacity estimates, and models offset account savings using the daily interest calculation method used by Australian lenders.</p>
+        {% else %}
+        <p>All tax figures are cross-checked against CBDT notifications and the Finance Act applicable for the current assessment year. Mutual fund return projections distinguish between XIRR and CAGR where the distinction matters for reader decision-making. Every worked example uses Indian number formatting (₹ with lakh/crore) and AY/FY pairing to match how Indian readers think about their finances.</p>
+        <p>Investment comparisons account for the post-tax returns after applicable TDS, LTCG, STCG, and surcharge — not pre-tax nominal rates that overstate what investors actually keep.</p>
+        {% endif %}
+        <p>All CalcPhi articles authored by {{ author.name }} are reviewed by a second qualified team member before publication. Regulatory figures are updated within 48 hours of any relevant notification or rate change.</p>
+      </section>
+
     </div>
 
     <aside class="author-sidebar">
