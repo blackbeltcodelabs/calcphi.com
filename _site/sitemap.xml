@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.calcphi.com/india/income-tax-calculator/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.calcphi.com/india/emi-calculator/</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -9,12 +15,6 @@
   </url>
   <url>
     <loc>https://www.calcphi.com/india/hra-calculator/</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.calcphi.com/india/income-tax-calculator/</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
