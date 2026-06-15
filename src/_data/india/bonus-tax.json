@@ -58,34 +58,54 @@
   ],
   "faq": [
     {
-      "q": "How accurate is the Bonus Tax Calculator?",
-      "a": "The Bonus Tax Calculator uses standard financial formulas. Results are indicative; actual figures depend on your lender or financial institution's policies."
+      "q": "Is bonus income taxed separately from salary in India?",
+      "a": "No. Under the Income Tax Act, bonus is treated as part of salary income and taxed at your marginal slab rate — not at a flat rate. Your employer adds the bonus to your total annual salary, computes the resulting tax liability, and deducts TDS at source. There is no special flat rate for bonus income under Indian tax law."
     },
     {
-      "q": "Is the Bonus Tax Calculator free to use?",
-      "a": "Yes, the Bonus Tax Calculator on CalcPhi is completely free with no registration required."
+      "q": "How does an employer calculate TDS on bonus?",
+      "a": "The employer projects total salary for the year including the bonus, then applies the applicable income tax slabs to find the annual tax liability. The proportionate TDS is deducted in the month the bonus is paid. For example, if annual salary is ₹12 lakh and a ₹1 lakh bonus is paid in April, the employer treats total income as ₹13 lakh and withholds the additional tax (approximately ₹15,600 extra TDS under the new regime) in that month."
     },
     {
-      "q": "Are my data inputs stored?",
-      "a": "No. All calculations happen in your browser. We do not store any of your financial data."
+      "q": "Example: TDS on ₹1 lakh bonus for someone earning ₹10 lakh/year",
+      "a": "Annual salary ₹10,00,000 + bonus ₹1,00,000 = total ₹11,00,000. Under new regime FY 2025-26: tax on ₹11 lakh = ₹72,500 (after standard deduction ₹75,000). Tax on ₹10 lakh without bonus = ₹52,500. Incremental TDS on bonus = ₹72,500 − ₹52,500 = ₹20,000. Net bonus received = ₹1,00,000 − ₹20,000 = ₹80,000."
     },
     {
-      "q": "How often are the Bonus Tax Calculator rates updated?",
-      "a": "Rates in examples are updated periodically to reflect current market conditions. Always verify with your bank or advisor."
+      "q": "What happens if the bonus pushes me into a higher tax slab?",
+      "a": "Only the portion of bonus income that falls in the higher slab is taxed at the higher rate. If your salary is ₹11.5 lakh and you receive a ₹1 lakh bonus, ₹50,000 of it is taxed at 20% (the 8–12 lakh slab) and ₹50,000 at 30% (the 12–15 lakh slab). This is marginal taxation — not all income is taxed at the top rate."
     },
     {
-      "q": "Can I use the Bonus Tax Calculator on mobile?",
-      "a": "Yes. CalcPhi is fully mobile-optimised. The calculator works on all modern smartphones and tablets."
+      "q": "Is statutory bonus under the Payment of Bonus Act taxable?",
+      "a": "Yes. Statutory bonus paid under the Payment of Bonus Act 1965 (minimum 8.33%, maximum 20% of salary) is fully taxable as salary income. It is added to your gross salary and TDS is deducted accordingly. There is no exemption for statutory bonus under the Income Tax Act."
     },
     {
-      "q": "Who should use this calculator?",
-      "a": "Anyone in India planning their finances can benefit from the Bonus Tax Calculator. It's designed for both beginners and experienced investors."
+      "q": "Can I reduce tax on my bonus by investing in Section 80C?",
+      "a": "Under the old tax regime, yes — investments in PPF, ELSS, LIC premiums, and EPF (up to ₹1.5 lakh under Section 80C) reduce your taxable salary, which includes the bonus. At the 30% slab, investing ₹1.5 lakh in 80C saves ₹46,800 in tax (including cess). Under the new tax regime, 80C deductions are not available."
+    },
+    {
+      "q": "What is joining bonus tax treatment and is it refundable?",
+      "a": "A joining bonus (sign-on bonus) is taxable in the year it is received, just like regular salary. TDS is deducted at source. If you leave before the bond period and return the joining bonus, you can claim a refund of TDS by filing your ITR. The returned amount is not treated as income in the year of return — you claim it as a loss or deduction in that assessment year."
+    },
+    {
+      "q": "How is performance bonus different from variable pay for tax purposes?",
+      "a": "There is no tax distinction — both performance bonuses and variable pay are taxed identically as salary income. The only practical difference is timing: if variable pay is declared in March but paid in April, it is taxed in the financial year it is received (FY 2025-26 if paid in April 2025), not the year it was earned. This can shift your slab if income varies significantly between years."
+    },
+    {
+      "q": "Can NPS contribution reduce bonus tax?",
+      "a": "Yes. Under both old and new tax regimes, contributing to the National Pension System (NPS) via employer (Section 80CCD(2)) is deductible without any monetary cap — up to 10% of basic salary plus dearness allowance. If your employer offers a bonus-linked NPS top-up, having it routed as 80CCD(2) can reduce your taxable bonus income significantly. Employee NPS contributions (Section 80CCD(1B), ₹50,000 extra) are deductible only under the old regime."
+    },
+    {
+      "q": "What if excess TDS is deducted on my bonus?",
+      "a": "Excess TDS is fully refundable. File your ITR (due 31 July for salaried individuals without audit), claim the refund, and the Income Tax Department typically processes it within 30–60 days if bank details are pre-validated. You also earn interest at 6% per annum on the refund amount under Section 244A if the refund exceeds 10% of the tax payable."
     }
   ],
   "examples": [
     {
-      "heading": "Salaried employee earning ₹1 lakh/month",
-      "text": "The Bonus Tax Calculator shows the exact deduction based on the salary slab for your state."
+      "heading": "₹1 lakh bonus on ₹10 lakh annual salary (new regime)",
+      "text": "Total income = ₹11 lakh. Tax = ₹72,500. Without bonus, tax = ₹52,500. TDS on bonus = ₹20,000. Net bonus in hand = ₹80,000. Effective bonus tax rate = 20%."
+    },
+    {
+      "heading": "₹2 lakh bonus on ₹12 lakh salary (old regime, 80C claimed)",
+      "text": "Gross total = ₹14 lakh. Less 80C ₹1.5L + 80D ₹25K = taxable ₹12.25L. Incremental tax on ₹2L bonus = ~₹60,000 at 30% slab. Net bonus = ₹1,40,000."
     }
   ],
   "related": [

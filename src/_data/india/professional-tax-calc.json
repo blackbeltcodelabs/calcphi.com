@@ -50,34 +50,54 @@
   ],
   "faq": [
     {
-      "q": "How accurate is the Professional Tax Calculator?",
-      "a": "The Professional Tax Calculator uses standard financial formulas. Results are indicative; actual figures depend on your lender or financial institution's policies."
+      "q": "What is professional tax and who deducts it?",
+      "a": "Professional tax is a state-level levy on salaried income, collected under Article 276 of the Constitution. Your employer deducts it monthly from your gross salary and remits it to the state government. It applies in Maharashtra, Karnataka, West Bengal, Andhra Pradesh, Telangana, Tamil Nadu, and several other states. States like Delhi, Haryana, and Rajasthan do not levy professional tax."
     },
     {
-      "q": "Is the Professional Tax Calculator free to use?",
-      "a": "Yes, the Professional Tax Calculator on CalcPhi is completely free with no registration required."
+      "q": "What are the professional tax slabs in Maharashtra for FY 2025-26?",
+      "a": "Maharashtra professional tax slabs for salaried employees: ₹0 for monthly salary up to ₹7,500; ₹175/month for ₹7,501–10,000; ₹200/month for salary above ₹10,000 (except February, which is ₹300 to make up the annual total of ₹2,500). The maximum annual professional tax in Maharashtra is ₹2,500."
     },
     {
-      "q": "Are my data inputs stored?",
-      "a": "No. All calculations happen in your browser. We do not store any of your financial data."
+      "q": "What are professional tax slabs in Karnataka?",
+      "a": "Karnataka professional tax (FY 2025-26): ₹0 for monthly salary up to ₹15,000; ₹150/month for ₹15,001–20,000; ₹200/month for salary above ₹20,000. Annual maximum: ₹2,400. Karnataka revised its slabs in 2023, raising the nil-tax threshold from ₹10,000 to ₹15,000."
     },
     {
-      "q": "How often are the Professional Tax Calculator rates updated?",
-      "a": "Rates in examples are updated periodically to reflect current market conditions. Always verify with your bank or advisor."
+      "q": "Is professional tax deductible under the Income Tax Act?",
+      "a": "Yes. Under Section 16(iii) of the Income Tax Act, professional tax paid during the year is fully deductible from gross salary when computing taxable income — under both the old and new tax regimes. If your employer deducted ₹2,500 in professional tax, your gross salary reduces by ₹2,500 before income tax is applied."
     },
     {
-      "q": "Can I use the Professional Tax Calculator on mobile?",
-      "a": "Yes. CalcPhi is fully mobile-optimised. The calculator works on all modern smartphones and tablets."
+      "q": "What is the maximum professional tax payable in India?",
+      "a": "The Constitution caps professional tax at ₹2,500 per year per person. Most states set their maximum at ₹2,400–2,500 annually. In Maharashtra, the structure collects exactly ₹2,500 (₹200 × 11 months + ₹300 in February). No state can legally exceed ₹2,500 per year."
     },
     {
-      "q": "Who should use this calculator?",
-      "a": "Anyone in India planning their finances can benefit from the Professional Tax Calculator. It's designed for both beginners and experienced investors."
+      "q": "Example: Professional tax on ₹50,000/month salary in Maharashtra",
+      "a": "Monthly salary ₹50,000 (above ₹10,000 threshold): Professional tax = ₹200/month for January and ₹300 in February. Annual total = ₹2,500. Income tax deduction: ₹2,500 under Section 16(iii). If you are in the 30% income tax slab, this saves ₹750 in income tax (₹2,500 × 30%), making the net cost of professional tax only ₹1,750."
+    },
+    {
+      "q": "Do self-employed professionals pay professional tax?",
+      "a": "Yes, but through self-registration rather than employer deduction. Self-employed doctors, lawyers, chartered accountants, architects, and consultants must register with their state's professional tax authority and pay annually. Rates for self-employed are generally the same as salaried employees and are deductible as a business expense under Section 37 of the Income Tax Act."
+    },
+    {
+      "q": "What is West Bengal's professional tax slab?",
+      "a": "West Bengal professional tax (FY 2025-26): ₹0 for monthly salary up to ₹8,500; ₹90/month for ₹8,501–10,000; ₹110/month for ₹10,001–15,000; ₹130/month for ₹15,001–25,000; ₹150/month for ₹25,001–40,000; ₹200/month for salary above ₹40,000. Annual maximum: ₹2,400."
+    },
+    {
+      "q": "Is professional tax exempt for any category of employees?",
+      "a": "Yes. Common exemptions vary by state but typically include: senior citizens above 65 years; persons with physical disabilities (in Maharashtra, 40%+ disability); parents of disabled children; women earning below a notified threshold; and serving armed forces personnel. Some states also exempt low-income earners below a base threshold, typically ₹7,500–15,000 depending on the state."
+    },
+    {
+      "q": "What happens if an employer fails to deduct or remit professional tax?",
+      "a": "If an employer does not deduct or fails to remit professional tax to the state, the employer — not the employee — is liable for penalties. Penalties include interest of 1.25%–2% per month on outstanding dues and prosecution in some states. Employees are not penalised for employer non-compliance, but they retain the obligation to register and pay directly if working in states that require self-registration."
     }
   ],
   "examples": [
     {
-      "heading": "Salaried employee earning ₹1 lakh/month",
-      "text": "The Professional Tax Calculator shows the exact deduction based on the salary slab for your state."
+      "heading": "₹50,000/month salary in Maharashtra",
+      "text": "Monthly professional tax = ₹200 (Jan–Nov) + ₹300 (Feb) = ₹2,500 annual. Section 16(iii) deduction saves ₹750 in income tax at 30% slab. Net cost = ₹1,750/year."
+    },
+    {
+      "heading": "₹18,000/month salary in Karnataka",
+      "text": "Falls in ₹15,001–20,000 slab: professional tax = ₹150/month × 12 = ₹1,800/year. At 5% income tax slab, Section 16(iii) saves ₹90. At 20% slab, saves ₹360."
     }
   ],
   "related": [
