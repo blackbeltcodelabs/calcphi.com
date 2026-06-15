@@ -7191,16 +7191,16 @@
     "url": "https://www.calcphi.com/blog/au/salary-sacrifice-super-guide/",
     "slug": "4866944b8738bc14419dad37f42ae85d",
     "title": "Salary Sacrifice Super: How to Pay Less Tax and Retire Richer in 2025-26 | CalcPhi",
-    "score": 85,
+    "score": 70,
     "status": "PASS",
-    "word_count": 789,
+    "word_count": 745,
     "is_placeholder": false,
     "is_js_dependent": false,
-    "has_author": true,
+    "has_author": false,
     "signals": [
       {
         "signal": "word_count",
-        "value": 789,
+        "value": 745,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -7225,10 +7225,14 @@
       },
       {
         "signal": "eeat",
-        "value": 3,
-        "passed": true,
-        "issues": [],
-        "fixes": []
+        "value": 2,
+        "passed": false,
+        "issues": [
+          "No regulatory/government source cited (YMYL requirement)"
+        ],
+        "fixes": [
+          "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
+        ]
       },
       {
         "signal": "js_dependency",
@@ -7253,7 +7257,7 @@
       },
       {
         "signal": "internal_links",
-        "value": 5,
+        "value": 4,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -7267,26 +7271,28 @@
       }
     ],
     "issues": [
-      "Missing editorial blocks: FAQ with >= 3 questions, how-to-use / next steps guidance"
+      "Missing editorial blocks: FAQ with >= 3 questions, how-to-use / next steps guidance",
+      "No regulatory/government source cited (YMYL requirement)"
     ],
     "fixes": [
-      "Add missing section(s): FAQ with >= 3 questions, how-to-use / next steps guidance."
+      "Add missing section(s): FAQ with >= 3 questions, how-to-use / next steps guidance.",
+      "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
     ]
   },
   {
     "url": "https://www.calcphi.com/blog/au/capital-gains-tax-australia/",
     "slug": "74a8b3d56fdc6be0c15f327dc3621820",
     "title": "Capital Gains Tax Australia 2025-26: The 50% CGT Discount, How It Works, and What You Owe | CalcPhi",
-    "score": 100,
+    "score": 85,
     "status": "PASS",
-    "word_count": 812,
+    "word_count": 768,
     "is_placeholder": false,
     "is_js_dependent": false,
-    "has_author": true,
+    "has_author": false,
     "signals": [
       {
         "signal": "word_count",
-        "value": 812,
+        "value": 768,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -7311,10 +7317,106 @@
       },
       {
         "signal": "eeat",
-        "value": 3,
+        "value": 2,
+        "passed": false,
+        "issues": [
+          "No regulatory/government source cited (YMYL requirement)"
+        ],
+        "fixes": [
+          "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
+        ]
+      },
+      {
+        "signal": "js_dependency",
+        "value": 1.0,
         "passed": true,
         "issues": [],
         "fixes": []
+      },
+      {
+        "signal": "meta_unique",
+        "value": true,
+        "passed": true,
+        "issues": [],
+        "fixes": []
+      },
+      {
+        "signal": "not_placeholder",
+        "value": true,
+        "passed": true,
+        "issues": [],
+        "fixes": []
+      },
+      {
+        "signal": "internal_links",
+        "value": 4,
+        "passed": true,
+        "issues": [],
+        "fixes": []
+      },
+      {
+        "signal": "layout_readiness",
+        "value": -0.0,
+        "passed": true,
+        "issues": [],
+        "fixes": []
+      }
+    ],
+    "issues": [
+      "Missing editorial blocks: FAQ with >= 3 questions",
+      "No regulatory/government source cited (YMYL requirement)"
+    ],
+    "fixes": [
+      "Add missing section(s): FAQ with >= 3 questions.",
+      "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
+    ]
+  },
+  {
+    "url": "https://www.calcphi.com/blog/au/first-home-buyer-australia-guide/",
+    "slug": "d7f298bc814232d22b69477938e65c64",
+    "title": "First Home Buyer Australia 2025: Grants, Stamp Duty Exemptions, and What You Actually Need | CalcPhi",
+    "score": 70,
+    "status": "PASS",
+    "word_count": 788,
+    "is_placeholder": false,
+    "is_js_dependent": false,
+    "has_author": false,
+    "signals": [
+      {
+        "signal": "word_count",
+        "value": 788,
+        "passed": true,
+        "issues": [],
+        "fixes": []
+      },
+      {
+        "signal": "info_gain",
+        "value": 0.0,
+        "passed": true,
+        "issues": [],
+        "fixes": []
+      },
+      {
+        "signal": "editorial_depth",
+        "value": 2,
+        "passed": false,
+        "issues": [
+          "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
+        ],
+        "fixes": [
+          "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
+        ]
+      },
+      {
+        "signal": "eeat",
+        "value": 2,
+        "passed": false,
+        "issues": [
+          "No regulatory/government source cited (YMYL requirement)"
+        ],
+        "fixes": [
+          "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
+        ]
       },
       {
         "signal": "js_dependency",
@@ -7353,96 +7455,12 @@
       }
     ],
     "issues": [
-      "Missing editorial blocks: FAQ with >= 3 questions"
+      "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance",
+      "No regulatory/government source cited (YMYL requirement)"
     ],
     "fixes": [
-      "Add missing section(s): FAQ with >= 3 questions."
-    ]
-  },
-  {
-    "url": "https://www.calcphi.com/blog/au/first-home-buyer-australia-guide/",
-    "slug": "d7f298bc814232d22b69477938e65c64",
-    "title": "First Home Buyer Australia 2025: Grants, Stamp Duty Exemptions, and What You Actually Need | CalcPhi",
-    "score": 85,
-    "status": "PASS",
-    "word_count": 832,
-    "is_placeholder": false,
-    "is_js_dependent": false,
-    "has_author": true,
-    "signals": [
-      {
-        "signal": "word_count",
-        "value": 832,
-        "passed": true,
-        "issues": [],
-        "fixes": []
-      },
-      {
-        "signal": "info_gain",
-        "value": 0.0,
-        "passed": true,
-        "issues": [],
-        "fixes": []
-      },
-      {
-        "signal": "editorial_depth",
-        "value": 2,
-        "passed": false,
-        "issues": [
-          "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
-        ],
-        "fixes": [
-          "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
-        ]
-      },
-      {
-        "signal": "eeat",
-        "value": 3,
-        "passed": true,
-        "issues": [],
-        "fixes": []
-      },
-      {
-        "signal": "js_dependency",
-        "value": 1.0,
-        "passed": true,
-        "issues": [],
-        "fixes": []
-      },
-      {
-        "signal": "meta_unique",
-        "value": true,
-        "passed": true,
-        "issues": [],
-        "fixes": []
-      },
-      {
-        "signal": "not_placeholder",
-        "value": true,
-        "passed": true,
-        "issues": [],
-        "fixes": []
-      },
-      {
-        "signal": "internal_links",
-        "value": 6,
-        "passed": true,
-        "issues": [],
-        "fixes": []
-      },
-      {
-        "signal": "layout_readiness",
-        "value": -0.0,
-        "passed": true,
-        "issues": [],
-        "fixes": []
-      }
-    ],
-    "issues": [
-      "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
-    ],
-    "fixes": [
-      "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
+      "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance.",
+      "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
     ]
   },
   {
@@ -7963,16 +7981,16 @@
     "url": "https://www.calcphi.com/",
     "slug": "2b5f4dd4ec6ba57eb7235d8b4a5f3514",
     "title": "Free Financial Calculators \u2013 India & Australia | CalcPhi",
-    "score": 85,
+    "score": 70,
     "status": "PASS",
-    "word_count": 587,
+    "word_count": 548,
     "is_placeholder": false,
     "is_js_dependent": false,
-    "has_author": true,
+    "has_author": false,
     "signals": [
       {
         "signal": "word_count",
-        "value": 587,
+        "value": 548,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -7997,10 +8015,16 @@
       },
       {
         "signal": "eeat",
-        "value": 3,
-        "passed": true,
-        "issues": [],
-        "fixes": []
+        "value": 1,
+        "passed": false,
+        "issues": [
+          "No named author byline detected (YMYL page requires E-E-A-T)",
+          "No regulatory/government source cited (YMYL requirement)"
+        ],
+        "fixes": [
+          "Add named author with credentials and bio link.",
+          "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
+        ]
       },
       {
         "signal": "js_dependency",
@@ -8025,7 +8049,7 @@
       },
       {
         "signal": "internal_links",
-        "value": 10,
+        "value": 9,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -8039,10 +8063,14 @@
       }
     ],
     "issues": [
-      "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
+      "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance",
+      "No named author byline detected (YMYL page requires E-E-A-T)",
+      "No regulatory/government source cited (YMYL requirement)"
     ],
     "fixes": [
-      "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
+      "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance.",
+      "Add named author with credentials and bio link.",
+      "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
     ]
   },
   {
@@ -13223,23 +13251,19 @@
     "url": "https://www.calcphi.com/india/professional-tax-calc-calculator/",
     "slug": "3933d8e1afe7c02b9d0d8e8777c730ef",
     "title": "Professional Tax Calculator India 2026 \u2013 State-wise PT Slab | CalcPhi",
-    "score": 85,
+    "score": 100,
     "status": "PASS",
-    "word_count": 335,
+    "word_count": 849,
     "is_placeholder": false,
     "is_js_dependent": false,
     "has_author": true,
     "signals": [
       {
         "signal": "word_count",
-        "value": 335,
-        "passed": false,
-        "issues": [
-          "word_count=335 (< 500)"
-        ],
-        "fixes": [
-          "Expand main content to at least 500 words with unique worked examples and explanation."
-        ]
+        "value": 849,
+        "passed": true,
+        "issues": [],
+        "fixes": []
       },
       {
         "signal": "info_gain",
@@ -13303,11 +13327,9 @@
       }
     ],
     "issues": [
-      "word_count=335 (< 500)",
       "Missing editorial blocks: how-to-use / next steps guidance"
     ],
     "fixes": [
-      "Expand main content to at least 500 words with unique worked examples and explanation.",
       "Add missing section(s): how-to-use / next steps guidance."
     ]
   },
@@ -14051,23 +14073,19 @@
     "url": "https://www.calcphi.com/india/bonus-tax-calculator/",
     "slug": "7b408ed41c3eef2e5c0a02892b054c7d",
     "title": "Bonus After Tax Calculator India 2026 \u2013 Net Bonus in Hand | CalcPhi",
-    "score": 85,
+    "score": 100,
     "status": "PASS",
-    "word_count": 344,
+    "word_count": 1030,
     "is_placeholder": false,
     "is_js_dependent": false,
     "has_author": true,
     "signals": [
       {
         "signal": "word_count",
-        "value": 344,
-        "passed": false,
-        "issues": [
-          "word_count=344 (< 500)"
-        ],
-        "fixes": [
-          "Expand main content to at least 500 words with unique worked examples and explanation."
-        ]
+        "value": 1030,
+        "passed": true,
+        "issues": [],
+        "fixes": []
       },
       {
         "signal": "info_gain",
@@ -14131,11 +14149,9 @@
       }
     ],
     "issues": [
-      "word_count=344 (< 500)",
       "Missing editorial blocks: how-to-use / next steps guidance"
     ],
     "fixes": [
-      "Expand main content to at least 500 words with unique worked examples and explanation.",
       "Add missing section(s): how-to-use / next steps guidance."
     ]
   },
@@ -20487,16 +20503,16 @@
     "url": "https://www.calcphi.com/help/",
     "slug": "d9a851531aee4c54396ba52c768c96fe",
     "title": "Help & FAQs \u2013 CalcPhi",
-    "score": 100,
+    "score": 85,
     "status": "PASS",
-    "word_count": 986,
+    "word_count": 947,
     "is_placeholder": false,
     "is_js_dependent": false,
-    "has_author": true,
+    "has_author": false,
     "signals": [
       {
         "signal": "word_count",
-        "value": 986,
+        "value": 947,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -20521,10 +20537,16 @@
       },
       {
         "signal": "eeat",
-        "value": 3,
-        "passed": true,
-        "issues": [],
-        "fixes": []
+        "value": 1,
+        "passed": false,
+        "issues": [
+          "No named author byline detected (YMYL page requires E-E-A-T)",
+          "No regulatory/government source cited (YMYL requirement)"
+        ],
+        "fixes": [
+          "Add named author with credentials and bio link.",
+          "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
+        ]
       },
       {
         "signal": "js_dependency",
@@ -20549,7 +20571,7 @@
       },
       {
         "signal": "internal_links",
-        "value": 5,
+        "value": 4,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -20563,26 +20585,30 @@
       }
     ],
     "issues": [
-      "Missing editorial blocks: how-to-use / next steps guidance"
+      "Missing editorial blocks: how-to-use / next steps guidance",
+      "No named author byline detected (YMYL page requires E-E-A-T)",
+      "No regulatory/government source cited (YMYL requirement)"
     ],
     "fixes": [
-      "Add missing section(s): how-to-use / next steps guidance."
+      "Add missing section(s): how-to-use / next steps guidance.",
+      "Add named author with credentials and bio link.",
+      "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
     ]
   },
   {
     "url": "https://www.calcphi.com/privacy/",
     "slug": "8888e8003a1961227db3604906dc5508",
     "title": "Privacy Policy \u2013 CalcPhi",
-    "score": 80,
-    "status": "PASS",
-    "word_count": 951,
+    "score": 65,
+    "status": "FAIL",
+    "word_count": 912,
     "is_placeholder": false,
     "is_js_dependent": false,
-    "has_author": true,
+    "has_author": false,
     "signals": [
       {
         "signal": "word_count",
-        "value": 951,
+        "value": 912,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -20607,10 +20633,14 @@
       },
       {
         "signal": "eeat",
-        "value": 3,
-        "passed": true,
-        "issues": [],
-        "fixes": []
+        "value": 2,
+        "passed": false,
+        "issues": [
+          "No regulatory/government source cited (YMYL requirement)"
+        ],
+        "fixes": [
+          "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
+        ]
       },
       {
         "signal": "js_dependency",
@@ -20635,10 +20665,10 @@
       },
       {
         "signal": "internal_links",
-        "value": 1,
+        "value": 0,
         "passed": false,
         "issues": [
-          "Only 1 in-content internal link(s) (need >= 3)"
+          "Only 0 in-content internal link(s) (need >= 3)"
         ],
         "fixes": [
           "Add at least 3 contextual internal links to related calculators or blog articles."
@@ -20654,10 +20684,12 @@
     ],
     "issues": [
       "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance",
-      "Only 1 in-content internal link(s) (need >= 3)"
+      "No regulatory/government source cited (YMYL requirement)",
+      "Only 0 in-content internal link(s) (need >= 3)"
     ],
     "fixes": [
       "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance.",
+      "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.).",
       "Add at least 3 contextual internal links to related calculators or blog articles."
     ]
   },
@@ -20665,19 +20697,19 @@
     "url": "https://www.calcphi.com/contact/",
     "slug": "3fc67d8c9c1db9c5e8047d0ca7d8851d",
     "title": "Contact CalcPhi \u2013 Get in Touch",
-    "score": 70,
-    "status": "PASS",
-    "word_count": 347,
+    "score": 50,
+    "status": "FAIL",
+    "word_count": 308,
     "is_placeholder": false,
     "is_js_dependent": false,
-    "has_author": true,
+    "has_author": false,
     "signals": [
       {
         "signal": "word_count",
-        "value": 347,
+        "value": 308,
         "passed": false,
         "issues": [
-          "word_count=347 (< 500)"
+          "word_count=308 (< 500)"
         ],
         "fixes": [
           "Expand main content to at least 500 words with unique worked examples and explanation."
@@ -20703,10 +20735,14 @@
       },
       {
         "signal": "eeat",
-        "value": 3,
-        "passed": true,
-        "issues": [],
-        "fixes": []
+        "value": 2,
+        "passed": false,
+        "issues": [
+          "No regulatory/government source cited (YMYL requirement)"
+        ],
+        "fixes": [
+          "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
+        ]
       },
       {
         "signal": "js_dependency",
@@ -20731,10 +20767,14 @@
       },
       {
         "signal": "internal_links",
-        "value": 3,
-        "passed": true,
-        "issues": [],
-        "fixes": []
+        "value": 2,
+        "passed": false,
+        "issues": [
+          "Only 2 in-content internal link(s) (need >= 3)"
+        ],
+        "fixes": [
+          "Add at least 3 contextual internal links to related calculators or blog articles."
+        ]
       },
       {
         "signal": "layout_readiness",
@@ -20745,28 +20785,32 @@
       }
     ],
     "issues": [
-      "word_count=347 (< 500)",
-      "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance"
+      "word_count=308 (< 500)",
+      "Missing editorial blocks: worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance",
+      "No regulatory/government source cited (YMYL requirement)",
+      "Only 2 in-content internal link(s) (need >= 3)"
     ],
     "fixes": [
       "Expand main content to at least 500 words with unique worked examples and explanation.",
-      "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance."
+      "Add missing section(s): worked example (real-world scenario), FAQ with >= 3 questions, how-to-use / next steps guidance.",
+      "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.).",
+      "Add at least 3 contextual internal links to related calculators or blog articles."
     ]
   },
   {
     "url": "https://www.calcphi.com/about/",
     "slug": "494a42846804ae07a085dae74325c321",
     "title": "About CalcPhi \u2013 Free Financial Calculators for India, USA, Canada & Australia",
-    "score": 85,
-    "status": "PASS",
-    "word_count": 798,
+    "score": 65,
+    "status": "FAIL",
+    "word_count": 759,
     "is_placeholder": false,
     "is_js_dependent": false,
-    "has_author": true,
+    "has_author": false,
     "signals": [
       {
         "signal": "word_count",
-        "value": 798,
+        "value": 759,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -20791,10 +20835,16 @@
       },
       {
         "signal": "eeat",
-        "value": 3,
-        "passed": true,
-        "issues": [],
-        "fixes": []
+        "value": 1,
+        "passed": false,
+        "issues": [
+          "No named author byline detected (YMYL page requires E-E-A-T)",
+          "No regulatory/government source cited (YMYL requirement)"
+        ],
+        "fixes": [
+          "Add named author with credentials and bio link.",
+          "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.)."
+        ]
       },
       {
         "signal": "js_dependency",
@@ -20819,10 +20869,14 @@
       },
       {
         "signal": "internal_links",
-        "value": 3,
-        "passed": true,
-        "issues": [],
-        "fixes": []
+        "value": 2,
+        "passed": false,
+        "issues": [
+          "Only 2 in-content internal link(s) (need >= 3)"
+        ],
+        "fixes": [
+          "Add at least 3 contextual internal links to related calculators or blog articles."
+        ]
       },
       {
         "signal": "layout_readiness",
@@ -20833,10 +20887,16 @@
       }
     ],
     "issues": [
-      "Missing editorial blocks: FAQ with >= 3 questions, how-to-use / next steps guidance"
+      "Missing editorial blocks: FAQ with >= 3 questions, how-to-use / next steps guidance",
+      "No named author byline detected (YMYL page requires E-E-A-T)",
+      "No regulatory/government source cited (YMYL requirement)",
+      "Only 2 in-content internal link(s) (need >= 3)"
     ],
     "fixes": [
-      "Add missing section(s): FAQ with >= 3 questions, how-to-use / next steps guidance."
+      "Add missing section(s): FAQ with >= 3 questions, how-to-use / next steps guidance.",
+      "Add named author with credentials and bio link.",
+      "Add at least one citation linking to a relevant regulatory source (ATO, SEBI, RBI, etc.).",
+      "Add at least 3 contextual internal links to related calculators or blog articles."
     ]
   },
   {
@@ -20935,12 +20995,12 @@
     "url": "https://www.calcphi.com/india/hra-calculator/",
     "slug": "0f95f872f6d580480ea2a7a6370f7a86",
     "title": "HRA Calculator India 2026 \u2013 House Rent Allowance Exemption | CalcPhi",
-    "score": 85,
+    "score": 100,
     "status": "PASS",
     "word_count": 1089,
     "is_placeholder": false,
     "is_js_dependent": false,
-    "has_author": false,
+    "has_author": true,
     "signals": [
       {
         "signal": "word_count",
@@ -20965,14 +21025,10 @@
       },
       {
         "signal": "eeat",
-        "value": 2,
-        "passed": false,
-        "issues": [
-          "No named author byline detected (YMYL page requires E-E-A-T)"
-        ],
-        "fixes": [
-          "Add named author with credentials and bio link."
-        ]
+        "value": 3,
+        "passed": true,
+        "issues": [],
+        "fixes": []
       },
       {
         "signal": "js_dependency",
@@ -21010,23 +21066,19 @@
         "fixes": []
       }
     ],
-    "issues": [
-      "No named author byline detected (YMYL page requires E-E-A-T)"
-    ],
-    "fixes": [
-      "Add named author with credentials and bio link."
-    ]
+    "issues": [],
+    "fixes": []
   },
   {
     "url": "https://www.calcphi.com/india/income-tax-calculator/",
     "slug": "3ccc44bcd73376d04ea57d0020ccf31b",
     "title": "Income Tax Calculator India FY 2026-27 | CalcPhi",
-    "score": 85,
+    "score": 100,
     "status": "PASS",
     "word_count": 2034,
     "is_placeholder": false,
     "is_js_dependent": false,
-    "has_author": false,
+    "has_author": true,
     "signals": [
       {
         "signal": "word_count",
@@ -21051,14 +21103,10 @@
       },
       {
         "signal": "eeat",
-        "value": 2,
-        "passed": false,
-        "issues": [
-          "No named author byline detected (YMYL page requires E-E-A-T)"
-        ],
-        "fixes": [
-          "Add named author with credentials and bio link."
-        ]
+        "value": 3,
+        "passed": true,
+        "issues": [],
+        "fixes": []
       },
       {
         "signal": "js_dependency",
@@ -21096,23 +21144,19 @@
         "fixes": []
       }
     ],
-    "issues": [
-      "No named author byline detected (YMYL page requires E-E-A-T)"
-    ],
-    "fixes": [
-      "Add named author with credentials and bio link."
-    ]
+    "issues": [],
+    "fixes": []
   },
   {
     "url": "https://www.calcphi.com/india/rd-calculator/",
     "slug": "222e867a5c280853aac85acb86ce518a",
     "title": "RD Calculator India 2026 \u2013 Recurring Deposit Maturity Value & Interest | CalcPhi",
-    "score": 85,
+    "score": 100,
     "status": "PASS",
     "word_count": 901,
     "is_placeholder": false,
     "is_js_dependent": false,
-    "has_author": false,
+    "has_author": true,
     "signals": [
       {
         "signal": "word_count",
@@ -21137,14 +21181,10 @@
       },
       {
         "signal": "eeat",
-        "value": 2,
-        "passed": false,
-        "issues": [
-          "No named author byline detected (YMYL page requires E-E-A-T)"
-        ],
-        "fixes": [
-          "Add named author with credentials and bio link."
-        ]
+        "value": 3,
+        "passed": true,
+        "issues": [],
+        "fixes": []
       },
       {
         "signal": "js_dependency",
@@ -21182,23 +21222,19 @@
         "fixes": []
       }
     ],
-    "issues": [
-      "No named author byline detected (YMYL page requires E-E-A-T)"
-    ],
-    "fixes": [
-      "Add named author with credentials and bio link."
-    ]
+    "issues": [],
+    "fixes": []
   },
   {
     "url": "https://www.calcphi.com/india/lumpsum-calculator/",
     "slug": "ff3fea61701705915955081c42f9a598",
     "title": "Lumpsum Calculator India 2026 \u2013 One-Time Returns | CalcPhi",
-    "score": 85,
+    "score": 100,
     "status": "PASS",
     "word_count": 951,
     "is_placeholder": false,
     "is_js_dependent": false,
-    "has_author": false,
+    "has_author": true,
     "signals": [
       {
         "signal": "word_count",
@@ -21223,14 +21259,10 @@
       },
       {
         "signal": "eeat",
-        "value": 2,
-        "passed": false,
-        "issues": [
-          "No named author byline detected (YMYL page requires E-E-A-T)"
-        ],
-        "fixes": [
-          "Add named author with credentials and bio link."
-        ]
+        "value": 3,
+        "passed": true,
+        "issues": [],
+        "fixes": []
       },
       {
         "signal": "js_dependency",
@@ -21268,23 +21300,19 @@
         "fixes": []
       }
     ],
-    "issues": [
-      "No named author byline detected (YMYL page requires E-E-A-T)"
-    ],
-    "fixes": [
-      "Add named author with credentials and bio link."
-    ]
+    "issues": [],
+    "fixes": []
   },
   {
     "url": "https://www.calcphi.com/india/step-up-sip-calculator/",
     "slug": "0a5ed631a5a30fc57e95934c98c4a1d6",
     "title": "Step-Up SIP Calculator India 2026 \u2013 Returns with Annual SIP Increase | CalcPhi",
-    "score": 85,
+    "score": 100,
     "status": "PASS",
     "word_count": 891,
     "is_placeholder": false,
     "is_js_dependent": false,
-    "has_author": false,
+    "has_author": true,
     "signals": [
       {
         "signal": "word_count",
@@ -21309,14 +21337,10 @@
       },
       {
         "signal": "eeat",
-        "value": 2,
-        "passed": false,
-        "issues": [
-          "No named author byline detected (YMYL page requires E-E-A-T)"
-        ],
-        "fixes": [
-          "Add named author with credentials and bio link."
-        ]
+        "value": 3,
+        "passed": true,
+        "issues": [],
+        "fixes": []
       },
       {
         "signal": "js_dependency",
@@ -21354,23 +21378,19 @@
         "fixes": []
       }
     ],
-    "issues": [
-      "No named author byline detected (YMYL page requires E-E-A-T)"
-    ],
-    "fixes": [
-      "Add named author with credentials and bio link."
-    ]
+    "issues": [],
+    "fixes": []
   },
   {
     "url": "https://www.calcphi.com/india/fd-calculator/",
     "slug": "f20a5543b55f7699caf29237db3e5c89",
     "title": "FD Calculator India 2026 \u2013 Fixed Deposit Maturity & Interest | CalcPhi",
-    "score": 85,
+    "score": 100,
     "status": "PASS",
     "word_count": 902,
     "is_placeholder": false,
     "is_js_dependent": false,
-    "has_author": false,
+    "has_author": true,
     "signals": [
       {
         "signal": "word_count",
@@ -21395,14 +21415,10 @@
       },
       {
         "signal": "eeat",
-        "value": 2,
-        "passed": false,
-        "issues": [
-          "No named author byline detected (YMYL page requires E-E-A-T)"
-        ],
-        "fixes": [
-          "Add named author with credentials and bio link."
-        ]
+        "value": 3,
+        "passed": true,
+        "issues": [],
+        "fixes": []
       },
       {
         "signal": "js_dependency",
@@ -21440,23 +21456,19 @@
         "fixes": []
       }
     ],
-    "issues": [
-      "No named author byline detected (YMYL page requires E-E-A-T)"
-    ],
-    "fixes": [
-      "Add named author with credentials and bio link."
-    ]
+    "issues": [],
+    "fixes": []
   },
   {
     "url": "https://www.calcphi.com/india/ppf-calculator/",
     "slug": "dc2e03b8445aaf988ae9cd89a53f4de9",
     "title": "PPF Calculator India 2026 \u2013 Maturity Value at 7.1% Interest Rate | CalcPhi",
-    "score": 85,
+    "score": 100,
     "status": "PASS",
     "word_count": 921,
     "is_placeholder": false,
     "is_js_dependent": false,
-    "has_author": false,
+    "has_author": true,
     "signals": [
       {
         "signal": "word_count",
@@ -21481,14 +21493,10 @@
       },
       {
         "signal": "eeat",
-        "value": 2,
-        "passed": false,
-        "issues": [
-          "No named author byline detected (YMYL page requires E-E-A-T)"
-        ],
-        "fixes": [
-          "Add named author with credentials and bio link."
-        ]
+        "value": 3,
+        "passed": true,
+        "issues": [],
+        "fixes": []
       },
       {
         "signal": "js_dependency",
@@ -21526,27 +21534,23 @@
         "fixes": []
       }
     ],
-    "issues": [
-      "No named author byline detected (YMYL page requires E-E-A-T)"
-    ],
-    "fixes": [
-      "Add named author with credentials and bio link."
-    ]
+    "issues": [],
+    "fixes": []
   },
   {
     "url": "https://www.calcphi.com/india/emi-calculator/",
     "slug": "c24929733f0cb5d8c19a99d96096fc69",
     "title": "EMI Calculator India 2026 \u2013 Home Loan, Car Loan & Personal Loan | CalcPhi",
-    "score": 85,
+    "score": 100,
     "status": "PASS",
-    "word_count": 970,
+    "word_count": 969,
     "is_placeholder": false,
     "is_js_dependent": false,
-    "has_author": false,
+    "has_author": true,
     "signals": [
       {
         "signal": "word_count",
-        "value": 970,
+        "value": 969,
         "passed": true,
         "issues": [],
         "fixes": []
@@ -21567,14 +21571,10 @@
       },
       {
         "signal": "eeat",
-        "value": 2,
-        "passed": false,
-        "issues": [
-          "No named author byline detected (YMYL page requires E-E-A-T)"
-        ],
-        "fixes": [
-          "Add named author with credentials and bio link."
-        ]
+        "value": 3,
+        "passed": true,
+        "issues": [],
+        "fixes": []
       },
       {
         "signal": "js_dependency",
@@ -21612,23 +21612,19 @@
         "fixes": []
       }
     ],
-    "issues": [
-      "No named author byline detected (YMYL page requires E-E-A-T)"
-    ],
-    "fixes": [
-      "Add named author with credentials and bio link."
-    ]
+    "issues": [],
+    "fixes": []
   },
   {
     "url": "https://www.calcphi.com/india/sip-calculator/",
     "slug": "97effaac0dfb1f29426c4cfd07ed8fe0",
     "title": "SIP Calculator India 2026 \u2013 Monthly Returns | CalcPhi",
-    "score": 85,
+    "score": 100,
     "status": "PASS",
     "word_count": 1862,
     "is_placeholder": false,
     "is_js_dependent": false,
-    "has_author": false,
+    "has_author": true,
     "signals": [
       {
         "signal": "word_count",
@@ -21653,14 +21649,10 @@
       },
       {
         "signal": "eeat",
-        "value": 2,
-        "passed": false,
-        "issues": [
-          "No named author byline detected (YMYL page requires E-E-A-T)"
-        ],
-        "fixes": [
-          "Add named author with credentials and bio link."
-        ]
+        "value": 3,
+        "passed": true,
+        "issues": [],
+        "fixes": []
       },
       {
         "signal": "js_dependency",
@@ -21698,12 +21690,8 @@
         "fixes": []
       }
     ],
-    "issues": [
-      "No named author byline detected (YMYL page requires E-E-A-T)"
-    ],
-    "fixes": [
-      "Add named author with credentials and bio link."
-    ]
+    "issues": [],
+    "fixes": []
   },
   {
     "url": "https://www.calcphi.com/australia/blog/first-home-buyer-grants-australia-2026/",
