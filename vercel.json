@@ -1,151 +1,1214 @@
 {
   "version": 2,
   "name": "calcphi",
-  "buildCommand": "",
+  "buildCommand": "npx @11ty/eleventy",
   "outputDirectory": "_site",
   "redirects": [
-    { "source": "/in", "destination": "/india/", "permanent": true },
-    { "source": "/in/", "destination": "/india/", "permanent": true },
-    { "source": "/us", "destination": "/usa/", "permanent": true },
-    { "source": "/us/", "destination": "/usa/", "permanent": true },
-    { "source": "/ca", "destination": "/canada/", "permanent": true },
-    { "source": "/ca/", "destination": "/canada/", "permanent": true },
-    { "source": "/au", "destination": "/australia/", "permanent": true },
-    { "source": "/au/", "destination": "/australia/", "permanent": true },
-    { "source": "/in/blog/retire-early-india-guide.html", "destination": "/india/blog/retire-early-india-guide/", "permanent": true },
-    { "source": "/in/privacy.html", "destination": "/privacy/", "permanent": true },
-    { "source": "/in/:path*", "destination": "/india/:path*", "permanent": true },
-    { "source": "/us/:path*", "destination": "/usa/:path*", "permanent": true },
-    { "source": "/ca/:path*", "destination": "/canada/:path*", "permanent": true },
-    { "source": "/au/:path*", "destination": "/australia/:path*", "permanent": true },
-    { "source": "/sip-10-years.html", "destination": "/india/sip-calculator/", "permanent": true },
-    { "source": "/sip-10-years", "destination": "/india/sip-calculator/", "permanent": true },
-    { "source": "/mutual-fund-returns.html", "destination": "/india/mf-returns-calculator/", "permanent": true },
-    { "source": "/sip-50000-month.html", "destination": "/india/sip-calculator/", "permanent": true },
-    { "source": "/india/epf-calculator.html", "destination": "/india/epf-calculator/", "permanent": true },
-
-    { "source": "/blog/au/:path*", "destination": "/australia/blog/:path*", "permanent": true },
-    { "source": "/australia/blog/investing/", "destination": "/australia/blog/investing-guide-australia/", "permanent": true },
-    { "source": "/australia/blog/investing", "destination": "/australia/blog/investing-guide-australia/", "permanent": true },
-    { "source": "/australia/blog/lenders-mortgage-insurance-guide/", "destination": "/australia/blog/lenders-mortgage-insurance-australia/", "permanent": true },
-    { "source": "/australia/blog/lenders-mortgage-insurance-guide", "destination": "/australia/blog/lenders-mortgage-insurance-australia/", "permanent": true },
-    { "source": "/australia/blog/medicare-levy-surcharge-guide/", "destination": "/australia/blog/medicare-levy-surcharge-australia/", "permanent": true },
-    { "source": "/australia/blog/medicare-levy-surcharge-guide", "destination": "/australia/blog/medicare-levy-surcharge-australia/", "permanent": true },
-    { "source": "/australia/blog/mortgage-borrowing-capacity/", "destination": "/australia/blog/mortgage-borrowing-capacity-australia-2026/", "permanent": true },
-    { "source": "/australia/blog/mortgage-borrowing-capacity", "destination": "/australia/blog/mortgage-borrowing-capacity-australia-2026/", "permanent": true },
-    { "source": "/australia/blog/negative-gearing-australia/", "destination": "/australia/blog/negative-gearing-australia-2026/", "permanent": true },
-    { "source": "/australia/blog/negative-gearing-australia", "destination": "/australia/blog/negative-gearing-australia-2026/", "permanent": true },
-    { "source": "/australia/blog/offset-account-vs-redraw/", "destination": "/australia/blog/offset-account-vs-redraw-australia/", "permanent": true },
-    { "source": "/australia/blog/offset-account-vs-redraw", "destination": "/australia/blog/offset-account-vs-redraw-australia/", "permanent": true },
-    { "source": "/australia/blog/pay-off-mortgage-early/", "destination": "/australia/blog/pay-off-mortgage-early-australia/", "permanent": true },
-    { "source": "/australia/blog/pay-off-mortgage-early", "destination": "/australia/blog/pay-off-mortgage-early-australia/", "permanent": true },
-    { "source": "/australia/blog/salary-sacrifice-super-guide/", "destination": "/australia/blog/salary-sacrifice-super-australia/", "permanent": true },
-    { "source": "/australia/blog/salary-sacrifice-super-guide", "destination": "/australia/blog/salary-sacrifice-super-australia/", "permanent": true },
-    { "source": "/australia/blog/save-house-deposit-australia/", "destination": "/australia/blog/how-to-save-house-deposit-australia-2026/", "permanent": true },
-    { "source": "/australia/blog/save-house-deposit-australia", "destination": "/australia/blog/how-to-save-house-deposit-australia-2026/", "permanent": true },
-    { "source": "/australia/blog/smsf-guide-australia/", "destination": "/australia/blog/smsf-australia-worth-it-2026/", "permanent": true },
-    { "source": "/australia/blog/smsf-guide-australia", "destination": "/australia/blog/smsf-australia-worth-it-2026/", "permanent": true },
-    { "source": "/australia/blog/spouse-super-contributions/", "destination": "/australia/blog/spouse-super-contributions-australia/", "permanent": true },
-    { "source": "/australia/blog/spouse-super-contributions", "destination": "/australia/blog/spouse-super-contributions-australia/", "permanent": true },
-    { "source": "/australia/blog/stamp-duty-australia-guide/", "destination": "/australia/blog/stamp-duty-australia-2026-state-by-state-guide/", "permanent": true },
-    { "source": "/australia/blog/stamp-duty-australia-guide", "destination": "/australia/blog/stamp-duty-australia-2026-state-by-state-guide/", "permanent": true },
-    { "source": "/australia/blog/super-contribution-caps-2026/", "destination": "/australia/blog/super-contribution-caps-2026-27/", "permanent": true },
-    { "source": "/australia/blog/super-contribution-caps-2026", "destination": "/australia/blog/super-contribution-caps-2026-27/", "permanent": true },
-
-    { "source": "/blog/term-insurance-guide-india.html", "destination": "/india/blog/term-insurance-india-guide/", "permanent": true },
-    { "source": "/blog/term-insurance-guide-india", "destination": "/india/blog/term-insurance-india-guide/", "permanent": true },
-    { "source": "/india/blog/term-insurance-guide-india/", "destination": "/india/blog/term-insurance-india-guide/", "permanent": true },
-    { "source": "/india/blog/term-insurance-guide-india", "destination": "/india/blog/term-insurance-india-guide/", "permanent": true },
-    { "source": "/india/blog/:slug.html", "destination": "/india/blog/:slug/", "permanent": true },
-    { "source": "/india/blog/financial-planning-30s-india.html", "destination": "/india/blog/financial-planning-30s-india/", "permanent": true },
-    { "source": "/blog/financial-planning-30s-india.html", "destination": "/india/blog/financial-planning-30s-india/", "permanent": true },
-    { "source": "/blog/financial-planning-30s-india.", "destination": "/india/blog/financial-planning-30s-india/", "permanent": true },
-    { "source": "/blog/how-to-plan-retirement-india.html", "destination": "/india/blog/how-to-plan-retirement-india/", "permanent": true },
-    { "source": "/blog/what-is-fire-financial-independence-india.html", "destination": "/india/blog/what-is-fire-financial-independence/", "permanent": true },
-    { "source": "/blog/what-is-fire-financial-independence-india", "destination": "/india/blog/what-is-fire-financial-independence/", "permanent": true },
-    { "source": "/blog/how-to-build-emergency-fund-india.html", "destination": "/india/blog/how-to-build-emergency-fund-india/", "permanent": true },
-    { "source": "/blog/best-sip-amount-by-salary.html", "destination": "/india/blog/best-sip-amount-by-salary/", "permanent": true },
-    { "source": "/blog/sip-vs-fd-which-is-better.html", "destination": "/india/blog/sip-vs-fd-which-is-better/", "permanent": true },
-    { "source": "/blog/credit-score-india-guide.html", "destination": "/india/blog/credit-score-india-guide/", "permanent": true },
-
-    { "source": "/blog/", "destination": "/india/blog/", "permanent": true },
-    { "source": "/blog/:path*", "destination": "/india/blog/:path*", "permanent": true },
-
-    { "source": "/lumpsum-calculator", "destination": "/india/lumpsum-calculator/", "permanent": true },
-    { "source": "/lumpsum-calculator/", "destination": "/india/lumpsum-calculator/", "permanent": true },
-    { "source": "/mutual-fund-returns", "destination": "/india/mf-returns-calculator/", "permanent": true },
-    { "source": "/mutual-fund-returns/", "destination": "/india/mf-returns-calculator/", "permanent": true },
-    { "source": "/sip-50000-month", "destination": "/india/sip-calculator/", "permanent": true },
-    { "source": "/sip-50000-month/", "destination": "/india/sip-calculator/", "permanent": true },
-    { "source": "/CalcPhi/:path*", "destination": "/india/sip-calculator/", "permanent": true },
-    { "source": "/india/annuity-calculator-calculator/", "destination": "/india/annuity-calculator/", "permanent": true },
-    { "source": "/india/apy-calculator-calculator/", "destination": "/india/apy-calculator/", "permanent": true },
-    { "source": "/india/epf-calculator-calculator/", "destination": "/india/epf-calculator/", "permanent": true },
-    { "source": "/india/esop-calculator-calculator/", "destination": "/india/esop-calculator/", "permanent": true },
-    { "source": "/india/gst-calculator-calculator/", "destination": "/india/gst-calculator/", "permanent": true },
-    { "source": "/india/kvp-calculator-calculator/", "destination": "/india/kvp-calculator/", "permanent": true },
-    { "source": "/india/moratorium-calculator-calculator/", "destination": "/india/moratorium-calculator/", "permanent": true },
-    { "source": "/india/nav-calculator-calculator/", "destination": "/india/nav-calculator/", "permanent": true },
-    { "source": "/india/nsc-calculator-calculator/", "destination": "/india/nsc-calculator/", "permanent": true },
-    { "source": "/india/overdraft-calculator-calculator/", "destination": "/india/overdraft-calculator/", "permanent": true },
-    { "source": "/india/scss-calculator-calculator/", "destination": "/india/scss-calculator/", "permanent": true },
-    { "source": "/india/ssy-calculator-calculator/", "destination": "/india/ssy-calculator/", "permanent": true },
-    { "source": "/india/surcharge-calculator-calculator/", "destination": "/india/surcharge-calculator/", "permanent": true },
-    { "source": "/india/tds-calculator-calculator/", "destination": "/india/tds-calculator/", "permanent": true },
-    { "source": "/india/ulip-calculator-calculator/", "destination": "/india/ulip-calculator/", "permanent": true },
-    { "source": "/india/vrs-calculator-calculator/", "destination": "/india/vrs-calculator/", "permanent": true },
-    { "source": "/sip-main.html", "destination": "/india/sip-calculator/", "permanent": true },
-    { "source": "/emi-calculator.html", "destination": "/india/emi-calculator/", "permanent": true },
-    { "source": "/income-tax.html", "destination": "/india/income-tax-calculator/", "permanent": true },
-    { "source": "/ppf-calculator.html", "destination": "/india/ppf-calculator/", "permanent": true },
-    { "source": "/nps-calculator.html", "destination": "/india/nps-calculator/", "permanent": true },
-    { "source": "/fd-calculator.html", "destination": "/india/fd-calculator/", "permanent": true },
-    { "source": "/rd-calculator.html", "destination": "/india/rd-calculator/", "permanent": true },
-    { "source": "/lumpsum-calculator.html", "destination": "/india/lumpsum-calculator/", "permanent": true },
-    { "source": "/step-up-sip.html", "destination": "/india/step-up-sip-calculator/", "permanent": true },
-    { "source": "/fire-calculator.html", "destination": "/india/", "permanent": true },
-    { "source": "/gst-calculator.html", "destination": "/india/", "permanent": true },
-    { "source": "/gratuity-calculator.html", "destination": "/india/", "permanent": true },
-    { "source": "/india/sip-main.html", "destination": "/india/sip-calculator/", "permanent": true },
-    { "source": "/india/emi-calculator.html", "destination": "/india/emi-calculator/", "permanent": true },
-    { "source": "/india/income-tax.html", "destination": "/india/income-tax-calculator/", "permanent": true },
-    { "source": "/india/ppf-calculator.html", "destination": "/india/ppf-calculator/", "permanent": true },
-    { "source": "/india/nps-calculator.html", "destination": "/india/nps-calculator/", "permanent": true },
-    { "source": "/india/fd-calculator.html", "destination": "/india/fd-calculator/", "permanent": true },
-    { "source": "/india/rd-calculator.html", "destination": "/india/rd-calculator/", "permanent": true },
-    { "source": "/india/lumpsum-calculator.html", "destination": "/india/lumpsum-calculator/", "permanent": true },
-    { "source": "/india/step-up-sip.html", "destination": "/india/step-up-sip-calculator/", "permanent": true },
-    { "source": "/india/income-tax-calculator.html", "destination": "/india/income-tax-calculator/", "permanent": true },
-    { "source": "/india/hra-calculator.html", "destination": "/india/hra-calculator/", "permanent": true },
-    { "source": "/india/blog/retire-early-india-guide.html", "destination": "/india/blog/retire-early-india-guide/", "permanent": true },
-    { "source": "/india/about.html", "destination": "/about/", "permanent": true },
-    { "source": "/india/contact.html", "destination": "/contact/", "permanent": true },
-    { "source": "/india/privacy.html", "destination": "/privacy/", "permanent": true },
-    { "source": "/about.html", "destination": "/about/", "permanent": true },
-    { "source": "/contact.html", "destination": "/contact/", "permanent": true },
-    { "source": "/privacy.html", "destination": "/privacy/", "permanent": true },
-    { "source": "/about/authors/", "destination": "/india/authors/", "permanent": true },
-    { "source": "/about/authors/priya-sharma/", "destination": "/india/authors/priya-sharma/", "permanent": true },
-    { "source": "/about/authors/arjun-mehta/", "destination": "/india/authors/arjun-mehta/", "permanent": true },
-    { "source": "/about/authors/deepa-krishnan/", "destination": "/india/authors/deepa-krishnan/", "permanent": true },
-    { "source": "/about/authors/sarah-mitchell/", "destination": "/australia/authors/sarah-mitchell/", "permanent": true },
-    { "source": "/about/authors/james-obrien/", "destination": "/australia/authors/james-obrien/", "permanent": true },
-    { "source": "/about/authors/emma-hartley/", "destination": "/australia/authors/emma-hartley/", "permanent": true }
+    {
+      "source": "/in",
+      "destination": "/india/",
+      "permanent": true
+    },
+    {
+      "source": "/in/",
+      "destination": "/india/",
+      "permanent": true
+    },
+    {
+      "source": "/us",
+      "destination": "/usa/",
+      "permanent": true
+    },
+    {
+      "source": "/us/",
+      "destination": "/usa/",
+      "permanent": true
+    },
+    {
+      "source": "/ca",
+      "destination": "/canada/",
+      "permanent": true
+    },
+    {
+      "source": "/ca/",
+      "destination": "/canada/",
+      "permanent": true
+    },
+    {
+      "source": "/au",
+      "destination": "/india/",
+      "permanent": true
+    },
+    {
+      "source": "/au/",
+      "destination": "/india/",
+      "permanent": true
+    },
+    {
+      "source": "/in/blog/retire-early-india-guide.html",
+      "destination": "/india/blog/retire-early-india-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/in/privacy.html",
+      "destination": "/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/in/:path*",
+      "destination": "/india/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/us/:path*",
+      "destination": "/usa/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/ca/:path*",
+      "destination": "/canada/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/au/:path*",
+      "destination": "/india/",
+      "permanent": true
+    },
+    {
+      "source": "/sip-10-years.html",
+      "destination": "/india/sip-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/sip-10-years",
+      "destination": "/india/sip-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/mutual-fund-returns.html",
+      "destination": "/india/mf-returns-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/sip-50000-month.html",
+      "destination": "/india/sip-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/epf-calculator.html",
+      "destination": "/india/epf-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/au/:path*",
+      "destination": "/australia/blog/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/australia/blog/investing/",
+      "destination": "/australia/blog/investing-guide-australia/",
+      "permanent": true
+    },
+    {
+      "source": "/australia/blog/investing",
+      "destination": "/australia/blog/investing-guide-australia/",
+      "permanent": true
+    },
+    {
+      "source": "/australia/blog/lenders-mortgage-insurance-guide/",
+      "destination": "/australia/blog/lenders-mortgage-insurance-australia/",
+      "permanent": true
+    },
+    {
+      "source": "/australia/blog/lenders-mortgage-insurance-guide",
+      "destination": "/australia/blog/lenders-mortgage-insurance-australia/",
+      "permanent": true
+    },
+    {
+      "source": "/australia/blog/medicare-levy-surcharge-guide/",
+      "destination": "/australia/blog/medicare-levy-surcharge-australia/",
+      "permanent": true
+    },
+    {
+      "source": "/australia/blog/medicare-levy-surcharge-guide",
+      "destination": "/australia/blog/medicare-levy-surcharge-australia/",
+      "permanent": true
+    },
+    {
+      "source": "/australia/blog/mortgage-borrowing-capacity/",
+      "destination": "/australia/blog/mortgage-borrowing-capacity-australia-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/australia/blog/mortgage-borrowing-capacity",
+      "destination": "/australia/blog/mortgage-borrowing-capacity-australia-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/australia/blog/negative-gearing-australia/",
+      "destination": "/australia/blog/negative-gearing-australia-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/australia/blog/negative-gearing-australia",
+      "destination": "/australia/blog/negative-gearing-australia-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/australia/blog/offset-account-vs-redraw/",
+      "destination": "/australia/blog/offset-account-vs-redraw-australia/",
+      "permanent": true
+    },
+    {
+      "source": "/australia/blog/offset-account-vs-redraw",
+      "destination": "/australia/blog/offset-account-vs-redraw-australia/",
+      "permanent": true
+    },
+    {
+      "source": "/australia/blog/pay-off-mortgage-early/",
+      "destination": "/australia/blog/pay-off-mortgage-early-australia/",
+      "permanent": true
+    },
+    {
+      "source": "/australia/blog/pay-off-mortgage-early",
+      "destination": "/australia/blog/pay-off-mortgage-early-australia/",
+      "permanent": true
+    },
+    {
+      "source": "/australia/blog/salary-sacrifice-super-guide/",
+      "destination": "/australia/blog/salary-sacrifice-super-australia/",
+      "permanent": true
+    },
+    {
+      "source": "/australia/blog/salary-sacrifice-super-guide",
+      "destination": "/australia/blog/salary-sacrifice-super-australia/",
+      "permanent": true
+    },
+    {
+      "source": "/australia/blog/save-house-deposit-australia/",
+      "destination": "/australia/blog/how-to-save-house-deposit-australia-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/australia/blog/save-house-deposit-australia",
+      "destination": "/australia/blog/how-to-save-house-deposit-australia-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/australia/blog/smsf-guide-australia/",
+      "destination": "/australia/blog/smsf-australia-worth-it-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/australia/blog/smsf-guide-australia",
+      "destination": "/australia/blog/smsf-australia-worth-it-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/australia/blog/spouse-super-contributions/",
+      "destination": "/australia/blog/spouse-super-contributions-australia/",
+      "permanent": true
+    },
+    {
+      "source": "/australia/blog/spouse-super-contributions",
+      "destination": "/australia/blog/spouse-super-contributions-australia/",
+      "permanent": true
+    },
+    {
+      "source": "/australia/blog/stamp-duty-australia-guide/",
+      "destination": "/australia/blog/stamp-duty-australia-2026-state-by-state-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/australia/blog/stamp-duty-australia-guide",
+      "destination": "/australia/blog/stamp-duty-australia-2026-state-by-state-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/australia/blog/super-contribution-caps-2026/",
+      "destination": "/australia/blog/super-contribution-caps-2026-27/",
+      "permanent": true
+    },
+    {
+      "source": "/australia/blog/super-contribution-caps-2026",
+      "destination": "/australia/blog/super-contribution-caps-2026-27/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/term-insurance-guide-india.html",
+      "destination": "/india/blog/term-insurance-india-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/term-insurance-guide-india",
+      "destination": "/india/blog/term-insurance-india-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/india/blog/term-insurance-guide-india/",
+      "destination": "/india/blog/term-insurance-india-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/india/blog/term-insurance-guide-india",
+      "destination": "/india/blog/term-insurance-india-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/india/blog/:slug.html",
+      "destination": "/india/blog/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/india/blog/financial-planning-30s-india.html",
+      "destination": "/india/blog/financial-planning-30s-india/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/financial-planning-30s-india.html",
+      "destination": "/india/blog/financial-planning-30s-india/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/financial-planning-30s-india.",
+      "destination": "/india/blog/financial-planning-30s-india/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-plan-retirement-india.html",
+      "destination": "/india/blog/how-to-plan-retirement-india/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/what-is-fire-financial-independence-india.html",
+      "destination": "/india/blog/what-is-fire-financial-independence/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/what-is-fire-financial-independence-india",
+      "destination": "/india/blog/what-is-fire-financial-independence/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-build-emergency-fund-india.html",
+      "destination": "/india/blog/how-to-build-emergency-fund-india/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/best-sip-amount-by-salary.html",
+      "destination": "/india/blog/best-sip-amount-by-salary/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sip-vs-fd-which-is-better.html",
+      "destination": "/india/blog/sip-vs-fd-which-is-better/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/credit-score-india-guide.html",
+      "destination": "/india/blog/credit-score-india-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/",
+      "destination": "/india/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/:path*",
+      "destination": "/india/blog/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/lumpsum-calculator",
+      "destination": "/india/lumpsum-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/lumpsum-calculator/",
+      "destination": "/india/lumpsum-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/mutual-fund-returns",
+      "destination": "/india/mf-returns-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/mutual-fund-returns/",
+      "destination": "/india/mf-returns-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/sip-50000-month",
+      "destination": "/india/sip-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/sip-50000-month/",
+      "destination": "/india/sip-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/CalcPhi/:path*",
+      "destination": "/india/sip-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/annuity-calculator-calculator/",
+      "destination": "/india/annuity-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/apy-calculator-calculator/",
+      "destination": "/india/apy-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/epf-calculator-calculator/",
+      "destination": "/india/epf-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/esop-calculator-calculator/",
+      "destination": "/india/esop-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/gst-calculator-calculator/",
+      "destination": "/india/gst-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/kvp-calculator-calculator/",
+      "destination": "/india/kvp-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/moratorium-calculator-calculator/",
+      "destination": "/india/moratorium-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/nav-calculator-calculator/",
+      "destination": "/india/nav-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/nsc-calculator-calculator/",
+      "destination": "/india/nsc-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/overdraft-calculator-calculator/",
+      "destination": "/india/overdraft-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/scss-calculator-calculator/",
+      "destination": "/india/scss-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/ssy-calculator-calculator/",
+      "destination": "/india/ssy-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/surcharge-calculator-calculator/",
+      "destination": "/india/surcharge-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/tds-calculator-calculator/",
+      "destination": "/india/tds-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/ulip-calculator-calculator/",
+      "destination": "/india/ulip-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/vrs-calculator-calculator/",
+      "destination": "/india/vrs-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/sip-main.html",
+      "destination": "/india/sip-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/emi-calculator.html",
+      "destination": "/india/emi-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/income-tax.html",
+      "destination": "/india/income-tax-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/ppf-calculator.html",
+      "destination": "/india/ppf-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/nps-calculator.html",
+      "destination": "/india/nps-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/fd-calculator.html",
+      "destination": "/india/fd-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/rd-calculator.html",
+      "destination": "/india/rd-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/lumpsum-calculator.html",
+      "destination": "/india/lumpsum-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/step-up-sip.html",
+      "destination": "/india/step-up-sip-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/fire-calculator.html",
+      "destination": "/india/",
+      "permanent": true
+    },
+    {
+      "source": "/gst-calculator.html",
+      "destination": "/india/",
+      "permanent": true
+    },
+    {
+      "source": "/gratuity-calculator.html",
+      "destination": "/india/",
+      "permanent": true
+    },
+    {
+      "source": "/india/sip-main.html",
+      "destination": "/india/sip-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/emi-calculator.html",
+      "destination": "/india/emi-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/income-tax.html",
+      "destination": "/india/income-tax-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/ppf-calculator.html",
+      "destination": "/india/ppf-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/nps-calculator.html",
+      "destination": "/india/nps-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/fd-calculator.html",
+      "destination": "/india/fd-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/rd-calculator.html",
+      "destination": "/india/rd-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/lumpsum-calculator.html",
+      "destination": "/india/lumpsum-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/step-up-sip.html",
+      "destination": "/india/step-up-sip-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/income-tax-calculator.html",
+      "destination": "/india/income-tax-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/hra-calculator.html",
+      "destination": "/india/hra-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/blog/retire-early-india-guide.html",
+      "destination": "/india/blog/retire-early-india-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/india/about.html",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/india/contact.html",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/india/privacy.html",
+      "destination": "/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy.html",
+      "destination": "/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/about/authors/",
+      "destination": "/india/authors/",
+      "permanent": true
+    },
+    {
+      "source": "/about/authors/priya-sharma/",
+      "destination": "/india/authors/priya-sharma/",
+      "permanent": true
+    },
+    {
+      "source": "/about/authors/arjun-mehta/",
+      "destination": "/india/authors/arjun-mehta/",
+      "permanent": true
+    },
+    {
+      "source": "/about/authors/deepa-krishnan/",
+      "destination": "/india/authors/deepa-krishnan/",
+      "permanent": true
+    },
+    {
+      "source": "/about/authors/sarah-mitchell/",
+      "destination": "/india/authors/",
+      "permanent": true
+    },
+    {
+      "source": "/about/authors/james-obrien/",
+      "destination": "/india/authors/",
+      "permanent": true
+    },
+    {
+      "source": "/about/authors/emma-hartley/",
+      "destination": "/india/authors/",
+      "permanent": true
+    },
+    {
+      "source": "/india/annuity-calculator/",
+      "destination": "/india/nps-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/annuity-calculator",
+      "destination": "/india/nps-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/balance-transfer-calculator/",
+      "destination": "/india/home-loan-emi-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/balance-transfer-calculator",
+      "destination": "/india/home-loan-emi-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/bank-rate-comparison-calculator/",
+      "destination": "/india/fd-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/bank-rate-comparison-calculator",
+      "destination": "/india/fd-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/bonus-after-tax-calculator/",
+      "destination": "/india/bonus-tax-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/bonus-after-tax-calculator",
+      "destination": "/india/bonus-tax-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/business-loan-emi-calculator/",
+      "destination": "/india/emi-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/business-loan-emi-calculator",
+      "destination": "/india/emi-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/child-education-plan-calculator/",
+      "destination": "/india/goal-sip-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/child-education-plan-calculator",
+      "destination": "/india/goal-sip-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/credit-card-emi-calculator/",
+      "destination": "/india/emi-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/credit-card-emi-calculator",
+      "destination": "/india/emi-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/critical-illness-calculator/",
+      "destination": "/india/health-insurance-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/critical-illness-calculator",
+      "destination": "/india/health-insurance-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/early-retirement-calculator/",
+      "destination": "/india/fire-number-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/early-retirement-calculator",
+      "destination": "/india/fire-number-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/education-loan-emi-calculator/",
+      "destination": "/india/emi-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/education-loan-emi-calculator",
+      "destination": "/india/emi-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/eps-pension-calculator/",
+      "destination": "/india/nps-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/eps-pension-calculator",
+      "destination": "/india/nps-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/esop-calculator/",
+      "destination": "/india/capital-gains-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/esop-calculator",
+      "destination": "/india/capital-gains-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/expense-ratio-calculator/",
+      "destination": "/india/mf-returns-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/expense-ratio-calculator",
+      "destination": "/india/mf-returns-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/fd-vs-rd-calculator/",
+      "destination": "/india/fd-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/fd-vs-rd-calculator",
+      "destination": "/india/fd-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/flat-vs-reducing-calculator/",
+      "destination": "/india/emi-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/flat-vs-reducing-calculator",
+      "destination": "/india/emi-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/flexi-deposit-calculator/",
+      "destination": "/india/fd-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/flexi-deposit-calculator",
+      "destination": "/india/fd-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/gst-reverse-calculator/",
+      "destination": "/india/gst-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/gst-reverse-calculator",
+      "destination": "/india/gst-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/home-affordability-calculator/",
+      "destination": "/india/loan-eligibility-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/home-affordability-calculator",
+      "destination": "/india/loan-eligibility-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/home-loan-insurance-calculator/",
+      "destination": "/india/term-insurance-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/home-loan-insurance-calculator",
+      "destination": "/india/term-insurance-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/inflation-adjusted-returns-calculator/",
+      "destination": "/india/inflation-retirement-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/inflation-adjusted-returns-calculator",
+      "destination": "/india/inflation-retirement-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/leave-encashment-calculator/",
+      "destination": "/india/gratuity-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/leave-encashment-calculator",
+      "destination": "/india/gratuity-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/life-insurance-needs-calculator/",
+      "destination": "/india/term-insurance-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/life-insurance-needs-calculator",
+      "destination": "/india/term-insurance-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/loan-against-property-calculator/",
+      "destination": "/india/loan-eligibility-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/loan-against-property-calculator",
+      "destination": "/india/loan-eligibility-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/moratorium-calculator/",
+      "destination": "/india/loan-prepayment-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/moratorium-calculator",
+      "destination": "/india/loan-prepayment-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/mortgage-refinance-calculator/",
+      "destination": "/india/home-loan-emi-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/mortgage-refinance-calculator",
+      "destination": "/india/home-loan-emi-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/motor-insurance-idv-calculator/",
+      "destination": "/india/health-insurance-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/motor-insurance-idv-calculator",
+      "destination": "/india/health-insurance-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/nav-calculator/",
+      "destination": "/india/mf-returns-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/nav-calculator",
+      "destination": "/india/mf-returns-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/nre-fd-calculator/",
+      "destination": "/india/fd-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/nre-fd-calculator",
+      "destination": "/india/fd-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/overdraft-calculator/",
+      "destination": "/india/loan-eligibility-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/overdraft-calculator",
+      "destination": "/india/loan-eligibility-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/overtime-calculator/",
+      "destination": "/india/ctc-to-in-hand-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/overtime-calculator",
+      "destination": "/india/ctc-to-in-hand-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/pension-income-calculator/",
+      "destination": "/india/nps-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/pension-income-calculator",
+      "destination": "/india/nps-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/post-office-mis-calculator/",
+      "destination": "/india/scss-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/post-office-mis-calculator",
+      "destination": "/india/scss-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/post-office-rd-calculator/",
+      "destination": "/india/rd-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/post-office-rd-calculator",
+      "destination": "/india/rd-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/post-office-td-calculator/",
+      "destination": "/india/fd-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/post-office-td-calculator",
+      "destination": "/india/fd-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/ppf-epf-nps-compare-calculator/",
+      "destination": "/india/ppf-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/ppf-epf-nps-compare-calculator",
+      "destination": "/india/ppf-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/professional-tax-calc-calculator/",
+      "destination": "/india/income-tax-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/professional-tax-calc-calculator",
+      "destination": "/india/income-tax-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/professional-tax-calculator/",
+      "destination": "/india/income-tax-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/professional-tax-calculator",
+      "destination": "/india/income-tax-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/property-appreciation-calculator/",
+      "destination": "/india/rent-vs-buy-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/property-appreciation-calculator",
+      "destination": "/india/rent-vs-buy-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/property-tax-calculator/",
+      "destination": "/india/property-registration-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/property-tax-calculator",
+      "destination": "/india/property-registration-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/real-estate-roi-calculator/",
+      "destination": "/india/rent-vs-buy-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/real-estate-roi-calculator",
+      "destination": "/india/rent-vs-buy-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/rental-yield-calculator/",
+      "destination": "/india/rent-vs-buy-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/rental-yield-calculator",
+      "destination": "/india/rent-vs-buy-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/retirement-timeline-calculator/",
+      "destination": "/india/retirement-corpus-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/retirement-timeline-calculator",
+      "destination": "/india/retirement-corpus-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/savings-account-calculator/",
+      "destination": "/india/compound-interest-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/savings-account-calculator",
+      "destination": "/india/compound-interest-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/senior-citizen-fd-calculator/",
+      "destination": "/india/fd-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/senior-citizen-fd-calculator",
+      "destination": "/india/fd-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/sip-delay-cost-calculator/",
+      "destination": "/india/sip-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/sip-delay-cost-calculator",
+      "destination": "/india/sip-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/stp-calculator/",
+      "destination": "/india/swp-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/stp-calculator",
+      "destination": "/india/swp-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/surcharge-calculator/",
+      "destination": "/india/income-tax-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/surcharge-calculator",
+      "destination": "/india/income-tax-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/sweep-in-fd-calculator/",
+      "destination": "/india/fd-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/sweep-in-fd-calculator",
+      "destination": "/india/fd-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/swp-retirement-calculator/",
+      "destination": "/india/swp-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/swp-retirement-calculator",
+      "destination": "/india/swp-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/tax-saver-fd-calculator/",
+      "destination": "/india/fd-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/tax-saver-fd-calculator",
+      "destination": "/india/fd-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/tds-on-fd-calculator/",
+      "destination": "/india/tds-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/tds-on-fd-calculator",
+      "destination": "/india/tds-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/two-wheeler-loan-calculator/",
+      "destination": "/india/emi-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/two-wheeler-loan-calculator",
+      "destination": "/india/emi-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/ulip-calculator/",
+      "destination": "/india/nps-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/ulip-calculator",
+      "destination": "/india/nps-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/under-construction-calculator/",
+      "destination": "/india/home-loan-emi-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/under-construction-calculator",
+      "destination": "/india/home-loan-emi-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/vrs-calculator/",
+      "destination": "/india/gratuity-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/india/vrs-calculator",
+      "destination": "/india/gratuity-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/markets/",
+      "destination": "/india/",
+      "permanent": true
+    },
+    {
+      "source": "/markets",
+      "destination": "/india/",
+      "permanent": true
+    }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "X-XSS-Protection", "value": "1; mode=block" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
       ]
     },
     {
       "source": "/assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     }
   ]

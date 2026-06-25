@@ -2,75 +2,19 @@
   <div class="container">
     <div class="cp-footer__grid">
 
-      <!-- Col 1: Brand — always shown, content varies by market -->
+      <!-- Col 1: Brand -->
       <div class="cp-footer__brand">
         <a href="/" class="cp-logo" aria-label="CalcPhi">
           <span class="cp-logo-tile">φ</span>
           <span class="cp-logo-wm">Calc<em>Phi</em></span>
         </a>
-        {% if page.url.startsWith('/australia/') %}
-        <p class="cp-footer__desc">Financial calculators built for Australians. No login required.</p>
-        <div class="cp-footer__markets">
-          <a href="/australia/" class="cp-footer__mchip cp-footer__mchip--active" data-market-code="AU">🇦🇺 Australia</a>
-        </div>
-        <a href="/markets/" class="cp-footer__other-markets">View all markets →</a>
-        {% elif page.url.startsWith('/india/') %}
-        <p class="cp-footer__desc">Financial calculators built for India. No login required.</p>
+        <p class="cp-footer__desc">Free financial calculators built for India. No login required.</p>
         <div class="cp-footer__markets">
           <a href="/india/" class="cp-footer__mchip cp-footer__mchip--active" data-market-code="IN">🇮🇳 India</a>
         </div>
-        <a href="/markets/" class="cp-footer__other-markets">View all markets →</a>
-        {% else %}
-        <p class="cp-footer__desc">Free financial calculators for Australia &amp; India. No login required.</p>
-        <div class="cp-footer__markets">
-          <a href="/australia/" class="cp-footer__mchip" data-market-code="AU">🇦🇺 Australia</a>
-          <a href="/india/" class="cp-footer__mchip" data-market-code="IN">🇮🇳 India</a>
-        </div>
-        {% endif %}
       </div>
 
-      {% if page.url.startsWith('/australia/') %}
-      {# ── AUSTRALIA FOOTER ───────────────────────────────────── #}
-
-      <div class="cp-footer__col">
-        <div class="cp-footer__head">Home Loans</div>
-        <a href="/australia/mortgage-calculator/">Mortgage Calculator</a>
-        <a href="/australia/lmi-calculator/">LMI Calculator</a>
-        <a href="/australia/refinance-calculator/">Refinance Calculator</a>
-        <a href="/australia/offset-account-calculator/">Offset Account</a>
-        <a href="/australia/personal-loan-calculator/">Personal Loan</a>
-        <a href="/australia/" class="cp-footer__view-all">All 30 Australia tools →</a>
-      </div>
-
-      <div class="cp-footer__col">
-        <div class="cp-footer__head">Super &amp; Retirement</div>
-        <a href="/australia/super-balance-calculator/">Super Balance</a>
-        <a href="/australia/salary-sacrifice-calculator/">Salary Sacrifice</a>
-        <a href="/australia/age-pension-calculator/">Age Pension</a>
-        <a href="/australia/income-tax-calculator/">Income Tax</a>
-        <a href="/australia/salary-take-home-calculator/">Salary Take-Home</a>
-      </div>
-
-      <div class="cp-footer__col">
-        <div class="cp-footer__head">Tax &amp; Investing</div>
-        <a href="/australia/capital-gains-tax-calculator/">Capital Gains Tax</a>
-        <a href="/australia/hecs-repayment-calculator/">HECS Repayment</a>
-        <a href="/australia/franking-credits-calculator/">Franking Credits</a>
-        <a href="/australia/compound-interest-calculator/">Compound Interest</a>
-        <a href="/australia/rent-vs-buy-calculator/">Rent vs Buy</a>
-      </div>
-
-      <div class="cp-footer__col">
-        <div class="cp-footer__head">Company</div>
-        <a href="/about/">About</a>
-        <a href="/australia/authors/">Australia Authors</a>
-        <a href="/australia/blog/">Australia Blog</a>
-        <a href="/contact/">Contact</a>
-        <a href="/privacy/">Privacy</a>
-      </div>
-
-      {% elif page.url.startsWith('/india/') %}
-      {# ── INDIA FOOTER ───────────────────────────────────────── #}
+      {# ── INDIA FOOTER (all pages) ───────────────────────────── #}
 
       <div class="cp-footer__col">
         <div class="cp-footer__head">SIP &amp; Investments</div>
@@ -79,7 +23,7 @@
         <a href="/india/lumpsum-calculator/">Lumpsum Calculator</a>
         <a href="/india/elss-calculator/">ELSS Calculator</a>
         <a href="/india/cagr-calculator/">CAGR Calculator</a>
-        <a href="/india/#mutual-funds" class="cp-footer__view-all">All 15 investment tools →</a>
+        <a href="/india/#mutual-funds" class="cp-footer__view-all">View all investment tools →</a>
       </div>
 
       <div class="cp-footer__col">
@@ -89,7 +33,7 @@
         <a href="/india/income-tax-calculator/">Income Tax</a>
         <a href="/india/hra-calculator/">HRA Calculator</a>
         <a href="/india/capital-gains-calculator/">Capital Gains Tax</a>
-        <a href="/india/#loans" class="cp-footer__view-all">All 31 loan &amp; tax tools →</a>
+        <a href="/india/#loans" class="cp-footer__view-all">View all loan &amp; tax tools →</a>
       </div>
 
       <div class="cp-footer__col">
@@ -99,58 +43,17 @@
         <a href="/india/nps-calculator/">NPS Calculator</a>
         <a href="/india/retirement-corpus-calculator/">Retirement Corpus</a>
         <a href="/india/ssy-calculator/">SSY Calculator</a>
-        <a href="/india/#government" class="cp-footer__view-all">All 35 savings &amp; retirement tools →</a>
+        <a href="/india/#government" class="cp-footer__view-all">View all savings &amp; retirement tools →</a>
       </div>
 
       <div class="cp-footer__col">
         <div class="cp-footer__head">Company</div>
         <a href="/about/">About</a>
-        <a href="/india/authors/">India Authors</a>
+        <a href="/india/authors/">Authors</a>
         <a href="/india/blog/">Blog</a>
         <a href="/contact/">Contact</a>
         <a href="/privacy/">Privacy</a>
       </div>
-
-      {% else %}
-      {# ── HOMEPAGE / GLOBAL FOOTER ───────────────────────────── #}
-
-      <div class="cp-footer__col">
-        <div class="cp-footer__head">🇦🇺 Australia</div>
-        <a href="/australia/mortgage-calculator/">Mortgage Calculator</a>
-        <a href="/australia/super-balance-calculator/">Super Balance</a>
-        <a href="/australia/income-tax-calculator/">Income Tax</a>
-        <a href="/australia/hecs-repayment-calculator/">HECS Repayment</a>
-        <a href="/australia/salary-take-home-calculator/">Salary Take-Home</a>
-        <a href="/australia/" class="cp-footer__view-all">All 30 Australia tools →</a>
-      </div>
-
-      <div class="cp-footer__col">
-        <div class="cp-footer__head">🇮🇳 India</div>
-        <a href="/india/sip-calculator/">SIP Calculator</a>
-        <a href="/india/emi-calculator/">EMI Calculator</a>
-        <a href="/india/income-tax-calculator/">Income Tax</a>
-        <a href="/india/ppf-calculator/">PPF Calculator</a>
-        <a href="/india/fd-calculator/">FD Calculator</a>
-        <a href="/india/" class="cp-footer__view-all">All 108 India tools →</a>
-      </div>
-
-      <div class="cp-footer__col">
-        <div class="cp-footer__head">Company</div>
-        <a href="/about/">About CalcPhi</a>
-        <a href="/contact/">Contact</a>
-        <a href="/privacy/">Privacy</a>
-      </div>
-
-      <div class="cp-footer__col">
-        <div class="cp-footer__head">Company</div>
-        <a href="/about/">About</a>
-        <a href="/australia/blog/">Australia Blog</a>
-        <a href="/india/blog/">India Blog</a>
-        <a href="/contact/">Contact</a>
-        <a href="/privacy/">Privacy</a>
-      </div>
-
-      {% endif %}
 
     </div>
 
@@ -159,14 +62,9 @@
     <div class="cp-footer__bottom">
       <p class="cp-footer__disclaimer">
         CalcPhi calculators are for educational and estimation purposes only. Results are not financial advice.
-        {% if page.url.startsWith('/australia/') %}
-        For Australia: consult a licensed financial adviser (AFS licence) before making financial decisions.
-        {% elif page.url.startsWith('/india/') %}
-        For India: mutual fund investments are subject to market risks — consult a SEBI-registered advisor.
-        {% endif %}
+        Mutual fund investments are subject to market risks — consult a SEBI-registered advisor before making financial decisions.
       </p>
       <p class="cp-footer__copy">&copy; {{ site.year }} CalcPhi. All rights reserved.</p>
     </div>
   </div>
 </footer>
-

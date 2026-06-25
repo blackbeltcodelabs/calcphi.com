@@ -119,19 +119,6 @@ module.exports = function (eleventyConfig) {
       });
   });
 
-  // Collections: Australia blog posts
-  eleventyConfig.addCollection("auBlog", function (collectionApi) {
-    return collectionApi
-      .getFilteredByGlob("src/australia/blog/*.njk")
-      .filter(p => !p.inputPath.endsWith("/index.njk"))
-      .sort((a, b) => {
-        const da = new Date(a.data.datePublished || "2020-01-01");
-        const db = new Date(b.data.datePublished || "2020-01-01");
-        if (db - da !== 0) return db - da;
-        return a.fileSlug.localeCompare(b.fileSlug);
-      });
-  });
-
   // Collections: India calculators
   eleventyConfig.addCollection("indiaCalcs", function (collectionApi) {
     return collectionApi
