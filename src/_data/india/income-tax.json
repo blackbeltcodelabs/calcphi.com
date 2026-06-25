@@ -52,107 +52,75 @@
     { "id": "lta", "label": "LTA (Leave Travel Allowance)", "max": null },
     { "id": "section80tta", "label": "Section 80TTA (Savings account interest)", "max": 10000 }
   ],
-  "examples": [
+  "articleSections": [
     {
-      "heading": "₹12 lakh annual income — old vs new regime (FY 2026-27)",
-      "text": "Under the new regime, a ₹12 lakh income qualifies for the full Section 87A rebate — zero tax is payable. Under the old regime with ₹1.5 lakh in 80C deductions, taxable income is ₹10 lakhs and tax payable is approximately ₹1,12,500 plus cess. The new regime saves ₹1.17 lakhs at this income level with no deductions required."
+      "id": "how-tax-computed",
+      "heading": "How Indian Income Tax Is Actually Computed — Step by Step",
+      "body": "<p>The tax computation has five steps that every salaried taxpayer should understand before choosing a regime:</p><ol><li><strong>Gross income:</strong> Total salary, rental income, capital gains, and other income before any deductions.</li><li><strong>Subtract standard deduction:</strong> ₹75,000 under new regime; ₹50,000 under old regime (salaried and pensioners only).</li><li><strong>Subtract other deductions (old regime only):</strong> 80C (up to ₹1.5L), 80D (up to ₹75K for self+senior parents), HRA exemption, Section 24(b) home loan interest (up to ₹2L), NPS under 80CCD(1B) (up to ₹50K), and others.</li><li><strong>Apply slab rates</strong> to arrive at base income tax.</li><li><strong>Apply Section 87A rebate</strong> (if eligible): cancels the entire computed tax — not a deduction from income, but from tax itself. New regime: full rebate if taxable income ≤ ₹12L. Old regime: full rebate if taxable income ≤ ₹5L after all deductions.</li><li><strong>Add surcharge</strong> (for incomes above ₹50L) and <strong>4% health and education cess</strong> on (tax + surcharge).</li></ol><p><strong>The 87A cliff effect:</strong> The rebate is binary — it applies fully or not at all. A taxable income of ₹12,00,000 under the new regime: zero tax. A taxable income of ₹12,00,001: tax of approximately ₹60,000 + cess. There is no gradual phase-out. This creates a genuine cliff at ₹12L that makes it worth structuring salary to stay below if possible (for example, by maximising employer NPS contributions under Section 80CCD(2), which reduces taxable income even in the new regime).</p><p>Use the <a href='/india/nps-calculator/'>NPS Calculator</a> to model how employer NPS contributions (Section 80CCD(2)) reduce taxable income under both regimes. Use the <a href='/india/hra-calculator/'>HRA Calculator</a> to find your exact exempt amount before entering it here.</p>"
     },
     {
-      "heading": "₹20 lakh income — which regime saves more?",
-      "text": "At ₹20 lakhs, the decision depends on deductions. Old regime with maximum 80C (₹1.5L), 80D (₹25K), HRA (₹2L), home loan interest (₹2L), and NPS (₹50K): total deductions ₹6.25 lakhs, taxable income ₹13.75 lakhs, tax ₹2.78 lakhs. New regime: standard deduction ₹75K only, taxable income ₹19.25 lakhs, tax ₹2.39 lakhs. New regime wins here."
+      "id": "tax-scenarios",
+      "heading": "Three Income Profiles That Show When Each Regime Wins",
+      "body": "<h3>Scenario 1: Meera, ₹10 lakh salary — new regime wins decisively</h3><p>Meera earns ₹10 lakh gross salary. Under the new regime: gross ₹10L minus standard deduction ₹75K = taxable income ₹9.25L. Tax on slabs: ₹0 (0–4L) + ₹20K (5% on 4–8L) + ₹12,500 (10% on 8–9.25L) = ₹32,500. But taxable income is ₹9.25L, which is below the ₹12L 87A rebate limit — <strong>full rebate applies, tax = ₹0</strong>.</p><p>Under old regime with maximum 80C (₹1.5L): taxable income ₹10L minus ₹50K standard deduction minus ₹1.5L 80C = ₹8L. Tax: ₹0 (0–2.5L) + ₹12,500 (5% on 2.5–5L) + ₹60,000 (20% on 5–8L) = ₹72,500. Taxable income ₹8L is above the ₹5L 87A limit, so tax = ₹72,500 + 4% cess = <strong>₹75,400</strong>.</p><p>New regime saves ₹75,400 at ₹10L salary even when maximum 80C is deployed in the old regime.</p><h3>Scenario 2: Suresh, ₹20 lakh salary — the break-even analysis</h3><p>Suresh earns ₹20L gross. He has: 80C ₹1.5L, HRA exemption ₹2.4L, Section 24(b) home loan interest ₹2L, 80D health insurance ₹50K, NPS 80CCD(1B) ₹50K. Total deductions under old regime: ₹6.9L + standard deduction ₹50K = ₹7.4L.</p><ul><li><strong>New regime:</strong> Taxable income ₹20L − ₹75K standard deduction = ₹19.25L. Tax: ₹0 + ₹20K + ₹40K + ₹60K + ₹58,750 (20% on ₹19.25L − ₹16L = ₹3.25L × 20% = ₹65K — wait, ₹19.25L − ₹16L = ₹3.25L at 20% = ₹65K) = approx ₹1,85,000 + 4% cess = <strong>₹1,92,400</strong>.</li><li><strong>Old regime:</strong> Taxable income ₹20L − ₹7.4L = ₹12.6L. Tax: ₹0 + ₹12,500 + ₹1,00,000 + ₹78,000 (30% on ₹12.6L − ₹10L = ₹2.6L) = ₹1,90,500 + 4% cess = <strong>₹1,98,120</strong>.</li></ul><p>At ₹20L with ₹7.4L in deductions, both regimes are nearly identical — the new regime saves ₹5,720. Suresh should choose the new regime for simplicity; if HRA increases or he gets a higher rate home loan, the old regime may become marginally better. The calculator runs the exact maths on your specific numbers.</p><h3>Scenario 3: Rekha, ₹30 lakh salary — old regime wins with full deductions</h3><p>Rekha earns ₹30L gross. Old regime deductions: 80C ₹1.5L, 80D ₹75K (senior citizen parents), HRA ₹3.6L, Section 24(b) ₹2L, NPS 80CCD(1B) ₹50K = ₹8.35L + ₹50K standard deduction = ₹8.85L total deductions.</p><ul><li><strong>New regime:</strong> Taxable ₹30L − ₹75K = ₹29.25L. Tax = ₹0 + ₹20K + ₹40K + ₹60K + ₹80K + ₹1,00K + ₹1,57,500 (30% on ₹29.25L − ₹24L = ₹5.25L) = ₹4,57,500 + cess = <strong>₹4,75,800</strong>.</li><li><strong>Old regime:</strong> Taxable ₹30L − ₹8.85L = ₹21.15L. Tax = ₹0 + ₹12,500 + ₹1,00,000 + ₹3,34,500 (30% on ₹21.15L − ₹10L = ₹11.15L) = ₹4,47,000 + cess = <strong>₹4,64,880</strong>.</li></ul><p>Old regime saves ₹10,920 — a modest but real saving. As HRA or home loan interest increase, the old regime advantage grows. At ₹30L income with ₹10L+ in deductions, old regime wins by ₹50,000–₹80,000.</p>"
     },
     {
-      "heading": "Break-even deduction point — old vs new regime",
-      "text": "The new regime is generally better when total deductions are below ₹3.75 lakhs at ₹15 lakh income. If your 80C, HRA, home loan interest, and 80D total more than ₹3.75–4 lakhs, the old regime may save more tax. Use this calculator to check your specific situation.",
-      "table": {
-        "headers": ["Income", "New Regime Tax", "Old Regime (with ₹4L deductions)"],
-        "rows": [
-          ["₹8 lakh", "₹0 (rebate)", "₹25,000"],
-          ["₹12 lakh", "₹0 (rebate)", "₹1,12,500"],
-          ["₹15 lakh", "₹1,50,000", "₹1,95,000"],
-          ["₹20 lakh", "₹2,96,400", "₹3,51,800"],
-          ["₹30 lakh", "₹6,20,400", "₹6,51,000"]
-        ]
-      }
-    }
-  ],
-  "decisionGuide": [
-    {
-      "question": "Which income tax regime is better in India in 2026?",
-      "answer": "The new regime is the default from FY 2023-24 and is now better for most salaried employees. If your total deductions (80C + HRA + home loan interest + 80D + NPS) exceed ₹3.75 lakhs at ₹15 lakh income, the old regime may save more tax. Use the calculator above to find your personal break-even point."
+      "id": "tax-rules-rates",
+      "heading": "FY 2026-27 Tax Rules, Deduction Limits & Regime Framework",
+      "body": "<p><strong>New regime as default:</strong> From FY 2024-25 onwards, the new tax regime is the default for all taxpayers. If you do not declare your regime to your employer at the start of the financial year, TDS will be deducted under the new regime. Salaried employees can switch regimes each year at ITR filing time; self-employed individuals can switch from old to new only once (and cannot switch back).</p><p><strong>Standard deduction:</strong> ₹75,000 under the new regime (enhanced from ₹50,000 in Budget 2024). ₹50,000 under the old regime. Available to salaried employees and pensioners. No other deductions are allowed under the new regime other than standard deduction and employer NPS (Section 80CCD(2)).</p><p><strong>Section 87A rebate (FY 2026-27):</strong> Under the new regime, the rebate equals the full tax computed on income up to ₹12 lakh (taxable income, after standard deduction). If taxable income exceeds ₹12 lakh by even ₹1, the rebate does not apply and the full slab-rate tax becomes payable from zero income. Under the old regime, the rebate applies if taxable income after all deductions is ₹5 lakh or below, cancelling the ₹12,500 tax that would otherwise apply.</p><p><strong>Old regime deduction limits (FY 2026-27):</strong> Section 80C: ₹1,50,000 combined (PPF, ELSS, EPF employee share, LIC premium, home loan principal, tuition fees for up to 2 children). Section 80D: ₹25,000 for own health insurance (₹50,000 if you are a senior citizen) + ₹25,000 for parents' health insurance (₹50,000 if parents are senior citizens). Section 24(b): ₹2,00,000 for home loan interest on self-occupied property. Section 80CCD(1B): ₹50,000 for own NPS Tier I contributions — exclusive to NPS, not available in new regime. HRA: under Section 10(13A), exemption as computed by the three-formula minimum rule.</p><p><strong>Surcharge rates (both regimes):</strong> Income ₹50L–₹1Cr: 10% surcharge on tax. ₹1Cr–₹2Cr: 15%. ₹2Cr–₹5Cr: 25%. Above ₹5Cr: 25% (capped at 25% from Budget 2023, was 37% earlier). Health and education cess: 4% on (base tax + surcharge) for all taxpayers.</p><p><strong>Employer NPS (80CCD(2)) — the new-regime exception:</strong> Employer contributions to NPS under Section 80CCD(2) are deductible even in the new tax regime. The limit is 10% of basic salary for private sector employees and 14% for central government employees. This makes employer-offered NPS contributions one of the few deductions available to new-regime taxpayers beyond the standard deduction.</p>"
     },
     {
-      "question": "What is the Section 87A rebate under the new regime?",
-      "answer": "Under the new tax regime, individuals with annual income up to ₹12 lakhs (after standard deduction) are entitled to a full rebate under Section 87A — effectively paying zero income tax. This ₹12 lakh zero-tax limit (plus ₹75,000 standard deduction = ₹12.75 lakh gross salary) makes the new regime very attractive for salaries below ₹12 lakh."
-    },
-    {
-      "question": "Can you switch between old and new tax regimes each year?",
-      "answer": "Salaried individuals can switch between old and new tax regimes each financial year when filing their ITR. Self-employed individuals can switch only once — from old to new — and cannot switch back. Choosing the regime that saves more tax each year (with this calculator) is a legitimate and recommended strategy."
+      "id": "tax-mistakes",
+      "heading": "What Most Taxpayers Get Wrong About the Two Regimes",
+      "body": "<p><strong>Assuming the new regime is always better.</strong> The new regime wins for most people below ₹12.75L gross salary (where the 87A rebate eliminates tax) and for those with minimal deductions. But above ₹15L, taxpayers with significant HRA (typically in metro cities), home loan interest, and full 80C/80CCD(1B) utilisation may pay less under the old regime. The break-even deduction level changes with income — calculate it, do not assume.</p><p><strong>The ₹12L cliff trap.</strong> Under the new regime, ₹12L in taxable income means zero tax (87A rebate). ₹12,00,001 means approximately ₹60,000 in tax — on the entire income from ₹0, not just on the ₹1 above ₹12L. If your salary is projected to be ₹12.1L or ₹12.3L, consider whether additional contributions to employer NPS (80CCD(2)) can bring taxable income below ₹12L. ₹50,000 in employer NPS that saves ₹60,000 in tax is a 120% return on that ₹50,000.</p><p><strong>Claiming Section 24(b) under the new regime.</strong> Home loan interest deduction (Section 24(b), up to ₹2L for self-occupied) is not available under the new tax regime. Borrowers who switch to the new regime mid-loan lose this deduction for all future years they stay in the new regime. Model this in the calculator before switching.</p><p><strong>Counting ELSS SIP as a new-regime benefit.</strong> Section 80C deductions — including ELSS, PPF, and EPF employee share — are only available under the old regime. Investors who opt for the new regime receive zero tax benefit from ELSS SIPs. The investment itself is not affected, but the tax saving disappears. New-regime taxpayers should compare ELSS expense ratios against plain index funds (lower expense) and decide on investment merits alone, not tax benefits.</p><p><strong>Not filing ITR to claim refunds from over-deducted TDS.</strong> If you declared the new regime to your employer but at ITR filing time determine the old regime was better, you can file under the old regime and claim a refund of excess TDS. This requires filing before the due date. The same applies in reverse — if old regime was declared but new regime computes to lower tax, the excess deducted as TDS is refunded via the ITR filing process.</p>"
     }
   ],
   "faq": [
     {
-      "q": "What are the income tax slabs for FY 2026-27 (new regime)?",
-      "a": "New regime tax slabs for FY 2026-27: 0–₹4L: 0%; ₹4L–₹8L: 5%; ₹8L–₹12L: 10%; ₹12L–₹16L: 15%; ₹16L–₹20L: 20%; ₹20L–₹24L: 25%; above ₹24L: 30%. Additionally, income up to ₹12 lakh is fully exempt via the Section 87A rebate. A standard deduction of ₹75,000 applies."
+      "q": "What are the income tax slabs for FY 2026-27 under the new regime?",
+      "a": "New regime tax slabs for FY 2026-27: 0–₹4L at 0%; ₹4L–₹8L at 5%; ₹8L–₹12L at 10%; ₹12L–₹16L at 15%; ₹16L–₹20L at 20%; ₹20L–₹24L at 25%; above ₹24L at 30%. Income up to ₹12 lakh (after standard deduction) is effectively tax-free due to the Section 87A rebate. A standard deduction of ₹75,000 applies to salaried employees and pensioners."
     },
     {
-      "q": "What is the income tax limit for 2026-27 in India?",
-      "a": "Under the new tax regime for FY 2026-27, income up to ₹12 lakh is effectively tax-free due to the Section 87A rebate. For salaried individuals, this extends to ₹12.75 lakh (including the ₹75,000 standard deduction) with zero tax payable."
+      "q": "What is the income tax limit for FY 2026-27 — how much income is tax-free?",
+      "a": "Under the new tax regime for FY 2026-27, income up to ₹12 lakh is effectively tax-free due to the Section 87A rebate. For salaried individuals, the ₹75,000 standard deduction extends this to a gross salary of ₹12.75 lakh with zero tax payable. Under the old regime, income up to ₹5 lakh (after all deductions including standard deduction and 80C investments) qualifies for the 87A rebate, with tax cancelled entirely — but your gross income must be well above ₹5L for the old regime to be relevant."
     },
     {
-      "q": "How much income tax do I pay on ₹10 lakh income?",
-      "a": "Under the new tax regime for FY 2026-27, ₹10 lakh income is below the ₹12 lakh rebate limit — tax payable is zero. Under the old regime with no deductions: taxable income ₹10L minus ₹50K standard deduction = ₹9.5L, tax = ₹1,12,500 + cess = ₹1,17,000. The new regime saves more here."
+      "q": "How much income tax do I pay on ₹10 lakh income in FY 2026-27?",
+      "a": "Under the new tax regime: gross ₹10L minus ₹75K standard deduction = taxable income ₹9.25L. This is below the ₹12L rebate threshold, so the Section 87A rebate cancels all tax — you pay zero. Under the old regime with no deductions other than ₹50K standard deduction: taxable income ₹9.5L. Tax = ₹0 + ₹12,500 (5% on ₹2.5–5L) + ₹90,000 (20% on ₹5–9.5L) = ₹1,02,500 + 4% cess = ₹1,06,600. The new regime is clearly better at ₹10L regardless of deductions — the 87A rebate produces zero tax."
     },
     {
-      "q": "What deductions are allowed in the old tax regime?",
-      "a": "The old tax regime allows: Section 80C (up to ₹1.5 lakh — EPF, PPF, ELSS, LIC, tuition fees); Section 80D (health insurance ₹25,000 + parents ₹25,000); HRA exemption; Section 24b home loan interest (up to ₹2 lakh); NPS 80CCD(1B) extra ₹50,000; LTA; Section 80TTA savings interest (₹10,000)."
+      "q": "What deductions are allowed under the old tax regime in FY 2026-27?",
+      "a": "The old tax regime allows: Section 80C up to ₹1.5L (EPF, PPF, ELSS, LIC premiums, home loan principal, tuition fees); Section 80D up to ₹25K for own health insurance + ₹25K for parents (₹50K each if senior citizens); HRA exemption under Section 10(13A); Section 24(b) up to ₹2L for home loan interest on self-occupied property; Section 80CCD(1B) — additional ₹50K for NPS over and above 80C; LTA (Leave Travel Allowance); Section 80TTA up to ₹10K for savings account interest; and several other Chapter VI-A deductions. The new regime allows none of these except the ₹75K standard deduction."
     },
     {
-      "q": "Is standard deduction available in the new tax regime?",
-      "a": "Yes. A standard deduction of ₹75,000 is available to salaried employees under the new tax regime from FY 2024-25 onwards. This was increased from ₹50,000. No other deductions (80C, HRA, etc.) are applicable in the new regime."
+      "q": "Is the ₹75,000 standard deduction available in the new tax regime?",
+      "a": "Yes. A standard deduction of ₹75,000 is available to salaried employees and pensioners under the new tax regime from FY 2024-25 onwards (enhanced from ₹50,000 by Budget 2024). This is the only meaningful deduction available in the new regime for most salaried employees. The old regime also offers the standard deduction, but at the lower ₹50,000 amount. No HRA, 80C, 80D, Section 24(b), or 80CCD(1B) deductions apply in the new regime."
     },
     {
-      "q": "What is the surcharge on income tax in India?",
-      "a": "Surcharge applies on income above ₹50 lakh: ₹50L–₹1Cr: 10% surcharge on tax; ₹1Cr–₹2Cr: 15%; ₹2Cr–₹5Cr: 25%; above ₹5Cr: 37%. A health and education cess of 4% applies on (tax + surcharge) for all taxpayers."
+      "q": "What is the surcharge on income tax for high earners in India?",
+      "a": "Surcharge applies on income above ₹50 lakh: ₹50L–₹1Cr: 10% surcharge on the base tax; ₹1Cr–₹2Cr: 15%; ₹2Cr–₹5Cr: 25%; above ₹5Cr: 25% (reduced from 37% by Budget 2023 for both regimes). A health and education cess of 4% applies on (base tax + surcharge) for all taxpayers regardless of income level. Marginal relief prevents the tax-plus-surcharge from exceeding the income above the threshold at each surcharge band."
     },
     {
-      "q": "What is the maximum total deduction I can claim under the old regime?",
-      "a": "For a salaried employee under the old regime, the maximum commonly available deductions are: ₹50,000 standard deduction, ₹1,50,000 under 80C, ₹50,000 under 80CCD(1B) for NPS, ₹75,000 under 80D (self + senior citizen parents), ₹2,00,000 under Section 24b (home loan interest), plus HRA exemption which varies by salary and city. Excluding HRA, this totals ₹5,25,000. Adding a meaningful HRA exemption can push total deductions to ₹6–8 lakh for metro residents."
+      "q": "Do I need to declare my tax regime to my employer at the start of the year?",
+      "a": "Yes. At the start of each financial year (April), inform your employer which tax regime you want applied for TDS calculation. If no declaration is made, TDS defaults to the new regime from FY 2024-25 onwards. The declaration affects your monthly take-home salary for the entire year — if you declare the wrong regime, you either overpay TDS (get refund later) or underpay (pay the balance at ITR filing). Salaried employees can change the regime at the time of ITR filing, but the monthly TDS impact is felt throughout the year."
     },
     {
-      "q": "Do I need to declare my chosen tax regime to my employer?",
-      "a": "Yes. At the start of each financial year, you need to inform your employer which regime you want to use for TDS calculation. If you do not declare, the employer deducts TDS under the new regime by default (since FY 2024-25). If you switch at ITR filing time, any difference is refunded or paid as a tax demand — but your monthly take-home salary is affected throughout the year, so it is better to declare upfront."
-    },
-    {
-      "q": "Is health insurance premium for parents deductible under the new tax regime?",
-      "a": "No. Section 80D deductions — including health insurance premiums for yourself, your spouse, children, and parents — are not available under the new tax regime. All deductions under Chapter VI-A (which includes 80C, 80D, 80CCD(1B)) are disallowed under the new regime. Only the ₹75,000 standard deduction, the employer's NPS contribution (80CCD(2)), and a few specific exemptions like gratuity and leave encashment survive."
-    },
-    {
-      "q": "What is marginal relief on surcharge and how does it work?",
-      "a": "Marginal relief prevents a situation where crossing a surcharge threshold results in paying more tax-plus-surcharge than the excess income. For example, if your income is ₹50.5 lakh (₹50,000 above the ₹50L threshold), the surcharge should not exceed ₹50,000. The calculator applies marginal relief automatically at each surcharge boundary. This relief is particularly relevant for incomes in the ₹50L–₹52L range."
-    },
-    {
-      "q": "How does Section 87A rebate work — is it deducted from income or from tax?",
-      "a": "Section 87A is a rebate on tax, not a deduction from income. It is applied after computing your tax liability on the full income using the applicable slabs. Under the new regime for FY 2026-27: if your taxable income (after standard deduction) is ₹12 lakh or below, the computed tax is fully cancelled by the 87A rebate, making your final tax liability zero. If income exceeds ₹12 lakh by even ₹1, the rebate does not apply and the full slab-rate tax is payable."
-    },
-    {
-      "q": "What is the income tax on ₹15 lakh under the new regime after standard deduction?",
-      "a": "Under the new tax regime for FY 2026-27: Gross salary ₹15,00,000 minus standard deduction ₹75,000 = taxable income ₹14,25,000. Tax on slabs: 0 on first ₹4L + ₹20,000 (5% on ₹4L–₹8L) + ₹40,000 (10% on ₹8L–₹12L) + ₹33,750 (15% on ₹12L–₹14.25L) = ₹93,750 base tax. Add 4% cess: total tax ₹97,500. No surcharge applies below ₹50L."
+      "q": "How does the Section 87A rebate work — is it applied to income or to tax?",
+      "a": "Section 87A is a rebate applied to the computed tax, not a deduction from income. The process: (1) Compute taxable income (after standard deduction and other deductions in old regime). (2) Apply slab rates to compute base tax. (3) If taxable income ≤ ₹12L (new regime) or ≤ ₹5L (old regime after deductions), cancel the entire base tax via the 87A rebate. (4) Add cess. If income exceeds the threshold by even ₹1, step (3) does not apply and the full slab-rate tax is payable. This creates a hard cliff at ₹12L in the new regime — not a gradual reduction."
     }
   ],
   "related": [
-    { "title": "HRA Calculator", "url": "/india/hra-calculator/", "desc": "Calculate HRA exemption for old regime" },
-    { "title": "NPS Calculator", "url": "/india/nps-calculator/", "desc": "Extra ₹50,000 deduction under 80CCD(1B)" },
-    { "title": "PPF Calculator", "url": "/india/ppf-calculator/", "desc": "80C investment with tax-free returns" }
+    { "title": "HRA Calculator", "url": "/india/hra-calculator/", "desc": "Compute HRA exemption before entering it here" },
+    { "title": "NPS Calculator", "url": "/india/nps-calculator/", "desc": "Model 80CCD(1B) and 80CCD(2) deductions" },
+    { "title": "PPF Calculator", "url": "/india/ppf-calculator/", "desc": "Calculate 80C tax saving from PPF contributions" }
   ],
   "howToSteps": [
-    { "name": "Enter Annual Income", "text": "Enter your gross annual salary or income for FY 2026-27." },
-    { "name": "Add Deductions (Old Regime)", "text": "Enter your eligible deductions: 80C investments, health insurance, HRA exemption, home loan interest, NPS contributions." },
-    { "name": "View Both Regimes", "text": "The calculator computes tax under both old and new regimes side by side." },
-    { "name": "Choose the Better Regime", "text": "The calculator recommends which regime saves more tax for your specific income and deduction profile." }
+    { "name": "Enter Annual Income", "text": "Enter your gross annual salary or income for FY 2026-27 before any deductions." },
+    { "name": "Add Old Regime Deductions", "text": "Enter your eligible deductions: 80C investments, health insurance, HRA exemption (use HRA Calculator), home loan interest, NPS contributions." },
+    { "name": "Compare Both Regimes", "text": "The calculator computes tax under both old and new regimes side by side, showing exactly how much each saves." },
+    { "name": "Choose the Better Regime", "text": "Use the recommendation to declare your regime to your employer before April 30. The regime affects TDS throughout the year." }
   ],
   "schema": {
     "appName": "Income Tax Calculator India FY 2026-27",
-    "appDescription": "Calculate and compare income tax under old and new tax regime for FY 2026-27 (AY 2027-28). Includes Section 87A rebate and all deductions."
+    "appDescription": "Calculate and compare income tax under old and new tax regime for FY 2026-27 (AY 2027-28). Includes Section 87A rebate, standard deduction, and all deductions."
   }
 }

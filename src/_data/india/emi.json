@@ -12,7 +12,7 @@
     { "id": "total-payment", "label": "Total Payment" }
   ],
   "staticTable": {
-    "caption": "EMI comparison for ₹30 lakh home loan at 8.5% interest",
+    "caption": "EMI comparison for ₹30 lakh loan at 8.5% interest",
     "headers": ["Loan Tenure", "Monthly EMI", "Total Interest", "Total Payment"],
     "rows": [
       ["10 years", "₹37,168", "₹14,60,160", "₹44,60,160"],
@@ -22,81 +22,75 @@
       ["30 years", "₹23,072", "₹53,05,920", "₹83,05,920"]
     ]
   },
-  "examples": [
+  "articleSections": [
     {
-      "heading": "Home loan — ₹50 lakh at 8.75%, 20 years",
-      "text": "A ₹50 lakh home loan at 8.75% annual interest for 20 years results in a monthly EMI of approximately ₹44,107. Total interest paid over 20 years is approximately ₹55.86 lakhs — more than the principal itself. Increasing the EMI by ₹5,000/month can reduce the tenure by nearly 4 years."
+      "id": "how-emi-works",
+      "heading": "How the EMI Formula Works — The Reducing Balance Method",
+      "body": "<p>All loan EMIs in India are calculated using the <strong>reducing balance (diminishing balance) method</strong> — not simple interest. The formula is:</p><p><strong>EMI = P × r × (1 + r)^n / ((1 + r)^n − 1)</strong></p><ul><li><strong>P</strong> = Principal loan amount (₹)</li><li><strong>r</strong> = Monthly interest rate = Annual rate ÷ 12 ÷ 100</li><li><strong>n</strong> = Total loan tenure in months</li></ul><p>For a ₹30 lakh loan at 8.5% for 20 years: r = 0.00708, n = 240. EMI = 30,00,000 × 0.00708 × (1.00708)^240 / ((1.00708)^240 − 1) = <strong>₹26,035/month</strong>. Total payment: ₹62.48 lakhs on a ₹30 lakh loan — ₹32.48 lakhs in interest alone.</p><p>Why is the interest component so high in early EMIs? In month 1 of the ₹30 lakh loan at 8.5%, the interest charge is ₹30,00,000 × 0.00708 = ₹21,250. Only ₹4,785 of your ₹26,035 EMI goes toward principal. By month 200 (year 17), the principal component exceeds the interest component because the outstanding balance has shrunk. This <strong>front-loading of interest</strong> is why part-prepayments in years 1–5 save significantly more interest than the same prepayment amount in years 15–20.</p><p>The amortisation schedule produced by this calculator shows the exact principal-to-interest split for every year of your loan — open the year-by-year breakdown to see how quickly principal repayment accelerates in the later years.</p>"
     },
     {
-      "heading": "Car loan — ₹8 lakh at 9%, 5 years",
-      "text": "A ₹8 lakh car loan at 9% annual interest over 5 years gives a monthly EMI of approximately ₹16,603. Total interest paid is approximately ₹1.96 lakhs. Prepaying the loan in year 3 saves significant interest."
+      "id": "emi-scenarios",
+      "heading": "Three Loan Scenarios That Show What Actually Costs You",
+      "body": "<h3>Scenario 1: Aditya's tenure choice — 20 years vs 30 years on ₹50 lakhs</h3><p>Aditya borrows ₹50 lakhs at 8.5% for a home purchase. He is comparing a 20-year and 30-year tenure.</p><ul><li><strong>20 years:</strong> EMI ₹43,391. Total interest paid: ₹54.1 lakhs. Total outgo: ₹1.04 crore.</li><li><strong>30 years:</strong> EMI ₹38,453. Total interest paid: ₹88.4 lakhs. Total outgo: ₹1.38 crore.</li></ul><p>The 10-year tenure extension saves ₹4,938/month but costs ₹34.3 lakhs more in interest over the life of the loan. Put differently: the ₹4,938 monthly saving over 10 years (₹5.9 lakhs total saving) costs ₹34.3 lakhs in extra interest. This is not a trade-off worth making for most borrowers who can service the higher EMI.</p><h3>Scenario 2: Kavitha's balance transfer — does 0.75% rate reduction pay off?</h3><p>Kavitha has ₹35 lakhs outstanding on a home loan at 9.5% with 14 years remaining. Her new bank is offering 8.75% — a 0.75% reduction.</p><ul><li><strong>Remaining interest at 9.5%:</strong> approximately ₹26.1 lakhs</li><li><strong>Remaining interest at 8.75%:</strong> approximately ₹23.3 lakhs</li><li><strong>Gross saving:</strong> ₹2.8 lakhs over 14 years</li><li><strong>Balance transfer cost (processing fee ~0.5% of ₹35L):</strong> ₹17,500</li></ul><p>Net saving: approximately ₹2.6 lakhs. RBI mandates zero prepayment penalty for floating-rate home loans — so the only friction is the processing fee. A 0.75% rate drop with more than 10 years remaining almost always justifies the switch. The break-even is typically 6–8 months.</p><h3>Scenario 3: Rohit's ₹5 lakh prepayment in year 3</h3><p>Rohit has a ₹40 lakh home loan at 8.5% for 20 years (EMI: ₹34,713, total interest ₹43.3L). He receives a ₹5 lakh bonus in year 3 and applies it entirely as a part-prepayment to the outstanding principal.</p><ul><li><strong>Without prepayment:</strong> Total interest paid ₹43.3 lakhs over 20 years</li><li><strong>With ₹5L prepayment at year 3:</strong> Total interest ₹36.5 lakhs. Tenure reduced by approximately 3 years and 2 months.</li><li><strong>Total saving:</strong> ₹6.8 lakhs in interest + 38 months of EMIs avoided.</li></ul><p>The ₹5 lakh prepayment generates ₹6.8 lakhs in savings — a 36% return on the prepayment amount, risk-free. This exceeds post-tax returns from most fixed income alternatives at a 30% tax bracket.</p>"
     },
     {
-      "heading": "Personal loan — ₹3 lakh at 14%, 3 years",
-      "text": "A ₹3 lakh personal loan at 14% for 36 months costs approximately ₹10,255/month. Total interest outgo is approximately ₹69,180. Personal loans are expensive — reserve them for genuine emergencies.",
-      "table": {
-        "headers": ["Loan Type", "Amount", "Rate", "Tenure", "Monthly EMI"],
-        "rows": [
-          ["Home Loan", "₹50,00,000", "8.75%", "20 years", "₹44,107"],
-          ["Car Loan", "₹8,00,000", "9%", "5 years", "₹16,603"],
-          ["Personal Loan", "₹3,00,000", "14%", "3 years", "₹10,255"]
-        ]
-      }
-    }
-  ],
-  "decisionGuide": [
-    {
-      "question": "What is a safe EMI-to-income ratio?",
-      "answer": "Keep your total EMI obligations below 40% of your monthly take-home salary. For a ₹1 lakh/month salary, this means total EMIs (home loan + car + personal) should not exceed ₹40,000/month. Lenders typically reject applications where the ratio exceeds 50%."
+      "id": "emi-rules-rates",
+      "heading": "EMI Regulations, Rates & Tax Treatment — India 2026",
+      "body": "<p><strong>RBI floating rate linkage:</strong> Since October 2019, all new floating-rate retail loans (including home loans) must be linked to an external benchmark — the RBI repo rate, the 91-day T-bill rate, or the 182-day T-bill rate. Banks add a spread over the benchmark; total rate = benchmark + credit risk premium + operational cost spread. The repo rate [verify current rate with RBI website] directly affects your home loan rate. When the RBI cuts the repo rate, floating-rate home loan borrowers benefit — but banks may delay passing on the full reduction.</p><p><strong>MCLR-linked loans (pre-2019):</strong> Loans sanctioned before October 2019 may still be on MCLR (Marginal Cost of Funds Based Lending Rate). MCLR resets are typically annual or semi-annual and lag benchmark rate changes. If you are on MCLR and the interest rate gap exceeds 0.5%, consider requesting a switch to repo-linked rate (banks are required to allow this).</p><p><strong>Zero prepayment penalty rule:</strong> RBI's guidelines (Circular DBOD.No.Dir.BC.56/13.03.00/2006-07 and subsequent directions) mandate that banks and NBFCs cannot charge prepayment penalties on floating-rate loans. For fixed-rate home loans, prepayment charges of up to 2% may apply. Always confirm with your lender before refinancing or prepaying a fixed-rate loan.</p><p><strong>Section 24(b) — home loan interest deduction:</strong> Under the old tax regime, interest paid on a home loan for a self-occupied property is deductible up to <strong>₹2 lakh per year</strong> under Section 24(b) of the Income Tax Act, 1961. For a rented-out property, the full interest is deductible (no cap). This deduction is <em>not available</em> under the new tax regime.</p><p><strong>Section 80C — home loan principal repayment:</strong> Principal repayment on a home loan qualifies for Section 80C deduction under the old tax regime, subject to the overall ₹1.5 lakh annual cap across all 80C instruments. The stamp duty and registration cost also qualifies in the year of property registration. Not available under the new tax regime.</p><p><strong>Home loan tax benefit summary:</strong> For old-regime taxpayers at the 30% bracket on a ₹50 lakh home loan at 8.5%, the annual interest deduction of ₹2 lakh saves approximately ₹62,400 in taxes (₹2L × 30% × 1.04 cess). Over the first 5 years when interest > ₹2L annually, this tax saving is the same each year.</p>"
     },
     {
-      "question": "Should you choose a longer or shorter loan tenure?",
-      "answer": "Longer tenure reduces monthly EMI but dramatically increases total interest paid. A 20-year home loan pays nearly 2x the principal in interest. Choose the shortest tenure your cash flow can comfortably support, and make prepayments whenever possible."
-    },
-    {
-      "question": "When does a balance transfer make sense?",
-      "answer": "A home loan balance transfer is worth considering if the interest rate difference is at least 0.5% and you have more than 10 years of tenure remaining. The savings from the lower rate must outweigh processing fees (typically 0.5–1% of outstanding loan)."
+      "id": "emi-mistakes",
+      "heading": "What Most EMI Borrowers Get Wrong",
+      "body": "<p><strong>Comparing EMI, not total interest cost.</strong> The EMI is the monthly payment. The total interest payable is the actual cost of the loan. A borrower who chooses a 25-year tenure over a 20-year tenure to save ₹4,000/month is paying ₹15–20 lakhs more in total interest — a decision worth knowing before signing. Always compare total outgo in the amortisation schedule, not just the monthly figure.</p><p><strong>Choosing a fixed rate in a declining interest rate environment.</strong> Fixed-rate home loans typically price in a 1–2% premium over floating rates. If the RBI is in a rate-cutting cycle, locking into a fixed rate means you pay above-market rates as floating rates fall. In India, most home loan borrowers benefit from floating rates over a 20-year horizon. Fixed rates are appropriate for high-conviction scenarios where rates are expected to rise significantly.</p><p><strong>Not claiming Section 24(b) under the old regime.</strong> A surprising number of home loan borrowers on the old regime fail to claim the full ₹2 lakh interest deduction either because they switch to the new regime without modelling the deduction, or because they do not submit their loan statement to their employer for TDS adjustment. At a 30% bracket, this is ₹62,400 in foregone tax savings per year.</p><p><strong>Making prepayments too late.</strong> A ₹5 lakh prepayment in year 15 of a 20-year loan saves approximately ₹1.2 lakhs in interest. The same prepayment in year 3 saves ₹6.8 lakhs. The reducing-balance method means outstanding principal and therefore the interest charge is highest in the early years. If you have surplus cash, apply it to your loan in years 1–5 — not after bonuses arrive in year 10 or 12.</p><p><strong>Ignoring processing fees when comparing lenders.</strong> Processing fees (typically 0.5–1% of the loan amount), MODT charges (Memorandum of Deposit of Title Deeds), legal verification costs, and insurance mandation can add ₹50,000–₹1.5 lakh to the effective cost of a home loan. Always ask for a total cost of credit comparison before choosing between two lenders with different rates.</p>"
     }
   ],
   "faq": [
     {
-      "q": "How is EMI calculated for a home loan?",
-      "a": "EMI = P × r × (1+r)^n / ((1+r)^n − 1), where P is the loan principal, r is the monthly interest rate (annual rate ÷ 12 ÷ 100), and n is the total number of monthly instalments. This formula gives the fixed monthly payment that amortises the loan completely over the tenure."
+      "q": "How is EMI calculated for a home loan in India?",
+      "a": "EMI = P × r × (1+r)^n / ((1+r)^n − 1), where P is the principal, r is the monthly interest rate (annual rate ÷ 12 ÷ 100), and n is the total number of monthly instalments. This reducing-balance formula gives a fixed monthly payment where the interest component is high in early months and gradually shifts to principal. For a ₹30 lakh loan at 8.5% for 20 years: r = 0.00708, n = 240, EMI = ₹26,035/month."
     },
     {
       "q": "What is the current home loan interest rate in India in 2026?",
-      "a": "As of 2026, home loan interest rates in India range from 8.25% to 9.5% per annum for salaried borrowers with good credit scores. Rates vary by lender, loan amount, tenure, and credit profile. Public sector banks like SBI and Bank of Baroda tend to offer lower rates than private banks."
+      "a": "Home loan interest rates in India in 2026 range from approximately 8.25% to 9.5% per annum for salaried borrowers with strong CIBIL scores. Rates are linked to the RBI repo rate for floating-rate loans; when the RBI adjusts the repo rate, banks revise their home loan rates within 3 months. Public sector banks (SBI, Bank of Baroda) typically offer lower rates than private banks. Credit score, loan amount, tenure, and property type also affect the applicable rate."
     },
     {
-      "q": "What happens if I pay one extra EMI per year?",
-      "a": "Paying one extra EMI per year on a 20-year home loan can reduce the tenure by approximately 2–3 years and save several lakhs in interest. The impact is highest in the early years when the interest component of each EMI is largest."
+      "q": "What happens if I pay one extra EMI per year on a home loan?",
+      "a": "Paying one extra EMI per year on a 20-year home loan of ₹30 lakhs at 8.5% reduces the effective tenure by approximately 2.5 years and saves approximately ₹3.8 lakhs in total interest. The impact is greatest when applied early in the loan term. Many borrowers schedule this as one lump-sum principal payment in the bonus month (typically March or October), or split it as a 13th-month prepayment instruction to their lender."
     },
     {
-      "q": "Is it better to increase EMI or make a lump sum prepayment?",
-      "a": "Both reduce interest burden, but lump sum prepayments in the early years of a loan have a significantly higher impact because the outstanding principal — and therefore interest — is larger. If you receive a bonus or windfall, applying it to prepayment in years 1–5 of a home loan is highly effective."
+      "q": "Is it better to make a lump sum prepayment or increase the monthly EMI?",
+      "a": "Both reduce interest burden, but lump-sum prepayments in years 1–5 of a home loan have a significantly higher impact per rupee than prepayments later. A ₹5 lakh lump sum prepayment in year 3 on a ₹40 lakh loan saves approximately ₹6.8 lakhs in interest. The same amount applied in year 12 saves only ₹2.1 lakhs — because the outstanding principal (and therefore the interest base) is lower. If you receive a bonus, apply it to the loan as early as possible."
+    },
+    {
+      "q": "What is the Section 24(b) deduction on home loan interest?",
+      "a": "Section 24(b) of the Income Tax Act, 1961 allows a deduction of up to ₹2 lakh per year on interest paid for a home loan on a self-occupied property — but only under the old tax regime. For a rented-out or deemed rented property, the full interest paid is deductible without a cap. This deduction is not available under the new tax regime. At a 30% tax bracket, the ₹2 lakh deduction saves approximately ₹62,400 per year in taxes (₹2L × 30% × 1.04 health and education cess)."
+    },
+    {
+      "q": "What EMI-to-income ratio do banks use for home loan eligibility?",
+      "a": "Most Indian banks and housing finance companies use a Fixed Obligation to Income Ratio (FOIR) of 40–50%. This means your total monthly EMI obligations (home loan + car loan + personal loan + credit card minimum) should not exceed 40–50% of your net monthly income. For a net salary of ₹1 lakh/month, the maximum loan EMI (across all loans) the bank will approve is typically ₹40,000–₹50,000. A CIBIL score above 750 may allow approval at the higher end of the FOIR range."
     },
     {
       "q": "What is the maximum home loan tenure in India?",
-      "a": "Most Indian banks offer home loans for up to 30 years. The tenure must end before the borrower turns 70 (for salaried) or 75 (for self-employed). A 25–30 year tenure lowers monthly EMI but significantly increases total interest paid."
+      "a": "Most Indian banks and HFCs offer home loans for up to 30 years. The loan must be fully repaid before the borrower's retirement age — typically 60–65 for salaried employees, 70–75 for self-employed. This means a 35-year-old salaried borrower can get a maximum 25-year tenure from most lenders. A 25–30 year tenure lowers monthly EMI but significantly increases total interest paid — for a ₹50 lakh loan at 8.5%, extending from 20 to 30 years adds ₹34.3 lakhs in interest."
     },
     {
-      "q": "Does part prepayment reduce EMI or tenure?",
-      "a": "Most banks in India apply part prepayments to reduce the loan tenure while keeping the EMI constant, which is the mathematically optimal choice for minimising total interest. Some lenders allow you to choose — reducing tenure saves more interest than reducing EMI."
+      "q": "Does part prepayment reduce EMI or loan tenure?",
+      "a": "Most banks in India apply part-prepayments to reduce the loan tenure while keeping the EMI unchanged — which is the mathematically optimal choice for minimising total interest. Some lenders allow borrowers to choose. Reducing tenure is almost always better than reducing EMI: if you reduce EMI, the surplus cash must earn more than the loan interest rate after tax to justify keeping the longer tenure. RBI mandates zero prepayment penalty for floating-rate home loans from banks and NBFCs."
     }
   ],
   "related": [
-    { "title": "Home Loan Affordability Calculator", "url": "/india/emi-calculator/", "desc": "How much home loan can you afford?" },
-    { "title": "SIP Calculator", "url": "/india/sip-calculator/", "desc": "Build wealth while repaying your loan" },
-    { "title": "Income Tax Calculator", "url": "/india/income-tax-calculator/", "desc": "Calculate Section 24 home loan interest deduction" }
+    { "title": "Home Loan EMI Calculator", "url": "/india/home-loan-emi-calculator/", "desc": "Dedicated home loan EMI with amortisation schedule" },
+    { "title": "SIP Calculator", "url": "/india/sip-calculator/", "desc": "Build wealth alongside your loan repayment" },
+    { "title": "Income Tax Calculator", "url": "/india/income-tax-calculator/", "desc": "Model Section 24(b) home loan interest deduction" }
   ],
   "howToSteps": [
     { "name": "Enter Loan Amount", "text": "Enter the total loan amount you need — for home loans, this is the loan sanctioned (not the property value)." },
     { "name": "Set Interest Rate", "text": "Enter the annual interest rate quoted by your bank. Check your loan offer letter for the exact rate." },
     { "name": "Choose Loan Tenure", "text": "Enter the loan repayment period in years. Home loans go up to 30 years; personal loans typically up to 5 years." },
-    { "name": "View EMI and Amortization", "text": "The calculator shows your monthly EMI, total interest payable, and a year-by-year breakdown of principal vs interest components." }
+    { "name": "View EMI and Amortisation", "text": "The calculator shows your monthly EMI, total interest payable, and a year-by-year breakdown of principal vs interest components." }
   ],
   "schema": {
     "appName": "EMI Calculator India",
-    "appDescription": "Calculate loan EMI, total interest payable and amortization schedule for home loans, car loans and personal loans in India"
+    "appDescription": "Calculate loan EMI, total interest payable and amortization schedule for home loans, car loans and personal loans in India — FY 2026-27"
   }
 }

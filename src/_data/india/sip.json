@@ -15,111 +15,83 @@
     "caption": "Estimated SIP maturity values at 12% annual return, 10-year tenure",
     "headers": ["Monthly SIP (₹)", "Total Invested (₹)", "Est. Returns (₹)", "Maturity Value (₹)"],
     "rows": [
-      ["₹1,000", "₹1,20,000", "₹1,11,615", "₹2,32,339"],
-      ["₹5,000", "₹6,00,000", "₹5,61,695", "₹11,61,695"],
-      ["₹10,000", "₹12,00,000", "₹11,23,391", "₹23,23,391"],
-      ["₹25,000", "₹30,00,000", "₹28,08,477", "₹58,08,477"],
-      ["₹50,000", "₹60,00,000", "₹56,16,955", "₹1,16,16,955"]
+      ["₹1,000", "₹1,20,000", "₹1,11,615", "₹2,31,615"],
+      ["₹5,000", "₹6,00,000", "₹5,58,076", "₹11,58,076"],
+      ["₹10,000", "₹12,00,000", "₹11,16,151", "₹23,16,151"],
+      ["₹25,000", "₹30,00,000", "₹27,90,378", "₹57,90,378"],
+      ["₹50,000", "₹60,00,000", "₹55,80,757", "₹1,15,80,757"]
     ]
   },
-  "examples": [
+  "articleSections": [
     {
-      "heading": "Salaried professional, Mumbai — ₹10,000/month, 25 years",
-      "text": "A 30-year-old starting a ₹10,000/month SIP in a large-cap index fund at an assumed 12% annual return for 25 years accumulates approximately ₹1.89 crore at maturity, having invested only ₹30 lakhs. Compounding over 25 years generates over ₹1.59 crore in returns alone."
+      "id": "how-it-works",
+      "heading": "How the SIP Formula Actually Works",
+      "body": "<p>The SIP calculator uses the <strong>Future Value of an Annuity Due</strong> formula — the standard financial mathematics for a recurring payment made at the beginning of each period:</p><p><strong>FV = P × [(1 + r)^n − 1] / r × (1 + r)</strong></p><ul><li><strong>P</strong> = Monthly SIP amount in rupees</li><li><strong>r</strong> = Monthly return rate = Annual rate ÷ 12 ÷ 100</li><li><strong>n</strong> = Total months = Years × 12</li></ul><p>For a ₹10,000/month SIP at 12% per annum for 10 years: r = 0.01, n = 120. FV = 10,000 × [(1.01)^120 − 1] / 0.01 × 1.01 = <strong>₹23.2 lakhs</strong>. Total invested: ₹12 lakhs. Return: ₹11.2 lakhs — 93% of the principal in gains over one decade.</p><p>The formula uses <em>annuity due</em> (payment at the start of each period) rather than <em>ordinary annuity</em> (payment at end). This is why the final term (1 + r) exists — it gives each instalment one extra period of compounding. In practice, this distinction adds roughly 1% to the final corpus compared to an ordinary annuity calculation at the same inputs.</p><p>Why does extending tenure from 10 to 20 years multiply the corpus by 4.3x instead of doubling it? Because each instalment from year 1 compounds for 19 additional years by the time you reach year 20. The rupees invested in month 240 barely compound at all. This asymmetry — early money worth exponentially more than late money — is why starting three years earlier adds more to the final corpus than increasing your SIP by ₹2,000/month. You can verify this with the <a href='/india/lumpsum-calculator/'>Lumpsum Calculator</a>: a single ₹1 lakh invested at 12% for 10 years grows to ₹3.1 lakh. For 20 years: ₹9.6 lakh. That is the compounding tail you forgo when you start late.</p><p>A step-up SIP modifies this formula by applying a different P each year — incrementing by your chosen percentage. The <a href='/india/step-up-sip-calculator/'>Step-Up SIP Calculator</a> runs the compound separately for each year's contribution level.</p>"
     },
     {
-      "heading": "Early career, Tier 2 city — ₹2,000/month, 20 years",
-      "text": "Starting small is still powerful. A ₹2,000/month SIP at 12% for 20 years grows to approximately ₹19.8 lakhs on a total investment of ₹4.8 lakhs — a 4x return on invested capital."
+      "id": "worked-scenarios",
+      "heading": "Three Scenarios That Reveal Different Truths About SIP",
+      "body": "<h3>Scenario 1: Riya vs Pradeep — the cost of waiting five years</h3><p>Riya, 25, and Pradeep, 30, both invest ₹8,000/month in a large-cap index fund at an assumed 11% annual return, stopping at age 55. Riya invests for 30 years; Pradeep for 25 years. Riya invests ₹4.8 lakhs more in total (₹28.8L vs ₹24L).</p><p><strong>Riya's corpus at 55: ₹2.53 crore. Pradeep's corpus at 55: ₹1.46 crore.</strong></p><p>A five-year head start — at only ₹4.8 lakhs more invested — generates ₹1.07 crore more. The reason: at 11% annual return, money doubles approximately every 6.5 years (Rule of 72 ÷ 11). Riya's first ₹8,000 instalment compounds for 30 years before she stops. Pradeep's first instalment compounds for only 25. The early instalments in any SIP carry the heaviest compounding weight. Riya's five-year advantage is never recoverable — Pradeep would need to invest ₹15,500/month for 25 years to match her corpus.</p><h3>Scenario 2: Karan's flat SIP vs step-up SIP — which builds more?</h3><p>Karan, 32, can either invest ₹15,000/month flat for 20 years, or start at ₹10,000/month and increase by 10% each year. Assumed return: 12% per annum.</p><ul><li><strong>Flat ₹15,000/month for 20 years:</strong> Total invested ₹36 lakhs. Corpus: approximately ₹1.49 crore.</li><li><strong>Step-up SIP, ₹10,000 start, +10% each year:</strong> Total invested ₹68.7 lakhs over 20 years. Corpus: approximately ₹1.91 crore.</li></ul><p>The step-up SIP builds 28% more wealth — but Karan's cash flow burden is lighter in years 1–5 when expenses are highest. At 32, ₹10,000/month is more sustainable than ₹15,000. By year 10 his step-up contribution has grown to ₹23,579/month, closely tracking salary growth. The flat SIP forces the same ₹15,000 sacrifice in year 1 and year 20, which is poorly calibrated to most income growth trajectories. Model your own step-up rate using the <a href='/india/step-up-sip-calculator/'>Step-Up SIP Calculator</a>.</p><h3>Scenario 3: Sneha's ELSS SIP vs plain large-cap — old regime vs new</h3><p>Sneha, 28, invests ₹12,500/month and is deciding between ELSS (with Section 80C benefit under the old tax regime) and a plain large-cap index fund (no lock-in, available under both regimes). Assumed return: 12% per annum over 5 years.</p><p>Both options generate approximately ₹10.4 lakhs on ₹7.5 lakhs invested over 5 years at the same return rate. The difference is tax:</p><ul><li><strong>Old regime, ELSS:</strong> Each ₹12,500 monthly instalment qualifies for Section 80C deduction, saving ₹3,900/month in tax at the 30% bracket (₹2.3 lakhs over 5 years). Net effective corpus: ₹12.7 lakhs.</li><li><strong>New regime, index fund:</strong> No 80C benefit, no lock-in. Corpus: ₹10.4 lakhs. Liquidity advantage: every unit is redeemable from month 1.</li></ul><p>ELSS lock-in applies <em>per instalment</em> — each monthly investment is locked for 3 years from its own date. Sneha's 60th month instalment cannot be redeemed until month 96. Investors in the new tax regime receive no 80C benefit from ELSS and should compare expense ratios directly. Use the <a href='/india/capital-gains-calculator/'>Capital Gains Tax Calculator</a> to estimate the LTCG tax at redemption.</p>"
     },
     {
-      "heading": "10 years vs 20 years (same ₹5,000/month at 12%)",
-      "text": "Doubling the investment period from 10 to 20 years — while keeping the monthly SIP identical — multiplies the final wealth by 4.3x. Total invested doubles, but returns grow by 7x.",
-      "table": {
-        "headers": ["Duration", "Total Invested", "Maturity Value", "Returns"],
-        "rows": [
-          ["10 years", "₹6,00,000", "₹11,61,695", "₹5,61,695"],
-          ["20 years", "₹12,00,000", "₹49,95,740", "₹37,95,740"]
-        ]
-      }
-    }
-  ],
-  "decisionGuide": [
-    {
-      "question": "How much should you invest in SIP each month?",
-      "answer": "A common guideline is the 50-30-20 rule: allocate 20% of your monthly take-home salary toward investments. For a ₹50,000/month salary, that is ₹10,000 — split between SIP, PPF, and emergency fund depending on your existing coverage."
+      "id": "rules-and-rates",
+      "heading": "SIP Rules, Tax Rates & Regulatory Framework — FY 2026-27",
+      "body": "<p><strong>SEBI regulation:</strong> All mutual fund SIPs in India are regulated by the Securities and Exchange Board of India under the SEBI (Mutual Funds) Regulations, 1996. AMCs must publish daily NAVs, maintain portfolio disclosure within 10 days of each month-end, and adhere to SEBI-mandated expense ratio caps.</p><p><strong>Expense ratio limits (SEBI Circular, updated 2024):</strong> For equity funds with AUM above ₹50,000 crore, the TER cap for regular plans is 1.05%; direct plans save 0.4–1.0% annually depending on fund size. On a ₹10,000/month SIP at 12% gross return over 20 years, a 0.9% TER disadvantage in a regular plan reduces the effective annual return to 11.1%, cutting the final corpus from approximately ₹99.9 lakhs to ₹87 lakhs — a ₹12.9 lakh difference attributable solely to the distributor commission embedded in the regular plan.</p><p><strong>Capital gains tax on SIP redemptions (Finance Act 2024, effective FY 2024-25):</strong> Equity mutual fund units (including ELSS) held for more than 12 months are Long Term Capital Gains (LTCG), taxed at <strong>12.5%</strong> on gains exceeding <strong>₹1.25 lakh</strong> in a financial year. Units held for 12 months or less are Short Term Capital Gains (STCG), taxed at <strong>20%</strong>. Prior to Budget 2024, LTCG was 10% above ₹1 lakh — the rate increased while the exemption threshold increased modestly. Each SIP instalment has its own 12-month holding period, so only instalments older than one year qualify for LTCG treatment at the time of redemption.</p><p><strong>Section 80C for ELSS (Income Tax Act, 1961):</strong> SIP investments in ELSS qualify for Section 80C deduction under the <em>old tax regime only</em>, up to ₹1.5 lakh per year across all 80C instruments combined (PPF, ELSS, NSC, home loan principal, life insurance premiums). The 3-year lock-in applies to each instalment individually. Taxpayers who have opted for the new regime — which is now the default regime for most individuals — cannot claim any 80C deduction.</p><p><strong>KYC requirement:</strong> PAN and Aadhaar-linked KYC is mandatory for all mutual fund investments under PMLA rules. KYC must be completed through a SEBI-registered KYC Registration Agency (KRA) — CAMS KRA, CVL KRA, or KFintech KRA. Without completed KYC, SIP mandates cannot be registered with any AMC.</p><p><strong>SIP mandate registration:</strong> SIPs are registered as NACH (National Automated Clearing House) mandates through NPCI, or as e-mandates via net banking. Monthly deduction occurs on the date chosen by the investor. Most AMCs allow dates between the 1st and 28th of each month, excluding the 29th–31st to avoid month-end date conflicts.</p>"
     },
     {
-      "question": "Which return rate should you use?",
-      "answer": "Use 10–12% for large-cap or index funds (conservative), 12–15% for mid-cap funds (moderate), and no more than 15% for any long-term projection regardless of fund type. Past returns do not guarantee future performance."
-    },
-    {
-      "question": "When should you increase your SIP amount?",
-      "answer": "Increase your SIP amount by 10% each year as your income grows — this is called a step-up SIP. Use our Step-Up SIP Calculator to see how this compounds your final returns significantly."
+      "id": "common-mistakes",
+      "heading": "What Most SIP Investors Get Wrong",
+      "body": "<p><strong>Using 15–18% return projections for large-cap funds.</strong> The 10-year rolling return average for large-cap equity funds in India has been 11–13% for most historical periods. Small-cap funds have delivered higher peaks but also 40–60% drawdowns in 2008 and 2020. Projecting 16% on a large-cap or index fund SIP does not make you an optimist — it makes your projections unreliable. Use 10–11% for conservative planning, 12% as a base case, and never more than 14–15% even for mid-cap allocations in long-horizon projections.</p><p><strong>Misunderstanding ELSS lock-in.</strong> A common assumption is that a 3-year ELSS SIP means the entire investment unlocks after 3 years. The lock-in is per instalment. A 12-month SIP results in instalments with lock-in expiry dates spanning from month 36 to month 48. Only in month 48 is the full corpus available for redemption. Plan redemption timelines accordingly — this catches investors by surprise when they need liquidity at year 3 and discover the final months of their SIP are still locked.</p><p><strong>Stopping during market corrections.</strong> The worst SIP outcomes belong to investors who stopped in 2008 (Sensex fell 52%), 2011 (fell 25%), and 2020 (fell 38%) — precisely the moments when future instalments would have purchased the most units at the lowest NAV. Rupee cost averaging only delivers its mathematical benefit if the SIP continues through downturns. Stopping locks in the loss and removes the recovery upside.</p><p><strong>Not accounting for LTCG at redemption.</strong> A ₹10,000/month SIP for 20 years at 12% builds approximately ₹99.9 lakhs — with ₹24 lakhs invested and ₹75.9 lakhs in gains. LTCG tax of 12.5% on gains above ₹1.25 lakh per year means a tax liability of approximately ₹9.3 lakhs if you redeem the entire corpus in one financial year. Most SIP growth calculators — including this one — show pre-tax corpus. Use the <a href='/india/capital-gains-calculator/'>Capital Gains Tax Calculator</a> and plan phased redemptions across multiple financial years to keep annual gains close to the ₹1.25 lakh exemption limit.</p>"
     }
   ],
   "faq": [
     {
-      "q": "What is the return on a ₹5,000 SIP for 10 years?",
-      "a": "A ₹5,000/month SIP at 12% annual return over 10 years grows to approximately ₹11.6 lakhs. Your total investment is ₹6 lakhs and the estimated returns are approximately ₹5.6 lakhs. At a more conservative 10% return, the maturity value is approximately ₹10.3 lakhs."
+      "q": "What corpus does a ₹10,000/month SIP at 12% build over 20 years?",
+      "a": "A ₹10,000/month SIP at 12% per annum over 20 years grows to approximately ₹99.9 lakh. Total invested: ₹24 lakhs. Estimated returns: ₹75.9 lakhs — more than 3x the amount invested. The same SIP for only 10 years grows to ₹23.2 lakhs. The corpus grows by 4.3x when you double the tenure, because the final 10 years carry the compounding weight of 120 accumulated months of prior instalments."
     },
     {
-      "q": "Is SIP better than a fixed deposit in India?",
-      "a": "SIP in equity mutual funds historically outperforms fixed deposits over 10+ year horizons. FDs offer guaranteed returns (currently 6.5–7.5% in 2026) with no risk, while equity SIP carries market risk but has delivered 11–14% annual returns over most 10-year periods. SIP suits long-term goals; FD suits short-term safety."
+      "q": "What LTCG tax applies when I redeem equity mutual fund SIP units in FY 2026-27?",
+      "a": "Equity mutual fund SIP units held for more than 12 months are taxed at 12.5% Long Term Capital Gains (LTCG) on gains exceeding ₹1.25 lakh per financial year — as amended by Finance Act 2024, effective from FY 2024-25. Units held for 12 months or less attract 20% Short Term Capital Gains (STCG) with no exemption. Each monthly SIP instalment has its own independent 12-month holding period. At the time of redemption, only those specific instalments older than 12 months are taxed at the LTCG rate; newer instalments attract STCG."
     },
     {
-      "q": "What is the minimum amount for a SIP in India?",
-      "a": "Most mutual fund houses in India allow SIPs starting from ₹500 per month. Some funds accept ₹100/month for micro-SIP schemes. There is no maximum limit — you can invest any amount depending on your financial goals."
+      "q": "Is ELSS SIP eligible for Section 80C deduction under the new tax regime?",
+      "a": "No. Section 80C deductions under the Income Tax Act, 1961 are available only under the old tax regime. ELSS SIP qualifies for 80C deduction up to ₹1.5 lakh per year (combined across all 80C instruments) only if you opt for the old regime. The new tax regime — which has been the default regime since FY 2024-25 — does not allow any Section 80C deductions. Investors under the new regime receive no tax benefit from ELSS and should compare ELSS expense ratios (typically 1.0–1.8%) against direct large-cap index funds (0.1–0.2%) before choosing."
     },
     {
-      "q": "Can I stop or pause a SIP anytime?",
-      "a": "Yes. SIPs in India can be paused or stopped at any time without penalty. You can also reduce or increase the SIP amount. Stopping a SIP does not redeem your existing investment — the units you hold remain invested and continue to grow."
+      "q": "Is SIP better than a fixed deposit in India over 10 years?",
+      "a": "Over a 10-year horizon, a ₹10,000/month SIP in a large-cap equity fund at a realistic 11% return builds approximately ₹21.5 lakhs on ₹12 lakhs invested. The same ₹10,000/month in a bank fixed deposit at 7% builds approximately ₹17.4 lakhs — about ₹4.1 lakhs less, and that gap widens significantly over 15–20 years. However, SIP returns are not guaranteed: a large-cap fund SIP started in January 2008 showed negative or near-zero returns for 5 years before recovering. FD returns are guaranteed and insured up to ₹5 lakh per depositor per bank by DICGC. SIP suits long-term goals (10+ years) where equity's higher expected return justifies the volatility; FD suits goals within 3–5 years where capital preservation is the priority."
     },
     {
-      "q": "How is SIP return calculated?",
-      "a": "The SIP calculator uses the future value of a recurring investment formula: M = P × [{(1 + r)^n − 1} / r] × (1 + r), where P is the monthly SIP, r is the monthly return rate (annual rate ÷ 12 ÷ 100), and n is the total number of months."
+      "q": "What is a step-up SIP and how much more wealth does it build versus a flat SIP?",
+      "a": "A step-up SIP automatically increases the monthly contribution by a fixed percentage each year — typically 10–15% to track annual salary growth. Starting at ₹10,000/month with a 10% annual step-up at 12% return for 20 years builds approximately ₹1.91 crore on ₹68.7 lakhs invested. A flat ₹15,000/month SIP (a larger starting commitment) for 20 years builds approximately ₹1.49 crore on ₹36 lakhs invested. The step-up SIP delivers 28% more final corpus despite the flat SIP requiring a higher monthly payment from day one. Most AMCs support step-up registration; it can also be done manually by modifying the SIP amount each year."
     },
     {
-      "q": "What is the best SIP duration for maximum returns?",
-      "a": "Longer durations always produce higher returns due to compounding. A 20-year SIP generates 4–5x more wealth than a 10-year SIP at the same monthly amount and return rate. Start as early as possible and stay invested through market cycles for best results."
+      "q": "How does a direct plan SIP compare to a regular plan over 20 years?",
+      "a": "Direct plans have a Total Expense Ratio (TER) that is typically 0.5–1.0% lower than regular plans because no distributor commission is deducted. SEBI mandates the expense ratio difference be disclosed. On a ₹10,000/month SIP at a gross return of 12% over 20 years: in a direct plan at 12% net, the corpus is approximately ₹99.9 lakhs. In a regular plan at 11.1% net (0.9% lower), the corpus is approximately ₹87 lakhs — a ₹12.9 lakh difference attributable solely to distribution costs. At higher SIP amounts or longer tenures, this gap exceeds ₹30–50 lakhs. Use direct plans through AMC websites or SEBI-registered platforms unless you are paying separately for financial advisory services that justify the cost."
     },
     {
-      "q": "What is LTCG tax on SIP equity mutual fund redemptions in 2026?",
-      "a": "Under current rules (FY 2026-27), equity mutual fund SIP units held for more than 12 months attract Long Term Capital Gains (LTCG) tax at 12.5% on gains exceeding ₹1.25 lakh in a financial year. Units redeemed within 12 months are taxed at 20% (Short Term Capital Gains). Since every monthly SIP instalment has its own 12-month holding period, only instalments older than one year qualify for LTCG treatment at the time of redemption."
+      "q": "What happens to my SIP units when markets fall sharply?",
+      "a": "When NAV falls, your fixed monthly SIP amount buys more units at a lower price — this is rupee cost averaging. If the NAV drops from ₹100 to ₹50, your ₹10,000 monthly instalment buys 200 units instead of 100. When the NAV recovers to ₹100, those 200 units are worth ₹20,000. The historical record shows that Indian equity markets (Nifty 50) have recovered from every correction within 3–5 years: the 52% fall in 2008 fully recovered by 2010; the 38% fall in March 2020 recovered within 14 months. Investors who stopped their SIP at any of these corrections locked in lower unit counts and missed the accumulation window. SEBI data shows that SIPs continued through corrections consistently outperform SIPs stopped and restarted."
     },
     {
-      "q": "What is a step-up SIP and is it worth doing?",
-      "a": "A step-up SIP (also called top-up SIP) automatically increases your monthly investment by a fixed percentage — typically 10–15% — each year. Starting at ₹10,000/month at 12% return for 20 years builds approximately ₹99 lakh. The same SIP with a 10% annual step-up grows to approximately ₹1.9 crore — nearly double — because the increasing contributions compound over time. Step-up SIPs are especially effective when your income grows annually."
-    },
-    {
-      "q": "Is SIP in an ELSS fund eligible for Section 80C deduction?",
-      "a": "Yes. SIP investments in ELSS (Equity Linked Savings Scheme) mutual funds qualify for Section 80C deduction under the old tax regime, up to a combined 80C limit of ₹1.5 lakh per year. ELSS has a 3-year lock-in on each instalment — each monthly SIP instalment is locked in for 3 years from its investment date. After the lock-in, the units can be redeemed and LTCG tax applies at 12.5% on gains above ₹1.25 lakh."
-    },
-    {
-      "q": "What happens to my SIP if the market falls sharply?",
-      "a": "A market fall actually benefits a long-term SIP investor through rupee cost averaging: your fixed monthly amount buys more units when prices are lower, reducing your average cost per unit over time. Historically, Indian equity markets have recovered from every downturn over a 5+ year period. Stopping a SIP during a market fall locks in the loss and removes the recovery upside. Unless you need the money urgently, staying invested through volatility is the mathematically sound approach."
-    },
-    {
-      "q": "Can I run multiple SIPs in different mutual funds?",
-      "a": "Yes. You can run as many simultaneous SIPs as you want across different AMCs and fund categories. A common approach is to split your monthly investment across a large-cap index fund, a flexi-cap fund, and a mid-cap fund for diversification. There is no regulatory limit on the number of SIPs you can hold. Each SIP is tracked separately with its own holding period for tax purposes."
-    },
-    {
-      "q": "What is the difference between a direct and a regular SIP plan?",
-      "a": "A direct plan SIP is bought directly from the AMC (Asset Management Company) without a distributor. It has a lower expense ratio — typically 0.5–1.0% lower than the regular plan — because no distributor commission is paid. A regular plan is bought through a bank, broker, or app that earns commission from the AMC. Over 20 years, a 1% difference in expense ratio on a ₹10,000/month SIP can reduce the final corpus by ₹15–25 lakh. Use direct plans unless you are paying for active financial advice that justifies the higher cost."
+      "q": "What is the minimum SIP amount and can I run multiple SIPs simultaneously?",
+      "a": "Most AMCs allow SIPs from ₹500/month. SBI Mutual Fund and Mirae Asset offer micro-SIP programmes at ₹100/month in specific schemes. There is no SEBI-mandated minimum or maximum SIP amount, and no limit on the number of SIPs you can run simultaneously across different funds and AMCs. Each SIP runs independently with its own NACH mandate, investment date, and holding period tracking for tax purposes. A common diversification approach is to split a total monthly SIP across a Nifty 50 index fund, a flexi-cap fund, and a mid-cap fund — giving exposure to large, multi-cap, and mid-cap growth profiles within a single monthly budget."
     }
   ],
   "related": [
     { "title": "Step-Up SIP Calculator", "url": "/india/step-up-sip-calculator/", "desc": "Calculate returns with annual SIP amount increases" },
     { "title": "Lumpsum Calculator", "url": "/india/lumpsum-calculator/", "desc": "One-time investment growth estimate" },
-    { "title": "NPS Calculator", "url": "/india/nps-calculator/", "desc": "National Pension Scheme corpus calculator" }
+    { "title": "ELSS Calculator", "url": "/india/elss-calculator/", "desc": "ELSS SIP returns with Section 80C tax savings" },
+    { "title": "Capital Gains Tax Calculator", "url": "/india/capital-gains-calculator/", "desc": "Estimate LTCG and STCG on mutual fund redemptions" }
   ],
   "howToSteps": [
-    { "name": "Enter Monthly Investment", "text": "Enter the amount you plan to invest every month. The minimum SIP is ₹500." },
-    { "name": "Set Expected Return Rate", "text": "Enter the expected annual return rate. Use 10–12% for conservative large-cap or index fund estimates." },
-    { "name": "Choose Investment Duration", "text": "Select how many years you plan to continue the SIP. Longer duration increases returns significantly due to compounding." },
-    { "name": "Read Your Results", "text": "The calculator shows your total invested amount, estimated returns earned, and final maturity value instantly." }
+    { "name": "Enter Monthly Investment", "text": "Enter the amount you plan to invest every month. The minimum SIP accepted by most fund houses is ₹500." },
+    { "name": "Set Expected Return Rate", "text": "Enter the expected annual return rate. Use 10–12% for conservative large-cap or index fund projections; 12–14% for flexi-cap or multi-cap funds." },
+    { "name": "Choose Investment Duration", "text": "Select how many years you plan to continue the SIP. Longer duration compounds returns non-linearly — 20 years builds 4.3x more than 10 years at the same monthly amount." },
+    { "name": "Read Your Results", "text": "The calculator shows total invested amount, estimated returns, and final maturity value. The year-by-year breakdown shows compounding growth per annum." }
   ],
   "schema": {
     "appName": "SIP Calculator India",
-    "appDescription": "Calculate SIP returns, maturity value and year-by-year growth for Indian mutual fund investments"
+    "appDescription": "Calculate SIP returns, maturity value, LTCG tax estimate, and year-by-year growth for Indian mutual fund investments — FY 2026-27"
   }
 }

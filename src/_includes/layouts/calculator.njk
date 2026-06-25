@@ -296,6 +296,16 @@ layout: layouts/base.njk
       </section>
       {% endif %}
 
+      <!-- Rich article sections (how it works, scenarios, rules, common mistakes) -->
+      {% if calcData.articleSections %}
+      {% for section in calcData.articleSections %}
+      <section id="{{ section.id }}">
+        <h2>{{ section.heading }}</h2>
+        {{ section.body | safe }}
+      </section>
+      {% endfor %}
+      {% endif %}
+
       <!-- FAQ -->
       {% include "components/faq.njk" %}
 

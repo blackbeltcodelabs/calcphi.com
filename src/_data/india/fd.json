@@ -3,7 +3,7 @@
   "defaults": { "principal": 100000, "rate": 7.0, "years": 3, "compounding": "quarterly" },
   "inputs": [
     { "id": "fd-principal", "label": "Principal Amount (₹)", "min": 1000, "max": 100000000, "step": 1000, "value": 100000, "hint": "" },
-    { "id": "fd-rate", "label": "Annual Interest Rate (%)", "min": 1, "max": 15, "step": 0.05, "value": 7.0, "hint": "Check your bank's current FD rates" },
+    { "id": "fd-rate", "label": "Annual Interest Rate (%)", "min": 1, "max": 15, "step": 0.05, "value": 7.0, "hint": "Check your bank's current FD rates (see table below)" },
     { "id": "fd-tenure-years", "label": "Tenure (Years)", "min": 0, "max": 10, "step": 1, "value": 3, "hint": "" },
     { "id": "fd-tenure-months", "label": "Tenure (Months)", "min": 0, "max": 11, "step": 1, "value": 0, "hint": "" },
     { "id": "fd-compounding", "label": "Compounding Frequency", "type": "select", "options": [
@@ -20,8 +20,8 @@
     { "id": "effective-rate", "label": "Effective Annual Yield" }
   ],
   "bankRates": {
-    "caption": "Current FD interest rates — major Indian banks (2026)",
-    "note": "Rates for general public, 1–3 year tenure. Senior citizens typically get 0.25–0.5% extra.",
+    "caption": "Indicative FD interest rates — major Indian banks (2026, verify before booking)",
+    "note": "Rates for general public, 1–3 year tenure. Senior citizens typically get 0.25–0.5% extra. Verify current rates with your bank before booking — these rates are indicative and change periodically.",
     "rows": [
       { "bank": "SBI", "general": "6.80%", "senior": "7.30%" },
       { "bank": "HDFC Bank", "general": "7.00%", "senior": "7.50%" },
@@ -31,80 +31,75 @@
       { "bank": "Bank of Baroda", "general": "7.15%", "senior": "7.65%" }
     ]
   },
-  "examples": [
+  "articleSections": [
     {
-      "heading": "₹1 lakh FD at 7% — 3 years (quarterly compounding)",
-      "text": "A ₹1 lakh FD at 7% annual interest with quarterly compounding for 3 years yields a maturity value of approximately ₹1,23,145. Total interest earned is ₹23,145. The effective annual yield with quarterly compounding is 7.19% — slightly higher than the nominal rate."
+      "id": "how-fd-works",
+      "heading": "How FD Interest Is Calculated — Quarterly Compounding vs Simple Interest",
+      "body": "<p>Indian banks calculate FD maturity using compound interest, with quarterly compounding as the standard. The formula is:</p><p><strong>Maturity Value = P × (1 + r/4)^(4t)</strong></p><ul><li><strong>P</strong> = Principal amount (₹)</li><li><strong>r</strong> = Annual interest rate as a decimal (e.g., 7% = 0.07)</li><li><strong>t</strong> = Tenure in years</li></ul><p>For a ₹1 lakh FD at 7% for 3 years with quarterly compounding: Maturity = 1,00,000 × (1 + 0.07/4)^12 = 1,00,000 × (1.0175)^12 = <strong>₹1,23,145</strong>. Interest earned: ₹23,145. Effective annual yield: 7.19% — higher than the nominal 7% because quarterly compounding generates interest-on-interest within the year.</p><p>For simple interest on the same ₹1L at 7% for 3 years: Interest = 1,00,000 × 0.07 × 3 = ₹21,000. Maturity = ₹1,21,000 — ₹2,145 less than quarterly compounding. The difference grows with tenure: over 5 years, the quarterly compounding FD yields ₹41,478 vs ₹35,000 in simple interest — a ₹6,478 difference.</p><p><strong>Monthly vs quarterly compounding:</strong> Monthly compounding (some banks offer this for sweep accounts or special FDs) gives a slightly higher effective yield than quarterly. At 7% nominal: quarterly effective rate = 7.19%; monthly effective rate = 7.23%. The difference is small (₹400 on ₹1 lakh over 3 years) but compounds meaningfully at higher principals and longer tenures.</p><p><strong>Cumulative vs non-cumulative FD:</strong> In a cumulative FD, interest is reinvested and compounded — you get the maturity value as a lump sum. In a non-cumulative (payout) FD, interest is paid out monthly or quarterly. Cumulative FDs always generate a higher total return than non-cumulative FDs at the same rate because the reinvested interest itself earns interest. Choose non-cumulative only if you need the regular income stream.</p>"
     },
     {
-      "heading": "Senior citizen FD — ₹5 lakh at 7.5%, 2 years",
-      "text": "Senior citizens in India typically receive 0.25–0.5% higher FD rates. A ₹5 lakh FD at 7.5% for 2 years yields approximately ₹5,80,932 at maturity. Interest income above ₹50,000/year (for senior citizens) is taxable at the applicable slab rate."
+      "id": "fd-scenarios",
+      "heading": "Three FD Scenarios That Show the True Cost of 'Safe' Returns",
+      "body": "<h3>Scenario 1: Raj's FD vs PPF — the post-tax comparison</h3><p>Raj, 40, in the 30% tax bracket, wants to invest ₹5 lakhs for 5 years. He is comparing a 7% bank FD and a PPF account at 7.1%.</p><ul><li><strong>FD at 7% (quarterly compounding, 5 years):</strong> Maturity ₹7,07,389. Interest earned: ₹2,07,389. Tax at 30% + cess on interest = ₹64,615. <strong>Post-tax maturity: ₹6,42,774. Post-tax yield: 5.09%.</strong></li><li><strong>PPF at 7.1% (5 years, old regime with 80C deduction):</strong> Maturity on ₹5L annual investment for 5 years is complex, but on a simple ₹5L lump sum equivalent: interest fully tax-free. Plus, each year's contribution gets 80C deduction saving ₹46,800/year in taxes (₹1.5L × 30% × 1.04). <strong>Effective post-tax return significantly exceeds the FD.</strong></li></ul><p>At a 30% bracket, the FD's post-tax yield (≈5%) is meaningfully lower than PPF's 7.1% tax-free yield. FD makes sense over PPF when: (a) you need the money within 5 years (PPF lock-in is 15 years) or (b) you have already maxed out your PPF contribution for the year.</p><h3>Scenario 2: Sita's senior citizen FD strategy — DICGC coverage</h3><p>Sita, 65, has ₹25 lakhs in FDs. She is putting all of it with SBI at 7.3% (senior citizen rate). Her financial planner points out the DICGC insurance issue.</p><ul><li><strong>DICGC covers ₹5 lakh per depositor per bank.</strong> Sita's ₹25L with SBI is insured only up to ₹5L. If SBI were to fail (extremely unlikely but not impossible — as seen with Yes Bank in 2020), Sita's exposure above ₹5L would be unsecured.</li><li><strong>Better strategy:</strong> Spread ₹25L across 5 different banks — ₹5L each (SBI, HDFC, ICICI, Axis, Bank of Baroda). All ₹25L is DICGC-insured. Rate difference may be ±0.1–0.2%, but the insurance benefit makes it worthwhile for large FD amounts.</li></ul><p>Small finance banks often offer 0.5–1% higher FD rates than major banks. The DICGC coverage applies equally — AU Small Finance Bank, ESAF, and Ujjivan are DICGC-member banks with the same ₹5L insurance per depositor.</p><h3>Scenario 3: The 5-year tax-saving FD vs ELSS comparison</h3><p>Anand, 38, wants to deploy ₹1.5 lakhs for the 80C deduction under the old regime. He can choose a 5-year bank FD (tax-saving variant) at 6.8% or ELSS at an assumed 12% return.</p><ul><li><strong>5-year tax-saving FD at 6.8% (quarterly compounding):</strong> Maturity ≈ ₹2,07,817. Interest earned ₹57,817, taxed at 30%+cess = ₹18,050. Post-tax maturity: ₹1,89,767. 80C deduction saves ₹46,800 in taxes. Total effective value: ₹2,36,567.</li><li><strong>ELSS at 12% for 5 years:</strong> Maturity ≈ ₹2,64,587. LTCG tax at 12.5% on gains above ₹1.25L = ₹0 (gains of ₹1.14L are below the exemption). Post-tax maturity: ₹2,64,587. 80C deduction saves ₹46,800 in taxes. Total effective value: ₹3,11,387.</li></ul><p>ELSS delivers ₹74,820 more than the tax-saving FD, but with equity risk. The FD is capital-protected; ELSS could deliver less than the principal in a 5-year downturn. For the 80C allocation, most financial planners recommend FD for capital-preservation portion and ELSS for the equity upside portion — splitting the ₹1.5L based on risk tolerance.</p>"
     },
     {
-      "heading": "Compound vs simple interest comparison",
-      "text": "The difference between simple and quarterly compound interest becomes significant over longer tenures.",
-      "table": {
-        "headers": ["Method", "₹1L at 7%, 1 year", "₹1L at 7%, 3 years", "₹1L at 7%, 5 years"],
-        "rows": [
-          ["Simple", "₹1,07,000", "₹1,21,000", "₹1,35,000"],
-          ["Quarterly Compound", "₹1,07,186", "₹1,23,145", "₹1,41,478"]
-        ]
-      }
-    }
-  ],
-  "decisionGuide": [
-    {
-      "question": "Should you choose monthly or quarterly interest payout?",
-      "answer": "If you need regular income from the FD, choose monthly payout. For wealth accumulation, choose cumulative (compound) — the bank reinvests interest, resulting in a higher maturity value. Cumulative FDs always pay more than payout FDs at the same interest rate."
+      "id": "fd-rules-tax",
+      "heading": "FD Rules, TDS Thresholds, DICGC Insurance & Tax Treatment",
+      "body": "<p><strong>Interest is taxable at slab rate:</strong> FD interest is classified as 'Income from Other Sources' under Section 56 of the Income Tax Act, 1961. It is taxable at your applicable income tax slab rate — 5%, 20%, or 30%. There is no flat rate or capital gains treatment. The bank accrues and reports interest on an annual basis even for cumulative FDs where you receive the maturity value as a lump sum — the interest is taxable in the year it accrues, not the year you receive it.</p><p><strong>TDS under Section 194A:</strong> Banks deduct TDS at 10% if interest income from FDs at a single bank exceeds ₹40,000 in a financial year (₹50,000 for senior citizens). The threshold is per bank — if you have FDs at five banks each paying ₹35,000 in interest, no TDS is deducted from any of them even though total interest is ₹1,75,000. TDS is deducted at 20% if your PAN is not registered with the bank.</p><p><strong>Form 15G and Form 15H:</strong> If your total income (including FD interest) is below the basic exemption limit, submit Form 15G (for individuals below 60) or Form 15H (for senior citizens) to each bank at the start of the financial year. This declaration stops the bank from deducting TDS. It does not eliminate your tax liability — if you end up having taxable income, you pay the tax at ITR filing. Submit these forms every April, as they are valid only for one financial year.</p><p><strong>DICGC insurance:</strong> The Deposit Insurance and Credit Guarantee Corporation (DICGC), a subsidiary of the RBI, insures deposits at all scheduled commercial banks, cooperative banks, and small finance banks (members of DICGC). Coverage: <strong>₹5 lakh per depositor per bank</strong>, covering principal + accrued interest combined. This limit was last enhanced from ₹1 lakh to ₹5 lakh in February 2020. If a bank is placed under moratorium or fails, DICGC pays out the insured amount within 90 days.</p><p><strong>5-year tax-saving FD:</strong> A specific FD product offered by banks that qualifies for Section 80C deduction under the old tax regime — maximum deduction ₹1.5 lakh. Lock-in: 5 years with no premature withdrawal permitted. Interest is taxable at slab rate (unlike PPF interest). The ONLY FD that gives Section 80C benefit — regular FDs of any tenure do not qualify for 80C. Not available under the new tax regime (80C not available).</p><p><strong>Premature withdrawal penalties:</strong> Most bank FDs allow premature withdrawal with a penalty of 0.5–1.0% on the applicable interest rate for the period held. For example, if the original rate is 7% and you withdraw after 2 years of a 3-year FD, the bank pays 6–6.5% on the 2 years instead of 7%. Some FDs (particularly special short-term rates) may have higher penalties. The 5-year tax-saving FD cannot be broken prematurely at all.</p>"
     },
     {
-      "question": "Is TDS applicable on FD interest?",
-      "answer": "Yes. Banks deduct TDS (Tax Deducted at Source) at 10% if total FD interest income exceeds ₹40,000 in a financial year (₹50,000 for senior citizens). If your total income is below the taxable limit, submit Form 15G (or 15H for seniors) to your bank to avoid TDS deduction."
-    },
-    {
-      "question": "Are small finance bank FDs safe?",
-      "answer": "All bank FDs in India are insured up to ₹5 lakh per depositor per bank under the DICGC (Deposit Insurance and Credit Guarantee Corporation). Small finance banks often offer 0.5–1% higher rates than major banks. Keep individual FDs below ₹5 lakh per bank to maximise insurance coverage."
+      "id": "fd-mistakes",
+      "heading": "What Most FD Investors Get Wrong",
+      "body": "<p><strong>Comparing FD rates to PPF rates as if both were post-tax.</strong> The FD rate and PPF rate are both quoted as pre-tax annual rates, but they are not comparable on a like-for-like basis. FD interest is taxable at slab rate; PPF interest is completely tax-free. At a 30% tax bracket, a 7% FD yields approximately 4.9% post-tax. A 7.1% PPF yields 7.1% post-tax. Anyone comparing a '7.5% FD vs 7.1% PPF' without adjusting for tax is making a systematically wrong comparison.</p><p><strong>Not submitting Form 15G/15H and getting unnecessary TDS deducted.</strong> If your total annual income (including FD interest) is below the basic exemption limit (₹3 lakh under new regime, ₹2.5 lakh under old regime), submit Form 15G/15H to your bank in April. Without it, the bank deducts TDS at 10% when interest crosses ₹40,000 (₹50,000 for seniors). You recover the TDS via ITR refund, but the refund takes 3–12 months and ties up your money unnecessarily. Form 15G must be submitted each financial year — it does not auto-renew.</p><p><strong>Putting more than ₹5 lakh in a single bank.</strong> DICGC insurance covers ₹5 lakh per depositor per bank — principal plus accrued interest combined. A ₹5 lakh FD at 7% that has accrued ₹50,000 in interest is only partially insured: ₹5 lakh is covered, ₹50,000 is not. Spread large FD amounts across multiple banks to maximise insurance coverage, especially for amounts above ₹10 lakhs.</p><p><strong>Choosing non-cumulative (payout) FD for accumulation goals.</strong> Non-cumulative FDs that pay out interest monthly or quarterly are appropriate for retirees who need regular income. For wealth accumulation over 3–5 years, cumulative FDs always generate more total interest because the payout FD distributes interest that then sits idle rather than earning compound returns. The difference is meaningful over 5 years at higher principals.</p><p><strong>Ignoring tax-saving FD compared to PPF for the 80C allocation.</strong> The 5-year tax-saving FD gives Section 80C deduction (same as PPF) but interest is fully taxable — unlike PPF's tax-free interest. At a 30% bracket, the effective post-tax return on a 6.8% tax-saving FD is approximately 4.75%, versus PPF's 7.1% tax-free. For any investor who can lock money for 15 years, PPF is categorically superior to the 5-year tax-saving FD for the 80C allocation.</p>"
     }
   ],
   "faq": [
     {
       "q": "What is the FD interest rate in India in 2026?",
-      "a": "FD interest rates in India in 2026 range from 6.8% to 7.5% for general depositors (1–3 year tenure) at major banks. Small finance banks like AU Small Finance Bank and ESAF offer rates up to 8.5%. Senior citizens receive an additional 0.25–0.5% over the general rate."
+      "a": "FD interest rates at major Indian banks in 2026 range from approximately 6.8% to 7.5% for general depositors on 1–3 year tenures. Small finance banks (AU Small Finance Bank, ESAF, Ujjivan) offer rates up to 8.5–9%. Senior citizens receive an additional 0.25–0.5% above the general rate at most banks. Rates are subject to change; verify with your specific bank before booking. The bank rates table above shows indicative current rates for major banks."
     },
     {
-      "q": "Is FD interest taxable?",
-      "a": "Yes. FD interest is fully taxable as 'Income from Other Sources' at your applicable income tax slab rate. It is not tax-exempt like PPF interest. If interest income exceeds ₹40,000 per year (₹50,000 for senior citizens), the bank deducts TDS at 10%."
+      "q": "Is FD interest taxable in India?",
+      "a": "Yes. FD interest is fully taxable as 'Income from Other Sources' under Section 56 of the Income Tax Act, 1961. It is taxed at your applicable income tax slab rate (5%, 20%, or 30% plus cess). This applies to both cumulative FDs (where interest accrues and is paid at maturity) and non-cumulative FDs (where interest is paid out monthly or quarterly). The bank deducts TDS at 10% when annual interest income from that bank exceeds ₹40,000 (₹50,000 for senior citizens). Interest income must be reported in your ITR regardless of whether TDS was deducted."
     },
     {
-      "q": "What is the maximum FD tenure?",
-      "a": "Most banks in India offer FDs for tenures ranging from 7 days to 10 years. The 5-year tax-saving FD qualifies for Section 80C deduction (up to ₹1.5 lakh) but has a 5-year lock-in period with no premature withdrawal allowed."
+      "q": "What is the DICGC insurance limit for bank FDs?",
+      "a": "The Deposit Insurance and Credit Guarantee Corporation (DICGC), a subsidiary of the RBI, insures deposits up to ₹5 lakh per depositor per bank — covering principal plus accrued interest combined. This limit was enhanced from ₹1 lakh to ₹5 lakh in February 2020. DICGC covers all scheduled commercial banks, cooperative banks, and small finance banks. If a bank fails, DICGC pays the insured amount within 90 days. To maximise insurance coverage, keep FD deposits below ₹5 lakh per bank and spread large amounts across multiple banks."
     },
     {
-      "q": "Can you break a FD before maturity?",
-      "a": "Yes, most bank FDs can be broken prematurely. The bank typically charges a penalty of 0.5–1% on the applicable rate for the period held. This reduces the effective interest earned. Some FDs (particularly 5-year tax-saving FDs) cannot be broken before maturity."
+      "q": "What is the maximum FD tenure in India?",
+      "a": "Most Indian banks offer FDs for tenures ranging from 7 days to 10 years. The 5-year tax-saving FD qualifies for Section 80C deduction (old tax regime only) up to ₹1.5 lakh, with a mandatory 5-year lock-in and no premature withdrawal. Longer tenure FDs (7–10 years) are available at some banks and NBFCs, though senior citizens sometimes use 5-year FDs with the option to renew. For goals beyond 5 years, compare PPF (15-year, EEE tax treatment) versus long-term FD (taxable interest) based on your tax bracket."
     },
     {
       "q": "How is FD interest calculated with quarterly compounding?",
-      "a": "For quarterly compounding: Maturity = P × (1 + r/4)^(4×t), where P is principal, r is annual rate (decimal), and t is tenure in years. For a ₹1 lakh FD at 7% for 3 years: 100000 × (1.0175)^12 = ₹1,23,145."
+      "a": "Quarterly compounding formula: Maturity = P × (1 + r/4)^(4 × t), where P is the principal, r is the annual rate as a decimal, and t is the tenure in years. For ₹1 lakh at 7% for 3 years: 1,00,000 × (1.0175)^12 = ₹1,23,145. The effective annual yield with quarterly compounding at 7% nominal is 7.19% — slightly higher than the stated rate. For monthly compounding at the same 7% nominal, the effective yield is 7.23%. The difference is small at 1–2 year tenures but accumulates at 5–10 year tenures."
     },
     {
-      "q": "What is the difference between FD and RD?",
-      "a": "An FD (Fixed Deposit) is a one-time lump sum investment. An RD (Recurring Deposit) allows you to invest a fixed amount every month. FD is better when you have a large amount to invest. RD is better for regular monthly savings. Both are bank deposits with DICGC insurance up to ₹5 lakh."
+      "q": "What is the difference between an FD and an RD?",
+      "a": "An FD (Fixed Deposit) is a one-time lump sum investment — you deposit a fixed amount at the start and receive it back with interest at maturity. An RD (Recurring Deposit) allows monthly investments of a fixed amount, suitable for regular savers. FD is better when you have a large amount to invest immediately. RD is better for disciplined monthly savings. Both are bank deposits covered by DICGC insurance (₹5 lakh per bank). FD typically offers slightly higher interest rates than RD for the same tenure, since banks get the full principal upfront."
+    },
+    {
+      "q": "What is Form 15G and Form 15H, and when should I submit them?",
+      "a": "Form 15G is a self-declaration form for individuals below 60 years with income below the basic exemption limit, instructing the bank not to deduct TDS on FD interest. Form 15H is the equivalent for senior citizens (60 and above) — senior citizens can submit 15H even if interest income is above the basic exemption limit, as long as the tax liability on total income is nil (due to deductions or 87A rebate). Submit these forms in April at the start of each financial year to every bank where you have FDs. Forms are valid for one financial year only. Submit online through your bank's net banking portal. If your income is ultimately taxable, pay the tax at ITR filing — submitting 15G/15H just prevents TDS deduction by the bank."
+    },
+    {
+      "q": "What is the 5-year tax-saving FD — how does it compare to PPF for 80C?",
+      "a": "The 5-year tax-saving FD qualifies for Section 80C deduction under the old tax regime (up to ₹1.5 lakh combined across all 80C instruments), has a mandatory 5-year lock-in with no premature withdrawal, and earns interest at the bank's standard 5-year FD rate (approximately 6.8–7.2% at major banks). However, unlike PPF, the interest is fully taxable at your slab rate. At a 30% bracket: effective post-tax return on a 6.8% tax-saving FD ≈ 4.75%. PPF at 7.1% with tax-free interest gives an effective 7.1% post-tax. For investors who can commit to the 15-year PPF horizon, PPF is categorically superior for the 80C allocation. The 5-year FD is useful only when you specifically need liquidity at year 5 and cannot commit to PPF's 15-year tenure."
     }
   ],
   "related": [
-    { "title": "RD Calculator", "url": "/india/rd-calculator/", "desc": "Recurring deposit — invest monthly instead of lumpsum" },
-    { "title": "PPF Calculator", "url": "/india/ppf-calculator/", "desc": "Tax-free alternative to FD for long-term savings" },
-    { "title": "Lumpsum Calculator", "url": "/india/lumpsum-calculator/", "desc": "Compare FD returns with mutual fund lumpsum" }
+    { "title": "RD Calculator", "url": "/india/rd-calculator/", "desc": "Recurring deposit — invest monthly instead of lump sum" },
+    { "title": "PPF Calculator", "url": "/india/ppf-calculator/", "desc": "Tax-free EEE alternative to FD for long-term savings" },
+    { "title": "Lumpsum Calculator", "url": "/india/lumpsum-calculator/", "desc": "Compare FD returns with mutual fund lump sum investment" }
   ],
   "howToSteps": [
-    { "name": "Enter Principal Amount", "text": "Enter the amount you want to invest in the fixed deposit." },
-    { "name": "Set Interest Rate", "text": "Enter your bank's FD interest rate. Check the bank rates table below for current rates." },
-    { "name": "Enter Tenure", "text": "Enter the FD tenure in years and months." },
-    { "name": "Choose Compounding Frequency", "text": "Select how often interest is compounded. Quarterly is standard for Indian bank FDs." }
+    { "name": "Enter Principal Amount", "text": "Enter the amount you want to invest in the fixed deposit. Keep amounts per bank below ₹5 lakh for full DICGC insurance coverage." },
+    { "name": "Set Interest Rate", "text": "Enter your bank's FD interest rate from the bank rates table below. Rates vary by bank and tenure — always verify before booking." },
+    { "name": "Enter Tenure", "text": "Enter the FD tenure in years and months. Longer tenures typically offer higher rates, but your money is locked in for that period." },
+    { "name": "Choose Compounding Frequency", "text": "Select quarterly (standard for Indian bank FDs). Monthly compounding gives marginally higher effective yield. Simple interest applies to some NBFC and post office deposits." }
   ],
   "schema": {
     "appName": "FD Calculator India",
-    "appDescription": "Calculate fixed deposit maturity value, interest earned and effective yield with quarterly, monthly or annual compounding"
+    "appDescription": "Calculate fixed deposit maturity value, interest earned and effective yield. Covers quarterly compounding, TDS thresholds, DICGC insurance, and post-tax FD returns vs PPF."
   }
 }
