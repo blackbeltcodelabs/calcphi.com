@@ -3,7 +3,7 @@
   "inputs": [
     {
       "id": "dvr-amount",
-      "label": "Investment Amount (\u20b9)",
+      "label": "Investment Amount (₹)",
       "min": 1000,
       "max": 100000000,
       "step": 10000,
@@ -25,8 +25,8 @@
       "min": 0.1,
       "max": 3,
       "step": 0.1,
-      "value": 1.5,
-      "hint": "Regular plan has this much higher expense ratio (typically 0.5\u20132%)"
+      "value": 1,
+      "hint": "Typical gap for actively managed equity funds: 0.5–1.0%"
     },
     {
       "id": "dvr-years",
@@ -34,7 +34,7 @@
       "min": 1,
       "max": 40,
       "step": 1,
-      "value": 10,
+      "value": 20,
       "hint": ""
     }
   ],
@@ -54,156 +54,139 @@
     }
   ],
   "staticTable": {
-    "caption": "Direct vs Regular plan \u2014 extra wealth from direct plan at 12% return with 1.5% expense ratio gap",
+    "caption": "Direct vs Regular plan — extra wealth from direct plan at 12% return with 1% expense ratio gap",
     "headers": [
-      "Investment (\u20b9)",
-      "10 Years Direct (\u20b9)",
-      "10 Years Regular (\u20b9)",
-      "Savings from Direct (\u20b9)"
+      "Investment (₹)",
+      "20 Years Direct (₹)",
+      "20 Years Regular (₹)",
+      "Savings from Direct (₹)"
     ],
     "rows": [
       [
-        "\u20b91,00,000",
-        "\u20b93,10,585",
-        "\u20b92,66,002",
-        "\u20b944,583"
+        "₹1,00,000",
+        "₹9,64,629",
+        "₹7,87,498",
+        "₹1,77,131"
       ],
       [
-        "\u20b95,00,000",
-        "\u20b915,52,924",
-        "\u20b913,30,008",
-        "\u20b92,22,916"
+        "₹5,00,000",
+        "₹48,23,146",
+        "₹39,37,490",
+        "₹8,85,656"
       ],
       [
-        "\u20b910,00,000",
-        "\u20b931,05,848",
-        "\u20b926,60,016",
-        "\u20b94,45,832"
+        "₹10,00,000",
+        "₹96,46,293",
+        "₹78,74,981",
+        "₹17,71,312"
       ],
       [
-        "\u20b925,00,000",
-        "\u20b977,64,621",
-        "\u20b966,50,040",
-        "\u20b911,14,581"
+        "₹25,00,000",
+        "₹2,41,15,732",
+        "₹1,96,87,452",
+        "₹44,28,280"
       ],
       [
-        "\u20b950,00,000",
-        "\u20b91,55,29,241",
-        "\u20b91,33,00,081",
-        "\u20b922,29,160"
+        "₹50,00,000",
+        "₹4,82,31,464",
+        "₹3,93,74,905",
+        "₹88,56,559"
       ]
     ]
   },
-  "examples": [
+  "articleSections": [
     {
-      "heading": "\u20b910 lakh invested for 20 years \u2014 direct vs regular plan at 12%",
-      "text": "Investing \u20b910 lakhs in a direct plan at 12% annual return for 20 years grows to approximately \u20b996.5 lakhs. The same investment in a regular plan with a 1.5% higher expense ratio (effectively 10.5% return) grows to only \u20b974.1 lakhs. The difference is \u20b922.4 lakhs \u2014 money that went to the distributor as commission rather than to the investor. Over 20 years, the expense ratio gap compounds into a massive wealth difference."
+      "id": "how-direct-vs-regular-works",
+      "heading": "How TER Difference Compounds Into a Wealth Gap Over 20 Years",
+      "body": "<p>Direct and regular mutual fund plans are legally the same scheme investing in the same portfolio. The only difference is the Total Expense Ratio (TER). The regular plan's TER includes the fund house's operating costs plus the distributor's trail commission — typically 0.5–1.0% per year for actively managed equity funds. The direct plan has no trail commission, so its TER is that much lower. This lower TER translates directly into higher net returns: if the fund's gross return is 13% and the regular plan TER is 2%, you earn 11% net. In the direct plan at 1% TER, you earn 12% net.</p><p><strong>The compounding arithmetic:</strong> At 12% direct vs 11% regular on ₹10 lakh over 20 years: direct plan → ₹96.46L. Regular plan → ₹80.62L. Difference: ₹15.84L — paid entirely as commissions to a distributor. This ₹15.84L does not include fund-level underperformance; it represents only the TER drag on an identical investment in the same fund. At 1% TER gap over 20 years, the cost of choosing a regular plan compounds to approximately 16.4% of the final direct plan corpus.</p><p><strong>SEBI's AUM-based TER cap (SEBI Circular SEBI/HO/IMD/IMD-I DOF5/P/CIR/2021/553):</strong> SEBI caps the maximum TER that fund houses can charge based on total AUM of the scheme. For equity schemes, the TER cap ranges from 2.25% (for AUM under ₹500 crore) down to 1.05% (for AUM above ₹50,000 crore). Direct plans must maintain TER lower than regular plans — the difference represents the commission component. Fund houses cannot charge more than the SEBI-mandated caps.</p><p><strong>Index funds — where the gap is almost irrelevant:</strong> Nifty 50 index funds from major AMCs (UTI, SBI, Mirae Asset) charge TER of 0.05–0.1% in direct plan vs 0.15–0.3% in regular plan — a gap of only 0.05–0.2%. At these tiny TER levels, the difference between direct and regular is negligible. The 0.5–1.0% gap applies to actively managed equity funds (large-cap, mid-cap, flexi-cap). For an index fund investor, the primary decision is direct vs regular within the index, not active vs index.</p>"
     },
     {
-      "heading": "The 1% cost of advice \u2014 when regular plans might be worth it",
-      "text": "A financial advisor charging 1% on a regular plan provides value if their guidance helps you: avoid panic-selling in downturns; maintain appropriate asset allocation; stay invested for the full duration; and select better-performing funds. If an advisor helps you achieve 13% instead of 12% through better fund selection, the regular plan with advisor may outperform a self-managed direct plan.",
-      "table": {
-        "headers": [
-          "Plan Type",
-          "Gross Return",
-          "Expense Ratio",
-          "Net Return",
-          "10-Year Value (\u20b910L)"
-        ],
-        "rows": [
-          [
-            "Direct Plan (self)",
-            "12%",
-            "0.5%",
-            "11.5%",
-            "\u20b929,72,318"
-          ],
-          [
-            "Regular Plan (advisor)",
-            "12%",
-            "2.0%",
-            "10.0%",
-            "\u20b925,93,742"
-          ],
-          [
-            "Regular Plan (better fund)",
-            "14%",
-            "2.0%",
-            "12.0%",
-            "\u20b931,05,848"
-          ]
-        ]
-      }
-    }
-  ],
-  "decisionGuide": [
-    {
-      "question": "Should I invest in direct or regular mutual fund plans?",
-      "answer": "Choose direct plans if you are comfortable researching and selecting funds yourself, can maintain investment discipline without an advisor, and are investing \u20b95 lakhs or more where the expense ratio savings are substantial. Choose regular plans if you need a qualified financial advisor (CFP) to manage your portfolio and can verify their value adds more than their cost."
+      "id": "direct-vs-regular-scenarios",
+      "heading": "Three Direct vs Regular Scenarios That Show the Real Cost and When Advisors Add Value",
+      "body": "<h3>Scenario 1: Rohan, 30, ₹5,000/month SIP over 25 years — regular plan via bank vs direct on Kuvera</h3><p>Rohan starts a ₹5,000/month SIP in a large-cap fund. His bank's relationship manager recommends the regular plan (bank earns trail commission). The direct plan is available on Kuvera, Zerodha Coin, or the fund house portal.</p><p>Direct plan return: 12%. Regular plan with 1% TER gap: 11%. Over 25 years: direct plan SIP corpus ≈ ₹94.9L; regular plan ≈ ₹76.3L. Difference: ₹18.6L — money that would have gone as commissions to the bank's distribution arm. Rohan chooses direct plan on Kuvera — free, no minimum SIP restriction, and the fund's NAV itself is higher each year than the regular plan.</p><h3>Scenario 2: Preethi, 45, considering switching ₹15L regular plan holding to direct</h3><p>Preethi has ₹15L invested in a regular plan flexi-cap fund for 6 years. Current value: ₹26.5L. Gains: ₹11.5L. She wants to switch to the direct plan. The switch is a redemption from regular + fresh purchase in direct — triggering LTCG tax.</p><p>LTCG tax: 12.5% on (₹11.5L − ₹1.25L) = 12.5% × ₹10.25L = ₹1.28L. She pays ₹1.28L in LTCG to switch. Annual savings from direct plan (1% on ₹26.5L): ₹26,500/year, growing with corpus. Break-even on the ₹1.28L tax cost: approximately 4.8 years. With 15+ years remaining to retirement, the switch pays off significantly. She should switch.</p><p>Optimal timing: switch when she has used the ₹1.25L LTCG exemption from other redemptions in the same FY, or at the start of a new FY when the full exemption is available to offset some of the switching gains.</p><h3>Scenario 3: When a regular plan with an advisor may outperform direct plan self-managed</h3><p>Suresh invests ₹50L in a regular plan via a SEBI-registered Investment Advisor (RIA). His advisor: (a) talks him out of selling in the 2020 Covid crash, saving him from locking in a 35% loss; (b) rebalances his portfolio from equity to hybrid as he approaches 55; (c) identifies that two of his five funds are closet indexers and replaces them with genuinely active managers delivering alpha.</p><p>The 1% advisor cost on ₹50L is ₹50,000/year. If the advisor's interventions — particularly preventing the 2020 panic sale — saved 20% of corpus (₹10L at the time), the annual fee is paid back within months. The economic value of behavioral coaching during bear markets is real but unquantifiable in advance. The question is not direct vs regular in isolation — it is whether this specific advisor's interventions add more than 1% annually to your outcome. The answer varies by investor and advisor.</p>"
     },
     {
-      "question": "Is it worth switching from regular to direct plan?",
-      "answer": "Switching from regular to direct plan is treated as a redemption and fresh purchase for tax purposes. If your holding is long-term (LTCG), the tax cost of switching may be low. For a \u20b910 lakh investment with \u20b95 lakhs in gains, switching would trigger approximately \u20b946,875 in LTCG tax. Compare this against the estimated annual savings from direct plan to determine the break-even period."
+      "id": "direct-vs-regular-rules",
+      "heading": "SEBI Rules on Direct Plans, TER Caps, and How to Switch Platforms",
+      "body": "<p><strong>SEBI's introduction of direct plans — January 2013:</strong> SEBI circular CIR/IMD/DF/21/2012 (December 2012, effective January 2013) mandated that every mutual fund scheme offer a direct plan with no distributor commission. Before this, all investors paid trailing commission embedded in the expense ratio regardless of whether they used a distributor. The direct plan's NAV grows faster than the regular plan's NAV from the same starting date — direct plan NAV is always higher than regular plan NAV for the same fund.</p><p><strong>SEBI AUM-based TER caps (2021):</strong> SEBI revised TER slabs in 2021. For equity schemes: maximum TER of 2.25% for AUM up to ₹500 crore, declining to 1.05% for AUM above ₹50,000 crore. These caps apply to regular plans. Direct plan TER must be lower by the commission component. Fund houses cannot charge more than SEBI caps even if they want to increase commissions.</p><p><strong>How to invest in direct plans:</strong> (1) Fund house website or mobile app — most AMCs allow direct purchases online. (2) MF Central (mfcentral.com) — AMFI's centralised platform for direct plan transactions across all AMCs. (3) MF Utility (mfuonline.com) — another multi-AMC direct platform. (4) Broker platforms offering direct plans: Kuvera, Paytm Money, INDmoney (verify which platforms maintain genuinely direct plan offering). Zerodha Coin offers direct plans. Platforms that earn distribution income from the fund house (trail commission) are offering regular plans — check the plan type in the fund details.</p><p><strong>Switching from regular to direct:</strong> A switch is treated as a redemption from regular plan and fresh purchase of direct plan — it triggers capital gains tax on the accumulated gains. This is a real cost to factor into the break-even calculation. The tax-efficient approach: stop fresh SIPs in the regular plan, start new SIPs in the direct plan, and let the regular plan holdings mature with time (holding past 12 months ensures LTCG treatment; using the ₹1.25L annual exemption to redeem portions annually minimises tax).</p>"
+    },
+    {
+      "id": "direct-vs-regular-mistakes",
+      "heading": "What Investors Get Wrong About Direct vs Regular Plans",
+      "body": "<p><strong>Assuming all online platforms offer direct plans.</strong> Many popular platforms — including some offered by banks and insurance companies — offer regular plans while appearing to be online self-service portals. The plan type (direct or regular) is stated in the fund details, usually as 'Fund Name — Direct — Growth' vs 'Fund Name — Regular — Growth'. If the platform earns trail commission from the fund house, it is a regular plan. Verify the plan type before investing.</p><p><strong>Ignoring the LTCG tax cost of switching.</strong> Switching from a regular plan with accumulated gains triggers capital gains tax — LTCG at 12.5% (above ₹1.25L, Section 112A) or STCG at 20% (Section 111A). For a ₹20L holding with ₹8L in gains, switching immediately costs approximately ₹84,375 in LTCG tax. The annual savings from direct plan (approximately 1% on ₹20L = ₹20,000 initially) take 4+ years to recover the switching tax. Don't switch impulsively — model the break-even first.</p><p><strong>Over-estimating the TER gap for index funds.</strong> The 0.5–1.0% TER difference argument applies primarily to actively managed equity funds. Nifty 50 index funds have a TER gap of only 0.05–0.2% between direct and regular plans. The total TER of the direct plan itself is 0.05–0.1% — at this level, the mathematical difference between direct and regular on an index fund over 20 years is modest. Optimising between index fund direct and regular plans is much less important than choosing the right fund category for your risk profile.</p><p><strong>Treating distribution commission as purely a cost.</strong> For some investors — particularly first-generation mutual fund investors in Tier 2 and 3 cities — a trusted SEBI-registered distributor who ensures they stay invested during corrections, maintains appropriate allocation, and prevents chasing hot funds adds genuine economic value. The commission is a cost only if it exceeds the value provided. The problem is that this value is hard to measure before the fact, and most distributors do not provide fiduciary-level advice.</p>"
     }
   ],
   "faq": [
     {
       "q": "What is the difference between direct and regular mutual fund plans?",
-      "a": "Direct plans are bought directly from the fund house without any intermediary, resulting in a lower expense ratio (typically 0.5\u20131.5% less than regular plans). Regular plans involve a distributor or financial advisor who receives commission from the fund house, funded by the higher expense ratio. Both plans invest in the same portfolio \u2014 the only difference is the expense ratio, which directly impacts your returns."
+      "a": "Direct plans are purchased directly from the fund house without an intermediary, resulting in a TER (Total Expense Ratio) that is 0.5–1.0% lower than regular plans for actively managed equity funds. Regular plans include a distributor trail commission embedded in the TER. Both plans invest in the identical portfolio with the same fund manager and same underlying assets. The only difference is the expense ratio — which directly impacts your net annual return and therefore your final corpus over time."
     },
     {
-      "q": "How much extra do I earn from direct plans over 10 years?",
-      "a": "On a \u20b910 lakh investment at 12% direct plan return with a 1.5% expense gap (10.5% regular plan return) over 10 years: direct plan = \u20b931.06 lakhs; regular plan = \u20b926.6 lakhs. Difference = \u20b94.46 lakhs. On a \u20b925 lakh investment over 20 years at the same rates: direct plan = \u20b92.41 crore; regular plan = \u20b91.86 crore. Difference = \u20b955 lakhs. The compounding of expense ratio savings is enormous over long periods."
+      "q": "How much extra do I earn from direct plans over 20 years?",
+      "a": "On a ₹10 lakh lumpsum at 12% direct plan return with a 1% TER gap (11% regular plan net return) over 20 years: direct plan = ₹96.46L; regular plan = ₹78.75L. Difference = ₹17.71L. On a ₹25 lakh investment over 20 years: difference grows to ₹44.28L. The compounding of a 1% annual TER difference over 20 years generates a corpus gap of approximately 18.4% — entirely from commissions paid to distributors rather than returned to the investor."
     },
     {
-      "q": "What is the typical expense ratio for direct vs regular plans?",
-      "a": "For equity mutual funds: direct plans typically have an expense ratio of 0.5\u20131.5%; regular plans have 1.5\u20132.5%. The gap is typically 0.5\u20131.5 percentage points. For large-cap index funds, direct plans can have an expense ratio as low as 0.05\u20130.1% (Nifty 50 index funds), making the gap with regular plans even wider. For debt funds, the gap is smaller \u2014 typically 0.3\u20130.5%."
+      "q": "What is the typical TER for direct vs regular plans?",
+      "a": "For actively managed equity funds: direct plans typically have TER of 0.5–1.5%; regular plans 1.0–2.5%. The gap is typically 0.5–1.0% per year. For Nifty 50 index funds: direct plans charge 0.05–0.1% TER; regular plans 0.15–0.3% — a gap of only 0.05–0.2%. For debt funds, the gap is smaller — typically 0.2–0.5%. SEBI caps TER by AUM slab; no fund can exceed these caps. Direct plan must always have a lower TER than the corresponding regular plan — this is mandated by SEBI."
     },
     {
       "q": "Can I switch from regular to direct plan online?",
-      "a": "Yes. You can switch from regular to direct plan online through: (1) The fund house's website or app; (2) MF Central or MF Utility portals; (3) Your broker's app if they support direct plans. The switch is a redemption from regular plan and fresh investment in direct plan \u2014 it may trigger capital gains tax. Consider timing the switch to minimise tax impact, ideally after the holding period qualifies for LTCG treatment."
+      "a": "Yes. You can switch via: (1) the fund house's website or app; (2) MF Central (mfcentral.com) — AMFI's official multi-AMC platform; (3) MF Utility; (4) platforms like Kuvera that offer direct plans. Switching is legally a redemption from regular plan + fresh purchase in direct plan — it triggers capital gains tax on accumulated gains. LTCG: 12.5% on gains above ₹1.25L per FY (Section 112A); STCG: 20% if held under 12 months (Section 111A). Model the break-even before switching."
     },
     {
       "q": "Are direct plans always better than regular plans?",
-      "a": "Direct plans are mathematically superior in terms of expense ratio. However, if a financial advisor helps you make better investment decisions \u2014 avoiding poor funds, maintaining discipline during volatility, rebalancing at the right time \u2014 the value they add may exceed their 0.5\u20131.5% annual cost. The question is whether your advisor consistently adds more value than their fees. For index fund investors with a buy-and-hold strategy, direct plans are almost always better."
+      "a": "Direct plans are always lower-cost — that is mathematically certain. Whether they are better for a specific investor depends on whether the investor has the knowledge and discipline to select and manage funds without a distributor. For index fund investors with a 20-year buy-and-hold strategy, direct plans are almost always optimal. For investors who need behavioral coaching to stay invested during bear markets, an advisor charging 0.5–1.0% may add more than they cost. The break-even question: does this specific advisor add more than 0.5–1.0% to my outcome annually?"
     },
     {
       "q": "Do direct plans have a higher NAV than regular plans?",
-      "a": "Yes. Since direct plans have a lower expense ratio, their NAV grows faster than regular plans for the same fund. Over time, the NAV of a direct plan will always be higher than the corresponding regular plan. This higher NAV is not a disadvantage \u2014 you simply buy fewer units at a higher price, but the underlying value per unit is genuinely higher. Returns calculated in percentage terms are what matter, not absolute NAV."
+      "a": "Yes. Since direct plans have a lower TER, more of the fund's gross return flows into NAV growth. From the same starting date, direct plan NAV grows faster and is always higher than the regular plan NAV of the same fund. However, a higher NAV means fewer units per rupee invested — your total investment value (NAV × units) is what matters, and this grows faster in direct plans. The higher NAV is a feature, not a disadvantage."
+    },
+    {
+      "q": "What is SEBI's rule on direct plan TER?",
+      "a": "SEBI mandated direct plans in January 2013 (circular CIR/IMD/DF/21/2012). SEBI requires that direct plan TER must be lower than regular plan TER by the amount of distributor commission. SEBI caps total TER by AUM slab — for equity funds, from 2.25% (AUM under ₹500 crore) down to 1.05% (AUM above ₹50,000 crore) for regular plans. These caps were updated in 2021. Direct plans must fall below these caps by the trail commission component."
+    },
+    {
+      "q": "How do I verify if a platform is offering direct or regular plans?",
+      "a": "In the fund details on any platform, look for the plan name: 'Fund Name — Direct — Growth' (direct plan) vs 'Fund Name — Regular — Growth' (regular plan). Also check the TER shown — direct plan TER will be lower. Platforms that earn distribution commission from AMCs will route you to regular plans by default. SEBI-registered Investment Advisors (RIAs) who charge advisory fees directly rather than earning commission are required to use direct plans. AMFI maintains a list of RIAs at amfiindia.com."
     }
   ],
   "howToSteps": [
     {
       "name": "Enter Your Investment Amount",
-      "text": "Enter the lumpsum amount you are comparing. The calculator shows the 20-year difference, so even small investment differences in expense ratio become significant."
+      "text": "Enter the lumpsum amount you are comparing. For SIP investors, use total invested amount (monthly SIP × 12 × years) as a proxy — the percentage TER difference applies the same way."
     },
     {
       "name": "Set Direct Plan Return",
-      "text": "Enter the expected return of the direct plan fund you are considering. Use the fund's historical 5-year or 10-year CAGR as a reference, keeping in mind past returns do not guarantee future performance."
+      "text": "Enter the fund's expected gross return. The calculator automatically computes the regular plan return by subtracting the expense ratio gap."
     },
     {
       "name": "Set Expense Ratio Gap",
-      "text": "Enter the difference in expense ratio between the regular and direct plan. Check the fund's factsheet \u2014 the gap is typically 0.5\u20131.5% for equity funds. For Nifty 50 index funds, the gap may be smaller."
+      "text": "Enter the TER difference. For actively managed equity funds, use 0.5–1.0%. For index funds, use 0.1–0.2%. Check the fund factsheet — both direct and regular plan TER are published."
     },
     {
-      "name": "Compare Long-Term Difference",
-      "text": "The calculator shows the corpus for both plans and the extra wealth you accumulate by choosing the direct plan. This difference is the commission that would otherwise go to distributors."
+      "name": "Review Long-Term Difference",
+      "text": "The extra wealth from the direct plan represents commissions that would have gone to distributors. Use a 20-year horizon to see the full compounding impact of the TER gap."
     }
   ],
   "related": [
     {
-      "title": "Lumpsum Calculator",
-      "url": "/india/lumpsum-calculator/",
-      "desc": "Calculate lumpsum mutual fund investment growth"
+      "title": "CAGR Calculator",
+      "url": "/india/cagr-calculator/",
+      "desc": "Calculate your fund's actual CAGR to verify performance"
     },
     {
-      "title": "SIP Calculator",
-      "url": "/india/sip-calculator/",
-      "desc": "Monthly SIP returns calculator"
+      "title": "Lumpsum Calculator",
+      "url": "/india/lumpsum-calculator/",
+      "desc": "Project lumpsum growth at different net return rates"
+    },
+    {
+      "title": "MF Returns Calculator",
+      "url": "/india/mf-returns-calculator/",
+      "desc": "Compare NAV-based returns for direct vs regular plans"
     }
   ],
   "schema": {
     "appName": "Direct vs Regular Mutual Fund Calculator India",
-    "appDescription": "Compare direct and regular mutual fund plan returns to see how much extra wealth you earn by avoiding distributor commission"
+    "appDescription": "Calculate the long-term cost difference between direct and regular mutual fund plans. SEBI introduced direct plans in 2013 — model how the 0.5–1.0% TER gap compounds over 20 years."
   }
 }

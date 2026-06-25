@@ -1,9 +1,9 @@
 {
   "id": "goal-sip",
   "inputs": [
-    { "id": "goal-amount", "label": "Target Goal Amount (₹)", "min": 10000, "max": 500000000, "step": 50000, "value": 5000000, "hint": "The corpus you want to build (e.g. ₹50L for retirement)" },
-    { "id": "goal-years", "label": "Years to Achieve Goal", "min": 1, "max": 40, "step": 1, "value": 10, "hint": "Number of years you have to build this corpus" },
-    { "id": "goal-rate", "label": "Expected Annual Return (%)", "min": 1, "max": 30, "step": 0.5, "value": 12, "hint": "Use 10–12% for equity funds; 6–7% for debt funds" }
+    { "id": "goal-amount", "label": "Target Goal Amount (₹)", "min": 10000, "max": 500000000, "step": 50000, "value": 5000000, "hint": "Enter inflation-adjusted future cost, not today's value" },
+    { "id": "goal-years", "label": "Years to Achieve Goal", "min": 1, "max": 40, "step": 1, "value": 10, "hint": "Number of years to build this corpus" },
+    { "id": "goal-rate", "label": "Expected Annual Return (%)", "min": 1, "max": 30, "step": 0.5, "value": 12, "hint": "Use 10–12% for equity; 6–7% for debt; 8–9% for hybrid" }
   ],
   "outputs": [
     { "id": "required-sip", "label": "Required Monthly SIP", "highlight": true },
@@ -21,73 +21,75 @@
       ["₹5 crore", "₹2,34,435", "₹1,15,685", "₹61,614", "₹34,702"]
     ]
   },
-  "examples": [
+  "articleSections": [
     {
-      "heading": "Building ₹1 crore retirement corpus in 20 years",
-      "text": "To accumulate ₹1 crore in 20 years at 12% annual return, you need to invest approximately ₹12,323/month via SIP. Over 20 years, you invest ₹29.6 lakhs, and the market generates approximately ₹70.4 lakhs in returns — meaning more than 70% of your corpus comes from compounding, not your own savings."
+      "id": "how-goal-sip-works",
+      "heading": "How the Goal SIP Formula Works — Solving for Monthly Contribution",
+      "body": "<p>The standard SIP formula computes future value (FV) from monthly payment (P): FV = P × [((1+r)^n − 1) / r] × (1+r), where r is monthly return (annual rate ÷ 12 as decimal) and n is number of months. The goal SIP formula reverses this: given a target FV, it solves for P.</p><p>Rearranging: P = FV × r / [((1+r)^n − 1) × (1+r)]</p><p><strong>Worked example — building ₹1 crore retirement corpus in 20 years at 12%:</strong> Monthly rate r = 12% ÷ 12 = 1% = 0.01. n = 240 months. The denominator = [(1.01)^240 − 1] × 1.01 = [10.89 − 1] × 1.01 = 9.89 × 1.01 = 9.99. P = 1,00,00,000 × 0.01 / 9.99 = ₹10,010/month (approximately — varies with calculator implementation).</p><p><strong>Why inflation-adjusting the goal matters:</strong> If you need ₹1 crore in today's money 20 years from now, at 6% inflation the actual target should be ₹1 crore × (1.06)^20 = ₹3.21 crore. Using ₹1 crore as the goal in the calculator means you are planning for a corpus that will have only ₹31L of today's purchasing power. The correct approach: enter the inflation-adjusted figure (₹3.21 crore) or subtract the inflation rate from the return rate and enter ₹1 crore (real-return planning). Both approaches give the same answer.</p><p><strong>The time cost of delay:</strong> The table above shows that waiting 5 years to start a ₹50L goal roughly doubles the required monthly SIP: ₹5,784/month for 15 years vs ₹11,568/month for 10 years. Waiting a decade triples it: ₹23,444/month for 10 years vs ₹6,162/month for 20 years. Every year of delay shifts a burden of approximately ₹6,000–₹10,000/month onto the remaining tenure for a ₹1 crore goal.</p>"
     },
     {
-      "heading": "Planning for a child's higher education — ₹25L in 15 years",
-      "text": "For a child born today, planning ₹25 lakhs for higher education in 15 years at 12% return requires a SIP of only ₹5,784/month. Starting early reduces the required monthly commitment dramatically. Waiting 5 years and planning for the same goal in 10 years would require ₹11,722/month — more than double.",
-      "table": {
-        "headers": ["Goal (₹)", "Years", "Monthly SIP Needed (₹)", "Total Invested (₹)"],
-        "rows": [
-          ["₹25,00,000", "15 years", "₹5,784", "₹10,41,120"],
-          ["₹25,00,000", "10 years", "₹11,722", "₹14,06,640"],
-          ["₹25,00,000", "5 years", "₹33,734", "₹20,24,040"]
-        ]
-      }
-    }
-  ],
-  "decisionGuide": [
-    {
-      "question": "How should I account for inflation when setting a financial goal?",
-      "answer": "Add expected inflation to your goal amount. If you need ₹50 lakhs in today's money after 15 years, at 6% inflation your actual target should be ₹50L × (1.06)^15 = ₹1.20 crore. Use the inflated figure in this calculator. Alternatively, subtract the inflation rate from your expected return to get the real return, and use ₹50L as the goal — both approaches give the same answer."
+      "id": "goal-sip-scenarios",
+      "heading": "Three Goal SIP Plans That Show How Timeline and Asset Class Interact",
+      "body": "<h3>Scenario 1: Meghna, 30 — building ₹2 crore retirement corpus by 55</h3><p>Meghna wants ₹2 crore in today's money by age 55 (25 years away). At 6% inflation, the inflation-adjusted target is ₹2 crore × (1.06)^25 = ₹8.58 crore. At 12% equity return, the required monthly SIP for ₹8.58 crore in 25 years: approximately ₹59,500/month — beyond her current budget.</p><p>Alternative approach: use real return (12% − 6% = 6% effective) and plan for ₹2 crore at 6% real return over 25 years. Required monthly SIP: approximately ₹24,300/month — more manageable. Both approaches produce the same actual purchasing power at maturity; the second just keeps the numbers in today's money.</p><p>Meghna starts with ₹20,000/month and uses a 10% annual step-up SIP (modelled in the Step-Up SIP Calculator) to approach the required level over time. By year 5 she is investing ₹32,210/month, by year 10: ₹51,875/month — aligning with her rising income trajectory.</p><h3>Scenario 2: Siddharth, 28 — child's higher education fund of ₹30L in 18 years</h3><p>Siddharth's daughter is born. He wants ₹30L (today's cost for a 4-year engineering degree at a private college) for her education in 18 years. At 6% education inflation, the actual target is ₹30L × (1.06)^18 = ₹85.7L. At 12% return in an equity mutual fund, required SIP for ₹85.7L in 18 years: approximately ₹14,600/month.</p><p>He invests in a diversified equity fund for the first 13 years (aggressive allocation). In year 14 (5 years before the goal), he gradually shifts 70% of the corpus to a hybrid or short-duration debt fund to protect accumulated wealth. This systematic de-risking prevents a market crash in years 16–18 from wiping out 5+ years of accumulated gains just before the goal is needed.</p><h3>Scenario 3: Nisha, 38 — house down payment of ₹25L in 5 years</h3><p>Nisha needs ₹25L for a down payment in 5 years. A 5-year goal is too short for pure equity: a 40% market correction in year 4 would leave her down payment severely depleted. Required SIP at 8% (conservative hybrid): approximately ₹34,000/month. Required SIP at 12% (equity): approximately ₹30,600/month — smaller monthly commitment but much higher downside risk.</p><p>Correct asset allocation: Nisha invests in a conservative hybrid fund (60% debt, 40% equity) targeting 8% annualised return. The equity component provides some growth; the debt provides stability. Required SIP: ₹34,000/month. She does not use an aggressive equity fund for a 5-year goal — the risk of a 30% drawdown when she needs to withdraw is not acceptable for a committed goal like a house purchase.</p>"
     },
     {
-      "question": "What if I cannot afford the calculated SIP amount?",
-      "answer": "If the required SIP exceeds your budget, extend the timeline — even 2–3 more years significantly reduces the monthly requirement. Alternatively, start with what you can afford and increase the SIP by 10–15% every year using a step-up SIP. Our Step-Up SIP calculator shows how annual increases can help you reach goals you cannot immediately fund."
+      "id": "goal-sip-rules",
+      "heading": "Goal SIP Rules — Fund Selection by Horizon, Inflation Adjustment & SEBI SIP Mandate",
+      "body": "<p><strong>Asset class by horizon — the standard framework:</strong> For financial goals under 3 years: debt funds (liquid, ultra-short, short-duration) targeting 6–7% return with minimal NAV volatility. For goals 3–7 years away: balanced/hybrid funds (aggressive hybrid or balanced advantage) targeting 8–10%. For goals 7+ years away: diversified equity funds (large-cap, flexi-cap, or Nifty 50 index) targeting 10–12%. Retirement goals with 15+ year horizons can include mid-cap allocation for higher growth. These allocations are guidelines — the closer you get to the goal, the more you should shift to safety.</p><p><strong>Inflation adjustment — the most important input:</strong> The goal SIP calculator requires an inflation-adjusted goal amount. Education inflation in India has historically run at 8–10%, significantly above general CPI. Healthcare costs inflate at 10–15%. Housing costs depend on city and location. For a retirement goal, use the general inflation rate of 5–6%. For education: 8–10%. Inputting today's cost as the goal amount without inflation adjustment will result in a corpus that buys substantially less than intended when the goal arrives.</p><p><strong>SEBI SIP mandate rules:</strong> Under SEBI guidelines, SIP mandates can be registered for any amount above ₹100/month (some AMCs set higher minimums at ₹500/month). NACH (National Automated Clearing House) mandate registration is required for auto-debit. SEBI's simplified SIP mandate form (SSIMF) allows digital mandate registration via net banking. SIPs can be paused (not cancelled) by request to most fund houses — a useful feature for goal SIPs if there is a temporary income disruption.</p><p><strong>Fund categories appropriate for goal SIP:</strong> For retirement (15–25 year horizons): Nifty 50 index fund (no active manager risk, low TER at 0.05–0.2% direct plan), flexi-cap, or large-cap. For child's education (10–18 years): diversified equity for the first 10 years, then shift. For down payment (5 years): balanced advantage or conservative hybrid. SEBI's mutual fund categorisation circular (October 2017) defines each category's mandatory asset allocation range.</p>"
+    },
+    {
+      "id": "goal-sip-mistakes",
+      "heading": "What Most Goal-Based SIP Investors Get Wrong",
+      "body": "<p><strong>Setting the goal in today's money without adjusting for inflation.</strong> A ₹50 lakh goal for retirement in 20 years, entered as ₹50L, plans for a corpus worth approximately ₹15.6L in today's purchasing power (at 6% inflation). If ₹50L is what you actually need at retirement in today's terms, the inflation-adjusted target is ₹1.6 crore. The difference in required SIP between ₹50L and ₹1.6 crore at 12% over 20 years is enormous: ₹6,162 vs ₹19,700/month. Always specify whether your goal is in today's rupees or future rupees, and use the calculator accordingly.</p><p><strong>Using an equity return assumption for a short-horizon goal.</strong> Inputting 12% return for a 5-year goal in equity creates the illusion that you need a manageable ₹30,600/month. But equity markets can be down 30–40% in any given year. If your goal arrives in a bear market year, you may withdraw at the worst possible time. For goals under 7 years, use a return rate appropriate for hybrid or debt instruments — even if it requires a higher monthly SIP.</p><p><strong>Treating the calculator output as a guarantee.</strong> The required monthly SIP is a mathematical answer to a projection question. It assumes constant returns at the specified rate every year. Actual equity returns are not constant — the Nifty 50 has returned anywhere from -52% (2008) to +76% (2009) in a single year. A 10-year average of 12% with high annual variance is very different from 12% every year. Build in a 15–20% buffer over the calculator's required SIP to protect against underperformance years.</p><p><strong>Not de-risking as the goal approaches.</strong> A goal SIP plan that runs entirely in equity from start to finish exposes the accumulated corpus to full equity risk in the final years when there is the least time to recover from a drawdown. Starting to shift corpus into debt or hybrid funds 3–5 years before the goal date is essential — particularly for non-negotiable goals like a house down payment, a child's education admission fee, or a retirement date.</p>"
     }
   ],
   "faq": [
     {
       "q": "How much SIP is needed to accumulate ₹1 crore in 10 years?",
-      "a": "To accumulate ₹1 crore in 10 years at 12% annual return, you need a monthly SIP of approximately ₹46,887. At a more optimistic 15% return, the required SIP falls to approximately ₹39,294/month. The key insight is that at 12% for 10 years, only ₹56.3 lakhs of the ₹1 crore comes from your investments — the remaining ₹43.7 lakhs is generated by compounding."
+      "a": "To accumulate ₹1 crore in 10 years at 12% annual return, you need a monthly SIP of approximately ₹46,887. At a more optimistic 15% return, the required SIP falls to approximately ₹38,600/month. The key insight: at 12% for 10 years, only ₹56.3 lakhs of the ₹1 crore comes from your own investment — the remaining ₹43.7 lakhs is generated by compounding. For the same goal in 20 years at 12%, the required SIP drops dramatically to ₹12,323/month."
     },
     {
       "q": "What is goal-based SIP investing?",
-      "a": "Goal-based SIP investing reverses the typical approach: instead of investing what you can afford and seeing what you get, you define a specific financial goal (retirement corpus, child's education, home down payment) and calculate the exact SIP needed to reach it. This approach ensures your investments are directly tied to your life goals and helps you stay committed through market volatility."
+      "a": "Goal-based SIP investing reverses the typical approach: instead of investing what you can afford and seeing what you get, you define a specific financial target (retirement corpus, child's education, home down payment), enter the inflation-adjusted goal amount, and calculate the exact monthly SIP required. This ties investments directly to life goals and helps maintain commitment through market volatility — you know exactly what you are investing for."
     },
     {
       "q": "How does the goal SIP formula work?",
-      "a": "The reverse SIP formula is: Required Monthly SIP = Goal Amount × r / [((1+r)^n − 1) × (1+r)], where r is the monthly return rate (annual rate ÷ 12 ÷ 100) and n is the number of months. This is the inverse of the standard SIP maturity formula, solving for the monthly payment instead of the final value."
+      "a": "The reverse SIP formula is: P = FV × r / [((1+r)^n − 1) × (1+r)], where FV is the target corpus, r is the monthly return rate (annual rate ÷ 12 ÷ 100), and n is the number of months. This is the inverse of the standard SIP maturity formula, solving for the monthly payment instead of the final value. The key input is the inflation-adjusted future value of your goal."
     },
     {
       "q": "Should I account for step-up SIP in goal planning?",
-      "a": "Yes. If you expect your income to grow over time, plan for a step-up SIP rather than a flat SIP. A step-up SIP that increases by 10% annually can achieve the same goal as a flat SIP but starts with a much lower initial investment. For example, a flat SIP of ₹23,444/month for 10 years to reach ₹50L at 12% could be replaced with a step-up SIP starting at ₹16,000/month with 10% annual increases."
+      "a": "Yes. A step-up SIP that increases by 10% annually can achieve the same goal as a flat SIP but starts with a significantly lower initial commitment. For example, a flat SIP of ₹23,444/month for 10 years to reach ₹50L at 12% could be replaced with a step-up SIP starting at approximately ₹16,000/month with 10% annual increases. Use the Step-Up SIP Calculator to model the starting amount needed with your chosen step-up percentage."
     },
     {
       "q": "What rate of return should I use for goal SIP planning?",
-      "a": "Use 10–12% for large-cap equity fund projections, 12–14% for diversified equity funds, and 6–7% for debt or hybrid funds. For goals more than 10 years away, equity funds are appropriate. For goals 3–7 years away, balanced/hybrid funds with 8–10% returns are more suitable. For goals under 3 years, use debt fund rates of 6–7% to avoid sequence-of-returns risk."
+      "a": "Use 10–12% for goals 10+ years away (large-cap equity funds), 8–9% for goals 5–10 years away (balanced hybrid funds), and 6–7% for goals under 5 years (debt or conservative hybrid funds). For retirement goals over 15 years, 12% for diversified equity is a reasonable conservative estimate. Never use more than 14% for any equity planning without strong justification — equity returns are highly variable year to year."
     },
     {
-      "q": "How do I plan for a ₹50 lakh retirement corpus via SIP?",
-      "a": "To build ₹50 lakhs in 20 years at 12% annual return, invest ₹6,162/month. In 15 years at the same rate, invest ₹11,568/month. The earlier you start, the smaller the monthly commitment needed. Most financial planners recommend starting a retirement SIP as early as age 25 to benefit from maximum compounding time and the lowest possible monthly contributions."
+      "q": "How do I plan a ₹50 lakh retirement corpus via SIP?",
+      "a": "To build ₹50 lakhs in 20 years at 12% return, invest ₹6,162/month. In 15 years at the same rate: ₹11,568/month. Remember: ₹50L in 20 years is worth only approximately ₹15.6L in today's purchasing power (at 6% inflation). If you need ₹50L in today's purchasing power at retirement, your inflation-adjusted target is approximately ₹1.6 crore — requiring ₹19,700/month for 20 years at 12%."
+    },
+    {
+      "q": "How do I account for inflation when setting a goal amount?",
+      "a": "Multiply today's cost by (1 + inflation rate)^years. For education at 8% inflation over 15 years: today's ₹20L cost becomes ₹20L × (1.08)^15 = ₹63.4L. For general living costs at 6% over 20 years: ₹50L today becomes ₹50L × (1.06)^20 = ₹1.60 crore. Enter the inflation-adjusted figure in the Goal Amount field, not today's cost. Alternatively, reduce the expected return by the inflation rate (e.g., 12% − 6% = 6% real return) and enter today's cost — both methods give the same required SIP."
+    },
+    {
+      "q": "What happens if I miss a SIP payment for a month while running a goal SIP?",
+      "a": "Missing one or two SIP instalments has a very small mathematical impact — each month's contribution is a fraction of the total. Most fund houses allow pausing a SIP for 1–3 months without cancellation. The bigger risk is stopping the SIP entirely during a market correction when your instinct is to stop investing. Studies show that investors who pause SIPs during market downturns miss the recovery-phase NAV purchases that are often the highest-returning instalments in the entire SIP history."
     }
   ],
   "howToSteps": [
-    { "name": "Set Your Financial Goal", "text": "Enter the target corpus you want to accumulate. This could be a retirement fund, child's education, home down payment, or any other financial goal. Account for inflation by setting a higher goal for long-term objectives." },
-    { "name": "Enter Your Time Horizon", "text": "Enter how many years you have to achieve this goal. The longer your horizon, the lower the required monthly SIP, because compounding has more time to work." },
-    { "name": "Set Expected Return Rate", "text": "Enter the expected annual return from your chosen mutual fund. Use 10–12% for equity index/large-cap funds, 12–14% for actively managed funds, or 6–7% for debt funds." },
-    { "name": "Start Your SIP", "text": "The calculator shows the exact monthly SIP amount needed to reach your goal. Use this to set up an auto-debit SIP with your mutual fund or bank. Review the goal annually and adjust the SIP as your income grows." }
+    { "name": "Set Your Financial Goal", "text": "Enter the inflation-adjusted target corpus. For a goal 10+ years away, multiply today's estimated cost by (1 + inflation rate)^years before entering. Education goals: use 8–10% inflation. Retirement: use 6%." },
+    { "name": "Enter Your Time Horizon", "text": "Enter how many years you have to achieve this goal. The longer your horizon, the lower the required monthly SIP. Match your asset class choice to the horizon." },
+    { "name": "Set Expected Return Rate", "text": "Use 10–12% for equity (goals 10+ years), 8–9% for hybrid (5–10 years), 6–7% for debt (under 5 years). Be conservative — the market does not deliver 12% every single year." },
+    { "name": "Start Your SIP", "text": "Use the required SIP as your target. If it exceeds your current budget, start a step-up SIP at a lower amount and increase annually. Review the goal annually and adjust for actual income growth and any change in the goal timeline." }
   ],
   "related": [
     { "title": "SIP Calculator", "url": "/india/sip-calculator/", "desc": "Calculate how much your current SIP will grow to" },
-    { "title": "Step-Up SIP Calculator", "url": "/india/step-up-sip-calculator/", "desc": "Plan SIP with annual increases to reach bigger goals" },
-    { "title": "Lumpsum Calculator", "url": "/india/lumpsum-calculator/", "desc": "One-time investment alternative for goal planning" }
+    { "title": "Step-Up SIP Calculator", "url": "/india/step-up-sip-calculator/", "desc": "Start lower, increase annually — reach big goals" },
+    { "title": "Lumpsum Calculator", "url": "/india/lumpsum-calculator/", "desc": "Supplement your SIP with one-time deployments" }
   ],
   "schema": {
     "appName": "Goal SIP Calculator India",
-    "appDescription": "Calculate the monthly SIP required to reach any financial goal — retirement, education, home — at your expected return rate"
+    "appDescription": "Calculate the monthly SIP required to reach any financial goal — retirement, education, home — at your expected return rate. Includes inflation-adjustment guidance and asset class matching by horizon."
   }
 }

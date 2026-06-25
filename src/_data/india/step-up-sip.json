@@ -3,8 +3,8 @@
   "defaults": { "monthly": 5000, "stepup": 10, "rate": 12, "years": 10 },
   "inputs": [
     { "id": "sus-monthly", "label": "Initial Monthly SIP (₹)", "min": 500, "max": 500000, "step": 500, "value": 5000, "hint": "SIP amount in year 1" },
-    { "id": "sus-stepup", "label": "Annual Step-Up (%)", "min": 1, "max": 50, "step": 1, "value": 10, "hint": "Increase SIP by this % each year" },
-    { "id": "sus-rate", "label": "Expected Annual Return (%)", "min": 1, "max": 30, "step": 0.5, "value": 12, "hint": "" },
+    { "id": "sus-stepup", "label": "Annual Step-Up (%)", "min": 1, "max": 50, "step": 1, "value": 10, "hint": "Increase SIP by this % each year — match to your expected annual increment" },
+    { "id": "sus-rate", "label": "Expected Annual Return (%)", "min": 1, "max": 30, "step": 0.5, "value": 12, "hint": "Use 10–12% for diversified equity funds" },
     { "id": "sus-years", "label": "Investment Period (Years)", "min": 1, "max": 40, "step": 1, "value": 10, "hint": "" }
   ],
   "outputs": [
@@ -13,81 +13,75 @@
     { "id": "sus-flat-sip-corpus", "label": "Flat SIP Corpus (comparison)" },
     { "id": "sus-extra-wealth", "label": "Extra Wealth from Step-Up" }
   ],
-  "examples": [
+  "articleSections": [
     {
-      "heading": "₹5,000/month with 10% annual step-up vs flat SIP — 10 years",
-      "text": "Starting with ₹5,000/month and increasing by 10% every year, total investment over 10 years is ₹9.56 lakhs. The corpus at 12% return is approximately ₹17.38 lakhs. The equivalent flat ₹5,000/month SIP (same starting amount, no step-up) produces ₹11.61 lakhs. Step-up adds ₹5.77 lakhs in extra wealth."
+      "id": "how-step-up-works",
+      "heading": "How the Step-Up SIP Formula Works — Geometric Contributions and Early Compounding",
+      "body": "<p>A standard SIP multiplies a fixed monthly payment P by the SIP annuity factor to get the final corpus. A step-up SIP replaces that single P with a sequence that grows each year: Year 1 payments = P₀, Year 2 = P₀ × (1+s), Year 3 = P₀ × (1+s)², and so on, where s is the annual step-up rate as a decimal. The total corpus is the sum of each year's contribution block compounded forward for the remaining years.</p><p><strong>Why this outperforms a flat SIP so dramatically:</strong> The key insight is that higher instalments in early years compound for the longest time. Starting at ₹10,000/month with a 10% step-up, year 3 contributions are ₹12,100/month — and those contributions have 7 more years to compound in a 10-year plan. A flat ₹10,000 SIP across 10 years invests ₹12 lakhs total at 12%. The step-up investor invests ₹19.12 lakhs total (because instalments grow each year), but achieves a corpus approximately 65% larger than the flat SIP — the extra invested amount generates disproportionate returns because of when each rupee entered the market.</p><p><strong>At 12% return, starting ₹5,000/month with 10% annual step-up for 10 years:</strong> Total invested ≈ ₹9.56L. Corpus ≈ ₹17.38L. Equivalent flat ₹5,000 SIP corpus = ₹11.61L. Step-up adds ₹5.77L in extra wealth. Extending to 20 years at 10% step-up: total invested ≈ ₹57.3L, corpus ≈ ₹1.76 crore — versus ₹99L from a flat ₹5,000 SIP. The step-up investor invested more (₹57.3L vs ₹12L total for flat SIP) but also achieved 78% more corpus on the incremental investment.</p><p>At redemption, equity fund gains (held over 12 months) are taxed as LTCG at 12.5% above ₹1.25L per FY under Section 112A (Finance Act 2024). Each SIP instalment runs its own 12-month LTCG clock — a redemption of a long-running step-up SIP will include LTCG on all instalments, since they are all held over 12 months by the time of a long-term redemption.</p>"
     },
     {
-      "heading": "Matching salary increments to SIP increases",
-      "text": "If your salary grows 10–12% annually, step up your SIP by the same percentage. A ₹10,000/month SIP in year 1 growing at 10%/year becomes ₹25,937/month by year 10 — but the exponential corpus growth means the final year's SIP amount contributes disproportionately to total wealth."
+      "id": "step-up-scenarios",
+      "heading": "Three Step-Up SIP Decisions That Reveal When It Works and When It Doesn't",
+      "body": "<h3>Scenario 1: Ramesh, 28, IT professional — matching step-up to annual increment</h3><p>Ramesh earns ₹8L/year and gets 10% annual increments. He starts a ₹10,000/month SIP with a 10% step-up, tied to his annual increment. In year 1 he invests ₹10,000. In year 2: ₹11,000. By year 5: ₹14,641. By year 10: ₹23,579. Total invested over 10 years: ₹19.12L. At 12% return, corpus: approximately ₹33L. Comparison: a flat ₹10,000 SIP for the same 10 years invests ₹12L and yields approximately ₹23.2L.</p><p>The step-up strategy invested ₹7.12L more than the flat SIP (₹19.12L vs ₹12L) but generated ₹9.8L more wealth (₹33L vs ₹23.2L). The extra ₹7.12L invested generated ₹9.8L, which is a 37.6% return on the incremental investment — entirely because early instalments compound for more years.</p><h3>Scenario 2: Ananya, 35, freelance consultant — conservative 5% step-up for variable income</h3><p>Ananya earns ₹15–25L/year depending on projects. Committing to a 10% step-up feels risky when income is unpredictable. She chooses 5% annual step-up starting at ₹15,000/month.</p><p>At 5% step-up for 15 years at 12% return: total invested ≈ ₹39.9L. Corpus ≈ ₹1.23 crore. Flat ₹15,000 SIP for 15 years at 12%: total invested ₹27L, corpus ≈ ₹99L. Her 5% step-up invested ₹12.9L more than flat SIP and generated ₹24L more corpus — efficient use of her growing income without overcommitting. The right step-up percentage is the one you can sustain every year without stopping the SIP during a difficult income year.</p><h3>Scenario 3: The excessive step-up that breaks — why consistency beats optimisation</h3><p>Pradeep, 30, reads that a 20% annual step-up generates the most wealth. He starts ₹5,000/month with 20% step-up. Year 1: ₹5,000. Year 3: ₹7,200. Year 5: ₹10,368. Year 7: ₹14,930. By year 8, his SIP has grown to ₹17,916/month — but his salary grew only 8% annually. He cannot sustain the higher SIP and stops the entire SIP in year 8.</p><p>Stopping a SIP early is far more damaging than choosing a lower step-up percentage. The last 2 years of a 10-year SIP typically contribute 30–35% of the final corpus because those instalments compound from the beginning. An 8% step-up consistently maintained for 10 years outperforms a 20% step-up abandoned in year 8 by a wide margin. Set your step-up at the rate you are confident your income will grow — not the rate that generates the largest projection number.</p>"
     },
     {
-      "heading": "Step-up impact at different rates",
-      "text": "The effect of step-up percentage is dramatic over 20 years.",
-      "table": {
-        "headers": ["Step-Up %", "20Y Total Invested", "20Y Corpus (12%)", "vs Flat SIP"],
-        "rows": [
-          ["5%/year", "₹39.9L", "₹1.23Cr", "+₹24L"],
-          ["10%/year", "₹57.3L", "₹1.76Cr", "+₹77L"],
-          ["15%/year", "₹84.4L", "₹2.57Cr", "+₹1.58Cr"]
-        ]
-      }
-    }
-  ],
-  "decisionGuide": [
-    {
-      "question": "By what percentage should you step up your SIP each year?",
-      "answer": "A common rule of thumb is to step up SIP by 10% per year, which roughly matches average salary growth for Indian professionals. A more conservative 5% step-up still adds significantly more wealth over 15–20 years than a flat SIP. Never step up by more than your salary increment percentage."
+      "id": "step-up-rules-rates",
+      "heading": "Step-Up SIP Rules, SEBI Framework, and Tax at Redemption",
+      "body": "<p><strong>SEBI SIP regulation:</strong> SEBI regulates SIPs under the SEBI (Mutual Funds) Regulations, 1996. Step-up SIP is not a separately regulated product — it is a feature offered by AMCs and platforms under their standard SIP mandate framework. AMFI (Association of Mutual Funds in India) reports monthly SIP data; as of early 2026, total SIP AUM exceeds ₹13 lakh crore with monthly inflows consistently above ₹25,000 crore (verify current data at amfiindia.com).</p><p><strong>Platform availability:</strong> Most major platforms support step-up SIPs: Zerodha Coin, Groww, Kuvera, Paytm Money, Angel One, as well as direct fund house portals (SBI MF, ICICI Prudential, Mirae Asset, etc.). Some platforms call it 'top-up SIP' or 'booster SIP'. Check whether the platform supports online modification of step-up instructions or requires re-registering the SIP.</p><p><strong>Step-up trigger — calendar year vs SIP anniversary:</strong> AMCs typically implement the step-up increase on either (a) the January payment each year regardless of when the SIP started, or (b) the anniversary month of the SIP registration. Check your AMC's SIP mandate terms to know which applies — this affects which month's payment increases each year.</p><p><strong>Tax at redemption — LTCG per instalment:</strong> Each SIP instalment has its own holding period. For equity mutual funds, gains from instalments held over 12 months are taxed as LTCG under Section 112A at 12.5% above ₹1.25 lakh per FY (effective 23 July 2024, Finance Act 2024). Gains from instalments held under 12 months are STCG under Section 111A at 20%. Budget 2026 made no changes. For a step-up SIP running for 10+ years, all instalments will typically be long-term at the point of redemption — the entire corpus faces LTCG treatment, with ₹1.25L exempt per FY.</p><p><strong>Exit load:</strong> Most equity mutual funds charge a 1% exit load on units redeemed within 12 months of investment. For a long-running step-up SIP, exit load applies only to the most recent 12 months of instalments — earlier instalments attract no exit load.</p>"
     },
     {
-      "question": "Is a step-up SIP better than starting a new SIP with a higher amount?",
-      "answer": "Starting a step-up SIP early with a lower amount and increasing annually produces similar or better results than waiting to accumulate a larger amount to start with. The early years of compounding matter more than the exact starting amount."
-    },
-    {
-      "question": "When should you not use a step-up SIP?",
-      "answer": "Avoid step-up SIPs if your income is highly variable or if the higher future installments might strain your finances. A consistent flat SIP is better than a step-up SIP you might stop during a difficult year. Consistency beats optimisation."
+      "id": "step-up-mistakes",
+      "heading": "What Most Step-Up SIP Investors Get Wrong",
+      "body": "<p><strong>Choosing step-up % based on projected corpus, not income reality.</strong> A 20% annual step-up generates a spectacular 20-year projection — but if your income grows at 8–10%, you will stop the SIP before year 10. A stopped SIP destroys more value than a lower step-up rate sustained throughout. Use a step-up that matches your conservative income growth estimate, not the optimistic one.</p><p><strong>Treating the step-up calculator as proof of future wealth.</strong> The projection assumes a constant return rate every year. Equity markets are not constant. A ₹1.76 crore projection at 20 years assumes 10% step-up and 12% return every single year. If markets deliver 6% in years 15–20, the actual corpus will be significantly lower. Use the calculator for relative comparisons (step-up vs flat SIP) rather than absolute wealth guarantees.</p><p><strong>Not accounting for LTCG on redemption.</strong> The calculator shows gross corpus. When you redeem a step-up SIP corpus of ₹1.76 crore with ₹1.19 crore in gains (vs ₹57.3L invested), the LTCG tax depends on how you stagger redemptions. Redeeming all ₹1.76 crore in one FY produces LTCG of ₹1.19 crore minus ₹1.25L exemption = ₹1.1775 crore of taxable LTCG × 12.5% = ₹14.7L in tax. Spreading redemptions over 5 years uses the ₹1.25L exemption 5 times, saving ₹78,000 in tax.</p><p><strong>Comparing step-up corpus vs flat SIP corpus as if they are the same investment.</strong> They are not — the step-up investor invested substantially more total money. A fair comparison should note both total invested and final corpus for both strategies. The step-up strategy is not free — it requires progressively higher monthly cash outflows from your salary each year.</p>"
     }
   ],
   "faq": [
     {
       "q": "What is a step-up SIP?",
-      "a": "A step-up SIP (also called a top-up SIP or increasing SIP) allows you to automatically increase your monthly investment by a fixed percentage each year. If you start with ₹5,000/month and choose a 10% step-up, your SIP becomes ₹5,500 in year 2, ₹6,050 in year 3, and so on."
+      "a": "A step-up SIP (also called a top-up SIP or increasing SIP) allows you to automatically increase your monthly investment by a fixed percentage each year. If you start with ₹5,000/month and choose a 10% step-up, your SIP becomes ₹5,500 in year 2, ₹6,050 in year 3, and so on. The mechanism mirrors how your income typically grows — you invest more as you earn more, without it feeling like a sacrifice."
     },
     {
       "q": "How much extra wealth does a 10% annual step-up generate?",
-      "a": "A ₹5,000/month flat SIP at 12% for 10 years gives ₹11.61 lakhs. A ₹5,000/month SIP with 10% annual step-up at 12% for 10 years gives approximately ₹17.38 lakhs — nearly 50% more wealth for approximately 60% more total investment."
+      "a": "A ₹5,000/month flat SIP at 12% for 10 years gives approximately ₹11.61 lakhs. A ₹5,000/month SIP with 10% annual step-up at 12% for 10 years gives approximately ₹17.38 lakhs — nearly 50% more wealth. The step-up investor invests more total (₹9.56L vs ₹6L), but the extra corpus of ₹5.77L comes from investing the incremental amounts in the early years when compounding has the most time to work."
     },
     {
       "q": "Is a step-up SIP available in all mutual funds?",
-      "a": "Most major mutual fund houses in India — including Zerodha Coin, Groww, Kuvera, and direct fund portals — support step-up SIPs. Some AMCs call it a 'top-up SIP' or 'booster SIP'. You can typically set the step-up percentage and review annually."
+      "a": "Most major mutual fund platforms support step-up SIPs — Zerodha Coin, Groww, Kuvera, Paytm Money, and direct fund portals. Some AMCs call it a 'top-up SIP' or 'booster SIP'. The step-up feature is implemented at the platform or AMC level — it is not a separate SEBI-regulated product but a feature under the standard SIP mandate framework. Check whether your platform supports modifying the step-up percentage after SIP registration."
     },
     {
       "q": "Can you change the step-up percentage mid-way?",
-      "a": "Policies vary by AMC and platform. Most platforms allow you to modify or cancel the step-up instructions for future years while keeping existing SIP installments intact. Some require cancelling and restarting the SIP with new step-up terms."
+      "a": "Policies vary by AMC and platform. Most platforms allow modifying or cancelling step-up instructions for future increments while keeping existing SIP instalments intact. Some require cancelling the SIP and registering a new one with the new step-up terms. Check with your specific AMC or platform — and note that cancelling and restarting a SIP resets the LTCG holding period clock for new instalments."
     },
     {
       "q": "What is the difference between step-up SIP and flexi SIP?",
-      "a": "A step-up SIP increases by a fixed percentage each year automatically. A flexi SIP allows you to manually vary the amount each month between a defined minimum and maximum. Step-up SIP is better for automated long-term wealth building; flexi SIP suits variable income earners."
+      "a": "A step-up SIP increases by a fixed percentage automatically each year. A flexi SIP lets you manually set a different amount each month within a pre-defined minimum and maximum. Step-up SIP is better for automated, disciplined wealth building where income grows predictably. Flexi SIP suits variable-income earners (self-employed, consultants) who may want to invest more in high-income months and less in lean months."
     },
     {
-      "q": "Should I increase SIP annually or invest the increment as a new SIP?",
-      "a": "Both achieve similar results mathematically. However, increasing an existing SIP keeps everything consolidated in one fund, which simplifies tracking and reduces transaction complexity. Starting a new SIP with the increment amount gives you flexibility to invest in a different fund."
+      "q": "Should I increase my SIP annually or invest the increment as a new SIP in a different fund?",
+      "a": "Both produce similar corpus mathematics. Increasing an existing SIP keeps everything in one fund, simplifying tracking and consolidation. Starting a separate SIP with the increment allows you to diversify across different funds or categories. For most investors with fewer than 3–4 existing SIP funds, increasing the existing SIP is simpler. If you want to add a new fund category (e.g., small-cap or international), a separate SIP makes sense."
+    },
+    {
+      "q": "How is tax calculated on a step-up SIP at redemption?",
+      "a": "Each SIP instalment is a separate purchase for tax purposes, with its own holding period. Gains from instalments held over 12 months are Long-Term Capital Gains (LTCG) taxed at 12.5% above ₹1.25 lakh per FY under Section 112A (Finance Act 2024). Gains from instalments held under 12 months are Short-Term Capital Gains (STCG) at 20% under Section 111A. For a step-up SIP running 5+ years, most or all instalments qualify as long-term. Stagger redemptions across financial years to use the ₹1.25L annual LTCG exemption multiple times."
+    },
+    {
+      "q": "What step-up percentage should I choose?",
+      "a": "Choose the step-up rate that matches your conservative estimate of annual income growth — not the aggressive estimate. IT professionals with consistent appraisals might choose 8–10%. Self-employed individuals with variable income: 5%. If your organisation is undergoing cost cuts, a 3–5% step-up is safer than 10%. The rule: set a step-up you can sustain every year without breaking the SIP. A 7% step-up running consistently for 15 years creates far more wealth than a 15% step-up you stop in year 7."
     }
   ],
   "related": [
     { "title": "SIP Calculator", "url": "/india/sip-calculator/", "desc": "Calculate flat SIP returns for comparison" },
-    { "title": "Lumpsum Calculator", "url": "/india/lumpsum-calculator/", "desc": "One-time investment growth estimate" },
-    { "title": "NPS Calculator", "url": "/india/nps-calculator/", "desc": "Retirement corpus with step-up contributions" }
+    { "title": "Goal SIP Calculator", "url": "/india/goal-sip-calculator/", "desc": "Find the monthly SIP needed to reach your target corpus" },
+    { "title": "NPS Calculator", "url": "/india/nps-calculator/", "desc": "Retirement corpus with increasing contributions" }
   ],
   "howToSteps": [
-    { "name": "Enter Initial Monthly SIP", "text": "Enter the SIP amount you will invest in year 1." },
-    { "name": "Set Annual Step-Up Percentage", "text": "Enter the percentage by which you will increase your SIP each year. 10% is a common choice matching average salary growth." },
-    { "name": "Set Return Rate and Duration", "text": "Enter expected annual return rate and total investment period in years." },
-    { "name": "Compare with Flat SIP", "text": "The calculator shows your step-up corpus alongside the flat SIP corpus, so you can see exactly how much extra wealth the annual increases generate." }
+    { "name": "Enter Initial Monthly SIP", "text": "Enter the SIP amount you will invest in year 1. This is your starting point — future years will increase by the step-up percentage." },
+    { "name": "Set Annual Step-Up Percentage", "text": "Enter the percentage by which you will increase your SIP each year. Match this to your expected annual salary increment — 10% is a common choice for IT professionals." },
+    { "name": "Set Return Rate and Duration", "text": "Enter expected annual return and total investment period. Use 10–12% for diversified equity funds." },
+    { "name": "Compare with Flat SIP", "text": "The calculator shows your step-up corpus alongside the flat SIP corpus so you can see exactly how much extra wealth the annual increases generate — and how much more you invested to get there." }
   ],
   "schema": {
     "appName": "Step-Up SIP Calculator India",
-    "appDescription": "Calculate SIP returns with annual investment increases. Compare step-up SIP corpus against flat SIP to see the extra wealth generated."
+    "appDescription": "Calculate SIP returns with annual investment step-up. Compare step-up SIP corpus against flat SIP and model wealth growth when contributions grow with your income."
   }
 }

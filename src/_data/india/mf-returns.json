@@ -1,13 +1,13 @@
 {
   "id": "mf-returns",
   "schema": {
-    "appName": "Mutual Fund Returns Calculator \u2014 Absolute & CAGR",
-    "appDescription": "Calculate absolute returns, CAGR, and money multiplier for any mutual fund. Enter NAV at purchase and current NAV to see your fund performance."
+    "appName": "Mutual Fund Returns Calculator India — Absolute Return & CAGR",
+    "appDescription": "Calculate absolute returns, CAGR, and money multiplier for any mutual fund. Enter NAV at purchase and current NAV to see your fund performance and benchmark against Nifty 50."
   },
   "inputs": [
     {
       "id": "nav-start",
-      "label": "Purchase NAV (\u20b9)",
+      "label": "Purchase NAV (₹)",
       "min": 0.01,
       "max": 10000,
       "step": 0.01,
@@ -15,7 +15,7 @@
     },
     {
       "id": "nav-end",
-      "label": "Current NAV (\u20b9)",
+      "label": "Current NAV (₹)",
       "min": 0.01,
       "max": 10000,
       "step": 0.01,
@@ -31,12 +31,12 @@
     },
     {
       "id": "mf-dividends",
-      "label": "Dividends Received (\u20b9)",
+      "label": "Dividends Received (₹)",
       "min": 0,
       "max": 1000000,
       "step": 100,
       "value": 0,
-      "hint": "Optional: add dividends/payouts received"
+      "hint": "Optional: add IDCW/dividend payouts received per unit to compute total return"
     }
   ],
   "outputs": [
@@ -54,68 +54,95 @@
       "label": "Money Multiplier"
     }
   ],
-  "howToSteps": [
+  "articleSections": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the inputs for the Mutual Fund Returns Calculator."
+      "id": "how-mf-returns-work",
+      "heading": "How to Calculate Absolute Return and CAGR from NAV — and Why Growth Option Always Shows Higher NAV",
+      "body": "<p>A mutual fund's NAV (Net Asset Value) is the per-unit price of the fund's portfolio, calculated daily as: NAV = (Total Portfolio Value − Liabilities) / Number of Units Outstanding. For lumpsum investors, the return is calculated from the NAV at purchase to the NAV at redemption or current date.</p><p><strong>Absolute return:</strong> (Current NAV − Purchase NAV + Dividends per unit) / Purchase NAV × 100. Example: purchased at NAV ₹100, current NAV ₹185 after 5 years, no dividends. Absolute return = (185 − 100) / 100 × 100 = 85%.</p><p><strong>CAGR:</strong> (Current NAV / Purchase NAV)^(1/years) − 1 = (185/100)^(1/5) − 1 = (1.85)^0.2 − 1 = 1.1312 − 1 = 13.12% CAGR. This is the annualised return that a lumpsum investor earned.</p><p><strong>Money multiplier:</strong> Current NAV / Purchase NAV = 185/100 = 1.85×. This tells you how many times your money multiplied — in this case, ₹1 lakh became ₹1.85 lakhs.</p><p><strong>Why growth option NAV is always higher than IDCW option NAV for the same fund:</strong> In a growth option, all returns are retained in the fund and reflected in a rising NAV. In the IDCW (Income Distribution cum Capital Withdrawal) option — formerly called dividend option — periodic distributions reduce the NAV by the amount distributed. A growth option fund that started at ₹10 NAV in 2010 and distributed nothing will have a much higher NAV today than the IDCW option of the same fund that has distributed dividends multiple times. For comparing two funds' performance, always use their growth option NAVs, not IDCW, and compare over the same time period.</p><p><strong>NAV sources:</strong> Historical NAVs for any date are available on the AMFI website (amfiindia.com → NAV History), fund house websites, and platforms like Groww, Zerodha, and CAMS. Historical NAV lookup requires the fund's scheme code or name.</p>"
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time."
+      "id": "mf-returns-scenarios",
+      "heading": "Three Return Calculations That Show When a Fund Is Actually Performing",
+      "body": "<h3>Scenario 1: Comparing two large-cap funds bought on the same date</h3><p>Arjun bought Fund A (large-cap) in June 2019 at NAV ₹42. Current NAV in June 2026: ₹98. He also bought Fund B (large-cap) in June 2019 at NAV ₹65. Current NAV in June 2026: ₹131. Which performed better?</p><p>Fund A: Absolute return = (98−42)/42 × 100 = 133.3%. CAGR = (98/42)^(1/7) − 1 = (2.333)^0.1429 − 1 = 1.1266 − 1 = 12.66%.</p><p>Fund B: Absolute return = (131−65)/65 × 100 = 101.5%. CAGR = (131/65)^(1/7) − 1 = (2.015)^0.1429 − 1 = 1.1054 − 1 = 10.54%.</p><p>Fund A outperformed by 2.12% CAGR — a significant active management alpha over 7 years. In absolute rupee terms on ₹1L invested: Fund A → ₹2,33,333; Fund B → ₹2,01,538. Fund A added ₹31,795 more per ₹1L invested. The CAGR calculation using same-date NAVs is the correct method for comparing two funds.</p><h3>Scenario 2: Using the Nifty 50 TRI as a benchmark</h3><p>Seetha has been holding a large-cap fund for 7 years. Purchase NAV: ₹80. Current NAV: ₹175. CAGR: (175/80)^(1/7) − 1 = (2.1875)^0.1429 − 1 = 1.1185 − 1 = 11.85%.</p><p>She checks the Nifty 50 TRI (Total Return Index, which includes dividends) for the same 7-year period. Nifty 50 TRI CAGR for the same period: approximately 13.2% (verify exact figure at NSE India or AMFI for the specific dates). Her fund returned 11.85% vs the benchmark's 13.2% — underperformance of 1.35% annually. On a ₹10L investment over 7 years, this underperformance cost approximately ₹1.3L in foregone corpus. Conclusion: switch to a Nifty 50 index fund (TER: 0.05–0.1% direct plan) and capture the benchmark return at near-zero cost.</p><h3>Scenario 3: Growth option vs IDCW option — why the NAV comparison misleads</h3><p>Vikram has two NAV printouts: his fund's growth option at NAV ₹245 and IDCW option at NAV ₹85. He thinks his growth option investment has been more profitable. But both options are for the same underlying fund that started at ₹10 NAV in 2005. The IDCW option has distributed ₹180 per unit in dividends over 20 years, reducing the NAV proportionally each time. If Vikram had received all ₹180 in dividends and reinvested them (plus the remaining ₹85 NAV), his total return would be approximately equivalent to the growth option's ₹245 NAV — adjusted for the tax on each dividend received. The growth option is tax-efficient because no tax is triggered until redemption; IDCW triggers tax as income on each distribution. For wealth creation, growth option is almost always superior to IDCW for retail investors.</p>"
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year table."
+      "id": "mf-returns-rules",
+      "heading": "Fund Return Rules — AMFI Disclosure Standards, LTCG on Redemption, XIRR vs CAGR",
+      "body": "<p><strong>SEBI and AMFI NAV disclosure requirements:</strong> SEBI (Mutual Funds) Regulations, 1996 require fund houses to calculate and publish NAV daily by 9 PM for equity funds and by 11 PM for debt funds. NAVs are submitted to AMFI, which publishes them centrally. Historical NAVs for any date back to the fund's inception are available at amfiindia.com. This transparency allows investors to compute precise returns for any holding period.</p><p><strong>SEBI fund categories (October 2017 circular):</strong> SEBI categorised all mutual funds into distinct categories (large-cap, mid-cap, small-cap, flexi-cap, ELSS, etc.), each with mandatory portfolio composition rules. This standardisation means CAGR comparisons within a category are meaningful — all large-cap funds must hold 80% in large-cap stocks, so their CAGR differences reflect genuine fund manager alpha, not just different risk-taking.</p><p><strong>LTCG on redemption — Section 112A (Finance Act 2024):</strong> Gains on equity mutual fund units held over 12 months: LTCG at 12.5% above ₹1.25L per FY. STCG (Section 111A): 20% if held under 12 months. For IDCW distributions: SEBI reclassified dividends as 'Income Distribution cum Capital Withdrawal' (IDCW) in 2021. IDCW payouts are taxed as income at your slab rate in the year received — they are not capital gains. Budget 2026 made no changes to LTCG or STCG rates for equity mutual funds.</p><p><strong>CAGR applies only to lumpsum investments; XIRR for SIP:</strong> NAV-based CAGR is the correct return metric for a single purchase on one date. For SIP portfolios — with multiple purchases at different NAVs on different dates — the correct metric is XIRR (Extended Internal Rate of Return). Your fund app's portfolio view typically shows XIRR for the SIP portion and CAGR for any lumpsum holdings. SEBI's 2025 proposal to mandate XIRR disclosure for SIP investors would make this more transparent — check SEBI circulars for current status.</p><p><strong>Consolidated Account Statement (CAS):</strong> CAMS and KFintech (the two mutual fund RTAs covering 95%+ of AUM) issue a Consolidated Account Statement once a month to investors who have transacted in that month. CAS is available on demand at camsonline.com or kfintech.com using your PAN. CAS provides transaction history with NAV at each purchase date — the data needed to compute precise XIRR for any SIP portfolio.</p>"
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust inputs to compare options."
+      "id": "mf-returns-mistakes",
+      "heading": "What Investors Get Wrong When Calculating Mutual Fund Returns",
+      "body": "<p><strong>Comparing CAGR from the fund fact sheet to their actual SIP returns.</strong> A fund's 5-year CAGR on the fact sheet represents a hypothetical lumpsum investor who put money in exactly 5 years ago. If you have been doing monthly SIP for 5 years, your actual return (XIRR) could be higher or lower than the fact sheet CAGR — depending entirely on which NAVs your instalments were allotted at. During a bull market with SIP at the bottom, your XIRR may be much higher than the fund's 5-year CAGR. During a correction after a long bull run, it may be lower.</p><p><strong>Using IDCW option NAV to evaluate growth option performance.</strong> Never compare NAVs of the growth and IDCW options of the same fund — they are meaningless without adding back all distributed dividends. If you received ₹200 per unit in IDCW distributions from a fund whose IDCW NAV is now ₹50, your actual return per unit is measured on ₹250 (₹50 current NAV + ₹200 received), not ₹50. Always compare total return (NAV appreciation + distributions) when evaluating IDCW options.</p><p><strong>Not including dividends received in CAGR calculation.</strong> For IDCW option holders, the total return = (Current NAV − Purchase NAV + All dividends received per unit) / Purchase NAV. Omitting dividends understates the actual return. For growth option investors, NAV appreciation alone is the total return — no dividends to track.</p><p><strong>Selecting a favourable start date to show high returns.</strong> Fund marketing materials sometimes show returns from a market bottom to a market peak — producing spectacular CAGR numbers. An investor who started at a different date would have earned very different returns. SEBI mandates standardised start dates for fact sheet CAGR, but in informal comparisons, always use the actual purchase date from your own fund statement, not industry-reported CAGR figures.</p>"
     }
   ],
   "faq": [
     {
-      "q": "What is the difference between absolute return and CAGR?",
-      "a": "Absolute return: total % gain from start to finish (e.g., 85% if NAV went from 100 to 185). CAGR: annualised return that accounts for time \u2014 85% over 5 years = 13.1% CAGR. CAGR is the correct metric to compare funds over different periods."
+      "q": "What is the difference between absolute return and CAGR for a mutual fund?",
+      "a": "Absolute return is the total percentage gain from purchase to current: (Current NAV − Purchase NAV) / Purchase NAV × 100. CAGR is the annualised version: (Current NAV / Purchase NAV)^(1/years) − 1. A fund that went from NAV ₹100 to ₹185 in 5 years has 85% absolute return but only 13.1% CAGR. CAGR is the correct metric for comparing funds across different holding periods — absolute return is meaningful only when comparing investments held for the same duration."
     },
     {
-      "q": "How do I find the NAV of a mutual fund?",
-      "a": "NAV is published daily on: AMFI website (amfiindia.com), fund house website, MF utility, and apps like Groww, Zerodha Coin, PayTM Money. Historical NAVs are available for any date. The NAV is the per-unit value of the fund's portfolio."
+      "q": "How do I find the purchase NAV of a mutual fund?",
+      "a": "Your purchase NAV is in: (1) your fund purchase confirmation (email or app notification); (2) your Consolidated Account Statement (CAS) available from CAMS (camsonline.com) or KFintech (kfintech.com) using your PAN; (3) your fund house's online account. Historical NAVs for any date are also available at AMFI's website (amfiindia.com) under 'NAV History' — useful for verifying the exact NAV on your purchase date."
     },
     {
       "q": "What is a good CAGR for equity mutual funds in India?",
-      "a": "Index funds (Nifty 50): 12\u201315% CAGR over 10+ years. Actively managed large-cap: 12\u201316%. Mid-cap: 14\u201318%. Small-cap: 15\u201320% (with higher volatility). Debt funds: 6\u20138%. Always compare against the benchmark index over the same period \u2014 if the fund doesn't beat its benchmark, switch to an index fund."
+      "a": "Nifty 50 index funds have delivered approximately 12–14% CAGR over most 10-year periods (varies by exact dates). Actively managed large-cap funds: 12–16% CAGR over 10+ years. Mid-cap funds: 14–18% CAGR. Small-cap: 15–20% (with higher volatility and drawdowns). Always compare against the fund's benchmark index — if the fund doesn't consistently beat its benchmark over 7–10 years, switch to the index fund."
     },
     {
-      "q": "Is the Mutual Fund Returns Calculator free?",
-      "a": "Yes, completely free on CalcPhi."
+      "q": "Why is XIRR better than CAGR for SIP investors?",
+      "a": "CAGR measures the return of a single lumpsum. For SIP investments with multiple purchase dates and different NAVs, CAGR is not the right metric — it ignores when each instalment was invested. XIRR (Extended Internal Rate of Return) calculates the annualised return by accounting for the timing and amount of each SIP instalment. Most mutual fund apps (Zerodha Coin, Groww, Kuvera) show XIRR for SIP portfolios. Your SIP XIRR can be meaningfully higher or lower than the fund's advertised CAGR depending on when you invested."
     },
     {
-      "q": "Are my inputs stored?",
-      "a": "No. Calculations run in your browser."
+      "q": "What is the LTCG tax on mutual fund redemption?",
+      "a": "For equity mutual fund units held over 12 months: Long-Term Capital Gains (LTCG) are taxed at 12.5% on gains above ₹1.25 lakh per financial year under Section 112A (Finance Act 2024, effective 23 July 2024). Gains below ₹1.25L per FY are exempt. For units held under 12 months: Short-Term Capital Gains (STCG) at 20% under Section 111A. Budget 2026 made no changes to these rates. No TDS is deducted on equity mutual fund redemptions for resident individuals."
     },
     {
-      "q": "Is it mobile-friendly?",
-      "a": "Yes. Works on all smartphones."
+      "q": "Should I use growth option or IDCW option for better returns?",
+      "a": "Growth option is superior for most long-term investors. In growth option, all returns compound within the fund and no tax is triggered until redemption — allowing full compounding on the entire corpus. In IDCW (formerly dividend) option, each distribution is taxed as income at your slab rate in the year received, interrupting compounding. SEBI renamed 'dividend' to 'IDCW' (Income Distribution cum Capital Withdrawal) in 2021 to clarify that dividends come from the investor's own capital, not external income. Use IDCW only if you genuinely need periodic cash flow and prefer partial liquidity over compounding efficiency."
+    },
+    {
+      "q": "Can I compare two funds using their NAVs directly?",
+      "a": "Not meaningfully, unless both started at the same NAV on the same date. Fund A with NAV ₹245 and Fund B with NAV ₹88 tells you nothing about relative performance if they started at different times or from different initial NAVs. The correct comparison: calculate CAGR for both funds using the same start and end dates. Enter both funds' NAVs on the same start date as initial values in this calculator and their current NAVs as final values — then compare the resulting CAGRs directly."
+    },
+    {
+      "q": "Where can I get historical NAV data for any mutual fund?",
+      "a": "Historical NAVs for all SEBI-registered mutual funds are available at: (1) AMFI website (amfiindia.com → NAV History or Fund Scheme NAV) — free, official, covers all funds from inception; (2) CAMS (camsonline.com) and KFintech (kfintech.com) — for funds they service as RTA; (3) Fund house websites — each AMC publishes daily NAV and historical data; (4) Apps like Groww, Zerodha Coin, MF Central — search by fund name and select date range. NAV is published by 9 PM for equity funds and 11 PM for debt funds on each business day."
     }
   ],
-  "examples": [
+  "howToSteps": [
     {
-      "heading": "NAV 100 to 185 in 5 years",
-      "text": "Absolute return: 85%. CAGR: (185/100)^(1/5) - 1 = 13.1% p.a. Money multiplier: 1.85\u00d7. This outperforms the Nifty 50 historical average of 12% \u2014 good performance."
+      "name": "Find Your Purchase NAV",
+      "text": "Retrieve your NAV at purchase from your fund statement, Consolidated Account Statement (CAS from CAMS/KFintech), or AMFI's historical NAV data. This is the NAV on your specific purchase date."
     },
     {
-      "heading": "NAV 150 to 180 in 2 years",
-      "text": "Absolute return: 20%. CAGR: (180/150)^(1/2) - 1 = 9.5% p.a. Money multiplier: 1.2\u00d7. Underperforms Nifty 50. Consider switching to an index fund if consistent underperformance."
+      "name": "Enter Current NAV",
+      "text": "Enter today's NAV from the fund house website, AMFI, or your fund app. For a fair comparison between two funds, use the same date for both."
+    },
+    {
+      "name": "Set Investment Duration",
+      "text": "Enter the number of years between your purchase date and the current (or redemption) date. Precision matters — 5 years vs 5.5 years changes CAGR meaningfully at short holding periods."
+    },
+    {
+      "name": "Compare Against Benchmark",
+      "text": "Use the CAGR from this calculator to benchmark against the Nifty 50 TRI (for large-cap funds) or the appropriate index for your fund's category. AMFI and NSE India publish benchmark index data for comparison."
     }
   ],
   "related": [
     {
       "title": "CAGR Calculator",
-      "url": "/india/cagr-calculator/"
+      "url": "/india/cagr-calculator/",
+      "desc": "Understand CAGR vs absolute return in depth"
     },
     {
-      "title": "Direct vs Regular MF",
-      "url": "/india/direct-vs-regular-calculator/"
+      "title": "Direct vs Regular Calculator",
+      "url": "/india/direct-vs-regular-calculator/",
+      "desc": "See how TER gap affects your fund's effective CAGR"
+    },
+    {
+      "title": "SIP Calculator",
+      "url": "/india/sip-calculator/",
+      "desc": "Calculate SIP corpus growth and projected XIRR"
     }
   ]
 }

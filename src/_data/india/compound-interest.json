@@ -1,8 +1,8 @@
 {
   "id": "compound-interest",
   "schema": {
-    "appName": "Compound Interest Calculator",
-    "appDescription": "Calculate compound interest on any investment. See how money grows with annual, quarterly, or monthly compounding over time."
+    "appName": "Compound Interest Calculator India",
+    "appDescription": "Calculate compound interest on any investment. Understand effective vs nominal rates, compounding frequency impact, the Rule of 72, and why starting early outperforms investing more."
   },
   "inputs": [
     {
@@ -12,7 +12,7 @@
       "max": 100000000,
       "step": 1000,
       "value": 500000,
-      "hint": "One-time investment"
+      "hint": "One-time principal investment"
     },
     {
       "id": "ls-rate",
@@ -39,7 +39,7 @@
     },
     {
       "id": "ls-gains",
-      "label": "Total Gains"
+      "label": "Total Interest / Gains"
     },
     {
       "id": "ls-cagr",
@@ -47,72 +47,95 @@
     }
   ],
   "formulaEngine": "lumpsum",
-  "howToSteps": [
+  "articleSections": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the Compound Interest Calculator. All inputs have smart defaults."
+      "id": "how-compound-interest-works",
+      "heading": "How Compound Interest Works — Formula, Frequency, and Effective Annual Rate",
+      "body": "<p>Compound interest means earning interest on previously accumulated interest — not just on the principal. The formula is: A = P × (1 + r/n)^(nt), where P is the principal, r is the annual interest rate as a decimal, n is the number of compounding periods per year, and t is the number of years. Two things follow from this formula: more frequent compounding generates more wealth for the same nominal rate, and time is the most powerful variable.</p><p><strong>Effective Annual Rate (EAR) vs nominal rate:</strong> A 12% nominal rate produces different effective annual returns depending on compounding frequency. Annual compounding: EAR = 12.00%. Quarterly (as in bank FDs): EAR = (1 + 0.12/4)^4 − 1 = (1.03)^4 − 1 = 12.55%. Monthly (as in many mutual fund return projections): EAR = (1 + 0.12/12)^12 − 1 = (1.01)^12 − 1 = 12.68%. Daily (as in some savings products): EAR = (1 + 0.12/365)^365 − 1 ≈ 12.75%. The difference between annual and monthly compounding on a 12% nominal rate is only 0.68% in EAR — meaningful over 20+ years, but far less impactful than the difference in the nominal rate itself.</p><p><strong>Worked example — ₹5L at 12% annually compounded for 10 years:</strong> A = 5,00,000 × (1.12)^10 = 5,00,000 × 3.1058 = ₹15,52,924. Interest earned: ₹10,52,924. If simple interest were applied (5,00,000 × 12% × 10 = ₹6,00,000 interest): maturity = ₹11,00,000. Compound interest generates ₹4,52,924 more than simple interest on the same principal over 10 years — purely from interest earning interest. Over 20 years, the difference is even more dramatic: compounded ₹48.23L vs simple interest ₹17L.</p><p><strong>PPF vs bank FD compounding:</strong> PPF at 7.1% is compounded annually (interest credited on March 31). Bank FDs are compounded quarterly. At the same nominal rate: quarterly FD → higher effective return. At 7.1%: PPF EAR = 7.1%. Bank FD quarterly: EAR = (1 + 0.071/4)^4 − 1 = 7.39%. The quarterly compounding gives 0.29% more. However, PPF has EEE tax status — the post-tax advantage of PPF is far larger than this 0.29% compounding difference.</p>"
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time as you type — no submit button needed."
+      "id": "compound-interest-scenarios",
+      "heading": "Three Compound Interest Decisions That Separate Long-Term Outcomes",
+      "body": "<h3>Scenario 1: The Rule of 72 in practice — which rate doubles money fastest?</h3><p>Mohan, 30, is comparing three instruments for a 15-year investment of ₹2 lakh:</p><ul><li><strong>Savings bank account at 3.5%:</strong> Rule of 72: doubles in 72/3.5 = 20.6 years. At 15 years: ₹2L × (1.035)^15 = ₹3.37L.</li><li><strong>PPF at 7.1%:</strong> Doubles in 72/7.1 = 10.1 years. At 15 years: ₹2L × (1.071)^15 = ₹5.67L. (Verify with PPF Calculator.)</li><li><strong>Equity mutual fund at 12%:</strong> Doubles in 72/12 = 6 years. At 15 years: ₹2L × (1.12)^15 = ₹10.95L — more than 5× the savings account.</li></ul><p>The 8.5% difference between savings account (3.5%) and equity (12%) generates ₹7.58L more wealth on the same ₹2L over 15 years. This is the mathematical case for moving beyond savings accounts for long-term goals.</p><h3>Scenario 2: Starting at 25 vs 35 — 10 years of compounding is worth more than doubling the investment</h3><p>Priya, 25, invests ₹5L now at 12% and adds nothing more. Deepak, 35, waits 10 years then invests ₹5L at 12% at age 35.</p><p>Priya at 60 (35 years of compounding): ₹5L × (1.12)^35 = ₹5L × 52.8 = ₹2.64 crore. Deepak at 60 (25 years): ₹5L × (1.12)^25 = ₹5L × 17.0 = ₹85L.</p><p>Priya's ₹5L invested at 25 generates ₹1.79 crore more than Deepak's identical ₹5L invested at 35 — because it compounds for 10 more years. For Deepak to match Priya's corpus, he would need to invest not ₹5L but ₹5L × 52.8/17.0 = ₹15.5L. Starting 10 years later requires investing 3.1× more capital to achieve the same outcome.</p><p>This is the mathematical foundation of the financial planning principle: start early, start small, never stop. The first decade of compounding is disproportionately valuable — not because the early returns are higher, but because there are more years for those returns to compound.</p><h3>Scenario 3: Compounding frequency — does it matter for Indian FDs?</h3><p>Sudha puts ₹10L in a bank FD at 7% nominal for 5 years. Two options: annual compounding or quarterly compounding.</p><ul><li><strong>Annual compounding:</strong> A = 10L × (1.07)^5 = 10L × 1.4026 = ₹14.03L.</li><li><strong>Quarterly compounding:</strong> A = 10L × (1 + 0.07/4)^20 = 10L × (1.0175)^20 = 10L × 1.4148 = ₹14.15L.</li></ul><p>Difference: ₹12,000 on ₹10L over 5 years — less than 1%. Compounding frequency matters far less than the nominal rate. Sudha should focus on comparing 7.0% quarterly vs 7.5% annual rather than 7.0% quarterly vs 7.0% annual. A 0.5% higher rate on annual compounding beats a 0.5% compounding-frequency advantage at the same rate. Most Indian banks compound FDs quarterly — a standard they must follow per RBI guidelines.</p>"
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown table to see how your numbers change over time."
+      "id": "compound-interest-rules",
+      "heading": "Compound Interest in India — RBI Bank Conventions, FD Compounding Rules, and Instrument Comparison",
+      "body": "<p><strong>RBI guidelines on bank compounding:</strong> The Reserve Bank of India (RBI) requires banks to compound FD interest on a quarterly basis. Banks may not compound daily or monthly for FDs, though daily compounding applies for some savings accounts and specific products. This quarterly compounding standard means all bank FD comparisons use the same frequency — only the nominal rate differs between banks. The effective annual rate for any FD with quarterly compounding: EAR = (1 + r/4)^4 − 1, where r is the nominal annual rate.</p><p><strong>PPF — annual compounding, credited March 31:</strong> PPF compounds annually. Interest is calculated monthly (on the lowest balance between the 5th and last day of each month) but credited to the account only once a year on March 31. The effective rate is exactly the stated 7.1% because compounding is annual. Despite annual (not quarterly) compounding, PPF remains superior to bank FDs at similar rates because of its EEE tax status — the post-tax return comparison has to account for the difference in tax treatment.</p><p><strong>Mutual fund NAV — continuous compounding effectively:</strong> Mutual fund NAV changes daily, reflecting the fund's portfolio value. This is not a defined compounding schedule but effectively continuous compounding — the underlying stocks' prices change and dividends are reinvested continuously. The 'compounding frequency' of equity mutual funds is economically continuous, not quarterly or annual. When you see a 12% CAGR for a mutual fund, it is the effective annual rate across all compounding — there is no separate nominal vs effective rate distinction for NAV-based returns.</p><p><strong>NSC (National Savings Certificate) — annual compounding, not paid out:</strong> NSC compounds annually but interest is not paid out — it is reinvested into the NSC automatically each year. This reinvested interest itself qualifies for Section 80C deduction in the year it is deemed to accrue (for all years except the last). NSC matures in 5 years with a current rate of [verify current rate at India Post — rates change quarterly]. Despite annual compounding, NSC has Section 80C benefit (old regime only) but no EEE status — maturity is taxable.</p><p><strong>Small savings instruments — quarterly revision:</strong> Interest rates for PPF, NSC, Sukanya Samriddhi Yojana, SCSS, and other small savings schemes are set by the Ministry of Finance quarterly. Always verify current rates at finmin.nic.in or India Post before making investment decisions, as rates can change at any quarter-end.</p>"
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust the inputs to compare different scenarios and find the best option for your situation."
+      "id": "compound-interest-mistakes",
+      "heading": "What Most Investors Get Wrong About Compounding",
+      "body": "<p><strong>Comparing nominal rates without adjusting for compounding frequency.</strong> A 7.5% annual compounding FD vs a 7.3% quarterly compounding FD: effective annual rates are 7.5% vs 7.57% — the quarterly compounding FD actually yields more. For FDs specifically, the effective interest rate (EIR) is stated by banks and is legally required under RBI disclosures for term loans — for deposits it is less uniformly presented but can be calculated. When comparing FDs, ask for the effective annual yield, not just the nominal rate.</p><p><strong>Mistaking high headline interest for compounding efficiency.</strong> Some small finance banks offer 9% FDs on 3-year tenures. A large nationalised bank offers 6.75%. The small finance bank's FD grows ₹10L to ₹12.95L; the nationalised bank's to ₹12.17L — ₹78,000 more from the smaller bank. But DICGC insurance covers only ₹5L per depositor per bank. Splitting the investment: ₹5L in the small finance bank (insured) and ₹5L in the nationalised bank (also insured) captures the higher rate on the insured portion and protects capital. Chasing higher compound interest without assessing credit risk misses the risk-return tradeoff.</p><p><strong>Not accounting for tax when comparing compounding instruments.</strong> Compound interest on bank FDs is fully taxable at your income slab rate every year (even if not paid out — you are taxed on accrual for FDs). PPF interest compounds tax-free. An FD at 7% for a 30% bracket investor nets approximately 4.9% after tax. PPF at 7.1% nets 7.1% (fully exempt under Section 10(11)). The post-tax compound growth diverges significantly over time: ₹10L at 4.9% net for 15 years = ₹20.5L. Same ₹10L at 7.1% in PPF for 15 years = ₹28.3L. Tax is a compounding variable — the post-tax EAR, not the nominal rate, is the correct comparison.</p><p><strong>Underestimating the power of small rate differences over long periods.</strong> A 1% difference in annual return looks trivial — ₹1,000 on ₹1L. But over 20 years: ₹1L at 12% = ₹9.65L; at 11% = ₹8.06L. The 1% difference produces ₹1.59L more on the same ₹1L — a 16.5% difference in the final corpus. Over 30 years: 12% = ₹29.96L vs 11% = ₹22.89L. The 1% compounding difference grows into a 31% corpus difference over 30 years. This is the mathematical argument for choosing low-TER index funds over high-TER active funds that may match but not beat the index.</p>"
     }
   ],
   "faq": [
     {
-      "q": "How accurate is the Compound Interest Calculator?",
-      "a": "The Compound Interest Calculator uses standard financial formulas. Results are indicative; actual figures depend on your lender or financial institution's policies."
+      "q": "What is the compound interest formula?",
+      "a": "A = P × (1 + r/n)^(nt), where A is maturity value, P is principal, r is annual rate (as decimal), n is compounding frequency per year (1=annual, 4=quarterly, 12=monthly), and t is years. For bank FDs: n=4 (quarterly). For PPF: n=1 (annual). For a ₹5L FD at 7% quarterly for 5 years: A = 5,00,000 × (1 + 0.07/4)^(4×5) = 5,00,000 × (1.0175)^20 = 5,00,000 × 1.4148 = ₹7,07,412."
     },
     {
-      "q": "Is the Compound Interest Calculator free to use?",
-      "a": "Yes, the Compound Interest Calculator on CalcPhi is completely free with no registration required."
+      "q": "What is the difference between simple interest and compound interest?",
+      "a": "Simple interest: interest is calculated only on the principal — I = P × r × t. Compound interest: interest is added to principal each period, so future interest is calculated on the growing total. On ₹1L at 10% for 10 years: simple interest gives ₹2L (₹1L principal + ₹1L interest). Compound interest (annual): ₹1L × (1.10)^10 = ₹2.59L — ₹59,374 more, purely from interest compounding on accumulated interest. The longer the tenure, the wider this gap becomes."
     },
     {
-      "q": "Are my data inputs stored?",
-      "a": "No. All calculations happen in your browser. We do not store any of your financial data."
+      "q": "What is the Rule of 72?",
+      "a": "The Rule of 72 is a quick mental formula: at r% annual return, money doubles in approximately 72/r years. At 8%: doubles in 9 years. At 12%: doubles in 6 years. At 4%: doubles in 18 years. The Rule of 72 gives an intuitive feel for compounding speed. PPF at 7.1%: money doubles in approximately 10.1 years. A Nifty 50 index fund averaging 12%: money doubles in 6 years and doubles again in another 6 — 4× the original in 12 years."
     },
     {
-      "q": "How often are the Compound Interest Calculator rates updated?",
-      "a": "Rates in examples are updated periodically to reflect current market conditions. Always verify with your bank or advisor."
+      "q": "How does compounding frequency affect my FD returns?",
+      "a": "For a 7% nominal rate: annual compounding gives EAR of exactly 7.0%. Quarterly (standard for Indian bank FDs per RBI guidelines) gives EAR of (1 + 0.07/4)^4 − 1 = 7.19%. Monthly gives 7.23%. The difference between quarterly and annual compounding on ₹10L for 5 years is approximately ₹9,600. Compounding frequency is a minor factor compared to the nominal rate itself — a 0.5% higher rate with annual compounding beats 0.5% higher compounding frequency at the same rate."
     },
     {
-      "q": "Can I use the Compound Interest Calculator on mobile?",
-      "a": "Yes. CalcPhi is fully mobile-optimised. The calculator works on all modern smartphones and tablets."
+      "q": "Which instrument gives the best compound interest in India?",
+      "a": "On a pre-tax basis: equity mutual funds (12–15% historical CAGR, market risk) > small finance bank FDs (8–9% fixed, DICGC insured up to ₹5L) > public sector bank FDs (6.5–7.5%) > PPF (7.1% guaranteed) > savings account (3–4%). On a post-tax basis for a 30% bracket investor: equity mutual fund LTCG at 12.5% (effective tax lower than slab) > PPF (zero tax, EEE) > ELSS (same as PPF but equity risk, old regime only) > FD at slab rate (fully taxable). PPF's EEE status means its effective post-tax return beats a nominally higher FD for investors in the 20–30% tax bracket."
     },
     {
-      "q": "Who should use this calculator?",
-      "a": "Anyone in India planning their finances can benefit from the Compound Interest Calculator. It's designed for both beginners and experienced investors."
+      "q": "How does inflation affect compound interest returns?",
+      "a": "Inflation erodes the purchasing power of your compounded wealth. The real return = [(1 + nominal return) / (1 + inflation rate)] − 1. At 7.1% PPF return and 5% inflation: real return = (1.071/1.05) − 1 = 2.0%. At 12% equity return and 6% inflation: real return = (1.12/1.06) − 1 = 5.66%. Equity significantly outperforms inflation over long periods; PPF barely does. For long-term wealth creation, any instrument that does not beat inflation in real terms is losing purchasing power despite appearing to compound."
+    },
+    {
+      "q": "Does compounding work better when starting early or investing more?",
+      "a": "Starting early almost always wins. ₹5L at 12% starting at age 25 grows to ₹2.64 crore by age 60 (35 years). ₹10L starting at age 35 grows to ₹1.70 crore by age 60 (25 years). Despite investing twice as much, starting 10 years later produces 35% less corpus. The extra ₹5L invested at 35 cannot compensate for 10 years of compounding on the original ₹5L. The Rule of 72 quantifies this: each 6-year delay at 12% means missing one doubling of every rupee invested. Starting at 35 instead of 25 = forfeiting one doubling of the entire principal."
+    },
+    {
+      "q": "What is the compound interest on ₹1 lakh at 12% for 10 years?",
+      "a": "Using A = P × (1 + r)^t (annual compounding): A = 1,00,000 × (1.12)^10 = 1,00,000 × 3.1058 = ₹3,10,585. Compound interest earned: ₹2,10,585. For quarterly compounding at 12% (EAR = 12.55%): A = 1,00,000 × (1 + 0.12/4)^40 = 1,00,000 × (1.03)^40 = 1,00,000 × 3.2620 = ₹3,26,204 — ₹15,619 more from quarterly compounding on the same nominal 12% rate over 10 years."
     }
   ],
-  "examples": [
+  "howToSteps": [
     {
-      "heading": "₹5 lakh investment at 10% for 10 years",
-      "text": "₹5 lakh invested at 10% p.a. grows to ₹12.97 lakh in 10 years through compounding. Simple interest would yield only ₹10 lakh — demonstrating the power of compounding over long periods."
+      "name": "Enter Investment Amount",
+      "text": "Enter the one-time principal. This calculator models lumpsum compound growth at a constant annual rate — for regular monthly investments, use the SIP Calculator instead."
     },
     {
-      "heading": "₹1 lakh at 12% CAGR over 20 years",
-      "text": "₹1 lakh growing at 12% p.a. becomes ₹9.65 lakh in 20 years. Even a 2% difference (at 14%) produces ₹13.74 lakh — demonstrating how small return differences compound dramatically."
+      "name": "Set Expected Return",
+      "text": "Enter the annual return rate. Use 7.1% for PPF, 6.5–8% for bank FDs (verify current rates), or 10–12% for equity mutual fund projections. The rate makes the single largest difference to final corpus."
+    },
+    {
+      "name": "Choose Tenure",
+      "text": "Set the investment period. Compound interest rewards patience — the wealth growth is not linear. Compare the corpus at 10 years vs 20 years to see the acceleration in the second decade."
+    },
+    {
+      "name": "Compare Instruments",
+      "text": "Run the same ₹P at different rates to compare FD vs PPF vs equity on a pre-tax basis. Then use the FD Calculator and PPF Calculator for post-tax comparisons at each instrument's actual rate."
     }
   ],
   "related": [
     {
       "title": "FD Calculator",
-      "url": "/india/fd-calculator/"
+      "url": "/india/fd-calculator/",
+      "desc": "Bank FD compound interest with TDS and post-tax return"
     },
     {
-      "title": "SIP Calculator",
-      "url": "/india/sip-calculator/"
+      "title": "PPF Calculator",
+      "url": "/india/ppf-calculator/",
+      "desc": "PPF compound interest with EEE tax-free status"
     },
     {
       "title": "Lumpsum Calculator",
-      "url": "/india/lumpsum-calculator/"
+      "url": "/india/lumpsum-calculator/",
+      "desc": "Equity mutual fund compound growth with LTCG tax model"
     }
   ]
 }
