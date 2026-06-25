@@ -1,18 +1,18 @@
 {
   "id": "scss-calculator",
   "schema": {
-    "appName": "SCSS Calculator — Senior Citizen Savings Scheme",
-    "appDescription": "Calculate SCSS quarterly interest income and maturity value. Current rate 8.2% p.a. Available for senior citizens aged 60+. Maximum ₹30 lakh deposit."
+    "appName": "SCSS Calculator \u2014 Senior Citizen Savings Scheme",
+    "appDescription": "Calculate SCSS quarterly interest income and maturity value. Current rate 8.2% p.a. Available for senior citizens aged 60+. Maximum \u20b930 lakh deposit."
   },
   "inputs": [
     {
       "id": "scss-principal",
-      "label": "Deposit Amount (₹)",
+      "label": "Deposit Amount (\u20b9)",
       "min": 1000,
       "max": 30000000,
       "step": 1000,
       "value": 1500000,
-      "hint": "Maximum ₹30 lakh (per individual)"
+      "hint": "Maximum \u20b930 lakh (per individual)"
     },
     {
       "id": "scss-rate",
@@ -59,7 +59,7 @@
     },
     {
       "name": "View instant results",
-      "text": "Results update in real time as you type — no submit button needed."
+      "text": "Results update in real time as you type \u2014 no submit button needed."
     },
     {
       "name": "Explore breakdown",
@@ -73,15 +73,15 @@
   "faq": [
     {
       "q": "Who can open a Senior Citizen Savings Scheme (SCSS) account?",
-      "a": "SCSS is available for Indian citizens aged 60 and above. VRS/superannuation retirees aged 55–60 can open within 1 month of receiving retirement benefits. Defence retirees aged 50+ are eligible. NRIs and HUFs are not eligible."
+      "a": "SCSS is available for Indian citizens aged 60 and above. VRS/superannuation retirees aged 55\u201360 can open within 1 month of receiving retirement benefits. Defence retirees aged 50+ are eligible. NRIs and HUFs are not eligible."
     },
     {
       "q": "Is SCSS interest taxable?",
-      "a": "Yes. SCSS interest is fully taxable as 'income from other sources'. TDS is deducted at 10% if annual interest exceeds ₹50,000 (senior citizen threshold). You can submit Form 15H if total income is below the taxable limit. SCSS does not offer capital gains benefits."
+      "a": "Yes. SCSS interest is fully taxable as 'income from other sources'. TDS is deducted at 10% if annual interest exceeds \u20b950,000 (senior citizen threshold). You can submit Form 15H if total income is below the taxable limit. SCSS does not offer capital gains benefits."
     },
     {
       "q": "Can SCSS be extended after 5 years?",
-      "a": "Yes. SCSS can be extended by 3 years after 5-year maturity by applying within 1 year of maturity. The extended period earns the interest rate applicable on the date of extension. SCSS qualifies for 80C deduction (within ₹1.5 lakh limit)."
+      "a": "Yes. SCSS can be extended by 3 years after 5-year maturity by applying within 1 year of maturity. The extended period earns the interest rate applicable on the date of extension. SCSS qualifies for 80C deduction (within \u20b91.5 lakh limit)."
     },
     {
       "q": "Is the SCSS Calculator free?",
@@ -98,26 +98,18 @@
   ],
   "examples": [
     {
-      "heading": "₹15 lakh SCSS at 8.2% — quarterly income",
-      "text": "₹15 lakh in SCSS at 8.2% p.a. generates ₹30,750/quarter (₹1,23,000/year). Over 5 years, total interest = ₹6,15,000. This provides predictable quarterly income for retirement planning. TDS applies if interest exceeds ₹50,000/year."
+      "heading": "\u20b915 lakh SCSS at 8.2% \u2014 quarterly income",
+      "text": "\u20b915 lakh in SCSS at 8.2% p.a. generates \u20b930,750/quarter (\u20b91,23,000/year). Over 5 years, total interest = \u20b96,15,000. This provides predictable quarterly income for retirement planning. TDS applies if interest exceeds \u20b950,000/year."
     },
     {
       "heading": "Couple maximising SCSS deposits",
-      "text": "A retired couple can each deposit ₹30 lakh in SCSS (total ₹60 lakh). At 8.2%, combined quarterly payout = ₹1,23,000 (₹4,92,000/year). Each submit Form 15H if income below taxable limit to avoid TDS."
+      "text": "A retired couple can each deposit \u20b930 lakh in SCSS (total \u20b960 lakh). At 8.2%, combined quarterly payout = \u20b91,23,000 (\u20b94,92,000/year). Each submit Form 15H if income below taxable limit to avoid TDS."
     }
   ],
   "related": [
     {
-      "title": "Post Office MIS Calculator",
-      "url": "/india/post-office-mis-calculator/"
-    },
-    {
       "title": "FD Calculator",
       "url": "/india/fd-calculator/"
-    },
-    {
-      "title": "Annuity Calculator",
-      "url": "/india/annuity-calculator/"
     }
   ]
 }

@@ -7,7 +7,7 @@
   "inputs": [
     {
       "id": "pi-corpus",
-      "label": "Retirement Corpus (₹)",
+      "label": "Retirement Corpus (\u20b9)",
       "min": 1000000,
       "max": 500000000,
       "step": 100000,
@@ -69,8 +69,8 @@
   ],
   "faq": [
     {
-      "q": "How much monthly pension can ₹1 crore corpus give?",
-      "a": "₹1 crore corpus at 7% return for 25 years: sustainable monthly withdrawal is approximately ₹70,000/month. If you only need ₹50,000/month, the corpus can last indefinitely (corpus earns more than withdrawal). ₹70,000/month at 7% for 25 years depletes the corpus at exactly 25 years."
+      "q": "How much monthly pension can \u20b91 crore corpus give?",
+      "a": "\u20b91 crore corpus at 7% return for 25 years: sustainable monthly withdrawal is approximately \u20b970,000/month. If you only need \u20b950,000/month, the corpus can last indefinitely (corpus earns more than withdrawal). \u20b970,000/month at 7% for 25 years depletes the corpus at exactly 25 years."
     },
     {
       "q": "What is the difference between annuity and SWP for pension?",
@@ -78,7 +78,7 @@
     },
     {
       "q": "Should I use debt funds or equity for post-retirement portfolio?",
-      "a": "A common allocation: 40% equity, 60% debt at retirement, shifting to 30/70 by age 70. Equity provides growth to beat inflation; debt provides stability for near-term withdrawals. Bucket strategy: 1–2 years expenses in liquid/ultra-short funds, 3–7 years in debt funds, rest in equity."
+      "a": "A common allocation: 40% equity, 60% debt at retirement, shifting to 30/70 by age 70. Equity provides growth to beat inflation; debt provides stability for near-term withdrawals. Bucket strategy: 1\u20132 years expenses in liquid/ultra-short funds, 3\u20137 years in debt funds, rest in equity."
     },
     {
       "q": "Is this calculator free?",
@@ -95,22 +95,18 @@
   ],
   "examples": [
     {
-      "heading": "₹1 crore corpus — 25 years at 7%",
-      "text": "Monthly withdrawal: ₹70,645. Annual: ₹8.48 lakh. Total withdrawn over 25 years: ₹2.12 crore. Total returns earned from corpus: ₹1.12 crore. The corpus grows with returns but depletes through withdrawals, reaching zero at exactly year 25."
+      "heading": "\u20b91 crore corpus \u2014 25 years at 7%",
+      "text": "Monthly withdrawal: \u20b970,645. Annual: \u20b98.48 lakh. Total withdrawn over 25 years: \u20b92.12 crore. Total returns earned from corpus: \u20b91.12 crore. The corpus grows with returns but depletes through withdrawals, reaching zero at exactly year 25."
     },
     {
-      "heading": "₹2 crore corpus — sustainable forever",
-      "text": "₹2 crore at 7%: monthly income ≈ ₹1.17 lakh. Annual return ≈ ₹14 lakh, spending ≈ ₹14 lakh — corpus stays intact. This is the 'dividend' or perpetual model where you live off investment returns without depleting principal."
+      "heading": "\u20b92 crore corpus \u2014 sustainable forever",
+      "text": "\u20b92 crore at 7%: monthly income \u2248 \u20b91.17 lakh. Annual return \u2248 \u20b914 lakh, spending \u2248 \u20b914 lakh \u2014 corpus stays intact. This is the 'dividend' or perpetual model where you live off investment returns without depleting principal."
     }
   ],
   "related": [
     {
       "title": "SWP Calculator",
       "url": "/india/swp-calculator/"
-    },
-    {
-      "title": "Annuity Calculator",
-      "url": "/india/annuity-calculator/"
     },
     {
       "title": "Retirement Corpus Calculator",

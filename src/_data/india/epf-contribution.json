@@ -2,12 +2,12 @@
   "id": "epf-contribution",
   "schema": {
     "appName": "EPF Contribution Breakup Calculator",
-    "appDescription": "Calculate monthly EPF and EPS contribution split between employee and employer. Understand where your 12% EPF goes — EPF vs EPS."
+    "appDescription": "Calculate monthly EPF and EPS contribution split between employee and employer. Understand where your 12% EPF goes \u2014 EPF vs EPS."
   },
   "inputs": [
     {
       "id": "epfc-basic",
-      "label": "Monthly Basic + DA (₹)",
+      "label": "Monthly Basic + DA (\u20b9)",
       "min": 5000,
       "max": 500000,
       "step": 1000,
@@ -53,7 +53,7 @@
     },
     {
       "name": "View instant results",
-      "text": "Results update in real time — no submit button needed."
+      "text": "Results update in real time \u2014 no submit button needed."
     },
     {
       "name": "Explore breakdown",
@@ -67,7 +67,7 @@
   "faq": [
     {
       "q": "What is the difference between EPF and EPS?",
-      "a": "EPF (Employee Provident Fund): both employee 12% and employer 3.67% go here — you get this with interest on retirement/resignation. EPS (Employee Pension Scheme): employer's 8.33% (capped at ₹1,250/month) goes to EPS — this funds a monthly pension after age 58 with 10+ years of service. You don't receive EPS corpus directly."
+      "a": "EPF (Employee Provident Fund): both employee 12% and employer 3.67% go here \u2014 you get this with interest on retirement/resignation. EPS (Employee Pension Scheme): employer's 8.33% (capped at \u20b91,250/month) goes to EPS \u2014 this funds a monthly pension after age 58 with 10+ years of service. You don't receive EPS corpus directly."
     },
     {
       "q": "What is VPF and should I invest in it?",
@@ -75,7 +75,7 @@
     },
     {
       "q": "Is EPF interest fully tax-free?",
-      "a": "EPF interest is tax-free for employee contributions up to ₹2.5 lakh/year (₹5 lakh for government employees). Interest on contributions above this threshold is taxable. Employer contributions up to 12% of basic are tax-free. Withdrawal after 5 years of continuous service is tax-free."
+      "a": "EPF interest is tax-free for employee contributions up to \u20b92.5 lakh/year (\u20b95 lakh for government employees). Interest on contributions above this threshold is taxable. Employer contributions up to 12% of basic are tax-free. Withdrawal after 5 years of continuous service is tax-free."
     },
     {
       "q": "Is the EPF Contribution Breakup Calculator free?",
@@ -92,22 +92,18 @@
   ],
   "examples": [
     {
-      "heading": "₹30,000 basic — EPF/EPS split",
-      "text": "Monthly contributions: Employee PF = ₹3,600 (12%). Employer: EPF = ₹1,101 (3.67%), EPS = ₹1,250 (capped). Total to EPF account = ₹4,701. Total monthly EPF-related deduction = ₹7,201 from combined CTC. EPS ₹1,250 is separate — not in your EPF account."
+      "heading": "\u20b930,000 basic \u2014 EPF/EPS split",
+      "text": "Monthly contributions: Employee PF = \u20b93,600 (12%). Employer: EPF = \u20b91,101 (3.67%), EPS = \u20b91,250 (capped). Total to EPF account = \u20b94,701. Total monthly EPF-related deduction = \u20b97,201 from combined CTC. EPS \u20b91,250 is separate \u2014 not in your EPF account."
     },
     {
-      "heading": "High earner — above ₹15,000 basic",
-      "text": "For ₹1 lakh basic: Employee PF = ₹12,000. Employer EPS = ₹1,250 (capped). Employer EPF = ₹12,000 × 3.67% = ₹4,404. Total EPF account credit = ₹16,404/month. Higher earners benefit most from EPF as tax-free compounding grows significantly."
+      "heading": "High earner \u2014 above \u20b915,000 basic",
+      "text": "For \u20b91 lakh basic: Employee PF = \u20b912,000. Employer EPS = \u20b91,250 (capped). Employer EPF = \u20b912,000 \u00d7 3.67% = \u20b94,404. Total EPF account credit = \u20b916,404/month. Higher earners benefit most from EPF as tax-free compounding grows significantly."
     }
   ],
   "related": [
     {
       "title": "EPF Calculator",
       "url": "/india/epf-calculator/"
-    },
-    {
-      "title": "EPS Pension Calculator",
-      "url": "/india/eps-pension-calculator/"
     },
     {
       "title": "CTC to In-Hand Calculator",

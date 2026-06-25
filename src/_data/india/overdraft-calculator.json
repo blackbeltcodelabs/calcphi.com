@@ -7,7 +7,7 @@
   "inputs": [
     {
       "id": "od-limit",
-      "label": "Overdraft Limit (₹)",
+      "label": "Overdraft Limit (\u20b9)",
       "min": 10000,
       "max": 100000000,
       "step": 10000,
@@ -15,7 +15,7 @@
     },
     {
       "id": "od-used",
-      "label": "Amount Utilised (₹)",
+      "label": "Amount Utilised (\u20b9)",
       "min": 0,
       "max": 100000000,
       "step": 10000,
@@ -64,7 +64,7 @@
     },
     {
       "name": "View instant results",
-      "text": "Results update in real time as you type — no submit button needed."
+      "text": "Results update in real time as you type \u2014 no submit button needed."
     },
     {
       "name": "Explore breakdown",
@@ -78,15 +78,15 @@
   "faq": [
     {
       "q": "What is a bank overdraft facility?",
-      "a": "An overdraft (OD) allows you to withdraw more than your account balance up to an approved limit. Interest is charged only on the amount actually used, not the entire limit — similar to a credit card but with lower rates. Common types: OD against FD (1–2% above FD rate), OD against property, and salary OD."
+      "a": "An overdraft (OD) allows you to withdraw more than your account balance up to an approved limit. Interest is charged only on the amount actually used, not the entire limit \u2014 similar to a credit card but with lower rates. Common types: OD against FD (1\u20132% above FD rate), OD against property, and salary OD."
     },
     {
       "q": "What is overdraft against FD interest rate?",
-      "a": "OD against FD typically costs 1–2% above the FD interest rate. If your FD earns 7%, OD costs 8–9% p.a. This is cheaper than personal loans (10–18%) and credit cards (24–36%). The FD continues to earn interest while you use the OD facility."
+      "a": "OD against FD typically costs 1\u20132% above the FD interest rate. If your FD earns 7%, OD costs 8\u20139% p.a. This is cheaper than personal loans (10\u201318%) and credit cards (24\u201336%). The FD continues to earn interest while you use the OD facility."
     },
     {
       "q": "How is overdraft different from a term loan?",
-      "a": "Term loan: fixed disbursement, EMI-based repayment, interest on full amount. Overdraft: flexible drawdown, pay only for days used, interest only on outstanding amount. OD is ideal for working capital — businesses and self-employed prefer OD for cash flow management."
+      "a": "Term loan: fixed disbursement, EMI-based repayment, interest on full amount. Overdraft: flexible drawdown, pay only for days used, interest only on outstanding amount. OD is ideal for working capital \u2014 businesses and self-employed prefer OD for cash flow management."
     },
     {
       "q": "Is the Overdraft Calculator free?",
@@ -103,12 +103,12 @@
   ],
   "examples": [
     {
-      "heading": "OD against FD — 30 days utilisation",
-      "text": "₹5 lakh OD against FD at 9.5% p.a. used for 30 days: interest = 5,00,000 × 9.5% × 30/365 = ₹3,904. FD earning 7% on ₹5 lakh = ₹5,753/month. Net cost = ₹3,904 interest minus ₹5,753 FD income = net gain of ₹1,849. OD against FD is the cheapest credit option."
+      "heading": "OD against FD \u2014 30 days utilisation",
+      "text": "\u20b95 lakh OD against FD at 9.5% p.a. used for 30 days: interest = 5,00,000 \u00d7 9.5% \u00d7 30/365 = \u20b93,904. FD earning 7% on \u20b95 lakh = \u20b95,753/month. Net cost = \u20b93,904 interest minus \u20b95,753 FD income = net gain of \u20b91,849. OD against FD is the cheapest credit option."
     },
     {
       "heading": "Salary OD for bridging month-end gap",
-      "text": "Bank salary OD of ₹50,000 at 12% p.a. used for 15 days: interest = 50,000 × 12% × 15/365 = ₹247. Far cheaper than credit card interest (₹50,000 at 36% for 15 days = ₹740)."
+      "text": "Bank salary OD of \u20b950,000 at 12% p.a. used for 15 days: interest = 50,000 \u00d7 12% \u00d7 15/365 = \u20b9247. Far cheaper than credit card interest (\u20b950,000 at 36% for 15 days = \u20b9740)."
     }
   ],
   "related": [
@@ -119,10 +119,6 @@
     {
       "title": "Loan Eligibility Calculator",
       "url": "/india/loan-eligibility-calculator/"
-    },
-    {
-      "title": "Credit Card EMI Calculator",
-      "url": "/india/credit-card-emi-calculator/"
     }
   ]
 }

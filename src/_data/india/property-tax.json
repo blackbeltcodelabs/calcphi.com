@@ -2,7 +2,7 @@
   "id": "property-tax",
   "schema": {
     "appName": "Property Tax Calculator India",
-    "appDescription": "Calculate annual property tax for residential and commercial properties. Municipal property tax rates vary by city — Delhi, Mumbai, Bangalore, Chennai, Hyderabad covered."
+    "appDescription": "Calculate annual property tax for residential and commercial properties. Municipal property tax rates vary by city \u2014 Delhi, Mumbai, Bangalore, Chennai, Hyderabad covered."
   },
   "inputs": [
     {
@@ -15,7 +15,7 @@
     },
     {
       "id": "ptax-rate-sqft",
-      "label": "Annual Value per Sq Ft (₹)",
+      "label": "Annual Value per Sq Ft (\u20b9)",
       "min": 1,
       "max": 200,
       "step": 1,
@@ -41,7 +41,7 @@
         },
         {
           "value": "chennai",
-          "label": "Chennai (0.5–1% market value)"
+          "label": "Chennai (0.5\u20131% market value)"
         },
         {
           "value": "hyderabad",
@@ -94,7 +94,7 @@
   "faq": [
     {
       "q": "How is property tax calculated in India?",
-      "a": "Property tax = Annual Value × Tax Rate. Annual value is set by the municipal authority based on: area, location (zone), property type, and age. In Delhi: Annual Value = covered area × monthly rent determined by MCD × 12. Tax rate: 15% for Category A areas. Self-assessment (SAF) is mandatory for property owners."
+      "a": "Property tax = Annual Value \u00d7 Tax Rate. Annual value is set by the municipal authority based on: area, location (zone), property type, and age. In Delhi: Annual Value = covered area \u00d7 monthly rent determined by MCD \u00d7 12. Tax rate: 15% for Category A areas. Self-assessment (SAF) is mandatory for property owners."
     },
     {
       "q": "Is property tax deductible from income tax?",
@@ -102,7 +102,7 @@
     },
     {
       "q": "What happens if I don't pay property tax?",
-      "a": "Non-payment attracts interest (typically 1.5–2% per month) and penalties. Continued default can result in sealing/attachment of property. Municipal authorities can also cut off water/power connections. Property tax records are important for sale — clear dues certificates are required at registration."
+      "a": "Non-payment attracts interest (typically 1.5\u20132% per month) and penalties. Continued default can result in sealing/attachment of property. Municipal authorities can also cut off water/power connections. Property tax records are important for sale \u2014 clear dues certificates are required at registration."
     },
     {
       "q": "Is this calculator free?",
@@ -120,11 +120,11 @@
   "examples": [
     {
       "heading": "1,000 sq ft flat in Bangalore",
-      "text": "BBMP property tax for 1,000 sq ft residential flat (Zone C, tenanted): Annual value ≈ ₹30,000–₹50,000. Tax at 22.5% = ₹6,750–₹11,250/year. Owners can pay online via BBMP portal. 5% discount for paying in April."
+      "text": "BBMP property tax for 1,000 sq ft residential flat (Zone C, tenanted): Annual value \u2248 \u20b930,000\u2013\u20b950,000. Tax at 22.5% = \u20b96,750\u2013\u20b911,250/year. Owners can pay online via BBMP portal. 5% discount for paying in April."
     },
     {
       "heading": "Self-occupied vs rented property tax",
-      "text": "Property tax is the same whether self-occupied or rented — it depends on area and zone, not occupancy status. However, for income tax purposes, rental income is taxable while self-occupied property has nil annual value."
+      "text": "Property tax is the same whether self-occupied or rented \u2014 it depends on area and zone, not occupancy status. However, for income tax purposes, rental income is taxable while self-occupied property has nil annual value."
     }
   ],
   "related": [
@@ -135,10 +135,6 @@
     {
       "title": "Property Registration Calculator",
       "url": "/india/property-registration-calculator/"
-    },
-    {
-      "title": "Rental Yield Calculator",
-      "url": "/india/rental-yield-calculator/"
     }
   ]
 }

@@ -7,7 +7,7 @@
   "inputs": [
     {
       "id": "sa-balance",
-      "label": "Account Balance (₹)",
+      "label": "Account Balance (\u20b9)",
       "min": 1000,
       "max": 100000000,
       "step": 1000,
@@ -71,15 +71,15 @@
   "faq": [
     {
       "q": "What is the savings account interest rate in India 2026?",
-      "a": "Major banks: SBI 3.0%, HDFC Bank 3.5%, ICICI Bank 3.5%, Axis Bank 3.5%. Small finance banks: AU Small Finance 7%, Unity Small Finance 6%, Equitas 5.5%. Interest is calculated daily on closing balance and credited quarterly. TDS applies if interest exceeds ₹10,000/year."
+      "a": "Major banks: SBI 3.0%, HDFC Bank 3.5%, ICICI Bank 3.5%, Axis Bank 3.5%. Small finance banks: AU Small Finance 7%, Unity Small Finance 6%, Equitas 5.5%. Interest is calculated daily on closing balance and credited quarterly. TDS applies if interest exceeds \u20b910,000/year."
     },
     {
       "q": "How is savings account interest calculated?",
-      "a": "Interest = Daily Closing Balance × Annual Rate ÷ 365. Interest is calculated daily and credited quarterly (Jan, Apr, Jul, Oct). You earn interest on the daily balance, so withdrawals reduce interest. Maintain higher balance on month-end for better interest calculations in some banks."
+      "a": "Interest = Daily Closing Balance \u00d7 Annual Rate \u00f7 365. Interest is calculated daily and credited quarterly (Jan, Apr, Jul, Oct). You earn interest on the daily balance, so withdrawals reduce interest. Maintain higher balance on month-end for better interest calculations in some banks."
     },
     {
       "q": "Should I keep large amounts in savings account?",
-      "a": "No. Savings accounts pay 3.5–7% while FDs offer 7–8% and liquid funds 7–8.5% with daily liquidity. For idle money above ₹1 lakh: sweep-in FD (automatically sweeps to FD at threshold), liquid funds (redeemable T+1, similar returns to savings for high balances), or ultra-short-term debt funds."
+      "a": "No. Savings accounts pay 3.5\u20137% while FDs offer 7\u20138% and liquid funds 7\u20138.5% with daily liquidity. For idle money above \u20b91 lakh: sweep-in FD (automatically sweeps to FD at threshold), liquid funds (redeemable T+1, similar returns to savings for high balances), or ultra-short-term debt funds."
     },
     {
       "q": "Is this calculator free?",
@@ -96,12 +96,12 @@
   ],
   "examples": [
     {
-      "heading": "₹5 lakh in SBI savings account for 12 months",
-      "text": "₹5 lakh at 3.0% for 12 months: monthly interest ₹1,250, annual ₹15,000. Compared with SBI FD at 6.8%: annual interest ₹34,000. Keeping ₹5 lakh in savings instead of FD costs ₹19,000/year in forgone interest."
+      "heading": "\u20b95 lakh in SBI savings account for 12 months",
+      "text": "\u20b95 lakh at 3.0% for 12 months: monthly interest \u20b91,250, annual \u20b915,000. Compared with SBI FD at 6.8%: annual interest \u20b934,000. Keeping \u20b95 lakh in savings instead of FD costs \u20b919,000/year in forgone interest."
     },
     {
-      "heading": "AU Small Finance Bank — 7% savings account",
-      "text": "₹5 lakh at 7% (AU Small Finance): annual interest ₹35,000. Nearly same as FD but with instant liquidity. However, deposits are insured only up to ₹5 lakh per bank under DICGC — important if balance approaches this limit."
+      "heading": "AU Small Finance Bank \u2014 7% savings account",
+      "text": "\u20b95 lakh at 7% (AU Small Finance): annual interest \u20b935,000. Nearly same as FD but with instant liquidity. However, deposits are insured only up to \u20b95 lakh per bank under DICGC \u2014 important if balance approaches this limit."
     }
   ],
   "related": [
@@ -112,10 +112,6 @@
     {
       "title": "RD Calculator",
       "url": "/india/rd-calculator/"
-    },
-    {
-      "title": "FD vs RD Calculator",
-      "url": "/india/fd-vs-rd-calculator/"
     }
   ]
 }

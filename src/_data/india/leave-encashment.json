@@ -7,7 +7,7 @@
   "inputs": [
     {
       "id": "le-basic",
-      "label": "Monthly Basic Salary (₹)",
+      "label": "Monthly Basic Salary (\u20b9)",
       "min": 5000,
       "max": 500000,
       "step": 1000,
@@ -31,7 +31,7 @@
     },
     {
       "id": "le-tax-free",
-      "label": "Tax-Free Portion (up to ₹25 lakh at retirement)"
+      "label": "Tax-Free Portion (up to \u20b925 lakh at retirement)"
     },
     {
       "id": "le-taxable",
@@ -49,7 +49,7 @@
     },
     {
       "name": "View instant results",
-      "text": "Results update in real time — no submit button needed."
+      "text": "Results update in real time \u2014 no submit button needed."
     },
     {
       "name": "Explore breakdown",
@@ -63,11 +63,11 @@
   "faq": [
     {
       "q": "Is leave encashment taxable in India?",
-      "a": "Leave encashment during service: fully taxable. At retirement/resignation: government employees — full exemption. Private sector employees: exempt up to ₹25 lakh (revised from 2023) or leave salary × average monthly salary of last 10 months/30 × encashable leaves, whichever is less. Formula is complex — use this calculator."
+      "a": "Leave encashment during service: fully taxable. At retirement/resignation: government employees \u2014 full exemption. Private sector employees: exempt up to \u20b925 lakh (revised from 2023) or leave salary \u00d7 average monthly salary of last 10 months/30 \u00d7 encashable leaves, whichever is less. Formula is complex \u2014 use this calculator."
     },
     {
       "q": "How many leaves can be encashed in India?",
-      "a": "There is no universal cap on leaves carried forward or encashed — it depends on company policy. Central government employees can accumulate 300 days of earned leave. Private sector typically allows 30–60 days accumulation. Some companies offer encashment during service (during leave travel allowance cycle)."
+      "a": "There is no universal cap on leaves carried forward or encashed \u2014 it depends on company policy. Central government employees can accumulate 300 days of earned leave. Private sector typically allows 30\u201360 days accumulation. Some companies offer encashment during service (during leave travel allowance cycle)."
     },
     {
       "q": "Can I encash leaves while still employed?",
@@ -88,12 +88,12 @@
   ],
   "examples": [
     {
-      "heading": "30 days encashment at ₹50,000 basic",
-      "text": "Daily rate = 50,000 ÷ 26 = ₹1,923. Leave encashment for 30 days = ₹57,692. At retirement: exempt up to ₹25 lakh. For this example, full amount is tax-free. During service: ₹57,692 added to salary and taxed at slab rate."
+      "heading": "30 days encashment at \u20b950,000 basic",
+      "text": "Daily rate = 50,000 \u00f7 26 = \u20b91,923. Leave encashment for 30 days = \u20b957,692. At retirement: exempt up to \u20b925 lakh. For this example, full amount is tax-free. During service: \u20b957,692 added to salary and taxed at slab rate."
     },
     {
       "heading": "Retirement with 240 days accumulated leave",
-      "text": "For ₹1 lakh basic with 240 days leave at retirement: encashment = 240 × (1,00,000/26) = ₹9,23,077. Below ₹25 lakh exemption — fully tax-free. At the 30% slab, this represents ₹2.88 lakh in tax savings versus receiving it as salary."
+      "text": "For \u20b91 lakh basic with 240 days leave at retirement: encashment = 240 \u00d7 (1,00,000/26) = \u20b99,23,077. Below \u20b925 lakh exemption \u2014 fully tax-free. At the 30% slab, this represents \u20b92.88 lakh in tax savings versus receiving it as salary."
     }
   ],
   "related": [
@@ -104,10 +104,6 @@
     {
       "title": "EPF Calculator",
       "url": "/india/epf-calculator/"
-    },
-    {
-      "title": "VRS Calculator",
-      "url": "/india/vrs-calculator/"
     }
   ]
 }

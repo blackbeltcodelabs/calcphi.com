@@ -7,7 +7,7 @@
   "inputs": [
     {
       "id": "le-income",
-      "label": "Net Monthly Income (₹)",
+      "label": "Net Monthly Income (\u20b9)",
       "min": 10000,
       "max": 1000000,
       "step": 1000,
@@ -16,7 +16,7 @@
     },
     {
       "id": "le-existing",
-      "label": "Existing Monthly EMIs (₹)",
+      "label": "Existing Monthly EMIs (\u20b9)",
       "min": 0,
       "max": 500000,
       "step": 1000,
@@ -62,7 +62,7 @@
     },
     {
       "name": "View instant results",
-      "text": "Results update in real time as you type — no submit button needed."
+      "text": "Results update in real time as you type \u2014 no submit button needed."
     },
     {
       "name": "Explore breakdown",
@@ -76,11 +76,11 @@
   "faq": [
     {
       "q": "How do banks calculate loan eligibility?",
-      "a": "Banks use FOIR (Fixed Obligation to Income Ratio) — typically 40–50% of net income. If your net salary is ₹80,000, you can have total EMIs (existing + new) of ₹32,000–₹40,000. The remaining EMI capacity determines the maximum loan. Credit score, employer category, and age also affect final eligibility."
+      "a": "Banks use FOIR (Fixed Obligation to Income Ratio) \u2014 typically 40\u201350% of net income. If your net salary is \u20b980,000, you can have total EMIs (existing + new) of \u20b932,000\u2013\u20b940,000. The remaining EMI capacity determines the maximum loan. Credit score, employer category, and age also affect final eligibility."
     },
     {
       "q": "What FOIR do banks use for home loans?",
-      "a": "Most banks allow FOIR up to 50% for home loans with good credit scores. SBI uses 50% FOIR, HDFC 50%, ICICI up to 55% for high-income applicants. For personal loans, FOIR is typically capped at 40–45%."
+      "a": "Most banks allow FOIR up to 50% for home loans with good credit scores. SBI uses 50% FOIR, HDFC 50%, ICICI up to 55% for high-income applicants. For personal loans, FOIR is typically capped at 40\u201345%."
     },
     {
       "q": "How can I increase my loan eligibility?",
@@ -101,12 +101,12 @@
   ],
   "examples": [
     {
-      "heading": "₹80,000 net salary — home loan eligibility",
-      "text": "Net income ₹80,000, existing EMI ₹10,000. Available EMI capacity at 50% FOIR = ₹40,000 − ₹10,000 = ₹30,000. At 8.5% for 20 years, max home loan = approximately ₹28.6 lakh."
+      "heading": "\u20b980,000 net salary \u2014 home loan eligibility",
+      "text": "Net income \u20b980,000, existing EMI \u20b910,000. Available EMI capacity at 50% FOIR = \u20b940,000 \u2212 \u20b910,000 = \u20b930,000. At 8.5% for 20 years, max home loan = approximately \u20b928.6 lakh."
     },
     {
       "heading": "Adding co-borrower to boost eligibility",
-      "text": "Adding a co-borrower with ₹60,000 net income raises combined income to ₹1.4 lakh. At 50% FOIR, combined EMI capacity = ₹70,000. This doubles the eligible loan amount to approximately ₹60 lakh."
+      "text": "Adding a co-borrower with \u20b960,000 net income raises combined income to \u20b91.4 lakh. At 50% FOIR, combined EMI capacity = \u20b970,000. This doubles the eligible loan amount to approximately \u20b960 lakh."
     }
   ],
   "related": [
@@ -117,10 +117,6 @@
     {
       "title": "Loan Prepayment Calculator",
       "url": "/india/loan-prepayment-calculator/"
-    },
-    {
-      "title": "Home Affordability Calculator",
-      "url": "/india/home-affordability-calculator/"
     }
   ]
 }

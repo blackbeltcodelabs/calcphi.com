@@ -1,13 +1,13 @@
 {
   "id": "vrs-calculator",
   "schema": {
-    "appName": "VRS Calculator — Voluntary Retirement Scheme",
-    "appDescription": "Calculate VRS compensation — ex-gratia, gratuity, and leave encashment. Know the tax implications and net payment under Section 10(10C) exemption."
+    "appName": "VRS Calculator \u2014 Voluntary Retirement Scheme",
+    "appDescription": "Calculate VRS compensation \u2014 ex-gratia, gratuity, and leave encashment. Know the tax implications and net payment under Section 10(10C) exemption."
   },
   "inputs": [
     {
       "id": "vrs-basic",
-      "label": "Monthly Basic + DA (₹)",
+      "label": "Monthly Basic + DA (\u20b9)",
       "min": 5000,
       "max": 500000,
       "step": 1000,
@@ -68,7 +68,7 @@
     },
     {
       "name": "View instant results",
-      "text": "Results update in real time — no submit button needed."
+      "text": "Results update in real time \u2014 no submit button needed."
     },
     {
       "name": "Explore breakdown",
@@ -82,15 +82,15 @@
   "faq": [
     {
       "q": "What is VRS ex-gratia and how is it calculated?",
-      "a": "VRS ex-gratia = lower of: (a) 3 months' salary for each completed year of service, or (b) salary × remaining months of service. Formula A for 20 years: 3 × monthly salary × 20 = 60 months' salary. Formula B: salary × months remaining to 60. The lower of the two is the VRS payment."
+      "a": "VRS ex-gratia = lower of: (a) 3 months' salary for each completed year of service, or (b) salary \u00d7 remaining months of service. Formula A for 20 years: 3 \u00d7 monthly salary \u00d7 20 = 60 months' salary. Formula B: salary \u00d7 months remaining to 60. The lower of the two is the VRS payment."
     },
     {
       "q": "Is VRS compensation taxable?",
-      "a": "VRS compensation is exempt from tax under Section 10(10C) up to ₹5 lakh (public sector) or as per Central Government scheme for other employees. The ₹5 lakh VRS exemption is combined for all years — you can claim it only once in a lifetime."
+      "a": "VRS compensation is exempt from tax under Section 10(10C) up to \u20b95 lakh (public sector) or as per Central Government scheme for other employees. The \u20b95 lakh VRS exemption is combined for all years \u2014 you can claim it only once in a lifetime."
     },
     {
       "q": "Who is eligible for VRS in India?",
-      "a": "VRS is available to employees of central/state governments, PSUs, and companies with 50+ employees. Eligibility: completed 10 years of service OR attained 40 years of age (either criterion). The employee must apply voluntarily — compulsory separation is different from VRS."
+      "a": "VRS is available to employees of central/state governments, PSUs, and companies with 50+ employees. Eligibility: completed 10 years of service OR attained 40 years of age (either criterion). The employee must apply voluntarily \u2014 compulsory separation is different from VRS."
     },
     {
       "q": "Is the VRS Calculator free?",
@@ -107,22 +107,18 @@
   ],
   "examples": [
     {
-      "heading": "₹80,000 basic, 20 years service, 10 years remaining",
-      "text": "VRS Formula A: 3 × 80,000 × 20 = ₹48 lakh. Formula B: 80,000 × 120 months remaining = ₹96 lakh. Ex-gratia = ₹48 lakh (lower). Plus gratuity ₹9.23 lakh + leave encashment ₹3.69 lakh. Total VRS package ≈ ₹60.9 lakh."
+      "heading": "\u20b980,000 basic, 20 years service, 10 years remaining",
+      "text": "VRS Formula A: 3 \u00d7 80,000 \u00d7 20 = \u20b948 lakh. Formula B: 80,000 \u00d7 120 months remaining = \u20b996 lakh. Ex-gratia = \u20b948 lakh (lower). Plus gratuity \u20b99.23 lakh + leave encashment \u20b93.69 lakh. Total VRS package \u2248 \u20b960.9 lakh."
     },
     {
       "heading": "Tax on VRS package",
-      "text": "₹48 lakh ex-gratia has ₹5 lakh exemption under 10(10C). Taxable VRS = ₹43 lakh. At 30% bracket: tax = ₹13.32 lakh. Careful planning — taking VRS in a year with no other income minimises tax. Some spread VRS across financial years."
+      "text": "\u20b948 lakh ex-gratia has \u20b95 lakh exemption under 10(10C). Taxable VRS = \u20b943 lakh. At 30% bracket: tax = \u20b913.32 lakh. Careful planning \u2014 taking VRS in a year with no other income minimises tax. Some spread VRS across financial years."
     }
   ],
   "related": [
     {
       "title": "Gratuity Calculator",
       "url": "/india/gratuity-calculator/"
-    },
-    {
-      "title": "Leave Encashment Calculator",
-      "url": "/india/leave-encashment-calculator/"
     },
     {
       "title": "Retirement Corpus Calculator",

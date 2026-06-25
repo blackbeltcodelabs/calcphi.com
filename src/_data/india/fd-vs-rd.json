@@ -7,7 +7,7 @@
   "inputs": [
     {
       "id": "fvrd-amount",
-      "label": "Investment Amount (₹)",
+      "label": "Investment Amount (\u20b9)",
       "min": 10000,
       "max": 100000000,
       "step": 1000,
@@ -70,16 +70,16 @@
   ],
   "faq": [
     {
-      "q": "Which gives better returns — FD or RD?",
+      "q": "Which gives better returns \u2014 FD or RD?",
       "a": "FD typically gives higher returns than RD for the same total amount and rate. This is because FD is invested as a lump sum from day one and earns interest on the full amount throughout. RD builds up monthly, so later instalments earn less time in the bank."
     },
     {
       "q": "When should I choose RD over FD?",
-      "a": "Choose RD when you don't have a lump sum but want to save regularly. RD builds financial discipline. Choose FD when you have idle funds sitting in savings account — FD earns more than savings account rate immediately. If you have both options, FD gives more interest."
+      "a": "Choose RD when you don't have a lump sum but want to save regularly. RD builds financial discipline. Choose FD when you have idle funds sitting in savings account \u2014 FD earns more than savings account rate immediately. If you have both options, FD gives more interest."
     },
     {
       "q": "Are FD and RD rates the same?",
-      "a": "Usually yes — banks offer the same interest rate for the same tenure on both FD and RD. However, some banks offer slightly different rates. Always compare before opening an account. Post office RD (6.7%) vs post office FD (6.9–7.5%) — post office TD rates are often better."
+      "a": "Usually yes \u2014 banks offer the same interest rate for the same tenure on both FD and RD. However, some banks offer slightly different rates. Always compare before opening an account. Post office RD (6.7%) vs post office FD (6.9\u20137.5%) \u2014 post office TD rates are often better."
     },
     {
       "q": "Is the FD vs RD Calculator free?",
@@ -96,12 +96,12 @@
   ],
   "examples": [
     {
-      "heading": "₹1.2 lakh total — FD vs RD over 3 years",
-      "text": "FD: ₹1.2 lakh at 7.1% for 3 years (quarterly compounding) = ₹1,47,773. Interest = ₹27,773. RD: ₹3,333/month at 7.1% for 3 years = ₹1,37,218. Interest = ₹17,218. FD wins by ₹10,555 — because the lump sum earns interest from day 1."
+      "heading": "\u20b91.2 lakh total \u2014 FD vs RD over 3 years",
+      "text": "FD: \u20b91.2 lakh at 7.1% for 3 years (quarterly compounding) = \u20b91,47,773. Interest = \u20b927,773. RD: \u20b93,333/month at 7.1% for 3 years = \u20b91,37,218. Interest = \u20b917,218. FD wins by \u20b910,555 \u2014 because the lump sum earns interest from day 1."
     },
     {
-      "heading": "New employee — which to start with?",
-      "text": "If starting salary with no savings: choose RD to build corpus. After 1 year, you have a lump sum — switch to FD or reinvest RD maturity into FD. This is a common strategy: RD for accumulation, FD for holding/growing existing corpus."
+      "heading": "New employee \u2014 which to start with?",
+      "text": "If starting salary with no savings: choose RD to build corpus. After 1 year, you have a lump sum \u2014 switch to FD or reinvest RD maturity into FD. This is a common strategy: RD for accumulation, FD for holding/growing existing corpus."
     }
   ],
   "related": [
@@ -112,10 +112,6 @@
     {
       "title": "RD Calculator",
       "url": "/india/rd-calculator/"
-    },
-    {
-      "title": "TDS on FD",
-      "url": "/india/tds-on-fd-calculator/"
     }
   ]
 }

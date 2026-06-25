@@ -1,18 +1,18 @@
 {
   "id": "ssy-calculator",
   "schema": {
-    "appName": "SSY Calculator — Sukanya Samriddhi Yojana",
+    "appName": "SSY Calculator \u2014 Sukanya Samriddhi Yojana",
     "appDescription": "Calculate Sukanya Samriddhi Yojana maturity value for your daughter. Current rate 8.2% p.a. tax-free. Deposits for 15 years, matures at 21 years."
   },
   "inputs": [
     {
       "id": "ssy-annual",
-      "label": "Annual Deposit (₹)",
+      "label": "Annual Deposit (\u20b9)",
       "min": 250,
       "max": 150000,
       "step": 1000,
       "value": 50000,
-      "hint": "₹250 minimum, ₹1.5 lakh maximum per year"
+      "hint": "\u20b9250 minimum, \u20b91.5 lakh maximum per year"
     },
     {
       "id": "ssy-rate",
@@ -55,7 +55,7 @@
     },
     {
       "name": "View instant results",
-      "text": "Results update in real time as you type — no submit button needed."
+      "text": "Results update in real time as you type \u2014 no submit button needed."
     },
     {
       "name": "Explore breakdown",
@@ -69,7 +69,7 @@
   "faq": [
     {
       "q": "What is Sukanya Samriddhi Yojana (SSY)?",
-      "a": "SSY is a government-backed small savings scheme for the girl child. It offers 8.2% p.a. (Q1 FY 2026-27) with EEE (Exempt-Exempt-Exempt) tax status — deposits qualify for 80C, interest is tax-free, and maturity is tax-free. Account matures when the girl turns 21. Deposits are made for 15 years."
+      "a": "SSY is a government-backed small savings scheme for the girl child. It offers 8.2% p.a. (Q1 FY 2026-27) with EEE (Exempt-Exempt-Exempt) tax status \u2014 deposits qualify for 80C, interest is tax-free, and maturity is tax-free. Account matures when the girl turns 21. Deposits are made for 15 years."
     },
     {
       "q": "When can SSY funds be withdrawn?",
@@ -94,12 +94,12 @@
   ],
   "examples": [
     {
-      "heading": "₹50,000/year deposit for daughter aged 3",
-      "text": "Depositing ₹50,000/year in SSY for a 3-year-old daughter at 8.2% p.a. for 15 years (total ₹7.5 lakh invested) yields approximately ₹22.7 lakh at maturity when she turns 21. Interest of ₹15.2 lakh is entirely tax-free."
+      "heading": "\u20b950,000/year deposit for daughter aged 3",
+      "text": "Depositing \u20b950,000/year in SSY for a 3-year-old daughter at 8.2% p.a. for 15 years (total \u20b97.5 lakh invested) yields approximately \u20b922.7 lakh at maturity when she turns 21. Interest of \u20b915.2 lakh is entirely tax-free."
     },
     {
-      "heading": "Maximum deposit — ₹1.5 lakh/year",
-      "text": "Maximum annual deposit of ₹1.5 lakh for 15 years (total ₹22.5 lakh) at 8.2% grows to approximately ₹68.1 lakh at maturity — all tax-free. This is among the best tax-free investment returns available."
+      "heading": "Maximum deposit \u2014 \u20b91.5 lakh/year",
+      "text": "Maximum annual deposit of \u20b91.5 lakh for 15 years (total \u20b922.5 lakh) at 8.2% grows to approximately \u20b968.1 lakh at maturity \u2014 all tax-free. This is among the best tax-free investment returns available."
     }
   ],
   "related": [
@@ -110,10 +110,6 @@
     {
       "title": "Section 80C Calculator",
       "url": "/india/section-80c-calculator/"
-    },
-    {
-      "title": "Child Education Plan",
-      "url": "/india/child-education-plan-calculator/"
     }
   ]
 }

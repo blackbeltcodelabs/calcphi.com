@@ -7,7 +7,7 @@
   "inputs": [
     {
       "id": "cc-amount",
-      "label": "Purchase Amount (₹)",
+      "label": "Purchase Amount (\u20b9)",
       "min": 5000,
       "max": 5000000,
       "step": 1000,
@@ -20,7 +20,7 @@
       "max": 48,
       "step": 1,
       "value": 24,
-      "hint": "Most cards charge 24–42% p.a."
+      "hint": "Most cards charge 24\u201342% p.a."
     },
     {
       "id": "cc-months",
@@ -57,7 +57,7 @@
     },
     {
       "name": "View instant results",
-      "text": "Results update in real time as you type — no submit button needed."
+      "text": "Results update in real time as you type \u2014 no submit button needed."
     },
     {
       "name": "Explore breakdown",
@@ -71,15 +71,15 @@
   "faq": [
     {
       "q": "What is the interest rate on credit card EMIs in India?",
-      "a": "Credit card EMI interest rates range from 12% to 36% p.a. depending on the bank and offer. 'No-cost EMI' schemes (available on electronics, appliances) waive interest but merchants often inflate the base price. Banks also charge processing fees (₹99–₹299) for EMI conversion."
+      "a": "Credit card EMI interest rates range from 12% to 36% p.a. depending on the bank and offer. 'No-cost EMI' schemes (available on electronics, appliances) waive interest but merchants often inflate the base price. Banks also charge processing fees (\u20b999\u2013\u20b9299) for EMI conversion."
     },
     {
       "q": "Is credit card EMI better than personal loan?",
-      "a": "Personal loan rates (10–18% p.a.) are typically lower than credit card EMI rates (18–36%). For purchases above ₹50,000 over 12+ months, a personal loan is usually cheaper. Credit card EMI is convenient but costlier — the ease comes at a price."
+      "a": "Personal loan rates (10\u201318% p.a.) are typically lower than credit card EMI rates (18\u201336%). For purchases above \u20b950,000 over 12+ months, a personal loan is usually cheaper. Credit card EMI is convenient but costlier \u2014 the ease comes at a price."
     },
     {
       "q": "What happens if I miss a credit card EMI?",
-      "a": "Missing a CC EMI reverts the entire outstanding balance to the card's full interest rate (typically 36–42% p.a.) and attracts late payment charges (₹500–₹1,300). Your CIBIL score drops significantly. Always keep auto-debit for minimum payment to avoid this."
+      "a": "Missing a CC EMI reverts the entire outstanding balance to the card's full interest rate (typically 36\u201342% p.a.) and attracts late payment charges (\u20b9500\u2013\u20b91,300). Your CIBIL score drops significantly. Always keep auto-debit for minimum payment to avoid this."
     },
     {
       "q": "Is the Credit Card EMI Calculator free?",
@@ -96,12 +96,12 @@
   ],
   "examples": [
     {
-      "heading": "₹50,000 laptop on 12-month credit card EMI at 24%",
-      "text": "₹50,000 at 24% for 12 months: EMI = ₹4,741. Total interest = ₹6,892. Total payment = ₹56,892. Effective rate is 24% p.a. Compare with HDFC personal loan at 12%: EMI = ₹4,440, total interest = ₹3,280 — saving ₹3,600."
+      "heading": "\u20b950,000 laptop on 12-month credit card EMI at 24%",
+      "text": "\u20b950,000 at 24% for 12 months: EMI = \u20b94,741. Total interest = \u20b96,892. Total payment = \u20b956,892. Effective rate is 24% p.a. Compare with HDFC personal loan at 12%: EMI = \u20b94,440, total interest = \u20b93,280 \u2014 saving \u20b93,600."
     },
     {
-      "heading": "No-cost EMI — is it really free?",
-      "text": "Flipkart/Amazon 'no-cost EMI' on ₹30,000 TV for 6 months: you pay ₹5,000/month with no stated interest. However, the product price on no-cost EMI is often ₹1,500–₹2,500 higher than cash price. Effective cost: 10–16% p.a. Not free — just structured differently."
+      "heading": "No-cost EMI \u2014 is it really free?",
+      "text": "Flipkart/Amazon 'no-cost EMI' on \u20b930,000 TV for 6 months: you pay \u20b95,000/month with no stated interest. However, the product price on no-cost EMI is often \u20b91,500\u2013\u20b92,500 higher than cash price. Effective cost: 10\u201316% p.a. Not free \u2014 just structured differently."
     }
   ],
   "related": [
@@ -112,10 +112,6 @@
     {
       "title": "Loan Eligibility Calculator",
       "url": "/india/loan-eligibility-calculator/"
-    },
-    {
-      "title": "Balance Transfer Calculator",
-      "url": "/india/balance-transfer-calculator/"
     }
   ]
 }

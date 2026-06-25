@@ -7,7 +7,7 @@
   "inputs": [
     {
       "id": "bt-loan",
-      "label": "Outstanding Loan Amount (₹)",
+      "label": "Outstanding Loan Amount (\u20b9)",
       "min": 100000,
       "max": 100000000,
       "step": 10000,
@@ -72,7 +72,7 @@
     },
     {
       "name": "View instant results",
-      "text": "Results update in real time as you type — no submit button needed."
+      "text": "Results update in real time as you type \u2014 no submit button needed."
     },
     {
       "name": "Explore breakdown",
@@ -86,7 +86,7 @@
   "faq": [
     {
       "q": "When does home loan balance transfer make financial sense?",
-      "a": "Balance transfer is beneficial when the interest rate difference is at least 0.5% and remaining tenure is more than 5 years. A 1% rate reduction on ₹50 lakh with 15 years remaining saves approximately ₹8–9 lakh in total interest. Check processing fees, legal charges, and foreclosure charges before switching."
+      "a": "Balance transfer is beneficial when the interest rate difference is at least 0.5% and remaining tenure is more than 5 years. A 1% rate reduction on \u20b950 lakh with 15 years remaining saves approximately \u20b98\u20139 lakh in total interest. Check processing fees, legal charges, and foreclosure charges before switching."
     },
     {
       "q": "What documents are needed for home loan balance transfer?",
@@ -94,7 +94,7 @@
     },
     {
       "q": "Does balance transfer affect CIBIL score?",
-      "a": "Yes, slightly. The new bank does a hard inquiry when processing the transfer application. This may temporarily reduce your CIBIL score by 5–10 points. However, regular EMI payments with the new bank will rebuild it quickly. Multiple balance transfer applications in a short period are a bigger red flag."
+      "a": "Yes, slightly. The new bank does a hard inquiry when processing the transfer application. This may temporarily reduce your CIBIL score by 5\u201310 points. However, regular EMI payments with the new bank will rebuild it quickly. Multiple balance transfer applications in a short period are a bigger red flag."
     },
     {
       "q": "Is the Balance Transfer Calculator free?",
@@ -111,12 +111,12 @@
   ],
   "examples": [
     {
-      "heading": "9.5% → 8.5% on ₹25 lakh, 15 years remaining",
-      "text": "Transferring ₹25 lakh from 9.5% to 8.5% with 15 years remaining reduces monthly EMI by ₹1,498. Total interest saved over 15 years: approximately ₹2.7 lakh. Processing fee of 0.5% (₹12,500) is recovered in 8 months."
+      "heading": "9.5% \u2192 8.5% on \u20b925 lakh, 15 years remaining",
+      "text": "Transferring \u20b925 lakh from 9.5% to 8.5% with 15 years remaining reduces monthly EMI by \u20b91,498. Total interest saved over 15 years: approximately \u20b92.7 lakh. Processing fee of 0.5% (\u20b912,500) is recovered in 8 months."
     },
     {
       "heading": "Effect of waiting too long to transfer",
-      "text": "The same balance transfer done after 10 years (only 5 years remaining) saves only ₹40,000 in interest — the processing fee alone may negate the benefit. Balance transfer works best in the first half of the loan tenure."
+      "text": "The same balance transfer done after 10 years (only 5 years remaining) saves only \u20b940,000 in interest \u2014 the processing fee alone may negate the benefit. Balance transfer works best in the first half of the loan tenure."
     }
   ],
   "related": [
@@ -127,10 +127,6 @@
     {
       "title": "Loan Prepayment Calculator",
       "url": "/india/loan-prepayment-calculator/"
-    },
-    {
-      "title": "Flat vs Reducing Rate Calculator",
-      "url": "/india/flat-vs-reducing-calculator/"
     }
   ]
 }

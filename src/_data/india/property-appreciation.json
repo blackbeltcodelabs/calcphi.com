@@ -7,7 +7,7 @@
   "inputs": [
     {
       "id": "ls-principal",
-      "label": "Purchase Price (₹)",
+      "label": "Purchase Price (\u20b9)",
       "min": 100000,
       "max": 500000000,
       "step": 100000,
@@ -67,7 +67,7 @@
   "faq": [
     {
       "q": "What is the average property appreciation rate in India?",
-      "a": "Historical real estate appreciation in India: metro cities (Mumbai, Bangalore, Delhi) 7–10% p.a. over 20 years. Tier 2 cities: 8–12% p.a. However, these are averages — specific locations can do much better or worse. Always factor in location micro-market trends."
+      "a": "Historical real estate appreciation in India: metro cities (Mumbai, Bangalore, Delhi) 7\u201310% p.a. over 20 years. Tier 2 cities: 8\u201312% p.a. However, these are averages \u2014 specific locations can do much better or worse. Always factor in location micro-market trends."
     },
     {
       "q": "How accurate is property appreciation forecasting?",
@@ -75,7 +75,7 @@
     },
     {
       "q": "Is capital gains tax applicable on property appreciation?",
-      "a": "Yes. If you sell the property, LTCG (held >2 years) is taxed at 12.5% (Budget 2024 rate, no indexation) or 20% with indexation — whichever is lower for transactions before July 2024. Reinvesting in a new home (Section 54) or specified bonds (Section 54EC) can defer/reduce LTCG."
+      "a": "Yes. If you sell the property, LTCG (held >2 years) is taxed at 12.5% (Budget 2024 rate, no indexation) or 20% with indexation \u2014 whichever is lower for transactions before July 2024. Reinvesting in a new home (Section 54) or specified bonds (Section 54EC) can defer/reduce LTCG."
     },
     {
       "q": "Is this calculator free?",
@@ -92,23 +92,15 @@
   ],
   "examples": [
     {
-      "heading": "₹50 lakh property at 7% appreciation for 10 years",
-      "text": "₹50 lakh at 7% p.a. for 10 years = ₹98.36 lakh. Capital gain: ₹48.36 lakh. LTCG tax at 12.5% = ₹6.05 lakh. Net gain after tax: ₹42.31 lakh. If reinvested in new property: tax deferred under Section 54."
+      "heading": "\u20b950 lakh property at 7% appreciation for 10 years",
+      "text": "\u20b950 lakh at 7% p.a. for 10 years = \u20b998.36 lakh. Capital gain: \u20b948.36 lakh. LTCG tax at 12.5% = \u20b96.05 lakh. Net gain after tax: \u20b942.31 lakh. If reinvested in new property: tax deferred under Section 54."
     },
     {
-      "heading": "Metro vs Tier 2 — appreciation difference",
-      "text": "₹50 lakh at 7% (metro, 10 years) = ₹98.36 lakh. At 10% (Tier 2, 10 years) = ₹129.69 lakh. Difference of ₹31.33 lakh. But liquidity and rental yield in Tier 2 cities may be lower — higher appreciation, lower rental income."
+      "heading": "Metro vs Tier 2 \u2014 appreciation difference",
+      "text": "\u20b950 lakh at 7% (metro, 10 years) = \u20b998.36 lakh. At 10% (Tier 2, 10 years) = \u20b9129.69 lakh. Difference of \u20b931.33 lakh. But liquidity and rental yield in Tier 2 cities may be lower \u2014 higher appreciation, lower rental income."
     }
   ],
   "related": [
-    {
-      "title": "Real Estate ROI Calculator",
-      "url": "/india/real-estate-roi-calculator/"
-    },
-    {
-      "title": "Rental Yield Calculator",
-      "url": "/india/rental-yield-calculator/"
-    },
     {
       "title": "Rent vs Buy Calculator",
       "url": "/india/rent-vs-buy-calculator/"

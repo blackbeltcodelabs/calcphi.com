@@ -1,13 +1,13 @@
 {
   "id": "annuity-calculator",
   "schema": {
-    "appName": "Annuity Calculator India — Pension Payout",
+    "appName": "Annuity Calculator India \u2014 Pension Payout",
     "appDescription": "Calculate monthly pension income from an annuity investment. Compare life annuity, return of purchase price (ROP), and joint life options."
   },
   "inputs": [
     {
       "id": "ann-corpus",
-      "label": "Annuity Purchase Price (₹)",
+      "label": "Annuity Purchase Price (\u20b9)",
       "min": 100000,
       "max": 100000000,
       "step": 100000,
@@ -20,7 +20,7 @@
       "max": 8,
       "step": 0.1,
       "value": 6,
-      "hint": "Current IRDAI-guided annuity rates 5.5–7%"
+      "hint": "Current IRDAI-guided annuity rates 5.5\u20137%"
     },
     {
       "id": "ann-type",
@@ -90,7 +90,7 @@
     },
     {
       "q": "What is the annuity rate in India 2026?",
-      "a": "Annuity rates in India range from 5.5% to 7% p.a. depending on the insurer, annuity type, and purchase age. Immediate annuity rates are higher for older buyers. LIC's Jeevan Akshay VII offers 6–7% for single life annuity. HDFC Life and SBI Life offer comparable rates."
+      "a": "Annuity rates in India range from 5.5% to 7% p.a. depending on the insurer, annuity type, and purchase age. Immediate annuity rates are higher for older buyers. LIC's Jeevan Akshay VII offers 6\u20137% for single life annuity. HDFC Life and SBI Life offer comparable rates."
     },
     {
       "q": "Is annuity income taxable in India?",
@@ -111,12 +111,12 @@
   ],
   "examples": [
     {
-      "heading": "₹20 lakh NPS annuity corpus at 6%",
-      "text": "₹20 lakh annuity at 6% (life annuity): ₹10,000/month = ₹1,20,000/year. With Return of Purchase Price (ROP): ₹8,500/month (lower payout, but family gets ₹20 lakh on death). Joint life with ROP: ₹7,800/month — spouse also protected."
+      "heading": "\u20b920 lakh NPS annuity corpus at 6%",
+      "text": "\u20b920 lakh annuity at 6% (life annuity): \u20b910,000/month = \u20b91,20,000/year. With Return of Purchase Price (ROP): \u20b98,500/month (lower payout, but family gets \u20b920 lakh on death). Joint life with ROP: \u20b97,800/month \u2014 spouse also protected."
     },
     {
-      "heading": "₹50 lakh corpus — comparing options",
-      "text": "₹50 lakh single life annuity at 6%: ₹25,000/month. With 3% increasing: starts at ₹22,000/month, reaches ₹37,000 after 20 years. If you live 20+ years, increasing annuity wins against inflation. Buy at least 40% of annuity corpus with inflation-increasing option."
+      "heading": "\u20b950 lakh corpus \u2014 comparing options",
+      "text": "\u20b950 lakh single life annuity at 6%: \u20b925,000/month. With 3% increasing: starts at \u20b922,000/month, reaches \u20b937,000 after 20 years. If you live 20+ years, increasing annuity wins against inflation. Buy at least 40% of annuity corpus with inflation-increasing option."
     }
   ],
   "related": [
@@ -127,10 +127,6 @@
     {
       "title": "SWP Calculator",
       "url": "/india/swp-calculator/"
-    },
-    {
-      "title": "Pension Income Calculator",
-      "url": "/india/pension-income-calculator/"
     }
   ]
 }

@@ -35,24 +35,10 @@
     "category": "Mutual Funds & Investments"
   },
   {
-    "id": "sip-delay-cost",
-    "title": "Cost of SIP Delay",
-    "url": "/india/sip-delay-cost-calculator/",
-    "shortDescription": "Wealth lost by delaying SIP",
-    "category": "Mutual Funds & Investments"
-  },
-  {
     "id": "direct-vs-regular",
     "title": "Direct vs Regular MF",
     "url": "/india/direct-vs-regular-calculator/",
     "shortDescription": "Direct plan savings vs regular",
-    "category": "Mutual Funds & Investments"
-  },
-  {
-    "id": "expense-ratio",
-    "title": "Expense Ratio Impact",
-    "url": "/india/expense-ratio-calculator/",
-    "shortDescription": "True cost of MF expense ratio",
     "category": "Mutual Funds & Investments"
   },
   {
@@ -70,38 +56,10 @@
     "category": "Mutual Funds & Investments"
   },
   {
-    "id": "nav-calculator",
-    "title": "NAV Calculator",
-    "url": "/india/nav-calculator/",
-    "shortDescription": "Current value of MF units held",
-    "category": "Mutual Funds & Investments"
-  },
-  {
     "id": "cagr",
     "title": "CAGR Calculator",
     "url": "/india/cagr-calculator/",
     "shortDescription": "Annualised return on any investment",
-    "category": "Mutual Funds & Investments"
-  },
-  {
-    "id": "stp",
-    "title": "STP Calculator",
-    "url": "/india/stp-calculator/",
-    "shortDescription": "Systematic transfer plan returns",
-    "category": "Mutual Funds & Investments"
-  },
-  {
-    "id": "inflation-adjusted-returns",
-    "title": "Inflation-Adjusted Returns",
-    "url": "/india/inflation-adjusted-returns-calculator/",
-    "shortDescription": "Real return after inflation",
-    "category": "Mutual Funds & Investments"
-  },
-  {
-    "id": "ulip-calculator",
-    "title": "ULIP Calculator",
-    "url": "/india/ulip-calculator/",
-    "shortDescription": "ULIP vs mutual fund comparison",
     "category": "Mutual Funds & Investments"
   },
   {
@@ -161,24 +119,10 @@
     "category": "Tax Calculators"
   },
   {
-    "id": "surcharge-calculator",
-    "title": "Income Tax Surcharge",
-    "url": "/india/surcharge-calculator/",
-    "shortDescription": "Surcharge + cess for high income",
-    "category": "Tax Calculators"
-  },
-  {
     "id": "tds-calculator",
     "title": "TDS Calculator",
     "url": "/india/tds-calculator/",
     "shortDescription": "TDS on fees, rent, and contracts",
-    "category": "Tax Calculators"
-  },
-  {
-    "id": "tds-on-fd",
-    "title": "TDS on FD Interest",
-    "url": "/india/tds-on-fd-calculator/",
-    "shortDescription": "FD interest after TDS deduction",
     "category": "Tax Calculators"
   },
   {
@@ -196,20 +140,6 @@
     "category": "Tax Calculators"
   },
   {
-    "id": "gst-reverse",
-    "title": "Reverse GST Calculator",
-    "url": "/india/gst-reverse-calculator/",
-    "shortDescription": "Extract base price from GST-inclusive",
-    "category": "Tax Calculators"
-  },
-  {
-    "id": "professional-tax",
-    "title": "Professional Tax",
-    "url": "/india/professional-tax-calculator/",
-    "shortDescription": "State-wise monthly deduction",
-    "category": "Tax Calculators"
-  },
-  {
     "id": "fd",
     "title": "FD Calculator",
     "url": "/india/fd-calculator/",
@@ -221,69 +151,6 @@
     "title": "RD Calculator",
     "url": "/india/rd-calculator/",
     "shortDescription": "Recurring deposit maturity value",
-    "category": "Banking & Fixed Income"
-  },
-  {
-    "id": "fd-vs-rd",
-    "title": "FD vs RD Comparison",
-    "url": "/india/fd-vs-rd-calculator/",
-    "shortDescription": "Which earns more — FD or RD?",
-    "category": "Banking & Fixed Income"
-  },
-  {
-    "id": "senior-citizen-fd",
-    "title": "Senior Citizen FD",
-    "url": "/india/senior-citizen-fd-calculator/",
-    "shortDescription": "FD with 0.5% extra senior rate",
-    "category": "Banking & Fixed Income"
-  },
-  {
-    "id": "nre-fd",
-    "title": "NRE FD Calculator",
-    "url": "/india/nre-fd-calculator/",
-    "shortDescription": "Tax-free NRI FD returns",
-    "category": "Banking & Fixed Income"
-  },
-  {
-    "id": "tax-saver-fd",
-    "title": "Tax Saver FD",
-    "url": "/india/tax-saver-fd-calculator/",
-    "shortDescription": "5-year FD with 80C deduction",
-    "category": "Banking & Fixed Income"
-  },
-  {
-    "id": "sweep-in-fd",
-    "title": "Sweep-In FD",
-    "url": "/india/sweep-in-fd-calculator/",
-    "shortDescription": "Savings linked to FD returns",
-    "category": "Banking & Fixed Income"
-  },
-  {
-    "id": "flexi-deposit",
-    "title": "Flexi Deposit",
-    "url": "/india/flexi-deposit-calculator/",
-    "shortDescription": "Variable RD with flexible amounts",
-    "category": "Banking & Fixed Income"
-  },
-  {
-    "id": "bank-rate-comparison",
-    "title": "Bank FD Rate Comparison",
-    "url": "/india/bank-rate-comparison-calculator/",
-    "shortDescription": "Compare SBI, HDFC, ICICI rates",
-    "category": "Banking & Fixed Income"
-  },
-  {
-    "id": "savings-account",
-    "title": "Savings Account Interest",
-    "url": "/india/savings-account-calculator/",
-    "shortDescription": "Monthly interest on savings balance",
-    "category": "Banking & Fixed Income"
-  },
-  {
-    "id": "overdraft-calculator",
-    "title": "Overdraft Interest",
-    "url": "/india/overdraft-calculator/",
-    "shortDescription": "Daily cost of OD facility",
     "category": "Banking & Fixed Income"
   },
   {
@@ -336,13 +203,6 @@
     "category": "Government Schemes"
   },
   {
-    "id": "ppf-epf-nps-compare",
-    "title": "PPF vs EPF vs NPS",
-    "url": "/india/ppf-epf-nps-compare-calculator/",
-    "shortDescription": "Side-by-side retirement scheme comparison",
-    "category": "Government Schemes"
-  },
-  {
     "id": "kvp-calculator",
     "title": "KVP Calculator",
     "url": "/india/kvp-calculator/",
@@ -361,27 +221,6 @@
     "title": "SCSS Calculator",
     "url": "/india/scss-calculator/",
     "shortDescription": "Senior Citizen Savings Scheme",
-    "category": "Government Schemes"
-  },
-  {
-    "id": "post-office-mis",
-    "title": "Post Office MIS",
-    "url": "/india/post-office-mis-calculator/",
-    "shortDescription": "Monthly income scheme payout",
-    "category": "Government Schemes"
-  },
-  {
-    "id": "post-office-td",
-    "title": "Post Office TD",
-    "url": "/india/post-office-td-calculator/",
-    "shortDescription": "Post office time deposit",
-    "category": "Government Schemes"
-  },
-  {
-    "id": "post-office-rd",
-    "title": "Post Office RD",
-    "url": "/india/post-office-rd-calculator/",
-    "shortDescription": "Post office recurring deposit",
     "category": "Government Schemes"
   },
   {
@@ -413,38 +252,10 @@
     "category": "Loans & Borrowing"
   },
   {
-    "id": "business-loan-emi",
-    "title": "Business Loan EMI",
-    "url": "/india/business-loan-emi-calculator/",
-    "shortDescription": "SME & MSME loan EMI",
-    "category": "Loans & Borrowing"
-  },
-  {
-    "id": "education-loan-emi",
-    "title": "Education Loan EMI",
-    "url": "/india/education-loan-emi-calculator/",
-    "shortDescription": "Student loan repayment",
-    "category": "Loans & Borrowing"
-  },
-  {
-    "id": "two-wheeler-loan",
-    "title": "Two-Wheeler Loan EMI",
-    "url": "/india/two-wheeler-loan-calculator/",
-    "shortDescription": "Bike & scooter loan EMI",
-    "category": "Loans & Borrowing"
-  },
-  {
     "id": "gold-loan",
     "title": "Gold Loan EMI",
     "url": "/india/gold-loan-calculator/",
     "shortDescription": "Gold-backed loan instalment",
-    "category": "Loans & Borrowing"
-  },
-  {
-    "id": "loan-against-property",
-    "title": "Loan Against Property",
-    "url": "/india/loan-against-property-calculator/",
-    "shortDescription": "LAP EMI calculator",
     "category": "Loans & Borrowing"
   },
   {
@@ -462,41 +273,6 @@
     "category": "Loans & Borrowing"
   },
   {
-    "id": "balance-transfer",
-    "title": "Balance Transfer",
-    "url": "/india/balance-transfer-calculator/",
-    "shortDescription": "Savings from switching lender",
-    "category": "Loans & Borrowing"
-  },
-  {
-    "id": "mortgage-refinance",
-    "title": "Mortgage Refinance",
-    "url": "/india/mortgage-refinance-calculator/",
-    "shortDescription": "Home loan refinance savings",
-    "category": "Loans & Borrowing"
-  },
-  {
-    "id": "flat-vs-reducing",
-    "title": "Flat vs Reducing Rate",
-    "url": "/india/flat-vs-reducing-calculator/",
-    "shortDescription": "True cost of flat-rate loans",
-    "category": "Loans & Borrowing"
-  },
-  {
-    "id": "credit-card-emi",
-    "title": "Credit Card EMI",
-    "url": "/india/credit-card-emi-calculator/",
-    "shortDescription": "Cost of CC EMI conversion",
-    "category": "Loans & Borrowing"
-  },
-  {
-    "id": "moratorium-calculator",
-    "title": "Moratorium Interest",
-    "url": "/india/moratorium-calculator/",
-    "shortDescription": "Extra cost of payment holiday",
-    "category": "Loans & Borrowing"
-  },
-  {
     "id": "retirement-corpus",
     "title": "Retirement Corpus",
     "url": "/india/retirement-corpus-calculator/",
@@ -511,20 +287,6 @@
     "category": "Retirement Planning"
   },
   {
-    "id": "early-retirement",
-    "title": "Early Retirement",
-    "url": "/india/early-retirement-calculator/",
-    "shortDescription": "Retire before 60 — corpus needed",
-    "category": "Retirement Planning"
-  },
-  {
-    "id": "retirement-timeline",
-    "title": "Retirement Timeline",
-    "url": "/india/retirement-timeline-calculator/",
-    "shortDescription": "When can you retire?",
-    "category": "Retirement Planning"
-  },
-  {
     "id": "swp",
     "title": "SWP Calculator",
     "url": "/india/swp-calculator/",
@@ -532,38 +294,10 @@
     "category": "Retirement Planning"
   },
   {
-    "id": "swp-retirement",
-    "title": "SWP — How Long Corpus Lasts",
-    "url": "/india/swp-retirement-calculator/",
-    "shortDescription": "How many years your corpus lasts",
-    "category": "Retirement Planning"
-  },
-  {
-    "id": "annuity-calculator",
-    "title": "Annuity Calculator",
-    "url": "/india/annuity-calculator/",
-    "shortDescription": "Monthly pension from annuity",
-    "category": "Retirement Planning"
-  },
-  {
-    "id": "pension-income",
-    "title": "Pension Income",
-    "url": "/india/pension-income-calculator/",
-    "shortDescription": "Monthly income from corpus",
-    "category": "Retirement Planning"
-  },
-  {
     "id": "inflation-retirement",
     "title": "Inflation Impact",
     "url": "/india/inflation-retirement-calculator/",
     "shortDescription": "Purchasing power erosion",
-    "category": "Retirement Planning"
-  },
-  {
-    "id": "ppf-epf-nps-compare",
-    "title": "PPF vs EPF vs NPS",
-    "url": "/india/ppf-epf-nps-compare-calculator/",
-    "shortDescription": "Compare retirement schemes",
     "category": "Retirement Planning"
   },
   {
@@ -588,59 +322,10 @@
     "category": "Salary & Employment"
   },
   {
-    "id": "leave-encashment",
-    "title": "Leave Encashment",
-    "url": "/india/leave-encashment-calculator/",
-    "shortDescription": "Earned leave payout & tax",
-    "category": "Salary & Employment"
-  },
-  {
     "id": "epf-contribution",
     "title": "EPF Contribution Breakup",
     "url": "/india/epf-contribution-calculator/",
     "shortDescription": "Employee & employer PF split",
-    "category": "Salary & Employment"
-  },
-  {
-    "id": "eps-pension",
-    "title": "EPS Pension",
-    "url": "/india/eps-pension-calculator/",
-    "shortDescription": "Monthly pension at retirement",
-    "category": "Salary & Employment"
-  },
-  {
-    "id": "overtime",
-    "title": "Overtime Pay",
-    "url": "/india/overtime-calculator/",
-    "shortDescription": "OT pay at double rate (Factories Act)",
-    "category": "Salary & Employment"
-  },
-  {
-    "id": "vrs-calculator",
-    "title": "VRS Calculator",
-    "url": "/india/vrs-calculator/",
-    "shortDescription": "Voluntary retirement package",
-    "category": "Salary & Employment"
-  },
-  {
-    "id": "esop-calculator",
-    "title": "ESOP Calculator",
-    "url": "/india/esop-calculator/",
-    "shortDescription": "Stock option tax on exercise & sale",
-    "category": "Salary & Employment"
-  },
-  {
-    "id": "bonus-after-tax",
-    "title": "Bonus Tax Calculator",
-    "url": "/india/bonus-after-tax-calculator/",
-    "shortDescription": "Net bonus after TDS deduction",
-    "category": "Salary & Employment"
-  },
-  {
-    "id": "professional-tax-calc",
-    "title": "Professional Tax (Calc)",
-    "url": "/india/professional-tax-calc-calculator/",
-    "shortDescription": "State-wise PT deduction",
     "category": "Salary & Employment"
   },
   {
@@ -658,13 +343,6 @@
     "category": "Real Estate"
   },
   {
-    "id": "home-affordability",
-    "title": "Home Affordability",
-    "url": "/india/home-affordability-calculator/",
-    "shortDescription": "Max property price on your income",
-    "category": "Real Estate"
-  },
-  {
     "id": "stamp-duty",
     "title": "Stamp Duty",
     "url": "/india/stamp-duty-calculator/",
@@ -679,48 +357,6 @@
     "category": "Real Estate"
   },
   {
-    "id": "rental-yield",
-    "title": "Rental Yield",
-    "url": "/india/rental-yield-calculator/",
-    "shortDescription": "Gross & net yield on property",
-    "category": "Real Estate"
-  },
-  {
-    "id": "real-estate-roi",
-    "title": "Real Estate ROI",
-    "url": "/india/real-estate-roi-calculator/",
-    "shortDescription": "Total return on property investment",
-    "category": "Real Estate"
-  },
-  {
-    "id": "property-tax",
-    "title": "Property Tax",
-    "url": "/india/property-tax-calculator/",
-    "shortDescription": "Annual municipal property tax",
-    "category": "Real Estate"
-  },
-  {
-    "id": "property-appreciation",
-    "title": "Property Appreciation",
-    "url": "/india/property-appreciation-calculator/",
-    "shortDescription": "Future value of property investment",
-    "category": "Real Estate"
-  },
-  {
-    "id": "under-construction",
-    "title": "Under-Construction EMI",
-    "url": "/india/under-construction-calculator/",
-    "shortDescription": "Pre-EMI, GST, and total cost",
-    "category": "Real Estate"
-  },
-  {
-    "id": "mortgage-refinance",
-    "title": "Mortgage Refinance",
-    "url": "/india/mortgage-refinance-calculator/",
-    "shortDescription": "Savings from rate reduction",
-    "category": "Real Estate"
-  },
-  {
     "id": "term-insurance",
     "title": "Term Insurance Cover",
     "url": "/india/term-insurance-calculator/",
@@ -728,45 +364,10 @@
     "category": "Insurance"
   },
   {
-    "id": "life-insurance-needs",
-    "title": "Life Insurance Needs",
-    "url": "/india/life-insurance-needs-calculator/",
-    "shortDescription": "HLV-based cover calculation",
-    "category": "Insurance"
-  },
-  {
     "id": "health-insurance",
     "title": "Health Insurance Cover",
     "url": "/india/health-insurance-calculator/",
     "shortDescription": "Right cover for family size & city",
-    "category": "Insurance"
-  },
-  {
-    "id": "critical-illness",
-    "title": "Critical Illness Cover",
-    "url": "/india/critical-illness-calculator/",
-    "shortDescription": "CI cover for cancer, cardiac events",
-    "category": "Insurance"
-  },
-  {
-    "id": "motor-insurance-idv",
-    "title": "Motor Insurance IDV",
-    "url": "/india/motor-insurance-idv-calculator/",
-    "shortDescription": "Car/bike insured declared value",
-    "category": "Insurance"
-  },
-  {
-    "id": "home-loan-insurance",
-    "title": "Home Loan Insurance",
-    "url": "/india/home-loan-insurance-calculator/",
-    "shortDescription": "HLPP cost vs term insurance",
-    "category": "Insurance"
-  },
-  {
-    "id": "child-education-plan",
-    "title": "Child Education Plan",
-    "url": "/india/child-education-plan-calculator/",
-    "shortDescription": "Monthly savings for future education",
     "category": "Insurance"
   }
 ]

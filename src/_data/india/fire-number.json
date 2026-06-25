@@ -1,13 +1,13 @@
 {
   "id": "fire-number",
   "schema": {
-    "appName": "FIRE Number Calculator India — Financial Independence",
-    "appDescription": "Calculate your FIRE number — the corpus needed for financial independence. Based on your monthly expenses, withdrawal rate, and inflation."
+    "appName": "FIRE Number Calculator India \u2014 Financial Independence",
+    "appDescription": "Calculate your FIRE number \u2014 the corpus needed for financial independence. Based on your monthly expenses, withdrawal rate, and inflation."
   },
   "inputs": [
     {
       "id": "fn-monthly",
-      "label": "Current Monthly Expenses (₹)",
+      "label": "Current Monthly Expenses (\u20b9)",
       "min": 10000,
       "max": 1000000,
       "step": 1000,
@@ -20,7 +20,7 @@
       "max": 6,
       "step": 0.1,
       "value": 3.5,
-      "hint": "3–4% is generally safe for Indian conditions"
+      "hint": "3\u20134% is generally safe for Indian conditions"
     },
     {
       "id": "fn-inflation",
@@ -87,11 +87,11 @@
   "faq": [
     {
       "q": "What is FIRE and how does it work?",
-      "a": "FIRE (Financial Independence, Retire Early) is about accumulating enough corpus that investment returns exceed living expenses — allowing you to stop working permanently. The FIRE number = annual expenses ÷ safe withdrawal rate. At 4% SWR: corpus = 25× annual expenses. Invest aggressively early, retire when corpus is reached."
+      "a": "FIRE (Financial Independence, Retire Early) is about accumulating enough corpus that investment returns exceed living expenses \u2014 allowing you to stop working permanently. The FIRE number = annual expenses \u00f7 safe withdrawal rate. At 4% SWR: corpus = 25\u00d7 annual expenses. Invest aggressively early, retire when corpus is reached."
     },
     {
       "q": "Is the 4% rule safe for Indian FIRE?",
-      "a": "The 4% rule was derived from US market data. For India: higher inflation (6% vs 2% in US), shorter equity market history, potential political/regulatory risk. 3–3.5% SWR is safer for India. At 3%: FIRE number = 33× annual expenses — you need 33% more corpus."
+      "a": "The 4% rule was derived from US market data. For India: higher inflation (6% vs 2% in US), shorter equity market history, potential political/regulatory risk. 3\u20133.5% SWR is safer for India. At 3%: FIRE number = 33\u00d7 annual expenses \u2014 you need 33% more corpus."
     },
     {
       "q": "What are the main FIRE variations?",
@@ -112,22 +112,18 @@
   ],
   "examples": [
     {
-      "heading": "₹80,000/month expenses — FIRE at 45",
-      "text": "At 6% inflation, expenses at 45 (13 years from age 32): ₹1,70,000/month. Annual: ₹20.4 lakh. FIRE number at 3.5% SWR: ₹20.4 lakh ÷ 0.035 = ₹5.83 crore. Monthly investment at 12% for 13 years: ₹1,82,000/month. Aggressive saving required."
+      "heading": "\u20b980,000/month expenses \u2014 FIRE at 45",
+      "text": "At 6% inflation, expenses at 45 (13 years from age 32): \u20b91,70,000/month. Annual: \u20b920.4 lakh. FIRE number at 3.5% SWR: \u20b920.4 lakh \u00f7 0.035 = \u20b95.83 crore. Monthly investment at 12% for 13 years: \u20b91,82,000/month. Aggressive saving required."
     },
     {
-      "heading": "Lean FIRE with ₹40,000/month lifestyle",
-      "text": "Lean FIRE at ₹40,000/month, targeting 45 (inflation-adjusted: ₹85,000/month). FIRE number: ₹85,000 × 12 / 0.04 = ₹2.55 crore. More achievable: ₹75,000/month investment at 12% for 13 years. Lean FIRE dramatically lowers the target."
+      "heading": "Lean FIRE with \u20b940,000/month lifestyle",
+      "text": "Lean FIRE at \u20b940,000/month, targeting 45 (inflation-adjusted: \u20b985,000/month). FIRE number: \u20b985,000 \u00d7 12 / 0.04 = \u20b92.55 crore. More achievable: \u20b975,000/month investment at 12% for 13 years. Lean FIRE dramatically lowers the target."
     }
   ],
   "related": [
     {
       "title": "Retirement Corpus Calculator",
       "url": "/india/retirement-corpus-calculator/"
-    },
-    {
-      "title": "Early Retirement Calculator",
-      "url": "/india/early-retirement-calculator/"
     },
     {
       "title": "SWP Calculator",

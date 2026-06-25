@@ -37,13 +37,9 @@
 <meta name="twitter:description" content="Calculate stamp duty and registration charges on property purchase in Maharashtra, Karnataka, Delhi, Tamil Nadu, and other states.">
 <meta name="twitter:image" content="https://www.calcphi.com/assets/images/og/calcphi-default.png">
 
-<!-- Hreflang — auto-generated from market + permalink -->
-
-<link rel="alternate" hreflang="en-in"    href="https://www.calcphi.com/india/stamp-duty-calculator/">
-<link rel="alternate" hreflang="en-au"    href="https://www.calcphi.com/australia/">
+<!-- Hreflang — India only -->
+<link rel="alternate" hreflang="en-in" href="https://www.calcphi.com/india/stamp-duty-calculator/">
 <link rel="alternate" hreflang="x-default" href="https://www.calcphi.com/india/">
-
-
 
 <!-- Language -->
 <meta name="language" content="en">
@@ -94,22 +90,15 @@
       <!-- Primary nav -->
       
       <nav class="cp-nav" aria-label="Primary navigation">
-        <a id="nav-calc-link"
-           href="/india/"
+        <a href="/india/"
            aria-current="true">
           Calculators
         </a>
-        <a href="/markets/"
-           >
-          Markets
-        </a>
-        <a id="nav-blog-link"
-           href="/india/blog/"
+        <a href="/india/blog/"
            >
           Blog
         </a>
-        <a id="nav-help-link"
-           href="/india/help/"
+        <a href="/india/help/"
            >
           Help
         </a>
@@ -136,20 +125,6 @@
         <kbd class="cp-search-kbd">⌘K</kbd>
       </button>
 
-      <!-- Market picker -->
-      <details class="cp-market">
-        <summary aria-label="Choose market">
-          <span class="cp-market-label">🌐 Select Country</span>
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <polyline points="6 9 12 15 18 9"/>
-          </svg>
-        </summary>
-        <div class="cp-market-dropdown">
-          <a href="/australia/" data-market-code="AU">🇦🇺 <strong>Australia</strong> · AUD</a>
-          <a href="/india/" data-market-code="IN">🇮🇳 <strong>India</strong> · INR</a>
-        </div>
-      </details>
-
       <!-- Mobile toggle -->
       <button class="cp-mobile-toggle" aria-label="Toggle navigation" id="nav-toggle" aria-expanded="false" aria-controls="cp-mobile-nav">
         <span class="cp-ham">
@@ -161,16 +136,11 @@
 
     <!-- Mobile nav (hidden by default) -->
     <nav id="cp-mobile-nav" class="cp-mobile-nav" aria-label="Mobile navigation" hidden>
-      <a id="mob-calc-link" href="/india/">Calculators</a>
-      <a href="/markets/">Markets</a>
-      <a id="mob-blog-link" href="/india/blog/">Blog</a>
-      <a id="mob-help-link" href="/india/help/">Help</a>
+      <a href="/india/">Calculators</a>
+      <a href="/india/blog/">Blog</a>
+      <a href="/india/help/">Help</a>
       <a href="/about/">About</a>
       <a href="/contact/">Contact</a>
-      <div class="cp-mobile-nav__markets">
-        <a href="/australia/" data-market-code="AU">🇦🇺 Australia</a>
-        <a href="/india/" data-market-code="IN">🇮🇳 India</a>
-      </div>
     </nav>
   </header>
 </div>
@@ -186,48 +156,6 @@
       else { nav.setAttribute('hidden', ''); btn.setAttribute('aria-expanded', 'false'); }
     });
   }
-
-  // Dynamic nav links — rewrite Calculators, Blog, Help based on detected market
-  (function() {
-    var path = window.location.pathname;
-    var market = null;
-    if (path.startsWith('/australia/')) market = 'AU';
-    else if (path.startsWith('/india/')) market = 'IN';
-    if (market) {
-      try { localStorage.setItem('cp_market', market); } catch(e) {}
-    } else {
-      try { market = localStorage.getItem('cp_market'); } catch(e) {}
-    }
-
-    // Map each nav link to its market-specific URL
-    var navMap = {
-      calc: { AU: '/australia/', IN: '/india/' },
-      blog: { AU: '/australia/blog/', IN: '/india/blog/' },
-      help: { AU: '/australia/help/', IN: '/india/help/' }
-    };
-
-    function setHref(id, url) {
-      var el = document.getElementById(id);
-      if (el && url) el.href = url;
-    }
-
-    if (market) {
-      setHref('nav-calc-link', navMap.calc[market]);
-      setHref('nav-blog-link', navMap.blog[market]);
-      setHref('nav-help-link', navMap.help[market]);
-      setHref('mob-calc-link', navMap.calc[market]);
-      setHref('mob-blog-link', navMap.blog[market]);
-      setHref('mob-help-link', navMap.help[market]);
-    }
-
-    // Persist market on dropdown link clicks and immediately update nav links
-    document.querySelectorAll('[data-market-code]').forEach(function(el) {
-      el.addEventListener('click', function() {
-        var code = el.getAttribute('data-market-code');
-        try { localStorage.setItem('cp_market', code); } catch(e) {}
-      });
-    });
-  })();
 })();
 </script>
 
@@ -689,122 +617,8 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -852,120 +666,6 @@
 
     
     
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
     
       
     
@@ -1179,109 +879,10 @@
           
           
           
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
           <li>
             <a href="/india/rent-vs-buy-calculator/"
                >
               Rent vs Buy
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/india/home-affordability-calculator/"
-               >
-              Home Affordability
             </a>
           </li>
           
@@ -1302,70 +903,6 @@
               Property Registration Cost
             </a>
           </li>
-          
-          
-          
-          <li>
-            <a href="/india/rental-yield-calculator/"
-               >
-              Rental Yield
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/india/real-estate-roi-calculator/"
-               >
-              Real Estate ROI
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/india/property-tax-calculator/"
-               >
-              Property Tax
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/india/property-appreciation-calculator/"
-               >
-              Property Appreciation
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/india/under-construction-calculator/"
-               >
-              Under-Construction EMI
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/india/mortgage-refinance-calculator/"
-               >
-              Mortgage Refinance
-            </a>
-          </li>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
           
           
           
@@ -1394,22 +931,18 @@
   <div class="container">
     <div class="cp-footer__grid">
 
-      <!-- Col 1: Brand — always shown, content varies by market -->
+      <!-- Col 1: Brand -->
       <div class="cp-footer__brand">
         <a href="/" class="cp-logo" aria-label="CalcPhi">
           <span class="cp-logo-tile">φ</span>
           <span class="cp-logo-wm">Calc<em>Phi</em></span>
         </a>
-        
-        <p class="cp-footer__desc">Financial calculators built for India. No login required.</p>
+        <p class="cp-footer__desc">Free financial calculators built for India. No login required.</p>
         <div class="cp-footer__markets">
           <a href="/india/" class="cp-footer__mchip cp-footer__mchip--active" data-market-code="IN">🇮🇳 India</a>
         </div>
-        <a href="/markets/" class="cp-footer__other-markets">View all markets →</a>
-        
       </div>
 
-      
       
 
       <div class="cp-footer__col">
@@ -1419,7 +952,7 @@
         <a href="/india/lumpsum-calculator/">Lumpsum Calculator</a>
         <a href="/india/elss-calculator/">ELSS Calculator</a>
         <a href="/india/cagr-calculator/">CAGR Calculator</a>
-        <a href="/india/#mutual-funds" class="cp-footer__view-all">All 15 investment tools →</a>
+        <a href="/india/#mutual-funds" class="cp-footer__view-all">View all investment tools →</a>
       </div>
 
       <div class="cp-footer__col">
@@ -1429,7 +962,7 @@
         <a href="/india/income-tax-calculator/">Income Tax</a>
         <a href="/india/hra-calculator/">HRA Calculator</a>
         <a href="/india/capital-gains-calculator/">Capital Gains Tax</a>
-        <a href="/india/#loans" class="cp-footer__view-all">All 31 loan &amp; tax tools →</a>
+        <a href="/india/#loans" class="cp-footer__view-all">View all loan &amp; tax tools →</a>
       </div>
 
       <div class="cp-footer__col">
@@ -1439,19 +972,17 @@
         <a href="/india/nps-calculator/">NPS Calculator</a>
         <a href="/india/retirement-corpus-calculator/">Retirement Corpus</a>
         <a href="/india/ssy-calculator/">SSY Calculator</a>
-        <a href="/india/#government" class="cp-footer__view-all">All 35 savings &amp; retirement tools →</a>
+        <a href="/india/#government" class="cp-footer__view-all">View all savings &amp; retirement tools →</a>
       </div>
 
       <div class="cp-footer__col">
         <div class="cp-footer__head">Company</div>
         <a href="/about/">About</a>
-        <a href="/india/authors/">India Authors</a>
+        <a href="/india/authors/">Authors</a>
         <a href="/india/blog/">Blog</a>
         <a href="/contact/">Contact</a>
         <a href="/privacy/">Privacy</a>
       </div>
-
-      
 
     </div>
 
@@ -1460,15 +991,12 @@
     <div class="cp-footer__bottom">
       <p class="cp-footer__disclaimer">
         CalcPhi calculators are for educational and estimation purposes only. Results are not financial advice.
-        
-        For India: mutual fund investments are subject to market risks — consult a SEBI-registered advisor.
-        
+        Mutual fund investments are subject to market risks — consult a SEBI-registered advisor before making financial decisions.
       </p>
       <p class="cp-footer__copy">&copy; 2026 CalcPhi. All rights reserved.</p>
     </div>
   </div>
 </footer>
-
 
   <script src="/assets/js/geo.js" defer></script>
   <script src="/assets/js/search.js" defer></script>

@@ -7,7 +7,7 @@
   "inputs": [
     {
       "id": "idv-price",
-      "label": "Vehicle Ex-Showroom Price (₹)",
+      "label": "Vehicle Ex-Showroom Price (\u20b9)",
       "min": 50000,
       "max": 20000000,
       "step": 10000,
@@ -53,7 +53,7 @@
     },
     {
       "name": "View instant results",
-      "text": "Results update in real time — no submit button needed."
+      "text": "Results update in real time \u2014 no submit button needed."
     },
     {
       "name": "Explore breakdown",
@@ -67,15 +67,15 @@
   "faq": [
     {
       "q": "What is IDV in car insurance?",
-      "a": "IDV (Insured Declared Value) is the maximum amount an insurer pays for total loss (write-off or theft) of your vehicle. It's the current market value of the vehicle — ex-showroom price minus depreciation. IDV decreases each year as the car depreciates. Lower IDV = lower premium but less payout in a total loss."
+      "a": "IDV (Insured Declared Value) is the maximum amount an insurer pays for total loss (write-off or theft) of your vehicle. It's the current market value of the vehicle \u2014 ex-showroom price minus depreciation. IDV decreases each year as the car depreciates. Lower IDV = lower premium but less payout in a total loss."
     },
     {
       "q": "How is IDV calculated in India?",
-      "a": "IDV = Ex-showroom price × (1 − Depreciation Rate). Depreciation schedule: <6 months: 5%, 6m–1yr: 15%, 1–2yr: 20%, 2–3yr: 30%, 3–4yr: 40%, 4–5yr: 50%. Above 5 years: IDV is mutually agreed with insurer. IRDAI sets these depreciation rates."
+      "a": "IDV = Ex-showroom price \u00d7 (1 \u2212 Depreciation Rate). Depreciation schedule: <6 months: 5%, 6m\u20131yr: 15%, 1\u20132yr: 20%, 2\u20133yr: 30%, 3\u20134yr: 40%, 4\u20135yr: 50%. Above 5 years: IDV is mutually agreed with insurer. IRDAI sets these depreciation rates."
     },
     {
       "q": "Should I declare a lower IDV to reduce premium?",
-      "a": "Reducing IDV reduces premium but directly reduces your claim payout in a total loss. A 10% IDV reduction might save ₹3,000 in annual premium but reduces your claim by ₹1–2 lakh. Always ensure IDV reflects actual market value. Many insurers allow IDV to be adjusted ±20%."
+      "a": "Reducing IDV reduces premium but directly reduces your claim payout in a total loss. A 10% IDV reduction might save \u20b93,000 in annual premium but reduces your claim by \u20b91\u20132 lakh. Always ensure IDV reflects actual market value. Many insurers allow IDV to be adjusted \u00b120%."
     },
     {
       "q": "Is this calculator free?",
@@ -92,12 +92,12 @@
   ],
   "examples": [
     {
-      "heading": "₹12 lakh car aged 2 years — IDV calculation",
-      "text": "IDV at 2 years = ₹12 lakh × (1 − 20%) = ₹9.6 lakh. Own damage premium ≈ 2–3.5% of IDV = ₹19,200–₹33,600. Third party premium (1000–1500cc): ₹4,188/year (IRDAI regulated). Total comprehensive premium: ₹23,000–₹38,000."
+      "heading": "\u20b912 lakh car aged 2 years \u2014 IDV calculation",
+      "text": "IDV at 2 years = \u20b912 lakh \u00d7 (1 \u2212 20%) = \u20b99.6 lakh. Own damage premium \u2248 2\u20133.5% of IDV = \u20b919,200\u2013\u20b933,600. Third party premium (1000\u20131500cc): \u20b94,188/year (IRDAI regulated). Total comprehensive premium: \u20b923,000\u2013\u20b938,000."
     },
     {
-      "heading": "5-year-old car — renew or let lapse?",
-      "text": "5-year-old car at 50% depreciation: ₹15 lakh car → IDV ₹7.5 lakh. If replacement cost is only ₹8–9 lakh (resale), a ₹7.5 lakh IDV is still worth insuring. Premium: approximately ₹15,000–₹25,000. Always renew comprehensive insurance — third-party is legally mandatory."
+      "heading": "5-year-old car \u2014 renew or let lapse?",
+      "text": "5-year-old car at 50% depreciation: \u20b915 lakh car \u2192 IDV \u20b97.5 lakh. If replacement cost is only \u20b98\u20139 lakh (resale), a \u20b97.5 lakh IDV is still worth insuring. Premium: approximately \u20b915,000\u2013\u20b925,000. Always renew comprehensive insurance \u2014 third-party is legally mandatory."
     }
   ],
   "related": [
@@ -108,10 +108,6 @@
     {
       "title": "Health Insurance Calculator",
       "url": "/india/health-insurance-calculator/"
-    },
-    {
-      "title": "Home Loan Insurance Calculator",
-      "url": "/india/home-loan-insurance-calculator/"
     }
   ]
 }

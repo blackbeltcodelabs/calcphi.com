@@ -15,7 +15,7 @@
     },
     {
       "id": "current-nav",
-      "label": "Current NAV (₹)",
+      "label": "Current NAV (\u20b9)",
       "min": 0.01,
       "max": 100000,
       "step": 0.01,
@@ -23,7 +23,7 @@
     },
     {
       "id": "purchase-nav",
-      "label": "Average Purchase NAV (₹)",
+      "label": "Average Purchase NAV (\u20b9)",
       "min": 0.01,
       "max": 100000,
       "step": 0.01,
@@ -74,15 +74,15 @@
   "faq": [
     {
       "q": "How is mutual fund NAV calculated?",
-      "a": "NAV = (Total Assets of Fund − Liabilities) ÷ Number of Units Outstanding. It's calculated daily after market close by the fund house. When you invest ₹10,000 in a fund with NAV ₹50, you get 200 units. If NAV rises to ₹65, your investment is worth ₹13,000 (200 × ₹65)."
+      "a": "NAV = (Total Assets of Fund \u2212 Liabilities) \u00f7 Number of Units Outstanding. It's calculated daily after market close by the fund house. When you invest \u20b910,000 in a fund with NAV \u20b950, you get 200 units. If NAV rises to \u20b965, your investment is worth \u20b913,000 (200 \u00d7 \u20b965)."
     },
     {
       "q": "Can I buy mutual funds at the current day's NAV?",
-      "a": "Purchases submitted before 3 PM on a business day get that day's NAV. After 3 PM: next business day's NAV. For liquid funds: 1:30 PM cutoff. SEBI introduced T+1 NAV for cut-off times on equity and other funds — verify with your fund house."
+      "a": "Purchases submitted before 3 PM on a business day get that day's NAV. After 3 PM: next business day's NAV. For liquid funds: 1:30 PM cutoff. SEBI introduced T+1 NAV for cut-off times on equity and other funds \u2014 verify with your fund house."
     },
     {
       "q": "Does higher NAV mean an expensive fund?",
-      "a": "No. High NAV doesn't mean the fund is expensive. A fund with NAV ₹500 isn't more expensive than one with ₹50 — you buy fewer units but the proportional return is the same. Never choose between funds based on NAV — compare returns, expense ratio, and portfolio quality."
+      "a": "No. High NAV doesn't mean the fund is expensive. A fund with NAV \u20b9500 isn't more expensive than one with \u20b950 \u2014 you buy fewer units but the proportional return is the same. Never choose between funds based on NAV \u2014 compare returns, expense ratio, and portfolio quality."
     },
     {
       "q": "Is the NAV Calculator free?",
@@ -99,12 +99,12 @@
   ],
   "examples": [
     {
-      "heading": "1,000 units at average NAV ₹100, current NAV ₹185",
-      "text": "Current value: 1,000 × ₹185 = ₹1,85,000. Investment cost: 1,000 × ₹100 = ₹1,00,000. Profit: ₹85,000. CAGR over 5 years: 13.1% p.a. Absolute return: 85%."
+      "heading": "1,000 units at average NAV \u20b9100, current NAV \u20b9185",
+      "text": "Current value: 1,000 \u00d7 \u20b9185 = \u20b91,85,000. Investment cost: 1,000 \u00d7 \u20b9100 = \u20b91,00,000. Profit: \u20b985,000. CAGR over 5 years: 13.1% p.a. Absolute return: 85%."
     },
     {
-      "heading": "SIP investor — weighted average NAV",
-      "text": "SIP investors buy at different NAVs each month. Your statement shows average cost NAV. If you've invested ₹1,00,000 in SIP and now have 850 units at ₹150 NAV: current value ₹1,27,500, gain ₹27,500, average purchase NAV = ₹1,00,000 / 850 = ₹117.6."
+      "heading": "SIP investor \u2014 weighted average NAV",
+      "text": "SIP investors buy at different NAVs each month. Your statement shows average cost NAV. If you've invested \u20b91,00,000 in SIP and now have 850 units at \u20b9150 NAV: current value \u20b91,27,500, gain \u20b927,500, average purchase NAV = \u20b91,00,000 / 850 = \u20b9117.6."
     }
   ],
   "related": [
@@ -115,10 +115,6 @@
     {
       "title": "CAGR Calculator",
       "url": "/india/cagr-calculator/"
-    },
-    {
-      "title": "Expense Ratio",
-      "url": "/india/expense-ratio-calculator/"
     }
   ]
 }

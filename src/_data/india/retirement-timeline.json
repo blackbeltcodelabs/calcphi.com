@@ -7,7 +7,7 @@
   "inputs": [
     {
       "id": "rt-current",
-      "label": "Current Savings/Investment Corpus (₹)",
+      "label": "Current Savings/Investment Corpus (\u20b9)",
       "min": 0,
       "max": 100000000,
       "step": 100000,
@@ -15,7 +15,7 @@
     },
     {
       "id": "rt-monthly",
-      "label": "Monthly Investment (₹)",
+      "label": "Monthly Investment (\u20b9)",
       "min": 1000,
       "max": 1000000,
       "step": 1000,
@@ -31,7 +31,7 @@
     },
     {
       "id": "rt-expenses",
-      "label": "Monthly Expenses at Retirement (₹)",
+      "label": "Monthly Expenses at Retirement (\u20b9)",
       "min": 10000,
       "max": 1000000,
       "step": 5000,
@@ -41,7 +41,7 @@
   "outputs": [
     {
       "id": "rt-fire-number",
-      "label": "Corpus Target (25× annual expenses)"
+      "label": "Corpus Target (25\u00d7 annual expenses)"
     },
     {
       "id": "rt-years",
@@ -78,15 +78,15 @@
   "faq": [
     {
       "q": "How do I calculate when I can retire?",
-      "a": "Calculate FIRE number (annual expenses ÷ withdrawal rate). Then find how many years it takes for (current corpus + monthly SIP) at your return rate to reach the FIRE number. Use the retirement timeline calculator to get the exact year."
+      "a": "Calculate FIRE number (annual expenses \u00f7 withdrawal rate). Then find how many years it takes for (current corpus + monthly SIP) at your return rate to reach the FIRE number. Use the retirement timeline calculator to get the exact year."
     },
     {
       "q": "How do increases in monthly investment affect retirement age?",
-      "a": "Doubling your monthly SIP doesn't halve time to retirement — it compresses it by less due to the non-linear nature of compounding. But starting earlier has a dramatic effect: a 25-year-old investing ₹20,000/month at 12% reaches ₹5 crore in 23 years. Starting at 35 requires ₹50,000/month for the same target."
+      "a": "Doubling your monthly SIP doesn't halve time to retirement \u2014 it compresses it by less due to the non-linear nature of compounding. But starting earlier has a dramatic effect: a 25-year-old investing \u20b920,000/month at 12% reaches \u20b95 crore in 23 years. Starting at 35 requires \u20b950,000/month for the same target."
     },
     {
       "q": "What should I do if my retirement date is too far?",
-      "a": "Three levers: increase income (higher investments), reduce target expenses (lower FIRE number), or accept slightly higher withdrawal rate (3.5% instead of 3%). Also consider semi-retirement — transitioning to lower-pressure consulting work while corpus grows."
+      "a": "Three levers: increase income (higher investments), reduce target expenses (lower FIRE number), or accept slightly higher withdrawal rate (3.5% instead of 3%). Also consider semi-retirement \u2014 transitioning to lower-pressure consulting work while corpus grows."
     },
     {
       "q": "Is this calculator free?",
@@ -103,12 +103,12 @@
   ],
   "examples": [
     {
-      "heading": "₹20 lakh corpus, ₹50,000/month investment, 12%",
-      "text": "FIRE number at ₹1 lakh/month expenses: ₹3 crore (25×). Starting corpus ₹20 lakh + ₹50,000/month at 12%: reaches ₹3 crore in approximately 11.5 years. Retirement at age 43 (if starting at 32)."
+      "heading": "\u20b920 lakh corpus, \u20b950,000/month investment, 12%",
+      "text": "FIRE number at \u20b91 lakh/month expenses: \u20b93 crore (25\u00d7). Starting corpus \u20b920 lakh + \u20b950,000/month at 12%: reaches \u20b93 crore in approximately 11.5 years. Retirement at age 43 (if starting at 32)."
     },
     {
       "heading": "Effect of increasing monthly investment",
-      "text": "Same setup but increasing to ₹75,000/month: reaches ₹3 crore in 9.5 years (age 41). Two years saved by adding ₹25,000/month more. Each extra ₹10,000/month cuts retirement by 6–12 months depending on where you are in the accumulation phase."
+      "text": "Same setup but increasing to \u20b975,000/month: reaches \u20b93 crore in 9.5 years (age 41). Two years saved by adding \u20b925,000/month more. Each extra \u20b910,000/month cuts retirement by 6\u201312 months depending on where you are in the accumulation phase."
     }
   ],
   "related": [
@@ -119,10 +119,6 @@
     {
       "title": "Retirement Corpus Calculator",
       "url": "/india/retirement-corpus-calculator/"
-    },
-    {
-      "title": "Early Retirement Calculator",
-      "url": "/india/early-retirement-calculator/"
     }
   ]
 }

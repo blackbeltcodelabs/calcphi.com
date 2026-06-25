@@ -1,18 +1,18 @@
 {
   "id": "post-office-mis",
   "schema": {
-    "appName": "Post Office MIS Calculator — Monthly Income Scheme",
-    "appDescription": "Calculate monthly interest income from Post Office Monthly Income Scheme (MIS). Current rate 7.4% p.a. Maximum ₹9 lakh (single), ₹15 lakh (joint)."
+    "appName": "Post Office MIS Calculator \u2014 Monthly Income Scheme",
+    "appDescription": "Calculate monthly interest income from Post Office Monthly Income Scheme (MIS). Current rate 7.4% p.a. Maximum \u20b99 lakh (single), \u20b915 lakh (joint)."
   },
   "inputs": [
     {
       "id": "pomis-principal",
-      "label": "Deposit Amount (₹)",
+      "label": "Deposit Amount (\u20b9)",
       "min": 1000,
       "max": 15000000,
       "step": 1000,
       "value": 900000,
-      "hint": "Max ₹9 lakh (single), ₹15 lakh (joint account)"
+      "hint": "Max \u20b99 lakh (single), \u20b915 lakh (joint account)"
     },
     {
       "id": "pomis-rate",
@@ -50,7 +50,7 @@
     },
     {
       "name": "View instant results",
-      "text": "Results update in real time as you type — no submit button needed."
+      "text": "Results update in real time as you type \u2014 no submit button needed."
     },
     {
       "name": "Explore breakdown",
@@ -64,7 +64,7 @@
   "faq": [
     {
       "q": "What is Post Office Monthly Income Scheme (POMIS)?",
-      "a": "POMIS is a 5-year post office scheme that pays fixed monthly interest. Current rate is 7.4% p.a. Maximum deposit: ₹9 lakh (single), ₹15 lakh (joint). Interest is paid monthly to the linked post office savings account. The principal is returned at maturity."
+      "a": "POMIS is a 5-year post office scheme that pays fixed monthly interest. Current rate is 7.4% p.a. Maximum deposit: \u20b99 lakh (single), \u20b915 lakh (joint). Interest is paid monthly to the linked post office savings account. The principal is returned at maturity."
     },
     {
       "q": "Is POMIS interest taxable?",
@@ -72,7 +72,7 @@
     },
     {
       "q": "Can POMIS be closed before 5 years?",
-      "a": "Yes, premature closure is allowed after 1 year. If closed before 3 years: 2% deduction from principal. If closed after 3 years: 1% deduction. The penalty makes early closure costly — invest only if you can hold for 5 years."
+      "a": "Yes, premature closure is allowed after 1 year. If closed before 3 years: 2% deduction from principal. If closed after 3 years: 1% deduction. The penalty makes early closure costly \u2014 invest only if you can hold for 5 years."
     },
     {
       "q": "Is the Post Office MIS Calculator free?",
@@ -89,12 +89,12 @@
   ],
   "examples": [
     {
-      "heading": "₹9 lakh POMIS — maximum single account deposit",
-      "text": "₹9 lakh in POMIS at 7.4% p.a. generates ₹5,550/month (₹66,600/year) for 5 years. Total interest: ₹3,33,000. Principal returned at maturity. Ideal for retirees needing predictable monthly income."
+      "heading": "\u20b99 lakh POMIS \u2014 maximum single account deposit",
+      "text": "\u20b99 lakh in POMIS at 7.4% p.a. generates \u20b95,550/month (\u20b966,600/year) for 5 years. Total interest: \u20b93,33,000. Principal returned at maturity. Ideal for retirees needing predictable monthly income."
     },
     {
-      "heading": "Joint POMIS account — ₹15 lakh deposit",
-      "text": "A couple with ₹15 lakh joint POMIS at 7.4% gets ₹9,250/month (₹1,11,000/year). Over 5 years, total interest = ₹5,55,000. Monthly payout is credited directly to the post office savings account."
+      "heading": "Joint POMIS account \u2014 \u20b915 lakh deposit",
+      "text": "A couple with \u20b915 lakh joint POMIS at 7.4% gets \u20b99,250/month (\u20b91,11,000/year). Over 5 years, total interest = \u20b95,55,000. Monthly payout is credited directly to the post office savings account."
     }
   ],
   "related": [
@@ -105,10 +105,6 @@
     {
       "title": "FD Calculator",
       "url": "/india/fd-calculator/"
-    },
-    {
-      "title": "Annuity Calculator",
-      "url": "/india/annuity-calculator/"
     }
   ]
 }

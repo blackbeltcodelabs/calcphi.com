@@ -7,7 +7,7 @@
   "inputs": [
     {
       "id": "uc-value",
-      "label": "Property Agreement Value (₹)",
+      "label": "Property Agreement Value (\u20b9)",
       "min": 500000,
       "max": 500000000,
       "step": 100000,
@@ -15,7 +15,7 @@
     },
     {
       "id": "uc-loan",
-      "label": "Home Loan Amount (₹)",
+      "label": "Home Loan Amount (\u20b9)",
       "min": 100000,
       "max": 100000000,
       "step": 100000,
@@ -86,15 +86,15 @@
   "faq": [
     {
       "q": "What is pre-EMI on under-construction property?",
-      "a": "During construction, the bank releases loan in stages (as construction progresses). Pre-EMI = interest on the disbursed amount. You don't pay full EMI until possession. Pre-EMI is not principal repayment — your loan balance doesn't reduce during this period."
+      "a": "During construction, the bank releases loan in stages (as construction progresses). Pre-EMI = interest on the disbursed amount. You don't pay full EMI until possession. Pre-EMI is not principal repayment \u2014 your loan balance doesn't reduce during this period."
     },
     {
       "q": "Is GST applicable on under-construction property?",
-      "a": "Yes. Under-construction residential property attracts 5% GST (without input tax credit). Affordable housing (value below ₹45 lakh, carpet area below 60 sqm): 1% GST. Completed/ready-to-move property registered before the builder gets occupancy certificate: no GST."
+      "a": "Yes. Under-construction residential property attracts 5% GST (without input tax credit). Affordable housing (value below \u20b945 lakh, carpet area below 60 sqm): 1% GST. Completed/ready-to-move property registered before the builder gets occupancy certificate: no GST."
     },
     {
       "q": "What are the risks of buying under-construction property?",
-      "a": "Risks: construction delays (common — factor in 1–2 year buffer), builder default or insolvency, quality issues, changes in local regulations affecting FSI, and market price decline during construction. RERA registration of the project is mandatory from 2017 — always verify at RERA portal before booking."
+      "a": "Risks: construction delays (common \u2014 factor in 1\u20132 year buffer), builder default or insolvency, quality issues, changes in local regulations affecting FSI, and market price decline during construction. RERA registration of the project is mandatory from 2017 \u2014 always verify at RERA portal before booking."
     },
     {
       "q": "Is this calculator free?",
@@ -111,12 +111,12 @@
   ],
   "examples": [
     {
-      "heading": "₹75 lakh under-construction flat with ₹60 lakh loan",
-      "text": "GST (5%): ₹3,75,000. Pre-EMI for 2 years on average disbursement of ₹30 lakh: ₹2,13,333/year, total ₹4,26,667. Regular post-possession EMI: ₹52,120/month for 20 years. Total cost: ₹75L + GST ₹3.75L + pre-EMI ₹4.27L = ₹83.02 lakh initial, plus ₹1.25 crore over 20 years in EMIs."
+      "heading": "\u20b975 lakh under-construction flat with \u20b960 lakh loan",
+      "text": "GST (5%): \u20b93,75,000. Pre-EMI for 2 years on average disbursement of \u20b930 lakh: \u20b92,13,333/year, total \u20b94,26,667. Regular post-possession EMI: \u20b952,120/month for 20 years. Total cost: \u20b975L + GST \u20b93.75L + pre-EMI \u20b94.27L = \u20b983.02 lakh initial, plus \u20b91.25 crore over 20 years in EMIs."
     },
     {
       "heading": "Ready-to-move vs under-construction",
-      "text": "Ready-to-move: no GST, no pre-EMI loss, immediate possession. Typically 10–15% higher price than under-construction for same location. Under-construction: lower price, risk of delays, pre-EMI cost (money down the drain). For a 2-year project: pre-EMI loss often equals the price advantage."
+      "text": "Ready-to-move: no GST, no pre-EMI loss, immediate possession. Typically 10\u201315% higher price than under-construction for same location. Under-construction: lower price, risk of delays, pre-EMI cost (money down the drain). For a 2-year project: pre-EMI loss often equals the price advantage."
     }
   ],
   "related": [
@@ -127,10 +127,6 @@
     {
       "title": "Stamp Duty Calculator",
       "url": "/india/stamp-duty-calculator/"
-    },
-    {
-      "title": "Home Affordability Calculator",
-      "url": "/india/home-affordability-calculator/"
     }
   ]
 }

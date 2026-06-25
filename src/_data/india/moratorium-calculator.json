@@ -7,7 +7,7 @@
   "inputs": [
     {
       "id": "mor-loan",
-      "label": "Outstanding Loan Amount (₹)",
+      "label": "Outstanding Loan Amount (\u20b9)",
       "min": 10000,
       "max": 100000000,
       "step": 10000,
@@ -64,7 +64,7 @@
     },
     {
       "name": "View instant results",
-      "text": "Results update in real time as you type — no submit button needed."
+      "text": "Results update in real time as you type \u2014 no submit button needed."
     },
     {
       "name": "Explore breakdown",
@@ -82,11 +82,11 @@
     },
     {
       "q": "Is moratorium the same as loan waiver?",
-      "a": "No. Moratorium is a temporary deferral — interest accrues and must be repaid later. A loan waiver permanently cancels the debt. Government moratoriums (like RBI's COVID-19 moratorium) were payment deferrals, not waivers. Customers who availed the RBI 2020 moratorium paid more total interest."
+      "a": "No. Moratorium is a temporary deferral \u2014 interest accrues and must be repaid later. A loan waiver permanently cancels the debt. Government moratoriums (like RBI's COVID-19 moratorium) were payment deferrals, not waivers. Customers who availed the RBI 2020 moratorium paid more total interest."
     },
     {
       "q": "When should I opt for a loan moratorium?",
-      "a": "Opt for moratorium only when facing genuine cash flow crisis (job loss, medical emergency). If you can pay EMIs, avoid moratorium — the additional interest cost is significant. A 3-month moratorium on a ₹20 lakh home loan at 8.5% adds approximately ₹43,000 in extra interest."
+      "a": "Opt for moratorium only when facing genuine cash flow crisis (job loss, medical emergency). If you can pay EMIs, avoid moratorium \u2014 the additional interest cost is significant. A 3-month moratorium on a \u20b920 lakh home loan at 8.5% adds approximately \u20b943,000 in extra interest."
     },
     {
       "q": "Is the Moratorium Calculator free?",
@@ -103,12 +103,12 @@
   ],
   "examples": [
     {
-      "heading": "3-month moratorium on ₹20 lakh home loan",
-      "text": "₹20 lakh at 8.5% with 15 years remaining: Normal EMI = ₹19,720. After 3-month moratorium, deferred interest ≈ ₹43,000 added to principal. New EMI = ₹20,001 for remaining tenure. Total additional cost: ₹52,000."
+      "heading": "3-month moratorium on \u20b920 lakh home loan",
+      "text": "\u20b920 lakh at 8.5% with 15 years remaining: Normal EMI = \u20b919,720. After 3-month moratorium, deferred interest \u2248 \u20b943,000 added to principal. New EMI = \u20b920,001 for remaining tenure. Total additional cost: \u20b952,000."
     },
     {
-      "heading": "COVID-19 moratorium impact — 6 months",
-      "text": "6-month moratorium on ₹30 lakh loan at 8% with 20 years remaining: interest accrued = ₹1,20,000. This increases loan principal to ₹31.2 lakh, raising EMI by ₹800/month for 20 years — total additional cost ₹1.92 lakh."
+      "heading": "COVID-19 moratorium impact \u2014 6 months",
+      "text": "6-month moratorium on \u20b930 lakh loan at 8% with 20 years remaining: interest accrued = \u20b91,20,000. This increases loan principal to \u20b931.2 lakh, raising EMI by \u20b9800/month for 20 years \u2014 total additional cost \u20b91.92 lakh."
     }
   ],
   "related": [
@@ -119,10 +119,6 @@
     {
       "title": "Loan Prepayment Calculator",
       "url": "/india/loan-prepayment-calculator/"
-    },
-    {
-      "title": "Balance Transfer Calculator",
-      "url": "/india/balance-transfer-calculator/"
     }
   ]
 }

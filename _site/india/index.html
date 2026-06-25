@@ -37,13 +37,9 @@
 <meta name="twitter:description" content="Free financial calculators for India. Calculate SIP returns, EMI, PPF maturity, income tax, FD, NPS, HRA, RD and more. Accurate formulas, 2026 rates.">
 <meta name="twitter:image" content="https://www.calcphi.com/assets/images/og/calcphi-default.png">
 
-<!-- Hreflang — auto-generated from market + permalink -->
-
-<link rel="alternate" hreflang="en-in"    href="https://www.calcphi.com/india/">
-<link rel="alternate" hreflang="en-au"    href="https://www.calcphi.com/australia/">
-<link rel="alternate" hreflang="x-default" href="https://www.calcphi.com/">
-
-
+<!-- Hreflang — India only -->
+<link rel="alternate" hreflang="en-in" href="https://www.calcphi.com/india/">
+<link rel="alternate" hreflang="x-default" href="https://www.calcphi.com/india/">
 
 <!-- Language -->
 <meta name="language" content="en">
@@ -94,22 +90,15 @@
       <!-- Primary nav -->
       
       <nav class="cp-nav" aria-label="Primary navigation">
-        <a id="nav-calc-link"
-           href="/india/"
+        <a href="/india/"
            aria-current="true">
           Calculators
         </a>
-        <a href="/markets/"
-           >
-          Markets
-        </a>
-        <a id="nav-blog-link"
-           href="/india/blog/"
+        <a href="/india/blog/"
            >
           Blog
         </a>
-        <a id="nav-help-link"
-           href="/india/help/"
+        <a href="/india/help/"
            >
           Help
         </a>
@@ -136,20 +125,6 @@
         <kbd class="cp-search-kbd">⌘K</kbd>
       </button>
 
-      <!-- Market picker -->
-      <details class="cp-market">
-        <summary aria-label="Choose market">
-          <span class="cp-market-label">🌐 Select Country</span>
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <polyline points="6 9 12 15 18 9"/>
-          </svg>
-        </summary>
-        <div class="cp-market-dropdown">
-          <a href="/australia/" data-market-code="AU">🇦🇺 <strong>Australia</strong> · AUD</a>
-          <a href="/india/" data-market-code="IN">🇮🇳 <strong>India</strong> · INR</a>
-        </div>
-      </details>
-
       <!-- Mobile toggle -->
       <button class="cp-mobile-toggle" aria-label="Toggle navigation" id="nav-toggle" aria-expanded="false" aria-controls="cp-mobile-nav">
         <span class="cp-ham">
@@ -161,16 +136,11 @@
 
     <!-- Mobile nav (hidden by default) -->
     <nav id="cp-mobile-nav" class="cp-mobile-nav" aria-label="Mobile navigation" hidden>
-      <a id="mob-calc-link" href="/india/">Calculators</a>
-      <a href="/markets/">Markets</a>
-      <a id="mob-blog-link" href="/india/blog/">Blog</a>
-      <a id="mob-help-link" href="/india/help/">Help</a>
+      <a href="/india/">Calculators</a>
+      <a href="/india/blog/">Blog</a>
+      <a href="/india/help/">Help</a>
       <a href="/about/">About</a>
       <a href="/contact/">Contact</a>
-      <div class="cp-mobile-nav__markets">
-        <a href="/australia/" data-market-code="AU">🇦🇺 Australia</a>
-        <a href="/india/" data-market-code="IN">🇮🇳 India</a>
-      </div>
     </nav>
   </header>
 </div>
@@ -186,48 +156,6 @@
       else { nav.setAttribute('hidden', ''); btn.setAttribute('aria-expanded', 'false'); }
     });
   }
-
-  // Dynamic nav links — rewrite Calculators, Blog, Help based on detected market
-  (function() {
-    var path = window.location.pathname;
-    var market = null;
-    if (path.startsWith('/australia/')) market = 'AU';
-    else if (path.startsWith('/india/')) market = 'IN';
-    if (market) {
-      try { localStorage.setItem('cp_market', market); } catch(e) {}
-    } else {
-      try { market = localStorage.getItem('cp_market'); } catch(e) {}
-    }
-
-    // Map each nav link to its market-specific URL
-    var navMap = {
-      calc: { AU: '/australia/', IN: '/india/' },
-      blog: { AU: '/australia/blog/', IN: '/india/blog/' },
-      help: { AU: '/australia/help/', IN: '/india/help/' }
-    };
-
-    function setHref(id, url) {
-      var el = document.getElementById(id);
-      if (el && url) el.href = url;
-    }
-
-    if (market) {
-      setHref('nav-calc-link', navMap.calc[market]);
-      setHref('nav-blog-link', navMap.blog[market]);
-      setHref('nav-help-link', navMap.help[market]);
-      setHref('mob-calc-link', navMap.calc[market]);
-      setHref('mob-blog-link', navMap.blog[market]);
-      setHref('mob-help-link', navMap.help[market]);
-    }
-
-    // Persist market on dropdown link clicks and immediately update nav links
-    document.querySelectorAll('[data-market-code]').forEach(function(el) {
-      el.addEventListener('click', function() {
-        var code = el.getAttribute('data-market-code');
-        try { localStorage.setItem('cp_market', code); } catch(e) {}
-      });
-    });
-  })();
 })();
 </script>
 
@@ -327,23 +255,9 @@ Browse all India calculators below, organised by category. Each calculator uses 
         
         
         
-        <a href="/india/sip-delay-cost-calculator/" class="related-card">
-          <h3>Cost of SIP Delay</h3>
-          <p>Wealth lost by delaying SIP</p>
-        </a>
-        
-        
-        
         <a href="/india/direct-vs-regular-calculator/" class="related-card">
           <h3>Direct vs Regular MF</h3>
           <p>Direct plan savings vs regular</p>
-        </a>
-        
-        
-        
-        <a href="/india/expense-ratio-calculator/" class="related-card">
-          <h3>Expense Ratio Impact</h3>
-          <p>True cost of MF expense ratio</p>
         </a>
         
         
@@ -362,140 +276,10 @@ Browse all India calculators below, organised by category. Each calculator uses 
         
         
         
-        <a href="/india/nav-calculator/" class="related-card">
-          <h3>NAV Calculator</h3>
-          <p>Current value of MF units held</p>
-        </a>
-        
-        
-        
         <a href="/india/cagr-calculator/" class="related-card">
           <h3>CAGR Calculator</h3>
           <p>Annualised return on any investment</p>
         </a>
-        
-        
-        
-        <a href="/india/stp-calculator/" class="related-card">
-          <h3>STP Calculator</h3>
-          <p>Systematic transfer plan returns</p>
-        </a>
-        
-        
-        
-        <a href="/india/inflation-adjusted-returns-calculator/" class="related-card">
-          <h3>Inflation-Adjusted Returns</h3>
-          <p>Real return after inflation</p>
-        </a>
-        
-        
-        
-        <a href="/india/ulip-calculator/" class="related-card">
-          <h3>ULIP Calculator</h3>
-          <p>ULIP vs mutual fund comparison</p>
-        </a>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         
@@ -612,18 +396,6 @@ Browse all India calculators below, organised by category. Each calculator uses 
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <a href="/india/income-tax-calculator/" class="related-card">
           <h3>Income Tax Calculator</h3>
           <p>FY 2026-27 tax under old &amp; new regime</p>
@@ -680,23 +452,9 @@ Browse all India calculators below, organised by category. Each calculator uses 
         
         
         
-        <a href="/india/surcharge-calculator/" class="related-card">
-          <h3>Income Tax Surcharge</h3>
-          <p>Surcharge + cess for high income</p>
-        </a>
-        
-        
-        
         <a href="/india/tds-calculator/" class="related-card">
           <h3>TDS Calculator</h3>
           <p>TDS on fees, rent, and contracts</p>
-        </a>
-        
-        
-        
-        <a href="/india/tds-on-fd-calculator/" class="related-card">
-          <h3>TDS on FD Interest</h3>
-          <p>FD interest after TDS deduction</p>
         </a>
         
         
@@ -712,114 +470,6 @@ Browse all India calculators below, organised by category. Each calculator uses 
           <h3>GST Calculator</h3>
           <p>Add GST to base price instantly</p>
         </a>
-        
-        
-        
-        <a href="/india/gst-reverse-calculator/" class="related-card">
-          <h3>Reverse GST Calculator</h3>
-          <p>Extract base price from GST-inclusive</p>
-        </a>
-        
-        
-        
-        <a href="/india/professional-tax-calculator/" class="related-card">
-          <h3>Professional Tax</h3>
-          <p>State-wise monthly deduction</p>
-        </a>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         
@@ -960,52 +610,6 @@ Browse all India calculators below, organised by category. Each calculator uses 
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <a href="/india/emi-calculator/" class="related-card">
           <h3>EMI Calculator</h3>
           <p>Loan EMI for any amount &amp; tenure</p>
@@ -1034,37 +638,9 @@ Browse all India calculators below, organised by category. Each calculator uses 
         
         
         
-        <a href="/india/business-loan-emi-calculator/" class="related-card">
-          <h3>Business Loan EMI</h3>
-          <p>SME &amp; MSME loan EMI</p>
-        </a>
-        
-        
-        
-        <a href="/india/education-loan-emi-calculator/" class="related-card">
-          <h3>Education Loan EMI</h3>
-          <p>Student loan repayment</p>
-        </a>
-        
-        
-        
-        <a href="/india/two-wheeler-loan-calculator/" class="related-card">
-          <h3>Two-Wheeler Loan EMI</h3>
-          <p>Bike &amp; scooter loan EMI</p>
-        </a>
-        
-        
-        
         <a href="/india/gold-loan-calculator/" class="related-card">
           <h3>Gold Loan EMI</h3>
           <p>Gold-backed loan instalment</p>
-        </a>
-        
-        
-        
-        <a href="/india/loan-against-property-calculator/" class="related-card">
-          <h3>Loan Against Property</h3>
-          <p>LAP EMI calculator</p>
         </a>
         
         
@@ -1080,91 +656,6 @@ Browse all India calculators below, organised by category. Each calculator uses 
           <h3>Loan Prepayment</h3>
           <p>Interest saved by part-payment</p>
         </a>
-        
-        
-        
-        <a href="/india/balance-transfer-calculator/" class="related-card">
-          <h3>Balance Transfer</h3>
-          <p>Savings from switching lender</p>
-        </a>
-        
-        
-        
-        <a href="/india/mortgage-refinance-calculator/" class="related-card">
-          <h3>Mortgage Refinance</h3>
-          <p>Home loan refinance savings</p>
-        </a>
-        
-        
-        
-        <a href="/india/flat-vs-reducing-calculator/" class="related-card">
-          <h3>Flat vs Reducing Rate</h3>
-          <p>True cost of flat-rate loans</p>
-        </a>
-        
-        
-        
-        <a href="/india/credit-card-emi-calculator/" class="related-card">
-          <h3>Credit Card EMI</h3>
-          <p>Cost of CC EMI conversion</p>
-        </a>
-        
-        
-        
-        <a href="/india/moratorium-calculator/" class="related-card">
-          <h3>Moratorium Interest</h3>
-          <p>Extra cost of payment holiday</p>
-        </a>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         
@@ -1243,26 +734,6 @@ Browse all India calculators below, organised by category. Each calculator uses 
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <a href="/india/fd-calculator/" class="related-card">
           <h3>FD Calculator</h3>
           <p>Fixed deposit maturity &amp; interest</p>
@@ -1273,69 +744,6 @@ Browse all India calculators below, organised by category. Each calculator uses 
         <a href="/india/rd-calculator/" class="related-card">
           <h3>RD Calculator</h3>
           <p>Recurring deposit maturity value</p>
-        </a>
-        
-        
-        
-        <a href="/india/fd-vs-rd-calculator/" class="related-card">
-          <h3>FD vs RD Comparison</h3>
-          <p>Which earns more — FD or RD?</p>
-        </a>
-        
-        
-        
-        <a href="/india/senior-citizen-fd-calculator/" class="related-card">
-          <h3>Senior Citizen FD</h3>
-          <p>FD with 0.5% extra senior rate</p>
-        </a>
-        
-        
-        
-        <a href="/india/nre-fd-calculator/" class="related-card">
-          <h3>NRE FD Calculator</h3>
-          <p>Tax-free NRI FD returns</p>
-        </a>
-        
-        
-        
-        <a href="/india/tax-saver-fd-calculator/" class="related-card">
-          <h3>Tax Saver FD</h3>
-          <p>5-year FD with 80C deduction</p>
-        </a>
-        
-        
-        
-        <a href="/india/sweep-in-fd-calculator/" class="related-card">
-          <h3>Sweep-In FD</h3>
-          <p>Savings linked to FD returns</p>
-        </a>
-        
-        
-        
-        <a href="/india/flexi-deposit-calculator/" class="related-card">
-          <h3>Flexi Deposit</h3>
-          <p>Variable RD with flexible amounts</p>
-        </a>
-        
-        
-        
-        <a href="/india/bank-rate-comparison-calculator/" class="related-card">
-          <h3>Bank FD Rate Comparison</h3>
-          <p>Compare SBI, HDFC, ICICI rates</p>
-        </a>
-        
-        
-        
-        <a href="/india/savings-account-calculator/" class="related-card">
-          <h3>Savings Account Interest</h3>
-          <p>Monthly interest on savings balance</p>
-        </a>
-        
-        
-        
-        <a href="/india/overdraft-calculator/" class="related-card">
-          <h3>Overdraft Interest</h3>
-          <p>Daily cost of OD facility</p>
         </a>
         
         
@@ -1351,82 +759,6 @@ Browse all India calculators below, organised by category. Each calculator uses 
           <h3>Simple Interest</h3>
           <p>Basic SI calculation</p>
         </a>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         
@@ -1543,44 +875,6 @@ Browse all India calculators below, organised by category. Each calculator uses 
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <a href="/india/ppf-calculator/" class="related-card">
           <h3>PPF Calculator</h3>
           <p>15-year PPF maturity at 7.1%</p>
@@ -1616,13 +910,6 @@ Browse all India calculators below, organised by category. Each calculator uses 
         
         
         
-        <a href="/india/ppf-epf-nps-compare-calculator/" class="related-card">
-          <h3>PPF vs EPF vs NPS</h3>
-          <p>Side-by-side retirement scheme comparison</p>
-        </a>
-        
-        
-        
         <a href="/india/kvp-calculator/" class="related-card">
           <h3>KVP Calculator</h3>
           <p>Kisan Vikas Patra doubling period</p>
@@ -1641,95 +928,6 @@ Browse all India calculators below, organised by category. Each calculator uses 
           <h3>SCSS Calculator</h3>
           <p>Senior Citizen Savings Scheme</p>
         </a>
-        
-        
-        
-        <a href="/india/post-office-mis-calculator/" class="related-card">
-          <h3>Post Office MIS</h3>
-          <p>Monthly income scheme payout</p>
-        </a>
-        
-        
-        
-        <a href="/india/post-office-td-calculator/" class="related-card">
-          <h3>Post Office TD</h3>
-          <p>Post office time deposit</p>
-        </a>
-        
-        
-        
-        <a href="/india/post-office-rd-calculator/" class="related-card">
-          <h3>Post Office RD</h3>
-          <p>Post office recurring deposit</p>
-        </a>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         
@@ -1860,70 +1058,6 @@ Browse all India calculators below, organised by category. Each calculator uses 
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <a href="/india/retirement-corpus-calculator/" class="related-card">
           <h3>Retirement Corpus</h3>
           <p>Total corpus needed to retire</p>
@@ -1938,44 +1072,9 @@ Browse all India calculators below, organised by category. Each calculator uses 
         
         
         
-        <a href="/india/early-retirement-calculator/" class="related-card">
-          <h3>Early Retirement</h3>
-          <p>Retire before 60 — corpus needed</p>
-        </a>
-        
-        
-        
-        <a href="/india/retirement-timeline-calculator/" class="related-card">
-          <h3>Retirement Timeline</h3>
-          <p>When can you retire?</p>
-        </a>
-        
-        
-        
         <a href="/india/swp-calculator/" class="related-card">
           <h3>SWP Calculator</h3>
           <p>Sustainable monthly withdrawal</p>
-        </a>
-        
-        
-        
-        <a href="/india/swp-retirement-calculator/" class="related-card">
-          <h3>SWP — How Long Corpus Lasts</h3>
-          <p>How many years your corpus lasts</p>
-        </a>
-        
-        
-        
-        <a href="/india/annuity-calculator/" class="related-card">
-          <h3>Annuity Calculator</h3>
-          <p>Monthly pension from annuity</p>
-        </a>
-        
-        
-        
-        <a href="/india/pension-income-calculator/" class="related-card">
-          <h3>Pension Income</h3>
-          <p>Monthly income from corpus</p>
         </a>
         
         
@@ -1984,51 +1083,6 @@ Browse all India calculators below, organised by category. Each calculator uses 
           <h3>Inflation Impact</h3>
           <p>Purchasing power erosion</p>
         </a>
-        
-        
-        
-        <a href="/india/ppf-epf-nps-compare-calculator/" class="related-card">
-          <h3>PPF vs EPF vs NPS</h3>
-          <p>Compare retirement schemes</p>
-        </a>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         
@@ -2145,82 +1199,6 @@ Browse all India calculators below, organised by category. Each calculator uses 
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <a href="/india/ctc-to-in-hand-calculator/" class="related-card">
           <h3>CTC to In-Hand Salary</h3>
           <p>Net take-home from CTC</p>
@@ -2242,58 +1220,9 @@ Browse all India calculators below, organised by category. Each calculator uses 
         
         
         
-        <a href="/india/leave-encashment-calculator/" class="related-card">
-          <h3>Leave Encashment</h3>
-          <p>Earned leave payout &amp; tax</p>
-        </a>
-        
-        
-        
         <a href="/india/epf-contribution-calculator/" class="related-card">
           <h3>EPF Contribution Breakup</h3>
           <p>Employee &amp; employer PF split</p>
-        </a>
-        
-        
-        
-        <a href="/india/eps-pension-calculator/" class="related-card">
-          <h3>EPS Pension</h3>
-          <p>Monthly pension at retirement</p>
-        </a>
-        
-        
-        
-        <a href="/india/overtime-calculator/" class="related-card">
-          <h3>Overtime Pay</h3>
-          <p>OT pay at double rate (Factories Act)</p>
-        </a>
-        
-        
-        
-        <a href="/india/vrs-calculator/" class="related-card">
-          <h3>VRS Calculator</h3>
-          <p>Voluntary retirement package</p>
-        </a>
-        
-        
-        
-        <a href="/india/esop-calculator/" class="related-card">
-          <h3>ESOP Calculator</h3>
-          <p>Stock option tax on exercise &amp; sale</p>
-        </a>
-        
-        
-        
-        <a href="/india/bonus-after-tax-calculator/" class="related-card">
-          <h3>Bonus Tax Calculator</h3>
-          <p>Net bonus after TDS deduction</p>
-        </a>
-        
-        
-        
-        <a href="/india/professional-tax-calc-calculator/" class="related-card">
-          <h3>Professional Tax (Calc)</h3>
-          <p>State-wise PT deduction</p>
         </a>
         
         
@@ -2302,30 +1231,6 @@ Browse all India calculators below, organised by category. Each calculator uses 
           <h3>Bonus After Tax</h3>
           <p>TDS and net bonus received</p>
         </a>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         
@@ -2442,106 +1347,9 @@ Browse all India calculators below, organised by category. Each calculator uses 
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <a href="/india/rent-vs-buy-calculator/" class="related-card">
           <h3>Rent vs Buy</h3>
           <p>Should you rent or buy a home?</p>
-        </a>
-        
-        
-        
-        <a href="/india/home-affordability-calculator/" class="related-card">
-          <h3>Home Affordability</h3>
-          <p>Max property price on your income</p>
         </a>
         
         
@@ -2557,58 +1365,6 @@ Browse all India calculators below, organised by category. Each calculator uses 
           <h3>Property Registration Cost</h3>
           <p>Total registration charges</p>
         </a>
-        
-        
-        
-        <a href="/india/rental-yield-calculator/" class="related-card">
-          <h3>Rental Yield</h3>
-          <p>Gross &amp; net yield on property</p>
-        </a>
-        
-        
-        
-        <a href="/india/real-estate-roi-calculator/" class="related-card">
-          <h3>Real Estate ROI</h3>
-          <p>Total return on property investment</p>
-        </a>
-        
-        
-        
-        <a href="/india/property-tax-calculator/" class="related-card">
-          <h3>Property Tax</h3>
-          <p>Annual municipal property tax</p>
-        </a>
-        
-        
-        
-        <a href="/india/property-appreciation-calculator/" class="related-card">
-          <h3>Property Appreciation</h3>
-          <p>Future value of property investment</p>
-        </a>
-        
-        
-        
-        <a href="/india/under-construction-calculator/" class="related-card">
-          <h3>Under-Construction EMI</h3>
-          <p>Pre-EMI, GST, and total cost</p>
-        </a>
-        
-        
-        
-        <a href="/india/mortgage-refinance-calculator/" class="related-card">
-          <h3>Mortgage Refinance</h3>
-          <p>Savings from rate reduction</p>
-        </a>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         
@@ -2725,110 +1481,6 @@ Browse all India calculators below, organised by category. Each calculator uses 
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <a href="/india/term-insurance-calculator/" class="related-card">
           <h3>Term Insurance Cover</h3>
           <p>Recommended life cover amount</p>
@@ -2836,44 +1488,9 @@ Browse all India calculators below, organised by category. Each calculator uses 
         
         
         
-        <a href="/india/life-insurance-needs-calculator/" class="related-card">
-          <h3>Life Insurance Needs</h3>
-          <p>HLV-based cover calculation</p>
-        </a>
-        
-        
-        
         <a href="/india/health-insurance-calculator/" class="related-card">
           <h3>Health Insurance Cover</h3>
           <p>Right cover for family size &amp; city</p>
-        </a>
-        
-        
-        
-        <a href="/india/critical-illness-calculator/" class="related-card">
-          <h3>Critical Illness Cover</h3>
-          <p>CI cover for cancer, cardiac events</p>
-        </a>
-        
-        
-        
-        <a href="/india/motor-insurance-idv-calculator/" class="related-card">
-          <h3>Motor Insurance IDV</h3>
-          <p>Car/bike insured declared value</p>
-        </a>
-        
-        
-        
-        <a href="/india/home-loan-insurance-calculator/" class="related-card">
-          <h3>Home Loan Insurance</h3>
-          <p>HLPP cost vs term insurance</p>
-        </a>
-        
-        
-        
-        <a href="/india/child-education-plan-calculator/" class="related-card">
-          <h3>Child Education Plan</h3>
-          <p>Monthly savings for future education</p>
         </a>
         
         
@@ -2895,22 +1512,18 @@ Browse all India calculators below, organised by category. Each calculator uses 
   <div class="container">
     <div class="cp-footer__grid">
 
-      <!-- Col 1: Brand — always shown, content varies by market -->
+      <!-- Col 1: Brand -->
       <div class="cp-footer__brand">
         <a href="/" class="cp-logo" aria-label="CalcPhi">
           <span class="cp-logo-tile">φ</span>
           <span class="cp-logo-wm">Calc<em>Phi</em></span>
         </a>
-        
-        <p class="cp-footer__desc">Financial calculators built for India. No login required.</p>
+        <p class="cp-footer__desc">Free financial calculators built for India. No login required.</p>
         <div class="cp-footer__markets">
           <a href="/india/" class="cp-footer__mchip cp-footer__mchip--active" data-market-code="IN">🇮🇳 India</a>
         </div>
-        <a href="/markets/" class="cp-footer__other-markets">View all markets →</a>
-        
       </div>
 
-      
       
 
       <div class="cp-footer__col">
@@ -2920,7 +1533,7 @@ Browse all India calculators below, organised by category. Each calculator uses 
         <a href="/india/lumpsum-calculator/">Lumpsum Calculator</a>
         <a href="/india/elss-calculator/">ELSS Calculator</a>
         <a href="/india/cagr-calculator/">CAGR Calculator</a>
-        <a href="/india/#mutual-funds" class="cp-footer__view-all">All 15 investment tools →</a>
+        <a href="/india/#mutual-funds" class="cp-footer__view-all">View all investment tools →</a>
       </div>
 
       <div class="cp-footer__col">
@@ -2930,7 +1543,7 @@ Browse all India calculators below, organised by category. Each calculator uses 
         <a href="/india/income-tax-calculator/">Income Tax</a>
         <a href="/india/hra-calculator/">HRA Calculator</a>
         <a href="/india/capital-gains-calculator/">Capital Gains Tax</a>
-        <a href="/india/#loans" class="cp-footer__view-all">All 31 loan &amp; tax tools →</a>
+        <a href="/india/#loans" class="cp-footer__view-all">View all loan &amp; tax tools →</a>
       </div>
 
       <div class="cp-footer__col">
@@ -2940,19 +1553,17 @@ Browse all India calculators below, organised by category. Each calculator uses 
         <a href="/india/nps-calculator/">NPS Calculator</a>
         <a href="/india/retirement-corpus-calculator/">Retirement Corpus</a>
         <a href="/india/ssy-calculator/">SSY Calculator</a>
-        <a href="/india/#government" class="cp-footer__view-all">All 35 savings &amp; retirement tools →</a>
+        <a href="/india/#government" class="cp-footer__view-all">View all savings &amp; retirement tools →</a>
       </div>
 
       <div class="cp-footer__col">
         <div class="cp-footer__head">Company</div>
         <a href="/about/">About</a>
-        <a href="/india/authors/">India Authors</a>
+        <a href="/india/authors/">Authors</a>
         <a href="/india/blog/">Blog</a>
         <a href="/contact/">Contact</a>
         <a href="/privacy/">Privacy</a>
       </div>
-
-      
 
     </div>
 
@@ -2961,15 +1572,12 @@ Browse all India calculators below, organised by category. Each calculator uses 
     <div class="cp-footer__bottom">
       <p class="cp-footer__disclaimer">
         CalcPhi calculators are for educational and estimation purposes only. Results are not financial advice.
-        
-        For India: mutual fund investments are subject to market risks — consult a SEBI-registered advisor.
-        
+        Mutual fund investments are subject to market risks — consult a SEBI-registered advisor before making financial decisions.
       </p>
       <p class="cp-footer__copy">&copy; 2026 CalcPhi. All rights reserved.</p>
     </div>
   </div>
 </footer>
-
 
   <script src="/assets/js/geo.js" defer></script>
   <script src="/assets/js/search.js" defer></script>

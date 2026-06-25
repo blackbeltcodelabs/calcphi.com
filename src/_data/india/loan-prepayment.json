@@ -7,7 +7,7 @@
   "inputs": [
     {
       "id": "lp-loan",
-      "label": "Original Loan Amount (₹)",
+      "label": "Original Loan Amount (\u20b9)",
       "min": 10000,
       "max": 100000000,
       "step": 10000,
@@ -31,7 +31,7 @@
     },
     {
       "id": "lp-prepay",
-      "label": "Prepayment Amount (₹)",
+      "label": "Prepayment Amount (\u20b9)",
       "min": 10000,
       "max": 100000000,
       "step": 10000,
@@ -73,7 +73,7 @@
     },
     {
       "name": "View instant results",
-      "text": "Results update in real time as you type — no submit button needed."
+      "text": "Results update in real time as you type \u2014 no submit button needed."
     },
     {
       "name": "Explore breakdown",
@@ -91,10 +91,10 @@
     },
     {
       "q": "Is there a prepayment penalty on home loans?",
-      "a": "RBI mandates zero prepayment penalty on floating rate home loans for individuals. Banks cannot charge any fee for partial or full prepayment. Fixed rate home loans may have prepayment charges of 2–4% — check your loan agreement."
+      "a": "RBI mandates zero prepayment penalty on floating rate home loans for individuals. Banks cannot charge any fee for partial or full prepayment. Fixed rate home loans may have prepayment charges of 2\u20134% \u2014 check your loan agreement."
     },
     {
-      "q": "When is the best time to prepay — early or late?",
+      "q": "When is the best time to prepay \u2014 early or late?",
       "a": "Prepaying early in the loan tenure saves more interest because EMI in early years is mostly interest. Prepaying in year 3 of a 20-year loan at 8.5% saves significantly more than prepaying in year 15. The earlier the prepayment, the more interest you save."
     },
     {
@@ -112,12 +112,12 @@
   ],
   "examples": [
     {
-      "heading": "₹5 lakh prepayment after 3 years on ₹30 lakh home loan",
-      "text": "₹30 lakh at 8.5% for 20 years = EMI ₹26,034. Prepaying ₹5 lakh after 3 years reduces tenure by approximately 38 months and saves ₹7.8 lakh in total interest — a 56% return on the prepayment amount."
+      "heading": "\u20b95 lakh prepayment after 3 years on \u20b930 lakh home loan",
+      "text": "\u20b930 lakh at 8.5% for 20 years = EMI \u20b926,034. Prepaying \u20b95 lakh after 3 years reduces tenure by approximately 38 months and saves \u20b97.8 lakh in total interest \u2014 a 56% return on the prepayment amount."
     },
     {
       "heading": "Effect on EMI vs tenure",
-      "text": "With ₹5 lakh prepayment, you can choose to: (a) keep EMI same and cut tenure by ~3 years, or (b) keep tenure same and reduce EMI to ₹23,060. Most financial advisors recommend keeping EMI same and reducing tenure — you save more interest."
+      "text": "With \u20b95 lakh prepayment, you can choose to: (a) keep EMI same and cut tenure by ~3 years, or (b) keep tenure same and reduce EMI to \u20b923,060. Most financial advisors recommend keeping EMI same and reducing tenure \u2014 you save more interest."
     }
   ],
   "related": [
@@ -128,10 +128,6 @@
     {
       "title": "Loan Eligibility Calculator",
       "url": "/india/loan-eligibility-calculator/"
-    },
-    {
-      "title": "Balance Transfer Calculator",
-      "url": "/india/balance-transfer-calculator/"
     }
   ]
 }

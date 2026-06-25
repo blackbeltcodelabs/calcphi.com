@@ -7,7 +7,7 @@
   "inputs": [
     {
       "id": "gr-basic",
-      "label": "Last Basic + DA (₹/month)",
+      "label": "Last Basic + DA (\u20b9/month)",
       "min": 5000,
       "max": 500000,
       "step": 1000,
@@ -31,7 +31,7 @@
     },
     {
       "id": "gr-tax-free",
-      "label": "Tax-Free Component (up to ₹20 lakh)"
+      "label": "Tax-Free Component (up to \u20b920 lakh)"
     },
     {
       "id": "gr-taxable",
@@ -49,7 +49,7 @@
     },
     {
       "name": "View instant results",
-      "text": "Results update in real time — no submit button needed."
+      "text": "Results update in real time \u2014 no submit button needed."
     },
     {
       "name": "Explore breakdown",
@@ -63,11 +63,11 @@
   "faq": [
     {
       "q": "What is the gratuity formula in India?",
-      "a": "Gratuity = (Basic + DA) × 15 ÷ 26 × Years of Service. The '15' is for 15 days of salary, '26' converts monthly salary to daily (26 working days/month). Example: ₹50,000 basic, 10 years = 50,000 × 15 ÷ 26 × 10 = ₹2,88,462."
+      "a": "Gratuity = (Basic + DA) \u00d7 15 \u00f7 26 \u00d7 Years of Service. The '15' is for 15 days of salary, '26' converts monthly salary to daily (26 working days/month). Example: \u20b950,000 basic, 10 years = 50,000 \u00d7 15 \u00f7 26 \u00d7 10 = \u20b92,88,462."
     },
     {
       "q": "Is gratuity tax-free?",
-      "a": "Gratuity up to ₹20 lakh (revised limit) is tax-free for private sector employees under the Payment of Gratuity Act. Government employees get full tax exemption. Amounts above ₹20 lakh are taxable as income from salary."
+      "a": "Gratuity up to \u20b920 lakh (revised limit) is tax-free for private sector employees under the Payment of Gratuity Act. Government employees get full tax exemption. Amounts above \u20b920 lakh are taxable as income from salary."
     },
     {
       "q": "When am I eligible for gratuity?",
@@ -88,19 +88,15 @@
   ],
   "examples": [
     {
-      "heading": "₹50,000 basic, 10 years service",
-      "text": "Gratuity = 50,000 × 15/26 × 10 = ₹2,88,462. Fully tax-free (below ₹20 lakh limit). That's ₹28,846/year of service. For 20 years, gratuity = ₹5,76,923 — still tax-free as under ₹20 lakh."
+      "heading": "\u20b950,000 basic, 10 years service",
+      "text": "Gratuity = 50,000 \u00d7 15/26 \u00d7 10 = \u20b92,88,462. Fully tax-free (below \u20b920 lakh limit). That's \u20b928,846/year of service. For 20 years, gratuity = \u20b95,76,923 \u2014 still tax-free as under \u20b920 lakh."
     },
     {
-      "heading": "High earner — ₹2 lakh basic, 15 years",
-      "text": "Gratuity = 2,00,000 × 15/26 × 15 = ₹17,30,769. Tax-free. For 20 years: ₹23,07,692 — ₹3,07,692 above ₹20 lakh limit is taxable at slab rate."
+      "heading": "High earner \u2014 \u20b92 lakh basic, 15 years",
+      "text": "Gratuity = 2,00,000 \u00d7 15/26 \u00d7 15 = \u20b917,30,769. Tax-free. For 20 years: \u20b923,07,692 \u2014 \u20b93,07,692 above \u20b920 lakh limit is taxable at slab rate."
     }
   ],
   "related": [
-    {
-      "title": "Leave Encashment Calculator",
-      "url": "/india/leave-encashment-calculator/"
-    },
     {
       "title": "EPF Calculator",
       "url": "/india/epf-calculator/"

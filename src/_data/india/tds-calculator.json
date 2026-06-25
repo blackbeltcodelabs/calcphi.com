@@ -7,7 +7,7 @@
   "inputs": [
     {
       "id": "tds-income",
-      "label": "Payment Amount (₹)",
+      "label": "Payment Amount (\u20b9)",
       "min": 0,
       "max": 100000000,
       "step": 1000,
@@ -25,27 +25,27 @@
         },
         {
           "value": "professional",
-          "label": "Professional/Technical Fees (194J) — 10%"
+          "label": "Professional/Technical Fees (194J) \u2014 10%"
         },
         {
           "value": "rent",
-          "label": "Rent — Plant/Machinery (194I) — 2%"
+          "label": "Rent \u2014 Plant/Machinery (194I) \u2014 2%"
         },
         {
           "value": "rent-property",
-          "label": "Rent — Property (194IB) — 5%"
+          "label": "Rent \u2014 Property (194IB) \u2014 5%"
         },
         {
           "value": "contractor",
-          "label": "Contractor/Sub-contractor (194C) — 1%"
+          "label": "Contractor/Sub-contractor (194C) \u2014 1%"
         },
         {
           "value": "commission",
-          "label": "Commission/Brokerage (194H) — 5%"
+          "label": "Commission/Brokerage (194H) \u2014 5%"
         },
         {
           "value": "interest",
-          "label": "Interest other than bank (194A) — 10%"
+          "label": "Interest other than bank (194A) \u2014 10%"
         }
       ]
     }
@@ -72,7 +72,7 @@
     },
     {
       "name": "View instant results",
-      "text": "Results update in real time as you type — no submit button needed."
+      "text": "Results update in real time as you type \u2014 no submit button needed."
     },
     {
       "name": "Explore breakdown",
@@ -90,7 +90,7 @@
     },
     {
       "q": "What is the TDS rate on professional fees in 2026-27?",
-      "a": "TDS on professional/technical fees (Section 194J) is 10% for professionals and 2% for technical services. This applies when the payment exceeds ₹30,000 in a financial year. Freelancers and consultants receiving professional income will have 10% TDS deducted."
+      "a": "TDS on professional/technical fees (Section 194J) is 10% for professionals and 2% for technical services. This applies when the payment exceeds \u20b930,000 in a financial year. Freelancers and consultants receiving professional income will have 10% TDS deducted."
     },
     {
       "q": "How do I check TDS credited to my account?",
@@ -111,22 +111,18 @@
   ],
   "examples": [
     {
-      "heading": "Freelancer invoicing ₹1 lakh for professional services",
-      "text": "A freelancer billing ₹1 lakh for professional services has ₹10,000 TDS deducted (10% under 194J). The client pays ₹90,000 net. The freelancer claims ₹10,000 TDS credit while filing ITR and gets a refund if their actual tax liability is lower."
+      "heading": "Freelancer invoicing \u20b91 lakh for professional services",
+      "text": "A freelancer billing \u20b91 lakh for professional services has \u20b910,000 TDS deducted (10% under 194J). The client pays \u20b990,000 net. The freelancer claims \u20b910,000 TDS credit while filing ITR and gets a refund if their actual tax liability is lower."
     },
     {
-      "heading": "Rent payment of ₹50,000/month",
-      "text": "For monthly rent above ₹50,000, the tenant must deduct 5% TDS (Section 194IB) in the last month or when vacating. On ₹6 lakh annual rent: TDS = ₹30,000, deposited once using Form 26QC."
+      "heading": "Rent payment of \u20b950,000/month",
+      "text": "For monthly rent above \u20b950,000, the tenant must deduct 5% TDS (Section 194IB) in the last month or when vacating. On \u20b96 lakh annual rent: TDS = \u20b930,000, deposited once using Form 26QC."
     }
   ],
   "related": [
     {
       "title": "Advance Tax Calculator",
       "url": "/india/advance-tax-calculator/"
-    },
-    {
-      "title": "TDS on FD Calculator",
-      "url": "/india/tds-on-fd-calculator/"
     },
     {
       "title": "TDS on Salary Calculator",

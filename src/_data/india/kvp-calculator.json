@@ -1,18 +1,18 @@
 {
   "id": "kvp-calculator",
   "schema": {
-    "appName": "KVP Calculator — Kisan Vikas Patra",
+    "appName": "KVP Calculator \u2014 Kisan Vikas Patra",
     "appDescription": "Calculate KVP maturity value and doubling period. Current KVP interest rate is 7.5% p.a. with 115-month doubling period. Issued at post offices."
   },
   "inputs": [
     {
       "id": "kvp-principal",
-      "label": "Investment Amount (₹)",
+      "label": "Investment Amount (\u20b9)",
       "min": 1000,
       "max": 100000000,
       "step": 1000,
       "value": 100000,
-      "hint": "Minimum ₹1,000. No maximum."
+      "hint": "Minimum \u20b91,000. No maximum."
     },
     {
       "id": "kvp-rate",
@@ -46,7 +46,7 @@
     },
     {
       "name": "View instant results",
-      "text": "Results update in real time as you type — no submit button needed."
+      "text": "Results update in real time as you type \u2014 no submit button needed."
     },
     {
       "name": "Explore breakdown",
@@ -85,22 +85,18 @@
   ],
   "examples": [
     {
-      "heading": "₹1 lakh KVP at 7.5% for 115 months",
-      "text": "₹1 lakh invested in KVP at 7.5% p.a. doubles to ₹2 lakh in 115 months (9 years 7 months). Annual compounding gives exact maturity: ₹2,00,000. Effective CAGR confirmation: 7.5%."
+      "heading": "\u20b91 lakh KVP at 7.5% for 115 months",
+      "text": "\u20b91 lakh invested in KVP at 7.5% p.a. doubles to \u20b92 lakh in 115 months (9 years 7 months). Annual compounding gives exact maturity: \u20b92,00,000. Effective CAGR confirmation: 7.5%."
     },
     {
-      "heading": "₹5 lakh KVP — interest income over tenure",
-      "text": "₹5 lakh KVP at 7.5% matures at ₹10 lakh after 115 months, earning ₹5 lakh interest. This interest is taxable at slab rates — at 20% slab, tax on ₹5 lakh is ₹1,04,000 (with cess)."
+      "heading": "\u20b95 lakh KVP \u2014 interest income over tenure",
+      "text": "\u20b95 lakh KVP at 7.5% matures at \u20b910 lakh after 115 months, earning \u20b95 lakh interest. This interest is taxable at slab rates \u2014 at 20% slab, tax on \u20b95 lakh is \u20b91,04,000 (with cess)."
     }
   ],
   "related": [
     {
       "title": "NSC Calculator",
       "url": "/india/nsc-calculator/"
-    },
-    {
-      "title": "Post Office TD Calculator",
-      "url": "/india/post-office-td-calculator/"
     },
     {
       "title": "FD Calculator",

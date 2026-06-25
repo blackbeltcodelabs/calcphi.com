@@ -7,7 +7,7 @@
   "inputs": [
     {
       "id": "gst-amount",
-      "label": "Base Amount (₹)",
+      "label": "Base Amount (\u20b9)",
       "min": 0,
       "max": 100000000,
       "step": 100,
@@ -68,7 +68,7 @@
     },
     {
       "name": "View instant results",
-      "text": "Results update in real time as you type — no submit button needed."
+      "text": "Results update in real time as you type \u2014 no submit button needed."
     },
     {
       "name": "Explore breakdown",
@@ -90,7 +90,7 @@
     },
     {
       "q": "Do I need to register for GST?",
-      "a": "GST registration is mandatory for businesses with annual turnover above ₹40 lakh (₹20 lakh for special category states). Service providers must register above ₹20 lakh turnover. E-commerce sellers must register regardless of turnover."
+      "a": "GST registration is mandatory for businesses with annual turnover above \u20b940 lakh (\u20b920 lakh for special category states). Service providers must register above \u20b920 lakh turnover. E-commerce sellers must register regardless of turnover."
     },
     {
       "q": "Is the GST Calculator free?",
@@ -108,18 +108,14 @@
   "examples": [
     {
       "heading": "Restaurant bill calculation (18% GST)",
-      "text": "A restaurant bill of ₹2,000 attracts 18% GST = ₹360 (CGST ₹180 + SGST ₹180). Total payable: ₹2,360. AC restaurants charge 18%; non-AC restaurants up to ₹7,500 turnover threshold charge 5% GST."
+      "text": "A restaurant bill of \u20b92,000 attracts 18% GST = \u20b9360 (CGST \u20b9180 + SGST \u20b9180). Total payable: \u20b92,360. AC restaurants charge 18%; non-AC restaurants up to \u20b97,500 turnover threshold charge 5% GST."
     },
     {
       "heading": "Construction service (18% GST)",
-      "text": "Construction service costing ₹10 lakh attracts 18% GST = ₹1.8 lakh. Total invoice: ₹11.8 lakh. Note: affordable housing (under ₹45 lakh) attracts concessional 1% GST under specified schemes."
+      "text": "Construction service costing \u20b910 lakh attracts 18% GST = \u20b91.8 lakh. Total invoice: \u20b911.8 lakh. Note: affordable housing (under \u20b945 lakh) attracts concessional 1% GST under specified schemes."
     }
   ],
   "related": [
-    {
-      "title": "Reverse GST Calculator",
-      "url": "/india/gst-reverse-calculator/"
-    },
     {
       "title": "TDS Calculator",
       "url": "/india/tds-calculator/"

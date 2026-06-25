@@ -2,12 +2,12 @@
   "id": "real-estate-roi",
   "schema": {
     "appName": "Real Estate ROI Calculator India",
-    "appDescription": "Calculate total return on investment from a property — combining capital appreciation and rental income. See annualised ROI and compare with other asset classes."
+    "appDescription": "Calculate total return on investment from a property \u2014 combining capital appreciation and rental income. See annualised ROI and compare with other asset classes."
   },
   "inputs": [
     {
       "id": "rer-buy",
-      "label": "Purchase Price (₹)",
+      "label": "Purchase Price (\u20b9)",
       "min": 500000,
       "max": 500000000,
       "step": 100000,
@@ -15,7 +15,7 @@
     },
     {
       "id": "rer-sell",
-      "label": "Expected Sale Price (₹)",
+      "label": "Expected Sale Price (\u20b9)",
       "min": 500000,
       "max": 500000000,
       "step": 100000,
@@ -31,7 +31,7 @@
     },
     {
       "id": "rer-rent",
-      "label": "Monthly Rental Income (₹)",
+      "label": "Monthly Rental Income (\u20b9)",
       "min": 0,
       "max": 500000,
       "step": 1000,
@@ -40,7 +40,7 @@
     },
     {
       "id": "rer-expenses",
-      "label": "Monthly Expenses (₹)",
+      "label": "Monthly Expenses (\u20b9)",
       "min": 0,
       "max": 100000,
       "step": 500,
@@ -96,11 +96,11 @@
   "faq": [
     {
       "q": "What is a good real estate ROI in India?",
-      "a": "Total ROI (capital appreciation + rental yield) for residential property in India: metro cities 9–12% p.a. over 10–20 years, Tier 2 cities 10–14%. But these are gross returns — deduct capital gains tax, maintenance, property tax, and broker fees for net return. Compare with Nifty 50 returning 13–15% CAGR historically."
+      "a": "Total ROI (capital appreciation + rental yield) for residential property in India: metro cities 9\u201312% p.a. over 10\u201320 years, Tier 2 cities 10\u201314%. But these are gross returns \u2014 deduct capital gains tax, maintenance, property tax, and broker fees for net return. Compare with Nifty 50 returning 13\u201315% CAGR historically."
     },
     {
       "q": "How is capital gains tax calculated on property sale?",
-      "a": "Holding ≤2 years: STCG (short-term capital gain) taxed at income slab rate. Holding >2 years: LTCG at 12.5% (no indexation) from Budget 2024, or optional 20% with indexation. Indexed cost = purchase price × (CII of sale year / CII of purchase year). Gain reinvested in new property or NHAI/REC bonds within 6 months qualifies for Section 54/54EC exemption."
+      "a": "Holding \u22642 years: STCG (short-term capital gain) taxed at income slab rate. Holding >2 years: LTCG at 12.5% (no indexation) from Budget 2024, or optional 20% with indexation. Indexed cost = purchase price \u00d7 (CII of sale year / CII of purchase year). Gain reinvested in new property or NHAI/REC bonds within 6 months qualifies for Section 54/54EC exemption."
     },
     {
       "q": "Should I include home loan interest in real estate ROI calculation?",
@@ -121,19 +121,15 @@
   ],
   "examples": [
     {
-      "heading": "₹50 lakh property sold at ₹1 crore after 10 years",
-      "text": "Capital gain: ₹50 lakh. Rental income (₹15,000/month net for 10 years): ₹18 lakh. Total return: ₹68 lakh on ₹50 lakh investment. ROI: 136% total, CAGR ≈ 9.1% p.a. After LTCG tax (12.5% on ₹50 lakh = ₹6.25 lakh): net return ≈ 8.4% CAGR."
+      "heading": "\u20b950 lakh property sold at \u20b91 crore after 10 years",
+      "text": "Capital gain: \u20b950 lakh. Rental income (\u20b915,000/month net for 10 years): \u20b918 lakh. Total return: \u20b968 lakh on \u20b950 lakh investment. ROI: 136% total, CAGR \u2248 9.1% p.a. After LTCG tax (12.5% on \u20b950 lakh = \u20b96.25 lakh): net return \u2248 8.4% CAGR."
     },
     {
-      "heading": "Leveraged purchase — 80% loan",
-      "text": "₹50 lakh property, ₹10 lakh down payment (80% loan). Appreciation to ₹1 crore in 10 years: capital gain ₹50 lakh on ₹10 lakh invested = 500% gain (leveraged ROI). But subtract total interest paid (~₹40 lakh) = net ₹10 lakh gain on ₹10 lakh investment = moderate unleveraged return."
+      "heading": "Leveraged purchase \u2014 80% loan",
+      "text": "\u20b950 lakh property, \u20b910 lakh down payment (80% loan). Appreciation to \u20b91 crore in 10 years: capital gain \u20b950 lakh on \u20b910 lakh invested = 500% gain (leveraged ROI). But subtract total interest paid (~\u20b940 lakh) = net \u20b910 lakh gain on \u20b910 lakh investment = moderate unleveraged return."
     }
   ],
   "related": [
-    {
-      "title": "Rental Yield Calculator",
-      "url": "/india/rental-yield-calculator/"
-    },
     {
       "title": "Rent vs Buy Calculator",
       "url": "/india/rent-vs-buy-calculator/"

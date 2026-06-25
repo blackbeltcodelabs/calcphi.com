@@ -1,13 +1,13 @@
 {
   "id": "mf-returns",
   "schema": {
-    "appName": "Mutual Fund Returns Calculator — Absolute & CAGR",
+    "appName": "Mutual Fund Returns Calculator \u2014 Absolute & CAGR",
     "appDescription": "Calculate absolute returns, CAGR, and money multiplier for any mutual fund. Enter NAV at purchase and current NAV to see your fund performance."
   },
   "inputs": [
     {
       "id": "nav-start",
-      "label": "Purchase NAV (₹)",
+      "label": "Purchase NAV (\u20b9)",
       "min": 0.01,
       "max": 10000,
       "step": 0.01,
@@ -15,7 +15,7 @@
     },
     {
       "id": "nav-end",
-      "label": "Current NAV (₹)",
+      "label": "Current NAV (\u20b9)",
       "min": 0.01,
       "max": 10000,
       "step": 0.01,
@@ -31,7 +31,7 @@
     },
     {
       "id": "mf-dividends",
-      "label": "Dividends Received (₹)",
+      "label": "Dividends Received (\u20b9)",
       "min": 0,
       "max": 1000000,
       "step": 100,
@@ -75,7 +75,7 @@
   "faq": [
     {
       "q": "What is the difference between absolute return and CAGR?",
-      "a": "Absolute return: total % gain from start to finish (e.g., 85% if NAV went from 100 to 185). CAGR: annualised return that accounts for time — 85% over 5 years = 13.1% CAGR. CAGR is the correct metric to compare funds over different periods."
+      "a": "Absolute return: total % gain from start to finish (e.g., 85% if NAV went from 100 to 185). CAGR: annualised return that accounts for time \u2014 85% over 5 years = 13.1% CAGR. CAGR is the correct metric to compare funds over different periods."
     },
     {
       "q": "How do I find the NAV of a mutual fund?",
@@ -83,7 +83,7 @@
     },
     {
       "q": "What is a good CAGR for equity mutual funds in India?",
-      "a": "Index funds (Nifty 50): 12–15% CAGR over 10+ years. Actively managed large-cap: 12–16%. Mid-cap: 14–18%. Small-cap: 15–20% (with higher volatility). Debt funds: 6–8%. Always compare against the benchmark index over the same period — if the fund doesn't beat its benchmark, switch to an index fund."
+      "a": "Index funds (Nifty 50): 12\u201315% CAGR over 10+ years. Actively managed large-cap: 12\u201316%. Mid-cap: 14\u201318%. Small-cap: 15\u201320% (with higher volatility). Debt funds: 6\u20138%. Always compare against the benchmark index over the same period \u2014 if the fund doesn't beat its benchmark, switch to an index fund."
     },
     {
       "q": "Is the Mutual Fund Returns Calculator free?",
@@ -101,21 +101,17 @@
   "examples": [
     {
       "heading": "NAV 100 to 185 in 5 years",
-      "text": "Absolute return: 85%. CAGR: (185/100)^(1/5) - 1 = 13.1% p.a. Money multiplier: 1.85×. This outperforms the Nifty 50 historical average of 12% — good performance."
+      "text": "Absolute return: 85%. CAGR: (185/100)^(1/5) - 1 = 13.1% p.a. Money multiplier: 1.85\u00d7. This outperforms the Nifty 50 historical average of 12% \u2014 good performance."
     },
     {
       "heading": "NAV 150 to 180 in 2 years",
-      "text": "Absolute return: 20%. CAGR: (180/150)^(1/2) - 1 = 9.5% p.a. Money multiplier: 1.2×. Underperforms Nifty 50. Consider switching to an index fund if consistent underperformance."
+      "text": "Absolute return: 20%. CAGR: (180/150)^(1/2) - 1 = 9.5% p.a. Money multiplier: 1.2\u00d7. Underperforms Nifty 50. Consider switching to an index fund if consistent underperformance."
     }
   ],
   "related": [
     {
       "title": "CAGR Calculator",
       "url": "/india/cagr-calculator/"
-    },
-    {
-      "title": "NAV Calculator",
-      "url": "/india/nav-calculator/"
     },
     {
       "title": "Direct vs Regular MF",

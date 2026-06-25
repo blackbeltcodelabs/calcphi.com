@@ -37,13 +37,9 @@
 <meta name="twitter:description" content="RD and FD have the same rate but different returns. See why FD earns more interest and when RD makes more sense for monthly savers in India 2026.">
 <meta name="twitter:image" content="https://www.calcphi.com/assets/images/og/calcphi-default.png">
 
-<!-- Hreflang — auto-generated from market + permalink -->
-
-<link rel="alternate" hreflang="en-in"    href="https://www.calcphi.com/india/">
-<link rel="alternate" hreflang="en-au"    href="https://www.calcphi.com/australia/">
-<link rel="alternate" hreflang="x-default" href="https://www.calcphi.com/">
-
-
+<!-- Hreflang — India only -->
+<link rel="alternate" hreflang="en-in" href="https://www.calcphi.com/india/blog/rd-vs-fd/">
+<link rel="alternate" hreflang="x-default" href="https://www.calcphi.com/india/">
 
 <!-- Language -->
 <meta name="language" content="en">
@@ -94,22 +90,15 @@
       <!-- Primary nav -->
       
       <nav class="cp-nav" aria-label="Primary navigation">
-        <a id="nav-calc-link"
-           href="/india/"
-           aria-current="true">
+        <a href="/india/"
+           >
           Calculators
         </a>
-        <a href="/markets/"
-           >
-          Markets
-        </a>
-        <a id="nav-blog-link"
-           href="/india/blog/"
+        <a href="/india/blog/"
            aria-current="page">
           Blog
         </a>
-        <a id="nav-help-link"
-           href="/india/help/"
+        <a href="/india/help/"
            >
           Help
         </a>
@@ -136,20 +125,6 @@
         <kbd class="cp-search-kbd">⌘K</kbd>
       </button>
 
-      <!-- Market picker -->
-      <details class="cp-market">
-        <summary aria-label="Choose market">
-          <span class="cp-market-label">🌐 Select Country</span>
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <polyline points="6 9 12 15 18 9"/>
-          </svg>
-        </summary>
-        <div class="cp-market-dropdown">
-          <a href="/australia/" data-market-code="AU">🇦🇺 <strong>Australia</strong> · AUD</a>
-          <a href="/india/" data-market-code="IN">🇮🇳 <strong>India</strong> · INR</a>
-        </div>
-      </details>
-
       <!-- Mobile toggle -->
       <button class="cp-mobile-toggle" aria-label="Toggle navigation" id="nav-toggle" aria-expanded="false" aria-controls="cp-mobile-nav">
         <span class="cp-ham">
@@ -161,16 +136,11 @@
 
     <!-- Mobile nav (hidden by default) -->
     <nav id="cp-mobile-nav" class="cp-mobile-nav" aria-label="Mobile navigation" hidden>
-      <a id="mob-calc-link" href="/india/">Calculators</a>
-      <a href="/markets/">Markets</a>
-      <a id="mob-blog-link" href="/india/blog/">Blog</a>
-      <a id="mob-help-link" href="/india/help/">Help</a>
+      <a href="/india/">Calculators</a>
+      <a href="/india/blog/">Blog</a>
+      <a href="/india/help/">Help</a>
       <a href="/about/">About</a>
       <a href="/contact/">Contact</a>
-      <div class="cp-mobile-nav__markets">
-        <a href="/australia/" data-market-code="AU">🇦🇺 Australia</a>
-        <a href="/india/" data-market-code="IN">🇮🇳 India</a>
-      </div>
     </nav>
   </header>
 </div>
@@ -186,48 +156,6 @@
       else { nav.setAttribute('hidden', ''); btn.setAttribute('aria-expanded', 'false'); }
     });
   }
-
-  // Dynamic nav links — rewrite Calculators, Blog, Help based on detected market
-  (function() {
-    var path = window.location.pathname;
-    var market = null;
-    if (path.startsWith('/australia/')) market = 'AU';
-    else if (path.startsWith('/india/')) market = 'IN';
-    if (market) {
-      try { localStorage.setItem('cp_market', market); } catch(e) {}
-    } else {
-      try { market = localStorage.getItem('cp_market'); } catch(e) {}
-    }
-
-    // Map each nav link to its market-specific URL
-    var navMap = {
-      calc: { AU: '/australia/', IN: '/india/' },
-      blog: { AU: '/australia/blog/', IN: '/india/blog/' },
-      help: { AU: '/australia/help/', IN: '/india/help/' }
-    };
-
-    function setHref(id, url) {
-      var el = document.getElementById(id);
-      if (el && url) el.href = url;
-    }
-
-    if (market) {
-      setHref('nav-calc-link', navMap.calc[market]);
-      setHref('nav-blog-link', navMap.blog[market]);
-      setHref('nav-help-link', navMap.help[market]);
-      setHref('mob-calc-link', navMap.calc[market]);
-      setHref('mob-blog-link', navMap.blog[market]);
-      setHref('mob-help-link', navMap.help[market]);
-    }
-
-    // Persist market on dropdown link clicks and immediately update nav links
-    document.querySelectorAll('[data-market-code]').forEach(function(el) {
-      el.addEventListener('click', function() {
-        var code = el.getAttribute('data-market-code');
-        try { localStorage.setItem('cp_market', code); } catch(e) {}
-      });
-    });
-  })();
 })();
 </script>
 
@@ -437,7 +365,7 @@
         </tr>
       </tbody>
     </table>
-    <p>You can run this comparison yourself using <a href="/india/fd-vs-rd-calculator/">CalcPhi's FD vs RD Comparison Calculator</a>, which lets you plug in any amount, rate, and tenure to see both outcomes side by side.</p>
+    <p>You can run this comparison yourself using <a href="/india/fd-calculator/">CalcPhi's FD vs RD Comparison Calculator</a>, which lets you plug in any amount, rate, and tenure to see both outcomes side by side.</p>
 
     <h2>So Why Does Anyone Open an RD?</h2>
     <p>If FD always earns more at the same rate, why is RD one of the most popular savings products in India? The answer is simple: most people do not have ₹1,20,000 sitting in their savings account waiting to be invested. They are earning ₹40,000–₹60,000 a month in salary and trying to save a portion of that each month.</p>
@@ -447,10 +375,10 @@
     <h2>When FD Is Clearly the Better Choice</h2>
     <p>There are situations where FD is almost always the right answer:</p>
     <p>You have received a bonus, a gratuity payout, proceeds from selling an asset, or an inheritance — any kind of lump sum that you do not need immediately. Putting that into an FD ensures the entire amount earns interest from Day 1 instead of sitting in a low-yield savings account while you decide what to do with it.</p>
-    <p>You are a retiree or senior citizen managing a corpus. Banks offer an additional 0.25–0.50% interest on FDs for senior citizens (60+), making the effective rate even more attractive. <a href="/india/senior-citizen-fd-calculator/">CalcPhi's Senior Citizen FD Calculator</a> computes the exact maturity amount including the senior rate boost.</p>
+    <p>You are a retiree or senior citizen managing a corpus. Banks offer an additional 0.25–0.50% interest on FDs for senior citizens (60+), making the effective rate even more attractive. <a href="/india/fd-calculator/">CalcPhi's Senior Citizen FD Calculator</a> computes the exact maturity amount including the senior rate boost.</p>
     <p>You want to claim the Section 80C deduction. A 5-year Tax Saver FD qualifies for deduction up to ₹1.5 lakh under Section 80C of the Income Tax Act. Recurring Deposits do not qualify for any such deduction, regardless of tenure.</p>
     <blockquote style="border-left: 4px solid var(--color-accent); margin: 1.5rem 0; padding: 0.75rem 1.25rem; background: var(--color-muted); border-radius: 0 var(--radius-md) var(--radius-md) 0;">
-      <p style="margin:0;"><strong>Want to know your exact FD maturity amount after tax?</strong> Use <a href="/india/tds-on-fd-calculator/">CalcPhi's TDS on FD Calculator</a> to see how much TDS the bank will deduct and what you actually take home.</p>
+      <p style="margin:0;"><strong>Want to know your exact FD maturity amount after tax?</strong> Use <a href="/india/tds-calculator/">CalcPhi's TDS on FD Calculator</a> to see how much TDS the bank will deduct and what you actually take home.</p>
     </blockquote>
 
     <h2>When RD Is the Right Tool</h2>
@@ -460,7 +388,7 @@
 
     <h2>Post Office RD: The Often-Overlooked Option</h2>
     <p>The Post Office Recurring Deposit scheme currently offers 6.7% per annum, compounded quarterly. It comes with sovereign guarantee (backed by the Government of India rather than just DICGC bank insurance), and premature withdrawal is allowed after 3 years without a full penalty.</p>
-    <p>For conservative savers who want a government-backed product, the Post Office RD is worth comparing alongside bank RDs. <a href="/india/post-office-rd-calculator/">CalcPhi's Post Office RD Calculator</a> gives you the exact maturity value under this scheme.</p>
+    <p>For conservative savers who want a government-backed product, the Post Office RD is worth comparing alongside bank RDs. <a href="/india/rd-calculator/">CalcPhi's Post Office RD Calculator</a> gives you the exact maturity value under this scheme.</p>
 
     <h2>Tax Treatment: RD and FD Are Identical</h2>
     <p>This is a common misconception worth clearing up. Interest earned on both RDs and FDs is treated as "Income from Other Sources" under the Income Tax Act and is fully taxable at your applicable slab rate.</p>
@@ -555,7 +483,7 @@
       </div>
       <div class="faq-item">
         <h3 class="faq-q">Should I close my RD early to open an FD?</h3>
-        <p class="faq-a">Generally, no. The premature withdrawal penalty on an RD (usually 1–2% rate reduction) plus the administrative hassle rarely justifies switching unless there is a substantial rate difference between your RD rate and available FD rates. Run the actual numbers using <a href="/india/fd-vs-rd-calculator/">CalcPhi's FD vs RD Calculator</a> before making that decision.</p>
+        <p class="faq-a">Generally, no. The premature withdrawal penalty on an RD (usually 1–2% rate reduction) plus the administrative hassle rarely justifies switching unless there is a substantial rate difference between your RD rate and available FD rates. Run the actual numbers using <a href="/india/fd-calculator/">CalcPhi's FD vs RD Calculator</a> before making that decision.</p>
       </div>
     </div>
 
@@ -590,22 +518,18 @@
   <div class="container">
     <div class="cp-footer__grid">
 
-      <!-- Col 1: Brand — always shown, content varies by market -->
+      <!-- Col 1: Brand -->
       <div class="cp-footer__brand">
         <a href="/" class="cp-logo" aria-label="CalcPhi">
           <span class="cp-logo-tile">φ</span>
           <span class="cp-logo-wm">Calc<em>Phi</em></span>
         </a>
-        
-        <p class="cp-footer__desc">Financial calculators built for India. No login required.</p>
+        <p class="cp-footer__desc">Free financial calculators built for India. No login required.</p>
         <div class="cp-footer__markets">
           <a href="/india/" class="cp-footer__mchip cp-footer__mchip--active" data-market-code="IN">🇮🇳 India</a>
         </div>
-        <a href="/markets/" class="cp-footer__other-markets">View all markets →</a>
-        
       </div>
 
-      
       
 
       <div class="cp-footer__col">
@@ -615,7 +539,7 @@
         <a href="/india/lumpsum-calculator/">Lumpsum Calculator</a>
         <a href="/india/elss-calculator/">ELSS Calculator</a>
         <a href="/india/cagr-calculator/">CAGR Calculator</a>
-        <a href="/india/#mutual-funds" class="cp-footer__view-all">All 15 investment tools →</a>
+        <a href="/india/#mutual-funds" class="cp-footer__view-all">View all investment tools →</a>
       </div>
 
       <div class="cp-footer__col">
@@ -625,7 +549,7 @@
         <a href="/india/income-tax-calculator/">Income Tax</a>
         <a href="/india/hra-calculator/">HRA Calculator</a>
         <a href="/india/capital-gains-calculator/">Capital Gains Tax</a>
-        <a href="/india/#loans" class="cp-footer__view-all">All 31 loan &amp; tax tools →</a>
+        <a href="/india/#loans" class="cp-footer__view-all">View all loan &amp; tax tools →</a>
       </div>
 
       <div class="cp-footer__col">
@@ -635,19 +559,17 @@
         <a href="/india/nps-calculator/">NPS Calculator</a>
         <a href="/india/retirement-corpus-calculator/">Retirement Corpus</a>
         <a href="/india/ssy-calculator/">SSY Calculator</a>
-        <a href="/india/#government" class="cp-footer__view-all">All 35 savings &amp; retirement tools →</a>
+        <a href="/india/#government" class="cp-footer__view-all">View all savings &amp; retirement tools →</a>
       </div>
 
       <div class="cp-footer__col">
         <div class="cp-footer__head">Company</div>
         <a href="/about/">About</a>
-        <a href="/india/authors/">India Authors</a>
+        <a href="/india/authors/">Authors</a>
         <a href="/india/blog/">Blog</a>
         <a href="/contact/">Contact</a>
         <a href="/privacy/">Privacy</a>
       </div>
-
-      
 
     </div>
 
@@ -656,15 +578,12 @@
     <div class="cp-footer__bottom">
       <p class="cp-footer__disclaimer">
         CalcPhi calculators are for educational and estimation purposes only. Results are not financial advice.
-        
-        For India: mutual fund investments are subject to market risks — consult a SEBI-registered advisor.
-        
+        Mutual fund investments are subject to market risks — consult a SEBI-registered advisor before making financial decisions.
       </p>
       <p class="cp-footer__copy">&copy; 2026 CalcPhi. All rights reserved.</p>
     </div>
   </div>
 </footer>
-
 
   <script src="/assets/js/geo.js" defer></script>
   <script src="/assets/js/search.js" defer></script>
