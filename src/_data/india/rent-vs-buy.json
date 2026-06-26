@@ -1,33 +1,33 @@
 {
   "id": "rent-vs-buy",
   "schema": {
-    "appName": "Rent vs Buy Property Calculator India",
-    "appDescription": "Compare renting vs buying a home in India. Calculate break-even point, total cost of ownership, and wealth difference over 20 years."
+    "appName": "Rent vs Buy Calculator India — Real Cost Comparison 2026",
+    "appDescription": "Compare the true cost of renting vs buying a property in India — accounting for home loan EMI, stamp duty, maintenance, property appreciation, and the opportunity cost of the down payment. Price-to-rent ratio above 20× annual rent typically favours renting in Indian metro cities."
   },
   "inputs": [
     {
       "id": "rvb-price",
-      "label": "Property Price (\u20b9)",
+      "label": "Property Price (₹)",
       "min": 1000000,
       "max": 500000000,
-      "step": 100000,
-      "value": 8000000
+      "step": 500000,
+      "value": 10000000
     },
     {
       "id": "rvb-down",
-      "label": "Down Payment (\u20b9)",
-      "min": 0,
-      "max": 100000000,
-      "step": 100000,
-      "value": 1600000
+      "label": "Down Payment (%)",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "value": 20
     },
     {
       "id": "rvb-loan-rate",
-      "label": "Home Loan Interest Rate (% p.a.)",
-      "min": 5,
+      "label": "Home Loan Interest Rate (%)",
+      "min": 7,
       "max": 15,
-      "step": 0.1,
-      "value": 8.5
+      "step": 0.25,
+      "value": 9
     },
     {
       "id": "rvb-tenure",
@@ -39,23 +39,23 @@
     },
     {
       "id": "rvb-appreciation",
-      "label": "Annual Property Appreciation (%)",
-      "min": 0,
-      "max": 20,
+      "label": "Expected Property Appreciation (%/year)",
+      "min": 2,
+      "max": 15,
       "step": 0.5,
       "value": 6
     },
     {
       "id": "rvb-rent",
-      "label": "Equivalent Monthly Rent (\u20b9)",
-      "min": 1000,
-      "max": 500000,
+      "label": "Monthly Rent for Equivalent Flat (₹)",
+      "min": 5000,
+      "max": 5000000,
       "step": 1000,
       "value": 25000
     },
     {
       "id": "rvb-invest-return",
-      "label": "Investment Return if Renting (% p.a.)",
+      "label": "Investment Return on Down Payment (%/year)",
       "min": 5,
       "max": 20,
       "step": 0.5,
@@ -65,88 +65,114 @@
   "outputs": [
     {
       "id": "rvb-emi",
-      "label": "Monthly EMI if Buying"
+      "label": "Monthly Home Loan EMI"
     },
     {
       "id": "rvb-future-price",
-      "label": "Property Value After 20 Years"
+      "label": "Property Value in 20 Years"
     },
     {
       "id": "rvb-buy-net",
-      "label": "Net Worth if Buying After 20 Years"
+      "label": "Net Cost of Buying (20 Years)"
     },
     {
       "id": "rvb-rent-net",
-      "label": "Net Worth if Renting After 20 Years"
+      "label": "Net Cost of Renting (20 Years)"
     },
     {
       "id": "rvb-verdict",
-      "label": "Verdict",
-      "highlight": true
+      "label": "Financial Verdict"
     }
   ],
   "howToSteps": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the Rent vs Buy Calculator."
+      "name": "Enter property price and down payment",
+      "text": "Enter the total property price — the purchase price plus stamp duty and registration (typically 7–9% extra depending on state). Enter down payment as a percentage. Minimum down payment for most home loans: 20% (banks finance up to 80% of agreement value). Actual out-of-pocket is 20% + stamp duty + registration + legal fees — often 27–30% of property price."
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time as you type."
+      "name": "Enter current rent for equivalent property",
+      "text": "Enter the rent you would pay for an equivalent flat in the same location. This is the critical input — a ₹1 crore flat commanding only ₹15,000/month rent has a price-to-rent ratio of 67× (annual rent ₹1.8L vs price ₹1 crore), strongly favouring renting. Be honest about what the equivalent flat rents for."
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown to see numbers over time."
+      "name": "Set appreciation and investment return",
+      "text": "Property appreciation of 6% is a conservative long-run India average — metro city micro-markets vary significantly. Investment return on down payment of 12% reflects long-run equity SIP CAGR (verify at AMFI — past performance does not guarantee future returns). These two rates determine whether ownership or renting + investing wins financially."
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust inputs to compare scenarios and optimise your decision."
+      "name": "Compare net costs and read the verdict",
+      "text": "Net cost of buying: total EMI paid + maintenance + property taxes − property value gained − tax savings. Net cost of renting: total rent paid − down payment invested at 12% growth. The verdict shows which is financially better over the 20-year horizon — but non-financial factors (stability, ownership, freedom to renovate) may override the financial answer."
+    }
+  ],
+  "articleSections": [
+    {
+      "id": "rvb-framework",
+      "heading": "The Real Cost of Buying vs Renting — Price-to-Rent Ratio, Opportunity Cost, and What the EMI Does Not Include",
+      "body": "<p>The rent vs buy decision in India is more complex than comparing monthly rent to monthly EMI. The EMI visible comparison misses three major components: (1) the opportunity cost of the down payment, (2) the recurring ownership costs, and (3) the sunk cost of stamp duty and registration.</p><p><strong>Price-to-Rent (P/R) ratio:</strong> The simplest screening tool. P/R = Property price ÷ Annual rent. Below 15: buying is clearly favourable. 15–20: roughly break-even. 20–25: renting is modestly favourable. Above 25: renting is strongly favourable. Mumbai and Delhi routinely show P/R ratios of 40–60× in desirable micro-markets (verify with current listings). A ₹1.5 crore 2BHK in Mumbai's western suburbs renting for ₹25,000/month has a P/R of 50× — meaning you would pay 50 years' worth of rent to own it. At this P/R, renting and investing the difference almost always wins over 10–15 year horizons.</p><p><strong>True annual ownership cost:</strong> EMI is not the only cost. A ₹1 crore flat with 20% down (₹20L), 9% home loan on ₹80L for 20 years: monthly EMI approximately ₹71,976. But total annual ownership cost: EMI (₹8.64L) + maintenance/society charges (₹20,000–40,000/year in most housing societies) + property tax (0.1–0.5% of guidance value/year — state specific) + home insurance (₹5,000–15,000/year) + periodic renovation (amortised ₹30,000–50,000/year over 10 years). Total annual ownership cost: ₹9.5–10L vs equivalent rent of ₹3L/year (₹25,000/month). The ownership premium is ₹6.5–7L/year in cash outflow above rent.</p><p><strong>Opportunity cost of the down payment:</strong> The ₹20L down payment invested in equity SIP at 12% CAGR grows to ₹19.3L in 10 years and ₹1.93 crore in 20 years. This is the opportunity cost of locking the down payment into property. Every year, equity at 12% vs property at 6% appreciation means the renter's investing advantage compounds. Over a 20-year period, the down payment investment difference alone (ignoring all other costs) is ₹1.93 crore − ₹20L × (1.06)²⁰ = ₹1.93 crore − ₹64L = ₹1.29 crore in the renter's favour. Stamp duty + registration (₹6–9L for a ₹1 crore property) are permanent sunk costs with zero return — only recover if property appreciates significantly more than equity.</p>"
+    },
+    {
+      "id": "rvb-scenarios",
+      "heading": "Three Rent vs Buy Scenarios — High P/R Mumbai Flat, Tier 2 City Where Buying Makes Sense, and the Job-Change Decision",
+      "body": "<h3>Scenario 1: Rohit, ₹1.2 crore 2BHK in Mumbai western suburbs, rent ₹22,000/month</h3><p>Property price: ₹1.2 crore. Annual rent for equivalent: ₹22,000 × 12 = ₹2.64L. P/R ratio: ₹1.2 crore / ₹2.64L = 45.5×. Down payment 20%: ₹24L. Stamp duty + registration in Maharashtra (approximately 6%): ₹7.2L. Total upfront: ₹31.2L. Loan: ₹96L at 9% for 20 years. Monthly EMI: approximately ₹86,376. Annual cash outflow: EMI ₹10.37L + maintenance ₹36,000 + property tax ₹18,000 + insurance ₹8,000 = ₹10.99L. Annual rent: ₹2.64L. If Rohit invests the EMI-rent gap (₹63,500/month at 12% CAGR for 20 years): corpus = ₹62.8 crore — clearly a vastly superior financial outcome versus owning a property worth ₹1.2 crore × (1.06)²⁰ = ₹3.85 crore. Verdict: renting is dramatically superior at this P/R ratio, even accounting for the property's appreciation.</p><h3>Scenario 2: Ananya, ₹40L flat in Coimbatore, rent ₹10,000/month</h3><p>Property price: ₹40L. Annual rent: ₹1.2L. P/R ratio: 33× — still above 20×. Down payment 20%: ₹8L. Stamp duty + registration in Tamil Nadu (approximately 8%): ₹3.2L. Loan: ₹32L at 9% for 20 years. Monthly EMI: approximately ₹28,790. Annual ownership cost: ₹3.45L EMI + ₹24,000 maintenance = ₹3.69L. Rent: ₹1.2L. EMI-rent gap: ₹18,790/month. Invested at 12% for 20 years: approximately ₹18.6 crore — dwarfs the property value of ₹40L × (1.06)²⁰ = ₹1.28 crore. The math still heavily favours renting, even in Tier 2 at a lower P/R. However: in Tier 2 cities, owning provides security, freedom to renovate, and social signalling that may be important to the family. The financial decision must factor in non-financial values. If owning is a strong personal priority and the family can comfortably service the EMI, buying in Tier 2 is a reasonable decision despite financial inferiority.</p><h3>Scenario 3: Priya, considering buying before a potential job change city</h3><p>Priya is 32, in Mumbai, considering a ₹1.5 crore flat. She may move to Bangalore in 3 years if her company offers a transfer. Key consideration: buying, holding 3 years, then selling means: stamp duty (₹9L) + registration (₹1.5L) = ₹10.5L sunk cost; property may appreciate ₹1.5 crore × (1.06)³ = ₹1.79 crore — gain ₹29L. Net after sunk costs: ₹29L − ₹10.5L = ₹18.5L gain before tax and agent fees (1–2% = ₹3L). After short-term capital gains tax (held <2 years) at slab rates, or LTCG at 12.5% with indexation if held 2+ years: gain may be minimal. If she rents and invests ₹40L in equity (down payment + stamp duty avoided) at 12% for 3 years: corpus grows to ₹56.2L — ₹16.2L gain with full liquidity. Buying before a confirmed geographic stay of 5+ years rarely makes financial sense. Minimum recommended tenure for home ownership to break even on transaction costs: 5–7 years.</p>"
+    },
+    {
+      "id": "rvb-tax",
+      "heading": "Tax Benefits of Home Ownership — Section 24(b) Interest Deduction, 80C on Principal, and the New Regime Limitation",
+      "body": "<p><strong>Section 24(b) — Home loan interest deduction:</strong> Under the old tax regime, interest paid on a home loan for a self-occupied property is deductible up to ₹2 lakh per year under Section 24(b). For a let-out property, the full interest is deductible (no cap) but the rental income is added back to taxable income. The ₹2L cap on self-occupied properties is a significant constraint — a ₹96L loan at 9% for 20 years pays approximately ₹8.64L in interest annually in early years. Only ₹2L of this is deductible — the remaining ₹6.64L of annual interest gets no tax benefit. The deduction is worth approximately ₹40,000–60,000/year in tax savings (at 20–30% bracket) — meaningful, but far less than often assumed.</p><p><strong>Section 80C — Principal repayment:</strong> EMI principal repayment qualifies for 80C deduction up to the ₹1.5L annual cap (shared with EPF, PPF, ELSS, insurance, etc.). In the early years of a long-tenor loan, principal repayment is small (in a ₹96L loan at 9%, Year 1 principal repayment is approximately ₹17,000/year — minimal 80C benefit). 80C deduction on principal picks up in later years as the loan amortises, but by then, other 80C instruments may already fill the cap.</p><p><strong>Both 24(b) and 80C are unavailable in the new tax regime.</strong> Under the new tax regime (default from AY 2024-25), Section 24(b) interest deduction and 80C principal deduction are both not available. This substantially reduces the tax advantage of home ownership for the growing majority of taxpayers who have switched to or are defaulting to the new regime. Verify your regime choice and its impact on the rent vs buy analysis at incometax.gov.in.</p><p><strong>Circle rate implications on stamp duty and capital gains:</strong> Stamp duty is payable on the higher of the transaction price or the government-set circle rate (guidance value). If you buy a flat at ₹1.2 crore but the circle rate is ₹1.4 crore, stamp duty is calculated on ₹1.4 crore. When selling, the difference between the circle rate and transaction price is treated as deemed income and taxed as capital gains on the seller and income on the buyer. Always check circle rates before finalising any property transaction.</p>"
+    },
+    {
+      "id": "rvb-mistakes",
+      "heading": "Rent vs Buy Mistakes — Comparing EMI to Rent, Ignoring Opportunity Cost, Treating Property as Investment, and Buying in the Wrong City",
+      "body": "<p><strong>Comparing monthly EMI to monthly rent and declaring buying 'only slightly more'.</strong> The most common error. EMI ₹72,000 vs rent ₹25,000 = 'only ₹47,000 more' per month — this ignores the ₹24L down payment + ₹7L stamp duty + registration locked in, the ownership costs on top of EMI, and the opportunity cost of the down payment. The true comparison must be total cost of ownership vs total cost of renting + investing the difference over the comparison period.</p><p><strong>Treating the home as a financial investment.</strong> A primary residence is consumption — you live in it; it does not generate cash flow. Property appreciation is illiquid until you sell, and selling a primary residence means buying another property at appreciated prices. The wealth effect of property appreciation is real only if you downsize (sell ₹2 crore property, buy ₹80L, pocket ₹1.2 crore) or if you buy for rental income. Comparing property appreciation to equity returns is valid only if the alternative to buying is actually investing — not just spending.</p><p><strong>Buying in a city where tenure is uncertain.</strong> Transaction costs in Indian real estate (stamp duty 5–8%, registration 1%, agent fees 1–2%) total 7–11% of property price. At 6% annual appreciation, 2 years of capital gains (12%) barely covers transaction costs. The break-even tenure for buying to be financially sensible (assuming 6% appreciation vs 12% equity) is typically 7–10 years in most Indian cities. Buying before a 5-year commitment is almost always a financial mistake.</p><p><strong>Ignoring interest rate risk on floating-rate home loans.</strong> Over 90% of Indian home loans are at floating rates (REPO-linked). Rate movement of +1–2% over a 20-year period significantly increases total interest paid. A ₹96L loan at 9% for 20 years: total interest = ₹1.27 crore. At 10%: total interest = ₹1.43 crore. At 11%: ₹1.60 crore. The interest rate assumption is a key sensitivity that is rarely modelled by homebuyers. Build in a 1% upside buffer when calculating EMI affordability.</p>"
     }
   ],
   "faq": [
     {
-      "q": "When does it make sense to buy vs rent in India?",
-      "a": "Buying makes sense when: price-to-rent ratio < 20 (property price < 20\u00d7 annual rent), you plan to stay 7+ years, EMI is less than 40% of income, and property appreciation > home loan rate. Renting makes sense in expensive cities (Mumbai, Bangalore) where rental yield is 2\u20133% but loan rates are 8.5%."
+      "q": "Is it better to rent or buy a house in India in 2026?",
+      "a": "Financially, renting is superior in most Indian metro cities in 2026 because price-to-rent ratios are very high — a ₹1 crore flat renting for ₹18,000–25,000/month has a P/R of 40–55×. At these ratios, investing the down payment and the EMI-rent gap at 12% equity CAGR significantly outperforms property appreciation of 5–7% over 15–20 years. Buying makes more financial sense in Tier 2/3 cities with lower P/R (20–30×), or when you have a confirmed minimum 5-year stay and emotional/stability value from ownership outweighs the financial cost."
     },
     {
-      "q": "What is the price-to-rent ratio in Indian cities?",
-      "a": "Mumbai: 50\u201380\u00d7 (property very expensive relative to rent). Bangalore: 35\u201350\u00d7. Delhi: 40\u201360\u00d7. Pune: 30\u201345\u00d7. Tier 2 cities: 15\u201325\u00d7. A ratio below 20 generally favours buying; above 30 favours renting and investing the down payment."
+      "q": "What is a good price-to-rent ratio for buying property in India?",
+      "a": "Below 15× annual rent: buying is clearly favourable. 15–20×: roughly break-even — buying and renting have similar long-term costs. 20–25×: renting is modestly better financially. Above 25×: renting is strongly favourable — investing the down payment at equity returns will outperform property appreciation. Mumbai and Delhi micro-markets frequently show 40–60× P/R — among the highest globally, strongly indicating that renting is the financially optimal choice in these markets."
     },
     {
-      "q": "Is buying property always a good investment in India?",
-      "a": "Not always. Over long periods, Indian real estate has appreciated at 6\u20138% p.a. in major cities. But equity mutual funds have returned 12\u201315% p.a. over 20 years. The emotional and security value of owning a home is real but hard to quantify. Factor in maintenance (1\u20132% p.a.), property tax, and illiquidity."
+      "q": "What is the opportunity cost of a down payment?",
+      "a": "The down payment invested in equity SIP instead of locked in property generates returns over time. A ₹25L down payment at 12% CAGR grows to: ₹43.5L in 5 years, ₹77.5L in 10 years, ₹2.41 crore in 20 years. Property at 6% appreciation on ₹1 crore grows to: ₹1.34 crore in 5 years, ₹1.79 crore in 10 years, ₹3.21 crore in 20 years (on the full property, not just the down payment). The comparison is complex: down payment invested grows independently while the mortgaged property leverages equity. Model both scenarios over the same horizon with the same assumptions to get a fair comparison."
     },
     {
-      "q": "Is this calculator free?",
-      "a": "Yes, completely free on CalcPhi."
+      "q": "Can I claim tax deductions on a home loan?",
+      "a": "Under the old tax regime: Section 24(b) deduction on home loan interest up to ₹2 lakh/year for self-occupied property; Section 80C deduction on principal repayment within ₹1.5L combined cap. Under the new tax regime (default from AY 2024-25): neither Section 24(b) nor 80C principal repayment deductions are available. Verify your tax regime and applicable deductions at incometax.gov.in. For investors who earn rental income from the property, the full interest is deductible against rental income under the old regime, subject to set-off rules."
     },
     {
-      "q": "Are my inputs stored?",
-      "a": "No. Calculations run in your browser."
+      "q": "How much extra does stamp duty and registration add to property cost?",
+      "a": "Stamp duty and registration are state-specific — there is no single national rate. On a ₹1 crore property: Maharashtra approximately 6% stamp duty + 1% registration = ₹7L total. Karnataka approximately 5.65% stamp duty + 1% registration = ₹6.65L. Tamil Nadu approximately 7% stamp duty + 4% registration = ₹11L (registration calculation differs). Delhi approximately 6%/4% stamp duty (men/women) + ₹30,000–50,000 registration cap = ₹6–6.5L. Always verify with the state registration authority before finalising any transaction. See the Stamp Duty Calculator for state-specific estimates."
     },
     {
-      "q": "Is it mobile-friendly?",
-      "a": "Yes. Works on all modern smartphones."
-    }
-  ],
-  "examples": [
-    {
-      "heading": "\u20b980 lakh flat in Bangalore \u2014 buy or rent?",
-      "text": "Monthly rent for equivalent flat: \u20b925,000. EMI at 8.5% for 20 years on \u20b964 lakh (80%): \u20b955,669. Monthly cost difference: \u20b930,669. Investing \u20b930,669/month at 12% for 20 years = \u20b92.64 crore. Property appreciation (6%): \u20b980 lakh \u2192 \u20b92.57 crore. Very close \u2014 emotional preference decides."
+      "q": "How long should I hold a property for buying to make financial sense?",
+      "a": "Transaction costs (stamp duty 5–8%, registration 1%, agent fees 1–2%) total approximately 7–11% of property price upfront. At 6% annual appreciation, 2 years covers 12% gain — barely above transaction costs. A property must typically be held 5–7 years just to recover transaction costs versus an equivalent equity investment. In most city analyses, the financial break-even for buying vs renting + investing is 7–10 years. Buy only with a confirmed minimum 5-year tenure commitment in the same location."
     },
     {
-      "heading": "Tier 2 city \u2014 buy wins clearly",
-      "text": "\u20b940 lakh property in Pune, monthly rent \u20b912,000, EMI \u20b926,000. Monthly extra for buying: \u20b914,000. At 6% appreciation, property \u2192 \u20b91.28 crore in 20 years. Renting and investing \u20b914,000/month at 12% = \u20b91.2 crore. Buying slightly better \u2014 plus down payment grows separately."
+      "q": "Is renting a waste of money in India?",
+      "a": "No — this is the most persistent real estate myth. Rent is the cost of accommodation, just as interest on a home loan is the cost of borrowing. The difference: rent is a defined monthly cost with no capital at risk; a home loan has interest expense (typically 70–80% of EMI in early years) plus locked capital in the down payment. If the alternative to paying rent is investing the down payment and the EMI-rent gap at market returns, renting + investing consistently outperforms buying in high P/R markets. Renting is only a 'waste' if the renter is not investing the difference — in which case the problem is the lack of investment, not the renting."
+    },
+    {
+      "q": "Does property always appreciate in India?",
+      "a": "No. Property returns vary significantly by city, micro-market, and construction phase. Many peripheral suburban projects in the 2010–2020 period delivered near-zero or negative returns (stalled projects, oversupply, falling circle rates). Mumbai, Bengaluru, and Hyderabad have seen strong appreciation in established residential markets. Ghost town projects in extended suburbs have been wealth destroyers. A blanket assumption of 6–8% annual appreciation is a long-run average — not guaranteed for any specific project or location. Due diligence on the developer, RERA registration, and micro-market fundamentals is essential before purchase."
     }
   ],
   "related": [
     {
       "title": "Stamp Duty Calculator",
-      "url": "/india/stamp-duty-calculator/"
+      "url": "/india/stamp-duty-calculator/",
+      "desc": "Calculate state-specific stamp duty and registration charges on property purchase"
     },
     {
       "title": "Home Loan EMI Calculator",
-      "url": "/india/home-loan-emi-calculator/"
+      "url": "/india/home-loan-emi-calculator/",
+      "desc": "Calculate exact EMI, total interest, and amortisation schedule"
+    },
+    {
+      "title": "SIP Calculator",
+      "url": "/india/sip-calculator/",
+      "desc": "Project what the down payment + EMI-rent gap grows to if invested in equity"
     }
   ]
 }

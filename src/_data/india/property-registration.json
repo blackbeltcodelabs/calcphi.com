@@ -1,104 +1,126 @@
 {
   "id": "property-registration",
   "schema": {
-    "appName": "Property Registration Cost Calculator India",
-    "appDescription": "Calculate total property registration charges — stamp duty, registration fee, legal charges, and all other costs for buying property in India."
+    "appName": "Property Registration Cost Calculator India 2026",
+    "appDescription": "Estimate total property acquisition cost: stamp duty (state-specific, 3–8% — verify at state authority), registration fee (~1%), legal/documentation charges, and GST on under-construction (1%/5% — verify at cbic.gov.in). This calculator uses an illustrative 6% stamp duty placeholder — not a national rate. Verify all rates before any transaction."
   },
   "inputs": [
     {
       "id": "pr-value",
-      "label": "Property Value / Stamp Duty Value (₹)",
-      "min": 100000,
+      "label": "Property Value (₹)",
+      "min": 500000,
       "max": 500000000,
       "step": 100000,
-      "value": 5000000
+      "value": 10000000
     }
   ],
   "outputs": [
     {
       "id": "pr-stamp",
-      "label": "Stamp Duty (6% assumed)"
+      "label": "Stamp Duty (illustrative 6% — verify at state authority)"
     },
     {
       "id": "pr-regn",
-      "label": "Registration Fee (1%)"
+      "label": "Registration Fee (illustrative 1%)"
     },
     {
       "id": "pr-legal",
-      "label": "Legal & Documentation Charges (Est.)"
+      "label": "Legal & Documentation (estimated)"
     },
     {
       "id": "pr-total",
-      "label": "Total Registration Cost",
-      "highlight": true
+      "label": "Estimated Total Acquisition Cost"
     }
   ],
   "howToSteps": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the Property Registration Calculator."
+      "name": "Enter property value — use higher of deal price or circle rate",
+      "text": "Stamp duty and registration are levied on the higher of the actual transaction price or the government-set circle rate (guidance value) for the locality. Always check the circle rate for your specific locality, survey number, and property type at your state's Revenue Department portal before calculating."
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time as you type."
+      "name": "Understand the 6% illustrative stamp duty",
+      "text": "The 6% stamp duty used here is an illustrative placeholder — not a national rate. Actual stamp duty varies significantly by state: Maharashtra 5–6%, Karnataka 3–5.65% (slab-based), Delhi 4–6%, Tamil Nadu 7%, UP 6–7%, Telangana 4%. Use the Stamp Duty Calculator for state-specific estimates, and verify at the official state registration authority before any transaction."
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown to see numbers over time."
+      "name": "Add GST for under-construction properties",
+      "text": "GST of 1% (affordable housing: property up to ₹45L, carpet area limits apply) or 5% (all other under-construction) applies on new property from the builder. No GST on resale of completed property. If your property is under-construction, add the applicable GST to the total cost estimate — verify current GST applicability and definition of affordable housing at cbic.gov.in."
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust inputs to compare scenarios and optimise your decision."
+      "name": "Budget the total and plan funding",
+      "text": "Total property acquisition cost = Agreement price + Stamp duty + Registration + Legal + GST (if applicable). Banks typically finance only the agreement price (up to 80%) — stamp duty, registration, legal, and GST must be funded from own resources. For a ₹1 crore property, plan for ₹20L (down payment) + ₹7–9L (stamp + registration + legal) = ₹27–29L from own funds on closing day."
+    }
+  ],
+  "articleSections": [
+    {
+      "id": "pr-components",
+      "heading": "All Four Cost Components of Property Registration in India — Stamp Duty, Registration Fee, Legal Charges, and GST",
+      "body": "<p>The total cost of acquiring property in India has four distinct components beyond the property price itself. Many buyers budget only for the down payment and overlook these mandatory additional costs — which can add 7–12% to the total acquisition outflow.</p><p><strong>Component 1 — Stamp Duty:</strong> State government tax on the property transaction. Ranges 3–8% by state (no single national rate — verify at your state's registration authority). The tax base is the higher of transaction price or circle rate. This is the single largest transaction cost. It is a sunk cost — you pay it once and recover it only through property appreciation over time. Not financeable through the home loan in most cases.</p><p><strong>Component 2 — Registration Fee:</strong> Paid at the Sub-Registrar's office for registering the sale deed in the buyer's name. Typically 1% of transaction value in most states, often with a maximum cap (Karnataka: ₹50,000; Maharashtra: approximately ₹30,000 for some categories; Tamil Nadu: 4% — higher than most states). Registration creates the public record of ownership — an unregistered sale deed has limited legal enforceability. The sale deed must be presented for registration within the prescribed period after stamp duty payment (typically 4 months — verify).</p><p><strong>Component 3 — Legal and Documentation Charges:</strong> Legal fees for a property lawyer or notary to review the title, draft the sale agreement and sale deed, verify encumbrances, and advise on transaction structure. For residential property: ₹10,000–50,000 for a standard straightforward transaction; ₹50,000–2,00,000 for complex transactions (resale from multiple heirs, disputed title, commercial property). Additional documentation: bank charges for loan processing (0.5–1% of loan amount), property valuation for the bank (₹5,000–15,000), home insurance (₹5,000–15,000/year), society transfer charges (₹10,000–50,000 for resale). These costs are sometimes clubbed under 'miscellaneous' but are real mandatory outflows.</p><p><strong>Component 4 — GST on Under-Construction Property:</strong> GST applies only to new properties purchased from a builder before the Completion Certificate (CC) is issued. Rate: 1% on affordable housing (property value up to ₹45L, carpet area up to 60 sqm in metro, 90 sqm elsewhere — verify current affordable housing definition at cbic.gov.in); 5% on all other under-construction properties. No GST on resale property purchased after CC. GST is calculated on the builder's agreement value — on a ₹1 crore under-construction flat, GST at 5% = ₹5L additional. Buyers of under-construction properties from builders must factor this into the total cost. Verify current GST rates and affordable housing thresholds at cbic.gov.in before purchase.</p>"
+    },
+    {
+      "id": "pr-scenarios",
+      "heading": "Three Property Registration Scenarios — Mumbai Resale Flat, Bengaluru Under-Construction Apartment, and Delhi House",
+      "body": "<h3>Scenario 1: Arjun buys ₹1 crore resale flat in Mumbai (Maharashtra) — male buyer</h3><p>Property value: ₹1,00,00,000. Transaction type: resale (completed property, has Completion Certificate). Stamp duty (Maharashtra, male, 2026): 6% = ₹6,00,000. Metro Cess (Mumbai Metropolitan Region): 1% = ₹1,00,000. Registration fee: 1% of ₹1 crore = ₹1,00,000 (verify maximum cap at igrmaharashtra.gov.in). Legal and documentation: ₹30,000–50,000 (title search, deed drafting, encumbrance certificate). Society transfer charges: ₹25,000 (vary by housing society). GST: ₹0 (resale property, CC already obtained). <strong>Total acquisition cost: approximately ₹8.5–9L above property price.</strong> Arjun must bring ₹20L (20% down payment) + ₹8.5L (transaction costs) = ₹28.5L from own funds on registration day. The home loan covers only the agreement value ₹80L.</p><h3>Scenario 2: Kavitha buys ₹60 lakh under-construction apartment in Bengaluru (Karnataka) — female buyer</h3><p>Property value: ₹60,00,000. Transaction type: under-construction (no CC yet). Stamp duty (Karnataka, slab: above ₹45L = 5.65%): ₹3,39,000. No women buyer concession in Karnataka (verify at kaveri.karnataka.gov.in). Registration fee: 1% capped at ₹50,000 = ₹50,000. Legal and documentation: ₹20,000–35,000. GST: 5% of ₹60L = ₹3,00,000 (property above ₹45L, not affordable housing). Bank loan processing fee: ₹25,000 (approximate). <strong>Total transaction costs above ₹60L property price: approximately ₹7.4L (excluding GST ₹3L).</strong> Total additional outflow: ₹10.4L. Total cash needed on completion: ₹12L (20% down) + ₹10.4L (transaction costs) = ₹22.4L. GST may be payable in installments to the builder — confirm in the agreement.</p><h3>Scenario 3: Sunita buys ₹80 lakh house in Delhi — female buyer</h3><p>Property value: ₹80,00,000. Stamp duty (Delhi, female buyer): 4% = ₹3,20,000 (vs 6% for male = ₹4,80,000 — saving ₹1,60,000). Registration fee: 1% = ₹80,000 (verify current cap at delhiregistration.gov.in). Legal and documentation: ₹25,000–40,000. Society charges/mutation charges: ₹15,000–25,000. GST: ₹0 (assuming resale completed property). <strong>Total transaction costs: approximately ₹4.4L.</strong> Total cash needed: ₹16L (20% down) + ₹4.4L (transaction costs) = ₹20.4L. Sunita saved ₹1.6L versus a male buyer by registering in her own name — a meaningful concession that justifies registering property in a woman's name or jointly where legally practical.</p>"
+    },
+    {
+      "id": "pr-form26qb",
+      "heading": "Form 26QB for Properties Above ₹50 Lakh, Mutation After Registration, and TDS on Property Purchase",
+      "body": "<p><strong>TDS on property purchase above ₹50 lakh (Form 26QB):</strong> Section 194-IA of the Income Tax Act requires the buyer to deduct TDS at 1% of the purchase price on property transactions exceeding ₹50 lakh (including immovable property other than agricultural land). This is the buyer's obligation — the buyer deducts 1% from the payment to the seller and deposits it with the government. How to comply: file Form 26QB online on the TDS TRACES portal (tin.tin.nsdl.com or incometax.gov.in), pay the TDS, and issue Form 16B to the seller. Deadline: TDS must be deposited within 30 days from the end of the month in which TDS was deducted. Failure to deduct or deposit TDS makes the buyer liable for interest + penalty. The seller can claim credit for TDS deducted when filing the income tax return (ITR).</p><p><strong>Mutation after registration:</strong> Registering the sale deed establishes ownership in the Sub-Registrar's records. However, you must also apply for mutation (name transfer) in the Revenue/Municipal records to update the property tax records in your name. Mutation is done at the local municipal corporation (for urban properties) or the Revenue Department (for rural land). Documents needed: registered sale deed, receipt of stamp duty paid, Form 26QB acknowledgment (if applicable), identity proof. Mutation charges: ₹200–5,000 depending on state. Without mutation, you may face issues paying property tax and future transactions — complete mutation within 30–60 days of registration.</p><p><strong>Cost planning for a home purchase — complete checklist:</strong></p><ul><li>Agreement price</li><li>Stamp duty (state-specific, 3–8% on higher of price or circle rate)</li><li>Registration fee (~1%, subject to state cap)</li><li>Metro Cess / surcharges (Maharashtra and a few other states)</li><li>GST at 1% or 5% (under-construction only — verify current threshold at cbic.gov.in)</li><li>Legal fees: title search, deed drafting, encumbrance certificate</li><li>Home loan processing fee (0.5–1% of loan amount)</li><li>Property valuation fee for bank (₹5,000–15,000)</li><li>Home insurance (annual)</li><li>Society transfer charges (resale)</li><li>Mutation charges after registration</li><li>Interior fitting and move-in costs (not a transaction cost but a capital outflow)</li></ul>"
+    },
+    {
+      "id": "pr-mistakes",
+      "heading": "Property Registration Mistakes — Not Checking Circle Rate, Missing 26QB, Delaying Mutation, and Not Verifying Title",
+      "body": "<p><strong>Not checking the circle rate before transacting below market value.</strong> If the agreed purchase price is below the circle rate and this is discovered during registration, stamp duty is calculated on the circle rate — and the difference creates income tax implications for both parties under Sections 50C and 56(2)(x). Buyers sometimes negotiate a split transaction (part cash, part white) believing this saves stamp duty — this is a legally risky practice. If discovered, it results in stamp duty recovery on the full amount plus a penalty of 2–10× the deficit, potential income tax addition, and risk of property attachment. Transact transparently at the circle rate or above.</p><p><strong>Forgetting to file Form 26QB on properties above ₹50 lakh.</strong> This is a statutory TDS obligation of the buyer, not the seller, not the bank. Many first-time buyers are unaware of this requirement. Failure to deduct TDS at 1% and file Form 26QB within the prescribed period results in: interest on late deduction (1.5%/month), interest on late deposit (1.5%/month), and a penalty up to ₹1,00,000. The seller is affected too — the credit for the TDS does not appear in Form 26AS, and the seller cannot claim it when filing ITR. File Form 26QB on the TRACES portal immediately upon payment to the seller.</p><p><strong>Delaying mutation after registration.</strong> Registration establishes legal ownership; mutation updates municipal/revenue records. Without mutation, property tax notices continue to be sent to the previous owner's name — you may miss them and accumulate arrears. Some states require mutation as a prerequisite for future utility connections (water, electricity) in the new owner's name. Complete mutation within 30–60 days of registration to avoid complications. In most states, mutation is a straightforward administrative process requiring the registered sale deed and a formal application.</p><p><strong>Not verifying title before registration.</strong> Thorough title verification (chain of ownership for 30 years, encumbrance certificate from the Sub-Registrar's office showing mortgage and lien history, khata certificate from the municipal authority, RERA registration for new projects) is essential before committing to a purchase. Title disputes, encumbrances, and undisclosed liabilities discovered after registration are expensive to resolve and can render the property unsaleable. A property lawyer's fee of ₹20,000–50,000 for a title search is mandatory due diligence — not an optional expense.</p>"
     }
   ],
   "faq": [
     {
-      "q": "What documents are needed for property registration?",
-      "a": "Required: Sale deed (original), PAN card, Aadhaar card, passport photos (buyer + seller), property card/7-12 extract, society NOC, encumbrance certificate, tax receipts, and loan sanction letter if applicable. Some states need additional documents like Form 60/61 for purchases without PAN."
+      "q": "What is the total cost of registering a property in India?",
+      "a": "Total property registration cost = stamp duty + registration fee + legal charges + GST (if under-construction). On a ₹1 crore property: Maharashtra (male) approximately ₹6L stamp + ₹1L registration + ₹1L Metro Cess + ₹30–50K legal = ₹8.3–8.5L. Delhi (male) approximately ₹6L stamp + ₹80K registration + ₹25–40K legal = ₹7.1–7.4L. Karnataka approximately ₹5.65L stamp + ₹50K registration + ₹25–35K legal = ₹6.4–6.5L. Tamil Nadu approximately ₹7L stamp + ₹4L registration = ₹11L+. Always verify at the state registration authority — rates change with budgets."
     },
     {
-      "q": "How long does property registration take?",
-      "a": "Online registration (e-stamp + appointment): same day in most states. Physical registration at Sub-Registrar office: typically 1–3 days after document submission. Mutation (updating revenue records): 15–60 days after registration. Faster in states with e-registration (Maharashtra, Karnataka, Andhra Pradesh)."
+      "q": "Is stamp duty included in home loan calculation?",
+      "a": "No. Banks finance up to 80% of the property's agreement value (or the lower of agreement value and bank's valuation). Stamp duty, registration fee, legal charges, and GST are explicitly excluded from the home loan amount in most standard home loan products. These must be funded entirely from own resources (down payment savings). For a ₹1 crore property with a ₹80L home loan and 20% down payment: you need ₹20L + ₹8L (stamp + registration + legal) = ₹28L from own funds."
     },
     {
-      "q": "What is circle rate in property registration?",
-      "a": "Circle rate is the minimum value at which a property can be registered, set by the government. Even if actual transaction price is lower, stamp duty is calculated on circle rate. In major cities, circle rates are typically 10–40% below market value in prime areas."
+      "q": "What is Form 26QB in property purchase?",
+      "a": "Form 26QB is a TDS return-cum-challan for the buyer to deduct and deposit 1% TDS on property purchase when the transaction value exceeds ₹50 lakh. The buyer must: (1) deduct 1% from the amount paid to the seller; (2) deposit it via Form 26QB on the TRACES portal (tin.tin.nsdl.com) within 30 days from the end of the month of payment; (3) issue Form 16B to the seller. Failure has financial penalties. Verify current provisions at incometax.gov.in."
     },
     {
-      "q": "Is this calculator free?",
-      "a": "Yes, completely free on CalcPhi."
+      "q": "What is the circle rate and how does it affect registration?",
+      "a": "The circle rate (also called guidance value, ready reckoner rate, or minimum value) is the government-mandated minimum valuation for property in a specific locality, used for stamp duty calculation. Stamp duty is calculated on the higher of the transaction price or circle rate. If you buy at ₹90L but the circle rate is ₹1 crore, stamp duty is on ₹1 crore. Check circle rates at your state's revenue department or SRO portal for the specific survey number and property type before finalising the transaction price."
     },
     {
-      "q": "Are my inputs stored?",
-      "a": "No. Calculations run in your browser."
+      "q": "What is GST on property purchase in 2026?",
+      "a": "GST applies only to under-construction property (no Completion Certificate). Rates: 1% for affordable housing (property up to ₹45L, carpet area up to 60 sqm in metro, 90 sqm elsewhere — verify current definition at cbic.gov.in); 5% for all other under-construction residential property. No GST on: resale properties with CC, commercial property (different rates apply), agricultural land. Verify current affordable housing thresholds and applicable GST rate for your specific property at cbic.gov.in before purchase."
     },
     {
-      "q": "Is it mobile-friendly?",
-      "a": "Yes. Works on all modern smartphones."
-    }
-  ],
-  "examples": [
-    {
-      "heading": "₹50 lakh flat registration in Mumbai",
-      "text": "Stamp duty (6%) ₹3,00,000 + Registration ₹30,000 (capped) + Legal ₹15,000–₹25,000 = Total ₹3,45,000–₹3,55,000. Always budget 7–8% above property price for all charges including GST (if applicable) and society transfer fees."
+      "q": "What is mutation after property registration?",
+      "a": "Mutation (also called khata transfer or name transfer) is the process of updating municipal/revenue records to reflect the new owner's name after registration of the sale deed. It is separate from registration. Done at the local municipal corporation (urban) or Revenue Department (rural). Required documents: registered sale deed, stamp duty receipt, property tax receipts, Form 26QB acknowledgment (for >₹50L). Charges: ₹200–5,000 depending on state. Complete mutation within 30–60 days of registration to avoid property tax arrears in the previous owner's name."
     },
     {
-      "heading": "Resale property vs new flat",
-      "text": "Resale flat has stamp duty on the full transaction value. New property (builder flat) has GST of 5% (or 1% for affordable housing). For a ₹1 crore new flat: GST ₹5 lakh + stamp duty ₹5 lakh + registration ₹50,000 = ₹10.5 lakh in additional charges."
+      "q": "What are the Section 80C deductions available on property purchase?",
+      "a": "Under the old tax regime: stamp duty and registration fee paid for a residential property purchase qualifies for Section 80C deduction, within the ₹1.5L annual cap. The deduction is claimable in the year of payment. Home loan principal repayment also qualifies for 80C within the same ₹1.5L cap. Together, these 80C components are often already absorbed by EPF and PPF — check whether the 80C cap has room before planning the deduction. Under the new tax regime (default from AY 2024-25): no 80C deductions."
+    },
+    {
+      "q": "How do I check encumbrances on a property before buying?",
+      "a": "Obtain an Encumbrance Certificate (EC) from the Sub-Registrar's Office for the property's survey number and location. The EC shows all registered transactions (mortgages, liens, charges, sale deeds) on the property for the requested period — typically request 30 years of history. An EC with no entries ('nil EC') indicates no registered encumbrances — important for title clarity. Also obtain a Khata certificate from the municipal authority confirming the property is registered in the seller's name for property tax. RERA certificate (for new projects) at RERA portal of the respective state. These documents together constitute basic title due diligence."
     }
   ],
   "related": [
     {
       "title": "Stamp Duty Calculator",
-      "url": "/india/stamp-duty-calculator/"
-    },
-    {
-      "title": "Home Loan EMI Calculator",
-      "url": "/india/home-loan-emi-calculator/"
+      "url": "/india/stamp-duty-calculator/",
+      "desc": "State-specific stamp duty estimates — Maharashtra, Karnataka, Delhi, Tamil Nadu, UP"
     },
     {
       "title": "Rent vs Buy Calculator",
-      "url": "/india/rent-vs-buy-calculator/"
+      "url": "/india/rent-vs-buy-calculator/",
+      "desc": "Full rent vs buy comparison including stamp duty in the true cost of buying"
+    },
+    {
+      "title": "Home Loan EMI Calculator",
+      "url": "/india/home-loan-emi-calculator/",
+      "desc": "Calculate EMI on the loan component, separate from registration costs"
     }
   ]
 }

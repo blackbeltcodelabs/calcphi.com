@@ -1,16 +1,16 @@
 {
   "id": "ctc-to-in-hand",
   "schema": {
-    "appName": "CTC to In-Hand Salary Calculator India",
-    "appDescription": "Convert CTC to net in-hand monthly salary. Deduct EPF, professional tax, and income tax. See detailed salary breakup for any CTC."
+    "appName": "CTC to In-Hand Salary Calculator",
+    "appDescription": "Calculate monthly take-home salary from annual CTC. Deductions: employee EPF 12% of basic, income tax TDS, professional tax. EPF rate set annually by EPFO — verify at epfindia.gov.in. Tax regime comparison under AY 2026-27 slabs."
   },
   "inputs": [
     {
       "id": "ctc-ctc",
       "label": "Annual CTC (₹)",
-      "min": 100000,
+      "min": 300000,
       "max": 100000000,
-      "step": 10000,
+      "step": 100000,
       "value": 1200000
     },
     {
@@ -19,8 +19,7 @@
       "min": 30,
       "max": 70,
       "step": 5,
-      "value": 50,
-      "hint": "Typically 40–50% of CTC"
+      "value": 40
     }
   ],
   "outputs": [
@@ -44,70 +43,93 @@
   ],
   "howToSteps": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the CTC to In-Hand Calculator. Smart defaults are pre-filled."
+      "name": "Enter your annual CTC",
+      "text": "Enter the total annual Cost to Company from your offer letter or payslip. CTC includes employer PF contribution (~12% of basic), gratuity provision (~4.81% of basic), and all allowances — these are not take-home."
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time — no submit button needed."
+      "name": "Enter basic salary as % of CTC",
+      "text": "Typical range: 40–50% for most companies. Startups sometimes structure 30–35% basic with large variable pay or ESOP. Higher basic means higher EPF, higher gratuity eligibility, and higher TDS — but also better debt service capacity for home loans (lenders look at basic + DA)."
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown to see numbers over time."
+      "name": "Read the in-hand estimate",
+      "text": "The calculator shows estimated monthly in-hand after EPF, professional tax, and TDS under the new regime. Your actual in-hand will depend on HRA exemption (if renting), Section 80C/80D declarations under old regime, and special deductions. Always check your actual payslip."
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust inputs to compare scenarios and find the best option."
+      "name": "Compare old vs new tax regime",
+      "text": "The new regime (default from AY 2024-25) offers lower slabs but no HRA/80C/80D. If your total deductions and exemptions exceed ~₹4.25 lakh, the old regime may give higher in-hand. Use the Income Tax Calculator for a precise comparison."
+    }
+  ],
+  "articleSections": [
+    {
+      "id": "ctc-anatomy",
+      "heading": "CTC Anatomy — Gross Salary, Cost Components, and the Components That Never Enter Your Account",
+      "body": "<p>CTC is the total cost to the employer, not your salary. The gap between CTC and in-hand consists of two distinct layers: deductions that reduce your gross to in-hand, and CTC components that are employer costs never paid to you as cash.</p><p><strong>Layer 1 — Employer-side costs embedded in CTC (never received as cash):</strong></p><ul><li><strong>Employer EPF contribution:</strong> 12% of basic (= 3.67% to your EPF account + 8.33% to EPS, capped at ₹1,250/month on ₹15,000 wage ceiling). This is in your CTC but you only indirectly benefit via the EPF account and EPS pension.</li><li><strong>Gratuity provision:</strong> ~4.81% of basic annually, held in the company's books until payable (5-year eligibility for resignation).</li><li><strong>Group health/life insurance (if included in CTC):</strong> employer-paid premium, a perquisite in your CTC but not cash salary.</li></ul><p><strong>Layer 2 — Deductions from gross salary you receive (reduces gross to in-hand):</strong></p><ul><li><strong>Employee EPF:</strong> 12% of basic+DA. On ₹40,000 basic: ₹4,800/month deducted from salary and deposited to your EPF account.</li><li><strong>Professional tax:</strong> ₹200–2,500/year depending on state (₹200/month in Maharashtra, ₹0–200/month in Karnataka, ₹0 in Delhi). Deducted from salary and paid to the state government.</li><li><strong>Income tax TDS:</strong> Calculated on your estimated annual taxable income, deducted monthly as TDS under Section 192. Varies significantly based on income level, tax regime, and investment declarations.</li></ul><p><strong>CTC to in-hand illustration for ₹12L CTC, 40% basic (₹40,000/month):</strong></p><table><thead><tr><th>Component</th><th>Monthly</th><th>Nature</th></tr></thead><tbody><tr><td>CTC ÷ 12</td><td>₹1,00,000</td><td>Total employer cost</td></tr><tr><td>Employer EPF (12% of ₹40K)</td><td>−₹4,800</td><td>Employer cost, not your cash</td></tr><tr><td>Gratuity provision (4.81% of ₹40K)</td><td>−₹1,924</td><td>Employer cost, not your cash</td></tr><tr><td>Gross salary received</td><td>~₹93,276</td><td>Deposited to your account before deductions</td></tr><tr><td>Employee EPF deducted</td><td>−₹4,800</td><td>Deducted; goes to your EPF account</td></tr><tr><td>Professional tax</td><td>−₹200</td><td>Deducted; goes to state government</td></tr><tr><td>TDS (new regime, ₹12L)</td><td>~₹3,500</td><td>Deducted; paid to IT department</td></tr><tr><td>In-hand take-home</td><td>~₹84,776</td><td>Credited to bank account</td></tr></tbody></table>"
+    },
+    {
+      "id": "ctc-scenarios",
+      "heading": "Three CTC Scenarios — Entry Level, Mid-Senior, and High CTC with Old vs New Regime Comparison",
+      "body": "<h3>Scenario 1: Nikhil, ₹6 lakh CTC, 40% basic — first job in Bengaluru</h3><p>Annual CTC: ₹6,00,000. Basic: ₹40,000 × 12 = ₹2,40,000. Monthly gross (after removing employer PF and gratuity): approximately ₹46,000–48,000. Employee EPF: ₹2,400/month. Professional tax: ₹200/month (Karnataka). TDS: ₹0 (taxable income below ₹4L nil slab under new regime). In-hand: approximately ₹43,400–45,400/month. The gap from CTC ÷ 12 (₹50,000) to in-hand (₹44,000) is ₹6,000 — mostly employer-side costs and EPF. No TDS at this income.</p><h3>Scenario 2: Sneha, ₹18 lakh CTC, 45% basic — mid-level product manager in Mumbai</h3><p>Annual CTC: ₹18,00,000. Basic: ₹67,500/month. Gross received monthly: approximately ₹1,41,000 (after removing employer PF ₹8,100 and gratuity ₹3,237/month from CTC). Employee EPF: ₹8,100/month. Professional tax: ₹200/month. <strong>New regime TDS:</strong> annual taxable income ≈ ₹16,81,200 (after standard deduction ₹75,000). Tax = 0 × ₹4L + 5% × ₹4L + 10% × ₹4L + 15% × ₹4L + 20% × ₹81,200 ≈ ₹1,16,240 + cess = ₹1,20,890/year = ~₹10,074/month. In-hand: ₹1,41,000 − ₹8,100 − ₹200 − ₹10,074 ≈ ₹1,22,626/month. <strong>Old regime TDS</strong> (with 80C full ₹1.5L + 80D ₹25K + HRA ₹30K exemption): taxable income ≈ ₹13,06,200. Tax ≈ ₹1,47,696 + cess ≈ ₹1,53,604/year = ₹12,800/month. In this case, new regime wins for Sneha — lower TDS and higher in-hand.</p><h3>Scenario 3: Arjun, ₹40 lakh CTC, 40% basic — senior engineer, Delhi</h3><p>Annual CTC: ₹40,00,000. Basic: ₹1,33,333/month. Employer PF: ₹16,000; gratuity: ₹6,400. Monthly gross: approximately ₹3,10,933. Employee EPF: ₹16,000/month (employee's 12% of ₹1,33,333). Annual employee EPF: ₹1,92,000 — below ₹2.5L taxability threshold, still EEE. New regime: annual taxable income after standard deduction ≈ ₹37,25,000. Tax = very high; at 25% slab above ₹20L and 30% above ₹24L: roughly ₹7,84,000 + cess. Monthly TDS: ₹66,000. In-hand: approximately ₹2,28,933/month — less than 60% of CTC ÷ 12. <strong>Old regime benefit:</strong> if Arjun has ₹1.5L (80C) + ₹75K (80D + NPS) + HRA exemption ₹1.6L = ₹3.85L deductions: taxable income reduces to ₹33,40,000; tax saving ≈ ₹1,00,000+. Old regime may win at this income with adequate deductions.</p>"
+    },
+    {
+      "id": "ctc-hra-hike",
+      "heading": "HRA Exemption Mechanics, Basic Salary Negotiation, and How a Salary Hike Changes In-Hand",
+      "body": "<p><strong>HRA exemption under the old regime:</strong> HRA is exempt to the extent of the minimum of: (1) actual HRA received, (2) 50% of basic+DA for metro residents (Delhi, Mumbai, Kolkata, Chennai) or 40% for others, and (3) actual rent paid minus 10% of basic+DA. If Sneha above pays ₹30,000/month rent in Mumbai with a ₹67,500 basic: HRA received = ₹25,000 (assume HRA is ~37% of basic). Exemption = minimum of ₹25,000 (actual HRA), ₹33,750 (50% of basic), ₹23,250 (rent − 10% of basic = ₹30,000 − ₹6,750). Minimum = ₹23,250/month exempt = ₹2,79,000/year. This creates substantial old-regime benefit for high-rent-paying metro employees.</p><p><strong>HRA under the new regime:</strong> HRA exemption is not available under the new regime. The full HRA received is taxable. For employees paying significant rent in metros, the lost HRA exemption (₹2–4 lakh annually) may tip the calculation in favour of the old regime — despite the new regime's lower base slabs.</p><p><strong>Negotiating basic salary proportion:</strong> A higher basic salary percentage in an offer means: more EPF contribution (good for long-term retirement, bad for short-term take-home), higher gratuity entitlement after 5 years, and higher HRA (if HRA is calculated as % of basic). For home loan applications, basic+DA is the income component most banks count for EMI eligibility. Startup employees with 30% basic and large ESOPs may have a high CTC but low in-hand and low loan eligibility — understand this trade-off before accepting a compensation structure.</p><p><strong>A salary hike does not increase in-hand proportionally:</strong> A ₹3 lakh CTC hike at ₹18L (from ₹18L to ₹21L) delivers only ₹1,50,000–1,80,000 of additional annual in-hand after marginal tax (20% slab under new regime for ₹16–20L) + higher EPF on basic. Monthly in-hand increase: approximately ₹12,500–15,000 from a ₹25,000/month gross hike — the marginal rate and EPF absorb 40–50% of the increment. Use the Salary Hike Calculator to compute this precisely.</p>"
+    },
+    {
+      "id": "ctc-mistakes",
+      "heading": "CTC Mistakes — Comparing Offers by CTC Only, Ignoring Vesting, Forgetting Professional Tax, and Regime Errors",
+      "body": "<p><strong>Comparing two job offers purely by CTC number.</strong> Two ₹15L CTC offers can deliver very different in-hand depending on basic % (which drives EPF and gratuity), inclusion/exclusion of group insurance in CTC, variable pay structure (fixed vs performance-linked), and allowance structure. The relevant comparison is: fixed gross salary month 1 + total expected variable + expected gratuity value. Ask HR for a monthly gross and in-hand estimate on Offer 1 and Offer 2 at the same performance assumption — CTC alone is insufficient.</p><p><strong>Not accounting for ESOPs and vesting in the comparison.</strong> Many startups offer ₹8L cash CTC + ₹5L ESOP value = ₹13L headline CTC. The ESOP vests over 4 years with a 1-year cliff — if you leave in Year 1, you receive nothing. The correct way to compare: ₹8L cash offer at Startup vs ₹12L all-cash at a corporate. The startup's effective cash CTC is ₹8L until vesting, and the ESOP's actual value depends on a future liquidity event. Know what you are accepting when part of CTC is deferred equity.</p><p><strong>Forgetting professional tax in city-specific comparisons.</strong> Professional tax ranges from ₹0 (Gujarat, Delhi) to ₹2,500/year (Maharashtra). For a ₹50,000/month basic, this is a small but state-specific deduction that varies by tier and income. More importantly, professional tax is deductible as a standard allowance under the old regime — offset against salary income.</p><p><strong>Not declaring investment proof for 80C/80D in time.</strong> TDS is based on projected annual income at the start of the year using a provisional regime declaration. If you switch to the old regime and plan to claim 80C deductions, you must submit investment proof (Form 12BB) to your employer — typically due January 31. Late submission means excess TDS is deducted for the year and must be claimed as a refund in the ITR filed after March 31. Plan declarations at the start of April, not January.</p>"
     }
   ],
   "faq": [
     {
-      "q": "How much of CTC do I actually receive as in-hand salary?",
-      "a": "For most salaried employees, net in-hand salary is 65–80% of CTC. A ₹12 lakh CTC typically yields ₹75,000–₹85,000/month in-hand. Deductions include: employer PF (part of CTC), employee PF (12% of basic), professional tax (₹200–₹2,500/year), and TDS based on tax liability."
+      "q": "Why is my in-hand salary much lower than CTC ÷ 12?",
+      "a": "CTC includes employer-side costs that never reach your bank account: employer EPF (12% of basic), gratuity provision (~4.81% of basic). These are employer costs built into the CTC structure. From the remaining gross, employee EPF (12% of basic), professional tax, and TDS on salary are deducted. A ₹12L CTC with 40% basic typically delivers ₹75,000–85,000 in-hand versus ₹1,00,000 from CTC ÷ 12 — a gap of ₹15,000–25,000/month entirely explained by EPF structure, gratuity provision, and TDS."
     },
     {
-      "q": "Is employer PF part of CTC?",
-      "a": "Yes. Many companies include employer PF contribution (12% of basic) in CTC. This is a benefit you eventually receive at PF withdrawal but reduces your take-home. Always clarify if the stated CTC is 'inclusive of employer PF' or 'exclusive'."
+      "q": "What is the basic salary percentage that matters most?",
+      "a": "Basic salary as a percentage of CTC determines four things: (1) employee and employer EPF contributions (both 12% of basic), (2) gratuity eligibility after 5 years (15/26 × basic × years), (3) HRA amount received (HRA is typically 40–50% of basic), and (4) home loan eligibility (banks calculate EMI capacity on basic + DA). Higher basic means higher EPF (better long-term), higher gratuity, and higher HRA — but lower take-home due to more EPF deduction. Typical negotiation range: 40–50% basic is standard; below 35% basic is disadvantageous for EPF and gratuity."
     },
     {
-      "q": "What is the difference between CTC, gross salary, and net salary?",
-      "a": "CTC = total cost to company including all benefits, allowances, and employer contributions. Gross salary = CTC minus employer PF and other benefits not paid as salary. Net/in-hand salary = gross salary minus employee PF, professional tax, and income tax TDS."
+      "q": "Should I choose the old or new tax regime for maximum in-hand?",
+      "a": "The new regime wins when your total exemptions and deductions under the old regime are below approximately ₹4.25 lakh (₹3.5L break-even before standard deduction + ₹75K standard deduction). The old regime wins when HRA exemption, 80C (₹1.5L), 80D, and other deductions combined exceed this threshold. Use the Income Tax Calculator to compare precisely at your actual income and deduction profile — the break-even shifts with every income level. Most employees below ₹12L CTC with no significant rent benefit from the new regime."
     },
     {
-      "q": "Is the CTC to In-Hand Calculator free?",
-      "a": "Yes, completely free on CalcPhi with no registration."
+      "q": "Is EPF deduction from salary mandatory?",
+      "a": "Yes for most employees. Employee EPF at 12% of basic+DA is mandatory for employees with basic salary up to ₹15,000/month in establishments with 20+ employees. For employees with basic above ₹15,000 who are already EPF members, contributions continue at 12% of full basic (not capped). Employees earning above ₹15,000 basic joining a new employer without any prior EPF history may have the option to not join — but once enrolled, EPF is mandatory and the employee cannot reduce the contribution below 12%."
     },
     {
-      "q": "Are my inputs stored?",
-      "a": "No. All calculations run in your browser. Your data is never stored."
+      "q": "How is professional tax deducted from salary?",
+      "a": "Professional tax is a state government levy deducted from your salary by the employer and remitted to the state. It varies by state and monthly income slab. Maharashtra: ₹200/month for income above ₹10,000/month (₹2,500/year cap — ₹300 in February). Karnataka: ₹200/month above ₹15,000/month. Tamil Nadu: ₹208/month above ₹21,000/month. Gujarat, Delhi, Rajasthan, Haryana: ₹0 (professional tax not levied). Professional tax paid by the employee is deductible as salary expense under the old tax regime."
     },
     {
-      "q": "Is it mobile-friendly?",
-      "a": "Yes. Works on all modern smartphones and tablets."
-    }
-  ],
-  "examples": [
-    {
-      "heading": "₹12 lakh CTC — monthly in-hand calculation",
-      "text": "₹12 lakh CTC, basic 50% (₹6 lakh/year): Employer PF = ₹72,000/year. Gross = ₹11,28,000. Employee PF = ₹72,000. New regime TDS ≈ ₹nil (₹12L income, below rebate threshold after deductions). In-hand ≈ ₹88,000/month."
+      "q": "How can I increase my monthly in-hand salary without changing jobs?",
+      "a": "Four levers: (1) Switch to the new regime if your current old-regime deductions are below ₹4.25L — reduced TDS increases monthly in-hand. (2) Restructure salary by increasing non-taxable allowances (meal coupon, fuel reimbursement, leave travel allowance) within total CTC — requires employer cooperation. (3) Increase VPF (reduces TDS under old regime by increasing 80C utilisation) — paradoxically increases in-hand by reducing TDS more than the VPF deduction. (4) Claim all eligible exemptions accurately via Form 12BB — many employees underclaim HRA or forget to declare ELSS/insurance premiums."
     },
     {
-      "heading": "₹25 lakh CTC — high earner breakdown",
-      "text": "₹25 lakh CTC: Gross salary ≈ ₹23.5 lakh. Employee PF ₹1.8 lakh. TDS (new regime) ≈ ₹3.6 lakh. Professional tax ₹2,400. Monthly in-hand ≈ ₹1,53,000. Always negotiate CTC structure — higher basic improves PF but reduces take-home through tax."
+      "q": "What is Form 12BB and when should I submit it?",
+      "a": "Form 12BB is the investment declaration form submitted to your employer at the start of the financial year (typically April) declaring your estimated investments and expenses for 80C, 80D, HRA, LTA, home loan interest, and other deductions. The employer uses this to calculate monthly TDS. Submit Form 12BB with actual investment proof (receipts, bank statements) by January 31 for the final TDS calculation to be correct. If you miss the deadline, excess TDS is deducted and refunded via ITR — no penalty, but a cash flow delay."
+    },
+    {
+      "q": "Does CTC include variable pay and bonuses?",
+      "a": "Depends on the employer's CTC structure. Some employers include target annual variable pay in CTC; others show it separately. If variable pay is in CTC, it is usually shown as 'Target Variable' — actual payout depends on performance. If variable pay is excluded from CTC, your effective annual compensation is CTC + bonus. When comparing offers, check whether the variable pay component is included and what the actual payout percentage has been historically (ask HR). Fixed CTC is more comparable across employers than headline CTC."
     }
   ],
   "related": [
     {
       "title": "Income Tax Calculator",
-      "url": "/india/income-tax-calculator/"
+      "url": "/india/income-tax-calculator/",
+      "desc": "Compare old vs new regime TDS at your exact income and deduction profile"
     },
     {
       "title": "TDS on Salary Calculator",
-      "url": "/india/tds-on-salary-calculator/"
+      "url": "/india/tds-on-salary-calculator/",
+      "desc": "Calculate exact monthly TDS deduction and plan Form 12BB declarations"
     },
     {
       "title": "EPF Calculator",
-      "url": "/india/epf-calculator/"
+      "url": "/india/epf-calculator/",
+      "desc": "Project EPF corpus from your monthly 12% contribution over the working years"
     }
   ]
 }

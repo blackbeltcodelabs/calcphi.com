@@ -1,30 +1,29 @@
 {
   "id": "fire-number",
   "schema": {
-    "appName": "FIRE Number Calculator India \u2014 Financial Independence",
-    "appDescription": "Calculate your FIRE number \u2014 the corpus needed for financial independence. Based on your monthly expenses, withdrawal rate, and inflation."
+    "appName": "FIRE Number Calculator India — Financial Independence Retire Early",
+    "appDescription": "Calculate your FIRE number — the corpus needed to retire early and live off investment returns. India's safe withdrawal rate is 3–3.5% (corpus 29–33× annual expenses) vs the US 4% rule, due to higher inflation and lower fixed income returns. Plan to age 90 for early retirees."
   },
   "inputs": [
     {
       "id": "fn-monthly",
-      "label": "Current Monthly Expenses (\u20b9)",
+      "label": "Monthly Expenses in Retirement (₹)",
       "min": 10000,
       "max": 1000000,
-      "step": 1000,
+      "step": 5000,
       "value": 80000
     },
     {
       "id": "fn-withdraw-rate",
       "label": "Safe Withdrawal Rate (%)",
       "min": 2,
-      "max": 6,
-      "step": 0.1,
-      "value": 3.5,
-      "hint": "3\u20134% is generally safe for Indian conditions"
+      "max": 5,
+      "step": 0.25,
+      "value": 3.5
     },
     {
       "id": "fn-inflation",
-      "label": "Inflation Rate (% p.a.)",
+      "label": "Expected Inflation Rate (%)",
       "min": 3,
       "max": 10,
       "step": 0.5,
@@ -34,15 +33,15 @@
       "id": "fn-age",
       "label": "Current Age",
       "min": 20,
-      "max": 55,
+      "max": 50,
       "step": 1,
-      "value": 32
+      "value": 30
     },
     {
       "id": "fn-fire-age",
       "label": "Target FIRE Age",
       "min": 30,
-      "max": 60,
+      "max": 65,
       "step": 1,
       "value": 45
     }
@@ -55,79 +54,106 @@
     },
     {
       "id": "fn-future-monthly",
-      "label": "Monthly Expenses at FIRE Age"
+      "label": "Monthly Expenses at FIRE Age (Inflated)"
     },
     {
       "id": "fn-years-to-fire",
-      "label": "Years to FIRE"
+      "label": "Years to Reach FIRE"
     },
     {
       "id": "fn-monthly-sip",
-      "label": "Monthly Investment Needed (at 12%)"
+      "label": "Monthly SIP Needed (at 12% CAGR)"
     }
   ],
   "howToSteps": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the FIRE Number Calculator."
+      "name": "Enter monthly expenses in retirement",
+      "text": "Enter your expected monthly expenses once you retire early — not current expenses. Think through what you will actually spend: housing, food, utilities, healthcare (critical — no employer insurance), travel, entertainment. Most FIRE seekers aim for 80–90% of current expenses."
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time as you type."
+      "name": "Set safe withdrawal rate",
+      "text": "India-appropriate SWR is 3–3.5% (higher than the US 4% because India has higher long-run inflation and lower fixed-income real returns). At 3.5% SWR, you need approximately 28.6× annual expenses. At 3%, you need 33× annual expenses. More conservative = larger corpus = longer to achieve but safer."
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown to see numbers over time."
+      "name": "Set your FIRE target age",
+      "text": "Early retirement at 40–45 means a 45–50 year retirement period — far longer than a standard 25-year retirement. A longer decumulation period requires a lower SWR and a larger corpus. The FIRE number accounts for this automatically."
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust inputs to compare scenarios and optimise your decision."
+      "name": "Validate the monthly SIP",
+      "text": "The SIP required is the monthly equity investment needed at 12% CAGR to accumulate the FIRE number by your target age. If this exceeds 50–60% of current income, either the FIRE age needs adjustment, expenses need reduction, or income needs to grow. Most Indian FIRE achievers had savings rates of 50–70% sustained for 10–15 years."
+    }
+  ],
+  "articleSections": [
+    {
+      "id": "fn-formula",
+      "heading": "The FIRE Number Formula — SWR, Why India Is Different from the US 4% Rule, and Fat vs Lean FIRE",
+      "body": "<p>The FIRE Number = Annual Expenses ÷ Safe Withdrawal Rate. The SWR is the maximum percentage of your portfolio you can withdraw annually (inflation-adjusted) without running out of money over a specified retirement horizon. The US 4% rule (Bengen, 1994) was derived from US historical stock and bond returns — it does not directly apply to Indian portfolios.</p><p><strong>Why India needs a lower SWR than 4%:</strong> India's average CPI inflation has been approximately 6% per annum over the last 20 years — higher than the 3% US average used in the original 4% rule study. India's long-run fixed-income real returns are lower — Indian government bonds and FDs rarely exceed 7–8%, barely above the 6% inflation rate. Portfolio simulations for Indian data show higher failure rates at 4% SWR. India-appropriate SWR: 3–3.5% for a 40–45 year early retirement horizon; 3.5–4% for a 25–30 year standard retirement horizon.</p><p><strong>FIRE Number calculation example:</strong> Monthly expenses in retirement: ₹80,000. Annual: ₹9,60,000. At 3.5% SWR: FIRE Number = ₹9,60,000 ÷ 0.035 = ₹2,74,28,571 ≈ ₹2.74 crore (in today's rupees). If retiring in 15 years with 6% inflation: actual expenses at retirement = ₹80,000 × (1.06)¹⁵ = ₹1,91,725/month = ₹23,00,700/year. Inflated FIRE Number at 3.5%: ₹23,00,700 ÷ 0.035 = ₹6.57 crore.</p><p><strong>FIRE variants:</strong></p><ul><li><strong>Lean FIRE:</strong> ₹30,000–50,000/month frugal lifestyle. Lower target but less buffer for emergencies or inflation spikes.</li><li><strong>Regular FIRE:</strong> ₹60,000–1,00,000/month comfortable middle-class lifestyle. Most commonly targeted in Indian FIRE communities.</li><li><strong>Fat FIRE:</strong> ₹1,50,000+/month premium lifestyle — typically ₹8–15 crore corpus or more.</li><li><strong>Coast FIRE:</strong> Portfolio large enough that if left untouched, it grows to the FIRE Number by standard retirement age. You only need to cover current expenses through income, no additional investing required — useful intermediate milestone.</li></ul>"
+    },
+    {
+      "id": "fn-scenarios",
+      "heading": "Three FIRE Scenarios — Mid-30s Tech Professional, Frugal FIRE at 40, and Dual-Income Household at 42",
+      "body": "<h3>Scenario 1: Kavya, 31, tech professional, ₹28L CTC, targets FIRE at 45</h3><p>Current savings rate: 45% of take-home. Monthly investable: ₹65,000. Target retirement expenses (today): ₹80,000/month. FIRE at 45 (14 years). Inflation-adjusted expenses at 45: ₹80,000 × (1.06)¹⁴ = ₹1,80,536/month. Annual: ₹21,66,430. At 3.5% SWR: FIRE Number = ₹6.19 crore. Monthly SIP at 12% for 14 years: approximately ₹1,45,000/month to reach ₹6.19 crore. Current SIP of ₹65,000 reaches approximately ₹2.72 crore — a shortfall of ₹3.47 crore. Kavya must either grow income significantly, push FIRE age to 50, accept part-time income from 45 (Coast FIRE phase), or combine all three. FIRE at 45 on ₹28L CTC requires aggressive income growth or radical expense reduction.</p><h3>Scenario 2: Suresh, 35, frugal lifestyle, targets Lean FIRE at 42</h3><p>Monthly retirement expenses: ₹45,000. FIRE at 42 (7 years). Inflation-adjusted at 42: ₹45,000 × (1.06)⁷ = ₹67,649/month. Annual: ₹8,11,793. At 3.5% SWR: FIRE Number = ₹2.32 crore. With 3-year existing SIP of ₹80K/month corpus: approximately ₹37L. Additional accumulation needed: ₹1.95 crore in 7 years. At ₹1.2L/month SIP with existing ₹37L: approximately ₹1.85 crore projected — very close to target. Lean FIRE at ₹45K/month at 42 is achievable on ₹22L CTC with discipline. Critical: healthcare coverage post-FIRE without employer insurance must be budgeted (₹8,000–12,000/month for a couple) — already included in Suresh's ₹45,000 target.</p><h3>Scenario 3: Riya and Aditya, dual income, combined ₹60L CTC, FIRE at 42</h3><p>Two-income household investing ₹2.5L/month combined. Target retirement expenses: ₹1,20,000/month. FIRE at 42 (10 years). Inflation-adjusted at 42: ₹1,20,000 × (1.06)¹⁰ = ₹2,14,905/month. Annual: ₹25,78,863. At 3.5% SWR: FIRE Number = ₹7.37 crore. ₹2.5L/month SIP at 12% for 10 years: approximately ₹5.7 crore. Existing investments: ₹1.8 crore (8-year accumulation). Projected total at retirement: ₹5.7 crore + ₹1.8 crore × (1.12)¹⁰ ≈ ₹5.7 crore + ₹5.6 crore = ₹11.3 crore — well above target. Key risk: if one partner stops working (childcare, career break), the savings rate drops sharply. Stress-test the plan on one income alone.</p>"
+    },
+    {
+      "id": "fn-india-specifics",
+      "heading": "India-Specific FIRE Challenges — No Social Security, Healthcare Gap, Two-Phase Approach, and Family Obligations",
+      "body": "<p><strong>No social security or government pension for private-sector workers.</strong> A US early retiree can bridge to Social Security from age 62 or Medicare from 65 — guaranteed income floors. An Indian FIRE practitioner has no equivalent. EPF access requires age 58 retirement or meeting specific early withdrawal conditions. NPS partial withdrawal before 60 is limited. The entire retirement income depends on the personal portfolio — the Indian FIRE corpus must fund everything, making the SWR more conservative.</p><p><strong>The healthcare coverage gap is the biggest practical FIRE challenge.</strong> Employer-provided group health insurance ends on the last working day. A 40-year-old FIRE achiever must purchase individual health insurance at individual rates. A comprehensive ₹10 lakh health plan for a couple at age 40: approximately ₹18,000–25,000/year now, growing at 10–15% annually. By age 55, the same couple may pay ₹60,000–80,000/year. Secure health cover while still employed and healthy. Budget ₹10,000–15,000/month for healthcare (insurance + OPD) in FIRE planning for a couple in their 40s.</p><p><strong>Two-phase FIRE strategy:</strong> Phase 1 (FIRE to age 60): draw from equity and debt portfolio at 3–3.5% SWR. Phase 2 (60 onwards): EPF and NPS become accessible, providing additional income streams that reduce portfolio drawdown rate. EPF corpus of ₹1–2 crore and NPS annuity of ₹20,000–40,000/month materially reduce Phase 2 drawdown. Model both phases explicitly rather than assuming the same withdrawal rate throughout.</p><p><strong>Family obligations uniquely Indian:</strong> Indian FIRE planning must account for children's undergraduate/postgraduate education (₹30–80L at premier institutions), supporting elderly parents financially (healthcare costs significant), and possible wedding expenses. These large, irregular expenses can disrupt a tightly calibrated withdrawal plan. Build a 20–25% buffer above the calculated FIRE Number, or fund these obligations separately before declaring FIRE.</p>"
+    },
+    {
+      "id": "fn-mistakes",
+      "heading": "FIRE Mistakes — Using the 4% Rule Blindly, Ignoring Healthcare, Declaring FIRE Too Early, and One More Year Syndrome",
+      "body": "<p><strong>Using the US 4% rule without India adjustments.</strong> India's 6% CPI inflation and lower bond real returns mean the same portfolio depletes faster than a US portfolio. Portfolio simulations for Indian data suggest 3–3.5% as a more durable SWR for 40-year retirement horizons. Verify with a financial planner using Indian historical data before finalising your target corpus.</p><p><strong>Declaring FIRE before securing healthcare coverage.</strong> The most common early FIRE execution mistake: leaving employment, then discovering individual health insurance costs dramatically more than expected, or finding a newly discovered condition creates exclusions. Secure a comprehensive health policy (base + super top-up) while still employed and in good health. Do not leave employment until health cover has been in force for at least one full policy year.</p><p><strong>Underestimating lifestyle inflation post-FIRE.</strong> With more time and freedom, many early retirees increase travel, dining, hobbies by 20–40% compared to working-life spending. The FIRE expenses used to calculate the number may underestimate actual retirement spending. Add a minimum 15–20% buffer to calculated retirement expenses. It is easier to underspend a large buffer than to recover from a depleted tight corpus.</p><p><strong>One More Year Syndrome.</strong> The psychological inability to pull the trigger on FIRE even after reaching the number — always feeling one more year of income would provide more safety. The rational response: define a specific FIRE trigger (e.g., 'when portfolio reaches ₹X with X% yield coverage of expenses') and commit to it. The opposite — Fatigue FIRE (leaving too early due to burnout) — is also a risk. The number should be defined, reached, and acted upon.</p>"
     }
   ],
   "faq": [
     {
-      "q": "What is FIRE and how does it work?",
-      "a": "FIRE (Financial Independence, Retire Early) is about accumulating enough corpus that investment returns exceed living expenses \u2014 allowing you to stop working permanently. The FIRE number = annual expenses \u00f7 safe withdrawal rate. At 4% SWR: corpus = 25\u00d7 annual expenses. Invest aggressively early, retire when corpus is reached."
+      "q": "What is the FIRE number and how is it calculated?",
+      "a": "The FIRE Number is the investment portfolio size at which you can retire and live off investment returns indefinitely. Formula: FIRE Number = Annual Expenses ÷ Safe Withdrawal Rate. For ₹80,000/month expenses (₹9.6L/year) at 3.5% SWR: ₹9.6L ÷ 0.035 = ₹2.74 crore (today's rupees). If retiring in 15 years, inflation adjusts expenses to approximately ₹1.92L/month (₹23L/year at 6% CPI), making the actual FIRE Number approximately ₹6.57 crore at the future date."
     },
     {
-      "q": "Is the 4% rule safe for Indian FIRE?",
-      "a": "The 4% rule was derived from US market data. For India: higher inflation (6% vs 2% in US), shorter equity market history, potential political/regulatory risk. 3\u20133.5% SWR is safer for India. At 3%: FIRE number = 33\u00d7 annual expenses \u2014 you need 33% more corpus."
+      "q": "Why is India's safe withdrawal rate lower than the US 4% rule?",
+      "a": "The US 4% rule assumes approximately 3% long-run inflation and historical US equity + bond returns. India's long-run CPI inflation averages approximately 6% — double the US rate. Indian fixed-income instruments (FD, government bonds) typically yield 6–8% before tax, providing minimal real return above inflation. Portfolio simulations for Indian data show higher depletion rates at 4% SWR than US equivalents. Most Indian FIRE practitioners and financial planners recommend 3–3.5% as a safer SWR for 40+ year retirement horizons."
     },
     {
-      "q": "What are the main FIRE variations?",
-      "a": "Lean FIRE: aggressive frugality, low expenses, small corpus. Fat FIRE: comfortable lifestyle, large corpus. Barista FIRE: semi-retirement with part-time work covering some expenses. Coast FIRE: invest early, coast to retirement on existing corpus without new investments. Choose based on your lifestyle goals."
+      "q": "How much do I need to retire at 40 in India?",
+      "a": "FIRE at 40 means a 45–50 year retirement period. At ₹80,000/month current expenses, inflated to age 40 (8 years at 6%): ₹80,000 × (1.06)⁸ = ₹1,27,516/month. Annual: ₹15.3L. At 3% SWR (conservative for 50-year horizon): FIRE Number = ₹15.3L ÷ 0.03 = ₹5.1 crore at age 40. Monthly SIP at 12% for 8 years: approximately ₹2.78L/month — requires high income with extreme savings rate or significant existing capital."
     },
     {
-      "q": "Is this calculator free?",
-      "a": "Yes, completely free on CalcPhi."
+      "q": "What is Coast FIRE and is it achievable in India?",
+      "a": "Coast FIRE is when your current investments, left untouched at an assumed growth rate, will compound to your FIRE Number by standard retirement age — you only need to cover current expenses through income, not invest additionally. Useful intermediate milestone for disciplined early-career investors who accumulated ₹50–80L by age 35. The compounding from ₹60L at 12% for 25 years to age 60 = ₹1.60 crore — whether this meets your full FIRE Number depends on your target retirement expenses."
     },
     {
-      "q": "Are my inputs stored?",
-      "a": "No. Calculations run in your browser."
+      "q": "How do I handle healthcare in early retirement in India?",
+      "a": "Healthcare is the biggest practical gap in Indian early retirement. Secure an individual or family health policy (base ₹10L + super top-up ₹20L) while still employed and healthy. Budget ₹10,000–15,000/month for a couple in their 40s, growing at 10–15%/year as you age. Include healthcare explicitly in FIRE expense estimates. The cost of a major illness without insurance (cardiac surgery: ₹5–12L; cancer treatment: ₹15–30L) can permanently derail a FIRE plan."
     },
     {
-      "q": "Is it mobile-friendly?",
-      "a": "Yes. Works on all modern smartphones."
-    }
-  ],
-  "examples": [
-    {
-      "heading": "\u20b980,000/month expenses \u2014 FIRE at 45",
-      "text": "At 6% inflation, expenses at 45 (13 years from age 32): \u20b91,70,000/month. Annual: \u20b920.4 lakh. FIRE number at 3.5% SWR: \u20b920.4 lakh \u00f7 0.035 = \u20b95.83 crore. Monthly investment at 12% for 13 years: \u20b91,82,000/month. Aggressive saving required."
+      "q": "What is the FIRE number for ₹1 lakh/month expenses?",
+      "a": "₹1 lakh/month = ₹12L/year. At 3.5% SWR: FIRE Number = ₹12L ÷ 0.035 = ₹3.43 crore (today's rupees). If retiring in 15 years at 6% inflation: expenses inflate to approximately ₹2.40L/month (₹28.8L/year). FIRE Number = ₹28.8L ÷ 0.035 = ₹8.23 crore. Monthly SIP at 12% for 15 years to reach ₹8.23 crore: approximately ₹1.87L/month. This requires a high income with a very high savings rate."
     },
     {
-      "heading": "Lean FIRE with \u20b940,000/month lifestyle",
-      "text": "Lean FIRE at \u20b940,000/month, targeting 45 (inflation-adjusted: \u20b985,000/month). FIRE number: \u20b985,000 \u00d7 12 / 0.04 = \u20b92.55 crore. More achievable: \u20b975,000/month investment at 12% for 13 years. Lean FIRE dramatically lowers the target."
+      "q": "How does FIRE planning differ from standard retirement planning?",
+      "a": "Standard retirement targets age 60 (25-year accumulation, 25-year decumulation). FIRE targets age 40–50 (shorter accumulation, longer decumulation). Key differences: (1) FIRE needs lower SWR (3–3.5% vs 3.5–4%) due to longer horizon; (2) FIRE retirement happens before EPF/NPS accessibility; (3) FIRE planning must explicitly budget healthcare as a retirement cost; (4) FIRE requires 50–70% savings rates versus the 15–20% of standard planning. The FIRE corpus is typically 2–3× larger than a standard retirement corpus."
+    },
+    {
+      "q": "Can I use the FIRE number calculator for Lean FIRE or Fat FIRE?",
+      "a": "Yes — enter the monthly expenses appropriate for your FIRE variant. Lean FIRE: ₹35,000–50,000/month. Regular FIRE: ₹60,000–1,00,000/month. Fat FIRE: ₹1,50,000–3,00,000/month. The calculator scales the FIRE Number and required SIP accordingly. At any expense level, use SWR of 3–3.5% for early retirement horizons beyond 30 years. Lean FIRE with ₹40,000/month requires approximately ₹3.4 crore in today's rupees — achievable in 10–12 years on a moderate-to-high income with 40–50% savings rate."
     }
   ],
   "related": [
     {
       "title": "Retirement Corpus Calculator",
-      "url": "/india/retirement-corpus-calculator/"
+      "url": "/india/retirement-corpus-calculator/",
+      "desc": "Standard retirement at 60 — detailed corpus with EPF and NPS integration"
     },
     {
       "title": "SWP Calculator",
-      "url": "/india/swp-calculator/"
+      "url": "/india/swp-calculator/",
+      "desc": "Plan systematic withdrawal from the corpus in retirement"
+    },
+    {
+      "title": "SIP Calculator",
+      "url": "/india/sip-calculator/",
+      "desc": "Calculate how your monthly SIP grows to reach the FIRE Number"
     }
   ]
 }

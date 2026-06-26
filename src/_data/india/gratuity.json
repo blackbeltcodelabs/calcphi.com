@@ -1,26 +1,25 @@
 {
   "id": "gratuity",
   "schema": {
-    "appName": "Gratuity Calculator India",
-    "appDescription": "Calculate gratuity amount for private sector employees under the Payment of Gratuity Act 1972. Know exact gratuity, tax-free limit, and taxable portion."
+    "appName": "Gratuity Calculator — Payment of Gratuity Act 1972",
+    "appDescription": "Calculate gratuity using the statutory formula: (Basic+DA × 15 × years) / 26. Tax-free up to ₹20 lakh for private-sector Act-covered employees (verify current cap at incometax.gov.in). Requires 5 years continuous service."
   },
   "inputs": [
     {
       "id": "gr-basic",
-      "label": "Last Basic + DA (\u20b9/month)",
-      "min": 5000,
-      "max": 500000,
+      "label": "Last Basic + DA (₹/month)",
+      "min": 10000,
+      "max": 10000000,
       "step": 1000,
-      "value": 50000
+      "value": 80000
     },
     {
       "id": "gr-years",
       "label": "Years of Continuous Service",
-      "min": 5,
+      "min": 0,
       "max": 40,
       "step": 0.5,
-      "value": 10,
-      "hint": "Minimum 5 years (240 days/year)"
+      "value": 10
     }
   ],
   "outputs": [
@@ -31,7 +30,7 @@
     },
     {
       "id": "gr-tax-free",
-      "label": "Tax-Free Component (up to \u20b920 lakh)"
+      "label": "Tax-Free Component (up to ₹20 lakh)"
     },
     {
       "id": "gr-taxable",
@@ -44,66 +43,101 @@
   ],
   "howToSteps": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the Gratuity Calculator. Smart defaults are pre-filled."
+      "name": "Enter last drawn Basic + DA",
+      "text": "Enter basic salary plus Dearness Allowance (DA) at the time of separation. Gratuity is calculated only on Basic + DA — not HRA, commission, overtime, or bonus, even if these are part of your monthly salary."
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time \u2014 no submit button needed."
+      "name": "Enter years of continuous service",
+      "text": "Enter your total completed years of service with the same employer. Service of 6 months or more in the last year rounds up to a full year. Service of less than 6 months in the last year is not counted. For death or disability, there is no 5-year minimum requirement."
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown to see numbers over time."
+      "name": "Check the ₹20 lakh tax exemption",
+      "text": "The tax-free limit is ₹20 lakh for private-sector employees covered under the Payment of Gratuity Act (verify the current cap at incometax.gov.in — it can be revised by notification). The ₹20L cap is lifetime aggregate across all employers, not per employer."
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust inputs to compare scenarios and find the best option."
+      "name": "Confirm Act coverage with your employer",
+      "text": "The Act applies to establishments with 10 or more employees. If your employer is not covered by the Act, the gratuity formula and statutory rights may differ — verify with HR. Non-Act employers often use the 1/30 formula (divided by 30, not 26) and may have different minimum service requirements."
+    }
+  ],
+  "articleSections": [
+    {
+      "id": "gr-formula",
+      "heading": "The Gratuity Formula Explained — 15/26, the Rounding Rule, and Act vs Non-Act Employers",
+      "body": "<p>The Payment of Gratuity Act 1972 mandates gratuity for employees in establishments with 10 or more employees, based on the formula: <strong>Gratuity = (Last drawn Basic + DA) × 15 ÷ 26 × Number of completed years of service</strong>. The 26 in the denominator represents the number of working days in a month under a 6-day workweek standard. The 15 represents 15 days' salary per year of service — effectively half a month's pay per completed year. The formula applies only to Basic + DA — not HRA, conveyance allowance, medical allowance, bonus, overtime, or commission. This means the same total CTC at two companies can produce different gratuity if the basic salary proportions differ.</p><p><strong>The rounding rule for partial years:</strong> Only the final incomplete year uses the 6-month rule. If your service is 10 years and 7 months, it rounds to 11 years (7 months ≥ 6 months). If service is 10 years and 5 months, it stays at 10 years. For all earlier completed years, full years only count — you cannot argue that 9 years 11 months means 10 years for the intermediate years. The total count is final complete years + 1 if the last partial year has 6+ months.</p><p><strong>Act vs Non-Act employers:</strong> Establishments not covered by the Act (fewer than 10 employees at the time of computation, or specifically exempted sectors) are not legally required to pay gratuity under the Act. Many non-Act employers pay an ex-gratia gratuity on a goodwill basis, often calculated as (Basic+DA × 15 / 30) — using 30 (calendar days per month) instead of 26 (working days), giving approximately 13.3% less gratuity per year than the Act formula. Employees in non-Act establishments have limited legal recourse if the employer does not pay voluntarily. Always clarify gratuity entitlement with HR before joining any company with fewer than 10 employees.</p><p><strong>Gratuity calculation example:</strong> Last drawn Basic + DA = ₹80,000/month. Service = 12 years 8 months → rounds to 13 years. Gratuity = ₹80,000 × 15 / 26 × 13 = ₹80,000 × 0.5769 × 13 = ₹6,00,000. Tax-free (below ₹20L ceiling): ₹6,00,000 fully exempt. Net gratuity received: ₹6,00,000.</p>"
+    },
+    {
+      "id": "gr-scenarios",
+      "heading": "Three Gratuity Scenarios — Mid-Career Resignation, Long-Service Retirement, and Multiple Employers",
+      "body": "<h3>Scenario 1: Deepa, 10 years service, resigns — ₹60,000 basic + DA</h3><p>Deepa has served exactly 10 years and 3 months. 3 months < 6 months → rounds to 10 years. Gratuity = ₹60,000 × 15 / 26 × 10 = ₹3,46,154. Tax-free: yes, ₹3,46,154 < ₹20L ceiling (verify current cap). Net gratuity: ₹3,46,154. Note: if Deepa had stayed 3 more months (making it 10 years 6 months → 11 years), her gratuity would be ₹60,000 × 15 / 26 × 11 = ₹3,80,769 — an additional ₹34,615 for just 3 more months of service. The rounding rule creates a strong incentive to complete the 6-month threshold in the final year.</p><h3>Scenario 2: Rajendra, 35 years service, retires — ₹1,50,000 basic + DA</h3><p>Rajendra retires after 35 years. Gratuity = ₹1,50,000 × 15 / 26 × 35 = ₹30,28,846. Tax-free: ₹20,00,000 (₹20L cap, verify at incometax.gov.in — this is his first gratuity so no prior aggregate to worry about). Taxable: ₹30,28,846 − ₹20,00,000 = ₹10,28,846. At 20% bracket: ₹10,28,846 × 20% (+ cess) ≈ ₹2,14,000 in tax on the excess. Net gratuity received post-tax: approximately ₹28,14,000. For government employees: the full ₹30,28,846 would be tax-free with no ceiling — the contrast with private-sector employees is significant at senior salary levels.</p><h3>Scenario 3: Ananya, two employers — ₹20 lakh lifetime exemption at risk</h3><p>Ananya worked at Company A for 12 years (last salary ₹70,000 basic + DA), receiving gratuity of ₹4,84,615. Tax-free: full ₹4,84,615 (below ₹20L). She joins Company B, serves 20 years (last salary ₹1,20,000 basic + DA). Gratuity from B: ₹1,20,000 × 15 / 26 × 20 = ₹13,84,615. Her lifetime exemption used from Company A: ₹4,84,615. Remaining exemption: ₹20,00,000 − ₹4,84,615 = ₹15,15,385. Company B gratuity ₹13,84,615 < remaining exemption → still fully tax-free. If Company B gratuity exceeded the remaining ceiling, the excess would be taxable as salary. Tracking the cumulative exemption used across multiple employers is the taxpayer's responsibility — the IT department does not automatically flag it, but it surfaces during assessment.</p>"
+    },
+    {
+      "id": "gr-rules",
+      "heading": "Gratuity Eligibility, Forfeiture Conditions, Death Benefit, and the 5-Year Trap in CTC",
+      "body": "<p><strong>5-year continuous service requirement:</strong> The 5-year threshold is the most critical eligibility condition for permanent employees. Continuous service means uninterrupted service with the same legal employer entity. Breaks for leave (earned leave, sick leave, maternity leave) do not break continuity — these are legally continuous service. A lay-off period (employer-initiated) does not break continuity either. However, service with a predecessor company before an acquisition counts as continuous service if the acquiring company has legally assumed the employment obligations — verify this specifically when joining a company that recently acquired or merged another entity.</p><p><strong>Fixed-term employees — 1-year eligibility (Code on Social Security 2020, effective November 2025):</strong> The Code on Social Security 2020, notified effective November 2025, significantly extended gratuity rights. Fixed-term and contract employees are now entitled to pro-rata gratuity after completing <strong>1 year</strong> of service with the same employer — no 5-year threshold required. Pro-rata calculation: same Act formula applied to the actual period of service. This covers employees on fixed-term employment contracts (FTECs), project-based contracts, and seasonal workers. Verify current implementing rules and any sector-specific notifications at labour.gov.in before relying on this for any specific engagement.</p><p><strong>New regime tax treatment (CBDT Circular No. 06/2025, May 2025):</strong> Gratuity up to <strong>₹5 lakh</strong> is exempt even under the new tax regime — CBDT Circular No. 06/2025 (issued May 2025) clarified this. Under the old regime, the full ₹20L lifetime exemption under Section 10(10) applies. Under the new regime, a ₹5L sub-limit applies to the exemption. Employees who receive gratuity in a year where they have opted for the new regime should verify the applicable exemption and compute accordingly in their ITR. Verify the current position at incometax.gov.in — the circular text is available on the CBDT notifications portal.</p><p><strong>Forfeiture of gratuity:</strong> An employer can forfeit gratuity wholly or partially if the employee is terminated for: (a) wilful omission or negligence causing damage/loss to property (forfeiture limited to the actual loss, not full gratuity), or (b) disorderly or violent conduct, or an offence involving moral turpitude committed during employment. Gratuity cannot be forfeited for poor performance — only for the specific misconduct categories above. An employee who resigns before 5 years forfeits the entire gratuity — this is not a forfeiture but a non-eligibility.</p><p><strong>Death and disability:</strong> On death or permanent disability of the employee, gratuity is payable to the nominee (or legal heir if no nominee) regardless of years of service. The 5-year minimum does not apply. This makes gratuity a modest but automatic survivor benefit — typically far smaller than term insurance but not requiring premiums.</p><p><strong>Gratuity in CTC — the provision trap:</strong> Most CTC structures include an employer gratuity provision of approximately 4.81% of basic salary annually. This provision appears in your CTC but is held in the company's books — it is not in an external account accessible to you. If you resign before 5 years, the entire accumulated provision is forfeited. For a 3-year employee with ₹60,000 basic: the provision built is approximately 4.81% × ₹60,000 × 36 months = ₹1,03,656 — money you never see. When comparing two job offers, subtract the gratuity provision from CTC to get the actual cash-equivalent compensation for service below 5 years.</p>"
+    },
+    {
+      "id": "gr-mistakes",
+      "heading": "Gratuity Planning Mistakes — Resigning at 4 Years 11 Months, Ignoring the Aggregation Rule, and Formula Errors",
+      "body": "<p><strong>Resigning just before the 5-year mark without realising how close you are.</strong> The most expensive career timing mistake: an employee who resigns at 4 years 11 months loses the entire gratuity entitlement — often ₹2–5 lakh for a salaried employee. One month more (completing 5 years, then the 6-month partial-year count brings service to at least 5 years) makes all previous years payable. If you are planning to resign, calculate your exact gratuity date (the date on which you complete 5 years) and plan around it. An offer that requires joining 3 months earlier is financially quantifiable: if your forgone gratuity is ₹3,50,000, the new offer must compensate for this explicitly — either through a joining bonus or a meaningfully higher salary.</p><p><strong>Not tracking the ₹20 lakh lifetime aggregate across employers.</strong> Multiple job changes mean multiple gratuity receipts. Each company pays gratuity at separation — they do not know your gratuity history from prior employers. The ₹20L tax-free lifetime aggregate is the taxpayer's responsibility to track and declare correctly in the ITR. Exceed ₹20L total across all employers and the excess is taxable as salary income in the year of receipt. Maintain a record of each gratuity payment received and the exemption claimed.</p><p><strong>Using the wrong formula — 26 vs 30 in the denominator.</strong> The Act formula uses 26 (working days in a month under a 6-day workweek). Some companies erroneously calculate gratuity using 30 (calendar days), giving ₹60,000 × 15 / 30 × 10 = ₹3,00,000 instead of the correct ₹3,46,154 — a ₹46,154 underpayment. If your employer uses 30, challenge it: the Act formula specifies 26 unambiguously for Act-covered establishments. Similarly, some employers calculate gratuity on basic alone (without DA) — this is incorrect under the Act, which mandates basic + DA.</p><p><strong>Treating gratuity as a retirement plan.</strong> For most private-sector employees, gratuity is a supplementary benefit, not a retirement corpus. At ₹80,000 basic for 25 years: gratuity = ₹80,000 × 15 / 26 × 25 = ₹11,53,846 — enough for 12 months of current expenses, not 25 years of retirement. EPF, NPS, and equity SIP are the actual retirement instruments. Gratuity is a bonus, not a plan.</p>"
     }
   ],
   "faq": [
     {
       "q": "What is the gratuity formula in India?",
-      "a": "Gratuity = (Basic + DA) \u00d7 15 \u00f7 26 \u00d7 Years of Service. The '15' is for 15 days of salary, '26' converts monthly salary to daily (26 working days/month). Example: \u20b950,000 basic, 10 years = 50,000 \u00d7 15 \u00f7 26 \u00d7 10 = \u20b92,88,462."
+      "a": "For establishments covered under the Payment of Gratuity Act 1972: Gratuity = (Last drawn Basic + DA) × 15 ÷ 26 × Number of completed years of service. Only Basic + DA counts — not HRA, allowances, or bonus. Service of 6 months or more in the final year rounds up to a full year. Example: ₹80,000 basic + DA × 15 / 26 × 12 years = ₹5,53,846."
     },
     {
-      "q": "Is gratuity tax-free?",
-      "a": "Gratuity up to \u20b920 lakh (revised limit) is tax-free for private sector employees under the Payment of Gratuity Act. Government employees get full tax exemption. Amounts above \u20b920 lakh are taxable as income from salary."
+      "q": "Is gratuity tax-free in India?",
+      "a": "Yes, up to a limit. For private-sector employees covered by the Payment of Gratuity Act: tax-free up to ₹20 lakh lifetime aggregate across all employers (verify current cap at incometax.gov.in — this was raised from ₹10L in 2019 and can be revised). Government and PSU employees: fully tax-free with no ceiling. Gratuity above the ₹20L cap is taxable as salary income in the year of receipt."
     },
     {
-      "q": "When am I eligible for gratuity?",
-      "a": "Gratuity is payable on: resignation/retirement after 5+ years continuous service, termination (no minimum service requirement), death or disability (no minimum service). The 5-year rule is waived in case of death. Gratuity must be paid within 30 days of becoming payable."
+      "q": "Do I qualify for gratuity if I resign after 4 years?",
+      "a": "No. The Payment of Gratuity Act requires a minimum of 5 years of continuous service for eligibility on resignation or retirement. The 5-year rule does not apply for death or permanent disability — gratuity is payable in those cases regardless of service duration. Exceptions: some court judgments have held that 4 years 240 days qualifies in certain circumstances (treating 240 days as a year for service calculation) — verify with a labour lawyer if your service is close to the 5-year mark."
     },
     {
-      "q": "Is the Gratuity Calculator free?",
-      "a": "Yes, completely free on CalcPhi with no registration."
+      "q": "What is the maximum gratuity amount in India?",
+      "a": "The Payment of Gratuity Act has no cap on the gratuity amount payable — an employee can receive any amount based on the formula. However, the <strong>tax-free limit</strong> is ₹20 lakh (verify current cap at incometax.gov.in). A high-earning long-tenure employee whose formula gives ₹35 lakh gratuity receives the full ₹35 lakh — only ₹15 lakh above the ₹20L ceiling is taxable."
     },
     {
-      "q": "Are my inputs stored?",
-      "a": "No. All calculations run in your browser. Your data is never stored."
+      "q": "How is gratuity calculated for more than 5 years with rounding?",
+      "a": "Only the final incomplete year uses the 6-month rounding rule: if your final partial year is 6 months or more, it counts as a full year; less than 6 months is not counted. Example: 12 years 7 months → 13 years (7 months rounds up). 12 years 4 months → 12 years (4 months drops). This rounding only applies to the final partial year — all prior years count as full years automatically."
     },
     {
-      "q": "Is it mobile-friendly?",
-      "a": "Yes. Works on all modern smartphones and tablets."
-    }
-  ],
-  "examples": [
-    {
-      "heading": "\u20b950,000 basic, 10 years service",
-      "text": "Gratuity = 50,000 \u00d7 15/26 \u00d7 10 = \u20b92,88,462. Fully tax-free (below \u20b920 lakh limit). That's \u20b928,846/year of service. For 20 years, gratuity = \u20b95,76,923 \u2014 still tax-free as under \u20b920 lakh."
+      "q": "Is gratuity paid on basic salary only or gross salary?",
+      "a": "Basic salary plus Dearness Allowance (DA) only. Gratuity excludes HRA, conveyance allowance, medical allowance, special allowances, commissions, overtime pay, and bonus — even if these are regular components of your monthly salary. This is why employees with a low basic / high allowances structure receive less gratuity than those with a higher basic at the same total CTC."
     },
     {
-      "heading": "High earner \u2014 \u20b92 lakh basic, 15 years",
-      "text": "Gratuity = 2,00,000 \u00d7 15/26 \u00d7 15 = \u20b917,30,769. Tax-free. For 20 years: \u20b923,07,692 \u2014 \u20b93,07,692 above \u20b920 lakh limit is taxable at slab rate."
+      "q": "Can an employer refuse to pay gratuity?",
+      "a": "An employer can forfeit gratuity only on specific grounds: wilful negligence causing provable financial damage to the employer's property (forfeiture limited to the loss amount, not the full gratuity), or termination for violent/disorderly conduct or an offence involving moral turpitude. Gratuity cannot be forfeited for poor performance, resignation, or normal termination. Non-payment of eligible gratuity is actionable under the Payment of Gratuity Act — the employee can file a claim with the Controlling Authority (typically the Labour Commissioner) within 1 year of due date."
+    },
+    {
+      "q": "When is gratuity paid after resignation or retirement?",
+      "a": "Within 30 days of the gratuity becoming payable (the separation date). If the employer delays beyond 30 days, interest is payable on the gratuity amount at the rate notified by the Central Government (currently 10% per annum — verify at the Ministry of Labour). The employee must apply for gratuity in Form I to the employer within 30 days of the gratuity becoming payable (though courts have allowed later applications in many cases)."
+    },
+    {
+      "q": "How is gratuity taxed under the new tax regime in 2026?",
+      "a": "Under the new tax regime, gratuity up to ₹5 lakh is exempt from tax — CBDT Circular No. 06/2025 (May 2025) clarified this position. Under the old tax regime, the full ₹20 lakh lifetime ceiling under Section 10(10) applies. This means private-sector employees who opt for the new regime in the year of gratuity receipt can exempt up to ₹5L; those in the old regime can exempt up to ₹20L (lifetime aggregate). Government and PSU employees are fully exempt under both regimes with no ceiling. Verify the current position at incometax.gov.in and confirm your regime election for the relevant assessment year before filing ITR."
+    },
+    {
+      "q": "Do fixed-term or contract employees get gratuity in India?",
+      "a": "Yes, under the Code on Social Security 2020 (notified effective November 2025). Fixed-term and contract employees are entitled to pro-rata gratuity after completing 1 year of service with the same employer — no 5-year minimum required. The gratuity is calculated using the same Act formula (Basic+DA × 15/26 × years served) applied to the actual contract period. This is a significant departure from the 5-year threshold for permanent employees. Verify the current implementing rules, sector-specific notifications, and whether your engagement type is covered at labour.gov.in — the Code is enforced through state-level rules that may vary."
     }
   ],
   "related": [
     {
       "title": "EPF Calculator",
-      "url": "/india/epf-calculator/"
+      "url": "/india/epf-calculator/",
+      "desc": "Project EPF corpus at retirement — the main retirement accumulation alongside gratuity"
     },
     {
       "title": "CTC to In-Hand Calculator",
-      "url": "/india/ctc-to-in-hand-calculator/"
+      "url": "/india/ctc-to-in-hand-calculator/",
+      "desc": "See how the gratuity provision sits within your total CTC structure"
+    },
+    {
+      "title": "Income Tax Calculator",
+      "url": "/india/income-tax-calculator/",
+      "desc": "Calculate tax on gratuity above the ₹20 lakh exemption ceiling"
     }
   ]
 }

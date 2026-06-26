@@ -1,43 +1,41 @@
 {
   "id": "term-insurance",
   "schema": {
-    "appName": "Term Insurance Cover Calculator India",
-    "appDescription": "Calculate recommended life insurance cover amount based on income, liabilities, and dependents. Get an indicative annual premium estimate."
+    "appName": "Term Insurance Calculator",
+    "appDescription": "Calculate recommended term insurance cover based on income replacement, liabilities, and dependents. Premiums are indicative. GST on individual life insurance premiums is 0% from Sept 2025 (verify at cbic.gov.in). Section 80C on premiums, Section 10(10D) tax-free death benefit."
   },
   "inputs": [
     {
       "id": "ti-income",
-      "label": "Annual Income (\u20b9)",
-      "min": 100000,
+      "label": "Annual Income (₹)",
+      "min": 300000,
       "max": 100000000,
-      "step": 50000,
+      "step": 100000,
       "value": 1200000
     },
     {
       "id": "ti-age",
       "label": "Current Age (Years)",
       "min": 18,
-      "max": 65,
+      "max": 60,
       "step": 1,
       "value": 32
     },
     {
       "id": "ti-liabilities",
-      "label": "Total Liabilities (\u20b9)",
+      "label": "Total Liabilities (₹)",
       "min": 0,
       "max": 100000000,
       "step": 100000,
-      "value": 3000000,
-      "hint": "Home loan + other EMIs"
+      "value": 5000000
     },
     {
       "id": "ti-assets",
-      "label": "Total Assets (\u20b9)",
+      "label": "Total Assets (₹)",
       "min": 0,
       "max": 100000000,
       "step": 100000,
-      "value": 1000000,
-      "hint": "FD, MF, EPF, etc."
+      "value": 2000000
     },
     {
       "id": "ti-dependents",
@@ -61,66 +59,93 @@
   ],
   "howToSteps": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the Term Insurance Calculator. Smart defaults are pre-filled."
+      "name": "Enter your annual income",
+      "text": "Enter your gross annual income. The income replacement method multiplies income by 10–15× for the base cover. Higher multipliers (15–20×) apply if you are the sole earner with young children and a large home loan."
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time \u2014 no submit button needed."
+      "name": "Enter liabilities and assets",
+      "text": "Total liabilities (home loan outstanding, car loan, personal loan, credit card debt) increase the required cover. Total liquid assets (FDs, mutual funds, EPF) that your family can access reduce it. Only include liabilities your family would need to clear, not business liabilities in most cases."
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown to see numbers over time."
+      "name": "Enter number of dependents",
+      "text": "Children below 18 and a non-working spouse require larger cover. A non-working spouse with two young children and a ₹50 lakh home loan needs at least 15× income cover. A dual-income couple with no children and no major loan may need only 7–8× income."
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust inputs to compare scenarios and optimise your decision."
+      "name": "Buy online and compare",
+      "text": "The premium estimate is indicative. Get actual quotes from LIC, HDFC Life, ICICI Prudential, Max Life, and other insurers online. Online premiums are 20–30% lower than agent-sold plans. Lock in the premium now — rates rise sharply after age 40 and with any health declaration."
+    }
+  ],
+  "articleSections": [
+    {
+      "id": "ti-how-it-works",
+      "heading": "How Term Insurance Works — Pure Risk Cover, Death Benefit Tax Treatment, and the GST 2.0 Premium Change",
+      "body": "<p>A term insurance policy has one purpose: pay the sum assured (cover amount) to the nominated beneficiary if the insured dies during the policy term. There is no maturity benefit — if you survive the policy term, nothing is paid. This is why term insurance is dramatically cheaper than endowment plans, money-back policies, and ULIPs, which bundle insurance with savings or investment and charge for both. The pure-risk structure of term insurance means every rupee of premium buys maximum death cover — on a ₹1 crore policy for a 30-year-old, the annual premium is ₹7,000–12,000; the equivalent endowment premium for ₹1 crore cover at the same age exceeds ₹1,50,000/year.</p><p><strong>Death benefit tax treatment:</strong> The death benefit paid to the nominee is completely tax-free under <strong>Section 10(10D)</strong> of the Income Tax Act, provided the annual premium does not exceed 10% of the sum assured (for policies issued after 1 April 2012). For a ₹1 crore term plan with ₹10,000 annual premium: 10% of ₹1 crore = ₹10 lakh — the premium of ₹10,000 is a tiny fraction of this threshold, so the full ₹1 crore death benefit is always tax-free for pure term plans. The 10% test was 20% for policies issued before 1 April 2012.</p><p><strong>GST 2.0 change — 0% GST on individual life insurance premiums from 22 September 2025:</strong> Previously, 18% GST applied to term insurance premiums. For a ₹10,000 annual term premium, GST added ₹1,800 — making the total outflow ₹11,800. From September 2025, individual term insurance premiums are exempt from GST (verify at cbic.gov.in and your insurer's current premium schedule). This reduces the annual cost for existing policyholders at renewal and for new buyers from that date.</p><p><strong>Policy term choice:</strong> Buy a policy that runs to at least age 65, preferably 70. The financial risk to your family is highest between your current age and when your youngest child becomes financially independent and your home loan is closed — typically age 50–60. A 20-year policy for a 32-year-old expires at 52, leaving a gap. A 35-year policy to age 67 ensures complete coverage throughout the vulnerable period. The marginal premium increase for a longer term is small relative to the protection it provides.</p>"
+    },
+    {
+      "id": "ti-scenarios",
+      "heading": "Three Term Insurance Scenarios — New Homeowner, Business Owner, and Dual-Income Couple",
+      "body": "<h3>Scenario 1: Amit, 34, ₹15L income, ₹60L home loan, two children ages 3 and 1 — cover needed</h3><p>Amit is the primary earner. Income replacement (15×): 15 × ₹15L = ₹2.25 crore. Outstanding liabilities: ₹60L home loan. Existing assets: ₹20L in EPF + MF. Required cover: ₹2.25 crore + ₹60L − ₹20L = ₹2.65 crore. Rounded up: ₹3 crore term plan. Annual premium for ₹3 crore, non-smoker male, 35-year policy term to age 69: approximately ₹22,000–30,000/year (verify with live insurer quotes). Under old regime, 80C deduction on premium: ₹22,000 within the ₹1.5L cap. If Amit dies at 40, his family receives ₹3 crore — enough to: pay off the home loan (₹55L outstanding), invest ₹2.45 crore in balanced funds, and draw ₹1.8L/month indefinitely at 8% return — fully replacing his income for his family's lifetime.</p><h3>Scenario 2: Kavitha, 42, business owner, ₹30L income, business liabilities — planning correctly</h3><p>Kavitha's business has outstanding bank loans of ₹80 lakh personally guaranteed. Standard life cover calculation: income replacement (12×) ₹3.6 crore + personal liabilities ₹80L − liquid assets ₹50L = ₹3.9 crore. However: if the business loans are the business's liability and not personally collateralised, they should not be in the personal cover calculation. Only personally guaranteed business debts belong in the personal term insurance computation. Kavitha should buy ₹3 crore personal term cover and ensure business-level life cover (key-person insurance or business loan cover) is handled separately. Annual premium at 42, non-smoker female: approximately ₹35,000–55,000 for ₹3 crore to age 65. Women typically pay 15–25% lower premiums than men of the same age and health profile — this is standard actuarial pricing across all major Indian insurers.</p><h3>Scenario 3: Preet and Ananya, dual income, no home loan, one child — how much is enough?</h3><p>Both Preet (₹20L) and Ananya (₹18L) work. Combined income: ₹38L. Outstanding loan: nil. If Preet dies, Ananya continues to earn ₹18L — income replacement needed for Preet's lost ₹20L: 10× = ₹2 crore. If Ananya dies, Preet needs ₹1.8 crore. Each buys a ₹2 crore policy. At ages 31 and 29: combined annual premium approximately ₹13,000–18,000 for ₹2 crore each. If they bought ₹1 crore policies (the instinctive round number), the surviving spouse would be meaningfully under-covered — especially factoring in future child's education costs (₹30–50L over the next 20 years at current inflation).</p>"
+    },
+    {
+      "id": "ti-buying-rules",
+      "heading": "Term Insurance Buying Rules — Online vs Agent, Riders, Claim Settlement Ratio, and the Return of Premium Trap",
+      "body": "<p><strong>Online vs agent pricing:</strong> Term insurance bought online directly from the insurer's website costs 20–30% less than the same product sold through an agent — the difference is the agent's commission, which is embedded in the premium. For a ₹1 crore policy with ₹10,000 annual premium online, the agent-sold version may cost ₹12,000–13,000. Over a 30-year policy term, this difference compounds to a significant sum. Use comparison platforms (Policybazaar, Ditto Insurance) to compare premiums across insurers, but always buy from the insurer's own website or through a fee-only advisor for clarity on the exact product features.</p><p><strong>Claim Settlement Ratio (CSR):</strong> IRDAI publishes annual claim settlement ratios for all life insurers. A CSR of 97% or above is considered strong — it means 97 out of 100 claims were settled. However, CSR can be gamed (by settling small claims and contesting large ones). A more useful metric is the claims-paid amount ratio. Choose large, established insurers (LIC, HDFC Life, ICICI Prudential, SBI Life, Max Life) with consistently high CSRs over multiple years — the 30-year relationship with a term insurer is long enough that insurer financial stability matters.</p><p><strong>Riders to consider and avoid:</strong> Critical illness rider (pays a lump sum on diagnosis of specified critical illnesses — heart attack, cancer, stroke): useful if your standalone health insurance doesn't have a critical illness component. Accidental death benefit rider (pays additional cover on accidental death): cheap and useful. Premium waiver on disability rider (future premiums waived if you become permanently disabled): useful for the self-employed. <strong>Riders to avoid:</strong> Return of Premium (ROP) rider, which refunds premiums paid if you survive the policy term — the premium for this is 2–4× the base term premium, the equivalent of buying a poor-return investment. Buying a pure term plan and investing the ROP premium difference in equity MF always produces more wealth.</p><p><strong>Nomination and regular review:</strong> Nominate your spouse as primary and children (with a trustee if children are minor) as contingent nominees. Review and update nomination after every major life event: marriage, birth of children, divorce, death of a nominee. Review the sum assured every 5 years — income growth, new loans, and inflation may mean your original ₹1 crore cover is insufficient a decade later.</p>"
+    },
+    {
+      "id": "ti-mistakes",
+      "heading": "Term Insurance Mistakes — Buying Too Little Cover, Waiting Until 40, ULIP Over Term, and Undisclosed Medical History",
+      "body": "<p><strong>Anchoring on ₹1 crore as 'the standard' cover regardless of income and liabilities.</strong> ₹1 crore was adequate life cover in 2005 when household incomes, home loans, and education costs were a fraction of 2026 levels. At a ₹15–20 lakh annual income with a ₹60–80 lakh home loan and two children, ₹1 crore covers less than two years of income — far below the 10–15× minimum needed. A ₹3 crore policy for a 32-year-old costs approximately ₹18,000–25,000/year — affordable and adequate.</p><p><strong>Delaying purchase until after 40 to 'think about it'.</strong> Term insurance premiums are extremely sensitive to age and health — premiums roughly double between age 30 and 40 for the same cover amount. A ₹1 crore policy at 30: approximately ₹7,000–9,000/year. The same policy at 40: ₹14,000–18,000/year. At 45: ₹22,000–30,000/year. Every year of delay costs approximately ₹500–1,000 in additional annual premium for the entire remaining policy term — a 30-year delay effect of ₹15,000–30,000 in excess lifetime premium.</p><p><strong>Buying an endowment/ULIP/money-back policy instead of a term plan.</strong> Agents earn commission on endowment plans (15–25% of premium in early years) versus term plans (1–5%). The industry incentive is to sell non-term products. The math is consistently unfavourable: a ₹1 crore endowment plan requires ₹1,50,000+ annual premium for 20 years; a ₹1 crore term plan + investing the ₹1,40,000 difference in equity SIP creates dramatically more wealth. The only benefit of endowment is forced savings discipline for investors who cannot maintain SIP discipline — a poor reason to accept 1–2% effective returns over 20 years.</p><p><strong>Not disclosing pre-existing medical conditions accurately at application.</strong> Undisclosed medical history is the primary reason for term insurance claim rejections. The insurer investigates claims — especially large ones — and accesses medical records. If the insured had hypertension or diabetes at the time of application and did not disclose it, the claim can be rejected under the material misrepresentation clause. Always disclose accurately at application even if it means a slightly higher premium or a loading — the alternative is a rejected claim at the worst possible time for your family.</p>"
     }
   ],
   "faq": [
     {
-      "q": "How much term insurance cover do I need?",
-      "a": "A common rule: cover = 15\u201320\u00d7 annual income. But the right cover = human life value (HLV). Calculate: (income \u00d7 remaining working years) + all liabilities \u2212 existing assets. This ensures your family can repay debts and sustain their lifestyle without your income."
+      "q": "How much term insurance cover do I need in India in 2026?",
+      "a": "The income replacement method gives: 10–15× annual income for most earners. Add outstanding liabilities (home loan, car loan, personal loan). Subtract liquid assets your family can access (EPF, FDs, mutual funds — not illiquid property). A single earner with ₹15L income, ₹60L home loan, and two young children needs at least ₹2.5–3 crore cover. A dual-income couple with no major loans may need 8–10× each."
     },
     {
-      "q": "What is the right age to buy term insurance?",
-      "a": "Buy term insurance as early as possible \u2014 premiums are lowest when young and healthy. A 25-year-old pays roughly half the premium of a 35-year-old for the same cover. Buy a long-tenure plan (30\u201335 years) to cover liabilities until retirement."
+      "q": "Is the death benefit from term insurance taxable?",
+      "a": "No. The death benefit paid to the nominee is fully tax-free under Section 10(10D), provided the annual premium does not exceed 10% of the sum assured (for policies issued after 1 April 2012). Pure term plans always satisfy this — a ₹1 crore policy with ₹10,000 annual premium has a 10% test threshold of ₹10 lakh, far above the actual premium. The full death benefit is received tax-free regardless of the amount."
     },
     {
-      "q": "Which is better \u2014 \u20b91 crore or \u20b92 crore term cover?",
-      "a": "For someone earning \u20b910\u201315 lakh/year with a home loan, \u20b91 crore is typically inadequate. \u20b91.5\u20132 crore is recommended. Premium difference is small \u2014 \u20b91 crore plan at 32 costs \u20b910,000\u2013\u20b912,000/year; \u20b92 crore plan costs \u20b918,000\u2013\u20b922,000/year. The additional cover is worth the marginal premium."
+      "q": "What is the GST on term insurance premiums in 2026?",
+      "a": "Under GST 2.0 (56th GST Council, 22 September 2025), individual life insurance premiums including term insurance are at 0% GST — previously 18% GST applied. Verify the current GST treatment on your insurer's premium quotation and at cbic.gov.in before purchasing. The exemption applies to individual term plans; group term life insurance (employer-provided) may have different GST treatment."
     },
     {
-      "q": "Is this calculator free?",
-      "a": "Yes, completely free on CalcPhi."
+      "q": "How long should the policy term be?",
+      "a": "The policy term should extend to at least age 65 — and preferably 70. Your financial obligations (home loan repayment, children's education, spouse's retirement) typically run through your late 50s. A 20-year policy bought at 35 expires at 55, leaving a 10-year gap of zero cover during which health conditions may prevent re-application. Longer policy terms add minimal marginal premium (extending from 20 to 30 years adds 15–25% to the annual premium) for substantially more protection."
     },
     {
-      "q": "Are my inputs stored?",
-      "a": "No. All calculations run in your browser."
+      "q": "Can I claim 80C deduction on term insurance premium?",
+      "a": "Yes. Term insurance premiums qualify for Section 80C deduction under the old tax regime, within the combined ₹1.5 lakh annual 80C cap (shared with EPF, PPF, ELSS, and other instruments). Under the new tax regime (default from AY 2024-25), Section 80C is not available. If you are in the old regime with EPF already filling the ₹1.5L cap, the term premium earns no additional deduction but the 10(10D) tax-free death benefit is unaffected by regime choice."
     },
     {
-      "q": "Is it mobile-friendly?",
-      "a": "Yes. Works on all modern smartphones."
-    }
-  ],
-  "examples": [
-    {
-      "heading": "32-year-old earning \u20b912 lakh with home loan",
-      "text": "Annual income \u20b912 lakh, remaining working years 28, home loan \u20b930 lakh, other assets \u20b910 lakh. Recommended cover = (12,00,000 \u00d7 28) + 30,00,000 \u2212 10,00,000 = \u20b93,56,00,000. Round up to \u20b93.5 crore. Estimated premium for \u20b93.5 crore cover: \u20b928,000\u2013\u20b935,000/year."
+      "q": "Should I buy term insurance online or through an agent?",
+      "a": "Online, directly from the insurer's website. Online premiums are 20–30% lower because the agent commission is eliminated. For the same ₹1 crore policy, an online premium of ₹9,000/year versus an agent-sold ₹11,500/year saves ₹2,500 annually — compounded over 35 years at 12%, that saving grows to approximately ₹11 lakh. Online policies are legally identical to agent-sold policies, the same product from the same insurer with the same claim settlement process."
     },
     {
-      "heading": "Increasing cover vs flat cover",
-      "text": "Instead of \u20b91 crore flat cover, consider \u20b975 lakh increasing cover (grows 5%/year). Over 30 years, cover doubles to \u20b93+ crore, matching inflation. Premium is similar but protection is far superior in later years when your income and liabilities are higher."
+      "q": "What is the Claim Settlement Ratio (CSR) and which insurer should I choose?",
+      "a": "CSR is the percentage of claims settled by an insurer versus total claims received, published annually by IRDAI. A CSR of 97%+ is strong. Established large insurers — LIC, HDFC Life, ICICI Prudential, SBI Life, Max Life — maintain consistently high CSRs. Avoid choosing a smaller insurer purely on price: a 10% cheaper premium from an insurer with a 90% CSR is a poor trade. Compare CSR over 3–5 years, not just the most recent year."
+    },
+    {
+      "q": "Is return of premium (ROP) term insurance worth it?",
+      "a": "No, for almost all investors. ROP term plans refund premiums paid if you survive the policy term but charge 2–4× the pure term premium for this feature. For a ₹1 crore, 30-year policy: pure term ₹10,000/year vs ROP ₹30,000/year. Investing the ₹20,000 difference annually in equity SIP at 12% CAGR grows to ₹54 lakh in 30 years — far more than the refund of ₹9 lakh total premiums paid. Buy pure term and invest the difference."
     }
   ],
   "related": [
     {
       "title": "Health Insurance Calculator",
-      "url": "/india/health-insurance-calculator/"
+      "url": "/india/health-insurance-calculator/",
+      "desc": "Ensure life and health cover work together — cover different risks"
     },
     {
       "title": "EPF Calculator",
-      "url": "/india/epf-calculator/"
+      "url": "/india/epf-calculator/",
+      "desc": "EPF corpus at retirement — part of the assets reducing your term cover need"
+    },
+    {
+      "title": "Income Tax Calculator",
+      "url": "/india/income-tax-calculator/",
+      "desc": "Check whether old regime's 80C on term premium saves you more than new regime"
     }
   ]
 }

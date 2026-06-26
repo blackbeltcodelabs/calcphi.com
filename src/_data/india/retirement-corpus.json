@@ -2,16 +2,16 @@
   "id": "retirement-corpus",
   "schema": {
     "appName": "Retirement Corpus Calculator India",
-    "appDescription": "Calculate the total corpus needed at retirement to sustain your desired lifestyle. Factor in inflation, investment returns, and life expectancy."
+    "appDescription": "Estimate the retirement corpus needed based on monthly expenses, inflation, and post-retirement returns. Plan to age 85–90 for longevity safety. Inflation assumed at 6% (verify RBI CPI data). EPF, NPS, and equity SIP are the primary accumulation vehicles."
   },
   "inputs": [
     {
       "id": "rc-monthly",
-      "label": "Current Monthly Expenses (\u20b9)",
-      "min": 5000,
+      "label": "Current Monthly Expenses (₹)",
+      "min": 10000,
       "max": 1000000,
-      "step": 1000,
-      "value": 80000
+      "step": 5000,
+      "value": 60000
     },
     {
       "id": "rc-age",
@@ -25,13 +25,13 @@
       "id": "rc-retire-age",
       "label": "Target Retirement Age",
       "min": 40,
-      "max": 65,
+      "max": 70,
       "step": 1,
       "value": 60
     },
     {
       "id": "rc-life-expect",
-      "label": "Life Expectancy",
+      "label": "Life Expectancy (Plan To Age)",
       "min": 70,
       "max": 100,
       "step": 1,
@@ -39,7 +39,7 @@
     },
     {
       "id": "rc-inflation",
-      "label": "Inflation Rate (% p.a.)",
+      "label": "Expected Inflation Rate (%)",
       "min": 3,
       "max": 12,
       "step": 0.5,
@@ -47,94 +47,121 @@
     },
     {
       "id": "rc-post-rate",
-      "label": "Post-Retirement Return Rate (% p.a.)",
+      "label": "Post-Retirement Portfolio Return (%)",
       "min": 4,
       "max": 12,
       "step": 0.5,
-      "value": 7
+      "value": 8
     }
   ],
   "outputs": [
     {
       "id": "rc-corpus",
-      "label": "Corpus Needed at Retirement",
+      "label": "Retirement Corpus Needed",
       "highlight": true
     },
     {
       "id": "rc-monthly-at-retire",
-      "label": "Monthly Expenses at Retirement (Inflation-Adjusted)"
+      "label": "Monthly Expenses at Retirement"
     },
     {
       "id": "rc-monthly-sip",
-      "label": "Monthly SIP Needed (at 12% return)"
+      "label": "Monthly SIP Needed (at 12% CAGR)"
     },
     {
       "id": "rc-years",
-      "label": "Years of Retirement to Fund"
+      "label": "Years to Build Corpus"
     }
   ],
   "howToSteps": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the Retirement Corpus Calculator."
+      "name": "Enter current monthly expenses",
+      "text": "Enter your actual current monthly household expenses — food, rent/EMI, utilities, transport, insurance premiums, children's education, lifestyle. Use 3–6 months average from bank statements. Do not include EMIs that will end before retirement."
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time as you type."
+      "name": "Set retirement age and life expectancy",
+      "text": "A 35-year-old who survives to retirement at 60 has a good chance of living to 80–90. Plan to age 85 at minimum; 90 if there is family longevity history. Running out of money at 78 is worse than having extra."
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown to see numbers over time."
+      "name": "Set inflation and post-retirement return",
+      "text": "6% inflation is the long-run India CPI average. Healthcare inflation is 10–14% — your blended inflation post-retirement may be higher if medical expenses are a large share. Post-retirement return of 7–9% is realistic for a balanced debt-equity portfolio."
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust inputs to compare scenarios and optimise your decision."
+      "name": "Work backwards to monthly SIP",
+      "text": "The corpus output tells you the lump sum needed at retirement. The monthly SIP figure shows what you need to invest today at 12% CAGR to reach that corpus. If the SIP exceeds your capacity, the choices are: retire later, reduce retirement expenses, or accept a lower corpus with more conservative withdrawals."
+    }
+  ],
+  "articleSections": [
+    {
+      "id": "rc-formula",
+      "heading": "How Retirement Corpus Is Calculated — Present Value of an Annuity, Inflation Adjustment, and the Real Return Concept",
+      "body": "<p>The retirement corpus calculation has two phases. <strong>Phase 1 — Accumulation:</strong> from today to retirement age. <strong>Phase 2 — Decumulation:</strong> from retirement to planned end of life. The corpus needed at retirement is the capital required to fund Phase 2.</p><p><strong>Step 1 — Inflate current expenses to retirement date:</strong> If your current monthly expenses are ₹60,000 and you plan to retire in 25 years with 6% inflation, expenses at retirement will be approximately ₹60,000 × (1.06)²⁵ = ₹60,000 × 4.29 = ₹2,57,143/month = ₹30,85,714/year. This is your annual income requirement in the first year of retirement.</p><p><strong>Step 2 — Calculate corpus using the Present Value of a growing annuity:</strong> The corpus is the PV of an income stream that starts at ₹30,85,714/year, grows with inflation (6%), over a 25-year retirement period, discounted at the post-retirement portfolio return (8%). Using a Gordon Growth variant: Corpus = First Year Income / (Return − Inflation) × [1 − ((1+Inflation)/(1+Return))^n]. Rough rule of thumb: 25–33× your first year of retirement expenses depending on the real return rate.</p><p><strong>The real return concept:</strong> Real return = (1 + nominal return) / (1 + inflation) − 1. If your post-retirement portfolio earns 8% nominal and inflation is 6%, real return = 1.08/1.06 − 1 = 1.89%. This low real return explains why retirement planning requires a large corpus — inflation aggressively erodes purchasing power during a 25–30 year retirement.</p><p><strong>Healthcare inflation adjustment:</strong> General CPI averages 6% in India. Healthcare cost inflation has consistently run 10–14%. If healthcare forms 30–40% of your retirement expenses, your effective personal inflation rate post-retirement may be 7–8%, requiring a larger corpus or higher post-retirement return assumption.</p>"
+    },
+    {
+      "id": "rc-scenarios",
+      "heading": "Three Retirement Scenarios — Early Retirement at 50, Standard at 60, and Late-Start Planning at 45",
+      "body": "<h3>Scenario 1: Vikram, 30, targets early retirement at 50 — 20 years to build, 35 years of retirement</h3><p>Current expenses: ₹80,000/month. Target retirement age: 50. Life expectancy: 85. Inflation: 6%. First-year retirement expenses: ₹80,000 × (1.06)²⁰ = ₹80,000 × 3.207 = ₹2,56,571/month = ₹30,78,852/year. Retirement duration: 35 years. Post-retirement portfolio return: 7.5% (conservative for a 50-year-old who needs the corpus to last 35 years). Corpus needed: approximately ₹6.8–7.5 crore. Monthly SIP at 12% CAGR for 20 years to reach ₹7 crore: approximately ₹80,000–85,000/month. Early retirement at 50 requires aggressive savings — 30–40% of current income toward investment, consistently for 20 years. EPF + NPS alone will not reach this target.</p><h3>Scenario 2: Meena, 40, standard retirement at 60 — ₹60,000 current expenses</h3><p>Current expenses: ₹60,000/month. Retirement at 60 (20 years). Life expectancy: 85 (25 years of retirement). Inflation: 6%. First-year retirement expenses: ₹60,000 × (1.06)²⁰ = ₹1,92,429/month. Annual: ₹23,09,148. Post-retirement return: 8%. Corpus: approximately ₹3.2–3.8 crore. Monthly SIP at 12% for 20 years: approximately ₹35,000–40,000. Meena already has EPF (projected ₹60L at 60) + NPS Tier I (if contributing ₹5,000/month: projected ₹40L). From EPF + NPS: approximately ₹1 crore. Remaining additional monthly SIP needed: approximately ₹25,000–30,000 in equity funds.</p><h3>Scenario 3: Arjun, 45, just started planning — ₹1,00,000 current expenses, 15 years to retirement</h3><p>Late start with high expenses. Current expenses: ₹1,00,000/month. Retirement at 60 (15 years). Inflation: 6%. First-year retirement expenses: ₹1,00,000 × (1.06)¹⁵ = ₹2,39,656/month. Annual: ₹28,75,872. Corpus: approximately ₹4.5–5.5 crore. Monthly SIP at 12% for 15 years to reach ₹5 crore: approximately ₹1,14,000/month — a very high bar. Options: reduce retirement expenses to ₹60,000 current equivalent (corpus drops to ₹3.3 crore, SIP approximately ₹70,000) or retire at 63 (SIP drops to approximately ₹80,000 at same expense level). Late-start planning requires more aggressive decisions than early starters.</p>"
+    },
+    {
+      "id": "rc-vehicles",
+      "heading": "Three Vehicles — EPF + VPF, NPS Tier I, and Equity SIP: Tax Treatment, Liquidity, and Allocation Strategy",
+      "body": "<p><strong>EPF + VPF:</strong> EPF is EEE (exempt-exempt-exempt) up to the ₹2.5L annual employee contribution threshold (verify at epfindia.gov.in — rate set annually by EPFO). VPF allows additional contributions beyond 12% mandatory, at the same EPF interest rate, EEE up to ₹2.5L combined. EPF withdrawal fully tax-free after 5 years continuous service. Limitation: EPF is liquid only at retirement, death, or specific conditions (housing, medical, education) — partial withdrawal rules apply. EPF provides a stable debt-like accumulation in the pre-retirement phase.</p><p><strong>NPS Tier I:</strong> Tax benefits: employer contribution to NPS up to 10% of basic+DA deductible under Section 80CCD(2) — over and above the ₹1.5L 80C limit (old regime); additional self-contribution up to ₹50,000/year deductible under 80CCD(1B). At retirement (age 60): 60% of corpus withdrawn lump-sum (tax-free); remaining 40% must be annuitised (annuity income is taxable). Still valuable for the 80CCD(2) employer-contribution channel — up to 10% of basic can go to NPS without touching the ₹1.5L 80C cap.</p><p><strong>Equity SIP in mutual funds:</strong> The largest wealth accumulator for most Indian retirement planners. Long-term equity SIP at 12% CAGR (Nifty 50 15-year average — past performance, verify at AMFI) compounding for 20–30 years produces the largest corpus. LTCG above ₹1.25L/year taxed at 12.5% (verify current rate at incometax.gov.in). No lock-in, fully liquid at any time. Sequence-of-returns risk in decumulation — withdrawing during a market crash — is the primary risk of equity-heavy retirement portfolios. Mitigate by maintaining 3–5 years of expenses in debt (FD, liquid funds) to avoid forced equity selling in bear markets.</p><p><strong>Allocation by retirement horizon:</strong> 25+ years to retirement: 70–80% equity, 20–30% debt. 10–15 years: 60% equity, 40% debt. 5 years to retirement: 40% equity, 60% debt. At retirement: 30% equity (inflation hedge), 70% debt/annuity. Glide path investing — gradually shifting from equity to debt as retirement approaches — is standard for DC retirement portfolios.</p>"
+    },
+    {
+      "id": "rc-mistakes",
+      "heading": "Retirement Planning Mistakes — Underestimating Longevity, 6% Inflation, Healthcare Cost Shock, and No Social Security",
+      "body": "<p><strong>Planning to only age 75.</strong> India's average life expectancy is approximately 73 years (national average including all demographics). But a 35-year-old educated, employed professional has a much higher conditional life expectancy — 82–87 years on average, with a 30–40% chance of living to 90+. If you plan a corpus to last to age 75 but live to 84, you spend your last decade financially depleted. Always plan to at least 85, preferably 90. The cost of planning to 90 (larger corpus) is vastly smaller than the cost of running out at 78.</p><p><strong>Assuming expenses will fall in retirement.</strong> The common assumption: 'I'll spend less at 60 — children are grown, home loan is paid.' Reality: (1) travel and leisure spending often increases in early retirement; (2) healthcare costs accelerate significantly after 70; (3) inflation erodes purchasing power regardless of expense level. A realistic assumption: retirement expenses at 80–90% of pre-retirement in the early years, rising to 100–110% by the late 70s due to medical costs.</p><p><strong>No social security safety net.</strong> India has no universal government pension for the general working population. EPF provides a corpus, but the EPS pension is capped at ₹7,500/month (maximum — verify at epfindia.gov.in). NPS provides an annuity, but annuity rates in India are low. Government employees get a defined-benefit pension. Private-sector employees have no guaranteed government income — the full retirement corpus must be built by the individual.</p><p><strong>Conflating monthly savings with monthly SIP.</strong> Monthly savings in a savings account at 3.5% for 25 years versus equity SIP at 12%: ₹30,000/month in FD for 25 years → approximately ₹1.52 crore. ₹30,000/month in equity SIP at 12% for 25 years → approximately ₹5.65 crore — 3.7× more. The investment vehicle matters enormously. Savings accounts are for emergencies, not retirement accumulation.</p>"
     }
   ],
   "faq": [
     {
-      "q": "How much corpus do I need to retire in India?",
-      "a": "A popular rule: corpus = 25\u00d7 annual expenses (4% withdrawal rule). For \u20b91 lakh/month expenses at retirement (inflation-adjusted), annual = \u20b912 lakh, corpus = \u20b93 crore. But with Indian inflation at 6%, medical costs, and increasing longevity, 30\u00d7 (3.3% withdrawal rate) is safer."
+      "q": "How much retirement corpus do I need in India?",
+      "a": "The retirement corpus depends on your monthly expenses at retirement, inflation, post-retirement return, and how long you plan to live. As a rule of thumb: 25–33× your first year's retirement expenses. For ₹60,000 current expenses, inflated at 6% for 25 years to retirement = ₹2.58 lakh/month at retirement. Annual expenses: ₹31 lakh. Corpus at 25× = ₹7.75 crore. At 30×: ₹9.3 crore. These appear large but are the output of 6% inflation over 25 years."
     },
     {
-      "q": "How does inflation affect retirement planning?",
-      "a": "\u20b980,000/month today becomes \u20b92,57,000/month in 25 years at 6% inflation. This is why you cannot plan retirement based on today's expenses \u2014 you must inflation-adjust. The corpus must be large enough to sustain inflating expenses throughout the retirement period."
+      "q": "What is a realistic rate of return assumption for retirement planning in India?",
+      "a": "For the accumulation phase (pre-retirement) with equity-heavy SIP: 12% CAGR is a commonly used long-run equity estimate for Indian large-cap equity (Nifty 50 15-year rolling CAGR has been approximately 12–13% — past performance; verify at NSE/AMFI). For the decumulation phase (post-retirement) with a balanced portfolio: 7–8% nominal. Real return (net of 6% inflation): 1–2%. This low real return is why the corpus requirement is large."
     },
     {
-      "q": "What is the safe withdrawal rate for Indian retirees?",
-      "a": "The 4% rule (developed for US markets) may be aggressive for India. With 6% inflation and potential market volatility, 3\u20133.5% withdrawal rate is safer. At 3%: corpus = 33\u00d7 annual expenses. At 3.5%: corpus = 28\u00d7 annual expenses. The lower the withdrawal rate, the lower the risk of outliving money."
+      "q": "At what age should I start building a retirement corpus?",
+      "a": "As early as possible, ideally in the first job. The compounding advantage of starting at 25 versus 35 is dramatic: ₹10,000/month SIP at 12% CAGR for 35 years (age 25 to 60) = ₹6.4 crore. Starting at 35 (25 years): ₹1.88 crore — one-third of the corpus for the same monthly investment. The 10-year head start is worth approximately ₹4.5 crore at age 60."
     },
     {
-      "q": "Is this calculator free?",
-      "a": "Yes, completely free on CalcPhi."
+      "q": "Should I use EPF, NPS, or mutual funds for retirement?",
+      "a": "All three have complementary roles. EPF: mandatory, EEE, stable — use VPF to maximise if you want tax efficiency. NPS: use the employer contribution channel (80CCD(2), up to 10% of basic) first — highest tax-efficiency. Self-contribution 80CCD(1B): ₹50,000 additional deduction under old regime. Equity mutual funds (SIP): primary wealth accumulator — highest long-run returns, fully liquid. A typical allocation: EPF handles base; NPS through employer channel adds tax-efficient savings; equity SIP builds the bulk."
     },
     {
-      "q": "Are my inputs stored?",
-      "a": "No. Calculations run in your browser."
+      "q": "How does inflation affect my retirement corpus need?",
+      "a": "Dramatically. At 6% inflation, ₹60,000/month today becomes ₹1,93,000/month in 20 years and ₹3,45,000/month in 30 years. The corpus calculation must inflate current expenses to the retirement date — then calculate the PV of an annuity growing at 6% for the retirement duration. A ₹1 crore corpus provides approximately ₹7 lakh/year at 7% return — ₹58,000/month. In 2046, ₹58,000 buys what ₹13,500 buys today (at 6% inflation over 20 years)."
     },
     {
-      "q": "Is it mobile-friendly?",
-      "a": "Yes. Works on all modern smartphones."
-    }
-  ],
-  "examples": [
-    {
-      "heading": "35-year-old targeting retirement at 60",
-      "text": "Current monthly expenses \u20b980,000. At 6% inflation, expenses at 60 = \u20b93,43,000/month. Corpus needed (3% withdrawal rate): \u20b93,43,000 \u00d7 12 / 0.03 = \u20b913.7 crore. Monthly SIP at 12% for 25 years to reach \u20b913.7 crore: \u20b965,000/month."
+      "q": "What is sequence-of-returns risk and how do I manage it?",
+      "a": "Sequence-of-returns risk is the danger of experiencing poor investment returns early in retirement while withdrawing from the portfolio. A 30% market crash in your first retirement year is far more damaging than the same crash 10 years into retirement. Mitigation: maintain 3–5 years of expenses in liquid, capital-safe instruments (short-duration FDs, liquid mutual funds) at retirement. Draw from this debt bucket during market downturns instead of selling equity. Only draw from equity after it has recovered."
     },
     {
-      "heading": "Early retirement at 50 \u2014 higher corpus needed",
-      "text": "Same person targeting retirement at 50 (35 years of retirement, more inflation): corpus needed \u2248 \u20b96.2 crore (expenses lower as retirement is earlier). Monthly SIP at 12% for 15 years: \u20b91,45,000/month. Early retirement requires dramatically higher monthly investment."
+      "q": "Can EPF corpus fully fund retirement?",
+      "a": "For most private-sector employees, no. A ₹40,000 basic salary employee contributing EPF for 30 years accumulates approximately ₹1–1.5 crore (at current rates — verify at epfindia.gov.in). If the same employee needs ₹4–5 crore for retirement, EPF provides 25–35% of the need. Equity SIP is required for the remaining 65–75%."
+    },
+    {
+      "q": "What happens if I outlive my retirement corpus?",
+      "a": "You either deplete savings and depend on children or continue working. India has no universal pension safety net for private-sector employees. To reduce the risk: (1) Plan to age 90, not 75; (2) Use a safe withdrawal rate of 3–3.5% annually adjusted for inflation; (3) Maintain some equity allocation in the retirement portfolio for continued growth; (4) Consider partial annuity purchase at retirement to floor a guaranteed income stream against longevity risk."
     }
   ],
   "related": [
     {
       "title": "FIRE Number Calculator",
-      "url": "/india/fire-number-calculator/"
+      "url": "/india/fire-number-calculator/",
+      "desc": "For early retirement — calculate the corpus for Financial Independence"
     },
     {
       "title": "SWP Calculator",
-      "url": "/india/swp-calculator/"
+      "url": "/india/swp-calculator/",
+      "desc": "Plan monthly withdrawals from the corpus during the decumulation phase"
+    },
+    {
+      "title": "EPF Calculator",
+      "url": "/india/epf-calculator/",
+      "desc": "Project EPF corpus — the mandatory pillar of retirement accumulation"
     }
   ]
 }

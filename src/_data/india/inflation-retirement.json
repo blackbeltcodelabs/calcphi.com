@@ -2,115 +2,141 @@
   "id": "inflation-retirement",
   "schema": {
     "appName": "Inflation Impact on Retirement Calculator",
-    "appDescription": "See how inflation erodes the purchasing power of your retirement corpus over time. Calculate real vs nominal value of your savings 10, 20, or 30 years from now."
+    "appDescription": "Calculate how inflation erodes the real value of a retirement corpus. At 6% CPI inflation (India long-run average — verify RBI data), ₹1 crore in real purchasing power today requires ₹3.2 crore in 20 years. Healthcare inflation runs 10–14% — plan for a blended rate."
   },
   "inputs": [
     {
       "id": "ir-corpus",
-      "label": "Current Corpus / Savings (\u20b9)",
+      "label": "Current Corpus / Savings (₹)",
       "min": 100000,
-      "max": 500000000,
+      "max": 1000000000,
       "step": 100000,
-      "value": 5000000
+      "value": 10000000
     },
     {
       "id": "ir-inflation",
-      "label": "Annual Inflation Rate (%)",
-      "min": 3,
-      "max": 12,
+      "label": "Expected Inflation Rate (%)",
+      "min": 2,
+      "max": 15,
       "step": 0.5,
       "value": 6
     },
     {
       "id": "ir-years",
-      "label": "Years Into Future",
-      "min": 5,
-      "max": 40,
-      "step": 5,
+      "label": "Years (Time Horizon)",
+      "min": 1,
+      "max": 50,
+      "step": 1,
       "value": 20
     }
   ],
   "outputs": [
     {
       "id": "ir-real-value",
-      "label": "Real Value of Corpus (Today's \u20b9)",
-      "highlight": true
+      "label": "Real Value of Corpus After Inflation"
     },
     {
       "id": "ir-loss",
-      "label": "Purchasing Power Lost to Inflation"
+      "label": "Purchasing Power Lost"
     },
     {
       "id": "ir-percent-lost",
-      "label": "Percentage Lost"
+      "label": "Purchasing Power Remaining (%)"
     },
     {
       "id": "ir-needed-return",
-      "label": "Return Needed to Beat Inflation"
+      "label": "Return Needed to Maintain Real Value"
     }
   ],
   "howToSteps": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the Inflation Impact Calculator."
+      "name": "Enter your current corpus",
+      "text": "Enter the current value of your retirement savings — EPF balance, mutual fund portfolio, FDs, and other investments combined. This is the starting point for the inflation impact calculation."
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time as you type."
+      "name": "Set the inflation rate",
+      "text": "India's long-run CPI inflation has averaged approximately 6% per annum. For retirement planning, use 6% for general expenses. If healthcare forms a large portion of expected retirement spending, consider using 7–8% as a blended rate given healthcare inflation of 10–14%."
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown to see numbers over time."
+      "name": "Enter time horizon",
+      "text": "Enter the number of years until you expect to use this corpus. For a 35-year-old targeting retirement at 60: 25 years. For an existing retiree: remaining life expectancy years. The longer the horizon, the more dramatic the inflation impact."
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust inputs to compare scenarios and optimise your decision."
+      "name": "Check the required return",
+      "text": "The calculator shows what return your portfolio must earn just to maintain current purchasing power — the inflation rate itself. Any return below this means real wealth loss. A 6% FD return at 6% inflation has zero real return."
+    }
+  ],
+  "articleSections": [
+    {
+      "id": "ir-mechanics",
+      "heading": "How Inflation Destroys Retirement Wealth — Compounding Erosion, Real vs Nominal Returns, and India's 6% CPI Reality",
+      "body": "<p>Inflation does not just increase prices — it silently reduces the purchasing power of every rupee of savings you hold. The damage compounds over time at the same rate as inflation itself. At 6% inflation: ₹1,00,000 today = ₹93,458 in real terms after 1 year = ₹55,839 after 10 years = ₹31,180 after 20 years = ₹17,411 after 30 years. This is the Rule of 72 applied to purchasing power erosion: at 6% inflation, purchasing power halves approximately every 12 years (72 ÷ 6 = 12). A 60-year-old who retires with ₹2 crore and lives to 84: by 2050 (24 years later), ₹2 crore in 2026 rupees buys what ₹50L buys today.</p><p><strong>Nominal return vs real return:</strong> Nominal return is what your investment states (e.g., 7% FD). Real return = (1 + Nominal) ÷ (1 + Inflation) − 1. At 7% FD and 6% inflation: real return = 1.07/1.06 − 1 = 0.94%. Before tax: near zero real return. After 30% TDS (net FD return ≈ 4.9%): real return = 4.9% − 6% = −1.1% — negative real return. FD savers lose purchasing power every year. This is the core reason equity investing is necessary for retirement — it is the primary asset class in India that consistently delivers positive real returns over long periods (verify historical Nifty real returns at NSE).</p><p><strong>India's 6% inflation reality:</strong> India's CPI inflation has averaged approximately 6–7% over the last 20 years. The RBI's target band is 2–6% with a 4% midpoint, but actual outcomes have frequently been in the 5–7% range. Plan with 6% as a base; stress-test at 7–8% for downside scenarios. Verify current CPI data at RBI.org.in before finalising any retirement plan.</p><p><strong>Healthcare inflation — the retirement-specific multiplier:</strong> Retirees allocate significantly more spending to healthcare — specialist consultations, chronic disease medication, hospitalisation, diagnostics. Healthcare inflation in India has consistently run 10–14% annually. A retiree who spends 40% of their budget on healthcare faces an effective personal inflation rate of: 0.6 × 6% (non-healthcare) + 0.4 × 12% (healthcare) = 8.4%. Plan accordingly with a higher blended inflation assumption in retirement budgets.</p>"
+    },
+    {
+      "id": "ir-scenarios",
+      "heading": "Three Inflation Impact Scenarios — FD-Only Retiree, Balanced Portfolio, and Healthcare-Heavy Retiree",
+      "body": "<h3>Scenario 1: Rajeev, 58, retires with ₹1 crore in FDs — 6% return, 6% inflation</h3><p>Rajeev's ₹1 crore FD at 6% interest yields ₹6L/year. Current expenses: ₹5L/year (₹41,667/month). He believes ₹6L interest covers ₹5L expenses with ₹1L spare. But at 6% inflation: Year 1 expenses = ₹5,30,000 (₹5L × 1.06). FD interest: still ₹6L. Spare: ₹70,000. Year 5: expenses ₹6,69,113. FD interest: ₹6L. Shortfall: ₹69,113 — must draw from principal. Year 10: expenses ₹8,95,424. FD principal severely reduced. The FD retiree quietly running out of money is one of the most common financial disasters for Indian retirees. A fixed nominal return at inflation-matching rates provides zero real protection.</p><h3>Scenario 2: Priya, 55, balanced portfolio — 9% nominal, 6% inflation</h3><p>Priya has ₹2 crore split 50% equity (12% expected return), 50% debt (6% return) = blended 9% nominal. Real return: 1.09/1.06 − 1 = 2.83%. Her portfolio grows 2.83% annually in real terms while she withdraws 4% of initial corpus (₹8L/year, inflation-adjusted). At 2.83% real return vs 4% withdrawal rate: the portfolio sustains for approximately 28 years (to age 83) before exhaustion. If Priya lives to 85+, there is longevity risk. Solution: (1) lower withdrawal rate to 3.5%; (2) maintain higher equity (60%) allocation longer for higher real return; (3) delay drawing portfolio until age 60 with part-time work from 55 to 60.</p><h3>Scenario 3: Subramaniam, 68, healthcare-heavy — 8% healthcare inflation vs 6% general</h3><p>Monthly retirement expenses: ₹80,000 (₹48,000 non-healthcare + ₹32,000 healthcare). Healthcare share: 40%. Blended inflation: 0.6 × 6% + 0.4 × 12% = 8.4%. In 10 years (age 78): expenses = ₹80,000 × (1.084)¹⁰ = ₹1,80,197/month — more than double. If he had planned with 6% inflation, he would have projected only ₹80,000 × (1.06)¹⁰ = ₹1,43,248/month — a ₹36,949 monthly underestimate. Over a 10-year period, this underestimation means his corpus runs out approximately 4–5 years earlier than projected. Retirees with significant medical conditions must use 8–9% blended inflation, not 6%.</p>"
+    },
+    {
+      "id": "ir-vehicles",
+      "heading": "How to Beat Inflation in Retirement — Equity Allocation, SCSS, Inflation-Linked Bonds, and the Bucket Strategy",
+      "body": "<p><strong>Equity allocation in retirement:</strong> The conventional advice of 'shift to 100% debt at retirement' is poorly suited to India's inflation environment. A 60-year-old with a 25-year retirement horizon needs some equity exposure for long-run real returns — Indian large-cap equity has historically delivered approximately 6–7% real returns over long periods (verify at NSE). A reasonable allocation at retirement: 30–40% equity (large-cap or balanced), 60–70% debt. Gradually reduce equity from 30% at age 60 to 15–20% at 75 — but never go to 0% equity until very late retirement stages.</p><p><strong>Senior Citizens Savings Scheme (SCSS):</strong> Quarterly interest payout at approximately 8.2% p.a. (Q1 FY 2026-27 — verify current rate at nsiindia.gov.in). Eligible from age 60 (or 55 on VRS). ₹30L maximum investment cap (raised from ₹15L effective April 2023 — verify). SCSS provides guaranteed nominal returns above savings rates, though still near inflation. Use SCSS for the safe income portion of a retirement portfolio, not as the sole instrument.</p><p><strong>Inflation-Linked Government Securities (IL-GoS):</strong> The Reserve Bank of India periodically issues inflation-linked government securities — principal adjusted for CPI, interest paid on adjusted principal. These directly hedge inflation risk. Accessible via RBI Retail Direct platform. Monitor RBI bond auction announcements for availability.</p><p><strong>The bucket strategy:</strong> Bucket 1 (1–2 years of expenses): liquid savings account and liquid fund — for immediate withdrawals without selling equity. Bucket 2 (2–7 years): short-duration debt funds, FDs, SCSS — stable nominal return. Bucket 3 (7+ years): equity mutual funds — long horizon absorbs volatility. Replenish Bucket 1 from Bucket 2 and Bucket 2 from Bucket 3 over time. This structure allows equity (Bucket 3) to compound without forcing selling during market downturns. Standard practical implementation of sequence-of-returns risk mitigation.</p>"
+    },
+    {
+      "id": "ir-mistakes",
+      "heading": "Inflation Planning Mistakes — The FD Trap, Healthcare Inflation Underestimate, 20-Year vs 30-Year Horizon, and Static Withdrawals",
+      "body": "<p><strong>The FD trap: treating 7% FD as safe retirement income.</strong> When FD rates equal inflation, the real return is zero or negative after tax. An FD-only retirement is inflation-trapped: nominal income stays fixed while expenses rise every year. The ₹50,000/month FD interest that covers expenses in Year 1 of retirement covers progressively less each year. By Year 12 (at 6% inflation), the same ₹50,000 nominal buys what ₹25,000 bought at retirement. FDs belong in the short-duration liquidity bucket, not as the primary retirement income instrument.</p><p><strong>Using a 20-year horizon when you need 30.</strong> Planning to age 80 but living to 88 is a common retirement planning disaster. The population who thought they planned adequately but are depleted at 82 is substantial in India. Use age 85 as minimum; 90 if family history of longevity. The cost of over-planning is a surplus corpus that passes to heirs — the cost of under-planning is financial distress in old age.</p><p><strong>Static withdrawal amounts instead of inflation-adjusted withdrawals.</strong> Withdrawing ₹50,000/month fixed for 20 years seems conservative — but the real purchasing power of ₹50,000 at Year 20 (6% inflation) is ₹15,590 in today's terms. You live progressively worse in real terms. Correct approach: plan for inflation-adjusted withdrawals from the start, calibrated to the SWR at the corpus size you have.</p><p><strong>Not inflating future amounts when comparing retirement scenarios.</strong> 'My EPF will give ₹1 crore at 60, yielding ₹6L/year' sounds comforting in 2026. In 2046 (20 years later at 6% inflation), ₹6L/year buys what ₹1.87L/year buys today. That ₹6L will seem very small against 2046 expenses. Always express future nominal amounts in real (inflation-adjusted) terms for a meaningful comparison of retirement income scenarios.</p>"
     }
   ],
   "faq": [
     {
-      "q": "How does inflation affect retirement savings?",
-      "a": "\u20b91 crore today at 6% inflation is worth only \u20b931.2 lakh in real terms after 20 years. This means your retirement corpus must more than triple just to maintain purchasing power. Investments that don't beat inflation by a significant margin are actually losing value in real terms."
+      "q": "What is the average inflation rate in India for retirement planning?",
+      "a": "India's long-run CPI inflation has averaged approximately 6–7% per annum over the last 20 years. The RBI's target band is 2–6% with a 4% midpoint, but actual outcomes have frequently been higher. For retirement planning, use 6% as a base assumption — and 7–8% if healthcare forms a large share of expected retirement expenses (healthcare inflation runs 10–14%). Verify current CPI data at RBI.org.in before finalising any retirement plan."
     },
     {
-      "q": "What is the average inflation rate in India?",
-      "a": "India's CPI inflation has averaged 6\u20137% over the past decade (2013\u20132024). Food inflation is typically higher. For retirement planning, use 6\u20137% as a conservative assumption. Healthcare inflation is higher (10\u201312%) \u2014 budget separately for medical costs in retirement."
+      "q": "What is the real value of ₹1 crore in 20 years at 6% inflation?",
+      "a": "At 6% annual inflation, ₹1 crore of today's purchasing power requires approximately ₹3.2 crore in 20 years (₹1 crore × (1.06)²⁰ = ₹3.21 crore). Equivalently, ₹1 crore today will have the purchasing power of only ₹31,180 (in today's terms) after 20 years of 6% inflation — the corpus loses approximately 69% of its real value over 20 years."
     },
     {
-      "q": "How can I protect my retirement corpus from inflation?",
-      "a": "Invest in assets that beat inflation: equity mutual funds (12\u201315% historical CAGR), equity-linked NPS (10\u201312%), real estate (7\u201310%). Even in retirement, maintain 30\u201340% equity exposure to beat inflation over a 25-30 year retirement horizon. Avoid parking all corpus in FDs post-retirement."
+      "q": "How do I protect my retirement corpus from inflation?",
+      "a": "Three primary strategies: (1) Maintain equity allocation in retirement (30–40% of portfolio) — equity has historically outpaced inflation in India over long periods; (2) Invest in instruments with above-inflation returns (SCSS at ~8.2%, NPS during accumulation, equity SIP); (3) Use a total return portfolio approach — draw from dividend yields, interest income, and selective capital gains rather than fixed nominal withdrawals. Never hold the entire retirement corpus in FDs at inflation-matching rates."
     },
     {
-      "q": "Is this calculator free?",
-      "a": "Yes, completely free on CalcPhi."
+      "q": "What is the Rule of 72 for inflation?",
+      "a": "Rule of 72: 72 ÷ inflation rate = approximate years for purchasing power to halve. At 6% inflation: 72 ÷ 6 = 12 years. Every 12 years, your money buys approximately half of what it bought before. For a 30-year retirement: purchasing power halves approximately 2.5 times — your ₹1,00,000 retirement income in Year 30 buys what ₹17,500 buys today. This helps grasp why a fixed-income retirement is dangerous over a 25–30 year horizon."
     },
     {
-      "q": "Are my inputs stored?",
-      "a": "No. Calculations run in your browser."
+      "q": "Is an FD a safe retirement instrument in India?",
+      "a": "Safe from capital loss — yes. Safe from inflation — no. When FD rates are near or below inflation (net of tax), the real return is near zero or negative. At 7% FD and 6% inflation: pre-tax real return is 0.94%. After 30% TDS (net FD return ≈ 4.9%): real return = −1.1%. FD holders lose purchasing power every year. FDs belong in the liquidity bucket (1–3 years of expenses), not as primary retirement income."
     },
     {
-      "q": "Is it mobile-friendly?",
-      "a": "Yes. Works on all modern smartphones."
-    }
-  ],
-  "examples": [
-    {
-      "heading": "\u20b950 lakh savings \u2014 purchasing power in 20 years",
-      "text": "\u20b950 lakh at 6% inflation: real value in 20 years = \u20b915.6 lakh. You need \u20b950 lakh to buy the same goods that \u20b915.6 lakh buys today. This is why FDs at 7.1% barely beat 6% inflation \u2014 you're only growing wealth at 1% real rate."
+      "q": "How does healthcare inflation affect retirement planning?",
+      "a": "Healthcare inflation in India runs approximately 10–14% per annum — well above general CPI of 6%. Retirees typically spend 30–50% of budget on healthcare, especially after age 70. This creates a blended personal inflation rate of 7–9% for most retirees — higher than the 6% CPI used in general planning. Underestimating healthcare inflation means the corpus runs out earlier than projected. Budget explicitly for healthcare at 10–12% growth annually, not 6%."
     },
     {
-      "heading": "Required return to maintain purchasing power",
-      "text": "To maintain \u20b950 lakh in real terms over 20 years, you need 6% return just to break even (same as inflation). To actually grow by 5% real, you need 11% nominal return. This is why equity (historical 12\u201315% CAGR) is essential in long-term portfolios."
+      "q": "What return does my portfolio need to beat inflation?",
+      "a": "Your portfolio must earn above the inflation rate just to maintain purchasing power. At 6% inflation: any investment earning less than 6% loses real value. To achieve 2% real return: need 8.12% nominal. To achieve 3% real: need 9.18% nominal. Only equity and equity-linked instruments (large-cap mutual funds, balanced advantage funds) have historically delivered these sustained returns in India over 15+ year periods."
+    },
+    {
+      "q": "How much should I save today to have ₹1 lakh/month purchasing power at retirement in 20 years?",
+      "a": "At 6% inflation, ₹1,00,000 in today's purchasing power requires ₹3,20,714/month in 20 years. Annual: ₹38.5L. At 3.5% SWR: corpus = ₹38.5L ÷ 0.035 = ₹11 crore. Monthly SIP at 12% CAGR for 20 years to reach ₹11 crore: approximately ₹1.41L/month. This assumes 8% post-retirement return and inflation-adjusted withdrawals. The key insight: ₹1L/month in real terms 20 years from now requires a much larger corpus than a simple ÷ 0.035 on ₹12L nominal suggests."
     }
   ],
   "related": [
     {
       "title": "Retirement Corpus Calculator",
-      "url": "/india/retirement-corpus-calculator/"
+      "url": "/india/retirement-corpus-calculator/",
+      "desc": "Calculate total corpus needed accounting for this inflation impact"
     },
     {
       "title": "SWP Calculator",
-      "url": "/india/swp-calculator/"
+      "url": "/india/swp-calculator/",
+      "desc": "Model systematic withdrawals from corpus in retirement with inflation adjustment"
+    },
+    {
+      "title": "SIP Calculator",
+      "url": "/india/sip-calculator/",
+      "desc": "Project SIP growth to build the inflation-adjusted corpus needed"
     }
   ]
 }

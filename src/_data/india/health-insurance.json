@@ -1,52 +1,45 @@
 {
   "id": "health-insurance",
   "schema": {
-    "appName": "Health Insurance Cover Estimator India",
-    "appDescription": "Estimate the right health insurance coverage for individuals and families in India. Based on age, city, and family size."
+    "appName": "Health Insurance Calculator",
+    "appDescription": "Estimate recommended health insurance cover and approximate annual premium by age and family size. Premiums are indicative — get actual quotes from insurers. GST on individual health insurance premiums is 0% from Sept 2025 (verify at cbic.gov.in). Section 80D: ₹25,000 self/family + ₹25,000/₹50,000 parents (verify at incometax.gov.in)."
   },
   "inputs": [
     {
       "id": "hi-age",
       "label": "Primary Insured Age (Years)",
       "min": 18,
-      "max": 75,
+      "max": 80,
       "step": 1,
       "value": 35
     },
     {
       "id": "hi-family",
       "label": "Family Members to Cover",
-      "min": 1,
-      "max": 6,
-      "step": 1,
-      "value": 3,
-      "hint": "Including yourself"
+      "type": "select",
+      "options": [
+        { "value": "1", "label": "Self only" },
+        { "value": "2", "label": "Self + Spouse" },
+        { "value": "3", "label": "Self + Spouse + 1 Child" },
+        { "value": "4", "label": "Self + Spouse + 2 Children" },
+        { "value": "6", "label": "Family + Parents" }
+      ]
     },
     {
       "id": "hi-city",
       "label": "City Tier",
       "type": "select",
       "options": [
-        {
-          "value": "metro",
-          "label": "Metro (Mumbai/Delhi/Bangalore/Chennai)"
-        },
-        {
-          "value": "tier1",
-          "label": "Tier 1 City (Pune/Hyderabad/Kolkata)"
-        },
-        {
-          "value": "tier2",
-          "label": "Tier 2/3 City"
-        }
+        { "value": "metro", "label": "Metro (Mumbai, Delhi, Bengaluru, Chennai)" },
+        { "value": "tier1", "label": "Tier 1 (Pune, Hyderabad, Kolkata, Ahmedabad)" },
+        { "value": "tier2", "label": "Tier 2 / Tier 3" }
       ]
     }
   ],
   "outputs": [
     {
       "id": "hi-recommended",
-      "label": "Recommended Cover",
-      "highlight": true
+      "label": "Recommended Cover"
     },
     {
       "id": "hi-premium-est",
@@ -63,66 +56,93 @@
   ],
   "howToSteps": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the Health Insurance Calculator. Smart defaults are pre-filled."
+      "name": "Enter primary insured's age",
+      "text": "Enter the age of the oldest family member being insured. Age is the biggest premium driver — a 55-year-old costs 3–4× a 35-year-old on a family floater."
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time \u2014 no submit button needed."
+      "name": "Select family members",
+      "text": "Choose how many members need cover. If parents are included, consider separate senior-citizen policies rather than a family floater — a single large parent claim can deplete the entire floater sum insured."
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown to see numbers over time."
+      "name": "Select your city tier",
+      "text": "Metro hospital room rents and procedure costs are 2–3× Tier 2 cities. The recommended cover adjusts accordingly — a ₹5 lakh policy adequate in Tier 2 is insufficient for a cardiac event in Mumbai."
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust inputs to compare scenarios and optimise your decision."
+      "name": "Get actual quotes and check 80D deduction",
+      "text": "The premium estimate is indicative. Get actual quotes from 2–3 insurers (Policybazaar, Ditto, or directly). Under the old tax regime, premiums up to ₹25,000 self/family + ₹50,000 parents (senior citizens) qualify for Section 80D — verify current limits at incometax.gov.in."
+    }
+  ],
+  "articleSections": [
+    {
+      "id": "hi-how-cover-works",
+      "heading": "How Health Insurance Cover Works in India — Sum Insured, Cashless Claims, and Sub-Limits That Reduce Real Cover",
+      "body": "<p>A health insurance policy reimburses hospitalisation expenses up to the sum insured in a policy year. The three claim mechanisms: (1) <strong>Cashless at network hospitals</strong> — the insurer pays the hospital directly; you pay only non-covered items. (2) <strong>Reimbursement</strong> — you pay upfront and submit bills to the insurer within the claim submission deadline (typically 30–45 days of discharge). (3) <strong>Daycare procedures</strong> — over 500 listed procedures (e.g., cataract, chemotherapy, dialysis) covered without a 24-hour hospitalisation requirement.</p><p><strong>Sub-limits that silently reduce your effective cover:</strong> Many policies impose room-rent sub-limits (e.g., room rent capped at 1% or 2% of sum insured per day). On a ₹5 lakh policy with a 1% room-rent limit, the cap is ₹5,000/day. A metro hospital charging ₹8,000/day for a standard room means you pay ₹3,000/day out-of-pocket — but the bigger impact is proportional deduction: insurers reduce all associated charges (doctor fees, nursing, procedures) in the same ratio as the room-rent excess. A 60% room rent excess can effectively reduce your total reimbursable claim to 60% of actuals. Always buy policies with <strong>no room-rent sub-limit</strong> (these exist in most modern comprehensive plans) or the highest possible room category.</p><p><strong>Pre-existing disease (PED) waiting period:</strong> Conditions that exist when you buy the policy — diabetes, hypertension, thyroid disorder — are excluded for a waiting period of typically 2–4 years depending on the insurer. Buy early (in your 20s or early 30s before any conditions develop) to minimise PED waiting periods and premium loading. Some insurers now offer PED coverage from Day 1 in premium products at higher premium — useful for older entrants with existing conditions.</p><p><strong>No-claim bonus (NCB):</strong> For each claim-free year, the sum insured increases by typically 10–50% (insurer-specific) at no extra premium. Over 5 claim-free years, a ₹5 lakh policy can grow to ₹7.5–10 lakh automatically. This is a strong incentive to maintain the policy long-term and avoid small claims that may not justify the loss of NCB.</p>"
+    },
+    {
+      "id": "hi-scenarios",
+      "heading": "Three Health Insurance Scenarios — Young Single, Metro Family, and Senior Citizen Parents",
+      "body": "<h3>Scenario 1: Rohan, 27, single, IT professional in Bengaluru — ₹5 lakh cover</h3><p>Rohan is healthy with no pre-existing conditions. He buys a ₹5 lakh individual health plan at approximately ₹6,000–8,000/year (pre-GST 2.0 it was higher — at 0% GST from Sept 2025, the premium is the insurer's base rate). Under the old tax regime, his 80D deduction: ₹6,000 (premium paid for self). Benefit: ₹6,000 × 30% (bracket) = ₹1,872 tax saving. A serious accident or appendicitis surgery in a Bengaluru hospital: ₹2–3.5 lakh total bill, fully cashless if at a network hospital. The ₹5 lakh sum insured comfortably covers Rohan's realistic risk at 27 in a Tier 1 city. He should review in 5 years and enhance cover — cardiac procedures and cancer treatment costs routinely exceed ₹10–15 lakh even in non-metro cities today.</p><h3>Scenario 2: Vikram and Sunita, ages 42 and 39, two children ages 8 and 5, Delhi — ₹15 lakh family floater</h3><p>Vikram opts for a ₹15 lakh family floater for the four of them. Annual premium approximately ₹25,000–32,000 (verify from insurer quotes; exact amount depends on insurer, plan type, and Delhi location). Under old regime: 80D deduction ₹25,000 (cap for non-senior self/family). If he also pays premiums for his parents (both below 60), an additional ₹25,000 80D deduction — total ₹50,000. At 30% bracket: ₹15,600 annual tax saving. The floater consideration: if Vikram's mother (covered separately or on a different policy) makes a ₹10 lakh cardiac surgery claim, the family floater's full ₹15 lakh remains intact for Vikram's family — this is why keeping parents on a separate senior-citizen policy protects the main family floater.</p><h3>Scenario 3: Meena, 60, retired teacher, Chennai — senior citizen individual plan</h3><p>Meena needs her own health policy. Family floater inclusion at 60+ dramatically increases the premium for younger members. A dedicated senior-citizen individual plan at ₹50,000/year (premium rises sharply post-60, age-loading is significant) covers ₹10 lakh. Her daughter pays this premium. 80D deduction for the daughter: ₹50,000 (parents senior citizen threshold, verifiable at incometax.gov.in). At 20% bracket: ₹10,400 tax saving. Meena should look for policies with OPD cover (outpatient department — pharmacy, diagnostic, doctor consultation) as seniors have disproportionately high OPD spend relative to total hospitalisation.</p>"
+    },
+    {
+      "id": "hi-80d-gst",
+      "heading": "Section 80D Deduction in Full — Limits, Old vs New Regime, GST 2.0, and the Preventive Check-Up Rule",
+      "body": "<p><strong>80D limits for AY 2026-27 / FY 2025-26</strong> (verify current limits at incometax.gov.in — these are set by the Finance Act and can be revised in budgets):</p><table><thead><tr><th>Who is Insured</th><th>Max 80D Deduction</th><th>Condition</th></tr></thead><tbody><tr><td>Self, spouse, dependent children</td><td>₹25,000</td><td>Non-senior primary insured</td></tr><tr><td>Self, spouse, dependent children</td><td>₹50,000</td><td>Primary insured is senior citizen (60+)</td></tr><tr><td>Parents</td><td>₹25,000</td><td>Parents below 60</td></tr><tr><td>Parents</td><td>₹50,000</td><td>Parents are senior citizens (60+)</td></tr><tr><td>Preventive health check-up</td><td>Up to ₹5,000</td><td>Included within the above limits, not additive</td></tr></tbody></table><p>Two maximum scenarios: (1) <strong>Non-senior + senior-citizen parents: ₹25,000 + ₹50,000 = ₹75,000</strong> — tax saving ₹23,400/year at 30% bracket + cess. (2) <strong>Both primary insured and parents are senior citizens (60+): ₹50,000 + ₹50,000 = ₹1,00,000</strong> — tax saving ₹31,200/year at 30% bracket + cess. The ₹1,00,000 ceiling applies when you are aged 60+ and your parents are also 60+ — relevant for retired individuals still holding health policies for themselves and ageing parents.</p><p><strong>80D requires old tax regime.</strong> Under the new regime (default from AY 2024-25), 80D is not available. The regime choice made at the start of the financial year determines 80D eligibility. Employees who declare regime via Form 12BB must maintain the same regime when filing ITR.</p><p><strong>GST 2.0 — individual vs group health insurance:</strong> Under GST 2.0 (56th GST Council, 22 September 2025), <strong>individual health insurance premiums — including family floater and senior citizen policies — are at 0% GST.</strong> Previously, 18% GST applied to all health insurance. However, <strong>group/corporate health insurance (employer-provided) remains at 18% GST</strong> — the exemption does not extend to group policies. Your employer's group cover still carries 18% GST as an employer cost; your personal individual or family floater policy benefits from the 0% rate. Verify the current GST treatment for your specific policy type at cbic.gov.in.</p><p><strong>Preventive health check-up within 80D:</strong> Up to ₹5,000 spent on preventive health check-ups during the financial year is eligible for 80D — but this amount is part of the overall ceiling (₹25,000 or ₹50,000), not additional to it. It can be a cash payment (unlike insurance premiums which must be non-cash for 80D). A family spending ₹20,000 on insurance premiums and ₹5,000 on annual health check-ups can claim the full ₹25,000 under 80D.</p>"
+    },
+    {
+      "id": "hi-mistakes",
+      "heading": "Health Insurance Mistakes — Under-Insuring, Skipping Cover During Job Transitions, Missing Super Top-Up, and Waiting Too Long",
+      "body": "<p><strong>Relying entirely on employer-provided group health insurance.</strong> Group cover provided by employers typically offers ₹3–5 lakh sum insured, sounds adequate, and costs you nothing — which makes it easy to overlook its limitations. Problems: (1) It terminates the day you leave the employer, leaving a gap before a new employer's cover activates. (2) Group cover has no portability — you cannot convert it to an individual policy without fresh underwriting, PED waiting periods, and higher premiums at your now-older age. (3) Group cover may have restrictions (specific hospitals, limited room category, no critical illness cover). Always maintain an individual or family floater policy in parallel with employer group cover.</p><p><strong>Buying too low a sum insured to save on premiums.</strong> The difference in annual premium between a ₹5 lakh policy and a ₹10 lakh policy is typically ₹2,000–5,000. A single CABG (heart bypass) surgery averages ₹3–6 lakh in a metro hospital. CABG plus post-surgery complications: ₹8–12 lakh. Cancer treatment (chemotherapy + targeted therapy): ₹8–25 lakh over a full treatment course. Saving ₹3,000 annually on premium to have ₹5 lakh instead of ₹10 lakh cover is a poor trade. Better approach: buy adequate base cover and consider a super top-up policy (which activates after a deductible equal to the base cover is exhausted) for cost-effective additional cover.</p><p><strong>Not buying the super top-up in time.</strong> A super top-up policy adds ₹10–20 lakh of cover above a deductible (e.g., ₹5 lakh) at a fraction of the cost of increasing the base policy. A ₹20 lakh super top-up on a ₹5 lakh deductible for a 35-year-old costs approximately ₹4,000–7,000/year — vastly cheaper than buying ₹25 lakh of base cover. This combination gives effective ₹25 lakh of total cover for the annual cost of a ₹10 lakh base policy. Buy super top-ups before health conditions develop — underwriting is tighter for older applicants or those with pre-existing conditions.</p><p><strong>Lapsing the policy during a gap year.</strong> A lapsed policy loses NCB, triggers fresh PED waiting periods, and requires new underwriting at the current (older) age. Even during periods of unemployment or self-employment when finances are tight, maintain the health policy by paying the renewal premium — it is one of the worst financial decisions to let a long-running policy lapse.</p>"
     }
   ],
   "faq": [
     {
-      "q": "What is the minimum health insurance cover needed in India?",
-      "a": "For a family of 4 in a metro city: minimum \u20b910 lakh family floater, ideally \u20b915\u201325 lakh. Individual cover for age 30\u201335: \u20b910 lakh. Hospitalisation costs in Mumbai private hospitals can reach \u20b98\u201315 lakh for serious conditions like cancer, cardiac surgery, or ICU stays. Inadequate cover can wipe out savings."
+      "q": "How much health insurance cover do I need in India?",
+      "a": "The minimum recommended cover in 2026: ₹5 lakh for individuals below 35 in Tier 2 cities; ₹10 lakh for individuals below 35 in metros; ₹15–20 lakh for families with members above 50; ₹20–25 lakh if parents with chronic conditions are included. The right number is the cost of the most expensive realistic hospitalisation in your city — in Mumbai or Delhi, a cardiac event can cost ₹8–15 lakh, making a ₹5 lakh policy dangerously inadequate."
     },
     {
-      "q": "Family floater vs individual health insurance \u2014 which is better?",
-      "a": "Family floater: one policy covers all family members, any member can use the full sum insured. Cheaper premium than individual policies. Risk: if two members are hospitalised simultaneously, coverage may be insufficient. Individual policies are better if any member has pre-existing conditions."
+      "q": "Is GST charged on health insurance premiums in 2026?",
+      "a": "Under GST 2.0 (56th GST Council, 22 September 2025), <strong>individual health insurance premiums — including family floater and senior citizen policies — are at 0% GST.</strong> Previously, 18% GST applied to all health insurance. <strong>Group/corporate health insurance (employer-provided) remains at 18% GST</strong> — the exemption is limited to individual policies only. Verify the current GST treatment applicable to your specific policy type at cbic.gov.in and your insurer's premium schedule."
     },
     {
-      "q": "What is not covered in standard health insurance?",
-      "a": "Common exclusions: pre-existing diseases (waiting period 2\u20134 years), maternity (waiting period 9 months\u20134 years), dental treatment (unless accident), congenital diseases, cosmetic procedures, experimental treatments, suicide/self-injury. Always read the policy document carefully."
+      "q": "What is the Section 80D deduction limit for health insurance in 2026?",
+      "a": "For AY 2026-27 / FY 2025-26 (verify at incometax.gov.in): ₹25,000 for premiums paid for self, spouse, and dependent children (₹50,000 if you are a senior citizen aged 60+); an additional ₹25,000 for parents' premiums (₹50,000 if parents are senior citizens). Up to ₹5,000 of preventive health check-up expenses counts within these limits. Maximum possible 80D: ₹75,000 (for non-senior insuring self + senior-citizen parents). Available only under the old tax regime — not available under the new regime."
     },
     {
-      "q": "Is this calculator free?",
-      "a": "Yes, completely free on CalcPhi."
+      "q": "Family floater vs individual health plans — which is better?",
+      "a": "Family floater gives all members access to one shared sum insured at a lower combined premium — efficient when the chances of multiple family members making large claims in the same year are low. Individual plans give each member their own sum insured — no depletion risk if one member makes a large claim. The trade-off: family floater with parents aged 60+ significantly raises premiums and risks having the sum insured depleted by a parent claim, leaving the rest of the family under-insured. Recommendation: maintain a family floater for core family (self, spouse, children) and buy separate individual/senior-citizen policies for parents."
     },
     {
-      "q": "Are my inputs stored?",
-      "a": "No. All calculations run in your browser."
+      "q": "Can I claim 80D on my employer-provided group health insurance?",
+      "a": "No. If your employer fully pays the group health insurance premium as part of your employment benefits, you cannot claim 80D — only the person who actually pays the premium can claim the deduction. If your employer deducts a part of the group insurance premium from your salary, you can claim 80D on the employee-paid portion. For individual policies you purchase personally (outside employer benefits), the full premium qualifies for 80D up to the applicable limit."
     },
     {
-      "q": "Is it mobile-friendly?",
-      "a": "Yes. Works on all modern smartphones."
-    }
-  ],
-  "examples": [
-    {
-      "heading": "Family of 3 in Bangalore \u2014 coverage needed",
-      "text": "Parents (35, 32) with 1 child in Bangalore: recommended \u20b920 lakh family floater. Private hospital room in Bangalore: \u20b98,000\u2013\u20b925,000/day. A 7-day cardiac care hospitalisation can cost \u20b910\u201315 lakh at Apollo/Fortis."
+      "q": "What is a super top-up health insurance and should I buy one?",
+      "a": "A super top-up policy activates after your hospitalisation costs exceed a deductible amount (equal to your base policy sum insured or a fixed amount). It provides a large additional cover (₹10–25 lakh) at a fraction of the cost of increasing the base policy sum insured. Example: ₹5 lakh base policy + ₹20 lakh super top-up (₹5L deductible) costs approximately ₹11,000–18,000/year total — compared to ₹20,000–30,000/year for a ₹25 lakh base policy alone. If you have an existing low-cover policy and don't want to restart PED waiting periods, a super top-up is the most cost-effective way to enhance protection."
     },
     {
-      "heading": "Senior citizen health insurance",
-      "text": "Health insurance for parents aged 60\u201365: individual policies of \u20b910 lakh each (floater risky given age). Premium for 65-year-old: \u20b950,000\u2013\u20b980,000/year. Consider Star Senior Citizen or Niva Bupa Senior First. Always buy before they exceed the maximum entry age (usually 65\u201370)."
+      "q": "Does health insurance cover pre-existing conditions like diabetes or hypertension?",
+      "a": "Pre-existing diseases (PED) declared at policy inception are covered after the PED waiting period — typically 2–4 years depending on the insurer and specific condition. During the waiting period, claims arising from or related to the PED are rejected. Undisclosed pre-existing conditions create claim rejection risk at any time — always disclose accurately. Some premium plans now offer PED coverage from Year 1 or Day 1 at higher premiums. Buy before conditions develop: diabetes acquired after buying a policy is covered without a waiting period; diabetes disclosed at inception has a 2–4 year wait."
+    },
+    {
+      "q": "What happens to my health insurance if I change jobs?",
+      "a": "Employer-provided group health insurance ends on your last working day. Your individual or family floater policy continues unaffected — premiums are paid by you, not linked to employment. The risk is the gap between leaving one job and your new employer's group cover activating (typically 30–90 days). During this gap, the individual policy is your only protection. Never let the individual policy lapse assuming employer cover is sufficient — job changes, sabbaticals, and entrepreneurship create gaps where only personal policies protect you."
     }
   ],
   "related": [
     {
       "title": "Term Insurance Calculator",
-      "url": "/india/term-insurance-calculator/"
+      "url": "/india/term-insurance-calculator/",
+      "desc": "Calculate life insurance cover needed alongside health protection"
     },
     {
       "title": "Section 80D Calculator",
-      "url": "/india/section-80d-calculator/"
+      "url": "/india/section-80d-calculator/",
+      "desc": "Optimise your 80D deduction across self and parent premiums"
+    },
+    {
+      "title": "Income Tax Calculator",
+      "url": "/india/income-tax-calculator/",
+      "desc": "Compare old vs new regime to see whether 80D saves you money"
     }
   ]
 }

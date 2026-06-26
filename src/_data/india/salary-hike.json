@@ -1,36 +1,35 @@
 {
   "id": "salary-hike",
   "schema": {
-    "appName": "Salary Hike Calculator India",
-    "appDescription": "Calculate new CTC, monthly in-hand increase, and annual increment amount from a percentage salary hike. Plan your appraisal negotiation."
+    "appName": "Salary Hike Calculator India — Impact on In-Hand, Tax & EPF",
+    "appDescription": "Calculate actual monthly in-hand increase after a salary hike, accounting for marginal income tax (new regime AY 2026-27 — verify slabs at incometax.gov.in), increased EPF contribution, and the employer-side CTC. A 20% hike on ₹15L CTC adds approximately ₹15,000–19,000/month in-hand, not ₹25,000."
   },
   "inputs": [
     {
       "id": "sh-ctc",
       "label": "Current Annual CTC (₹)",
-      "min": 100000,
+      "min": 300000,
       "max": 100000000,
-      "step": 10000,
-      "value": 1200000
+      "step": 100000,
+      "value": 1500000
     },
     {
       "id": "sh-hike",
-      "label": "Hike Percentage (%)",
+      "label": "Salary Hike (%)",
       "min": 1,
       "max": 100,
-      "step": 0.5,
-      "value": 15
+      "step": 1,
+      "value": 20
     }
   ],
   "outputs": [
     {
       "id": "sh-new-ctc",
-      "label": "New Annual CTC",
-      "highlight": true
+      "label": "New Annual CTC"
     },
     {
       "id": "sh-new-inhand",
-      "label": "Estimated New Monthly In-Hand"
+      "label": "New Monthly In-Hand (approx.)"
     },
     {
       "id": "sh-monthly-increase",
@@ -38,75 +37,98 @@
     },
     {
       "id": "sh-annual-increase",
-      "label": "Annual Increase"
+      "label": "Annual In-Hand Increase"
     }
   ],
   "howToSteps": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the Salary Hike Calculator. Smart defaults are pre-filled."
+      "name": "Enter your current CTC",
+      "text": "Enter your current annual Cost to Company — the total employment cost figure in your offer letter. CTC includes employer PF, gratuity provision, and all allowances. Do not enter gross salary or in-hand salary here."
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time — no submit button needed."
+      "name": "Enter hike percentage",
+      "text": "Enter the percentage increase in CTC. If your letter says 15% hike and you earn ₹15L CTC, the new CTC is ₹17.25L. The calculator shows how much of this increase actually reaches your bank account after tax and EPF adjustments."
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown to see numbers over time."
+      "name": "Understand the gap between hike and in-hand increase",
+      "text": "A percentage point of CTC hike at higher income levels passes through progressively higher marginal tax rates. At ₹12–16L income, the 15% new regime slab applies. At ₹16–20L: 20%. At ₹20–24L: 25%. Add EPF scaling with basic — a ₹3L CTC increase translates to approximately ₹1.5–2L additional take-home."
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust inputs to compare scenarios and find the best option."
+      "name": "Compare with cost-of-living increases",
+      "text": "If inflation is 6% and your hike is 8%, your real salary increase is only approximately 2%. If the hike is 6% or below, your real compensation is stagnant or falling. Use this calculator to check whether the hike actually increases your lifestyle capacity."
+    }
+  ],
+  "articleSections": [
+    {
+      "id": "sh-mechanics",
+      "heading": "Why a 20% Salary Hike Does Not Give 20% More In-Hand — Marginal Tax, EPF Scaling, and CTC Structure",
+      "body": "<p>When your CTC increases, three factors reduce the actual in-hand increment: (1) <strong>Marginal income tax:</strong> the increment is taxed at the marginal rate of the highest slab your income reaches. (2) <strong>EPF scaling:</strong> if basic salary increases with CTC, both employee and employer EPF rise proportionally — the employee's higher contribution reduces take-home. (3) <strong>Employer-side CTC costs:</strong> gratuity provision (4.81% of additional basic) and any group insurance cost increases are within the new CTC but never reach your account.</p><p><strong>Example: ₹15L CTC with 20% hike to ₹18L (40% basic structure, new regime)</strong></p><table><thead><tr><th>Component</th><th>Before</th><th>After</th><th>Change</th></tr></thead><tbody><tr><td>Annual CTC</td><td>₹15,00,000</td><td>₹18,00,000</td><td>+₹3,00,000</td></tr><tr><td>Monthly basic (40%)</td><td>₹50,000</td><td>₹60,000</td><td>+₹10,000</td></tr><tr><td>Employer PF (12% of basic)</td><td>₹6,000/mo</td><td>₹7,200/mo</td><td>+₹1,200</td></tr><tr><td>Gratuity provision</td><td>₹2,405/mo</td><td>₹2,886/mo</td><td>+₹481</td></tr><tr><td>Monthly gross received</td><td>~₹1,13,000</td><td>~₹1,37,000</td><td>+₹24,000</td></tr><tr><td>Employee EPF deducted</td><td>₹6,000</td><td>₹7,200</td><td>+₹1,200</td></tr><tr><td>Monthly TDS (new regime)</td><td>~₹4,500</td><td>~₹8,500</td><td>+₹4,000</td></tr><tr><td>In-hand take-home</td><td>~₹1,02,500</td><td>~₹1,21,300</td><td>+₹18,800</td></tr></tbody></table><p>A ₹3 lakh CTC increase → approximately ₹18,800/month additional in-hand = ₹2.26L annually. In-hand efficiency: 75.3% (₹2.26L of ₹3L). The remaining 24.7% went to marginal tax and EPF scaling. At higher income brackets (₹20L+), the marginal tax rate rises to 25–30% and the take-home proportion of the increment drops to 60–65%.</p><p><strong>Variable pay component:</strong> If part of the hike is in variable pay (performance bonus), the timing differs — fixed salary increases take effect monthly; variable arrives annually and is contingent on performance. A 20% hike with 5% in fixed and 15% in variable means the immediate monthly in-hand increase is only from the 5% fixed component. Always separate fixed vs variable when evaluating a hike.</p>"
+    },
+    {
+      "id": "sh-scenarios",
+      "heading": "Three Salary Hike Scenarios — Entry Level, Mid-Senior at ₹22L, and a Lateral Job Change",
+      "body": "<h3>Scenario 1: Nidhi, ₹5L CTC, 25% hike to ₹6.25L — first year increment</h3><p>Nidhi earns ₹5L CTC, monthly in-hand approximately ₹35,000. After 25% hike: ₹6.25L CTC. New monthly basic (40%): approximately ₹20,833. Employee EPF: ₹2,500. TDS: ₹0 (annual taxable income below ₹4L nil slab under new regime — standard deduction ₹75K). In-hand: approximately ₹44,500 — increase of approximately ₹9,500/month. At Nidhi's income level, zero tax means the full increment (minus EPF scaling) reaches her. The in-hand efficiency is highest at low income levels where marginal tax is zero.</p><h3>Scenario 2: Rahul, ₹22L CTC, 12% hike to ₹24.64L — marginal rate impact</h3><p>Rahul's increment: ₹2.64L CTC. Monthly gross increase: approximately ₹19,000. Employee EPF increase on basic: approximately ₹880/month. The increment from ₹22L to ₹24.64L falls in the 25% new regime slab (₹20L–₹24L — verify slab at incometax.gov.in). Additional monthly TDS on increment: approximately ₹5,000. Net monthly in-hand increase: ₹19,000 − ₹880 − ₹5,000 = ₹13,120. In-hand efficiency: ₹13,120 × 12 / ₹2.64L = 59.6%. Nearly 40% of the increment absorbed by tax and EPF — the practical experience of mid-senior employees who feel underwhelmed by year-on-year hikes in the 10–15% range.</p><h3>Scenario 3: Sona, lateral job change — ₹18L to ₹26L CTC, 44% jump</h3><p>Increment: ₹8L CTC. Monthly gross increase: approximately ₹57,000 (₹8L ÷ 12, adjusted for employer-side costs). EPF increase on higher basic: approximately ₹3,200/month. Income moves from ₹18L to ₹26L — new regime tax on the ₹18L–₹26L range: mostly in 25–30% bracket. Additional TDS: approximately ₹23,000/month. Net in-hand increase: ₹57,000 − ₹3,200 − ₹23,000 ≈ ₹30,800/month. Annualised: ₹3.70L. In-hand efficiency: ₹3.70L / ₹8L = 46.3%. A significant material jump in real in-hand — but not the ₹66,000/month (₹8L ÷ 12) the CTC comparison suggests.</p>"
+    },
+    {
+      "id": "sh-real-hike",
+      "heading": "Real Salary Hike, Inflation Adjustment, and Appraisal Negotiation Strategy",
+      "body": "<p><strong>Real salary increase = Nominal hike minus inflation:</strong> A 6% salary hike with 6% CPI inflation produces zero real salary increase — purchasing power unchanged. After the 6% nominal hike, the incremental income is taxed at the marginal rate (15–30%), so the after-tax in-hand increase as a percentage is less than 6%. At 15% marginal rate: 6% × (1 − 0.15) = 5.1% after-tax nominal increase minus 6% inflation = −0.9% real decline. Rule of thumb: a hike must exceed (inflation ÷ (1 − marginal tax rate)) to be a real increase. At 30% tax and 6% inflation: minimum meaningful hike = 6% ÷ 0.7 = 8.6% just to maintain real purchasing power.</p><p><strong>India average hike benchmarks FY 2025-26:</strong> Average salary increment approximately 9–10% across industries (verify against latest Aon, EY, or Deloitte India Salary Survey data). IT/software: 8–12%. BFSI: 9–11%. Pharma: 8–10%. Manufacturing: 6–8%. E-commerce/digital: 10–15% (high variance). High-performers receive 15–25%; median performers: 7–10%; low-performers: 0–5%. A 10% hike is approximately at the industry median — just above the inflation break-even at moderate tax rates.</p><p><strong>Negotiating effectively:</strong> When negotiating (internal or external), four levers matter: (1) Base salary percentage increase; (2) Variable pay target increase; (3) ESOP grant (especially at startups); (4) Non-salary benefits (health insurance, remote work, leave). Know your market rate from offer data, LinkedIn Salary, internal referrals — negotiate to fair market, not the maximum extractable number. A 5% above-market offer accepted gracefully is better than a 25% above-market offer that creates a hostile start.</p><p><strong>Employer-side cost clarification:</strong> Confirm whether the hike percentage is applied to (a) total CTC including employer PF, (b) gross salary received, or (c) fixed pay component only. In companies with large variable components, a 15% hike on fixed pay (60% of CTC) is only a 9% increase on total CTC. This distinction is especially important when evaluating and comparing offers from multiple employers.</p>"
+    },
+    {
+      "id": "sh-mistakes",
+      "heading": "Salary Hike Mistakes — Lifestyle Inflation, Not Increasing SIP, Ignoring Tax Regime Change, and Over-Negotiating",
+      "body": "<p><strong>Spending the entire in-hand hike immediately.</strong> Every income increase triggers proportional lifestyle expansion — a better car, eating out more, upgrading housing. After a 20% hike, most employees find their savings rate unchanged 6 months later because expenses expanded to match income. The financially disciplined response: invest at least 50% of every salary increase. If in-hand increases by ₹18,000/month, direct ₹9,000 into additional SIP immediately on salary credit day. Lifestyle inflation is the primary reason high earners reach retirement with insufficient corpus.</p><p><strong>Not adjusting SIP with income growth.</strong> Many employees start a ₹5,000/month SIP at their first salary and never increase it — even as income doubles or triples. A ₹5,000/month SIP at 12% for 30 years: ₹1.76 crore. A SIP that steps up 10% annually: approximately ₹3.4 crore — nearly double from the same starting point. Use the Step-Up SIP calculator and align step-ups with appraisal months to make this automatic.</p><p><strong>Not reviewing tax regime after a significant hike.</strong> Tax regime comparison changes when income changes significantly. An employee better off in the old regime at ₹12L CTC may be better off in the new regime at ₹20L+ CTC — the break-even shifts as income rises and standard deductions become a smaller fraction. Re-evaluate regime choice every time CTC changes significantly. If the employer defaults to new regime, check whether a switch to old regime saves tax at the new income level.</p><p><strong>Over-negotiating and creating a bad start.</strong> Negotiating aggressively for a 30–40% hike is reasonable if market benchmarks support it. However, if the agreed CTC is significantly above the team's median pay, it can create management friction and heightened scrutiny on the new hire. Know the market rate, negotiate to fair market. A small above-market offer accepted gracefully is better than a large above-market offer that begins with resentment.</p>"
     }
   ],
   "faq": [
     {
-      "q": "What is a good salary hike percentage in India 2026?",
-      "a": "Average salary hike in India 2026 is 9–10% for IT sector and 8–9% for other sectors per major HR surveys. High performers typically get 15–20%. Switching jobs (job hopping) typically yields 20–40% increments. Startups may offer equity in lieu of higher hikes."
+      "q": "How much does a 20% salary hike actually increase my monthly in-hand?",
+      "a": "Significantly less than 20%. At ₹15L CTC with 40% basic, a 20% hike to ₹18L increases in-hand by approximately ₹18,000–20,000/month (not ₹25,000 = ₹3L ÷ 12). The gap is absorbed by higher marginal income tax on the increment (15–25% slab depending on total income), increased employee EPF (12% of higher basic), and employer-side costs within the new CTC. In-hand efficiency — the fraction of the CTC increment that becomes take-home — is typically 60–75% at mid-level incomes."
     },
     {
-      "q": "How does a salary hike affect take-home salary?",
-      "a": "A ₹2 lakh CTC increase does not result in ₹16,667 extra per month. Employer PF increases if basic increases, TDS increases if you move to a higher slab, and professional tax may increase. Net in-hand increase is typically 60–75% of CTC increase."
+      "q": "What is the average salary hike in India for FY 2025-26?",
+      "a": "Average salary hikes across India Inc. for FY 2025-26 are approximately 9–10% according to industry surveys (verify against latest Aon, EY, or Deloitte India Salary Survey data). IT/software sector: 8–12%. BFSI: 9–11%. High-performers receive 15–25% in most companies; median performers: 7–10%; low-performers: 0–5%. After accounting for 6% CPI inflation, a 10% nominal hike provides only approximately 4% real purchasing power increase."
     },
     {
-      "q": "Should I negotiate CTC or in-hand salary?",
-      "a": "Negotiate in-hand salary if possible. Employers sometimes inflate CTC with inflexible benefits like medical reimbursements, education allowances, and LTA that don't directly appear as cash. Clarify the cash component vs reimbursements vs benefits."
+      "q": "What is the effective marginal tax rate on a salary increment in India?",
+      "a": "Under the new tax regime (AY 2026-27 — verify slabs at incometax.gov.in): 0% up to ₹4L; 5% from ₹4L–₹8L; 10% from ₹8L–₹12L; 15% from ₹12L–₹16L; 20% from ₹16L–₹20L; 25% from ₹20L–₹24L; 30% above ₹24L. Plus 4% health and education cess on total tax. An increment at the ₹16L–₹20L income range is taxed at an effective 20.8% marginal rate (20% + 4% cess). At ₹20L–₹24L: 26% marginal."
     },
     {
-      "q": "Is the Salary Hike Calculator free?",
-      "a": "Yes, completely free on CalcPhi with no registration."
+      "q": "Does a salary hike affect EPF contribution?",
+      "a": "Yes, if basic salary increases. EPF is 12% of basic — both employee and employer contribute this. If basic goes from ₹50,000 to ₹60,000 monthly on a ₹15L to ₹18L CTC hike (40% basic), employee EPF increases from ₹6,000 to ₹7,200/month (₹1,200 more deducted from take-home). The employer side also increases by ₹1,200 — but this is within the new higher CTC, not additional income. The EPF increase slightly reduces monthly in-hand but increases long-term EPF corpus."
     },
     {
-      "q": "Are my inputs stored?",
-      "a": "No. All calculations run in your browser. Your data is never stored."
+      "q": "How do I calculate actual in-hand increase from a salary hike?",
+      "a": "Step 1: New CTC = Current CTC × (1 + hike%). Step 2: New basic = New CTC × basic% ÷ 12. Step 3: New monthly gross = (New CTC − employer EPF − gratuity provision) ÷ 12. Step 4: Deduct employee EPF (12% of new basic), professional tax, and new monthly TDS. Result is new in-hand. Subtract old in-hand for the monthly increase. The CTC to In-Hand Calculator on this site does this precisely."
     },
     {
-      "q": "Is it mobile-friendly?",
-      "a": "Yes. Works on all modern smartphones and tablets."
-    }
-  ],
-  "examples": [
-    {
-      "heading": "₹12 lakh → 15% hike",
-      "text": "15% hike on ₹12 lakh CTC = new CTC ₹13.8 lakh. Annual increment = ₹1.8 lakh. Monthly in-hand increase ≈ ₹10,000–₹12,000 (after tax on incremental income). If you move from nil-tax to 5% slab, the net increase is less than expected."
+      "q": "Is it better to negotiate a higher salary or more variable pay?",
+      "a": "Higher fixed salary is generally better: guaranteed, compounded in annual hike calculations, counts toward EPF (if basic scales), home loan eligibility (banks use basic+DA for EMI eligibility), and gratuity after 5 years. Variable pay is attractive if you are a consistent high-performer confident of achieving targets — but it is at-risk income. The ideal negotiation: maximise fixed first, then negotiate variable target upward. Never trade fixed salary reduction for higher variable at the same expected CTC — the downside risk of missing variable is entirely yours."
     },
     {
-      "heading": "Evaluating job offer: 30% hike but higher city",
-      "text": "Moving from ₹12 lakh (Pune) to ₹15.6 lakh (Mumbai) with 30% hike sounds attractive. But Mumbai cost of living premium (rent, commute) often negates ₹15,000–₹25,000 extra per month. Always calculate city-adjusted real income."
+      "q": "How much of a salary hike should I save vs spend?",
+      "a": "Save at least 50% of every salary increment. If in-hand increases by ₹15,000/month, direct ₹7,500 into additional SIP immediately (before spending patterns adjust). Automate this as a standing instruction on your salary credit date. The other ₹7,500 can fund lifestyle improvements. This prevents full lifestyle inflation while ensuring accumulation velocity grows with income."
+    },
+    {
+      "q": "What is a step-up SIP and how does it relate to salary hikes?",
+      "a": "A step-up SIP automatically increases your monthly SIP by a fixed percentage each year. Most fund platforms allow 10–25% annual step-up. Starting with ₹10,000/month at 12% CAGR for 30 years: ₹3.49 crore. Same ₹10,000 with 10% annual step-up at 12% CAGR: approximately ₹7.4 crore — more than double, purely from increasing SIP with income. Register a step-up SIP and tie the increase month to your appraisal month — the increment funds the additional SIP automatically."
     }
   ],
   "related": [
     {
       "title": "CTC to In-Hand Calculator",
-      "url": "/india/ctc-to-in-hand-calculator/"
-    },
-    {
-      "title": "EPF Calculator",
-      "url": "/india/epf-calculator/"
+      "url": "/india/ctc-to-in-hand-calculator/",
+      "desc": "Full CTC breakdown — gross, EPF, tax, and take-home at current and new CTC"
     },
     {
       "title": "Income Tax Calculator",
-      "url": "/india/income-tax-calculator/"
+      "url": "/india/income-tax-calculator/",
+      "desc": "Compare old vs new regime at the new post-hike income level"
+    },
+    {
+      "title": "SIP Calculator",
+      "url": "/india/sip-calculator/",
+      "desc": "Project how investing 50% of the hike increment grows over time"
     }
   ]
 }

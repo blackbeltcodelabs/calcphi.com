@@ -1,26 +1,27 @@
 {
   "id": "simple-interest",
+  "formulaEngine": "simple-interest",
   "schema": {
-    "appName": "Simple Interest Calculator",
-    "appDescription": "Calculate simple interest for any principal, rate, and time period. See interest earned and total maturity amount instantly."
+    "appName": "Simple Interest Calculator India — SI Formula, SI vs CI Comparison",
+    "appDescription": "Calculate simple interest using SI = P×R×T/100. Compare with compound interest to see the difference over time. Explains where SI is used in Indian financial products: flat-rate loans, overdrafts, agriculture schemes. Use the FD Calculator for compound interest on fixed deposits."
   },
   "inputs": [
     {
       "id": "ls-principal",
-      "label": "Investment Amount (₹)",
+      "label": "Principal Amount (₹)",
       "min": 1000,
       "max": 100000000,
       "step": 1000,
       "value": 500000,
-      "hint": "One-time investment"
+      "hint": "One-time investment or loan amount"
     },
     {
       "id": "ls-rate",
-      "label": "Expected Return (% p.a.)",
+      "label": "Annual Interest Rate (% p.a.)",
       "min": 1,
       "max": 30,
       "step": 0.5,
-      "value": 12
+      "value": 10
     },
     {
       "id": "ls-years",
@@ -28,91 +29,113 @@
       "min": 1,
       "max": 40,
       "step": 1,
-      "value": 10
+      "value": 5
     }
   ],
   "outputs": [
     {
       "id": "ls-maturity",
-      "label": "Maturity Value",
+      "label": "Maturity Value (P + SI)",
       "highlight": true
     },
     {
       "id": "ls-gains",
-      "label": "Total Gains"
+      "label": "Simple Interest Earned"
     },
     {
       "id": "ls-cagr",
-      "label": "Annual Return Rate"
+      "label": "Effective Annual Rate (same as stated rate for SI)"
     }
   ],
-  "formulaEngine": "simple-interest",
   "howToSteps": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the Simple Interest Calculator. All inputs have smart defaults."
+      "name": "Enter principal amount",
+      "text": "Enter the principal — the original loan amount or the initial investment. For a savings calculation, this is the amount deposited. For a loan, this is the amount borrowed. Simple interest is always calculated on the original principal only — unlike compound interest, the interest earned does not add to the principal."
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time as you type — no submit button needed."
+      "name": "Enter annual interest rate",
+      "text": "Enter the rate as an annual percentage. For simple interest loans (e.g., some agriculture loans or short-term commercial advances), the rate stated is the flat rate. For personal loans with reducing balance, the flat rate overstates the actual borrowing cost — see the SI vs CI comparison section for the effective rate calculation."
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown table to see how your numbers change over time."
+      "name": "Enter tenure in years",
+      "text": "Enter the time period in years. Simple interest is directly proportional to time: double the tenure, double the interest. For T in months: divide by 12. For T in days: divide by 365 (or 360 for some commercial calculations). The formula SI = P × R × T / 100 uses T in years."
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust the inputs to compare different scenarios and find the best option for your situation."
+      "name": "Compare SI to compound interest",
+      "text": "The total interest from simple interest over a long period is significantly less than compound interest on the same principal at the same rate. The difference grows with time: over 5 years at 10%, SI produces ₹50,000 on ₹1L while CI produces ₹61,051 — a gap of ₹11,051. At 20 years: SI = ₹2,00,000; CI = ₹5,72,750 — a gap of ₹3,72,750. For savings, always prefer compound interest instruments."
+    }
+  ],
+  "articleSections": [
+    {
+      "id": "si-formula",
+      "heading": "The Simple Interest Formula Explained — SI = P×R×T/100, Maturity Value, and How SI Differs from Compound Interest",
+      "body": "<p>Simple interest is calculated on the original principal amount only, for every period. The formula: <strong>SI = (P × R × T) / 100</strong>, where P is the principal (₹), R is the annual rate of interest (%), and T is the time in years. Maturity value (total amount including principal and interest): <strong>A = P + SI = P × (1 + R×T/100)</strong>.</p><p><strong>Example: ₹1,00,000 at 10% p.a. for 5 years (simple interest):</strong> SI = ₹1,00,000 × 10 × 5 / 100 = ₹50,000. Maturity value = ₹1,50,000. Under compound interest (annual compounding): A = ₹1,00,000 × (1 + 10/100)⁵ = ₹1,61,051. Difference: ₹11,051 — the CI earns ₹11,051 more because each year's interest earns further interest. At Year 1, both are identical (₹10,000 interest). At Year 2, SI earns another ₹10,000 on the original ₹1L; CI earns ₹11,000 on ₹1.1L (original + Year 1 interest). This compounding gap widens with time.</p><p><strong>SI vs CI: the time effect</strong> — on ₹1,00,000 at 10% p.a.:</p><table><thead><tr><th>Tenure</th><th>SI Maturity</th><th>CI Maturity</th><th>Difference</th></tr></thead><tbody><tr><td>1 year</td><td>₹1,10,000</td><td>₹1,10,000</td><td>₹0</td></tr><tr><td>3 years</td><td>₹1,30,000</td><td>₹1,33,100</td><td>₹3,100</td></tr><tr><td>5 years</td><td>₹1,50,000</td><td>₹1,61,051</td><td>₹11,051</td></tr><tr><td>10 years</td><td>₹2,00,000</td><td>₹2,59,374</td><td>₹59,374</td></tr><tr><td>20 years</td><td>₹3,00,000</td><td>₹6,72,750</td><td>₹3,72,750</td></tr></tbody></table><p>The gap between SI and CI is negligible in the short term (1–2 years) but enormous over 10–20 years. This is why simple interest is appropriate only for short-duration instruments or daily-accruing products where compounding frequency matters less. For any long-duration savings goal (retirement, children's education), compound interest instruments (FD, RD, PPF, mutual funds) are dramatically superior to simple interest instruments.</p>"
+    },
+    {
+      "id": "si-scenarios",
+      "heading": "Three Simple Interest Scenarios — Short-Term Deposit, Personal Loan True Cost, and Agriculture Loan Comparison",
+      "body": "<h3>Scenario 1: Radha, ₹2 lakh short-term deposit at 6% simple interest for 90 days</h3><p>A small cooperative bank offers a 90-day deposit at 6% p.a. on simple interest basis. P = ₹2,00,000. R = 6%. T = 90/365 = 0.2466 years. SI = ₹2,00,000 × 6 × 0.2466 / 100 = ₹2,959. Maturity value: ₹2,02,959. Note: if the bank compounds quarterly instead of using SI, the maturity value at 6% quarterly compounding (6/4 = 1.5% per quarter) for 1 quarter: ₹2,00,000 × (1 + 0.015)¹ = ₹2,03,000 — an additional ₹41. Over short durations like 90 days, the SI vs CI difference is minimal. SI instruments are perfectly acceptable for parking money for periods under 6 months where the compounding gap is small.</p><h3>Scenario 2: Priya, ₹5 lakh personal loan at 12% 'flat rate' for 3 years — actual cost revealed</h3><p>Priya takes a ₹5L personal loan at 12% flat rate for 3 years. The bank calculates EMI using the flat rate: Total interest = ₹5,00,000 × 12% × 3 = ₹1,80,000. Total repayment: ₹6,80,000. Monthly EMI: ₹6,80,000 / 36 = ₹18,889. But the outstanding principal reduces with each EMI — by the midpoint of the loan, Priya has repaid approximately ₹2.5L of principal. Yet she is paying interest on the original ₹5L all through. The <strong>effective annual rate (EAR) on a reducing balance = approximately 2 × flat rate × n / (n+1)</strong> where n = number of periods. Approximate EAR: 2 × 12% × 36 / 37 = 23.4%. Priya is effectively paying 23–24% on a reducing balance loan, not 12%. This is the standard flat-rate personal loan trap. Always ask banks for the APR (Annual Percentage Rate) or the reducing balance effective rate, not the flat rate.</p><h3>Scenario 3: Mohan, agriculture loan at 7% simple interest vs 7% compound interest — 2-year comparison</h3><p>Mohan takes a ₹3 lakh Kisan Credit Card (KCC) loan at 7% p.a. for 2 years. Government agriculture loans are often calculated on simple interest for short tenures. SI over 2 years: ₹3,00,000 × 7 × 2 / 100 = ₹42,000. Total repayment: ₹3,42,000. If the same loan were at 7% compound (annual): ₹3,00,000 × (1.07)² = ₹3,43,470 — additional ₹1,470. Over 2 years at 7%, the SI-CI difference is small (₹1,470). The government subsidy on KCC interest (interest subvention scheme reducing effective rate to 4% or below for timely repayment — verify at nabard.org.in) makes the absolute interest cost secondary to accessing credit. The SI structure is appropriate for short-duration agriculture working capital — the simplicity of the SI calculation also makes it easier for rural borrowers to understand.</p>"
+    },
+    {
+      "id": "si-applications",
+      "heading": "Where Simple Interest Is Used in Indian Finance — Loans, Overdrafts, Government Schemes, and Where CI Is Always Better",
+      "body": "<p><strong>Where simple interest is commonly used in India:</strong></p><p><strong>1. Personal loans on reducing balance (misnamed as 'flat rate' SI):</strong> Almost all personal loans from banks and NBFCs quote a 'flat rate' based on simple interest on the original principal — but the EMI is calculated on this basis and the loan actually amortises on a reducing balance. The stated flat rate of 12–18% translates to an effective annual rate of 22–33% on a reducing balance. The SI formula is used to calculate total interest, which is then divided into equal monthly EMIs — not true reducing balance compound interest. The practical impact: always compare APR, not flat rate, across loan offers.</p><p><strong>2. Overdraft facilities:</strong> Bank overdraft interest is typically calculated on daily outstanding balance — effectively SI on the daily balance, accrued monthly. Because the balance changes daily, the interest calculation is the sum of (daily balance × daily rate). This is SI applied to a changing principal — the most accurate form of interest calculation for revolving credit.</p><p><strong>3. Kisan Credit Card (KCC) and agriculture schemes:</strong> Short-term agriculture loans under government schemes often use SI for the loan tenure (typically 1 crop season, 6–12 months). Interest subvention schemes reduce effective rates further — verify current subvention rates at nabard.org.in.</p><p><strong>4. Short-term inter-company deposits and Treasury instruments:</strong> Corporate treasury deposits of 30–90 days often use SI. Commercial paper and some money market instruments accrue interest on a simple interest basis for their short tenures.</p><p><strong>Where compound interest is always better for savers:</strong> FDs (quarterly or monthly compounding), RDs (monthly compounding), PPF (annual compounding), EPF (annual compounding), SCSS (quarterly payout, effectively quarterly CI), NSC (annual compounding with deemed reinvestment), and all mutual fund NAVs (continuous compounding through NAV appreciation). For any goal with a tenure exceeding 2 years, compound interest instruments are superior — the advantage compounds with time exactly as the formula shows.</p>"
+    },
+    {
+      "id": "si-mistakes",
+      "heading": "Simple Interest Mistakes — Confusing Flat Rate with EAR, Comparing Across Loan Offers Incorrectly, and Long-Term SI Traps",
+      "body": "<p><strong>Accepting the stated flat rate as the true borrowing cost.</strong> The most pervasive personal finance error in India. A 15% flat rate personal loan from an NBFC vs a 16% reducing balance loan from a bank: the NBFC flat-rate loan is actually approximately 27–28% effective rate; the bank's 16% reducing balance is 16% effective. The NBFC loan is approximately 12% more expensive in real terms, despite the lower stated number. Always ask: 'Is this a flat rate or a reducing balance rate? What is the EAR?' Lenders are required to disclose the Annual Percentage Rate (APR) under RBI Fair Practices Code — request this in writing before signing any loan agreement.</p><p><strong>Using the SI formula for long-term savings projections.</strong> If you calculate your PPF maturity using SI (P × R × T / 100), you will dramatically underestimate the corpus — PPF compounds annually. At ₹1L/year contribution for 15 years at 7.1% (PPF rate — verify at nsiindia.gov.in): SI projection = ₹15L × 7.1% × 7.5 years average ≈ ₹7.98L interest, total ₹22.98L. Actual PPF (annual compounding): approximately ₹27.1L. The SI estimate understates by ₹4.1L. Always use the compound interest formula for long-duration instrument projections — FD, RD, PPF, NPS, mutual fund — all compound.</p><p><strong>Not converting partial-year periods correctly.</strong> SI for 18 months: T = 18/12 = 1.5 years. SI for 45 days: T = 45/365 = 0.123 years (or 45/360 for banker's rule — check which the lender uses). Using 18 months as T = 18 (not 1.5) gives a result 12× too large — a common calculation error. Always express time in the same units as the rate: if rate is annual (p.a.), time must be in years.</p><p><strong>Ignoring the penalty on prepayment for flat-rate loans.</strong> Prepaying a flat-rate loan does not save the full outstanding 'SI remaining' — many lenders use the Rule of 78 (sum-of-digits method) for prepayment calculations, which front-loads interest allocation. If you prepay a 3-year flat-rate loan at the end of Year 1, you have paid more than 1/3 of the total interest (because more interest is allocated to early periods in the Rule of 78). Verify the prepayment calculation method and foreclosure charge with the lender before making a prepayment decision.</p>"
     }
   ],
   "faq": [
     {
-      "q": "How accurate is the Simple Interest Calculator?",
-      "a": "The Simple Interest Calculator uses standard financial formulas. Results are indicative; actual figures depend on your lender or financial institution's policies."
+      "q": "What is the simple interest formula in India?",
+      "a": "SI = (P × R × T) / 100, where P is the principal amount (₹), R is the annual interest rate (%), and T is the time in years. Total maturity value: A = P + SI = P × (1 + R×T/100). Example: ₹1,00,000 at 8% for 3 years — SI = ₹1,00,000 × 8 × 3 / 100 = ₹24,000. Maturity value = ₹1,24,000. Note: this assumes T is expressed in the same unit as R (both annual)."
     },
     {
-      "q": "Is the Simple Interest Calculator free to use?",
-      "a": "Yes, the Simple Interest Calculator on CalcPhi is completely free with no registration required."
+      "q": "What is the difference between simple interest and compound interest?",
+      "a": "Simple interest is calculated only on the original principal for every period — interest does not accumulate on itself. Compound interest is calculated on the principal + accumulated interest, so each period's interest earns further interest. On ₹1,00,000 at 10% for 10 years: SI maturity = ₹2,00,000; CI maturity = ₹2,59,374 — a difference of ₹59,374. The CI advantage grows exponentially with time. For savings goals, always prefer compound interest instruments (FD, PPF, mutual funds). Simple interest is appropriate for short-duration loans and instruments where compounding period has minimal impact."
     },
     {
-      "q": "Are my data inputs stored?",
-      "a": "No. All calculations happen in your browser. We do not store any of your financial data."
+      "q": "What does a flat-rate personal loan at 15% actually cost?",
+      "a": "A '15% flat rate' personal loan is significantly more expensive than it appears. Flat rate means interest is calculated on the original principal (SI formula) for the full tenure, then divided into equal EMIs. As you repay principal, the effective balance reduces — but you keep paying interest on the original amount. The approximate effective annual rate (EAR) for a flat-rate loan: EAR ≈ 2 × flat rate × n / (n+1), where n = number of monthly installments. For a 3-year (36-month) flat-rate loan at 15%: EAR ≈ 2 × 15% × 36/37 ≈ 29.2%. Always compare loans using EAR or the Annual Percentage Rate (APR), not the stated flat rate."
     },
     {
-      "q": "How often are the Simple Interest Calculator rates updated?",
-      "a": "Rates in examples are updated periodically to reflect current market conditions. Always verify with your bank or advisor."
+      "q": "Where is simple interest used in India?",
+      "a": "Simple interest is used in: (1) Personal loan flat-rate calculations (the SI formula is used to determine total interest, then split into equal EMIs — though the effective rate is reducing balance); (2) Bank overdraft interest on daily outstanding balance; (3) Short-tenure agriculture loans (Kisan Credit Card for 1 season); (4) Short-term inter-company and corporate treasury deposits (30–90 days); (5) Some government subsidy scheme calculations for simplicity. For savings instruments in India (FD, RD, PPF, SCSS, NSC, mutual funds), compound interest always applies — use the respective calculators for accurate projections."
     },
     {
-      "q": "Can I use the Simple Interest Calculator on mobile?",
-      "a": "Yes. CalcPhi is fully mobile-optimised. The calculator works on all modern smartphones and tablets."
+      "q": "How do I calculate simple interest for months or days?",
+      "a": "Convert the time to years: months ÷ 12 for monthly tenures; days ÷ 365 (or ÷ 360 for banker's rule — verify with the lender) for daily tenures. Example: ₹5,00,000 at 9% for 90 days: T = 90/365 = 0.2466 years. SI = ₹5,00,000 × 9 × 0.2466 / 100 = ₹11,096. Example: ₹2,00,000 at 7% for 18 months: T = 18/12 = 1.5 years. SI = ₹2,00,000 × 7 × 1.5 / 100 = ₹21,000. Always express T in the same unit as R — if R is annual, T must be in years."
     },
     {
-      "q": "Who should use this calculator?",
-      "a": "Anyone in India planning their finances can benefit from the Simple Interest Calculator. It's designed for both beginners and experienced investors."
-    }
-  ],
-  "examples": [
-    {
-      "heading": "₹5 lakh investment at 10% for 10 years",
-      "text": "₹5 lakh invested at 10% p.a. grows to ₹12.97 lakh in 10 years through compounding. Simple interest would yield only ₹10 lakh — demonstrating the power of compounding over long periods."
+      "q": "Is the PPF interest calculated using simple interest?",
+      "a": "No. PPF interest is calculated using compound interest — annual compounding on the balance at the end of each financial year. The government announces the PPF interest rate quarterly (verify current rate at nsiindia.gov.in); interest is credited to the account at the end of the financial year. Using the SI formula for PPF will significantly underestimate the maturity value. Use a PPF Calculator with the compound interest formula for accurate maturity projections."
     },
     {
-      "heading": "₹1 lakh at 12% CAGR over 20 years",
-      "text": "₹1 lakh growing at 12% p.a. becomes ₹9.65 lakh in 20 years. Even a 2% difference (at 14%) produces ₹13.74 lakh — demonstrating how small return differences compound dramatically."
+      "q": "What is the rule of 78 for simple interest loans?",
+      "a": "The Rule of 78 (also called sum-of-digits method) is a front-loading method for allocating flat-rate loan interest across monthly installments. It allocates more interest to the early periods and less to the later periods. For a 12-month loan: sum of digits = 1+2+...+12 = 78. Month 1's interest = 12/78 of total interest; Month 12's = 1/78. This means if you prepay a 12-month loan after 6 months, you have already paid more than half the total interest — prepayment saves less than proportional. Many flat-rate loan lenders use Rule of 78 for prepayment calculations. Verify with your lender whether they use straight-line allocation or Rule of 78 before prepaying."
+    },
+    {
+      "q": "What is a better alternative to a simple interest deposit?",
+      "a": "For any tenure beyond 3–6 months, compound interest instruments always generate more returns at the same rate. Alternatives: Bank Fixed Deposits (FD) — quarterly compounding, senior citizen rates higher (verify at your bank); Post Office FDs — quarterly compounding (verify at nsiindia.gov.in); SCSS (Senior Citizens Savings Scheme, 60+) — approximately 8.2% quarterly payout (verify current rate); NSC — annual compounding with deemed reinvestment for 80C. For 5+ year tenures: PPF, equity SIP, or ELSS generate significantly higher returns than any fixed-income SI instrument. Use the FD Calculator for compound interest projections."
     }
   ],
   "related": [
     {
       "title": "FD Calculator",
-      "url": "/india/fd-calculator/"
+      "url": "/india/fd-calculator/",
+      "desc": "Calculate compound interest on fixed deposits — always higher than SI at the same rate"
     },
     {
       "title": "RD Calculator",
-      "url": "/india/rd-calculator/"
+      "url": "/india/rd-calculator/",
+      "desc": "Monthly recurring deposit maturity with compound interest"
     },
     {
-      "title": "Lumpsum Calculator",
-      "url": "/india/lumpsum-calculator/"
+      "title": "Personal Loan EMI Calculator",
+      "url": "/india/personal-loan-emi-calculator/",
+      "desc": "Calculate EMI and true borrowing cost on reducing balance personal loans"
     }
   ]
 }
