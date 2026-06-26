@@ -1,18 +1,18 @@
 {
   "id": "ssy-calculator",
   "schema": {
-    "appName": "SSY Calculator \u2014 Sukanya Samriddhi Yojana",
-    "appDescription": "Calculate Sukanya Samriddhi Yojana maturity value for your daughter. Current rate 8.2% p.a. tax-free. Deposits for 15 years, matures at 21 years."
+    "appName": "SSY Calculator — Sukanya Samriddhi Yojana",
+    "appDescription": "Calculate SSY maturity value for your daughter. As of Q1 FY 2026-27 the rate is approximately 8.2% — verify current quarter at nsiindia.gov.in. EEE status, 21-year maturity, 80C eligible."
   },
   "inputs": [
     {
       "id": "ssy-annual",
-      "label": "Annual Deposit (\u20b9)",
+      "label": "Annual Deposit (₹)",
       "min": 250,
       "max": 150000,
       "step": 1000,
       "value": 50000,
-      "hint": "\u20b9250 minimum, \u20b91.5 lakh maximum per year"
+      "hint": "₹250 minimum, ₹1.5 lakh maximum per year"
     },
     {
       "id": "ssy-rate",
@@ -21,7 +21,7 @@
       "max": 10,
       "step": 0.1,
       "value": 8.2,
-      "hint": "Current SSY rate: 8.2% (Q1 FY 2026-27)"
+      "hint": "~8.2% as of Q1 FY 2026-27 — verify at nsiindia.gov.in"
     },
     {
       "id": "ssy-age",
@@ -50,66 +50,93 @@
   ],
   "howToSteps": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the SSY Calculator. All inputs have smart defaults."
+      "name": "Enter annual deposit amount",
+      "text": "Enter the amount you plan to deposit each year — minimum ₹250, maximum ₹1.5 lakh. You can deposit in multiple instalments during the year; only the total annual amount matters for interest calculation."
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time as you type \u2014 no submit button needed."
+      "name": "Verify current SSY interest rate",
+      "text": "The rate (~8.2% for Q1 FY 2026-27) is pre-filled. The Ministry of Finance revises small-savings rates quarterly — verify the current quarter's rate at nsiindia.gov.in before making deposit decisions."
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown table to see how your numbers change over time."
+      "name": "Enter daughter's current age",
+      "text": "The calculator uses the daughter's age to show the maturity timeline. Deposits are made for 15 years from account opening; the account matures 21 years from opening (not from the daughter's birth)."
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust the inputs to compare different scenarios and find the best option."
+      "name": "Read the maturity amount and tax saving",
+      "text": "The full maturity amount is tax-free. Your annual deposit also qualifies for Section 80C deduction (old tax regime, within ₹1.5L cap). Use the Section 80C Calculator to see your total 80C utilisation."
+    }
+  ],
+  "articleSections": [
+    {
+      "id": "ssy-how-it-works",
+      "heading": "How SSY Interest Is Calculated — Annual Compounding, the 21-Year Clock, and the April 5 Timing Benefit",
+      "body": "<p>SSY interest is computed monthly on the lowest balance between the 5th and the last day of each month — the same monthly-minimum rule as PPF. Interest is credited to the account annually at the end of the financial year (March 31). This has one practical implication identical to PPF: if you deposit after the 5th of the month, that month's interest is calculated on the pre-deposit balance (zero in April if you deposit on April 6). At 8.2%, a missed April credit on ₹1 lakh deposit costs approximately ₹683. Set a standing instruction for April 1 to capture April interest every year.</p><p><strong>The 21-year maturity timeline:</strong> Deposits are made for 15 years from the date the account is opened. After year 15, no fresh deposits can be made — but the balance continues to earn interest at the then-current SSY rate for 6 more years, until the account reaches its maturity date: exactly 21 years from the date of account opening. This compounding during the silent 6-year period (years 16–21) is significant: at 8.2% on a large accumulated corpus, these 6 years alone add roughly 60% more interest on the year-15 balance without any fresh deposits.</p><p><strong>Example — opening date timing matters:</strong> An SSY account opened on March 29, 2026 counts FY 2025-26 as year 1. Deposits through FY 2040-41 (year 15), then maturity in FY 2046-47. Opening on April 5, 2026 instead makes FY 2026-27 year 1 — maturity one year later. Opening before April 1 each year banks an extra year of compounding.</p><p><strong>EEE status in detail:</strong> (1) Annual deposits up to ₹1.5L qualify for Section 80C deduction under the old tax regime. (2) Interest credited each year is fully exempt — no TDS, no ITR disclosure required. (3) The maturity amount is fully exempt. The 80C deduction applies only under the old regime — new-regime taxpayers cannot claim it, but the interest and maturity remain tax-free regardless of which ITR regime is used. This makes SSY's effective post-tax return significantly higher than its headline rate for investors in the 30% bracket using the old regime.</p>"
+    },
+    {
+      "id": "ssy-scenarios",
+      "heading": "Three SSY Calculations — Young Daughter, Older Daughter, and Maximum Contribution Impact",
+      "body": "<h3>Scenario 1: Priya and Arvind open SSY for their 2-year-old daughter Ananya, depositing ₹75,000/year</h3><p>Account opened when Ananya is 2. Deposits: ₹75,000 × 15 years = ₹11,25,000 total invested. Account earns approximately 8.2% for the full 21-year period (rate subject to quarterly revision — verify). Approximate maturity value when Ananya turns 23 (21 years from opening when she was 2): approximately ₹49–52 lakhs (interest calculation sensitive to rate changes over 21 years). The entire maturity amount is tax-free. Section 80C saving each year: ₹75,000 × 30% (30% bracket) = ₹22,500/year saved in tax — over 15 years, cumulative tax saved ≈ ₹3.37 lakhs. The combination of EEE status and high compound rate makes SSY the most tax-efficient savings instrument for a girl child.</p><h3>Scenario 2: Kavitha opens SSY for 8-year-old daughter Diya, depositing ₹50,000/year</h3><p>Account can still be opened — Diya is below 10. But the maturity arithmetic changes: deposits for 15 years (FY 2026-27 through FY 2040-41), then silent compounding for 6 years, maturity when Diya is 29 (21 years from account opening, which was at age 8). This is important: maturity is at Diya's age 29, not 21. Total deposits: ₹7,50,000. Approximate maturity value: ₹33–35 lakhs. Opening the account for a 2-year-old (Scenario 1) gives a much longer compounding runway and higher corpus than opening at 8 for the same annual investment — the 6-year difference in account opening age is worth approximately ₹15–17 lakhs in corpus at maturity for the same annual deposit.</p><h3>Scenario 3: Meera maximises SSY at ₹1.5 lakh/year for 5-year-old daughter Shreya</h3><p>Maximum deposit of ₹1.5L/year for 15 years = ₹22.5 lakhs invested. The account matures 21 years from opening, when Shreya is 26. Approximate maturity value at 8.2%: ₹96–1.02 crore (interest highly sensitive to the rate path over 21 years — verify). If the rate averages 7.5% (a conservative estimate given rate revision history): approximately ₹87 lakhs. If rates rise to 8.5%: approximately ₹1.07 crore. The range illustrates why the quarterly rate verification caveat matters for long-horizon projections. Even at a conservative 7.5% average, a ₹22.5 lakh investment tax-free growing to ₹87+ lakhs over 21 years is among the best available outcomes for a child savings instrument.</p>"
+    },
+    {
+      "id": "ssy-rules",
+      "heading": "SSY Eligibility, Account Rules, Withdrawal Conditions, and Premature Closure",
+      "body": "<p><strong>Who can open an SSY account:</strong> A natural or legal guardian can open one SSY account per girl child — maximum two accounts per family. A third account is permitted only if the second birth results in twins or triplets (proof of multiple birth required at time of account opening). Grandparents cannot open SSY accounts — the account must be in the name of the parent or legal guardian. The girl child must be below 10 years of age at the time of account opening. Adult daughters cannot open SSY in their own name.</p><p><strong>Where to open:</strong> Any post office or authorised commercial bank branch (SBI, HDFC, ICICI, Axis, Bank of Baroda, PNB, and others are authorised). The account can be opened with cash, cheque, demand draft, or online transfer. Minimum opening deposit: ₹250. If the annual minimum of ₹250 is not deposited in any financial year, the account becomes 'defaulted' and attracts a ₹50 per year penalty — which must be paid along with the minimum ₹250 to regularise the account.</p><p><strong>Partial withdrawal for higher education:</strong> Available once the girl turns 18 (or passes 10th standard, whichever is earlier — verify current condition at nsiindia.gov.in). Amount: up to 50% of the balance at the end of the preceding financial year. Proof of admission or fee demand letter from a recognised educational institution is required. The withdrawal can be made in a lump sum or in five annual instalments.</p><p><strong>Premature closure conditions:</strong> Before 21-year maturity, premature closure is permitted only in the following cases: (1) Death of the account holder (girl child) — full balance paid to guardian. (2) Life-threatening disease of the account holder — with medical certificate. (3) Death of the guardian operating the account — with supporting documents. (4) Account holder (girl) marries after turning 18 — the account must be closed within 1 month before or 3 months after the wedding, with age proof. Premature closure on marriage does not require the account to reach 21 years. Financial hardship is not a permitted ground for premature closure — unlike PPF, which allows 5-year premature closure for change in residency.</p><p><strong>Account transfer:</strong> SSY accounts can be freely transferred between post offices and between post offices and authorised banks anywhere in India — useful if the family relocates.</p>"
+    },
+    {
+      "id": "ssy-mistakes",
+      "heading": "SSY Planning Mistakes — Rate Assumptions, Deposit Timing, Withdrawal Window, and 80C Overlap",
+      "body": "<p><strong>Projecting SSY maturity using the current rate as fixed for 21 years.</strong> Small-savings rates are revised quarterly. The SSY rate has ranged from 7.6% to 9.2% since the scheme launched in 2015. A 21-year projection at 8.2% will be materially wrong if rates move — historically they have. The correct approach: project a base case at the current rate, a downside at 7% (plausible if government bond yields fall), and factor in that the deposit-phase rate will differ from the silent-period rate. Do not plan a daughter's education or marriage budget on a single-rate projection.</p><p><strong>Missing the April deposit window and losing interest.</strong> SSY interest is calculated on the monthly minimum balance between the 5th and the last day. Depositing ₹1.5 lakh on April 10 forfeits April interest on ₹1.5L — approximately ₹1,025 at 8.2%. Over 15 deposit years, this lost interest compounds into ₹28,000–₹40,000 foregone maturity value. Set a bank standing instruction to transfer the annual SSY deposit on April 1.</p><p><strong>Confusing the maturity date with the daughter's 21st birthday.</strong> SSY matures 21 years from the date the account was opened — not 21 years from the daughter's birth. An account opened for a 5-year-old matures when she is 26, not when she turns 21. Plan accordingly: if the intent is to fund a wedding at age 22 or education starting at 18, confirm the maturity date against the actual account opening year. The partial withdrawal for higher education (50% after age 18) is the mechanism for early access.</p><p><strong>Ignoring the 80C overlap between SSY and other instruments.</strong> SSY deposits (up to ₹1.5L) count toward the same Section 80C ₹1.5L cap as EPF, PPF, ELSS, LIC premium, children's tuition fees, and NSC. A parent contributing ₹50,000 to SSY, ₹1,20,000 to EPF, and ₹30,000 to LIC has overshot the ₹1.5L cap — the SSY deposit gives no additional 80C benefit in this case. Plan the 80C allocation holistically. The SSY deposit itself is always worthwhile for the girl child's future (EEE + high rate), but the 80C tax saving may already be maximised by EPF alone for many salaried parents.</p>"
     }
   ],
   "faq": [
     {
-      "q": "What is Sukanya Samriddhi Yojana (SSY)?",
-      "a": "SSY is a government-backed small savings scheme for the girl child. It offers 8.2% p.a. (Q1 FY 2026-27) with EEE (Exempt-Exempt-Exempt) tax status \u2014 deposits qualify for 80C, interest is tax-free, and maturity is tax-free. Account matures when the girl turns 21. Deposits are made for 15 years."
+      "q": "What is the current SSY interest rate in 2026?",
+      "a": "As of Q1 FY 2026-27, the SSY rate is approximately 8.2% p.a. The Ministry of Finance revises small-savings rates quarterly (April 1, July 1, October 1, January 1). Verify the current quarter's rate at nsiindia.gov.in before making deposit decisions — rates can change each quarter. The SSY rate has historically been the highest among all small-savings schemes and has ranged from 7.6% to 9.2% since the scheme launched in January 2015."
     },
     {
-      "q": "When can SSY funds be withdrawn?",
-      "a": "50% can be withdrawn after the girl turns 18 (for higher education/marriage). Full withdrawal on maturity (age 21) or on marriage after age 18. Premature closure only on account holder's death, life-threatening illness, or if girl becomes non-resident."
+      "q": "When does an SSY account mature — at age 21 or after 21 years?",
+      "a": "An SSY account matures 21 years from the date the account was opened — not 21 years from the daughter's birth. If you open an account when the girl is 5 years old, it matures when she is 26 (21 years later). Deposits are made only for the first 15 years from account opening; after that, the account earns interest without fresh deposits for 6 more years until maturity. Plan around the account opening date, not the daughter's age."
     },
     {
-      "q": "Can a family open more than one SSY account?",
-      "a": "A family can open one account per girl child, maximum 2 accounts per family (3 in case of twins/triplets at second birth). Only biological or legally adopted daughters qualify. Grandparents cannot open accounts."
+      "q": "Can I withdraw SSY money before the 21-year maturity?",
+      "a": "Yes, in two ways. (1) Partial withdrawal: up to 50% of the previous year's balance is allowed after the girl turns 18 (or passes Class 10, whichever is earlier), for higher education expenses — proof of admission required. (2) Premature closure: allowed if the girl child passes away, is diagnosed with a life-threatening disease, the operating guardian dies, or the girl marries after turning 18 (application within 1 month before or 3 months after the wedding). Premature closure for financial difficulty is not permitted under SSY rules."
     },
     {
-      "q": "Is the SSY Calculator free?",
-      "a": "Yes, the SSY Calculator on CalcPhi is completely free with no registration required."
+      "q": "Can we open SSY for two daughters?",
+      "a": "Yes. One SSY account per girl child is allowed, and a family can have a maximum of two accounts (for two daughters). A third account is permitted only when the second birth results in twins or triplets — medical proof is required. Grandparents cannot open SSY accounts; only natural or legal guardians can. The annual deposit limit of ₹1.5 lakh applies per account (per girl child), not per family — each daughter's account has its own ₹1.5L ceiling."
     },
     {
-      "q": "Are my inputs stored?",
-      "a": "No. All calculations run in your browser. We do not store any financial data."
+      "q": "Does SSY qualify for Section 80C deduction?",
+      "a": "Yes. Annual SSY deposits (up to ₹1.5 lakh per account) qualify for Section 80C deduction under the old tax regime. This deduction is within the combined ₹1.5L cap shared with EPF, PPF, ELSS, LIC premium, and NSC — if your EPF alone already exceeds ₹1.5L, additional SSY deposits give no further 80C benefit. Under the new tax regime, 80C deductions are not available, but SSY interest and maturity remain tax-free (EEE) regardless of which ITR regime you file under."
     },
     {
-      "q": "Can I use the SSY Calculator on mobile?",
-      "a": "Yes. CalcPhi is fully mobile-optimised and works on all modern smartphones."
-    }
-  ],
-  "examples": [
-    {
-      "heading": "\u20b950,000/year deposit for daughter aged 3",
-      "text": "Depositing \u20b950,000/year in SSY for a 3-year-old daughter at 8.2% p.a. for 15 years (total \u20b97.5 lakh invested) yields approximately \u20b922.7 lakh at maturity when she turns 21. Interest of \u20b915.2 lakh is entirely tax-free."
+      "q": "What is the minimum and maximum SSY deposit?",
+      "a": "Minimum: ₹250 per financial year. If the minimum is not deposited in any year, the account becomes 'defaulted' and attracts a ₹50 annual penalty — pay the penalty plus the minimum ₹250 to regularise. Maximum: ₹1.5 lakh per financial year per account. Deposits above ₹1.5L earn no interest on the excess. You can deposit in a single lump sum or multiple instalments (no fixed instalment frequency) as long as the total stays within ₹1.5L. Deposits must stop after 15 years from account opening — the account then earns interest silently until 21-year maturity."
     },
     {
-      "heading": "Maximum deposit \u2014 \u20b91.5 lakh/year",
-      "text": "Maximum annual deposit of \u20b91.5 lakh for 15 years (total \u20b922.5 lakh) at 8.2% grows to approximately \u20b968.1 lakh at maturity \u2014 all tax-free. This is among the best tax-free investment returns available."
+      "q": "Is SSY better than PPF for a girl child?",
+      "a": "For a girl child's savings, SSY is generally superior: (1) Rate is typically higher — SSY ~8.2% vs PPF 7.1% as of Q1 FY 2026-27. (2) Both have EEE status and ₹1.5L annual limit with 80C deduction. (3) SSY has a purpose-lock (girl child education/marriage) and 21-year maturity — PPF has a 15-year maturity with more flexible partial withdrawals. (4) SSY's higher rate compounds over 21 years for substantially larger corpus. Trade-off: PPF is more flexible (any individual can hold one, partial withdrawals from year 7, extendable at maturity). SSY is purpose-built with higher returns but less access. For a daughter under 10, SSY at higher rate beats PPF on corpus — but also open a PPF for your own retirement separately."
+    },
+    {
+      "q": "What documents are needed to open an SSY account?",
+      "a": "Required documents: (1) Birth certificate of the girl child — mandatory proof that she is below 10 years. (2) Identity and address proof of the parent/guardian opening the account — Aadhaar and PAN are typically required. (3) Photograph of the parent/guardian. For twins/triplets (third account): a certificate from a medical authority confirming multiple birth. The account can be opened at any post office or authorised bank. After opening, ensure the account is linked to a mobile number and check that the passbook shows the account start date correctly — this date determines the 15-year deposit period and 21-year maturity date."
     }
   ],
   "related": [
     {
       "title": "PPF Calculator",
-      "url": "/india/ppf-calculator/"
+      "url": "/india/ppf-calculator/",
+      "desc": "Compare SSY with PPF — both EEE but different rates and access rules"
     },
     {
       "title": "Section 80C Calculator",
-      "url": "/india/section-80c-calculator/"
+      "url": "/india/section-80c-calculator/",
+      "desc": "Plan how SSY fits within your total ₹1.5L annual 80C deduction"
+    },
+    {
+      "title": "Income Tax Calculator",
+      "url": "/india/income-tax-calculator/",
+      "desc": "Calculate the 80C tax saving from your SSY deposits at your marginal rate"
     }
   ]
 }

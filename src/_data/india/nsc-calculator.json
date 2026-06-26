@@ -2,7 +2,7 @@
   "id": "nsc-calculator",
   "schema": {
     "appName": "NSC Calculator — National Savings Certificate",
-    "appDescription": "Calculate NSC maturity value for 5-year NSC at current rate of 7.7% p.a. Compounded annually, qualifies for Section 80C deduction."
+    "appDescription": "Calculate NSC maturity value. As of Q1 FY 2026-27 the rate is approximately 7.7% — verify current quarter at nsiindia.gov.in. 5-year lock-in, 80C on principal and reinvested interest."
   },
   "inputs": [
     {
@@ -21,7 +21,7 @@
       "max": 10,
       "step": 0.1,
       "value": 7.7,
-      "hint": "Current NSC rate: 7.7% (Q1 FY 2026-27)"
+      "hint": "~7.7% as of Q1 FY 2026-27 — verify at nsiindia.gov.in"
     }
   ],
   "outputs": [
@@ -41,70 +41,93 @@
   ],
   "howToSteps": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the NSC Calculator. All inputs have smart defaults."
+      "name": "Enter investment amount",
+      "text": "Enter the lump sum amount you plan to invest in NSC. There is no maximum limit — you can invest any amount in multiples of ₹1,000. Each NSC purchase is a separate certificate with its own 5-year maturity date."
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time as you type — no submit button needed."
+      "name": "Verify the current NSC rate",
+      "text": "The rate (~7.7% for Q1 FY 2026-27) is pre-filled. Small-savings rates are revised quarterly by the Ministry of Finance — verify the rate applicable at the time of purchase at nsiindia.gov.in. The rate printed on your NSC certificate at purchase is locked for that certificate."
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown table to see how your numbers change over time."
+      "name": "Plan the 80C deductions across 5 years",
+      "text": "The principal qualifies for 80C in Year 1. Years 1–4 interest is deemed reinvested and also qualifies for 80C. Only Year 5 interest is taxable. Factor all four 80C-eligible interest tranches into your deduction planning."
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust the inputs to compare different scenarios and find the best option."
+      "name": "Compare with PPF and bank FDs",
+      "text": "NSC offers a higher rate than PPF but interest is taxable (with partial 80C offset via reinvestment). Bank FDs offer similar rates but are fully taxable. Use the FD Calculator and PPF Calculator to compare effective post-tax returns at your slab."
+    }
+  ],
+  "articleSections": [
+    {
+      "id": "nsc-how-it-works",
+      "heading": "How NSC Compounding and Tax Work — Annual Accrual, the 80C Reinvestment Rule, and Year-5 Taxability",
+      "body": "<p>NSC uses annual compounding — interest is computed at the end of each year and added to the principal balance, which then earns interest in the next year. No interest is paid out at any point until maturity: the full accumulated amount (principal + 5 years of compounded interest) is paid in a single lump sum when the NSC matures at 5 years. There is no interim cashflow, making NSC a pure wealth-accumulation instrument.</p><p><strong>Interest growth on ₹1 lakh at 7.7% (verify rate at nsiindia.gov.in):</strong></p><table><thead><tr><th>Year</th><th>Interest Accrued (₹)</th><th>Cumulative Balance (₹)</th><th>80C eligible?</th></tr></thead><tbody><tr><td>Year 1</td><td>7,700</td><td>1,07,700</td><td>₹7,700 deemed reinvested — 80C in Year 2</td></tr><tr><td>Year 2</td><td>8,293</td><td>1,15,993</td><td>₹8,293 deemed reinvested — 80C in Year 3</td></tr><tr><td>Year 3</td><td>8,932</td><td>1,24,925</td><td>₹8,932 deemed reinvested — 80C in Year 4</td></tr><tr><td>Year 4</td><td>9,619</td><td>1,34,544</td><td>₹9,619 deemed reinvested — 80C in Year 5</td></tr><tr><td>Year 5</td><td>10,360</td><td>1,44,904</td><td>₹10,360 taxable as income from other sources</td></tr></tbody></table><p><strong>The 80C reinvestment rule explained:</strong> The Income Tax Act treats each year's accrued NSC interest (Years 1–4) as simultaneously 'received' and 'reinvested' in NSC. This means: (1) you must include the interest as income from other sources, and (2) you may claim a fresh 80C deduction for the same amount as investment in NSC. The net tax effect is zero for Years 1–4 if you have 80C headroom — the income and deduction cancel out. Only Year 5 interest (₹10,360 on ₹1L at 7.7%) is genuinely taxable with no offsetting 80C deduction. For a 30% bracket investor: net Year-5 tax = ₹10,360 × 31.2% (with cess) ≈ ₹3,232 on ₹1L invested. This makes NSC's effective post-tax return notably better than a straightforward taxable-instrument comparison at 7.7% suggests.</p><p><strong>Rate lock on purchase:</strong> Unlike SSY or SCSS (where future rate changes affect you), the NSC interest rate is fixed at the rate prevailing on the date of purchase and applies for the full 5-year tenure of that certificate. Each NSC certificate purchased at different times carries the rate at that purchase date. This rate lock is a significant feature: NSC purchased at 7.7% will earn 7.7% for exactly 5 years regardless of quarterly revisions — the only NSC affected by future rate changes are newly purchased certificates.</p>"
+    },
+    {
+      "id": "nsc-scenarios",
+      "heading": "Three NSC Scenarios — Annual Ladder, NSC vs PPF Comparison, and Loan Collateral Use",
+      "body": "<h3>Scenario 1: Mohan builds a ₹2 lakh annual NSC ladder for 80C maximisation</h3><p>Mohan invests ₹1 lakh in NSC each April for 5 consecutive years. Year 1 NSC: qualifies for ₹1L 80C deduction in Year 1. In Year 2: the ₹7,700 interest on the Year-1 NSC is deemed reinvested → additional ₹7,700 80C claim. Mohan also invests fresh ₹1L NSC in Year 2. His total Year-2 80C from NSC alone: ₹1,07,700. This can exceed the ₹1.5L cap when combined with EPF — plan accordingly. By Year 5, all 5 NSC certificates are maturing sequentially, each delivering the full compounded amount. Mohan's strategy creates a rolling income stream and maximises the 80C reinvestment benefit across 5 years.</p><h3>Scenario 2: Nalini compares NSC vs PPF for a 5-year horizon</h3><p>Nalini wants to invest ₹5 lakhs for exactly 5 years. Two options: NSC at approximately 7.7% (verify at nsiindia.gov.in) or PPF at 7.1%.</p><p><strong>NSC at 7.7%:</strong> ₹5L matures to approximately ₹7,24,520 in 5 years. Interest: ₹2,24,520. Year 5 interest only (approximately ₹52,000) is taxable. At 20% slab: tax ≈ ₹10,400. Net gain ≈ ₹2,14,120.</p><p><strong>PPF at 7.1% for 5 years:</strong> PPF has a 15-year minimum — Nalini cannot exit PPF at exactly 5 years except for limited premature closure reasons. Partial withdrawal from PPF is allowed only after 6 complete years, and full closure before 15 years is restricted. PPF does not match a clean 5-year investment horizon. NSC wins on both rate and liquidity for a clean 5-year goal. If the horizon is 15+ years, PPF's full EEE status and higher compounding duration make it superior.</p><h3>Scenario 3: Vikram pledges ₹3 lakh NSC as collateral for a business overdraft</h3><p>Vikram holds three ₹1 lakh NSC certificates (Year 2 into their 5-year tenure). He needs short-term working capital and pledges all three as collateral for a bank overdraft. Standard terms: bank offers 85–90% of face value as loan (₹2.55–2.70 lakhs). The NSC certificates are transferred to the bank's name as security. Interest on the NSC continues to accrue — Vikram still owns the underlying investment and its 80C benefits apply to him. When the NSC matures, the bank uses the proceeds to settle the overdraft, and the balance is returned to Vikram. The cost: interest on the overdraft (~10–12%) versus the NSC return (7.7%) — net cost approximately 2–4% per annum on the borrowed amount. This is often more efficient than breaking a fixed deposit early (which attracts a penalty) or liquidating equity investments.</p>"
+    },
+    {
+      "id": "nsc-rules",
+      "heading": "NSC Rules — Purchase, Premature Closure, Transfer, and the Income Tax Filing Requirement",
+      "body": "<p><strong>Where to buy:</strong> NSC is available at all head post offices and sub post offices. Select authorised banks also issue NSC in dematerialised (demat) form. Minimum purchase: ₹1,000 (in multiples of ₹1,000). No maximum limit. NSC is issued in the investor's own name, in joint names (up to 2 holders, 80C available to both), or in the name of a minor (with a guardian). PAN is required for purchases above ₹50,000.</p><p><strong>Rate lock on purchase date:</strong> The NSC rate at the time of purchase is fixed for the full 5-year tenure. Quarterly rate revisions by the Ministry of Finance apply only to new NSC purchases, not existing certificates. If you purchased NSC at 7.7% and the rate is revised to 7.5% next quarter, your certificate continues to earn 7.7% until maturity.</p><p><strong>Premature closure:</strong> NSC cannot be encashed before 5 years except on (1) death of the certificate holder (paid to nominee/legal heir at face value plus accrued interest), (2) forfeiture by a pledgee (court order), or (3) order of a court. There is no premature closure for financial difficulty — unlike bank FDs which allow early closure with an interest penalty. This illiquidity is the main trade-off for the higher rate and 80C benefits.</p><p><strong>ITR filing requirement:</strong> Even though Years 1–4 NSC interest is offset by 80C deduction, you must disclose both the interest income and the 80C deduction in your ITR each year. The net tax effect may be zero, but non-disclosure creates a compliance gap that can attract a notice from the IT department. Include NSC interest under Income from Other Sources and the corresponding 80C reinvestment in Schedule 80C. Year 5 interest (no offsetting deduction) must be declared and tax paid before the due date.</p><p><strong>Transfer and nomination:</strong> NSC can be transferred from one person to another only in specific cases: on death of the holder (to nominee/heir), by court order, or on pledging to a financial institution. NSC cannot be transferred as a gift between living persons (unlike FDs). Nomination is available and should be recorded at the post office at the time of purchase or during the 5-year tenure.</p>"
+    },
+    {
+      "id": "nsc-mistakes",
+      "heading": "NSC Planning Mistakes — Ignoring 80C Reinvestment, Confusing Rate Lock, Missing ITR Disclosure",
+      "body": "<p><strong>Not claiming the 80C deduction on reinvested interest in Years 2–5.</strong> Many NSC investors claim 80C only in the year of purchase (Year 1) and miss the deductions on Years 1–4 accrued interest in subsequent years. On ₹1 lakh NSC at 7.7%: the missed 80C deductions on ₹7,700 + ₹8,293 + ₹8,932 + ₹9,619 = ₹34,544 over 4 years translate to approximately ₹10,700 in missed tax savings at a 30% bracket (with cess). This is money left on the table without any additional investment required.</p><p><strong>Assuming NSC rates change after you've bought the certificate.</strong> NSC rate is locked at purchase. If you bought at 7.7% and the rate drops to 7.0% next quarter, your certificate still earns 7.7% for the full 5 years. Conversely, if rates rise to 8%, your certificate continues at 7.7%. This makes NSC useful for locking in rates when you believe rates will fall — but less attractive when rates are expected to rise. Each certificate is independent: staggering purchases across quarters locks different rates on different certificates.</p><p><strong>Not declaring NSC interest in ITR for Years 1–4.</strong> NSC accrued interest must be declared as income from other sources in each year it accrues, even though it is not physically received until maturity. Non-declaration creates a mismatch between your ITR income and any AIS/Form 26AS data the IT department may have, potentially triggering a Section 143(1) notice. The income and offsetting 80C deduction cancel each other out (if you have headroom), but both must be declared.</p><p><strong>Treating NSC and PPF as interchangeable 5-year instruments.</strong> PPF has a 15-year mandatory lock-in — it is not a 5-year instrument. NSC at 5 years is the correct comparison for a 5-year fixed-income goal. However, for long-term goals (15+ years), PPF's full EEE status (all interest tax-free, not just Years 1–4) compounds to a substantially higher post-tax return than NSC, particularly for investors in the 20% or 30% bracket.</p>"
     }
   ],
   "faq": [
     {
-      "q": "What is NSC and what is its current interest rate?",
-      "a": "NSC (National Savings Certificate) is a post office saving scheme with a 5-year fixed tenure. Current rate for Q1 FY 2026-27 is 7.7% p.a. compounded annually. Available at post offices and select banks. Qualifies for Section 80C deduction."
+      "q": "What is the current NSC interest rate in 2026?",
+      "a": "As of Q1 FY 2026-27, the NSC rate is approximately 7.7% p.a. The Ministry of Finance revises small-savings rates quarterly — verify the current quarter's rate at nsiindia.gov.in before purchasing. The rate printed on your NSC certificate at the time of purchase is fixed for the full 5-year tenure of that certificate, regardless of future quarterly revisions. Only new NSC purchases after a rate change reflect the new rate."
     },
     {
-      "q": "Is NSC interest taxable?",
-      "a": "NSC interest is taxable but treated uniquely — interest for years 1–4 is deemed reinvested and qualifies for 80C deduction each year (within the ₹1.5 lakh limit). Only the final year's interest (not reinvested) is taxable in year 5."
+      "q": "How is NSC interest taxed — is it fully taxable every year?",
+      "a": "NSC interest has a two-part tax treatment. Years 1–4 interest is deemed reinvested in NSC under Section 80C — this means you declare the interest as income from other sources AND claim the same amount as a fresh 80C deduction in the next year. Net effect: zero tax on Years 1–4 interest if you have 80C headroom. Year 5 interest (the final year's accrual) is taxable with no offsetting deduction. For ₹1L at 7.7%, only approximately ₹10,360 (Year-5 interest) is actually taxable — not the full ₹44,904 of total interest."
     },
     {
-      "q": "Can NSC be used as loan collateral?",
-      "a": "Yes. NSC certificates can be pledged with banks and NBFCs as loan collateral. Banks typically offer 85–90% loan-to-value on NSC. They can be transferred to another person after 1 year on payment of a small fee."
+      "q": "Is there a maximum investment limit for NSC?",
+      "a": "No. NSC has no maximum investment limit. You can invest any amount in multiples of ₹1,000. However, the Section 80C deduction on the NSC principal is capped at ₹1.5 lakh per financial year (shared with other 80C instruments like EPF, PPF, ELSS, LIC premium). Investments above ₹1.5L still earn the NSC return but give no additional 80C deduction beyond the cap. The 80C reinvestment benefit on accrued interest (Years 1–4) is over and above the cap only if you have remaining 80C headroom."
     },
     {
-      "q": "Is the NSC Calculator free?",
-      "a": "Yes, the NSC Calculator on CalcPhi is completely free with no registration required."
+      "q": "Can NSC be encashed before 5 years?",
+      "a": "No. NSC cannot be premature-encashed before the 5-year maturity except on death of the certificate holder (paid to nominee/legal heir), forfeiture by a pledgee (bank as collateral), or court order. Unlike FDs, there is no early-exit option with an interest penalty. This complete illiquidity for 5 years is the primary trade-off for NSC's higher rate and 80C reinvestment benefit. If you may need access within 5 years, NSC is not appropriate — consider a bank FD or liquid mutual fund instead."
     },
     {
-      "q": "Are my inputs stored?",
-      "a": "No. All calculations run in your browser. We do not store any financial data."
+      "q": "Can NSC be pledged as collateral for a loan?",
+      "a": "Yes. NSC certificates can be pledged with banks, co-operative societies, and other financial institutions as security for loans. The pledgee's name is endorsed on the certificate with post-office approval. Typical loan-to-value: 85–90% of face value. Interest on the NSC continues to accrue to the certificate holder during the pledge period. 80C deductions on reinvested interest continue to be available to the original holder. The pledge does not transfer ownership — only a security interest."
     },
     {
-      "q": "Can I use the NSC Calculator on mobile?",
-      "a": "Yes. CalcPhi is fully mobile-optimised and works on all modern smartphones."
-    }
-  ],
-  "examples": [
-    {
-      "heading": "₹1 lakh NSC at 7.7% for 5 years",
-      "text": "₹1 lakh invested in NSC at 7.7% p.a. grows to ₹1,44,903 at maturity. Interest earned: ₹44,903. Annual interest accruals (years 1–4) are reinvested and qualify for 80C deduction, reducing the effective tax burden significantly."
+      "q": "How does NSC compare to a 5-year bank FD?",
+      "a": "NSC vs 5-year bank FD: (1) Rate: NSC rate is government-set (~7.7% as of Q1 FY 2026-27 — verify at nsiindia.gov.in) vs bank FDs which vary by bank (typically 6.5–7.5% at major banks; small finance banks offer higher). (2) Tax: NSC allows 80C deduction on principal and reinvested interest (Years 1–4); FD interest is fully taxable with TDS deducted annually. (3) Exit: NSC cannot be exited before 5 years; FD can be broken early with a penalty (typically 1% interest loss). (4) Compounding: NSC uses annual compounding; FDs typically compound quarterly. For a 30% bracket investor who cannot exit early: NSC is almost always superior to a bank FD at similar nominal rates due to the 80C offset reducing effective tax."
     },
     {
-      "heading": "NSC vs PPF — 5-year comparison",
-      "text": "₹1 lakh in NSC (7.7%) = ₹1,44,903 at 5 years. ₹1 lakh in PPF (7.1%) = ₹1,41,478. NSC gives higher nominal return but PPF interest is fully tax-free while NSC interest is taxable. NSC wins if you're in the 5% or nil tax bracket."
+      "q": "Does NSC qualify for Section 80C deduction?",
+      "a": "Yes. The NSC principal investment qualifies for Section 80C deduction up to ₹1.5 lakh per financial year under the old tax regime. Additionally, interest accrued in Years 1–4 is deemed reinvested and qualifies for a fresh 80C deduction in the subsequent year, within the same ₹1.5L annual cap. Under the new tax regime, 80C deductions are not available — NSC interest is taxable without offset in all 5 years. The 80C benefit makes NSC attractive primarily for old-regime taxpayers with available 80C headroom."
+    },
+    {
+      "q": "Can I buy NSC in a minor's name?",
+      "a": "Yes. NSC can be purchased in the name of a minor, with the guardian signing as operator. However, Section 80C deduction on the minor's NSC is available to the parent whose income the minor's income is clubbed with under Section 64(1A). The guardian's own ₹1.5L 80C cap applies. For a minor who has no income of their own, the parent's PAN is used for the NSC purchase and the 80C deduction follows accordingly. SSY is typically more tax-efficient for a girl child than NSC in a minor's name, given SSY's full EEE status versus NSC's partial taxability."
     }
   ],
   "related": [
     {
       "title": "KVP Calculator",
-      "url": "/india/kvp-calculator/"
+      "url": "/india/kvp-calculator/",
+      "desc": "Compare NSC with KVP — both are post-office certificates but with different tenure, 80C, and tax rules"
     },
     {
       "title": "PPF Calculator",
-      "url": "/india/ppf-calculator/"
+      "url": "/india/ppf-calculator/",
+      "desc": "Compare NSC's taxable return vs PPF's fully tax-free EEE return over longer horizons"
     },
     {
       "title": "Section 80C Calculator",
-      "url": "/india/section-80c-calculator/"
+      "url": "/india/section-80c-calculator/",
+      "desc": "Plan total 80C utilisation including NSC principal and reinvested interest"
     }
   ]
 }

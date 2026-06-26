@@ -1,18 +1,18 @@
 {
   "id": "scss-calculator",
   "schema": {
-    "appName": "SCSS Calculator \u2014 Senior Citizen Savings Scheme",
-    "appDescription": "Calculate SCSS quarterly interest income and maturity value. Current rate 8.2% p.a. Available for senior citizens aged 60+. Maximum \u20b930 lakh deposit."
+    "appName": "SCSS Calculator — Senior Citizens Savings Scheme",
+    "appDescription": "Calculate SCSS quarterly interest income and maturity value. As of Q1 FY 2026-27 the rate is approximately 8.2% — verify at nsiindia.gov.in. ₹30L cap per individual, 5+3 year tenure."
   },
   "inputs": [
     {
       "id": "scss-principal",
-      "label": "Deposit Amount (\u20b9)",
+      "label": "Deposit Amount (₹)",
       "min": 1000,
       "max": 30000000,
       "step": 1000,
       "value": 1500000,
-      "hint": "Maximum \u20b930 lakh (per individual)"
+      "hint": "Maximum ₹30 lakh per individual — verify current cap at nsiindia.gov.in"
     },
     {
       "id": "scss-rate",
@@ -21,7 +21,7 @@
       "max": 10,
       "step": 0.1,
       "value": 8.2,
-      "hint": "Current SCSS rate: 8.2% (Q1 FY 2026-27)"
+      "hint": "~8.2% as of Q1 FY 2026-27 — verify at nsiindia.gov.in"
     },
     {
       "id": "scss-years",
@@ -54,62 +54,93 @@
   ],
   "howToSteps": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the SCSS Calculator. All inputs have smart defaults."
+      "name": "Enter deposit amount",
+      "text": "Enter the amount you plan to deposit. Maximum is ₹30 lakh per individual — verify the current cap at nsiindia.gov.in. A couple can each deposit ₹30L in separate accounts for a combined ₹60L family deployment."
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time as you type \u2014 no submit button needed."
+      "name": "Verify the current SCSS rate",
+      "text": "The rate (~8.2% for Q1 FY 2026-27) is pre-filled. The Ministry of Finance revises small-savings rates quarterly. Verify at nsiindia.gov.in before depositing — the rate at time of deposit is fixed for the tenure of that account."
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown table to see how your numbers change over time."
+      "name": "Read quarterly payout",
+      "text": "SCSS pays interest quarterly — on the first working day of April, July, October, January. This is your regular retirement income. The calculator shows quarterly, annual, and 5-year total interest."
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust the inputs to compare different scenarios and find the best option."
+      "name": "Plan TDS and Form 15H",
+      "text": "If annual SCSS interest exceeds ₹50,000 (senior citizen TDS threshold), TDS is deducted at 10%. Submit Form 15H at the start of each financial year if your total income is below the basic exemption limit to prevent TDS deduction."
+    }
+  ],
+  "articleSections": [
+    {
+      "id": "scss-how-it-works",
+      "heading": "How SCSS Interest Works — Quarterly Payout Mechanics, Rate Lock, and Extension Terms",
+      "body": "<p>SCSS interest is calculated on the principal deposited and paid out quarterly — it does not compound. The quarterly interest = principal × annual rate ÷ 4. At approximately 8.2% on ₹15 lakhs: quarterly interest = ₹15,00,000 × 8.2% ÷ 4 = ₹30,750. This is credited to the linked savings account on the first working day of April, July, October, and January every year. The principal remains intact throughout the 5-year tenure and is returned in full at maturity.</p><p><strong>Rate lock at deposit:</strong> The SCSS rate applicable at the time of opening the account is fixed for the full 5-year tenure (and for a further 3 years if extended). This is a critical feature: if you deposit when the rate is at 8.2% and the rate subsequently falls to 7.5%, your account continues to earn 8.2% for the full term. Conversely, if rates rise after your deposit, you do not benefit from the higher rate on the existing account — only a new account would earn the revised rate. This rate lock incentivises opening SCSS accounts when small-savings rates are high.</p><p><strong>The quarterly payout frequency:</strong> Among all government instruments, SCSS is unique in paying interest quarterly. Post office savings accounts pay annually; NSC and KVP pay at maturity; PPF and SSY credit annually but are not paid out. SCSS's quarterly cash flow makes it ideal as the primary income instrument for retirees — it functions like a fixed quarterly salary, providing predictable income without requiring any withdrawal action.</p><p><strong>Extension for 3 years:</strong> Within 1 year of maturity (i.e., in the 5th year, you have 12 months to apply), you can extend the SCSS account for 3 years. The extension earns the rate prevailing at the date of extension — not the original rate. Extension is not automatic; you must apply at the post office or bank. During the extended period, the account earns interest quarterly and can be closed at any time after 1 year of extension (with a 1% interest penalty for closure in the first year of extension).</p><p><strong>Joint accounts:</strong> SCSS can be opened as a joint account with a spouse — the primary holder must qualify (age 60+), and the spouse's age does not matter. However, the entire deposit is credited to the primary holder for tax and ownership purposes. The maximum ₹30L cap applies to the primary holder — a couple each opening their own individual accounts effectively doubles the household deployment.</p>"
+    },
+    {
+      "id": "scss-scenarios",
+      "heading": "Three SCSS Scenarios — Solo Retiree, Retired Couple Maximising Income, and VRS Retiree at 57",
+      "body": "<h3>Scenario 1: Colonel Sharma, age 62, retires with ₹25 lakh corpus — planning regular income</h3><p>Colonel Sharma deposits ₹25 lakhs in SCSS at approximately 8.2% (verify current rate at nsiindia.gov.in). Quarterly interest: ₹25,00,000 × 8.2% ÷ 4 = ₹51,250. Annual interest: ₹2,05,000. Over 5 years: total interest = ₹10,25,000. At maturity: ₹25 lakhs returned. He also claims Section 80C deduction on ₹25L — but 80C cap is ₹1.5L, so he gets ₹1.5L deduction. Tax on interest: annual interest ₹2,05,000 exceeds the ₹50,000 TDS threshold — TDS at 10% is deducted each quarter. He submits Form 15H (if total income including SCSS interest is below ₹3,00,000, the basic exemption for senior citizens aged 60–79) to prevent TDS. Under new regime, he gets no 80C deduction but ₹50,000 standard deduction if he has pension income. Under old regime, he claims 80C ₹1.5L on SCSS deposit.</p><h3>Scenario 2: Rekha and Dinesh, both age 65, each deposit ₹30 lakh in separate SCSS accounts</h3><p>Each account earns approximately 8.2% quarterly. Per account: ₹30,00,000 × 8.2% ÷ 4 = ₹61,500/quarter. Combined quarterly income: ₹1,23,000. Combined annual income: ₹4,92,000. Over 5 years: total interest = ₹24,60,000 — from a ₹60L combined deployment. Each account is independent: each individual's TDS threshold is ₹50,000 interest per year per institution. Rekha's annual SCSS interest (₹2,46,000) from a single account exceeds ₹50,000 — TDS applies. If either's total income (pension + interest + other) is below the applicable exemption limit, they submit Form 15H. The couple strategy effectively doubles the SCSS ceiling — a household cannot exceed ₹30L in a single account but has no constraint on separate accounts. Both can also claim 80C on their respective ₹30L deposits (₹1.5L deduction cap each, under old regime).</p><h3>Scenario 3: Anand, age 57, takes VRS — can he open SCSS?</h3><p>Anand's VRS with a lump sum retirement payment qualifies him for SCSS despite being below 60. Conditions: he must be between 55 and 60 at the time of opening, must have taken VRS or opted for superannuation, and must apply to open SCSS within 1 month of receiving the retirement benefits. The 1-month window is strict — missing it makes Anand ineligible until he turns 60. If Anand retires in March 2026 and receives the lump sum on March 15, he must open SCSS before April 15. He can deposit up to the SCSS maximum (verify ₹30L cap at nsiindia.gov.in) from his VRS proceeds. From age 57, his SCSS account will run for 5 years, maturing when he is 62 — well after he reaches 60, giving him post-60 regular quarterly income.</p>"
+    },
+    {
+      "id": "scss-rules",
+      "heading": "SCSS Eligibility, Deposit Rules, Premature Withdrawal Penalty, and TDS/Form 15H Protocol",
+      "body": "<p><strong>Eligibility in detail:</strong> (1) Indian residents aged 60 and above — no upper age limit. (2) Retired defence personnel aged 50 and above (army, navy, air force, defence civilians in uniform positions — verify exact category at nsiindia.gov.in). (3) Retired government/private sector employees aged 55–59 who have taken VRS or superannuation — must apply within 1 month of receiving retirement benefits. (4) Employees retired on attaining 60 may apply within 1 month of receiving retirement benefits even after turning 60, if the benefits arrive shortly after the retirement date. NRIs, OCI holders, and HUFs are not eligible — SCSS is for resident Indian individuals only.</p><p><strong>Account limits:</strong> Maximum ₹30 lakh per individual (raised from ₹15L effective 1 April 2023 — verify the current cap at nsiindia.gov.in). The deposit must be in multiples of ₹1,000. The deposit amount cannot exceed the retirement benefit amount received (for VRS retirees aged 55–59) or the total proceeds from the retirement event. An individual can open multiple SCSS accounts but the total across all accounts cannot exceed ₹30L. Joint account with spouse is allowed — full ₹30L limit applies to the primary holder (not ₹15L each in a joint account).</p><p><strong>Premature closure penalties:</strong> Closure before 1 year of account opening: no interest paid; any interest already credited is recovered. Closure after 1 year but before 2 years: 1.5% of the principal is deducted as penalty. Closure after 2 years but before 5 years: 1% of the principal is deducted. During the 3-year extension period, closure after 1 year of extension: 1% penalty. These penalties reduce the effective interest earned — factor them in before opening SCSS if there is any chance of needing the capital early.</p><p><strong>TDS and Form 15H:</strong> TDS at 10% applies if total interest paid or credited from all SCSS accounts with an institution in a financial year exceeds ₹50,000 (the senior-citizen threshold under Section 194A). The standard individual TDS threshold (₹40,000) is enhanced to ₹50,000 for senior citizens aged 60+. Form 15H (for senior citizens) — not Form 15G — is the correct form. It must be submitted at the start of each financial year to every institution holding SCSS. If submitted on time, no TDS is deducted. If TDS is deducted, it can be claimed as a refund in the ITR.</p>"
+    },
+    {
+      "id": "scss-mistakes",
+      "heading": "SCSS Planning Mistakes — Exceeding Deposit Cap, Missing Rate Lock Window, Ignoring TDS, and Joint Account Limit Confusion",
+      "body": "<p><strong>Depositing more than the SCSS cap in a single account or across accounts.</strong> The maximum is ₹30 lakh per individual across all SCSS accounts combined (verify at nsiindia.gov.in). Opening two accounts and depositing ₹20L each (total ₹40L) exceeds the cap — the excess ₹10L earns no interest, and the post office may return the excess or leave it without interest. Always declare existing SCSS balances when opening a new account to avoid inadvertent breaching of the limit.</p><p><strong>Not opening SCSS immediately when rates are high.</strong> SCSS rates are locked at the time of deposit for the full 5-year tenure. If the current rate is at a historically high level (8.2% is above the 7-year average), opening SCSS immediately locks in this rate regardless of future reductions. Delaying even one quarter when a rate reduction is likely costs 25–50 basis points on the entire 5-year corpus. The rate-lock feature rewards early action when rates are elevated.</p><p><strong>Not submitting Form 15H at the start of each financial year.</strong> TDS on SCSS interest above ₹50,000/year can only be prevented by proactively submitting Form 15H before the first quarterly interest disbursement of the financial year (i.e., before April's interest credit). Submitting it in May or June after TDS has already been deducted for Q1 means the first quarter's TDS is lost until the ITR refund. Set a calendar reminder for late March each year to submit Form 15H at every institution holding your SCSS account.</p><p><strong>Confusing 80C cap with SCSS deposit amount.</strong> SCSS qualifies for 80C deduction but the deduction is capped at ₹1.5 lakh per financial year regardless of deposit size. A ₹30L SCSS deposit gives only ₹1.5L in 80C deduction — the same as a ₹1.5L EPF contribution. The 80C benefit is marginal relative to the deposit size. The real benefit of SCSS is the guaranteed high rate and regular income, not the 80C deduction (which gets exhausted by EPF for most retirees anyway). Plan SCSS primarily as an income instrument, not a 80C instrument.</p>"
     }
   ],
   "faq": [
     {
-      "q": "Who can open a Senior Citizen Savings Scheme (SCSS) account?",
-      "a": "SCSS is available for Indian citizens aged 60 and above. VRS/superannuation retirees aged 55\u201360 can open within 1 month of receiving retirement benefits. Defence retirees aged 50+ are eligible. NRIs and HUFs are not eligible."
+      "q": "What is the current SCSS interest rate in 2026?",
+      "a": "As of Q1 FY 2026-27, the SCSS rate is approximately 8.2% p.a. The Ministry of Finance revises small-savings rates quarterly — verify the current quarter's rate at nsiindia.gov.in before depositing. The rate at the time of account opening is locked for the 5-year tenure (and the subsequent 3-year extension at the rate applicable at extension time). SCSS consistently carries one of the highest rates among all government-backed schemes."
+    },
+    {
+      "q": "What is the maximum amount I can invest in SCSS?",
+      "a": "The maximum deposit per individual is ₹30 lakh across all SCSS accounts combined (raised from ₹15 lakh effective 1 April 2023 per Union Budget 2023-24 — verify the current cap at nsiindia.gov.in). A couple can each invest ₹30L in separate individual accounts (not joint) for a combined household deployment of ₹60L. A joint account with a spouse has the same ₹30L cap applied to the primary holder — it does not give ₹30L each."
     },
     {
       "q": "Is SCSS interest taxable?",
-      "a": "Yes. SCSS interest is fully taxable as 'income from other sources'. TDS is deducted at 10% if annual interest exceeds \u20b950,000 (senior citizen threshold). You can submit Form 15H if total income is below the taxable limit. SCSS does not offer capital gains benefits."
+      "a": "Yes. SCSS interest is fully taxable as 'income from other sources' at your applicable income tax slab rate. TDS at 10% is deducted if annual interest from SCSS with a single institution exceeds ₹50,000 (the senior citizen Section 194A threshold). Submit Form 15H at the start of each financial year if your total income is below the basic exemption limit to avoid TDS. SCSS does not have capital gains treatment — it is pure interest income. The deposit itself qualifies for 80C deduction up to ₹1.5L under the old tax regime."
+    },
+    {
+      "q": "Can I open SCSS before age 60 after VRS?",
+      "a": "Yes. Retired government and private sector employees aged 55–59 who have taken VRS or superannuation can open SCSS within 1 month of receiving retirement benefits. This 1-month window is strict — missing it makes you ineligible until age 60. Defence retirees aged 50 and above are eligible without the 1-month restriction. All applicants must be Indian residents — NRIs and HUFs are not eligible."
     },
     {
       "q": "Can SCSS be extended after 5 years?",
-      "a": "Yes. SCSS can be extended by 3 years after 5-year maturity by applying within 1 year of maturity. The extended period earns the interest rate applicable on the date of extension. SCSS qualifies for 80C deduction (within \u20b91.5 lakh limit)."
+      "a": "Yes. SCSS can be extended for one additional block of 3 years by applying at the post office or bank within 1 year of maturity (i.e., you have a 12-month window after the 5-year maturity date to apply for extension). The extended period earns the rate prevailing on the date of extension — not the original deposit rate. During extension, interest continues to be paid quarterly. The extended account can be closed at any time after 1 year of extension (premature closure in the first year of extension: 1% penalty)."
     },
     {
-      "q": "Is the SCSS Calculator free?",
-      "a": "Yes, the SCSS Calculator on CalcPhi is completely free with no registration required."
+      "q": "Is SCSS available at banks or only post offices?",
+      "a": "SCSS is available at all head and sub post offices and at authorised commercial banks including SBI, HDFC Bank, ICICI Bank, Axis Bank, Bank of Baroda, Punjab National Bank, Canara Bank, and others. The interest rate is identical regardless of where the account is held — it is set by the Ministry of Finance. Bank branches may process SCSS deposits faster and offer more convenient account management through net banking. Post offices are universally accessible, including in smaller towns and rural areas."
     },
     {
-      "q": "Are my inputs stored?",
-      "a": "No. All calculations run in your browser. We do not store any financial data."
+      "q": "What happens to SCSS interest if I withdraw early?",
+      "a": "Premature closure penalties: (1) Closure before 1 year: no interest paid; any interest already credited is recovered. (2) Closure between 1–2 years: 1.5% of principal deducted. (3) Closure between 2–5 years: 1% of principal deducted. These penalties apply to the principal, not just earned interest — so a ₹20L deposit closed at 18 months loses 1.5% of ₹20L = ₹30,000 in addition to forfeiting interest from the date of closure. Factor in the penalty before opening SCSS if capital may be needed within 5 years."
     },
     {
-      "q": "Can I use the SCSS Calculator on mobile?",
-      "a": "Yes. CalcPhi is fully mobile-optimised and works on all modern smartphones."
-    }
-  ],
-  "examples": [
-    {
-      "heading": "\u20b915 lakh SCSS at 8.2% \u2014 quarterly income",
-      "text": "\u20b915 lakh in SCSS at 8.2% p.a. generates \u20b930,750/quarter (\u20b91,23,000/year). Over 5 years, total interest = \u20b96,15,000. This provides predictable quarterly income for retirement planning. TDS applies if interest exceeds \u20b950,000/year."
-    },
-    {
-      "heading": "Couple maximising SCSS deposits",
-      "text": "A retired couple can each deposit \u20b930 lakh in SCSS (total \u20b960 lakh). At 8.2%, combined quarterly payout = \u20b91,23,000 (\u20b94,92,000/year). Each submit Form 15H if income below taxable limit to avoid TDS."
+      "q": "Should I choose SCSS or a senior citizen bank FD?",
+      "a": "SCSS vs senior citizen bank FD: (1) Rate: SCSS ~8.2% (verify at nsiindia.gov.in) vs senior citizen FD typically 7.5–8% at major banks, with some small finance banks offering up to 9%. (2) Tax: both are fully taxable interest income. (3) TDS threshold: senior citizen FD TDS threshold ₹50,000 (same as SCSS). (4) Exit: FDs allow premature withdrawal with a penalty; SCSS has a defined penalty structure and also allows early exit after 1 year. (5) Safety: SCSS is directly government-guaranteed; bank FDs are insured only up to ₹5L per bank per depositor (DICGC). For deposits above ₹5L, SCSS's direct government guarantee is significantly safer. For amounts up to ₹5L where FD rates exceed SCSS and you need flexibility, a senior citizen FD may be marginally better. Above ₹5L, SCSS's safety advantage is substantial."
     }
   ],
   "related": [
     {
+      "title": "PPF Calculator",
+      "url": "/india/ppf-calculator/",
+      "desc": "Compare SCSS quarterly income with PPF's long-term tax-free accumulation"
+    },
+    {
       "title": "FD Calculator",
-      "url": "/india/fd-calculator/"
+      "url": "/india/fd-calculator/",
+      "desc": "Compare SCSS rate with senior citizen FD rates at major banks"
+    },
+    {
+      "title": "Income Tax Calculator",
+      "url": "/india/income-tax-calculator/",
+      "desc": "Calculate post-tax SCSS interest at your actual slab rate"
     }
   ]
 }

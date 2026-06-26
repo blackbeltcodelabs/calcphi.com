@@ -1,13 +1,13 @@
 {
   "id": "epf-calculator",
   "schema": {
-    "appName": "EPF Calculator \u2014 Employee Provident Fund",
-    "appDescription": "Calculate EPF corpus at retirement. Enter basic salary, years of service, and EPF rate to see total EPF accumulation including employer and employee contributions."
+    "appName": "EPF Calculator India — Employee Provident Fund Corpus",
+    "appDescription": "Calculate EPF corpus at retirement. Enter monthly basic+DA, years to retirement, and EPF interest rate (verify current rate at epfindia.gov.in). Includes employer 3.67% EPF + 8.33% EPS split."
   },
   "inputs": [
     {
       "id": "epf-basic",
-      "label": "Monthly Basic + DA (\u20b9)",
+      "label": "Monthly Basic + DA (₹)",
       "min": 5000,
       "max": 500000,
       "step": 1000,
@@ -29,7 +29,7 @@
       "max": 10,
       "step": 0.1,
       "value": 8.25,
-      "hint": "Current EPF rate: 8.25% p.a."
+      "hint": "~8.25% for FY 2025-26 — verify at epfindia.gov.in"
     }
   ],
   "outputs": [
@@ -53,62 +53,93 @@
   ],
   "howToSteps": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the EPF Calculator. Smart defaults are pre-filled."
+      "name": "Enter monthly Basic + DA",
+      "text": "Enter your monthly basic salary plus dearness allowance — EPF is calculated on this figure, not your gross or CTC. If your basic is ₹30,000 and DA is ₹0, enter ₹30,000."
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time \u2014 no submit button needed."
+      "name": "Verify EPF interest rate",
+      "text": "The current EPF rate (~8.25%) is pre-filled. EPFO announces this annually — verify the rate applicable for the current financial year at epfindia.gov.in before retirement planning decisions."
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown to see numbers over time."
+      "name": "Enter years to retirement",
+      "text": "Enter the number of years remaining until you turn 58 (EPF retirement age), or until you expect to leave employment. The calculator assumes a constant basic salary for simplicity — actual corpus will be higher as salary grows."
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust inputs to compare scenarios and find the best option."
+      "name": "Read the corpus and contributions",
+      "text": "The EPF corpus is only your EPF account balance — it does not include EPS (which funds a monthly pension, not a lump sum). Your actual retirement receipt = EPF corpus + EPS pension from age 58."
+    }
+  ],
+  "articleSections": [
+    {
+      "id": "epf-how-it-works",
+      "heading": "How EPF Interest Is Calculated — Monthly Accrual, Annual Credit, and the EPS Split",
+      "body": "<p>EPF interest is calculated monthly on the closing balance but credited to the account only once a year — on March 31 at the end of each financial year. The formula: monthly interest = (opening balance at start of month + current month's contribution) × (annual EPF rate ÷ 12). Interest is not paid out; it compounds into the EPF balance and itself earns interest in subsequent years.</p><p><strong>The four contribution streams per month:</strong></p><ul><li><strong>Employee EPF (12% of Basic+DA):</strong> Goes entirely to your EPF account. On ₹30,000 basic: ₹3,600/month.</li><li><strong>Employer EPF (3.67% of Basic+DA):</strong> Goes to your EPF account. On ₹30,000: ₹1,101/month.</li><li><strong>Employer EPS (8.33% of Basic+DA, capped at ₹1,250/month):</strong> Goes to the Employee Pension Scheme, not your EPF account. On ₹30,000: ₹1,250 (capped at ₹15,000 wage ceiling, i.e., 8.33% × ₹15,000). This does not grow in your EPF account — it funds the EPS pension you receive from age 58.</li><li><strong>VPF (Voluntary, at employee's election):</strong> Additional % above 12% to EPF account at same rate.</li></ul><p>Total credited to your EPF account per month for ₹30,000 basic: ₹3,600 + ₹1,101 = ₹4,701. The ₹1,250 EPS portion is separate and builds no account balance for you to withdraw.</p><p><strong>Annual interest at 8.25%:</strong> On ₹4,701/month for one year: approximate annual EPF contribution = ₹56,412. Interest earned in Year 1 ≈ ₹56,412 × 8.25% × 0.5 (mid-year average) ≈ ₹2,327. By Year 10 the accumulated balance earns substantially more interest than the year's new contributions — compounding acceleration begins to dominate around the 8–12 year mark.</p><p><strong>EEE status and the ₹2.5 lakh limit:</strong> EPF interest is tax-free under Section 10(12) for employee contributions up to ₹2.5 lakh per year. Interest on employee contributions exceeding ₹2.5L/year is taxable at slab rate from FY 2021-22. Employer contributions up to 12% of basic remain non-taxable. For most salaried employees, the ₹2.5L cap is crossed only above ₹1.74L monthly basic (at 12% contribution). Government employees have a higher threshold of ₹5L.</p>"
+    },
+    {
+      "id": "epf-scenarios",
+      "heading": "Three EPF Scenarios — Career Accumulation, VPF Impact, and the Early Withdrawal Penalty",
+      "body": "<h3>Scenario 1: Suresh, ₹35,000 basic salary, 30 years to retirement</h3><p>Monthly EPF account credit: Employee 12% = ₹4,200 + Employer 3.67% = ₹1,285 = ₹5,485/month. Employer EPS = ₹1,250 (separate, not in EPF account). Annual EPF contribution to account = ₹65,820. At approximately 8.25% for 30 years (assuming constant basic for simplicity): EPF corpus ≈ ₹86 lakhs. Total EPF contributions over 30 years ≈ ₹19.7 lakhs. Interest earned ≈ ₹66 lakhs — the compounding on a 30-year horizon means the interest component is more than three times the contribution. Plus, Suresh receives an EPS pension from age 58 (amount depends on years of service and last wage — EPS pension formula: Pension = (Pensionable salary × years of service) ÷ 70, where pensionable salary is based on the last 60 months average, capped at ₹15,000).</p><h3>Scenario 2: Ananya adds 10% VPF on ₹50,000 basic</h3><p>Mandatory EPF: Employee 12% = ₹6,000 + Employer 3.67% = ₹1,835 = ₹7,835/month to EPF account. Ananya elects 10% VPF = additional ₹5,000/month. Total monthly EPF account deposit: ₹12,835. Annual: ₹1,54,020 — this approaches the ₹2.5L/year threshold above which interest becomes taxable. At 12% + 10% VPF = 22% total contribution rate: her combined annual employee contribution = ₹6,000 × 12 = ₹72,000 + VPF ₹60,000 = ₹1,32,000/year — well below the ₹2.5L taxability threshold. At 8.25% over 25 years: EPF+VPF corpus ≈ ₹1.32 crore versus ₹74 lakhs without VPF. The VPF addition alone adds approximately ₹58 lakhs over 25 years — all tax-free (within the threshold). For risk-free guaranteed returns, VPF is often the most efficient instrument for this salary bracket.</p><h3>Scenario 3: Ramesh withdraws EPF after 3 years — the tax consequence</h3><p>Ramesh joins a startup, contributes to EPF for 3 years, then resigns and withdraws his EPF. His EPF balance: ₹2.5 lakhs. Since he has fewer than 5 years of continuous service, the withdrawal is taxable: (1) The employer's EPF contribution (3.67%) that was exempt from tax becomes taxable in the year of withdrawal. (2) Interest earned on the entire EPF balance is added to income. (3) TDS is deducted at 10% if the withdrawal exceeds ₹50,000 (or 30% if PAN is not provided). Ramesh's tax on the ₹2.5L withdrawal at 20% slab: approximately ₹50,000 in additional tax. Alternatively, Ramesh could transfer the EPF to his new employer using the UAN — the 5-year continuous service test counts aggregate service if transferred, not just the tenure at one employer. Transferring preserves EEE status.</p>"
+    },
+    {
+      "id": "epf-withdrawal-rules",
+      "heading": "EPF Withdrawal Rules, UAN Portability, and the EPS Pension Structure",
+      "body": "<p><strong>Full withdrawal conditions:</strong> EPF can be fully withdrawn only on retirement (age 58 or above), on unemployment for 2+ months after resignation (90-day condition was removed — verify current waiting period at epfindia.gov.in), or on permanent disability. Full withdrawal is tax-free if 5 years of continuous service have been completed.</p><p><strong>Partial withdrawals (advances):</strong> EPF allows partial withdrawals for specific purposes — no repayment required. Key provisions (verify current limits at epfindia.gov.in as the EPFO periodically revises advance rules): house purchase (up to 90% after 5 years' membership), medical emergency for self or family (up to 6 months' basic+DA or employee's EPF share, whichever is lower), marriage/education of self or children (up to 50% of employee's share after 7 years), natural calamity or COVID-like situations (as notified separately). Each purpose has specific documentation requirements and limits.</p><p><strong>UAN (Universal Account Number):</strong> EPFO assigns one UAN to each employee for life. When changing employers, the EPF account transfers to the new employer's trust or the EPFO's trust under the same UAN — no new account is created. Continuous service for the 5-year tax-free withdrawal test is counted cumulatively across all UAN transfers, not at each individual employer. Always link Aadhaar and PAN to your UAN — without linking, online services and withdrawals may be blocked.</p><p><strong>EPS pension — what the 8.33% buys:</strong> The EPS builds a separate pension fund, not a withdrawable corpus. To receive a monthly pension from EPS, an employee must have at least 10 years of qualifying service. The monthly pension formula: Pensionable Salary × Pensionable Service ÷ 70, where Pensionable Salary = average of last 60 months' salary (capped at ₹15,000). With 30 years of service at the ₹15,000 ceiling: pension = ₹15,000 × 30 ÷ 70 = ₹6,429/month. If service is less than 10 years, EPS accumulation is returned as a lump sum (Scheme Certificate or withdrawal) — no monthly pension. Employees who joined before 2014 and had salaries above ₹15,000 may have exercised the 'Higher EPS' option under the Supreme Court's 2022 ruling — this is a separate complex calculation; verify your EPS election status with EPFO.</p>"
+    },
+    {
+      "id": "epf-mistakes",
+      "heading": "EPF Planning Mistakes — Premature Withdrawal, Ignoring EPS, Missing VPF, and Inaction on UAN",
+      "body": "<p><strong>Withdrawing EPF on every job change instead of transferring.</strong> This is the most destructive EPF mistake. Each premature withdrawal before 5 years creates a tax event, resets the 5-year clock for EEE qualification, and permanently destroys the compounding on the withdrawn amount. A ₹3 lakh EPF balance withdrawn at age 28 costs not just the ₹3L — at 8.25% for 30 remaining working years, that ₹3L would have become approximately ₹35 lakhs. Transfer via UAN instead; the process takes 3–7 working days online through the EPFO member portal.</p><p><strong>Confusing EPS with EPF and expecting a corpus from EPS.</strong> Many employees assume their full EPF balance is what the employer's 12% has built — they discover at retirement that the employer's 8.33% (the majority of the employer's contribution) went to EPS, not EPF, and is not accessible as a lump sum. The EPS corpus is converted to a monthly pension after age 58, payable only with 10+ years of service. Understanding this split changes retirement planning: EPF alone is not sufficient for a lump-sum retirement corpus for many employees because the employer's full 12% is not in the EPF account.</p><p><strong>Not considering VPF as the best risk-free savings vehicle.</strong> VPF earns the same rate as EPF (currently ~8.25%), has EEE status up to ₹2.5L/year total employee contribution, and is fully government-backed. Compared to PPF (7.1%, EEE), VPF offers a higher guaranteed return for the same tax treatment. The trade-off: VPF is illiquid until retirement (no 15-year maturity option, unlike PPF). For employees in the accumulation phase who do not need liquidity, VPF is the superior debt instrument — but very few employees elect it because it is not widely communicated by HR departments.</p><p><strong>Assuming EPF interest is always fully tax-free above ₹2.5 lakh.</strong> Since FY 2021-22, interest on employee contributions above ₹2.5L/year (₹5L for government employees) is taxable. For a ₹2 lakh basic salary with 12% mandatory EPF: annual employee contribution = ₹2,88,000 — already above the threshold. Interest on the ₹38,000 excess contribution is taxable at slab rate. Employees at this income level should recalculate the effective after-tax return on VPF contributions that push them above ₹2.5L before optimising toward VPF over other instruments.</p>"
     }
   ],
   "faq": [
     {
       "q": "What is the EPF interest rate for FY 2025-26?",
-      "a": "The EPFO board has recommended 8.25% p.a. for FY 2025-26, same as FY 2024-25. EPF interest is calculated monthly but credited annually. Interest on employee share up to \u20b92.5 lakh contribution/year is tax-free; above \u20b92.5 lakh it's taxable."
+      "a": "The EPF interest rate is approximately 8.25% p.a. for FY 2025-26, same as the previous year. EPFO's Central Board of Trustees recommends the rate annually, which is then ratified by the Ministry of Labour and Finance. Verify the current rate at epfindia.gov.in before making contribution decisions, as this is set annually and can change. Interest is calculated monthly but credited to EPF accounts only once a year, on March 31."
     },
     {
-      "q": "How much does the employer contribute to EPF?",
-      "a": "The employer contributes 12% of basic+DA. Of this: 3.67% goes to EPF (employee account) and 8.33% goes to EPS (Employee Pension Scheme). For basic salaries above \u20b915,000, the EPS contribution is capped at 8.33% of \u20b915,000 = \u20b91,250/month."
+      "q": "How much of the employer's 12% actually goes into my EPF account?",
+      "a": "Only 3.67% of basic+DA from the employer's 12% goes into your EPF account. The remaining 8.33% goes to the Employee Pension Scheme (EPS), capped at 8.33% of ₹15,000 = ₹1,250 per month regardless of your actual salary. For a ₹50,000 basic: employer EPF credit = 3.67% × ₹50,000 = ₹1,835/month; employer EPS = ₹1,250 (capped). Your EPF account total per month: employee ₹6,000 + employer EPF ₹1,835 = ₹7,835. The ₹1,250 EPS is separate and not withdrawable as a corpus."
     },
     {
-      "q": "When can I withdraw EPF?",
-      "a": "Full EPF withdrawal: 2 months after leaving employment (non-retirement). Partial withdrawal: allowed for house purchase (up to 90% after 5 years), marriage/education (50% after 7 years), medical (limited). Tax-free if employed for 5+ continuous years. Premature withdrawal before 5 years attracts TDS."
+      "q": "When can I withdraw my EPF?",
+      "a": "Full EPF withdrawal is permitted: after retirement (age 58), after 2+ months of unemployment following resignation (verify current waiting period at epfindia.gov.in), or on permanent disability. Partial withdrawals (advances without repayment) are allowed for house purchase, medical emergencies, marriage, education, and natural calamities — each with different eligibility periods and limits. Tax-free withdrawal requires 5 years of continuous service (transfers between employers under the same UAN count cumulatively). Withdrawal before 5 years attracts TDS and income tax on the employer contribution and all interest."
     },
     {
-      "q": "Is the EPF Calculator free?",
-      "a": "Yes, completely free on CalcPhi with no registration."
+      "q": "Is EPF interest tax-free?",
+      "a": "EPF interest is tax-free for employee contributions up to ₹2.5 lakh per year (₹5 lakh for government employees) — this threshold was introduced from FY 2021-22. Interest on employee contributions above ₹2.5L/year is taxable at your slab rate. Employer contributions up to 12% of basic remain non-taxable. Withdrawals are tax-free if made after 5 years of continuous service. The ₹2.5L threshold applies only to employee contributions — mandatory (12%) plus VPF combined."
     },
     {
-      "q": "Are my inputs stored?",
-      "a": "No. All calculations run in your browser. Your data is never stored."
+      "q": "What is VPF and is it better than PPF?",
+      "a": "Voluntary Provident Fund (VPF) is additional employee contribution above mandatory 12%, credited to the EPF account at the same interest rate (~8.25% vs PPF's 7.1%). VPF has EEE status (up to ₹2.5L annual employee contribution) versus PPF's EEE up to ₹1.5L/year. VPF earns a higher guaranteed rate than PPF and is fully government-backed — making it the superior guaranteed debt instrument for salaried employees within the ₹2.5L threshold. The key difference: VPF is illiquid until retirement (no partial withdrawal option as flexible as PPF's 7th-year withdrawal); PPF has a 15-year tenure with defined withdrawal windows. Choose VPF for higher returns with less liquidity need; PPF for long-term savings with more structured access."
     },
     {
-      "q": "Is it mobile-friendly?",
-      "a": "Yes. Works on all modern smartphones and tablets."
-    }
-  ],
-  "examples": [
-    {
-      "heading": "\u20b930,000 basic salary \u2014 25 years EPF accumulation",
-      "text": "\u20b930,000 basic at 8.25% for 25 years: Employee contribution 12% = \u20b93,600/month. Employer EPF 3.67% = \u20b91,101/month. Total EPF contribution = \u20b94,701/month. EPF corpus \u2248 \u20b948.9 lakh at 8.25%. Total invested \u2248 \u20b914.1 lakh."
+      "q": "What happens to EPF when I change jobs?",
+      "a": "Your EPF follows your UAN (Universal Account Number) — transfer it to the new employer's trust or EPFO's trust when you join. The transfer is done online via the EPFO member portal: log in with UAN, go to 'One Member - One EPF Account', and submit a transfer request after the new employer activates your UAN. Do not withdraw — transfer. Transfers preserve the 5-year continuous service count for tax-free withdrawal, maintain EEE status, and keep compounding uninterrupted. Multiple old EPF accounts left at previous employers stop earning interest after 3 years of inactivity (inoperative accounts — verify current rules at epfindia.gov.in)."
     },
     {
-      "heading": "High earner \u2014 VPF impact",
-      "text": "Adding VPF (Voluntary PF) of \u20b910,000/month on top of mandatory EPF significantly grows the tax-free corpus. \u20b910,000/month VPF for 25 years at 8.25% = additional \u20b924.5 lakh. Total EPF+VPF corpus: \u20b973+ lakh \u2014 all tax-free if held for 5+ years."
+      "q": "What is EPS and how is the pension calculated?",
+      "a": "EPS (Employee Pension Scheme) receives the employer's 8.33% contribution (capped at ₹1,250/month). It is not a corpus you withdraw — it funds a monthly pension after age 58, payable for life. Eligibility: minimum 10 years of qualifying service. Pension formula: (Pensionable Salary × Pensionable Service) ÷ 70, where Pensionable Salary = average of last 60 months' salary capped at ₹15,000. Maximum monthly pension: ₹15,000 × 35 years ÷ 70 = ₹7,500/month (theoretical maximum for full career). With less than 10 years of service, EPS accumulation is returned as a lump sum withdrawal or Scheme Certificate — no pension."
+    },
+    {
+      "q": "Can I reduce my EPF contribution below 12%?",
+      "a": "No. Once enrolled in EPF, an employee cannot reduce their mandatory contribution below 12% of basic+DA. The only discretionary element is the upward VPF election. Employers cannot unilaterally reduce EPF contributions. However, employees whose basic+DA is above ₹15,000/month (the EPF wage ceiling for new enrollments in covered establishments) may have opted out of EPF coverage at the time of joining — if so, they cannot join EPF later voluntarily in most cases. Employees with basic below ₹15,000 are mandatorily enrolled; those above ₹15,000 who are already enrolled must continue. Verify your EPF enrollment status in the EPFO member portal with your UAN."
     }
   ],
   "related": [
     {
       "title": "EPF Contribution Calculator",
-      "url": "/india/epf-contribution-calculator/"
+      "url": "/india/epf-contribution-calculator/",
+      "desc": "See the exact monthly split between EPF account, EPS, and VPF"
+    },
+    {
+      "title": "PPF Calculator",
+      "url": "/india/ppf-calculator/",
+      "desc": "Compare EPF with PPF — both EEE but different rates and liquidity"
+    },
+    {
+      "title": "Income Tax Calculator",
+      "url": "/india/income-tax-calculator/",
+      "desc": "Check whether EPF+VPF contributions cross the ₹2.5L taxability threshold"
     }
   ]
 }

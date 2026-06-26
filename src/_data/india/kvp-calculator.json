@@ -1,18 +1,18 @@
 {
   "id": "kvp-calculator",
   "schema": {
-    "appName": "KVP Calculator \u2014 Kisan Vikas Patra",
-    "appDescription": "Calculate KVP maturity value and doubling period. Current KVP interest rate is 7.5% p.a. with 115-month doubling period. Issued at post offices."
+    "appName": "KVP Calculator — Kisan Vikas Patra",
+    "appDescription": "Calculate KVP maturity value and doubling period. As of Q1 FY 2026-27 the rate is approximately 7.5% (115-month doubling) — verify current rate and doubling period at nsiindia.gov.in before purchase."
   },
   "inputs": [
     {
       "id": "kvp-principal",
-      "label": "Investment Amount (\u20b9)",
+      "label": "Investment Amount (₹)",
       "min": 1000,
       "max": 100000000,
       "step": 1000,
       "value": 100000,
-      "hint": "Minimum \u20b91,000. No maximum."
+      "hint": "Minimum ₹1,000. No maximum."
     },
     {
       "id": "kvp-rate",
@@ -21,7 +21,7 @@
       "max": 10,
       "step": 0.1,
       "value": 7.5,
-      "hint": "Current rate: 7.5% (Q1 FY 2026-27)"
+      "hint": "~7.5% as of Q1 FY 2026-27 — verify rate AND doubling period at nsiindia.gov.in"
     }
   ],
   "outputs": [
@@ -41,66 +41,93 @@
   ],
   "howToSteps": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the KVP Calculator. All inputs have smart defaults."
+      "name": "Verify the current KVP rate AND doubling period",
+      "text": "Always verify both the rate and the official doubling period at nsiindia.gov.in before buying. The rate is revised quarterly; the doubling period changes with every rate revision. The doubling period printed on your certificate at purchase is fixed for that certificate."
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time as you type \u2014 no submit button needed."
+      "name": "Enter investment amount",
+      "text": "Enter your investment. No maximum limit. Purchases above ₹50,000 require PAN and Aadhaar. You can buy multiple KVP certificates at different times — each locks in the rate prevailing at its own purchase date."
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown table to see how your numbers change over time."
+      "name": "Understand the doubling logic",
+      "text": "KVP uses annual compounding to double the principal. At 7.5%: after 115 months (9 years 7 months), the value is exactly 2× the principal. The formula: doubling period in months = 69.3 ÷ rate × 12 (Rule of 69 for annual compounding)."
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust the inputs to compare different scenarios and find the best option."
+      "name": "Declare interest annually in ITR",
+      "text": "KVP interest accrues annually and must be declared as income from other sources each year — not just in the maturity year. No TDS is deducted, but failure to declare annual accrual creates an ITR compliance gap."
+    }
+  ],
+  "articleSections": [
+    {
+      "id": "kvp-how-it-works",
+      "heading": "How KVP Doubling Works — Annual Compounding, the Rate-Dependent Tenure, and Rate Lock at Purchase",
+      "body": "<p>KVP is the only savings instrument in India where the product's entire proposition is built around a single number: the doubling period. The government sets the KVP rate quarterly (Ministry of Finance small-savings notification), and from that rate, the official doubling period is calculated and printed on every certificate issued during that quarter. The relationship between rate and doubling period uses annual compound interest: at 7.5%, ₹1 lakh compounds annually to ₹2 lakh in 115 months (9 years and 7 months). At 7.7%: 112 months (9 years 4 months). At 7.0%: 120 months (10 years). The doubling period is rate-sensitive — a 0.5% rate change shifts the doubling period by approximately 5–8 months.</p><p><strong>Annual compounding mechanics:</strong> KVP uses annual compounding, not continuous or monthly. The balance at end of each year: Principal × (1 + rate)^year. At 7.5%: ₹1L at end of Year 1 = ₹1,07,500; Year 5 = ₹1,43,563; Year 9 = ₹1,91,786; exactly at 115 months (9 years + 7 months): ₹2,00,000. The exact doubling period may not land on a full year — KVP interest is prorated for the partial final year to hit exactly 2× at the stated maturity date printed on the certificate.</p><p><strong>Rate lock at purchase — the critical feature:</strong> Once you purchase a KVP certificate, the rate and maturity date printed on that certificate are fixed. If you buy at 7.5% with a 115-month doubling period, your certificate matures in exactly 115 months from purchase regardless of what rates do subsequently. A rise to 8% next quarter helps only new purchasers — your certificate still matures at the original rate. Conversely, if rates fall to 7.0%, your 7.5% certificate still doubles in its original 115 months. This makes KVP attractive to purchase when rates are high and you expect rates to fall — you lock in the fast doubling period.</p><p><strong>No Section 80C benefit:</strong> KVP investment does not qualify for any Section 80C deduction. Unlike NSC (which has the same post-office origin), KVP is a purely taxable instrument with no upfront tax advantage. The entire return is taxable — annually as income accrues, not just at maturity. This is the most important distinction between KVP and NSC for a tax-paying investor.</p>"
+    },
+    {
+      "id": "kvp-scenarios",
+      "heading": "Three KVP Scenarios — Long-Term Doubling, Multiple Certificates for Staggered Maturity, and KVP vs NSC for a Taxable Investor",
+      "body": "<h3>Scenario 1: Rajesh invests ₹5 lakhs in KVP — the doubling in context</h3><p>Rajesh buys KVP certificates worth ₹5 lakhs at approximately 7.5% (verify at nsiindia.gov.in). Official doubling period: 115 months (9 years 7 months). Maturity value: ₹10 lakhs. Interest earned over the tenure: ₹5 lakhs. Annual interest accrual (sample): Year 1 = ₹37,500; Year 2 = ₹40,313; Year 5 = ₹53,585; Year 9 = ₹71,782 (accrual grows each year as the compounded base grows). Rajesh must declare this accrued interest as income from other sources each year — no TDS is deducted, but ITR disclosure is mandatory. At the 20% slab over the full tenure: total tax on ₹5L of KVP interest ≈ ₹1.04 lakh (including cess). Net gain after tax: approximately ₹3.96 lakhs on ₹5L invested over 9.6 years. Effective post-tax CAGR: approximately 5.2% — meaningfully less than the headline 7.5%.</p><h3>Scenario 2: Meena buys ₹2L KVP each quarter for 3 quarters — staggered maturity</h3><p>Meena has ₹6L to invest. Instead of buying all at once, she buys ₹2L in Q1 (April), ₹2L in Q2 (July), and ₹2L in Q3 (October). Each certificate locks in the rate prevailing that quarter (assume 7.5% all three quarters for simplicity). Each certificate matures in exactly 115 months from its own purchase date. Result: three maturity events spread 3 months apart — providing some liquidity staggering. More importantly, if rates change between quarters (e.g., Q2 rate becomes 7.7%), the Q2 certificate matures in 112 months (3 months faster) — staggered buying captures rate changes on each tranche. This laddering strategy is common among KVP investors who want both capital doubling and some liquidity optionality.</p><h3>Scenario 3: Harish — KVP vs NSC for a 30% bracket investor</h3><p>Harish wants to invest ₹1 lakh for medium-term, either in KVP (approximately 7.5%, no 80C, full taxation) or NSC (approximately 7.7%, 80C on principal and reinvested interest). He is in the 30% tax bracket (old regime).</p><p><strong>NSC at 7.7%:</strong> ₹1L matures to ₹1,44,904 in 5 years. 80C on principal: saves ₹46,800 (30% + cess) in Year 1. 80C on reinvested interest (Years 1–4): approximately ₹34,544 × 31.2% ≈ ₹10,778 total savings over 4 years. Year 5 taxable interest: ₹10,360 × 31.2% = ₹3,232 tax. Gross gain: ₹44,904. Net tax savings via 80C: ₹57,578. Net effective gain: ₹44,904 + ₹57,578 − ₹3,232 = ₹99,250 over 5 years — an effective CAGR well above the headline 7.7% because of the 80C saving.</p><p><strong>KVP at 7.5% (9.6 years to double):</strong> KVP gives ₹1L → ₹2L, but over 9.6 years, and all ₹1L of interest is taxable annually — no 80C benefit. Total tax on ₹1L interest over 9.6 years ≈ ₹31,200 (at 30% with cess). Net gain: ₹68,800 over 9.6 years — much lower effective return. <strong>Conclusion for 30% bracket old-regime investors: NSC is substantially superior to KVP</strong> because of the 80C benefit. KVP is better suited for investors below the income-tax threshold (zero tax on the interest) or new-regime taxpayers who cannot claim 80C and treat both as equivalent taxable instruments.</p>"
+    },
+    {
+      "id": "kvp-rules",
+      "heading": "KVP Rules — Purchase, Premature Encashment After 30 Months, Pledge, Transfer, and PAN Requirement",
+      "body": "<p><strong>Where to buy:</strong> KVP is available at all post offices and select authorised banks. Available as a physical certificate (passbook-based) or in electronic/demat form through select institutions. Denomination: ₹1,000 and multiples. No maximum investment limit. Multiple certificates can be purchased — each is a standalone instrument with its own maturity date.</p><p><strong>PAN and Aadhaar requirement:</strong> For KVP investments above ₹50,000 in a single transaction, PAN is mandatory. If KVP is purchased in cash above ₹50,000, Aadhaar is also required under Prevention of Money Laundering Act (PMLA) rules. For larger amounts purchased over multiple transactions on the same day or from the same investor, PAN linkage is standard compliance. Nominees must be registered at the time of purchase or subsequently.</p><p><strong>Premature encashment:</strong> KVP cannot be encashed before 30 months (2.5 years) from the date of purchase under any circumstances (other than court order or death). After 30 months: premature encashment is allowed at a reduced value prescribed in the KVP scheme — the amount received is less than full compounded value (check current premature encashment table at nsiindia.gov.in). After the officially declared maturity date: the certificate can be encashed anytime, but no additional interest is paid after maturity — encash promptly to avoid earning nothing on the matured corpus.</p><p><strong>Transfer between individuals:</strong> KVP can be transferred from one individual to another in specific cases: (1) from one person to a joint holder or vice versa, (2) on death of the holder to the nominee or legal heir, (3) on court order. KVP cannot be gifted or sold to another person through a simple transfer — it is not a freely transferable instrument like equity shares.</p><p><strong>Pledging as collateral:</strong> KVP certificates can be pledged to banks and other financial institutions as security for loans. The pledgee is noted on the certificate with post-office endorsement. Typical loan-to-value: 80–90% of current value. The KVP continues to compound during the pledge period — the accrued interest is still taxable annually to the original holder.</p><p><strong>Joint holding:</strong> KVP can be held jointly (Type A: single holder; Type B: joint holders, both receive payment; Type C: joint holders, either can receive). Types B and C allow survivorship rights — on death of one holder, the surviving holder receives full maturity.</p>"
+    },
+    {
+      "id": "kvp-mistakes",
+      "heading": "KVP Planning Mistakes — Rate Confusion, Annual ITR Non-Disclosure, Comparing Pre-Tax Returns, and Post-Maturity Inaction",
+      "body": "<p><strong>Confusing the current KVP rate with the rate on your existing certificate.</strong> The KVP rate shown in the news or on nsiindia.gov.in is the rate for new purchases this quarter. Your existing certificate is earning whatever rate was printed on it at purchase — which could be higher or lower. Check your KVP certificate passbook/receipt for the rate and maturity date. Do not assume a rate change affects certificates already purchased.</p><p><strong>Not declaring KVP interest annually in the ITR.</strong> No TDS is deducted on KVP interest — but the interest still accrues annually and must be declared as income from other sources in your ITR each year it accrues. Many KVP holders declare nothing for 9 years and then declare the full interest in the maturity year — this is wrong. Annual non-disclosure creates a compliance risk: the IT department may raise a notice under Section 143(1) for under-reporting of income. Maintain a year-by-year record of KVP interest accrued (annual interest = previous year's balance × rate) and declare it each year.</p><p><strong>Comparing KVP's pre-tax return with NSC's post-80C return.</strong> KVP at 7.5% sounds similar to NSC at 7.7%. But for an old-regime 30% bracket taxpayer, the NSC's 80C deduction on principal and 4 years of reinvested interest makes NSC's effective post-tax return substantially higher than its headline 7.7% — while KVP's 7.5% is entirely consumed by tax. The correct comparison is always post-tax return at your actual bracket. For investors in the nil-tax bracket (e.g., retired individuals with total income below the basic exemption), KVP and NSC returns are comparable — NSC is still slightly better at 7.7% vs 7.5% rate (verify both at nsiindia.gov.in), but both are fully effective for nil-bracket investors.</p><p><strong>Not encashing KVP immediately at maturity.</strong> KVP pays no interest after the maturity date. A ₹5L KVP left in a drawer for 6 months after maturity earns nothing during those 6 months — the corpus sits idle. Set a maturity date reminder in your calendar when you purchase each certificate and arrange encashment or reinvestment on or immediately after maturity. Reinvesting into a new KVP immediately locks in the then-current rate for another doubling cycle.</p>"
     }
   ],
   "faq": [
     {
-      "q": "What is Kisan Vikas Patra (KVP)?",
-      "a": "KVP is a Post Office saving certificate that doubles your money in approximately 115 months (9 years 7 months) at the current rate of 7.5% p.a. Available at all post offices and authorised banks. There is no maximum investment limit. Interest is compounded annually."
+      "q": "What is the current KVP rate and doubling period in 2026?",
+      "a": "As of Q1 FY 2026-27, the KVP rate is approximately 7.5% p.a., which corresponds to a doubling period of approximately 115 months (9 years and 7 months). Both the rate and the doubling period are revised quarterly by the Ministry of Finance — verify the current quarter's rate AND the official doubling period at nsiindia.gov.in before purchasing. The rate and doubling period printed on your certificate at purchase are fixed for that certificate regardless of future changes."
     },
     {
-      "q": "Is KVP taxable?",
-      "a": "KVP interest is fully taxable as 'income from other sources' at your applicable income tax slab rate. No TDS is deducted but you must declare the interest annually in your ITR. KVP does not offer any Section 80C deduction."
+      "q": "Does KVP qualify for Section 80C deduction?",
+      "a": "No. KVP does not qualify for any Section 80C deduction. Unlike NSC (same post-office origin, 5-year lock-in), KVP offers no upfront tax benefit. KVP interest is fully taxable as income from other sources in every year it accrues — no 80C offset is available. For tax-paying investors in the 20% or 30% bracket who have 80C headroom, NSC is almost always superior to KVP on an after-tax basis. KVP is most efficient for investors in the nil or 5% tax bracket where the absence of 80C benefit matters less."
     },
     {
-      "q": "Can KVP be transferred and pledged?",
-      "a": "Yes. KVP certificates can be transferred between individuals (on death or as a gift) and can be pledged as security for loans. They can be encashed prematurely after 2.5 years at reduced rates."
+      "q": "Can KVP be encashed before maturity?",
+      "a": "Premature encashment is not allowed before 30 months (2.5 years) from purchase — except on the holder's death or by court order. After 30 months, premature encashment is permitted at a value prescribed in the KVP scheme notification (less than full compounded value — check the current table at nsiindia.gov.in). After the official maturity date, encashment is allowed anytime, but no further interest accrues — encash at or shortly after maturity."
     },
     {
-      "q": "Is the KVP Calculator free?",
-      "a": "Yes, the KVP Calculator on CalcPhi is completely free with no registration required."
+      "q": "Is KVP interest taxable?",
+      "a": "Yes, fully. KVP interest is taxable as income from other sources at your applicable income slab rate. Interest accrues annually (even though not received until maturity) and must be declared in your ITR each year. No TDS is deducted by the post office or bank on KVP interest — the full compliance burden is on the investor to self-declare. Total tax liability is calculated on the accrued interest each year, not on the lump sum at maturity. Failure to declare annual accrual is a compliance error even if overall tax is correct at maturity."
     },
     {
-      "q": "Are my inputs stored?",
-      "a": "No. All calculations run in your browser. We do not store any financial data."
+      "q": "What is the maximum amount I can invest in KVP?",
+      "a": "There is no maximum investment limit for KVP. You can invest any amount in multiples of ₹1,000. For purchases above ₹50,000, PAN is mandatory. Unlike PPF (₹1.5L annual cap), SSY (₹1.5L annual cap), or SCSS (₹30L lifetime cap), KVP has no ceiling — making it suitable for parking large lump sums for guaranteed doubling. However, the absence of 80C benefit and full taxability mean the effective return is significantly below the headline rate for high-tax-bracket investors."
     },
     {
-      "q": "Can I use the KVP Calculator on mobile?",
-      "a": "Yes. CalcPhi is fully mobile-optimised and works on all modern smartphones."
-    }
-  ],
-  "examples": [
-    {
-      "heading": "\u20b91 lakh KVP at 7.5% for 115 months",
-      "text": "\u20b91 lakh invested in KVP at 7.5% p.a. doubles to \u20b92 lakh in 115 months (9 years 7 months). Annual compounding gives exact maturity: \u20b92,00,000. Effective CAGR confirmation: 7.5%."
+      "q": "How is KVP different from NSC?",
+      "a": "Both are government savings certificates issued at post offices, but they differ fundamentally: (1) Rate: KVP ~7.5% vs NSC ~7.7% (verify both at nsiindia.gov.in quarterly). (2) Tenure: KVP has a rate-dependent doubling period (~115 months at 7.5%); NSC has a fixed 5-year tenure. (3) Tax: NSC has 80C on principal and 4 years of reinvested interest (net tax benefit); KVP has no 80C benefit, fully taxable. (4) Purpose: NSC wins for tax-paying investors; KVP wins for nil-tax-bracket investors or those wanting a simple doubling instrument with no maximum cap. (5) Exit: both have restricted premature exit; NSC cannot exit before 5 years; KVP can exit after 30 months at reduced value."
     },
     {
-      "heading": "\u20b95 lakh KVP \u2014 interest income over tenure",
-      "text": "\u20b95 lakh KVP at 7.5% matures at \u20b910 lakh after 115 months, earning \u20b95 lakh interest. This interest is taxable at slab rates \u2014 at 20% slab, tax on \u20b95 lakh is \u20b91,04,000 (with cess)."
+      "q": "Can KVP be transferred or pledged?",
+      "a": "KVP can be pledged to banks and financial institutions as loan collateral (lender's name endorsed on the certificate via the post office). Typical loan-to-value: 80–90% of the certificate's current value. Transfer between individuals is allowed only on death (to nominee or legal heir), by court order, or between joint holders — it cannot be gifted or freely sold. Nomination should be registered at the time of purchase. Encashment after maturity is by the certificate holder at any post office nationwide."
+    },
+    {
+      "q": "How do I calculate KVP doubling period from the interest rate?",
+      "a": "KVP uses annual compounding. The formula for doubling period: Months = [ln(2) ÷ ln(1 + rate/100)] × 12. Simplified (Rule of 69 for annual compounding): Months ≈ (69.3 ÷ rate) × 12. At 7.5%: (69.3 ÷ 7.5) × 12 = 9.24 years = 111 months (slightly off from official 115 months due to government rounding). The official doubling period is always stated precisely in the Ministry of Finance notification and printed on the certificate — always use the official figure from nsiindia.gov.in, not the Rule of 69 approximation, for purchase decisions."
     }
   ],
   "related": [
     {
       "title": "NSC Calculator",
-      "url": "/india/nsc-calculator/"
+      "url": "/india/nsc-calculator/",
+      "desc": "Compare KVP with NSC — both post-office certificates, but NSC has 80C benefit and fixed 5-year tenure"
     },
     {
       "title": "FD Calculator",
-      "url": "/india/fd-calculator/"
+      "url": "/india/fd-calculator/",
+      "desc": "Compare KVP's doubling return with bank FD rates for similar tenures"
+    },
+    {
+      "title": "Income Tax Calculator",
+      "url": "/india/income-tax-calculator/",
+      "desc": "Calculate effective post-tax KVP return at your slab rate"
     }
   ]
 }

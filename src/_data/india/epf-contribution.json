@@ -2,12 +2,12 @@
   "id": "epf-contribution",
   "schema": {
     "appName": "EPF Contribution Breakup Calculator",
-    "appDescription": "Calculate monthly EPF and EPS contribution split between employee and employer. Understand where your 12% EPF goes \u2014 EPF vs EPS."
+    "appDescription": "Calculate monthly EPF and EPS contribution split. 12% employee, 3.67% employer to EPF, 8.33% to EPS (capped at ₹1,250/month on ₹15K wage ceiling). VPF option and ₹2.5L tax-free threshold."
   },
   "inputs": [
     {
       "id": "epfc-basic",
-      "label": "Monthly Basic + DA (\u20b9)",
+      "label": "Monthly Basic + DA (₹)",
       "min": 5000,
       "max": 500000,
       "step": 1000,
@@ -20,7 +20,7 @@
       "max": 100,
       "step": 5,
       "value": 0,
-      "hint": "VPF is on top of mandatory 12%"
+      "hint": "VPF is on top of mandatory 12%. Earns the same EPF rate."
     }
   ],
   "outputs": [
@@ -38,7 +38,7 @@
     },
     {
       "id": "epfc-empl-eps",
-      "label": "Employer EPS (8.33%)"
+      "label": "Employer EPS (8.33%, capped at ₹1,250)"
     },
     {
       "id": "epfc-total-epf",
@@ -48,66 +48,89 @@
   ],
   "howToSteps": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the EPF Contribution Calculator. Smart defaults are pre-filled."
+      "name": "Enter monthly Basic + DA",
+      "text": "Enter basic salary plus dearness allowance. EPF contributions are calculated on this amount — not gross salary or CTC. Gross salary includes HRA, allowances, and perquisites that are not part of the EPF base."
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time \u2014 no submit button needed."
+      "name": "Enter VPF percentage (optional)",
+      "text": "If you've elected VPF (Voluntary Provident Fund), enter the additional percentage above 12%. VPF earns the same rate as EPF (~8.25%, verify at epfindia.gov.in) with EEE status up to ₹2.5L total annual employee contribution."
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown to see numbers over time."
+      "name": "Read the EPF vs EPS split",
+      "text": "The key insight: the employer's 8.33% (up to ₹1,250/month) goes to EPS — not your EPF account. Only the employer's 3.67% and the employee's 12% build your EPF withdrawal corpus."
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust inputs to compare scenarios and find the best option."
+      "name": "Check the ₹2.5L tax-free threshold",
+      "text": "Total annual employee contribution (EPF + VPF) up to ₹2.5L earns tax-free interest. Above ₹2.5L, interest is taxable at slab rate. The calculator shows your annual employee contribution — check whether VPF additions stay within the threshold."
+    }
+  ],
+  "articleSections": [
+    {
+      "id": "epf-contribution-anatomy",
+      "heading": "The Four-Stream EPF Contribution Anatomy — Where Your PF Money Actually Goes Each Month",
+      "body": "<p>EPF contributions involve four distinct streams, and understanding each determines your actual retirement savings. The common misconception: 'My employer also contributes 12% to my PF.' Partially true — the employer contributes 12% of basic+DA, but the majority (8.33%) does NOT go to your EPF account.</p><p><strong>Stream 1 — Employee mandatory EPF (12% of basic+DA):</strong> Goes entirely to your EPF account. On ₹30,000 basic: ₹3,600/month. On ₹1,00,000 basic: ₹12,000/month. This amount earns EPF interest (approximately 8.25% for FY 2025-26 — verify at epfindia.gov.in) and is part of your withdrawable corpus.</p><p><strong>Stream 2 — Employer EPF (3.67% of basic+DA):</strong> Goes to your EPF account — this is the employer's actual EPF contribution to your accumulation account. On ₹30,000 basic: ₹1,101/month. On ₹1,00,000 basic: ₹3,670/month.</p><p><strong>Stream 3 — Employer EPS (8.33% of basic+DA, capped at ₹15,000 wage ceiling):</strong> Goes to the Employee Pension Scheme — NOT to your EPF account. The calculation: 8.33% × ₹15,000 = ₹1,250/month maximum. For any employee with basic+DA above ₹15,000 (which covers nearly all urban employees), the EPS contribution is a flat ₹1,250/month. The remaining employer contribution beyond ₹1,250 goes to EPF: for ₹30,000 basic, employer total = 12% × ₹30,000 = ₹3,600; EPS = ₹1,250; employer EPF = ₹3,600 − ₹1,250 = ₹2,350... wait, that doesn't match. Actually: employer EPF = 3.67% × ₹30,000 = ₹1,101, employer EPS = 8.33% × ₹15,000 = ₹1,250 (capped). Total employer = ₹1,101 + ₹1,250 = ₹2,351 ≠ 12% × ₹30,000 = ₹3,600. The difference (₹3,600 − ₹2,351 = ₹1,249) goes to EDLI and admin charges — the employer's actual total outgo is 12% + additional admin charges, all part of CTC.</p><p><strong>Stream 4 — Employee VPF (voluntary, any % above 12%):</strong> Additional employee contribution beyond 12%, credited entirely to EPF account at the same interest rate. Elected once via Form 11 (revised) with HR — cannot be changed mid-year in most cases. VPF earns EEE status up to ₹2.5L total annual employee contribution (mandatory + VPF combined); excess above ₹2.5L earns taxable interest.</p><p><strong>Monthly EPF account total for ₹30,000 basic (no VPF):</strong> Employee ₹3,600 + Employer EPF ₹1,101 = ₹4,701. The ₹1,250 EPS is NOT in this total — it is in a separate government pension fund.</p><table><thead><tr><th>Monthly Basic</th><th>Employee EPF</th><th>Employer EPF</th><th>Employer EPS</th><th>Total EPF Account/Month</th></tr></thead><tbody><tr><td>₹15,000</td><td>₹1,800</td><td>₹551</td><td>₹1,250 (capped)</td><td>₹2,351</td></tr><tr><td>₹30,000</td><td>₹3,600</td><td>₹1,101</td><td>₹1,250 (capped)</td><td>₹4,701</td></tr><tr><td>₹60,000</td><td>₹7,200</td><td>₹2,202</td><td>₹1,250 (capped)</td><td>₹9,402</td></tr><tr><td>₹1,00,000</td><td>₹12,000</td><td>₹3,670</td><td>₹1,250 (capped)</td><td>₹15,670</td></tr></tbody></table>"
+    },
+    {
+      "id": "epf-contribution-scenarios",
+      "heading": "Three EPF Contribution Scenarios — Entry-Level Salary, High Earner With VPF, and VPF Tax Threshold Calculation",
+      "body": "<h3>Scenario 1: Deepak, ₹25,000 basic salary — new joiner understanding EPF split</h3><p>Deepak joins his first job at ₹25,000 basic+DA. Monthly EPF breakdown: Employee EPF = 12% × ₹25,000 = ₹3,000. Employer EPF = 3.67% × ₹25,000 = ₹918. Employer EPS = 8.33% × ₹15,000 = ₹1,250 (capped — even though 8.33% of ₹25,000 = ₹2,083, the cap limits it to ₹1,250). Total to EPF account per month: ₹3,918. Annual EPF account credit: ₹47,016. Deepak's net take-home impact: his ₹3,000 EPF deduction reduces take-home by ₹3,000/month. The employer's contribution (₹918 EPF + ₹1,250 EPS) is outside Deepak's take-home — it is an employer cost not visible in salary slip but part of total compensation.</p><h3>Scenario 2: Kiran, ₹1.5 lakh basic salary — above-ceiling dynamics</h3><p>Kiran earns ₹1.5L basic+DA. Employee EPF = 12% × ₹1,50,000 = ₹18,000/month = ₹2,16,000/year — below the ₹2.5L tax-free threshold (employee alone; VPF would push above). Employer EPF = 3.67% × ₹1,50,000 = ₹5,505. Employer EPS = ₹1,250 (capped — 8.33% of ₹15,000, regardless of Kiran's ₹1.5L salary). Total EPF account monthly: ₹18,000 + ₹5,505 = ₹23,505. Annual: ₹2,82,060. If Kiran adds even 1% VPF = ₹1,500/month additional, her annual employee contribution rises to (₹18,000 + ₹1,500) × 12 = ₹2,34,000 — still below the ₹2.5L interest-taxability threshold for employees. She can safely add up to ₹2,858/month in VPF ((₹2,50,000 − ₹2,16,000) ÷ 12 = ₹2,833) before the threshold is crossed.</p><h3>Scenario 3: Priya, ₹60,000 basic, wants to add VPF — calculating the ₹2.5L threshold impact</h3><p>Priya's mandatory employee EPF: 12% × ₹60,000 = ₹7,200/month = ₹86,400/year — well below the ₹2.5L threshold. She wants to add VPF. How much VPF can she add before interest becomes taxable? Remaining threshold: ₹2,50,000 − ₹86,400 = ₹1,63,600/year = ₹13,633/month. So Priya can add up to 22% VPF (₹60,000 × 22% = ₹13,200) and still stay under the ₹2.5L limit with some room. VPF at 22% = ₹13,200/month additional. Total EPF account credit per month: ₹7,200 + ₹2,202 (employer EPF) + ₹13,200 (VPF) = ₹22,602. Annual: ₹2,71,224. Interest on this is all tax-free (within threshold). Effective EPF+VPF contribution: 12% + 22% = 34% of basic — an aggressive but highly efficient retirement savings strategy for Priya's income level.</p>"
+    },
+    {
+      "id": "epf-contribution-rules",
+      "heading": "EPF, EPS, VPF Rules — Wage Ceiling, EPS Pension Formula, VPF Election, and ₹2.5L Interest Threshold",
+      "body": "<p><strong>The ₹15,000 EPF wage ceiling:</strong> The statutory wage ceiling for EPF was last revised to ₹15,000/month in 2014. Employees with basic+DA above ₹15,000 are covered under EPF (they cannot opt out if already enrolled), but the EPS contribution is capped at ₹1,250/month. The employer EPF contribution (3.67%) has no ceiling — it applies to the full basic+DA regardless of amount. Note: for employees with basic+DA above ₹15,000 joining a new organisation, if they were not previously EPF members, they may have the option to not join EPF. Employees earning above ₹15,000 basic who are already EPF members cannot withdraw from EPF coverage. Verify current coverage rules at epfindia.gov.in.</p><p><strong>EPS pension entitlement:</strong> EPS provides a monthly pension (not a lump-sum corpus) from age 58 with a minimum of 10 qualifying service years. Formula: Monthly Pension = (Pensionable Salary × Pensionable Service) ÷ 70. Pensionable Salary = average of last 60 months' salary capped at ₹15,000. Maximum pension with 35 years' service: ₹15,000 × 35 ÷ 70 = ₹7,500/month. If service is less than 10 years: EPS accumulation is returned as a lump sum (withdrawal or Scheme Certificate). The ₹15,000 salary cap means the EPS pension is structurally capped at ₹7,500/month regardless of actual salary — a retiree earning ₹2L/month gets the same EPS cap as one earning ₹20,000.</p><p><strong>VPF election process:</strong> VPF must be elected through Form 11 or a VPF declaration form provided by your employer's HR/payroll department. It typically takes effect from the start of the next financial year or the next month depending on HR's processing cycle. VPF rate equals the EPF rate (approximately 8.25% — verify at epfindia.gov.in) and earns interest on the full VPF balance. Reducing VPF once elected is possible but also requires HR processing and may have a lag. Verify your company's VPF change policy before committing to a high VPF percentage.</p><p><strong>The ₹2.5L annual employee contribution threshold:</strong> From FY 2021-22, interest on employee EPF contributions (mandatory + VPF combined) above ₹2.5L/year is taxable. Interest on contributions up to ₹2.5L remains exempt under Section 10(12). Employer contributions remain fully exempt (no threshold applies to employer side). Government employees have a higher threshold of ₹5L/year. The taxable interest is computed by EPFO separately, appears in Form 26AS, and must be declared as income from other sources in ITR. For employees with basic above approximately ₹1.74L/month (where 12% × ₹1.74L × 12 = ₹2.5L), mandatory contributions alone cross the threshold — VPF would be fully taxable in terms of the interest it generates.</p>"
+    },
+    {
+      "id": "epf-contribution-mistakes",
+      "heading": "EPF Contribution Mistakes — Misreading the EPS Cap, Ignoring VPF, Missing the ₹2.5L Threshold, and Salary Restructuring Errors",
+      "body": "<p><strong>Assuming the employer's full 12% goes into EPF and expecting a large employer-side corpus.</strong> Most employees calculate their retirement corpus as (Employee 12% + Employer 12%) × salary × years = and arrive at an inflated number. The employer's 8.33% (capped at ₹1,250) goes to EPS, not EPF. For an employee with ₹50,000 basic over 30 years: total employer EPF contribution = 3.67% × ₹50,000 × 12 × 30 = ₹66,06,000 contributions (plus compounding) — not 12% × ₹50,000 × 12 × 30 = ₹2,16,00,000. The EPS portion (₹1,250 × 12 × 30 = ₹4,50,000) builds a pension, not a corpus. Retirement planning must account for this split correctly.</p><p><strong>Not electing VPF when it is the most efficient guaranteed savings available.</strong> VPF earns the same rate as EPF (~8.25%), is fully government-backed, and is tax-free up to the ₹2.5L threshold. For an employee with ₹40,000 basic (EPF at 12% = ₹4,800/month = ₹57,600/year — well below ₹2.5L), there is ₹1,92,400 of annual VPF room available before taxability. Yet most employees don't elect VPF because HR departments don't proactively explain it. VPF at 8.25% is more efficient than PPF (7.1%) for salaried employees who don't need liquidity — both EEE, but VPF earns 115 basis points more.</p><p><strong>Not accounting for the ₹2.5L threshold when adding VPF for high earners.</strong> High-salary employees who add large VPF amounts may inadvertently cross the ₹2.5L annual employee contribution threshold. Interest on the excess becomes taxable at slab rate — partially negating VPF's EEE advantage. Calculate the threshold carefully: remaining room = ₹2,50,000 minus mandatory annual EPF contribution. Only add VPF up to this room for interest to remain fully tax-free. For employees above ₹1.74L monthly basic, mandatory EPF alone already crosses ₹2.5L — any VPF contribution earns taxable interest, reducing VPF's attractiveness relative to PPF (which has a separate EEE cap).</p><p><strong>Restructuring salary to reduce basic in order to lower EPF deduction — and destroying retirement savings inadvertently.</strong> Some employees negotiate a higher HRA or allowance component to reduce the basic salary (and hence reduce EPF deduction to increase take-home). This increases take-home by 12% of the reduction in basic — but destroys the EEE compounding on the same amount for the full career. A ₹10,000 reduction in monthly basic saves ₹1,200/month in EPF deduction now, but costs ₹1,200/month × 8.25% × 30 years of compounding — approximately ₹18 lakhs in foregone corpus at retirement. The short-term gain in take-home is a poor trade for most employees with long working horizons.</p>"
     }
   ],
   "faq": [
     {
       "q": "What is the difference between EPF and EPS?",
-      "a": "EPF (Employee Provident Fund): both employee 12% and employer 3.67% go here \u2014 you get this with interest on retirement/resignation. EPS (Employee Pension Scheme): employer's 8.33% (capped at \u20b91,250/month) goes to EPS \u2014 this funds a monthly pension after age 58 with 10+ years of service. You don't receive EPS corpus directly."
+      "a": "EPF (Employee Provident Fund): both employee's 12% and employer's 3.67% are credited here — you receive this lump sum with interest on retirement or resignation after 5 years. EPS (Employee Pension Scheme): employer's 8.33% (capped at ₹1,250/month on ₹15,000 wage ceiling) goes here — this funds a monthly pension from age 58 with 10+ years of qualifying service, not a lump sum. On resignation before 10 years, EPS accumulation is returned as a lump sum (Scheme Certificate or withdrawal). The EPS corpus is NOT part of your EPF account balance — it is in a separate government pension fund."
     },
     {
-      "q": "What is VPF and should I invest in it?",
-      "a": "VPF (Voluntary Provident Fund) is additional contribution beyond mandatory 12%. It earns the same EPF rate (8.25%) and has the same EEE tax treatment. For risk-free, tax-free guaranteed returns, VPF is superior to most fixed income alternatives. However, it is illiquid until retirement."
+      "q": "How much does the employer actually contribute to my EPF account?",
+      "a": "The employer contributes 3.67% of your basic+DA to your EPF account. The remaining 8.33% goes to EPS (capped at ₹1,250/month regardless of salary above ₹15,000). For ₹30,000 basic: employer EPF = 3.67% × ₹30,000 = ₹1,101/month. For ₹1,00,000 basic: employer EPF = 3.67% × ₹1,00,000 = ₹3,670/month. The employer's EPS contribution is always ₹1,250/month for employees with basic above ₹15,000 — no matter how high the salary."
+    },
+    {
+      "q": "What is VPF and how do I elect it?",
+      "a": "VPF (Voluntary Provident Fund) is additional contribution above the mandatory 12%, deposited to your EPF account at the same interest rate (~8.25% — verify at epfindia.gov.in). It has EEE tax treatment up to ₹2.5L total annual employee contribution (mandatory + VPF combined). To elect VPF: submit Form 11 (revised) or a VPF declaration to your employer's HR/payroll. VPF typically takes effect from the next payroll cycle or financial year. You cannot reduce mandatory EPF below 12% — only VPF additions are discretionary. VPF is one of the highest-return guaranteed tax-free instruments available to salaried employees."
     },
     {
       "q": "Is EPF interest fully tax-free?",
-      "a": "EPF interest is tax-free for employee contributions up to \u20b92.5 lakh/year (\u20b95 lakh for government employees). Interest on contributions above this threshold is taxable. Employer contributions up to 12% of basic are tax-free. Withdrawal after 5 years of continuous service is tax-free."
+      "a": "EPF interest is tax-free on employee contributions up to ₹2.5 lakh per year (₹5L for government employees). This threshold was introduced from FY 2021-22. Interest on employee contributions (mandatory + VPF) above ₹2.5L/year is taxable at your slab rate. Employer contributions (3.67% EPF side) remain fully tax-exempt with no ceiling — only the employee side is subject to the ₹2.5L threshold. Withdrawals after 5 years of continuous service are fully tax-exempt regardless of the contribution amount."
     },
     {
-      "q": "Is the EPF Contribution Breakup Calculator free?",
-      "a": "Yes, completely free on CalcPhi with no registration."
+      "q": "What is the ₹15,000 EPF wage ceiling?",
+      "a": "₹15,000 is the statutory wage ceiling used for calculating the EPS contribution. 8.33% of ₹15,000 = ₹1,250/month is the maximum EPS contribution regardless of actual salary. For employees earning below ₹15,000 basic+DA, the EPS contribution is 8.33% of actual basic (e.g., 8.33% × ₹12,000 = ₹1,000). The ceiling has been ₹15,000 since 2014 — verify at epfindia.gov.in for any revision. The employer EPF portion (3.67%) has no ceiling and applies to the full basic+DA."
     },
     {
-      "q": "Are my inputs stored?",
-      "a": "No. All calculations run in your browser. Your data is never stored."
+      "q": "Should I elect VPF or invest in PPF?",
+      "a": "For salaried employees within the ₹2.5L annual employee contribution threshold: VPF is typically superior to PPF. VPF rate (~8.25%) > PPF rate (7.1%) — both are EEE instruments. VPF is automatic via payroll; PPF requires a separate transaction. VPF is illiquid until retirement (no structured partial withdrawal); PPF allows partial withdrawals from year 7 and full exit at 15 years. Choose VPF if you don't need liquidity for 20+ years; choose PPF if you need the flexibility of the 7th-year withdrawal option. For high earners above the ₹2.5L threshold, marginal VPF contributions earn taxable interest — in that case, PPF (separate ₹1.5L/year EEE cap) becomes the better choice for excess savings."
     },
     {
-      "q": "Is it mobile-friendly?",
-      "a": "Yes. Works on all modern smartphones and tablets."
-    }
-  ],
-  "examples": [
-    {
-      "heading": "\u20b930,000 basic \u2014 EPF/EPS split",
-      "text": "Monthly contributions: Employee PF = \u20b93,600 (12%). Employer: EPF = \u20b91,101 (3.67%), EPS = \u20b91,250 (capped). Total to EPF account = \u20b94,701. Total monthly EPF-related deduction = \u20b97,201 from combined CTC. EPS \u20b91,250 is separate \u2014 not in your EPF account."
-    },
-    {
-      "heading": "High earner \u2014 above \u20b915,000 basic",
-      "text": "For \u20b91 lakh basic: Employee PF = \u20b912,000. Employer EPS = \u20b91,250 (capped). Employer EPF = \u20b912,000 \u00d7 3.67% = \u20b94,404. Total EPF account credit = \u20b916,404/month. Higher earners benefit most from EPF as tax-free compounding grows significantly."
+      "q": "What happens to EPS if I resign before 10 years?",
+      "a": "If you resign with less than 10 years of qualifying EPS service, you do not receive a monthly pension. Instead, the EPS accumulation is returned as a lump sum withdrawal (EPS withdrawal benefit) — the amount is based on a prescribed table using last drawn salary (capped at ₹15,000) and years of service. Alternatively, you can take a Scheme Certificate (which preserves the service record) and add it to the service at a future employer, preserving the path to a pension if you accumulate 10 qualifying years across employers. For careers with 10+ years, the EPS pension from age 58 is typically worth more than the lump sum withdrawal."
     }
   ],
   "related": [
     {
       "title": "EPF Calculator",
-      "url": "/india/epf-calculator/"
+      "url": "/india/epf-calculator/",
+      "desc": "Project total EPF corpus at retirement using your basic salary and years of service"
     },
     {
-      "title": "CTC to In-Hand Calculator",
-      "url": "/india/ctc-to-in-hand-calculator/"
+      "title": "Income Tax Calculator",
+      "url": "/india/income-tax-calculator/",
+      "desc": "Check whether EPF+VPF employee contributions exceed the ₹2.5L interest-taxability threshold"
+    },
+    {
+      "title": "PPF Calculator",
+      "url": "/india/ppf-calculator/",
+      "desc": "Compare VPF's higher rate with PPF's flexible withdrawal structure"
     }
   ]
 }

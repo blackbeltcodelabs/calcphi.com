@@ -2,7 +2,7 @@
   "id": "apy-calculator",
   "schema": {
     "appName": "APY Calculator — Atal Pension Yojana",
-    "appDescription": "Calculate your monthly APY contribution for a guaranteed pension of ₹1,000 to ₹5,000/month at age 60. Based on your current age."
+    "appDescription": "Calculate monthly APY contribution by joining age. Guaranteed pension ₹1,000–₹5,000/month from age 60. Income-tax payers ineligible since October 2022 — verify current eligibility at pfrda.org.in."
   },
   "inputs": [
     {
@@ -18,26 +18,11 @@
       "label": "Desired Pension at 60 (₹/month)",
       "type": "select",
       "options": [
-        {
-          "value": "1000",
-          "label": "₹1,000/month"
-        },
-        {
-          "value": "2000",
-          "label": "₹2,000/month"
-        },
-        {
-          "value": "3000",
-          "label": "₹3,000/month"
-        },
-        {
-          "value": "4000",
-          "label": "₹4,000/month"
-        },
-        {
-          "value": "5000",
-          "label": "₹5,000/month"
-        }
+        { "value": "1000", "label": "₹1,000/month" },
+        { "value": "2000", "label": "₹2,000/month" },
+        { "value": "3000", "label": "₹3,000/month" },
+        { "value": "4000", "label": "₹4,000/month" },
+        { "value": "5000", "label": "₹5,000/month" }
       ]
     }
   ],
@@ -62,70 +47,93 @@
   ],
   "howToSteps": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the APY Calculator. All inputs have smart defaults."
+      "name": "Verify eligibility first",
+      "text": "APY is for Indian citizens aged 18–40. Critically: income-tax payers are ineligible since October 2022. Verify current eligibility rules at pfrda.org.in before applying — this restriction has not been reversed as of mid-2026."
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time as you type — no submit button needed."
+      "name": "Enter your current age",
+      "text": "The contribution amount depends on your age at enrolment — the younger you join, the smaller the monthly contribution for the same pension. Enrolment is only until age 40; contributions run until you turn 60."
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown table to see how your numbers change over time."
+      "name": "Select desired monthly pension",
+      "text": "Choose ₹1,000 to ₹5,000/month. This is a guaranteed lifelong pension from age 60, paid by PFRDA. On death, the same pension continues for the spouse; on both deaths, the guaranteed corpus is returned to the nominee."
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust the inputs to compare different scenarios and find the best option."
+      "name": "Confirm auto-debit setup with your bank",
+      "text": "APY contributions are collected by auto-debit from your savings bank account. Ensure the account always has sufficient balance on the debit date. Defaults attract penalties; long default periods can lead to account closure."
+    }
+  ],
+  "articleSections": [
+    {
+      "id": "apy-how-it-works",
+      "heading": "How APY Pension Amounts Are Determined — Contribution Tables, Guaranteed Corpus, and the Joining-Age Calculation",
+      "body": "<p>APY is not an investment-return scheme — it is a defined-benefit pension scheme. The pension amount (₹1,000 to ₹5,000/month) is guaranteed regardless of underlying fund performance. PFRDA determines the contribution amounts needed for each pension tier at each joining age, based on an assumed internal rate of return on the pension corpus. The contribution tables are published by PFRDA and used by banks to set up auto-debit mandates.</p><p><strong>How the contribution-age relationship works:</strong> The longer you contribute (earlier you join), the lower your monthly contribution for the same pension. Example contribution amounts for ₹5,000/month pension (verify current rates at pfrda.org.in — these tables are updated by PFRDA):</p><table><thead><tr><th>Joining Age</th><th>Monthly Contribution</th><th>Years of Contribution</th><th>Total Lifetime Contribution</th></tr></thead><tbody><tr><td>18</td><td>~₹210</td><td>42</td><td>~₹1,05,840</td></tr><tr><td>25</td><td>~₹376</td><td>35</td><td>~₹1,57,920</td></tr><tr><td>30</td><td>~₹577</td><td>30</td><td>~₹2,07,720</td></tr><tr><td>35</td><td>~₹902</td><td>25</td><td>~₹2,70,600</td></tr><tr><td>40</td><td>~₹1,454</td><td>20</td><td>~₹3,48,960</td></tr></tbody></table><p><strong>Guaranteed corpus concept:</strong> Each pension tier has an officially guaranteed corpus that the pension fund is required to have accumulated by age 60 to pay the lifelong pension. For ₹5,000/month pension: guaranteed corpus ≈ ₹8.5 lakhs. This corpus earns a pension (via annuity from NPS/PFRDA). On the death of the subscriber (after age 60), the same ₹5,000/month pension continues for the spouse for life. On the death of both, the guaranteed corpus amount (₹8.5L) is returned to the nominee. If the subscriber dies before age 60: the spouse can either close the account and receive the full corpus, or continue contributions until age 60 to receive the pension.</p><p><strong>Government co-contribution (closed for new joiners):</strong> The government co-contributed 50% of the subscriber's annual contribution (up to ₹1,000/year) for a period of 5 years (June 2015 to March 2020) for eligible subscribers — those who were not income-tax payers and not members of any statutory social security scheme. This window is completely closed. New joiners after March 2020 receive no government co-contribution.</p><p><strong>Income-tax payer bar (October 2022):</strong> From 1 October 2022, persons who are or have been income-tax payers (i.e., file ITR or are required to file ITR due to income exceeding the basic exemption) are ineligible to open a new APY account. Existing subscribers who were enrolled before October 2022 are not affected — they continue. This restriction is significant: it limits APY to non-income-tax-paying workers in the informal sector — domestic workers, small farmers, daily-wage earners, and similar. Verify whether this restriction applies to you at pfrda.org.in before attempting to enrol.</p>"
+    },
+    {
+      "id": "apy-scenarios",
+      "heading": "Three APY Scenarios — Unorganised Worker Targeting Full Pension, Late Joiner Trade-Off, and Income-Tax Payer Exclusion",
+      "body": "<h3>Scenario 1: Lakshmi, 25-year-old domestic worker — targeting ₹5,000/month pension</h3><p>Lakshmi works as a household helper with informal income. She qualifies for APY (non-income-tax payer). She enrols at 25 through her savings bank account. Monthly contribution for ₹5,000/month pension at joining age 25: approximately ₹376 (verify current table at pfrda.org.in). Contribution period: 35 years (ages 25–60). Total lifetime contributions: ₹376 × 12 × 35 = ₹1,57,920. Return from age 60: ₹5,000/month = ₹60,000/year for life. If Lakshmi lives to 80 (20 years of pension): total received = ₹12,00,000 — against ₹1,57,920 invested. On her death, her husband receives the same ₹5,000/month for his lifetime. On both deaths, nominee receives guaranteed corpus ≈ ₹8.5L. The guaranteed pension for life is significantly more valuable than the return calculation suggests — longevity insurance against outliving savings is the product's core benefit.</p><h3>Scenario 2: Rajan, 35-year-old vendor — starts APY late</h3><p>Rajan is a small vegetable vendor, not an income-tax payer, aged 35. He enrols in APY for ₹5,000/month pension. Monthly contribution at age 35: approximately ₹902. Contribution period: 25 years. Total contributions: ₹2,70,600. By comparison, if Rajan had enrolled at 25 (Scenario 1), he would have paid ₹1,57,920 — a saving of ₹1,12,680 for the same ₹5,000/month pension. Every 5-year delay in joining APY roughly doubles the monthly contribution required for the same pension tier. Rajan's ₹902/month is affordable as a fraction of his income — APY is designed so that even at age 35, contributions are within reach for informal workers. At 40, the monthly contribution rises to ₹1,454 — still payable but approaching the upper limit of comfortable commitment for low-income workers.</p><h3>Scenario 3: Sunil, IT professional considering APY — ineligible since October 2022</h3><p>Sunil is a 28-year-old software developer earning ₹12 lakhs/year. He files income tax and is an income-tax payer. He cannot open a new APY account — the October 2022 notification explicitly bars income-tax payers from new APY enrolment. Sunil's alternatives: (1) NPS through his employer (Tier I) — market-linked, not guaranteed, but with Section 80CCD(1B) deduction of ₹50,000 beyond the 80C limit. (2) EPF + VPF for retirement corpus. (3) PPF for EEE guaranteed debt. For formal-sector income-tax payers, the NPS Calculator and EPF Calculator are the relevant planning tools — APY's guaranteed pension is not accessible to them under current rules.</p>"
+    },
+    {
+      "id": "apy-rules",
+      "heading": "APY Eligibility, Default Penalties, Death Benefits, and the Income-Tax Bar — Current Status",
+      "body": "<p><strong>Eligibility summary (verify current rules at pfrda.org.in):</strong> (1) Indian citizen. (2) Age 18–40. (3) Must have a savings bank account (the account is used for auto-debit). (4) Non-income-tax payer (since October 2022 — earlier subscribers enrolled before this date are not affected). (5) Not a member of a statutory social security scheme (EPF/NPS/ESIC — existing EPF members are generally ineligible).</p><p><strong>Contribution auto-debit:</strong> APY runs entirely on auto-debit from the linked savings account on the due date. Monthly, quarterly, or half-yearly frequency is available. If the auto-debit fails due to insufficient balance: penalty of ₹1 per month per ₹100 of contribution unpaid for each default month. Defaults accumulate — a sustained default period (6 months of default) leads to account freezing (no pension accrual); 24 months of default leads to account closure and return of contributions with interest, minus penalties. The penalty structure means even one or two missed payments require prompt regularisation.</p><p><strong>Voluntary exit before age 60:</strong> Exit before 60 is allowed only in exceptional circumstances: death of the subscriber or terminal illness. On exit, the subscriber or nominee receives the contributions made plus net NPS investment income (minus charges) — not the guaranteed corpus. Voluntary premature exit (other than for the above reasons) is now permitted under a 2023 amendment (verify at pfrda.org.in for current status), but the amount received is only the accumulated corpus with actual investment returns, not the guaranteed amount. This means premature voluntary exit may return less than total contributions if the underlying NPS fund has underperformed.</p><p><strong>Death benefits — three phases:</strong> (1) Death before age 60: spouse can close the account and receive the corpus (contributions + NPS returns), OR continue contributing and claim the full pension from age 60. (2) Death after age 60 (subscriber): spouse receives the same pension for life. (3) Death of both subscriber and spouse after age 60: nominee receives the guaranteed corpus amount (e.g., ₹8.5L for ₹5,000/month tier) — not the full accumulated corpus. (4) Nominee if neither spouse nor nominated successor: legal heir via court succession.</p><p><strong>Nomination:</strong> A nominee must be registered when opening the APY account. If married, the spouse is the default nominee for the continuing pension benefit — but a separate nominee for the corpus return on both deaths can be specified. Update nomination at your bank if marital or family status changes.</p>"
+    },
+    {
+      "id": "apy-mistakes",
+      "heading": "APY Planning Mistakes — Ignoring Eligibility Bar, Defaulting on Auto-Debit, Wrong Pension Tier, and Not Comparing NPS",
+      "body": "<p><strong>Attempting to open APY as an income-tax payer.</strong> Since October 2022, income-tax payers cannot open new APY accounts. Formally salaried employees, those with FD interest above the basic exemption, businesspeople, and freelancers who file ITR are all excluded. Banks may process the APY application without checking income-tax status — the subscriber bears the compliance risk. If the IT department identifies an ineligible subscriber, the account may be cancelled retroactively. Always confirm eligibility at pfrda.org.in before enrolling.</p><p><strong>Letting APY contributions lapse through bank balance failure.</strong> APY auto-debit fails create compounding penalties (₹1/month per ₹100 outstanding). Many subscribers underestimate the penalty accumulation — 6 months of ₹376/month unpaid at ₹1/₹100/month = ₹376 × 6 × (1/100) × 6 months ≈ ₹135 in penalties, on top of the missed ₹2,256 in contributions. Both arrears and penalties must be cleared to regularise. The safest practice: maintain a dedicated balance buffer in the APY-linked savings account, separate from daily spending, and set a low-balance alert before the debit date.</p><p><strong>Choosing too low a pension tier at enrolment and being unable to upgrade later.</strong> APY pension tiers can be increased (from ₹1,000 to a higher tier) once per year — subscribers can upgrade their pension tier and the corresponding contribution is adjusted. However, under-estimating future needs at enrolment is common. The ₹5,000/month maximum (₹60,000/year) is modest for 2026 prices and will purchase even less in 2046 when today's 18-year-old turns 60. If APY is the primary pension instrument, starting at the maximum ₹5,000/month tier is generally better than starting low and upgrading later — upgrading later requires higher contributions for fewer remaining years.</p><p><strong>Not comparing APY with NPS before choosing.</strong> For anyone eligible for APY, NPS Tier I is also available. NPS is market-linked (equity and debt allocation) and provides higher expected returns but no guaranteed pension — the pension depends on the annuity bought at age 60. NPS also has tax benefits (Section 80CCD(1B) — an additional ₹50,000 deduction beyond 80C). For informal workers who are non-income-tax payers and unlikely to benefit from NPS tax deductions, APY's guaranteed pension is more appropriate. For formal-sector workers who can benefit from NPS deductions, NPS is the better instrument even with non-guaranteed returns.</p>"
     }
   ],
   "faq": [
     {
-      "q": "What is Atal Pension Yojana (APY)?",
-      "a": "APY is a government-backed pension scheme for unorganised sector workers. It guarantees a fixed monthly pension of ₹1,000 to ₹5,000 from age 60. Both employee and (for eligible subscribers) the government contribute. On death, the spouse gets the same pension; on spouse's death, the nominee gets the corpus."
+      "q": "Who is eligible for Atal Pension Yojana (APY)?",
+      "a": "APY eligibility (verify current rules at pfrda.org.in): Indian citizens aged 18–40 with a bank savings account. Since October 2022, income-tax payers are not eligible to open a new APY account — this includes salaried employees who file ITR, people with interest/capital gains income exceeding the basic exemption, and businesspeople filing taxes. Existing subscribers enrolled before October 2022 are not affected. EPF members are generally ineligible. NRIs cannot open APY. Confirm eligibility with your bank and at pfrda.org.in before applying."
     },
     {
-      "q": "Who is eligible for APY?",
-      "a": "Any Indian citizen aged 18–40 with a savings bank account is eligible. However, income taxpayers are not eligible. Enrolment is through banks and post offices. The NPS trust manages the APY corpus."
+      "q": "What pension can I get from APY?",
+      "a": "APY offers five guaranteed monthly pension tiers: ₹1,000, ₹2,000, ₹3,000, ₹4,000, or ₹5,000 per month. The pension is paid from age 60 for life. On death after 60, the same pension continues for the spouse for life. On the death of both subscriber and spouse, the guaranteed corpus (₹1.7L to ₹8.5L depending on the tier) is returned to the nominee. The pension is guaranteed by the government regardless of underlying NPS fund performance."
+    },
+    {
+      "q": "How is the monthly APY contribution determined?",
+      "a": "The monthly contribution depends on your age at enrolment and the pension tier chosen. The younger you join, the smaller the monthly contribution for the same pension. At age 25 for ₹5,000/month: ~₹376/month. At age 35: ~₹902/month. At age 40: ~₹1,454/month. PFRDA publishes the official contribution table — verify current amounts at pfrda.org.in before enrolling, as the tables may be updated. Contributions run by auto-debit from your savings account until you turn 60."
+    },
+    {
+      "q": "Can income-tax payers join APY?",
+      "a": "No. Since 1 October 2022, persons who are or have been income-tax payers are ineligible to open a new APY account (Government notification dated 10 August 2022). This excludes salaried employees filing ITR, people with rental/dividend/capital gains income requiring ITR, and businesspeople. Existing APY subscribers enrolled before this date continue normally and are not affected by this restriction. Verify the current eligibility rules at pfrda.org.in — this restriction has not been reversed as of mid-2026, but confirm before applying."
+    },
+    {
+      "q": "What happens if I miss APY contribution payments?",
+      "a": "Missed payments attract penalties: ₹1 per month for every ₹100 of unpaid contribution per default month. For example: ₹200/month contribution missed for 3 months = ₹600 arrear + (₹2 × 3 months × 3 months) = ₹18 penalty. Arrears plus penalties must be paid to regularise. After 6 continuous default months: account freezes (no further pension accrual). After 24 continuous default months: account is forcibly closed and the corpus (contributions + NPS returns minus penalties) is returned. Keep the APY-linked account funded with a buffer before each debit date."
+    },
+    {
+      "q": "Can I exit APY before age 60?",
+      "a": "Voluntary exit before age 60 is permitted under a 2023 amendment to the APY scheme (verify current status at pfrda.org.in). On voluntary premature exit, the subscriber receives the accumulated NPS corpus (contributions + actual investment returns minus charges) — not the guaranteed corpus. This may be less than total contributions if markets have underperformed. Earlier, premature exit was allowed only on death or terminal illness. The key difference from NPS: voluntary exit in APY does not give the 'guaranteed corpus' — only the actual fund value. On death before 60: spouse can close and receive full corpus, or continue to receive the pension from age 60."
+    },
+    {
+      "q": "Is APY better than NPS for retirement?",
+      "a": "APY vs NPS depends on income-tax status and risk preference. APY: guaranteed ₹1,000–₹5,000/month pension regardless of market; only for non-income-tax payers (since Oct 2022); no tax deduction benefit. NPS: market-linked, higher expected return but non-guaranteed pension; available to everyone; Section 80CCD(1B) gives ₹50,000 extra deduction beyond 80C cap. For informal non-tax-paying workers: APY's certainty and simplicity is better. For formal-sector income-tax-paying employees: NPS is more appropriate (APY is ineligible for them anyway). The two are not alternatives for the same person after Oct 2022 — income-tax payers can only access NPS."
     },
     {
       "q": "What is the government co-contribution under APY?",
-      "a": "The government contributed 50% of the subscriber's contribution or ₹1,000/year (whichever is lower) for 5 years (2015–20) for eligible subscribers. New subscribers from FY 2022 onwards who are income taxpayers are not eligible for government co-contribution."
-    },
-    {
-      "q": "Is the APY Calculator free?",
-      "a": "Yes, the APY Calculator on CalcPhi is completely free with no registration required."
-    },
-    {
-      "q": "Are my inputs stored?",
-      "a": "No. All calculations run in your browser. We do not store any financial data."
-    },
-    {
-      "q": "Can I use the APY Calculator on mobile?",
-      "a": "Yes. CalcPhi is fully mobile-optimised and works on all modern smartphones."
-    }
-  ],
-  "examples": [
-    {
-      "heading": "28-year-old targeting ₹3,000/month pension",
-      "text": "A 28-year-old subscribing to APY for ₹3,000/month pension contributes ₹376/month for 32 years (total ₹1,44,192). At 60, they receive ₹3,000/month (₹36,000/year) guaranteed for life."
-    },
-    {
-      "heading": "Starting late at 35 for ₹5,000/month pension",
-      "text": "Joining APY at 35 for ₹5,000/month pension requires ₹902/month for 25 years (total ₹2,70,600). The corpus at 60 is ₹8.5 lakh. Starting at 25 for the same pension requires only ₹376/month — early start saves significantly."
+      "a": "The government co-contribution of 50% of the subscriber's annual contribution (maximum ₹1,000/year for 5 years) was available only to subscribers who joined between 1 June 2015 and 31 March 2020 and were not income-tax payers or statutory social security scheme members. This window is fully closed — no government co-contribution is available to new joiners. New APY subscribers after 2020 receive no government co-contribution under any circumstances. The pension guarantee remains government-backed regardless, but the co-contribution incentive does not apply."
     }
   ],
   "related": [
     {
       "title": "NPS Calculator",
-      "url": "/india/nps-calculator/"
+      "url": "/india/nps-calculator/",
+      "desc": "Market-linked alternative to APY for income-tax-paying investors"
     },
     {
       "title": "EPF Calculator",
-      "url": "/india/epf-calculator/"
+      "url": "/india/epf-calculator/",
+      "desc": "EPF corpus projection for salaried employees — complements APY for informal workers"
     },
     {
       "title": "Retirement Corpus Calculator",
-      "url": "/india/retirement-corpus-calculator/"
+      "url": "/india/retirement-corpus-calculator/",
+      "desc": "Calculate how much corpus you need to fund your full retirement — APY covers only part"
     }
   ]
 }
