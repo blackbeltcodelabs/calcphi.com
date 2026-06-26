@@ -20,7 +20,6 @@
       </a>
 
       <!-- Primary nav -->
-      {% if page.url != "/" %}
       <nav class="cp-nav" aria-label="Primary navigation">
         <a href="/india/"
            {% if page.url.startsWith('/india/') and not page.url.startsWith('/india/blog/') %}aria-current="true"{% endif %}>
@@ -43,7 +42,6 @@
           Contact
         </a>
       </nav>
-      {% endif %}
 
       <div style="flex:1"></div>
 
