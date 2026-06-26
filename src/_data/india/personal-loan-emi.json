@@ -1,120 +1,147 @@
 {
   "id": "personal-loan-emi",
-  "schema": {
-    "appName": "Personal Loan EMI Calculator",
-    "appDescription": "Calculate personal loan EMI for any loan amount, interest rate, and tenure. Compare lender offers before you sign."
-  },
+  "formulaEngine": "emi",
   "inputs": [
     {
       "id": "loan-amount",
       "label": "Personal Loan Amount (₹)",
       "min": 10000,
-      "max": 100000000,
+      "max": 5000000,
       "step": 10000,
-      "value": 2000000,
-      "hint": "Total personal loan amount"
+      "value": 500000,
+      "hint": "Personal loans are unsecured — no collateral. Typical range: ₹50,000 to ₹40 lakh depending on income and lender."
     },
     {
       "id": "interest-rate",
       "label": "Interest Rate (% p.a.)",
       "min": 1,
-      "max": 30,
+      "max": 36,
       "step": 0.1,
-      "value": 8.5,
-      "hint": "Annual interest rate"
+      "value": 14,
+      "hint": "Typical personal loan range varies by CIBIL score and lender — verify current rates. Enter your actual quoted rate."
     },
     {
       "id": "loan-tenure",
       "label": "Loan Tenure (Months)",
       "min": 6,
-      "max": 360,
+      "max": 84,
       "step": 6,
-      "value": 240,
-      "hint": "Repayment period in months"
+      "value": 36,
+      "hint": "Personal loans: typically 12–60 months; some lenders allow up to 84 months."
     }
   ],
   "outputs": [
-    {
-      "id": "monthly-emi",
-      "label": "Monthly EMI",
-      "highlight": true
-    },
-    {
-      "id": "total-interest",
-      "label": "Total Interest Payable"
-    },
-    {
-      "id": "total-payment",
-      "label": "Total Payment"
-    }
+    { "id": "monthly-emi", "label": "Monthly EMI", "highlight": true },
+    { "id": "total-interest", "label": "Total Interest Payable" },
+    { "id": "total-payment", "label": "Total Payment" }
   ],
-  "formulaEngine": "emi",
-  "howToSteps": [
+  "staticTable": {
+    "caption": "Total interest on ₹5 lakh personal loan at different rates — 3-year tenure (illustrative; verify current rates with lenders)",
+    "headers": ["Rate (% p.a.)", "Monthly EMI (₹)", "Total Interest (₹)", "Total Paid (₹)"],
+    "rows": [
+      ["11% (top CIBIL)", "₹16,319", "₹87,484", "₹5,87,484"],
+      ["14% (CIBIL 720–749)", "₹17,090", "₹1,15,240", "₹6,15,240"],
+      ["18% (CIBIL 680–719)", "₹18,074", "₹1,50,664", "₹6,50,664"],
+      ["24% (CIBIL below 680)", "₹19,616", "₹2,06,176", "₹7,06,176"]
+    ]
+  },
+  "articleSections": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the Personal Loan EMI Calculator. All inputs have smart defaults."
+      "id": "how-personal-loan-emi-works",
+      "heading": "How Personal Loan EMI Is Calculated — Reducing Balance, Flat Rate Trap, and True Total Cost",
+      "body": "<p>Personal loan EMI uses reducing-balance compounding: <strong>EMI = P × r × (1+r)^n / ((1+r)^n − 1)</strong>, where P is the loan amount, r is the monthly interest rate (annual rate ÷ 12 ÷ 100), and n is the tenure in months. Each EMI you pay reduces the outstanding principal; the interest charged in the next month falls because the principal is now smaller. This means your EMI stays constant but the interest-to-principal ratio shifts over time — early EMIs are heavily interest-weighted, later EMIs are mostly principal.</p><p><strong>Worked example — ₹5L at 14% for 36 months:</strong> Monthly rate r = 14 ÷ 12 ÷ 100 = 0.011667. (1.011667)^36 ≈ 1.5183. EMI = 5,00,000 × 0.011667 × 1.5183 / (1.5183 − 1) = 5,00,000 × 0.017714 / 0.5183 ≈ <strong>₹17,090/month</strong>. Over 36 months: total paid ₹6,15,240; total interest ₹1,15,240 — you pay ₹1.15L for borrowing ₹5L over 3 years.</p><p><strong>The flat rate trap:</strong> Some lenders or DSAs advertise personal loans at a 'flat rate' of 7–8%. Flat rate means interest is calculated on the original principal every month regardless of repayment: total interest = P × flat_rate × n/12. For ₹5L at 8% flat over 36 months: total interest = 5,00,000 × 8% × 3 = ₹1,20,000, EMI = 6,20,000 ÷ 36 = ₹17,222. The effective reducing-balance rate equivalent is approximately 14.5% — almost double the advertised 8% flat. Always convert flat rates to effective annual rates before comparing lender offers.</p><p><strong>Total cost, not just EMI, is the right comparison metric:</strong> A lender quoting ₹16,500 EMI (3 years) vs another at ₹14,800 (5 years) for the same ₹5L cannot be compared on EMI alone. Total interest at ₹16,500 × 36 − ₹5L = ₹94,000 vs ₹14,800 × 60 − ₹5L = ₹3,88,000. The lower EMI costs ₹2.94L more in interest. This calculator shows both EMI and total interest — always use total interest for cross-lender comparison.</p>"
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time as you type — no submit button needed."
+      "id": "personal-loan-scenarios",
+      "heading": "Three Personal Loan Decisions That Show How CIBIL Score, Tenure, and Consolidation Change the Real Cost",
+      "body": "<h3>Scenario 1: Vikram, 32, ₹5L for home appliances — the CIBIL score premium</h3><p>Vikram receives two personal loan offers for ₹5 lakhs over 36 months:</p><ul><li><strong>Bank A (CIBIL 745 — qualifying for 14% rate):</strong> EMI ₹17,090, total interest ₹1,15,240.</li><li><strong>NBFC B (CIBIL 710 — qualifying for 18% rate):</strong> EMI ₹18,074, total interest ₹1,50,664.</li></ul><p>The 4% rate difference on ₹5L over 3 years costs ₹35,424 extra — paid entirely because of Vikram's CIBIL score placing him in a different bracket. Had Vikram taken 6 months before applying to clear a long-standing credit card default (which he later confirmed was erroneous), his CIBIL would have reached 750+ and he'd have qualified for Bank A's 11% rate, saving ₹63,756 over 3 years on the same ₹5L. The credit bureau check is worth running before applying.</p><h3>Scenario 2: Sunita, 28, ₹3L debt consolidation — replacing 3 credit cards with a single personal loan</h3><p>Sunita carries balances on three credit cards totalling ₹3L, each charging 3% per month (36% per annum). Her monthly interest burden on the aggregate balance is ₹9,000 — and the minimum payment of ₹6,000 barely dents the principal. At 36% annual interest on ₹3L, she would take over 7 years to clear the cards paying minimums, and pay over ₹2L in interest.</p><p>She takes a personal loan at 18% for 36 months: EMI = ₹10,844, total interest = ₹90,384. After 36 months, she is completely debt-free. The personal loan saves her approximately ₹1.1L in interest vs staying on the minimum payment cycle. The critical condition for consolidation to work: she must not accumulate new card debt during the 36 months. She cuts two cards immediately after the balance transfer and retains one for emergency use with a ₹20,000 limit.</p><h3>Scenario 3: Mohan, 45, ₹8L — choosing 3-year tenure over 5-year to minimise total cost</h3><p>Mohan needs ₹8L for his daughter's college fees and receives this offer: ₹8L at 16% — EMI ₹28,121 for 36 months or ₹19,452 for 60 months.</p><p>3-year option: total interest ₹2,12,356. 5-year option: total interest ₹3,67,120. Difference: ₹1,54,764 more interest for the 5-year option — paid to get a lower monthly outflow of ₹8,669.</p><p>Mohan's monthly take-home is ₹90,000. Total existing EMIs: ₹18,000. For the 3-year loan: new total EMI = ₹46,121 (51.2% FOIR — borderline). For the 5-year loan: new total EMI = ₹37,452 (41.6% FOIR — comfortable). His bank uses 50% FOIR — either qualifies. He chooses 3 years, saving ₹1.55L in total interest, and plans to prepay from his annual bonus. <strong>Note: personal loan interest is not tax-deductible</strong> under any income tax provision — the entire interest is paid from post-tax income.</p>"
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown table to see how your numbers change over time."
+      "id": "personal-loan-rules",
+      "heading": "Personal Loan Regulations — No Tax Deduction, RBI Prepayment Rule, Processing Fees, and FOIR Caps",
+      "body": "<p><strong>No income tax deduction on personal loan interest:</strong> Personal loan interest is not deductible under any section of the Income Tax Act for salaried individuals taking loans for personal consumption (travel, medical, home renovation, weddings, education abroad). This contrasts with home loans (Section 24(b) up to ₹2L/year interest, old regime; Section 80C principal within ₹1.5L) and education loans (Section 80E, interest deductible for 8 years). There is no analogous provision for personal loans. The full interest cost comes from post-tax income.</p><p><strong>RBI prepayment rule — floating-rate personal loans:</strong> Under RBI's Master Direction on Interest Rate on Advances, banks and lending institutions cannot levy any prepayment, foreclosure, or part-payment charges on floating-rate loans to individual borrowers. If your personal loan is on a floating rate linked to EBLR (External Benchmark Lending Rate) or MCLR, prepayment is penalty-free. Most personal loans are fixed-rate — for fixed-rate personal loans, lenders may charge 2–5% of the prepaid amount. Check your sanction letter's prepayment clause before making an early payment.</p><p><strong>Processing fee and APR impact:</strong> Personal loans carry processing fees of typically 1–3% of the loan amount, deducted upfront from disbursement. On a ₹5L loan with 2% processing fee: actual amount received = ₹4,90,000; you pay EMI on ₹5L. The effective Annual Percentage Rate (APR) including the processing fee is higher than the quoted interest rate. For a ₹5L at 14% for 36 months with 2% processing fee: effective APR ≈ 16.8%. When comparing lenders, ask for the total cost including all fees, not just the interest rate.</p><p><strong>FOIR limits for personal loans:</strong> Banks typically cap total EMI obligations at 40–45% of net monthly income for personal loans (stricter than the 50% allowed for home loans at some banks). Credit unions and some NBFCs may apply different FOIR norms. A personal loan that pushes total FOIR above the lender's threshold will be declined — or offered at a higher rate to compensate for perceived default risk.</p><p><strong>CIBIL score and rate brackets:</strong> TransUnion CIBIL (one of four credit bureaus licensed by RBI — others are CRIF High Mark, Equifax, Experian) provides the most widely used score in India. Typical personal loan rate brackets: score 750+ → best rates; 720–749 → standard rates; 680–719 → higher rates; below 680 → either declined or premium pricing. Check your CIBIL score for free once a year at cibil.com or through free tools offered by most banks' apps before applying.</p>"
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust the inputs to compare different scenarios and find the best option for your situation."
+      "id": "personal-loan-mistakes",
+      "heading": "What Personal Loan Borrowers Get Wrong",
+      "body": "<p><strong>Comparing EMIs without comparing total interest or tenure.</strong> Two EMI quotes of ₹17,000 and ₹15,000 for the same ₹5L look like a clear choice — but if the ₹15,000 EMI is for 48 months and the ₹17,000 is for 36 months, total interest may be ₹2.2L vs ₹1.15L. The lower EMI lender extracts more interest over time. Always compare total interest, not monthly EMI.</p><p><strong>Not accounting for the processing fee in total cost.</strong> A 1.5% processing fee on ₹5L is ₹7,500 paid upfront (deducted from disbursement). Over a 36-month loan, this effectively raises your APR by approximately 1.5–2%. When two lenders quote similar rates but different fees, compare the all-in cost (interest + processing fee + any other charges) to determine the cheaper option.</p><p><strong>Assuming personal loan interest is tax-deductible.</strong> This misconception leads to incorrect post-tax cost calculations. Personal loan interest provides zero tax benefit for personal use — every rupee of interest is paid from post-tax income. If someone in the 30% bracket borrows ₹5L and pays ₹1.15L in interest, the real cost in pre-tax equivalent is ₹1.64L. This is a significant difference from a home loan, where Section 24(b) deduction partially reduces the effective after-tax interest burden.</p><p><strong>Taking the first offer without negotiating or comparing.</strong> Personal loan rates have significant negotiation room — especially for employees of large corporations, government employees, and salary-account holders at the lending bank. Existing customers with a salary account at Bank X often get pre-approved personal loans at 1–2% lower than the standard rate. Calling to negotiate the processing fee down is almost always worth trying for loans above ₹2L — lenders frequently waive or halve it for salaried individuals with good credit.</p>"
     }
   ],
   "faq": [
     {
-      "q": "How accurate is the Personal Loan EMI Calculator?",
-      "a": "The Personal Loan EMI Calculator uses standard financial formulas. Results are indicative; actual figures depend on your lender or financial institution's policies."
+      "q": "What is the current personal loan interest rate in India?",
+      "a": "Personal loan rates vary by lender, CIBIL score, employer profile, and income level. As a general guide (verify current rates with specific lenders): applicants with CIBIL 750+ from large employers may qualify for rates starting from around 10–12%; CIBIL 720–749 typically attracts 13–16%; CIBIL below 700 may face 18–24% or outright rejection. Government employees and PSU workers typically access lower rates. Always get at least two quotes — personal loan rates are negotiable and lenders price each customer individually."
     },
     {
-      "q": "Is the Personal Loan EMI Calculator free to use?",
-      "a": "Yes, the Personal Loan EMI Calculator on CalcPhi is completely free with no registration required."
+      "q": "How is personal loan EMI calculated?",
+      "a": "EMI = P × r × (1+r)^n / ((1+r)^n − 1), where P = loan amount, r = monthly rate (annual rate ÷ 12 ÷ 100), n = months. Example: ₹5L at 14% for 36 months — r = 0.011667, (1.011667)^36 = 1.5183, EMI = 5,00,000 × 0.011667 × 1.5183 / 0.5183 ≈ ₹17,090/month. Total paid: ₹6,15,240. Total interest: ₹1,15,240. This calculator uses reducing-balance compounding — each EMI reduces the outstanding principal, and interest in the next month is charged on the smaller remaining balance."
     },
     {
-      "q": "Are my data inputs stored?",
-      "a": "No. All calculations happen in your browser. We do not store any of your financial data."
+      "q": "Is personal loan interest tax-deductible in India?",
+      "a": "No. Personal loan interest is not deductible under any provision of the Income Tax Act for salaried individuals borrowing for personal use (travel, wedding, medical, home renovation). There is no Section 24(b) equivalent (that applies only to home loans), no Section 80E (only for education loans). The full interest cost comes from post-tax income. There is no tax benefit to being a personal loan borrower — this is an important distinction from home loans and education loans."
     },
     {
-      "q": "How often are the Personal Loan EMI Calculator rates updated?",
-      "a": "Rates in examples are updated periodically to reflect current market conditions. Always verify with your bank or advisor."
+      "q": "What is the maximum personal loan amount I can get?",
+      "a": "Maximum personal loan amount depends on: income (most lenders cap at 20–25× net monthly income), CIBIL score (below 650 may limit availability), employer profile (listed companies and government employees get higher limits), and existing EMI obligations (FOIR cap of 40–45% of net income for personal loans). Most banks cap personal loans at ₹25–₹40 lakh for salaried employees; some large banks and NBFCs go up to ₹50 lakh. Use the Loan Eligibility Calculator to estimate the loan amount supportable by your income."
     },
     {
-      "q": "Can I use the Personal Loan EMI Calculator on mobile?",
-      "a": "Yes. CalcPhi is fully mobile-optimised. The calculator works on all modern smartphones and tablets."
+      "q": "Can I prepay a personal loan without penalty?",
+      "a": "For floating-rate personal loans to individuals, the RBI Master Direction on Interest Rate on Advances prohibits prepayment and foreclosure charges. Most personal loans are fixed-rate — for fixed-rate loans, lenders may charge 2–5% of the outstanding amount on foreclosure. Check your sanction letter. Some lenders allow part-prepayment (not full foreclosure) after a lock-in period of 6–12 EMIs, with a fee only on foreclosure. Always clarify prepayment terms before signing — it affects how valuable a bonus deployment becomes."
     },
     {
-      "q": "Who should use this calculator?",
-      "a": "Anyone in India planning their finances can benefit from the Personal Loan EMI Calculator. It's designed for both beginners and experienced investors."
+      "q": "What CIBIL score is required for a personal loan?",
+      "a": "Most banks require a minimum CIBIL score of 700–720 for a personal loan; premium rates (10–12% range, verify current) typically require 750+. Below 650, most scheduled banks will decline — some NBFCs may lend at higher rates. Check your CIBIL score free once a year at cibil.com or via your bank's app before applying. CIBIL is one of four RBI-licensed credit bureaus in India — others are CRIF High Mark, Equifax India, and Experian India. All four produce similar scores though lenders have preferences."
+    },
+    {
+      "q": "What is the difference between a flat interest rate and a reducing-balance rate?",
+      "a": "Flat rate: interest is calculated on the original principal for every month of the tenure. Total interest = P × flat_rate × (n/12). Reducing-balance rate: interest is calculated each month only on the outstanding principal — which falls with each EMI payment. For the same loan, a flat rate of 7–8% is equivalent to approximately 13–15% on a reducing-balance basis. If a lender quotes a flat rate, convert to effective rate before comparing: effective rate ≈ flat rate × 1.83 for 3-year tenure. Always ask lenders whether their quoted rate is flat or reducing-balance."
+    },
+    {
+      "q": "How does FOIR affect my personal loan eligibility?",
+      "a": "FOIR (Fixed Obligation to Income Ratio) measures total EMIs as a percentage of net monthly income. Most lenders cap personal loan FOIR at 40–45% of net take-home (stricter than the 50% allowed for home loans). Example: ₹80,000 net salary, existing EMIs ₹15,000, 40% FOIR cap → available EMI = ₹80,000 × 40% − ₹15,000 = ₹17,000. At 14% for 36 months, a ₹17,000 available EMI supports a personal loan of approximately ₹4.95L. Clearing an existing loan before applying for a personal loan directly increases your FOIR headroom and maximum eligible amount."
+    },
+    {
+      "q": "What documents are required for a personal loan?",
+      "a": "Standard documentation for salaried employees: KYC (Aadhaar + PAN), last 3 months' salary slips, last 6 months' bank statements (primary salary account), Form 16 or last 2 years' ITR, and employer ID or offer letter. Self-employed: ITR for last 2–3 years, CA-certified P&L and balance sheet, 12 months' business account statements. Government employees: often require only pay slip and service certificate. Pre-approved digital personal loans (from salary-account banks) may require only Aadhaar-based OTP verification with no physical documents."
     }
   ],
-  "examples": [
+  "howToSteps": [
     {
-      "heading": "₹20 lakh personal loan at 8.5% for 20 years",
-      "text": "A ₹20 lakh personal loan at 8.5% p.a. over 20 years results in an EMI of approximately ₹17,357. Total interest paid over the term is ₹21.66 lakh — making total cost ₹41.66 lakh."
+      "name": "Enter Your Loan Amount",
+      "text": "Enter the personal loan amount you need. Check with the lender whether this amount is within the maximum they offer for your income and CIBIL score before calculating — use the Loan Eligibility Calculator to estimate your eligible amount."
     },
     {
-      "heading": "₹50 lakh personal loan at 9% for 15 years",
-      "text": "Borrowing ₹50 lakh at 9% for 15 years gives an EMI of ₹50,713. Total interest is ₹41.28 lakh. Reducing tenure to 10 years cuts total interest to ₹26.03 lakh, saving ₹15.25 lakh."
+      "name": "Enter Your Quoted Interest Rate",
+      "text": "Enter the rate from your lender's actual quote, not the advertised minimum. Rates are individual-specific. If comparing two lenders, run this calculator twice with each rate to compare total interest — not just the monthly EMI."
+    },
+    {
+      "name": "Set the Tenure",
+      "text": "Shorter tenure = higher EMI but much lower total interest. Compare the 3-year vs 5-year total interest using the table — the difference is often ₹1–₹2 lakhs on a ₹5L loan. Choose the shortest tenure your monthly cash flow can support."
+    },
+    {
+      "name": "Check Total Interest — Not Just EMI",
+      "text": "EMI alone is the wrong comparison metric. Use total interest payable from this calculator. Add the processing fee (typically 1–3% of loan amount) to total interest for a true all-in cost. Then compare two lenders on this all-in number."
     }
   ],
   "related": [
     {
-      "title": "Home Loan EMI Calculator",
-      "url": "/india/home-loan-emi-calculator/"
-    },
-    {
-      "title": "Car Loan EMI Calculator",
-      "url": "/india/car-loan-emi-calculator/"
-    },
-    {
       "title": "Loan Eligibility Calculator",
-      "url": "/india/loan-eligibility-calculator/"
+      "url": "/india/loan-eligibility-calculator/",
+      "desc": "Calculate maximum personal or home loan amount based on income and FOIR"
+    },
+    {
+      "title": "Loan Prepayment Calculator",
+      "url": "/india/loan-prepayment-calculator/",
+      "desc": "See how much interest a lump sum prepayment saves on your personal loan"
+    },
+    {
+      "title": "Gold Loan Calculator",
+      "url": "/india/gold-loan-calculator/",
+      "desc": "Compare secured gold loan cost if you have pledgeable gold"
     }
-  ]
+  ],
+  "schema": {
+    "appName": "Personal Loan EMI Calculator India",
+    "appDescription": "Calculate personal loan EMI and total interest cost. Compare rates by CIBIL score bracket, understand flat vs reducing-balance rates, and model the true all-in cost including processing fees."
+  }
 }

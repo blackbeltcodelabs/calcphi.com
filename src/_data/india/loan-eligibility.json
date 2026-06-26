@@ -2,26 +2,26 @@
   "id": "loan-eligibility",
   "schema": {
     "appName": "Loan Eligibility Calculator India",
-    "appDescription": "Calculate maximum loan amount you are eligible for based on net income, existing EMIs, and lender FOIR norms. Applies for home, car, and personal loans."
+    "appDescription": "Calculate maximum home or personal loan eligibility based on net income, existing EMIs, FOIR, interest rate, and tenure. Understand how CIBIL score, co-borrower, and lender FOIR tolerance affect your eligible amount."
   },
   "inputs": [
     {
       "id": "le-income",
-      "label": "Net Monthly Income (\u20b9)",
+      "label": "Net Monthly Income (₹)",
       "min": 10000,
       "max": 1000000,
       "step": 1000,
-      "value": 80000,
-      "hint": "Take-home salary after all deductions"
+      "value": 100000,
+      "hint": "Take-home salary after all deductions — use net, not gross. For self-employed, use average net monthly profit from last 2 ITRs."
     },
     {
       "id": "le-existing",
-      "label": "Existing Monthly EMIs (\u20b9)",
+      "label": "Existing Monthly EMIs (₹)",
       "min": 0,
       "max": 500000,
       "step": 1000,
-      "value": 10000,
-      "hint": "Total of all current loan EMIs"
+      "value": 15000,
+      "hint": "Total of all current EMIs — car, personal, education loans. Include credit card minimum payment if it appears on CIBIL."
     },
     {
       "id": "le-rate",
@@ -29,7 +29,8 @@
       "min": 1,
       "max": 30,
       "step": 0.1,
-      "value": 8.5
+      "value": 8.5,
+      "hint": "Enter the rate quoted by your lender — home loan, personal loan, or car loan. Verify current rates with the specific lender."
     },
     {
       "id": "le-tenure",
@@ -37,86 +38,115 @@
       "min": 1,
       "max": 30,
       "step": 1,
-      "value": 20
+      "value": 20,
+      "hint": "Longer tenure reduces per-lakh EMI and increases eligible loan. Home loans: up to 30 years; personal loans: typically up to 5–7 years."
     }
   ],
   "outputs": [
-    {
-      "id": "le-max-emi",
-      "label": "Maximum EMI Capacity"
-    },
-    {
-      "id": "le-max-loan",
-      "label": "Maximum Loan Eligible",
-      "highlight": true
-    },
-    {
-      "id": "le-foir",
-      "label": "Current FOIR (Fixed Obligation to Income Ratio)"
-    }
+    { "id": "le-max-emi", "label": "Maximum EMI Capacity" },
+    { "id": "le-max-loan", "label": "Maximum Loan Eligible", "highlight": true },
+    { "id": "le-foir", "label": "Current FOIR (Fixed Obligation to Income Ratio)" }
   ],
-  "howToSteps": [
+  "staticTable": {
+    "caption": "Maximum home loan eligible at 8.5% for 20 years — income and existing EMI combinations (50% FOIR)",
+    "headers": ["Net Monthly Income (₹)", "Existing EMIs (₹)", "Available EMI (₹)", "Max Loan Eligible (₹)"],
+    "rows": [
+      ["₹60,000", "₹0", "₹30,000", "₹34.6L"],
+      ["₹80,000", "₹12,000", "₹28,000", "₹32.3L"],
+      ["₹1,00,000", "₹15,000", "₹35,000", "₹40.3L"],
+      ["₹1,00,000", "₹0", "₹50,000", "₹57.6L"],
+      ["₹1,50,000", "₹20,000", "₹55,000", "₹63.4L"]
+    ]
+  },
+  "articleSections": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the Loan Eligibility Calculator. All inputs have smart defaults."
+      "id": "how-loan-eligibility-works",
+      "heading": "How Banks Calculate Your Loan Eligibility — FOIR Formula, Available EMI, and Maximum Loan",
+      "body": "<p>Banks determine the maximum loan they will sanction using a two-step process. First: calculate the maximum EMI your income can support. Second: determine the loan amount that produces this EMI at the agreed rate and tenure.</p><p><strong>Step 1 — Maximum allowable EMI via FOIR:</strong> FOIR (Fixed Obligation to Income Ratio) is the fraction of your net monthly income that can go towards all EMI obligations combined. Formula: Maximum Total EMI = Net Monthly Income × FOIR%. Subtract existing EMIs to get the available EMI for the new loan: Available EMI = (Net Income × FOIR%) − Existing EMIs.</p><p>Example: ₹1L net income, ₹15K existing EMIs, 50% FOIR → Max total EMI = ₹50,000. Available EMI = ₹50,000 − ₹15,000 = <strong>₹35,000</strong>.</p><p><strong>Step 2 — Maximum loan from available EMI:</strong> Using the EMI formula in reverse: Max Loan = Available EMI × [(1+r)^n − 1] / [r × (1+r)^n], where r = monthly rate and n = months. At 8.5% for 20 years: (1.007083)^240 ≈ 5.44. Max Loan = ₹35,000 × 4.44 / (0.007083 × 5.44) = ₹35,000 × 4.44 / 0.03851 = ₹35,000 × 115.3 ≈ <strong>₹40.3L</strong>.</p><p><strong>FOIR benchmark by loan type:</strong> Home loans: most banks allow up to 50% FOIR; some allow up to 55–60% for high-income borrowers with excellent CIBIL. Personal loans: 40–45% FOIR. Car loans: 45–50% FOIR. These differ because lenders view secured home loans (with property as collateral) as lower-default-risk than unsecured personal loans — so they tolerate higher FOIR on home loans.</p><p><strong>Which income counts:</strong> Most banks use net (take-home) monthly income, not gross. For salaried employees: salary slip's net amount or bank credit average for last 3 months. For self-employed: average monthly income from the last 2 years' ITR net profit — some lenders add back depreciation. Rental income, variable components, and bonuses: some banks include 50–75% of regular variable pay; others exclude it. Ask your lender exactly what they will use in the FOIR calculation.</p>"
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time as you type \u2014 no submit button needed."
+      "id": "loan-eligibility-scenarios",
+      "heading": "Three Eligibility Scenarios — FOIR Differences Between Lenders, Co-Borrower Uplift, and CIBIL Score Impact",
+      "body": "<h3>Scenario 1: Arun, 33, ₹80K net salary — the ₹9.3L eligibility gap between two lenders on the same profile</h3><p>Arun has a net salary of ₹80,000/month and an existing car loan EMI of ₹12,000. He applies to two banks for a home loan at 8.5% for 20 years.</p><p>Bank A (40% FOIR): Max total EMI = ₹80,000 × 40% = ₹32,000. Available EMI = ₹32,000 − ₹12,000 = ₹20,000. Max home loan = ₹20,000 × 115.3 = <strong>₹23.1L</strong>.</p><p>Bank B (50% FOIR): Max total EMI = ₹80,000 × 50% = ₹40,000. Available EMI = ₹40,000 − ₹12,000 = ₹28,000. Max home loan = ₹28,000 × 115.3 = <strong>₹32.3L</strong>.</p><p>Same borrower, same income, same existing EMI — but ₹9.2L difference in eligible loan purely from FOIR tolerance. This difference is why applying to a lender whose FOIR norms match your profile matters. Bank B (or lenders offering 50% FOIR on home loans with good CIBIL) is meaningfully better for Arun.</p><h3>Scenario 2: Priya and husband add as co-borrower — home loan eligibility nearly doubles</h3><p>Priya earns ₹1L/month net. No existing EMIs. At 50% FOIR and 8.5% for 20 years, her solo eligibility: Available EMI = ₹50,000. Max loan = ₹50,000 × 115.3 = <strong>₹57.6L</strong>.</p><p>Her husband earns ₹80,000 net and has no existing EMIs. Adding him as co-borrower: Combined net income = ₹1.8L. Combined existing EMIs = ₹0. Available EMI at 50% FOIR = ₹90,000. Max joint home loan = ₹90,000 × 115.3 = <strong>₹1.04 crore</strong>.</p><p>Co-borrower addition increases eligible loan from ₹57.6L to ₹1.04 crore — nearly double. Most banks accept working spouses, working parents, and working children as co-borrowers. The co-borrower's income is fully added to the FOIR calculation. If the co-borrower also has existing EMIs, those are added to the 'existing EMI' deduction.</p><p>One additional benefit: co-borrowing with a spouse who is also co-owner of the property means both can claim Section 24(b) interest deduction (up to ₹2L each, old regime) on their respective ITRs — potentially doubling the home loan tax benefit for a couple in the old regime.</p><h3>Scenario 3: Kumar improves CIBIL from 680 to 762 — rate and FOIR tolerance both improve</h3><p>Kumar applies for a home loan at CIBIL 680. Lender offers: 9.5% rate, 40% FOIR cap (risk-adjusted), 20 years. Net salary: ₹95,000. No existing EMIs.</p><p>At 680 CIBIL: Available EMI = ₹95,000 × 40% = ₹38,000. At 9.5% for 20 years: (1.00792)^240 ≈ 6.462. Max loan = ₹38,000 × 5.462/0.05121 = ₹38,000 × 106.7 = <strong>₹40.5L</strong>.</p><p>Kumar spends 12 months: clears a defaulted credit card (which was showing overdue status on CIBIL), reduces credit card utilisation from 80% to 25%, and avoids any fresh loan application. CIBIL reaches 762. New lender offer: 8.5% rate, 50% FOIR tolerance.</p><p>At 762 CIBIL: Available EMI = ₹95,000 × 50% = ₹47,500. At 8.5% for 20 years: Max loan = ₹47,500 × 115.3 = <strong>₹54.8L</strong>.</p><p>12 months of credit repair: eligible loan rises by ₹14.3L, and the lower rate of 8.5% vs 9.5% over 20 years on ₹50L saves approximately ₹7.9L in total interest. The combined benefit of the CIBIL improvement: ₹14.3L more loan + ₹7.9L interest saving = over ₹22L improvement.</p>"
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown to see how numbers evolve year by year."
+      "id": "loan-eligibility-rules",
+      "heading": "Bank Eligibility Rules — FOIR Standards, CIBIL Bureaus, Age Constraints, and What Actually Goes Into the Calculation",
+      "body": "<p><strong>FOIR norms by lender and loan type:</strong> SBI: typically 50% FOIR for home loans (some flexibility for high-income borrowers); HDFC Bank: 50–55% for high credit quality; ICICI Bank: up to 60% for select profiles. Personal loan FOIR: typically 40–45%. These are indicative — lenders adjust norms based on employer category, income source, and credit history. A government employee at SBI may face a more generous FOIR than a startup employee at the same bank.</p><p><strong>Four RBI-licensed credit bureaus in India:</strong> TransUnion CIBIL (most widely used), CRIF High Mark, Equifax India, and Experian India. All four collect the same loan and credit card data from member banks and generate credit scores. Each bureau's scoring algorithm differs slightly, which is why your CIBIL score and your CRIF score may differ by 10–20 points for the same profile. Most major banks primarily use CIBIL, though some PSUs and NBFCs use CRIF. Check your score at each bureau once a year for free.</p><p><strong>Age constraint on loan tenure:</strong> Most banks cap home loan maturity age at 60–65 for salaried employees (retirement age). For a 45-year-old applying for a home loan, the maximum tenure is 15–20 years (depending on the bank's retirement age assumption for their employer category). This directly caps the available EMI: shorter tenure = higher per-lakh EMI = lower eligible loan for the same income. A 45-year-old with ₹1L income gets a smaller home loan than a 30-year-old with the same income, purely due to tenure constraint.</p><p><strong>What counts as 'existing EMIs' in FOIR:</strong> Banks include in existing obligations: all active loan EMIs (home, car, personal, education), credit card minimum payment amounts (if these appear in CIBIL data — some banks include this, others don't), and any legally committed fixed financial obligations. They typically do not include: insurance premiums, SIP amounts, rent, or discretionary spending. If your credit card shows a high balance in CIBIL, some lenders add 5% of the balance as a notional EMI obligation even if you pay in full each month.</p><p><strong>Income types and their treatment:</strong> Base salary: 100% included. Variable pay/bonus: 50–75% of last 12 months' average, depending on the lender's policy. Rental income: typically 60–75% included (with legal documentation). Business income for self-employed: average of last 2 years' ITR net profit. Agricultural income: some lenders accept but require land documents and state-specific treatment.</p>"
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust inputs to compare different scenarios and find the best option for you."
+      "id": "loan-eligibility-mistakes",
+      "heading": "What Loan Applicants Get Wrong When Calculating Eligibility",
+      "body": "<p><strong>Using gross salary instead of net take-home in the FOIR calculation.</strong> Gross salary (CTC) is meaningless for FOIR — banks use net take-home (after PF, ESI, income tax TDS, and professional tax deductions). If your CTC is ₹18L/year (₹1.5L/month gross) but your net take-home is ₹95,000, the FOIR calculation uses ₹95,000, not ₹1.5L. A common overestimate: someone calculates eligibility using ₹1.5L gross and arrives at ₹1.05 crore eligible loan, then discovers the bank uses ₹95K net and offers only ₹66L. Use your actual salary account credit amount — what actually hits your bank account each month.</p><p><strong>Forgetting credit card minimum payments as an existing obligation.</strong> If your CIBIL report shows high credit card balances, some lenders add 5% of the outstanding balance as a notional monthly obligation in the FOIR calculation — even if you never miss a payment. A ₹2L credit card balance might add ₹10,000 to your assumed monthly obligations, reducing eligible loan by approximately ₹11.5L. Keeping credit card utilisation below 30% before applying for a home loan significantly reduces this effect.</p><p><strong>Assuming the loan eligibility calculator output is the final bank offer.</strong> This calculator computes the mathematical FOIR-based maximum. Banks also apply property-specific LTV (for home loans), employment stability checks (some banks require 2+ years at the same employer), employer category norms, and their own internal credit models. The calculator gives an estimate of where to start; the actual sanctioned amount may differ based on any of these overlapping criteria.</p><p><strong>Not checking eligibility before making a property booking.</strong> Many home buyers pay a booking token (typically ₹1–2L) on a property and then approach a bank for a loan — discovering they are eligible for much less than they expected. The sequence should be: check eligibility → identify budget range → search for property → book. Reversing this sequence wastes booking amounts and creates emotional and financial pressure to compromise on the loan terms.</p>"
     }
   ],
   "faq": [
     {
-      "q": "How do banks calculate loan eligibility?",
-      "a": "Banks use FOIR (Fixed Obligation to Income Ratio) \u2014 typically 40\u201350% of net income. If your net salary is \u20b980,000, you can have total EMIs (existing + new) of \u20b932,000\u2013\u20b940,000. The remaining EMI capacity determines the maximum loan. Credit score, employer category, and age also affect final eligibility."
+      "q": "How do banks calculate maximum loan eligibility?",
+      "a": "Banks use FOIR (Fixed Obligation to Income Ratio). Maximum eligible loan = Available EMI × [(1+r)^n − 1] / [r × (1+r)^n], where Available EMI = (Net income × FOIR%) − existing EMIs. Example: ₹1L net salary, ₹15K existing EMIs, 50% FOIR, 8.5% rate, 20-year tenure → Available EMI = ₹35,000 → Max loan ≈ ₹40.3L. FOIR norms vary by lender and loan type: home loans typically up to 50%; personal loans 40–45%. CIBIL score, employer category, and age also influence the final sanction."
     },
     {
-      "q": "What FOIR do banks use for home loans?",
-      "a": "Most banks allow FOIR up to 50% for home loans with good credit scores. SBI uses 50% FOIR, HDFC 50%, ICICI up to 55% for high-income applicants. For personal loans, FOIR is typically capped at 40\u201345%."
+      "q": "What is FOIR in a home loan?",
+      "a": "FOIR stands for Fixed Obligation to Income Ratio. It measures total monthly EMI commitments (all existing loans + proposed new loan) as a percentage of net monthly income. Formula: FOIR% = Total Monthly EMIs / Net Monthly Income × 100. Most banks cap home loan FOIR at 40–50% — meaning your total monthly loan obligations cannot exceed this percentage of your take-home pay. A borrower with ₹80,000 net income and 50% FOIR has a maximum total EMI capacity of ₹40,000 across all loans combined."
+    },
+    {
+      "q": "How does CIBIL score affect loan eligibility?",
+      "a": "CIBIL score affects both the interest rate offered and the FOIR tolerance a lender applies. With a score above 750: best rates and maximum FOIR tolerance (50% or above). With 700–749: standard rates and standard FOIR. With 650–699: higher rates and lower FOIR tolerance (40%). Below 650: many lenders decline entirely; some NBFCs may lend at significantly higher rates. Improving CIBIL from 680 to 760 can increase eligible loan amount by ₹10–15L on a ₹1L salary purely from the combined effect of lower rate + higher FOIR. TransUnion CIBIL, CRIF High Mark, Equifax India, and Experian India are India's four RBI-licensed credit bureaus."
+    },
+    {
+      "q": "How does adding a co-borrower increase loan eligibility?",
+      "a": "A co-borrower's income is fully added to the FOIR calculation. If Priya (₹1L net salary) adds her husband (₹80K net salary) as co-borrower, their combined income = ₹1.8L. At 50% FOIR with no existing EMIs, combined available EMI = ₹90,000. At 8.5% for 20 years, max eligible loan = ₹1.04 crore, vs ₹57.6L on Priya's solo income. The co-borrower does not need to be a co-owner of the property in all cases — check your specific bank's policy. Most banks accept spouse, parent, or adult child as co-borrower."
+    },
+    {
+      "q": "What is the maximum home loan tenure available in India?",
+      "a": "Maximum home loan tenure at most Indian banks is 30 years, subject to the condition that the loan must mature before the primary borrower's retirement age (typically 60–65 for salaried, 65–70 for self-employed). A 30-year-old can access the full 30-year tenure. A 45-year-old salaried borrower at a bank that caps maturity at age 60 can access only 15 years. Longer tenure reduces per-lakh EMI and increases eligible loan amount — but also increases total interest paid significantly. Use this calculator with different tenures to see the trade-off."
+    },
+    {
+      "q": "Do existing credit card dues reduce loan eligibility?",
+      "a": "Yes, in some lenders' models. Lenders who factor in credit card data may add 5% of the outstanding credit card balance as a notional monthly obligation in the FOIR calculation, even if you pay the full balance each month. A ₹2L outstanding credit card balance could add ₹10,000 to your FOIR obligations, reducing eligible home loan by approximately ₹11.5L. Keeping credit card balances low (ideally below 30% utilisation) in the 3–6 months before a loan application improves CIBIL score and reduces this notional obligation in FOIR calculations."
     },
     {
       "q": "How can I increase my loan eligibility?",
-      "a": "To increase eligibility: clear existing loans to reduce FOIR, add co-borrower (spouse), improve CIBIL score above 750, increase tenure (reduces EMI per lakh), choose a lender offering higher FOIR, and demonstrate stable income with ITR + salary slips."
+      "a": "Six proven approaches: (1) Clear existing loans to reduce FOIR obligations. (2) Add a co-borrower with income — income combining raises the eligible amount directly. (3) Improve CIBIL score above 750 — lenders apply higher FOIR tolerance and better rates. (4) Extend tenure — longer tenure reduces per-lakh EMI, increasing loan eligible for the same available EMI. (5) Choose a lender with higher FOIR tolerance — HDFC and ICICI allow up to 55–60% for premium profiles vs 40% at conservative lenders. (6) Reduce credit card utilisation to under 30% before applying."
     },
     {
-      "q": "Is the Loan Eligibility Calculator free?",
-      "a": "Yes, completely free with no registration on CalcPhi."
-    },
-    {
-      "q": "Are my inputs stored?",
-      "a": "No. All calculations run in your browser. We never store your financial data."
-    },
-    {
-      "q": "Can I use the Loan Eligibility Calculator on mobile?",
-      "a": "Yes. CalcPhi works on all modern smartphones and tablets."
+      "q": "Can self-employed applicants use this calculator?",
+      "a": "Yes. Enter your average net monthly income as reflected in the last 2 years' Income Tax Returns (average of net profit, not turnover). Banks typically use 2-year ITR average for self-employed. Some lenders add back depreciation and other non-cash items. Business income stability matters: erratic or declining income across 2 ITRs raises the lender's risk assessment and may result in a lower FOIR tolerance or rate discount. Sole proprietors, partners, and private limited company directors each have different income documentation requirements — verify with your specific lender."
     }
   ],
-  "examples": [
+  "howToSteps": [
     {
-      "heading": "\u20b980,000 net salary \u2014 home loan eligibility",
-      "text": "Net income \u20b980,000, existing EMI \u20b910,000. Available EMI capacity at 50% FOIR = \u20b940,000 \u2212 \u20b910,000 = \u20b930,000. At 8.5% for 20 years, max home loan = approximately \u20b928.6 lakh."
+      "name": "Enter Your Net Monthly Income",
+      "text": "Use your actual take-home salary — what you receive in your bank account each month after PF, TDS, and other deductions. For self-employed, use average net monthly income from the last 2 years' ITR."
     },
     {
-      "heading": "Adding co-borrower to boost eligibility",
-      "text": "Adding a co-borrower with \u20b960,000 net income raises combined income to \u20b91.4 lakh. At 50% FOIR, combined EMI capacity = \u20b970,000. This doubles the eligible loan amount to approximately \u20b960 lakh."
+      "name": "Enter All Existing EMIs",
+      "text": "List all active EMIs: home loan, car loan, personal loan, education loan. Include credit card minimum payment if your lender typically includes it. Do not include rent, SIPs, or insurance premiums."
+    },
+    {
+      "name": "Set Rate and Tenure for the New Loan",
+      "text": "Enter the rate quoted by your target lender. Try different tenures — extending from 15 to 20 years significantly increases eligible loan but also increases total interest. Find the tenure that gives you the loan you need while keeping EMI manageable."
+    },
+    {
+      "name": "Cross-Check with Lender's FOIR Policy",
+      "text": "The calculator defaults to 50% FOIR. If your target lender uses 40% FOIR for your loan type, the actual eligible amount will be lower. Contact the lender's home loan team directly to confirm their FOIR policy for your income and loan type before relying on this estimate."
     }
   ],
   "related": [
     {
       "title": "Home Loan EMI Calculator",
-      "url": "/india/home-loan-emi-calculator/"
+      "url": "/india/home-loan-emi-calculator/",
+      "desc": "Calculate EMI once you know your eligible loan amount"
     },
     {
       "title": "Loan Prepayment Calculator",
-      "url": "/india/loan-prepayment-calculator/"
+      "url": "/india/loan-prepayment-calculator/",
+      "desc": "Plan early repayment to reduce tenure and total interest"
+    },
+    {
+      "title": "Personal Loan EMI Calculator",
+      "url": "/india/personal-loan-emi-calculator/",
+      "desc": "Check EMI for an unsecured personal loan within your FOIR"
     }
   ]
 }

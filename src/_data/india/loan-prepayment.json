@@ -2,12 +2,12 @@
   "id": "loan-prepayment",
   "schema": {
     "appName": "Loan Prepayment Calculator India",
-    "appDescription": "Calculate interest saved and reduced tenure from partial loan prepayment. See exact benefit of prepaying your home, car, or personal loan."
+    "appDescription": "Calculate interest saved and tenure reduced from partial loan prepayment. See exact benefit of prepaying your home, car, or personal loan — and when the RBI no-foreclosure-charge rule applies."
   },
   "inputs": [
     {
       "id": "lp-loan",
-      "label": "Original Loan Amount (\u20b9)",
+      "label": "Original Loan Amount (₹)",
       "min": 10000,
       "max": 100000000,
       "step": 10000,
@@ -31,11 +31,11 @@
     },
     {
       "id": "lp-prepay",
-      "label": "Prepayment Amount (\u20b9)",
+      "label": "Prepayment Amount (₹)",
       "min": 10000,
       "max": 100000000,
       "step": 10000,
-      "value": 500000
+      "value": 300000
     },
     {
       "id": "lp-after",
@@ -44,90 +44,115 @@
       "max": 25,
       "step": 1,
       "value": 3,
-      "hint": "Number of years from loan start"
+      "hint": "Number of years from loan start date"
     }
   ],
   "outputs": [
-    {
-      "id": "lp-emi",
-      "label": "Original EMI"
-    },
-    {
-      "id": "lp-new-emi",
-      "label": "New EMI (if tenure constant)"
-    },
-    {
-      "id": "lp-interest-saved",
-      "label": "Total Interest Saved",
-      "highlight": true
-    },
-    {
-      "id": "lp-tenure-saved",
-      "label": "Months Reduced"
-    }
+    { "id": "lp-emi", "label": "Original EMI" },
+    { "id": "lp-new-emi", "label": "New EMI (if tenure constant)" },
+    { "id": "lp-interest-saved", "label": "Total Interest Saved", "highlight": true },
+    { "id": "lp-tenure-saved", "label": "Months Reduced" }
   ],
-  "howToSteps": [
+  "staticTable": {
+    "caption": "Interest saved by prepaying ₹3L on a ₹30L home loan at 8.5% — timing comparison",
+    "headers": ["Prepayment in Year", "Interest Saved (₹)", "Months Saved", "Equivalent Return"],
+    "rows": [
+      ["Year 1", "₹8,40,000 (approx)", "~48 months", "~8.5% guaranteed"],
+      ["Year 3", "₹7,93,000 (approx)", "~42 months", "~8.5% guaranteed"],
+      ["Year 5", "₹7,10,000 (approx)", "~35 months", "~8.5% guaranteed"],
+      ["Year 10", "₹4,60,000 (approx)", "~20 months", "~8.5% guaranteed"],
+      ["Year 15", "₹1,80,000 (approx)", "~7 months", "~8.5% guaranteed"]
+    ]
+  },
+  "articleSections": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the Loan Prepayment Calculator. All inputs have smart defaults."
+      "id": "how-loan-prepayment-works",
+      "heading": "How Loan Prepayment Saves Interest — Amortisation, Principal Timing, and Why Early Prepayment Wins",
+      "body": "<p>In a reducing-balance loan, every EMI has two components: an interest charge on the outstanding principal, and a principal repayment. The split is unfavourable at the start: in a ₹30L home loan at 8.5% for 20 years, <strong>Month 1's EMI of ₹26,034 is split as ₹17,750 interest and only ₹8,284 principal</strong>. By Month 180 (Year 15), the split reverses: ₹6,100 interest and ₹19,934 principal. The bank collects most of its interest upfront.</p><p>A prepayment directly reduces the outstanding principal. Because interest in every subsequent month is charged on that now-smaller balance, the compounding savings are immediate. A ₹3L prepayment in Year 3 does not just save one month's interest on ₹3L — it saves 8.5% annually on ₹3L for each of the remaining approximately 17 years of the loan, compounded through the amortisation schedule. This is why early prepayment saves dramatically more than late prepayment on the same amount.</p><p><strong>The two choices after prepayment:</strong> When you make a lump sum payment, your lender typically offers: (a) keep the EMI the same and shorten the tenure, or (b) keep the tenure the same and reduce the EMI. Option (a) saves more total interest — because more principal is retired faster and the loan ends sooner. Option (b) is preferred when you need cash flow relief. Most financial planners recommend option (a): keep the EMI constant, cut the tenure, save more interest.</p><p><strong>Worked example — ₹30L at 8.5% for 20 years, prepay ₹3L in Year 3:</strong> Original EMI: ₹26,034. After 36 EMIs, outstanding principal ≈ ₹28.05L. After prepaying ₹3L: balance ₹25.05L. Keeping EMI at ₹26,034, new tenure ≈ 162 months (previously 204 remaining) — saving <strong>42 months</strong> and approximately <strong>₹7.93L in total interest</strong>. The ₹3L prepayment generates ₹7.93L in interest savings — a 164% return on the prepaid amount, equivalent to earning 8.5% guaranteed on that ₹3L for the remaining loan period.</p>"
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time as you type \u2014 no submit button needed."
+      "id": "loan-prepayment-scenarios",
+      "heading": "Three Prepayment Decisions — Bonus Deployment, Optimal Loan Sequence, and the Invest-vs-Prepay Calculation",
+      "body": "<h3>Scenario 1: Geeta, 36, ₹3L Diwali bonus — prepay floating-rate home loan or invest in equity mutual fund?</h3><p>Geeta has a ₹30L home loan at 8.5% (floating rate, 17 years remaining). She receives a ₹3L performance bonus. Two options:</p><p><strong>Prepay the home loan:</strong> Saves approximately ₹7.93L in total future interest (as calculated above). This is a guaranteed, risk-free return equivalent to 8.5% post-tax — because the interest saved is in post-tax money (home loan interest deduction under Section 24(b) applies only if Geeta is in the old tax regime; if she's in the new regime, there's no deduction and the comparison is even simpler). No market risk, no uncertainty.</p><p><strong>Invest in equity mutual fund:</strong> At 12% CAGR over 17 years: ₹3L grows to approximately ₹19.4L. Expected returns: significantly higher than ₹7.93L in interest savings. But: equity returns are not guaranteed, carry volatility, and the post-tax CAGR after LTCG (12.5% above ₹1.25L per FY under Section 112A) is approximately 10.5–11%.</p><p>The mathematical verdict: at 12% expected equity return (post-tax ≈ 10.5%), equity wins over 17 years on expected value. But the guarantee of 8.5% vs the uncertainty of 10.5% is a risk-preference question. For a borrower who would lie awake worrying about an equity correction, prepayment provides psychological stability worth the expected return gap. For a borrower comfortable with 17-year equity volatility, investing is mathematically better on expected value.</p><h3>Scenario 2: Sanjay, 41, ₹5L from share sale — three loans, optimal prepayment sequence</h3><p>Sanjay has three active loans: home loan ₹22L outstanding at 8.5% (floating), car loan ₹3.5L at 10.5% (floating), personal loan ₹1.2L at 16% (fixed, 18 months remaining). He has ₹5L to deploy.</p><p>Optimal prepayment sequence: highest effective interest rate first.</p><ol><li>Clear personal loan ₹1.2L first (16% guaranteed return on ₹1.2L, no prepayment penalty since most fixed personal loans allow part-prepayment — verify). Remaining: ₹3.8L.</li><li>Clear car loan ₹3.5L next (10.5% guaranteed return, floating so RBI prohibits foreclosure charges). Remaining: ₹0.3L.</li><li>Put ₹0.3L on home loan (8.5% return).</li></ol><p>Result: Sanjay is fully debt-free on personal and car loans, reducing total monthly EMI obligations by approximately ₹22,000/month from next month. This frees cash flow that can then be directed to accelerate the home loan repayment or to investments.</p><h3>Scenario 3: Lalitha, 43, fixed-rate loan — checking whether the foreclosure charge erases the benefit</h3><p>Lalitha has a fixed-rate home loan: ₹15L outstanding at 9% fixed, 10 years remaining. She has ₹5L to prepay. Her bank charges a 2% foreclosure fee on the prepaid amount: 2% × ₹5L = ₹10,000.</p><p>Interest saved by prepaying ₹5L now at 8.5% for 10 remaining years: approximately ₹3.8L. Cost of prepayment: ₹10,000 penalty. Net saving: ₹3.79L — the 2% penalty barely dents the benefit. Lalitha should prepay. The penalty only becomes a significant drag if the loan tenure remaining is very short (2–3 years) — then the interest saved may be smaller and the penalty a larger fraction of the benefit. Use this calculator to model the specific saving, then compare against your fixed-rate penalty amount before deciding.</p>"
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown to see how numbers evolve year by year."
+      "id": "loan-prepayment-rules",
+      "heading": "The RBI No-Foreclosure-Charge Rule — What It Covers, What It Doesn't, and the Tax Angle on Home Loan Prepayment",
+      "body": "<p><strong>RBI Master Direction on Interest Rate on Advances — the named rule:</strong> Under RBI's Master Direction on Interest Rate on Advances (updated periodically by RBI), banks, co-operative banks, and other RBI-regulated lenders <strong>cannot levy prepayment, foreclosure, or part-payment charges on any floating-rate loan to an individual borrower for purposes other than business</strong>. This prohibition covers:</p><ul><li>Home loans on floating rate</li><li>Car loans on floating rate</li><li>Personal loans on floating rate</li><li>Any other individual retail loan at a floating rate</li></ul><p>The key qualifier is <em>floating rate</em>. Fixed-rate loans are explicitly exempt from this prohibition — lenders can and do charge prepayment penalties on fixed-rate individual loans. Typical fixed-rate prepayment charges: 2–4% for home loans, 3–6% for car loans, 2–5% for personal loans. These are contractual and appear in your sanction letter.</p><p><strong>How to determine if your loan is floating or fixed:</strong> Check your sanction letter's Rate of Interest section. Floating rate will reference a benchmark: EBLR (External Benchmark Lending Rate — linked to RBI repo rate), MCLR (Marginal Cost of Funds-based Lending Rate), or Base Rate. Fixed rate will state a specific percentage with no benchmark link. Most home loans from scheduled commercial banks after 2019 are EBLR-linked (floating). Personal loans and car loans from NBFCs are typically fixed.</p><p><strong>Tax on home loan — what prepayment affects:</strong> For borrowers in the old tax regime: home loan interest is deductible under Section 24(b) up to ₹2L/year (self-occupied property). Principal repayment — including lump sum prepayments — qualifies as Section 80C deduction up to ₹1.5L/year across all 80C instruments. This means a ₹3L prepayment may qualify for ₹1.5L in 80C deduction in the year of prepayment (if 80C headroom exists). The interest saving is not offset by losing deductions — the deduction applies to the interest you would have paid, but once that interest no longer exists because you prepaid, you simply lose the deduction on that foregone interest. Net effect: prepayment is still beneficial even in the old regime.</p><p><strong>Prepayment vs investing — general heuristic:</strong> If your loan rate is higher than your post-tax investment return at equivalent risk, prepay. If your loan rate is lower than your post-tax investment return at equivalent risk, invest. At 8.5% floating home loan rate vs equity at approximately 10–12% CAGR (higher risk, not guaranteed), the decision depends on risk appetite. At 16% personal loan rate vs any investment class, prepayment wins unambiguously — no standard investment reliably earns 16% guaranteed.</p>"
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust inputs to compare different scenarios and find the best option for you."
+      "id": "loan-prepayment-mistakes",
+      "heading": "What Loan Prepayers Get Wrong",
+      "body": "<p><strong>Not knowing the RBI floating-rate rule — and paying a penalty that wasn't owed.</strong> Many borrowers with floating-rate home loans pay prepayment penalties because the bank's branch staff erroneously collect them, or because the borrower doesn't know the rule. Under RBI's Master Direction on Interest Rate on Advances, no regulated lender can charge this fee on a floating-rate individual loan. If you've been charged a prepayment penalty on a floating-rate loan, you can file a complaint with the bank's Grievance Redressal team and, if unresolved, escalate to the RBI Ombudsman under the Integrated Ombudsman Scheme.</p><p><strong>Prepaying a fixed-rate loan without checking if the penalty cancels the benefit.</strong> On a short-tenure fixed-rate loan (3–4 years remaining), the interest saving from prepayment may be modest. A 3% penalty on ₹5L is ₹15,000 upfront — if the remaining interest on that ₹5L over 3 years at 9% is approximately ₹75,000, the net benefit is ₹60,000. If the remaining tenure is 1 year, the interest on ₹5L over 1 year is ₹45,000 — penalty ₹15,000 eats 33% of the benefit. Always run this calculator before prepaying a fixed-rate loan to verify the penalty is worth paying.</p><p><strong>Prepaying in late tenure instead of early.</strong> The interest saved from prepaying in Year 15 of a 20-year loan is far less than the same prepayment in Year 3 — because most of the interest is already paid in the first half of the loan (front-loaded in the amortisation schedule). If you have the option of prepaying today vs 5 years from now, early prepayment almost always wins by a substantial margin.</p><p><strong>Choosing tenure reduction without considering EMI reduction for cash flow needs.</strong> Keeping EMI constant and reducing tenure saves more total interest — but if your cash flow tightens unexpectedly (job change, medical expenses), the higher EMI becomes a burden. If there's real uncertainty about monthly income over the next 2–3 years, choosing the lower EMI option gives flexibility. Neither is universally correct — match the choice to your financial stability.</p>"
     }
   ],
   "faq": [
     {
-      "q": "Should I prepay home loan or invest the money?",
-      "a": "Prepayment is financially equivalent to getting a guaranteed return equal to your loan interest rate. If your home loan rate is 8.5%, prepaying gives you a guaranteed 8.5% after-tax return. Compare this with post-tax returns from other investments. For most equity-shy investors, prepayment is optimal."
+      "q": "Can the bank charge a prepayment penalty on my floating-rate home loan?",
+      "a": "No. Under RBI's Master Direction on Interest Rate on Advances, banks and all RBI-regulated lenders are prohibited from charging any prepayment, part-payment, or foreclosure fee on floating-rate loans to individual borrowers. This applies to floating-rate home loans, car loans, and personal loans. If your home loan is linked to EBLR or MCLR (both floating benchmarks), prepayment is penalty-free regardless of the amount. Fixed-rate loans are not covered by this prohibition — lenders can charge 2–4% foreclosure fees on fixed-rate home loans. Check your sanction letter's Rate of Interest section to confirm your loan type."
     },
     {
-      "q": "Is there a prepayment penalty on home loans?",
-      "a": "RBI mandates zero prepayment penalty on floating rate home loans for individuals. Banks cannot charge any fee for partial or full prepayment. Fixed rate home loans may have prepayment charges of 2\u20134% \u2014 check your loan agreement."
+      "q": "How much interest does a ₹3L prepayment save on a ₹30L home loan?",
+      "a": "On a ₹30L home loan at 8.5% for 20 years (EMI ₹26,034), prepaying ₹3L in Year 3 saves approximately ₹7.93L in total interest and cuts 42 months off the tenure (keeping EMI constant). The earlier the prepayment, the more interest saved — the same ₹3L prepaid in Year 1 saves approximately ₹8.4L. Prepaid in Year 10, savings drop to approximately ₹4.6L. Use this calculator with your exact loan details for a precise figure."
     },
     {
-      "q": "When is the best time to prepay \u2014 early or late?",
-      "a": "Prepaying early in the loan tenure saves more interest because EMI in early years is mostly interest. Prepaying in year 3 of a 20-year loan at 8.5% saves significantly more than prepaying in year 15. The earlier the prepayment, the more interest you save."
+      "q": "Should I reduce EMI or reduce tenure after prepayment?",
+      "a": "Reducing tenure (keeping EMI constant) saves significantly more total interest. The loan ends sooner, so the outstanding balance on which interest accrues is retired faster. Example: on ₹30L at 8.5%, a ₹3L prepayment at Year 3 with tenure reduction saves ₹7.93L. Taking the EMI reduction instead saves less because the loan runs for the original 20 years, just with a slightly smaller principal from month 37. Choose tenure reduction if your monthly cash flow is stable; choose EMI reduction if you need monthly relief."
     },
     {
-      "q": "Is the Loan Prepayment Calculator free?",
-      "a": "Yes, completely free with no registration on CalcPhi."
+      "q": "Is a lump sum prepayment better than regular part-prepayments?",
+      "a": "The timing of prepayment matters more than whether it's lump sum or spread out. Prepaying ₹3L in one shot in Year 3 saves more than spreading ₹25,000/month over the next 12 months — because the full ₹3L reduces the principal balance immediately, and interest savings begin from the next EMI. If you receive a windfall (bonus, maturity proceeds), deploy it as a single prepayment rather than holding it to spread over months."
     },
     {
-      "q": "Are my inputs stored?",
-      "a": "No. All calculations run in your browser. We never store your financial data."
+      "q": "Does prepaying a home loan affect my Section 80C tax benefit?",
+      "a": "In the old tax regime: home loan principal repayment (including lump sum prepayments) qualifies as a Section 80C deduction up to ₹1.5L per year across all 80C instruments. A ₹3L lump sum prepayment may be claimable as 80C in the year of payment — if you have unused 80C headroom. This makes the prepayment tax-efficient in the old regime. In the new tax regime: no Section 80C deductions are available at all — neither for regular principal EMI nor for prepayments. Section 24(b) interest deduction is also unavailable in the new regime."
     },
     {
-      "q": "Can I use the Loan Prepayment Calculator on mobile?",
-      "a": "Yes. CalcPhi works on all modern smartphones and tablets."
+      "q": "Should I prepay my home loan or invest the money?",
+      "a": "The break-even rule: if your post-tax loan rate > post-tax investment return, prepay. If investment return > loan rate, invest. For a floating-rate home loan at 8.5%: prepaying saves a guaranteed 8.5% (post-tax if no Section 24(b) applicable, or slightly less in old regime with deduction). Equity mutual funds have historically delivered 10–12% CAGR (not guaranteed), post-tax approximately 9–10.5% after LTCG. For risk-tolerant investors with 10+ year horizon, equity investment is marginally better on expected value. For risk-averse investors or those in new regime (no interest deduction), the 8.5% guaranteed saving is highly competitive."
+    },
+    {
+      "q": "Can I make multiple partial prepayments or just one?",
+      "a": "Most banks allow unlimited partial prepayments on floating-rate loans — no minimum amount required and no fee (per RBI's Master Direction prohibiting prepayment charges on floating-rate individual loans). Some banks may require a minimum prepayment amount (e.g., 1 or 2 months' EMI as a minimum chunk) — check your loan agreement. Each partial prepayment reduces the outstanding principal, and the subsequent interest saving compounds from that reduction onward. Multiple small prepayments spread over years are less effective than single larger prepayments, but still beneficial."
+    },
+    {
+      "q": "What is the best time in the loan tenure to prepay?",
+      "a": "Earlier is always better for maximum interest saving. In the first half of a home loan tenure, EMIs are heavily interest-weighted — a large fraction of each payment is interest, not principal. A prepayment in Year 3 of a 20-year loan saves more than twice the interest that the same prepayment saves in Year 15. The table on this page shows this clearly. If you receive a windfall early in your loan — inheritance, bonus, maturing investment — deploying it as a prepayment in the early years is almost always optimal."
     }
   ],
-  "examples": [
+  "howToSteps": [
     {
-      "heading": "\u20b95 lakh prepayment after 3 years on \u20b930 lakh home loan",
-      "text": "\u20b930 lakh at 8.5% for 20 years = EMI \u20b926,034. Prepaying \u20b95 lakh after 3 years reduces tenure by approximately 38 months and saves \u20b97.8 lakh in total interest \u2014 a 56% return on the prepayment amount."
+      "name": "Enter Your Loan Details",
+      "text": "Enter the original loan amount, interest rate, and total tenure. Use the exact figures from your sanction letter, not an estimate."
     },
     {
-      "heading": "Effect on EMI vs tenure",
-      "text": "With \u20b95 lakh prepayment, you can choose to: (a) keep EMI same and cut tenure by ~3 years, or (b) keep tenure same and reduce EMI to \u20b923,060. Most financial advisors recommend keeping EMI same and reducing tenure \u2014 you save more interest."
+      "name": "Enter the Prepayment Amount",
+      "text": "Enter the lump sum you plan to prepay — a bonus, maturity amount, or windfall. This is the amount over and above your regular EMI."
+    },
+    {
+      "name": "Set When You Will Prepay",
+      "text": "Enter the number of years from the loan start date when you will make the prepayment. Changing this year shows how much more you save by prepaying earlier."
+    },
+    {
+      "name": "Read Interest Saved and Months Reduced",
+      "text": "The interest saved figure is the guaranteed return equivalent of your prepayment at your loan rate. Compare this against your alternative investment's post-tax return to decide whether to prepay or invest."
     }
   ],
   "related": [
     {
       "title": "Home Loan EMI Calculator",
-      "url": "/india/home-loan-emi-calculator/"
+      "url": "/india/home-loan-emi-calculator/",
+      "desc": "Calculate original EMI and amortisation schedule before prepayment"
     },
     {
       "title": "Loan Eligibility Calculator",
-      "url": "/india/loan-eligibility-calculator/"
+      "url": "/india/loan-eligibility-calculator/",
+      "desc": "Check eligibility for a new loan after prepaying an existing one"
+    },
+    {
+      "title": "Personal Loan EMI Calculator",
+      "url": "/india/personal-loan-emi-calculator/",
+      "desc": "Model prepayment saving on personal loans at higher interest rates"
     }
   ]
 }

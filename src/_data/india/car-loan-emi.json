@@ -1,18 +1,15 @@
 {
   "id": "car-loan-emi",
-  "schema": {
-    "appName": "Car Loan EMI Calculator",
-    "appDescription": "Calculate your car loan EMI in seconds. Enter loan amount, interest rate, and tenure to find your monthly payment and total cost."
-  },
+  "formulaEngine": "emi",
   "inputs": [
     {
       "id": "loan-amount",
       "label": "Car Loan Amount (₹)",
-      "min": 10000,
-      "max": 100000000,
+      "min": 50000,
+      "max": 20000000,
       "step": 10000,
-      "value": 2000000,
-      "hint": "Total car loan amount"
+      "value": 800000,
+      "hint": "Enter the loan amount — typically 80–90% of on-road price for new cars, lower for used. Verify current LTV with your lender."
     },
     {
       "id": "interest-rate",
@@ -20,101 +17,132 @@
       "min": 1,
       "max": 30,
       "step": 0.1,
-      "value": 8.5,
-      "hint": "Annual interest rate"
+      "value": 9,
+      "hint": "New car loans typically carry lower rates than used car loans. Verify current rates with your bank or NBFC."
     },
     {
       "id": "loan-tenure",
       "label": "Loan Tenure (Months)",
-      "min": 6,
-      "max": 360,
+      "min": 12,
+      "max": 84,
       "step": 6,
-      "value": 240,
-      "hint": "Repayment period in months"
+      "value": 60,
+      "hint": "Car loans: typically 12–84 months. Longer tenure reduces EMI but increases total interest."
     }
   ],
   "outputs": [
-    {
-      "id": "monthly-emi",
-      "label": "Monthly EMI",
-      "highlight": true
-    },
-    {
-      "id": "total-interest",
-      "label": "Total Interest Payable"
-    },
-    {
-      "id": "total-payment",
-      "label": "Total Payment"
-    }
+    { "id": "monthly-emi", "label": "Monthly EMI", "highlight": true },
+    { "id": "total-interest", "label": "Total Interest Payable" },
+    { "id": "total-payment", "label": "Total Payment" }
   ],
-  "formulaEngine": "emi",
-  "howToSteps": [
+  "staticTable": {
+    "caption": "₹8 lakh car loan — EMI and total interest at different rates and tenures (illustrative; verify current rates with lenders)",
+    "headers": ["Rate (% p.a.)", "Tenure", "Monthly EMI (₹)", "Total Interest (₹)"],
+    "rows": [
+      ["8.5% (new car, bank)", "5 years", "₹16,407", "₹1,84,420"],
+      ["9.5% (new car, NBFC)", "5 years", "₹16,815", "₹2,08,900"],
+      ["11% (used car, bank)", "5 years", "₹17,395", "₹2,43,700"],
+      ["13% (used car, NBFC)", "5 years", "₹18,268", "₹2,96,080"],
+      ["9% (new car)", "7 years", "₹12,848", "₹2,79,232"]
+    ]
+  },
+  "articleSections": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the Car Loan EMI Calculator. All inputs have smart defaults."
+      "id": "how-car-loan-emi-works",
+      "heading": "How Car Loan EMI Is Calculated — Reducing Balance, On-Road Price vs Ex-Showroom, and New vs Used Rate Gap",
+      "body": "<p>Car loan EMI uses the same reducing-balance formula as all term loans: <strong>EMI = P × r × (1+r)^n / ((1+r)^n − 1)</strong>, where P is the loan amount, r is the monthly interest rate (annual rate ÷ 12 ÷ 100), and n is the tenure in months. With each EMI paid, the principal reduces, and the following month's interest charge falls — you pay interest only on the outstanding balance, not the original loan amount throughout.</p><p><strong>On-road price vs ex-showroom — what the loan is actually on:</strong> Car dealers quote ex-showroom prices. The on-road price includes registration fees, road tax, insurance (first-year comprehensive mandatory), and any dealer accessories — typically 12–20% above the ex-showroom price depending on the state. Banks finance the on-road price, not ex-showroom. For a car with an ex-showroom price of ₹9L in Maharashtra, the on-road price may be ₹10.8L–₹11.2L. At 90% LTV, the loan amount is approximately ₹9.7L–₹10.1L — materially more than the sticker price might suggest.</p><p><strong>Worked example — ₹8L at 9% for 5 years (60 months):</strong> r = 9 ÷ 12 ÷ 100 = 0.0075. (1.0075)^60 ≈ 1.5657. EMI = 8,00,000 × 0.0075 × 1.5657 / 0.5657 ≈ <strong>₹16,600/month</strong>. Total paid: ₹9,96,000. Total interest: ₹1,96,000. Now run the same ₹8L at 11% (used car rate): EMI ≈ ₹17,395. Total interest: ₹2,43,700 — ₹47,700 more than the new car rate on the exact same loan amount. The rate differential between new and used car loans is a significant hidden cost of buying used with a loan.</p><p><strong>7-year tenure — when lower EMI costs more:</strong> At ₹8L and 9%, extending tenure from 5 years to 7 years cuts EMI from ₹16,600 to ₹12,848 — saving ₹3,752/month. But total interest rises from ₹1,96,000 to ₹2,79,232 — paying ₹83,232 extra to get that lower monthly payment. For depreciating assets like cars, longer tenures increase the risk of the loan balance exceeding the car's resale value (negative equity) in the middle years.</p>"
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time as you type — no submit button needed."
+      "id": "car-loan-scenarios",
+      "heading": "Three Car Loan Decisions That Show How Rate Source, Loan Tenure, and Prepayment Timing Alter Total Cost",
+      "body": "<h3>Scenario 1: Rajesh, 34, choosing between new Maruti Grand Vitara (₹7L loan) and used equivalent (₹5L loan at higher rate)</h3><p>Rajesh is comparing two options: a new Maruti Grand Vitara at ₹11L on-road (₹7L loan at 8.5% after ₹4L down payment) vs a used 2022 Grand Vitara at ₹7.5L on-road (₹5L loan at 11% after ₹2.5L down payment).</p><p>New car (₹7L at 8.5%, 5 years): EMI ≈ ₹14,350. Total interest: ₹1,61,000. Down payment: ₹4L. Total outlay over 5 years: ₹4L + ₹8.61L (total EMI payments) = ₹12.61L.</p><p>Used car (₹5L at 11%, 5 years): EMI ≈ ₹10,872. Total interest: ₹1,52,320. Down payment: ₹2.5L. Total outlay: ₹2.5L + ₹6.52L = ₹9.02L.</p><p>The used car saves ₹3.59L in total outlay over 5 years — a real financial advantage. However, it comes with a higher interest rate (11% vs 8.5%), shorter warranty, unknown service history, and typically higher maintenance costs. The rate comparison is only one part; factoring in expected maintenance difference (verify with service records) is essential for a correct total-cost-of-ownership comparison.</p><h3>Scenario 2: Priya, 38, adding a car loan on top of an existing home loan — the FOIR check before visiting the showroom</h3><p>Priya has a home loan EMI of ₹32,000/month. Her net salary: ₹95,000. Current FOIR: 33.7%. She wants a car loan of ₹7L at 9% for 5 years: proposed EMI ≈ ₹14,350.</p><p>New total EMI: ₹32,000 + ₹14,350 = ₹46,350. New FOIR: 48.8% — still within most banks' 50% home loan FOIR tolerance, but car lenders may apply a 45% FOIR cap for the car loan. At 45% FOIR: max total EMI = ₹95,000 × 45% = ₹42,750. Max car loan EMI = ₹42,750 − ₹32,000 = ₹10,750. Maximum eligible car loan at ₹10,750/month at 9% for 5 years: approximately ₹5.1L — her target ₹7L loan might be declined by strict-FOIR lenders. She should use the Loan Eligibility Calculator and check her FOIR before visiting the showroom to avoid a surprise rejection.</p><p><strong>Car loan interest is not tax-deductible</strong> under any income tax provision for personal vehicle use — unlike the home loan she is simultaneously repaying, where Section 24(b) provides up to ₹2L/year deduction under the old tax regime.</p><h3>Scenario 3: Sachin, 30, receives a ₹2L bonus 18 months into a ₹8L car loan — prepayment decision</h3><p>Sachin has a floating-rate car loan of ₹8L at 9% for 5 years (60 months). Original EMI: ₹16,600. After 18 months, outstanding balance ≈ ₹5.87L. He receives ₹2L bonus.</p><p>Option A (prepay ₹2L): New balance ₹3.87L. Keeping EMI at ₹16,600, new tenure ≈ 25 months instead of 42 remaining — saves 17 months and approximately ₹42,000 in interest. Since his car loan is floating-rate, <strong>the RBI's Master Direction on Interest Rate on Advances prohibits any prepayment or foreclosure charge</strong> — zero penalty on ₹2L prepayment.</p><p>Option B (invest ₹2L in liquid/short-duration fund): At approximately 7% return, ₹2L grows to ₹2.14L over the remaining 25 months. Car loan interest cost on ₹2L portion: approximately ₹9,000 (at 9% for 25 months effective). Net: investment earns ₹14,000 more than the car loan costs on that ₹2L — marginally positive in favour of investing vs prepaying. However, this is pre-tax — liquid fund returns are fully taxable. After 20% tax on ₹14,000 gain: ₹11,200 net. The marginal edge barely justifies the investment over prepayment. For most borrowers, the psychological value of shorter debt tenure makes prepayment the preferred choice.</p>"
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown table to see how your numbers change over time."
+      "id": "car-loan-rules",
+      "heading": "Car Loan Regulations — No Tax Deduction, RBI Prepayment Rule, LTV Norms, and Mandatory Insurance",
+      "body": "<p><strong>No income tax deduction on car loan interest:</strong> Car loan interest is not deductible under any provision of the Income Tax Act for personal vehicle use by salaried individuals. This is a common misconception — possibly because home loans carry Section 24(b) deductions and some borrowers assume vehicle loans work similarly. They do not. No Section 24(b), no 80E, no business deduction unless the vehicle is registered and used for a business with documented commercial purpose. The full interest is paid from post-tax income.</p><p><strong>RBI prepayment rule — floating-rate car loans:</strong> Under RBI's Master Direction on Interest Rate on Advances, banks and lending institutions cannot levy prepayment or foreclosure charges on floating-rate loans to individual borrowers. If your car loan interest rate is linked to an external benchmark (EBLR or MCLR), prepayment is penalty-free. Most car loans from banks are linked to MCLR or EBLR and are therefore floating — verify your loan structure in the sanction letter. Fixed-rate car loans from NBFCs typically allow lenders to charge foreclosure fees of 3–6%; check the loan agreement before prepaying.</p><p><strong>LTV norms for car loans:</strong> RBI does not prescribe a specific LTV cap for car loans (unlike gold loans where caps are explicit under Directions 2025). Each lender sets its own LTV policy within general prudential guidelines. Typical market practice: new cars — up to 90% of on-road price; used cars — up to 80% of assessed value (valuer's assessment of current market value, not on-road price paid). Age of vehicle at maturity matters: some lenders cap the vehicle age at loan maturity (e.g., used cars must be under 10 years old at end of loan term). Verify current LTV policy with your specific lender before assuming loan coverage.</p><p><strong>Insurance — comprehensive mandatory for financed new cars:</strong> When a car loan is outstanding, the vehicle is hypothecated to the lender. Most lenders mandate comprehensive insurance (not just third-party) until the loan is fully repaid — because the lender's collateral value falls sharply if the vehicle is uninsured and damaged in an accident. The insurance policy must note the lender's name (bank/NBFC) as the hypothecatee. Third-party insurance alone (which is all that is legally mandatory under the Motor Vehicles Act) does not satisfy this lender requirement.</p><p><strong>CIBIL score and car loan rates:</strong> Unlike home loans (where processing is highly standardised), car loan rate negotiation depends heavily on the relationship with the lender and the dealership's tie-up. Many dealerships have preferred banking tie-ups with negotiated rate pools. The dealer's finance manager's quoted rate may not be the best available — check your own bank's pre-approved car loan offer, which is often 0.25–0.5% lower for existing salary account holders.</p>"
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust the inputs to compare different scenarios and find the best option for your situation."
+      "id": "car-loan-mistakes",
+      "heading": "What Car Loan Borrowers Get Wrong",
+      "body": "<p><strong>Calculating EMI on the ex-showroom price, not the on-road price.</strong> Car dealers lead with ex-showroom prices in advertisements. The on-road price — which includes registration, road tax, first-year comprehensive insurance, and dealer charges — is typically 12–20% higher depending on the state. Your loan is on the on-road price (or 80–90% of it). Running this calculator with the ex-showroom price will underestimate your EMI and total loan amount.</p><p><strong>Not knowing that car loan interest is not tax-deductible.</strong> Unlike home loans, car loans for personal use carry zero income tax benefit. A borrower in the 30% tax bracket who pays ₹1.96L in car loan interest over 5 years pays every rupee from post-tax income — the effective pre-tax cost is ₹2.80L. Factoring in this tax-cost reality is important when evaluating whether to take a car loan vs deploy savings.</p><p><strong>Extending tenure to get a lower EMI without modelling total interest.</strong> Extending from 5 to 7 years on an ₹8L car loan at 9% saves ₹3,752/month in EMI but adds ₹83,232 in total interest. Over a 7-year period, the car's resale value may fall to ₹2–3L while the outstanding loan balance (especially in years 2–4 when principal repayment is slow) could still be ₹5–6L — creating negative equity, where the loan exceeds the asset's value. This is a risk specific to depreciating assets.</p><p><strong>Taking the dealership's financing without checking the bank's pre-approved offer.</strong> Dealership finance managers earn commission on loan placement — they have incentive to direct buyers to their preferred lender regardless of rate. Many banks offer pre-approved car loans at preferential rates to salary account holders. Spend 15 minutes checking your bank's app for a pre-approved car loan offer before going to the showroom — it often beats the dealer quote by 0.5–1%.</p>"
     }
   ],
   "faq": [
     {
-      "q": "How accurate is the Car Loan EMI Calculator?",
-      "a": "The Car Loan EMI Calculator uses standard financial formulas. Results are indicative; actual figures depend on your lender or financial institution's policies."
+      "q": "What is the current car loan interest rate in India?",
+      "a": "Car loan rates depend on the lender, vehicle type (new vs used), loan amount, and borrower's CIBIL score. As a general guide (verify current rates with specific lenders): new car loans from banks typically start at around 8–10% for applicants with strong CIBIL scores; used car loans are usually 2–4% higher than new car rates at the same lender. NBFCs may charge higher rates than banks but offer faster processing. Always get at least two quotes — one from your salary account bank (which may offer a pre-approved rate) and one from the dealership's lender."
     },
     {
-      "q": "Is the Car Loan EMI Calculator free to use?",
-      "a": "Yes, the Car Loan EMI Calculator on CalcPhi is completely free with no registration required."
+      "q": "How is car loan EMI calculated?",
+      "a": "EMI = P × r × (1+r)^n / ((1+r)^n − 1), where P = loan amount, r = monthly rate (annual rate ÷ 12 ÷ 100), n = months. Example: ₹8L at 9% for 5 years (60 months) — r = 0.0075, (1.0075)^60 = 1.5657, EMI = 8,00,000 × 0.0075 × 1.5657 / 0.5657 ≈ ₹16,600/month. Total paid: ₹9,96,000. Total interest: ₹1,96,000. Each EMI you pay reduces the outstanding principal, so interest in the next EMI is charged on a smaller balance — this is reducing balance."
     },
     {
-      "q": "Are my data inputs stored?",
-      "a": "No. All calculations happen in your browser. We do not store any of your financial data."
+      "q": "Is car loan interest tax-deductible in India?",
+      "a": "No. Car loan interest is not deductible under any income tax provision for personal vehicle use by salaried individuals. There is no Section 24(b) equivalent for vehicles (that applies only to home loans), and no other IT Act deduction covers personal car loan interest. The full interest cost is paid from post-tax income. This is a common misconception — possibly because home loans carry tax benefits, but no similar provision exists for car loans."
     },
     {
-      "q": "How often are the Car Loan EMI Calculator rates updated?",
-      "a": "Rates in examples are updated periodically to reflect current market conditions. Always verify with your bank or advisor."
+      "q": "Can I prepay a car loan without penalty?",
+      "a": "For floating-rate car loans to individual borrowers, the RBI Master Direction on Interest Rate on Advances prohibits prepayment and foreclosure charges. Most bank car loans linked to MCLR or EBLR are floating-rate — prepayment is penalty-free. Fixed-rate car loans (common with NBFCs) may carry foreclosure charges of 3–6% of the outstanding balance. Check your loan agreement — it will specify the rate type (fixed/floating) and prepayment clause. Clearing a floating-rate car loan early with a bonus or windfall is typically penalty-free."
     },
     {
-      "q": "Can I use the Car Loan EMI Calculator on mobile?",
-      "a": "Yes. CalcPhi is fully mobile-optimised. The calculator works on all modern smartphones and tablets."
+      "q": "What percentage of the car value will a bank finance?",
+      "a": "For new cars, banks typically finance 80–90% of the on-road price (not ex-showroom). For used cars, typically 70–80% of the lender's assessed value, which is their valuation of the car's current market worth — not the price you paid. On-road price includes registration, road tax, first-year insurance, and dealer charges — typically 12–20% above ex-showroom. RBI does not mandate a specific LTV cap for car loans, so each lender sets their own policy. Verify current LTV terms with your specific lender before planning your down payment."
     },
     {
-      "q": "Who should use this calculator?",
-      "a": "Anyone in India planning their finances can benefit from the Car Loan EMI Calculator. It's designed for both beginners and experienced investors."
+      "q": "What is the best car loan tenure?",
+      "a": "Shorter tenures (3–5 years) mean higher EMI but significantly lower total interest. Longer tenures (6–7 years) reduce monthly outflow but cost considerably more in interest and risk negative equity — where the outstanding loan balance exceeds the car's resale value. Example: ₹8L at 9% — 5-year total interest ₹1,96,000; 7-year total interest ₹2,79,232. The extra ₹83,232 buys a ₹3,752/month reduction in EMI. For most salaried borrowers, a 5-year tenure balances EMI affordability with total cost. Avoid 7-year loans for cars unless genuinely necessary."
+    },
+    {
+      "q": "Does a car loan affect home loan eligibility?",
+      "a": "Yes. Banks calculate total FOIR (Fixed Obligation to Income Ratio) across all loans. An active car loan EMI directly reduces the EMI available for a home loan. Example: ₹95,000 net salary, 50% FOIR limit = ₹47,500 max total EMI. Existing car loan EMI ₹16,600 → only ₹30,900 available for home loan EMI. At 8.5% for 20 years, ₹30,900 supports a home loan of approximately ₹35.6L. Without the car loan, the same salary supports ₹54.7L in home loan eligibility. Use the Loan Eligibility Calculator to model how existing car EMI affects home loan eligibility."
+    },
+    {
+      "q": "Is insurance mandatory for a car loan?",
+      "a": "Yes. When a car loan is outstanding, the vehicle is hypothecated to the lender. Most lenders require comprehensive insurance (not just third-party mandatory under Motor Vehicles Act) throughout the loan tenure — because their collateral value is protected only if the vehicle is covered against damage and theft. The insurance policy must note the lender's name as hypothecatee. Lapses in insurance during the loan tenure can trigger a covenant breach under the loan agreement, potentially making the full loan immediately due."
+    },
+    {
+      "q": "Should I put a larger down payment or take a bigger loan for a car?",
+      "a": "Larger down payment = smaller loan = less total interest paid, and lower risk of negative equity (loan exceeding car's resale value). On an ₹11L on-road car: 10% down (₹1.1L) → ₹9.9L loan at 9% for 5 years = ₹2.41L total interest. 30% down (₹3.3L) → ₹7.7L loan = ₹1.88L total interest, saving ₹53,000. The down payment should come from liquid savings, not liquidated equity investments that compound at 12%+ — in that case, a smaller down payment and larger loan may be financially optimal. Match the source of funds to the cost of the loan."
     }
   ],
-  "examples": [
+  "howToSteps": [
     {
-      "heading": "₹20 lakh car loan at 8.5% for 20 years",
-      "text": "A ₹20 lakh car loan at 8.5% p.a. over 20 years results in an EMI of approximately ₹17,357. Total interest paid over the term is ₹21.66 lakh — making total cost ₹41.66 lakh."
+      "name": "Enter Your Loan Amount",
+      "text": "Enter the loan amount — not the on-road price. Calculate: on-road price (ex-showroom + registration + insurance + accessories) × LTV (typically 80–90% for new cars, verify with your lender). Use the on-road price, not the sticker or ex-showroom price."
     },
     {
-      "heading": "₹50 lakh car loan at 9% for 15 years",
-      "text": "Borrowing ₹50 lakh at 9% for 15 years gives an EMI of ₹50,713. Total interest is ₹41.28 lakh. Reducing tenure to 10 years cuts total interest to ₹26.03 lakh, saving ₹15.25 lakh."
+      "name": "Enter the Interest Rate",
+      "text": "Use your actual quoted rate from the lender — not the advertised 'starting from' rate. New vs used vehicle, CIBIL score, and lender type all affect your personal rate. Get at least two quotes before entering a number here."
+    },
+    {
+      "name": "Compare Tenures",
+      "text": "Run the calculator for both your intended tenure (e.g., 5 years) and a longer option (e.g., 7 years). Compare the total interest column — the additional interest from the longer tenure is the real cost of the lower EMI."
+    },
+    {
+      "name": "Check FOIR Before Applying",
+      "text": "Before visiting a dealership, use the Loan Eligibility Calculator to confirm the car loan EMI fits within your income's FOIR limit — especially if you already have a home loan or other EMIs."
     }
   ],
   "related": [
     {
-      "title": "Home Loan EMI Calculator",
-      "url": "/india/home-loan-emi-calculator/"
+      "title": "Loan Prepayment Calculator",
+      "url": "/india/loan-prepayment-calculator/",
+      "desc": "See how much interest a lump sum payment saves on your car loan"
     },
     {
       "title": "Loan Eligibility Calculator",
-      "url": "/india/loan-eligibility-calculator/"
+      "url": "/india/loan-eligibility-calculator/",
+      "desc": "Check whether your income supports both a car loan and existing EMIs"
     },
     {
-      "title": "Loan Prepayment Calculator",
-      "url": "/india/loan-prepayment-calculator/"
+      "title": "Personal Loan EMI Calculator",
+      "url": "/india/personal-loan-emi-calculator/",
+      "desc": "Compare unsecured personal loan if a car loan is not available"
     }
-  ]
+  ],
+  "schema": {
+    "appName": "Car Loan EMI Calculator India",
+    "appDescription": "Calculate car loan EMI and total interest for new and used vehicles. Compare rates by lender type, model tenure impact, and understand RBI's no-prepayment-charge rule on floating-rate car loans."
+  }
 }

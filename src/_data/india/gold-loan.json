@@ -1,120 +1,133 @@
 {
   "id": "gold-loan",
-  "schema": {
-    "appName": "Gold Loan Calculator",
-    "appDescription": "Calculate gold loan EMI, interest cost, and loan-to-value ratio. Compare gold loan offers from banks and NBFCs."
-  },
+  "formulaEngine": "emi",
   "inputs": [
     {
       "id": "loan-amount",
       "label": "Gold Loan Amount (₹)",
       "min": 10000,
-      "max": 100000000,
+      "max": 10000000,
       "step": 10000,
-      "value": 2000000,
-      "hint": "Total gold loan amount"
+      "value": 200000,
+      "hint": "Loan up to ₹2.5L → 85% LTV; ₹2.5L–₹5L → 80% LTV; above ₹5L → 75% LTV (RBI Directions 2025, effective 1 April 2026)"
     },
     {
       "id": "interest-rate",
       "label": "Interest Rate (% p.a.)",
       "min": 1,
-      "max": 30,
+      "max": 36,
       "step": 0.1,
-      "value": 8.5,
-      "hint": "Annual interest rate"
+      "value": 12,
+      "hint": "Typical range varies by lender type — verify current rates with your bank or NBFC before pledging."
     },
     {
       "id": "loan-tenure",
       "label": "Loan Tenure (Months)",
-      "min": 6,
-      "max": 360,
-      "step": 6,
-      "value": 240,
-      "hint": "Repayment period in months"
+      "min": 1,
+      "max": 36,
+      "step": 1,
+      "value": 12,
+      "hint": "Bullet repayment now capped at 12 months (RBI Directions 2025). EMI loans can extend up to lender maximum."
     }
   ],
   "outputs": [
-    {
-      "id": "monthly-emi",
-      "label": "Monthly EMI",
-      "highlight": true
-    },
-    {
-      "id": "total-interest",
-      "label": "Total Interest Payable"
-    },
-    {
-      "id": "total-payment",
-      "label": "Total Payment"
-    }
+    { "id": "monthly-emi", "label": "Monthly EMI", "highlight": true },
+    { "id": "total-interest", "label": "Total Interest Payable" },
+    { "id": "total-payment", "label": "Total Payment" }
   ],
-  "formulaEngine": "emi",
-  "howToSteps": [
+  "articleSections": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the Gold Loan Calculator. All inputs have smart defaults."
+      "id": "how-gold-loan-works",
+      "heading": "How Gold Loan EMI Is Calculated — Reducing Balance, Bullet Repayment Cap, and the 2026 Tiered LTV",
+      "body": "<p>A gold loan's EMI uses the standard reducing-balance formula: <strong>EMI = P × r × (1+r)^n / ((1+r)^n − 1)</strong>, where P is the loan amount, r is the monthly interest rate (annual rate ÷ 12 ÷ 100), and n is the tenure in months. Each EMI reduces the outstanding principal, so the interest portion of every subsequent payment falls — this is reducing balance. You pay interest only on what you still owe, not on the original loan throughout the tenure.</p><p><strong>Bullet repayment — now capped at 12 months:</strong> Many gold loans use bullet repayment rather than EMI: you pay only interest monthly and return the full principal at maturity. Under RBI's Lending Against Gold and Silver Collateral Directions 2025 (effective 1 April 2026), bullet repayment gold loans are capped at a maximum of 12 months. For bullet loans, the monthly outflow = Principal × (annual rate ÷ 12 ÷ 100), with the full principal due at month 12 or earlier. This calculator models the EMI structure — use the rate comparison table in How It Works to understand both structures.</p><p><strong>How the tiered LTV limits your loan amount:</strong> Effective 1 April 2026, RBI Directions 2025 replaced the old flat 75% LTV cap with a tiered structure based on loan size:<br>• Loans up to ₹2.5 lakh: maximum LTV of 85%<br>• Loans between ₹2.5 lakh and ₹5 lakh: maximum LTV of 80%<br>• Loans above ₹5 lakh: maximum LTV of 75%<br>Your actual loan amount = lender's LTV (within above caps) × gold valuation. Valuation uses the <strong>lower of: (a) the 30-day average IBJA (India Bullion and Jewellers Association) rate for that purity, OR (b) the previous-day IBJA closing price for that purity</strong>. This conservative valuation method means your loan will often be below what you'd calculate from today's spot price.</p><p><strong>Worked example — ₹2L loan (85% LTV tier) at 12% for 12 months (EMI structure):</strong> r = 0.01. (1.01)^12 = 1.1268. EMI = 2,00,000 × 0.01 × 1.1268 / 0.1268 = ₹17,770/month. Total paid: ₹2,13,240. Total interest: ₹13,240. At a typical NBFC rate (verify current): interest rises significantly — at 20% over 12 months, interest on ₹2L would be approximately ₹22,193. The rate differential between lender types on the same ₹2L loan is the most critical variable to verify before pledging.</p>"
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time as you type — no submit button needed."
+      "id": "gold-loan-scenarios",
+      "heading": "Three Gold Loan Decisions — LTV Tiers, Lender Selection, and When Pledging Gold Is the Wrong Call",
+      "body": "<h3>Scenario 1: Ritu, 38, ₹2L medical emergency — understanding the 85% LTV tier</h3><p>Ritu needs ₹2 lakhs for her mother's surgery within 24 hours. Her ₹2L loan falls in the lowest tier under RBI Directions 2025 (loans up to ₹2.5L) — maximum LTV of 85%. Gold value required: ₹2,00,000 ÷ 0.85 = <strong>₹2,35,294</strong> in lender-assessed gold value. At the IBJA reference rate for 22-carat gold on a typical day, this corresponds to approximately 26–30 grams of pure jewellery — verify the exact gram weight needed against the current IBJA rate on the day of pledge.</p><p>No credit/repayment-capacity assessment is required for Ritu's loan under ₹2.5L (that requirement applies only to loans above ₹2.5L under RBI Directions 2025). The bank can disburse in under 30 minutes with only KYC and gold documentation.</p><p>Alternative: personal loan at a typical rate (verify current) for 12 months would require 3–5 days and income documentation. For a genuine 24-hour emergency where gold is available, the gold loan is faster and potentially cheaper depending on lender. <strong>Critical: gold loan interest is not tax-deductible for personal medical use under any Income Tax Act provision.</strong></p><h3>Scenario 2: Naresh, 52, farmer pledging gold for sowing season — bullet repayment within the 12-month cap</h3><p>Naresh needs ₹1.5L in April for seeds and fertiliser, expecting harvest proceeds in October (6 months). His ₹1.5L loan is in the under ₹2.5L LTV tier at 85%. Gold value required: ₹1,50,000 ÷ 0.85 = <strong>₹1,76,471</strong> in assessed gold value — approximately 19–23 grams of 22-carat jewellery at typical IBJA rates.</p><p>Bullet repayment suits Naresh's seasonal cash flow: he pays only interest monthly (at typical bank rate, verify current: approximately ₹1,000–₹1,500/month on ₹1.5L depending on rate), then repays ₹1.5L principal from his October harvest. His 6-month repayment plan is within the 12-month bullet cap introduced by RBI Directions 2025.</p><p>Naresh should first check: is he eligible for KCC (Kisan Credit Card) at subsidised rates under the government's interest subvention scheme? KCC agricultural loans carry significantly lower effective rates (verify current with NABARD and his bank). If KCC is available and sufficient, it is far cheaper than a gold loan. Gold loan makes sense only if KCC is exhausted or unavailable. An NBFC bullet gold loan at a higher rate versus a bank would cost meaningfully more — always compare at least two lenders.</p><h3>Scenario 3: Deepa, 44, ₹3L home renovation — the 80% LTV tier and mandatory credit assessment</h3><p>Deepa needs ₹3 lakhs for her kitchen renovation. At ₹3L, her loan falls in the middle LTV tier (₹2.5L–₹5L): maximum LTV 80%. Gold value required: ₹3,00,000 ÷ 0.80 = <strong>₹3,75,000</strong> in assessed gold value — materially more gold than a ₹2L loan would require. She needs to check that her jewellery stock supports this valuation at current IBJA rates.</p><p>Because Deepa's loan exceeds ₹2.5L, <strong>the lender must conduct a credit and repayment-capacity assessment</strong> under RBI Directions 2025. Unlike smaller gold loans, this means she will need to provide income evidence. The gold-loan advantage of documentation-free disbursal partially diminishes for loans above ₹2.5L.</p><p>She has two lender quotes: Bank at a typical rate (verify current), NBFC at a higher typical rate (verify current). On ₹3L for 12 months, a 10% rate difference between lenders produces approximately ₹15,000–₹17,000 in total interest saved. She should verify specific rates from both lenders on the same day — the difference matters enough to justify the time. <strong>Gold loan interest for home renovation is not tax-deductible</strong> under any Income Tax Act provision (unlike a home loan, which carries Section 24(b) interest deduction up to ₹2L/year under the old tax regime).</p>"
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown table to see how your numbers change over time."
+      "id": "gold-loan-rules",
+      "heading": "Gold Loan Regulations — RBI Directions 2025 Tiered LTV, IBJA Valuation, 7-Day Return Rule, and No-Tax-Deduction",
+      "body": "<p><strong>RBI Lending Against Gold and Silver Collateral Directions 2025 (effective 1 April 2026):</strong> This is the primary regulatory framework governing gold loans in India, replacing earlier piecemeal circulars. The 2025 Directions introduced the tiered LTV structure replacing the old flat 75% cap:</p><ul><li>Loans up to ₹2.5 lakh: <strong>85% LTV</strong></li><li>Loans between ₹2.5 lakh and ₹5 lakh: <strong>80% LTV</strong></li><li>Loans above ₹5 lakh: <strong>75% LTV</strong></li></ul><p>The old flat 75% cap applied uniformly before April 2026 — the tiered structure is a 2026 change that benefits smaller borrowers (up to ₹5L) with higher LTV allowances.</p><p><strong>Valuation method — IBJA rates, conservative formula:</strong> Gold valuation under RBI Directions 2025 uses the <strong>lower of: (a) the 30-day average IBJA (India Bullion and Jewellers Association) rate for that purity, OR (b) the previous-day IBJA closing price for that purity</strong>. This conservative approach protects lenders from gold price spikes that might leave them over-exposed. For borrowers, this means: if gold prices have recently risen sharply, your loan amount reflects the lower trailing average, not today's spot. Check the IBJA daily rate at ibja.co and the 30-day average before pledging to estimate your loan ceiling.</p><p><strong>Gold return within 7 working days:</strong> Under RBI Directions 2025, once a borrower repays the gold loan in full, the lender must return the pledged gold within <strong>7 working days</strong>. If the lender fails to return within this period, the borrower is entitled to <strong>compensation of ₹5,000 per day</strong> for the delay. This is a new borrower protection not present under earlier circulars.</p><p><strong>Loans above ₹2.5L require credit assessment:</strong> For gold loans above ₹2.5 lakh, RBI Directions 2025 require lenders to conduct a credit and repayment-capacity assessment of the borrower. This partially reduces the documentation-free advantage of gold loans in this tier — borrowers above ₹2.5L will typically need income evidence or credit bureau check.</p><p><strong>Bullet repayment capped at 12 months:</strong> RBI Directions 2025 cap bullet repayment (interest-only monthly, principal at maturity) gold loans at a maximum tenure of 12 months. Bullet loans cannot be extended beyond 12 months under this framework.</p><p><strong>No tax deduction for personal gold loans:</strong> Gold loan interest is not deductible under any section of the Income Tax Act for personal borrowing. This contrasts sharply with home loans — Section 24(b) allows up to ₹2 lakh annual interest deduction for self-occupied property under the old tax regime; Section 80C covers principal repayment within ₹1.5L (old regime). Gold loans carry no equivalent benefit. If a gold loan funds a business or investment purpose, tax treatment depends on the use and requires chartered accountant advice.</p><p><strong>No foreclosure charges on floating-rate loans:</strong> RBI's Master Direction on Interest Rate on Advances prohibits prepayment and foreclosure charges on floating-rate loans to individual borrowers. Most gold loans are fixed-rate — verify your loan structure before assuming penalty-free prepayment.</p><p><strong>Eligible gold and auction rules:</strong> Accepted: 18–22 carat gold ornaments; bank-sold 22 carat+ gold coins (within prescribed limits per RBI guidelines on bank gold coin sales). Not accepted: gold bullion, Exchange-Traded Gold, Sovereign Gold Bonds, digital gold, or demat-held gold. On default: lender issues legal notice, then auctions gold if unresolved. Any surplus after recovering outstanding loan + interest + auction costs is returned to the borrower.</p>"
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust the inputs to compare different scenarios and find the best option for your situation."
+      "id": "gold-loan-mistakes",
+      "heading": "What Gold Loan Borrowers Get Wrong",
+      "body": "<p><strong>Assuming gold loan interest is tax-deductible.</strong> This is the most common and costly mistake. Gold loan interest for personal borrowing — medical, wedding, home renovation — provides zero income tax benefit under the Income Tax Act. There is no Section 24(b) equivalent, no 80E analogue, no 80C link. The full interest cost comes from post-tax income. Build this into your effective borrowing cost when comparing gold loans to alternatives.</p><p><strong>Not knowing the IBJA valuation method — and expecting spot price.</strong> Lenders do not use today's gold spot price. Under RBI Directions 2025, they use the lower of: (a) the 30-day average IBJA rate for your gold's purity, or (b) the previous-day IBJA closing price. If gold has spiked in the last week, your loan ceiling reflects the trailing average, which may be meaningfully lower. Check IBJA's published rates and compare the 30-day average against the previous-day close before visiting the branch.</p><p><strong>Not reading the auction clause before pledging sentimental jewellery.</strong> A missed EMI does not trigger immediate auction — there is a notice period. But the timeline from default to potential auction is real and shorter than many borrowers expect. Never pledge irreplaceable family heirlooms for a gold loan if repayment is uncertain. The auction surplus clause (borrower gets back any amount above the lender's recovery) is small comfort if the jewellery carries sentimental value beyond its metal price.</p><p><strong>Choosing NBFC convenience without comparing lender rates.</strong> Gold-loan NBFCs offer more branch locations, faster processing, and flexible repayment structures — but typically at higher rates than banks. On a ₹3L gold loan for 12 months, a 10% rate difference produces approximately ₹15,000–₹17,000 in total interest cost. That single rate-comparison call or visit is worth making. Use this calculator to compare the total interest at the bank rate vs the NBFC rate on your specific loan amount.</p><p><strong>Ignoring the new credit-assessment requirement above ₹2.5L.</strong> Under RBI Directions 2025 (effective April 2026), loans above ₹2.5L require a repayment-capacity assessment. Borrowers who planned to use a gold loan specifically to avoid income documentation — and whose loan need exceeds ₹2.5L — will now face some level of income scrutiny at compliant lenders. Plan accordingly if your loan requirement is in this bracket.</p>"
     }
   ],
   "faq": [
     {
-      "q": "How accurate is the Gold Loan Calculator?",
-      "a": "The Gold Loan Calculator uses standard financial formulas. Results are indicative; actual figures depend on your lender or financial institution's policies."
+      "q": "What is the maximum LTV for a gold loan in India in 2026?",
+      "a": "Under RBI's Lending Against Gold and Silver Collateral Directions 2025 (effective 1 April 2026), the LTV cap is now tiered by loan size, replacing the old flat 75% cap: loans up to ₹2.5 lakh — 85% LTV; loans between ₹2.5 lakh and ₹5 lakh — 80% LTV; loans above ₹5 lakh — 75% LTV. Example: for a ₹2L loan (85% LTV tier), you need gold worth at least ₹2,35,294 in the lender's valuation. For a ₹4L loan (80% tier), you need gold worth ₹5L. For a ₹6L loan (75% tier), you need gold worth ₹8L. Valuation uses the lower of the 30-day average IBJA rate or previous-day IBJA closing price for your gold's purity."
     },
     {
-      "q": "Is the Gold Loan Calculator free to use?",
-      "a": "Yes, the Gold Loan Calculator on CalcPhi is completely free with no registration required."
+      "q": "Is gold loan interest tax-deductible in India?",
+      "a": "No. Gold loan interest is not deductible under any provision of the Income Tax Act for personal borrowing by salaried individuals. Unlike home loans — where Section 24(b) provides up to ₹2 lakh annual interest deduction for self-occupied property under the old tax regime, and Section 80C covers principal repayment within ₹1.5L — gold loans carry no tax benefit for personal use. The entire interest cost is paid from post-tax income. If a gold loan is used for business or investment purposes, deductibility depends on the end use and requires a chartered accountant's advice."
     },
     {
-      "q": "Are my data inputs stored?",
-      "a": "No. All calculations happen in your browser. We do not store any of your financial data."
+      "q": "What is the difference between a bank gold loan and an NBFC gold loan?",
+      "a": "Both are regulated by RBI but differ in practice. Banks (SBI, HDFC, Canara Bank etc.): typically lower interest rates, branch-based process, stricter documentation for loans above ₹2.5L (per 2025 Directions). NBFCs (Muthoot Finance, Manappuram Finance): typically higher rates, more branches, faster 30-minute disbursal, more flexible repayment structures. The rate difference between banks and NBFCs for gold loans can be significant — verify current rates from both types of lenders before pledging. On a ₹3L loan for 12 months, a 10% rate differential produces approximately ₹15,000–₹17,000 in total interest difference."
     },
     {
-      "q": "How often are the Gold Loan Calculator rates updated?",
-      "a": "Rates in examples are updated periodically to reflect current market conditions. Always verify with your bank or advisor."
+      "q": "What happens if I cannot repay my gold loan?",
+      "a": "On default, the lender issues a legal notice per their Fair Practices Code and RBI guidelines. If the default is unresolved within the notice period, the lender can auction the pledged gold to recover outstanding principal, accrued interest, and auction costs. Any surplus above this recovery is returned to the borrower. Once you repay in full, the lender must return your gold within 7 working days under RBI Directions 2025 — if they delay beyond 7 working days, you are entitled to ₹5,000/day compensation. Read the default, auction, and return clauses in your loan agreement before pledging."
     },
     {
-      "q": "Can I use the Gold Loan Calculator on mobile?",
-      "a": "Yes. CalcPhi is fully mobile-optimised. The calculator works on all modern smartphones and tablets."
+      "q": "Can I prepay a gold loan without penalty?",
+      "a": "For floating-rate gold loans to individual borrowers, the RBI Master Direction on Interest Rate on Advances prohibits any prepayment or foreclosure charges. Most gold loans in India are fixed-rate — for fixed-rate gold loans, lenders may levy prepayment charges (typically 1–3% of the prepaid amount). Check your specific loan agreement's prepayment clause before making a part-payment or full foreclosure. Some NBFCs competing for short-tenure borrowers advertise zero prepayment penalty even on fixed-rate gold loans — verify this in writing."
     },
     {
-      "q": "Who should use this calculator?",
-      "a": "Anyone in India planning their finances can benefit from the Gold Loan Calculator. It's designed for both beginners and experienced investors."
+      "q": "How is gold valued for a gold loan?",
+      "a": "Under RBI Directions 2025 (effective April 2026), lenders must use the lower of: (a) the 30-day average IBJA (India Bullion and Jewellers Association) rate for that purity, or (b) the previous-day IBJA closing price for that purity. The IBJA publishes daily reference rates for gold at different carats at ibja.co. This conservative method means if gold prices have recently spiked, your loan ceiling is based on the trailing average — which may be lower than today's spot price. Higher-purity gold (22 carat) is valued more favourably than lower purities; studded jewellery has stones' value excluded."
+    },
+    {
+      "q": "How is EMI calculated for a gold loan?",
+      "a": "EMI = P × r × (1+r)^n / ((1+r)^n − 1), where P = loan amount, r = monthly interest rate (annual rate ÷ 12 ÷ 100), n = tenure in months. Example: ₹2L at 12% for 12 months — r = 0.01, (1.01)^12 = 1.1268, EMI = 2,00,000 × 0.01 × 1.1268 / 0.1268 ≈ ₹17,770/month, total interest ₹13,240. For bullet repayment (interest-only monthly, principal at end — capped at 12 months under RBI Directions 2025): monthly outflow = ₹2L × 12% ÷ 12 = ₹2,000/month, plus ₹2L principal at month 12. Total interest under bullet at 12%: ₹24,000 — significantly more than the reducing-balance EMI structure."
+    },
+    {
+      "q": "Should I take a gold loan or a personal loan for an emergency?",
+      "a": "Gold loan advantages: faster disbursal (under 30 minutes for loans up to ₹2.5L under 2025 Directions — no credit assessment needed), no income documentation for smaller amounts, potentially lower rates at banks. Personal loan advantages: no collateral at risk, gold remains with you, available if you don't have pledgeable gold. On total cost: a bank gold loan typically costs less than a personal loan for applicants without top-tier CIBIL scores — verify current rates from both before deciding. NBFC gold loans at higher rates may cost more than personal loans. Critical: neither gold loan nor personal loan interest is tax-deductible for personal use."
     }
   ],
-  "examples": [
+  "howToSteps": [
     {
-      "heading": "₹20 lakh gold loan at 8.5% for 20 years",
-      "text": "A ₹20 lakh gold loan at 8.5% p.a. over 20 years results in an EMI of approximately ₹17,357. Total interest paid over the term is ₹21.66 lakh — making total cost ₹41.66 lakh."
+      "name": "Determine Your Loan Amount and LTV Tier",
+      "text": "Under RBI Directions 2025 (effective April 2026): loans up to ₹2.5L → 85% LTV; ₹2.5L–₹5L → 80% LTV; above ₹5L → 75% LTV. Divide your required loan by the applicable LTV to find the minimum gold value needed. Compare against IBJA's reference rate for your gold's purity."
     },
     {
-      "heading": "₹50 lakh gold loan at 9% for 15 years",
-      "text": "Borrowing ₹50 lakh at 9% for 15 years gives an EMI of ₹50,713. Total interest is ₹41.28 lakh. Reducing tenure to 10 years cuts total interest to ₹26.03 lakh, saving ₹15.25 lakh."
+      "name": "Enter Your Interest Rate",
+      "text": "Enter the rate quoted by your lender — bank or NBFC. Always verify current rates with at least two lenders before pledging. Use the total interest output to compare lender offers side by side on the same loan amount and tenure."
+    },
+    {
+      "name": "Set Your Repayment Tenure",
+      "text": "For EMI loans, enter the agreed tenure. For bullet repayment (interest monthly, principal at end), note the 12-month maximum cap under RBI Directions 2025. Enter 12 in this calculator to see the bullet structure's total interest — it is typically higher than EMI reducing-balance for the same tenure."
+    },
+    {
+      "name": "Compare Against a Personal Loan",
+      "text": "Use the Personal Loan EMI Calculator with the same amount and a typical personal loan rate (verify current) to compare total interest. If the gold loan bank rate is lower than the personal loan rate, the gold loan is the cheaper option — at the cost of pledging your gold as collateral."
     }
   ],
   "related": [
     {
-      "title": "Home Loan EMI Calculator",
-      "url": "/india/home-loan-emi-calculator/"
-    },
-    {
-      "title": "Loan Eligibility Calculator",
-      "url": "/india/loan-eligibility-calculator/"
+      "title": "Personal Loan EMI Calculator",
+      "url": "/india/personal-loan-emi-calculator/",
+      "desc": "Compare personal loan cost — no collateral required"
     },
     {
       "title": "Loan Prepayment Calculator",
-      "url": "/india/loan-prepayment-calculator/"
+      "url": "/india/loan-prepayment-calculator/",
+      "desc": "Model interest saved by early repayment of your gold loan"
+    },
+    {
+      "title": "Loan Eligibility Calculator",
+      "url": "/india/loan-eligibility-calculator/",
+      "desc": "Check unsecured loan eligibility based on income and FOIR"
     }
-  ]
+  ],
+  "schema": {
+    "appName": "Gold Loan Calculator India",
+    "appDescription": "Calculate gold loan EMI and total interest. Includes RBI 2025 tiered LTV (85%/80%/75%), IBJA valuation method, 7-day gold return rule, and comparison of bank vs NBFC gold loan rates."
+  }
 }
