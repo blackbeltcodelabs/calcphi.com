@@ -1,13 +1,13 @@
 {
   "id": "section-80d",
   "schema": {
-    "appName": "Section 80D Health Insurance Deduction Calculator",
-    "appDescription": "Calculate Section 80D deduction for health insurance premiums for self, family, and parents. FY 2026-27 limits."
+    "appName": "Section 80D Health Insurance Deduction Calculator India FY 2026-27",
+    "appDescription": "Calculate Section 80D tax savings on health insurance premiums. Self/family: ₹25,000 (₹50K if senior). Parents: ₹25,000 (₹50K if senior). Max ₹1L combined. Old regime only."
   },
   "inputs": [
     {
       "id": "s80d-income",
-      "label": "Annual Taxable Income (₹)",
+      "label": "Annual Gross Income (₹)",
       "min": 0,
       "max": 100000000,
       "step": 10000,
@@ -17,121 +17,125 @@
       "id": "s80d-self",
       "label": "Health Insurance Premium — Self & Family (₹)",
       "min": 0,
-      "max": 100000,
+      "max": 50000,
       "step": 1000,
       "value": 20000,
-      "hint": "Including spouse and children"
+      "hint": "Spouse and dependent children included"
     },
     {
       "id": "s80d-parents",
       "label": "Health Insurance Premium — Parents (₹)",
       "min": 0,
-      "max": 100000,
+      "max": 50000,
       "step": 1000,
       "value": 30000,
-      "hint": "25,000 limit (50,000 if senior citizen parents)"
+      "hint": "Biological or step-parents (not in-laws)"
     },
     {
       "id": "s80d-senior-parents",
-      "label": "Are parents senior citizens?",
+      "label": "Are Your Parents Senior Citizens (60+)?",
       "type": "select",
       "options": [
-        {
-          "value": "no",
-          "label": "No"
-        },
-        {
-          "value": "yes",
-          "label": "Yes (age 60+)"
-        }
+        { "value": "no", "label": "No" },
+        { "value": "yes", "label": "Yes" }
       ]
     }
   ],
   "outputs": [
+    { "id": "s80d-self-ded", "label": "Deduction — Self & Family" },
+    { "id": "s80d-parent-ded", "label": "Deduction — Parents" },
+    { "id": "s80d-total", "label": "Total 80D Deduction" },
+    { "id": "s80d-saved", "label": "Tax Saved", "highlight": true }
+  ],
+  "articleSections": [
     {
-      "id": "s80d-self-ded",
-      "label": "Self & Family Deduction"
+      "id": "s80d-how-it-works",
+      "heading": "How Section 80D Works — Deduction Limits, Senior Citizen Rules, and the Preventive Health Checkup",
+      "body": "<p>Section 80D provides a deduction for health insurance premiums paid for yourself, your spouse, dependent children, and parents. It is one of the few deductions available beyond Section 80C and provides a separate, independent deduction limit. Available only under the old tax regime — not available in the new regime.</p><p><strong>Deduction limits (FY 2026-27):</strong></p><table><thead><tr><th>Category</th><th>Deduction Limit</th></tr></thead><tbody><tr><td>Self + spouse + dependent children (taxpayer below 60)</td><td>₹25,000</td></tr><tr><td>Self + spouse + dependent children (taxpayer aged 60+)</td><td>₹50,000</td></tr><tr><td>Parents (below 60)</td><td>₹25,000</td></tr><tr><td>Parents (senior citizens, 60+)</td><td>₹50,000</td></tr><tr><td>Preventive health checkup (within above limits)</td><td>₹5,000</td></tr></tbody></table><p><strong>Maximum deductions possible:</strong></p><ul><li>Taxpayer below 60, non-senior parents: ₹25,000 (self) + ₹25,000 (parents) = <strong>₹50,000</strong></li><li>Taxpayer below 60, senior citizen parents: ₹25,000 (self) + ₹50,000 (parents) = <strong>₹75,000</strong></li><li>Both taxpayer and parents are senior citizens: ₹50,000 (self) + ₹50,000 (parents) = <strong>₹1,00,000</strong></li></ul><p>Tax saving at 30% slab with maximum deduction: ₹75,000 × 30% × 1.04 = <strong>₹23,400</strong> (non-senior self, senior parents). At ₹1L maximum: ₹31,200.</p><p><strong>Preventive health checkup:</strong> Up to ₹5,000 for preventive health check-ups qualifies under 80D, within the overall limit for each category (not an additional ₹5,000 over and above). Uniquely, preventive checkup payments can be made in cash — unlike insurance premiums which must be paid by non-cash modes (cheque, bank transfer, UPI). If actual insurance premium is ₹20,000 and preventive checkup cost is ₹5,000, total 80D claim = ₹25,000 (capped at the self-category limit).</p><p><strong>Payment mode requirement:</strong> Insurance premiums must be paid by non-cash modes to be deductible under 80D: cheque, demand draft, net banking, UPI, debit/credit card. Cash payments for premiums are not deductible (except for preventive health checkup).</p>"
     },
     {
-      "id": "s80d-parent-ded",
-      "label": "Parents Deduction"
+      "id": "s80d-scenarios",
+      "heading": "Three 80D Planning Scenarios — Young Employee, Single Parent Policy, and Maximum Deduction Stacking",
+      "body": "<h3>Scenario 1: Siddharth, 32, family floater for self + wife + child — basic 80D claim</h3><p>Siddharth pays ₹22,000 annual premium for a ₹10L family floater covering himself, his wife (29), and daughter (4). No parent policies. Taxpayer (Siddharth) is below 60.</p><p>80D deduction: ₹22,000 (self + family), within ₹25,000 limit. Tax at 30% slab: ₹22,000 × 30% × 1.04 = ₹6,864 saved. Also: Siddharth got a preventive health checkup for ₹3,000. He can add this within the ₹25,000 self-limit: total 80D claim = ₹22,000 + ₹3,000 = ₹25,000 (exactly at the limit). Additional tax saving on checkup: ₹3,000 × 30% × 1.04 = ₹936.</p><h3>Scenario 2: Nalini, 38, separate parent policy for senior citizen parents</h3><p>Nalini (38, below 60) pays ₹20,000 family floater for herself + husband. Her father (67) and mother (64) are senior citizens. Nalini takes a separate senior citizen health insurance policy for her parents at ₹48,000/year.</p><p>80D deduction: Self + family: ₹20,000 (within ₹25,000 limit). Parents (senior citizens): ₹48,000 (within ₹50,000 senior citizen limit). Total 80D: ₹68,000. Tax at 30% slab: ₹68,000 × 30% × 1.04 = ₹21,216. The ₹48,000 parent premium effectively costs ₹26,784 post-tax. This is the real cost of the policy after tax benefit — often competitive with the standalone premium for senior citizen coverage.</p><h3>Scenario 3: Pradeep, 62 (senior citizen) — both self and parent coverage at maximum limits</h3><p>Pradeep is 62 (senior citizen taxpayer). His 86-year-old mother is insured separately. Pradeep's own family floater: ₹50,000 premium (he is senior citizen, ₹50,000 limit applies). Mother's policy: ₹45,000 premium (mother is 86, senior citizen limit ₹50,000 applies). Both policies paid via net banking.</p><p>80D deduction: Self + family (senior taxpayer): ₹50,000. Mother (senior citizen parent): ₹45,000 (within ₹50K limit). Total: ₹95,000. Tax at 30% slab: ₹95,000 × 30% × 1.04 = ₹29,640. He is ₹5,000 under the maximum ₹1L combined limit. If he also pays ₹5,000 for preventive checkup, he reaches the full ₹1L: ₹50K self limit already maxed, no additional ₹5K room there. He uses the ₹5K checkup within the already-maxed self limit (i.e., the checkup is already counted within the ₹50K he paid). No additional deduction room here — the preventive checkup is within, not in addition to, the applicable limit.</p>"
     },
     {
-      "id": "s80d-total",
-      "label": "Total 80D Deduction"
+      "id": "s80d-rules",
+      "heading": "Section 80D Rules — Who Can Be Covered, What Qualifies, and What Does Not",
+      "body": "<p><strong>Who is covered under 80D:</strong></p><ul><li>Self (the taxpayer)</li><li>Spouse</li><li>Dependent children (biological or adopted)</li><li>Parents (biological or step-parents) — separate limit</li></ul><p><strong>Who is NOT covered under 80D:</strong></p><ul><li>In-laws (parents of spouse) — cannot be claimed by you even if you pay their premium</li><li>Siblings</li><li>Non-dependent children (adults with their own income)</li><li>Grandchildren</li></ul><p><strong>Who pays the premium matters:</strong> The premium must be paid by the taxpayer. If your parents pay their own policy premium, only the taxpayer who actually makes the payment can claim the deduction. If the premium is paid by cash, it is not deductible (except preventive checkup). However: if your parents pay their own premium, they can claim 80D in their own ITR (if they are taxpayers).</p><p><strong>What types of insurance qualify:</strong></p><ul><li>Health insurance policies (individual or family floater) with minimum cover prescribed by IRDAI</li><li>Mediclaim policies from general insurance companies</li><li>Critical illness plans and cancer insurance</li><li>Top-up and super top-up health plans</li><li>Preventive health check-ups (up to ₹5,000, even by cash)</li></ul><p><strong>What does NOT qualify under 80D:</strong></p><ul><li>Term life insurance (Section 80C, not 80D)</li><li>LIC premiums (80C)</li><li>Group health insurance provided by employer — the employer's premium payment does not qualify for your 80D (it may be a perquisite). However, if you top up the group plan with personal payments, those top-up premiums can qualify.</li><li>Premiums paid in cash (except preventive checkup)</li></ul><p><strong>Interaction with employer health insurance:</strong> Many employers provide group health coverage. Your 80D claim is for premiums YOU pay personally — the employer's premium contribution is not your personal payment and cannot be claimed. If you pay an additional personal policy (top-up or separate) out of your pocket, that premium qualifies for 80D.</p>"
     },
     {
-      "id": "s80d-saved",
-      "label": "Tax Saved",
-      "highlight": true
+      "id": "s80d-mistakes",
+      "heading": "Common 80D Mistakes — In-Law Coverage, Cash Payment, and Group Plan Confusion",
+      "body": "<p><strong>Trying to claim 80D for spouse's parents (in-laws).</strong> A very common mistake: paying health insurance for in-laws and claiming 80D on it. Section 80D covers only biological parents or step-parents of the taxpayer. In-laws are not covered. If you pay ₹35,000 for in-laws' health insurance, that premium is not deductible under 80D. The in-laws themselves can claim it in their ITR if they are taxpayers and pay the premium themselves.</p><p><strong>Paying the insurance premium in cash and expecting a deduction.</strong> Section 80D explicitly requires non-cash payment for insurance premiums — cheque, demand draft, net banking, UPI, or debit/credit card. A premium paid in cash is not deductible, even if the amount is within the ₹25,000/₹50,000 limits. The only exception is preventive health check-up payments (up to ₹5,000) which can be in cash. Always pay premiums via traceable electronic means.</p><p><strong>Not claiming 80D in the new regime — then realising old regime was better.</strong> Section 80D is unavailable in the new tax regime. If you are in the new regime and also paying ₹50,000+ in health insurance premiums (common with senior citizen parent coverage), you are getting zero deduction on those premiums. If the combined 80C + 80D + other deductions under old regime exceed the slab-rate advantage of the new regime, old regime may be worth choosing. Run the new vs old regime comparison first — if you have senior citizen parents, the ₹50,000 parent 80D can shift the math.</p><p><strong>Not claiming preventive health checkup separately.</strong> Many people pay ₹3,000–₹5,000 for annual master health checkups and forget to include this in their 80D claim. The checkup qualifies within the overall 80D limit for the relevant category and can be paid by cash. If you have headroom in your 80D limit (e.g., actual premium is ₹22,000 out of ₹25,000 limit), the ₹3,000 checkup fills the remaining ₹3,000 entirely. Collect receipts from hospitals or diagnostic centres for proof if the employer or ITR requires documentation.</p>"
     }
   ],
   "howToSteps": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the Section 80D Calculator. All inputs have smart defaults."
+      "name": "Enter gross income",
+      "text": "Enter your annual gross income to calculate the applicable tax slab. The slab rate determines how much each rupee of 80D deduction saves in actual tax."
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time as you type — no submit button needed."
+      "name": "Enter self and family premium",
+      "text": "Include your own policy and any policies covering your spouse and dependent children. All payments must be by non-cash mode. Include preventive health checkup costs within this limit."
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown table to see how your numbers change over time."
+      "name": "Enter parent premium and age",
+      "text": "Enter premiums paid for your parents (biological or step). Mark if they are senior citizens — this determines whether the parent limit is ₹25,000 or ₹50,000. In-law premiums do not qualify."
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust the inputs to compare different scenarios and find the best option for your situation."
+      "name": "Check tax saved output",
+      "text": "Tax saved = total 80D deduction × your slab rate × 1.04 (cess). This is the real after-tax cost of the insurance — subtract it from the premium to see your net premium cost."
     }
   ],
   "faq": [
     {
-      "q": "What is the Section 80D limit for FY 2026-27?",
-      "a": "Section 80D limits: self and family (below 60) — ₹25,000; self senior citizen — ₹50,000; parents (below 60) — ₹25,000; parents senior citizens — ₹50,000. Maximum combined deduction: ₹1 lakh (₹50,000 self + ₹50,000 senior parent). Preventive health check-up ₹5,000 included in limit."
+      "q": "What is the Section 80D deduction limit for FY 2026-27?",
+      "a": "Section 80D limits: Self + family (taxpayer below 60): ₹25,000. Self + family (taxpayer 60+ senior citizen): ₹50,000. Parents (below 60): ₹25,000. Parents (senior citizens, 60+): ₹50,000. Preventive health checkup: ₹5,000 within the above limits (not additional). Maximum combined: ₹75,000 (non-senior self + senior citizen parents); ₹1,00,000 (senior self + senior citizen parents). Available only under the old tax regime. New regime: 80D is not available."
     },
     {
-      "q": "Does Section 80D apply under the new tax regime?",
-      "a": "No. Section 80D deductions are not available under the new tax regime. You can only claim them if you opt for the old tax regime. However, buying health insurance is still advisable for medical protection regardless of the tax regime."
+      "q": "Can I claim 80D deduction for my parents in India?",
+      "a": "Yes. Premiums paid for biological or step-parents' health insurance qualify for a separate 80D deduction limit: ₹25,000 if parents are below 60; ₹50,000 if parents are senior citizens (60+). The premium must be paid by the taxpayer (not the parents) via non-cash modes. In-laws (parents of your spouse) do NOT qualify under 80D. If parents are taxpayers themselves and pay their own premiums, they can claim 80D in their own ITR. The taxpayer and parents can each claim independently — there is no double-dipping restriction here."
     },
     {
-      "q": "Can I claim 80D if I pay health insurance premium for my spouse?",
-      "a": "Yes, you can claim 80D for premiums paid for yourself, your spouse, dependent children, and parents. You cannot claim for in-laws or siblings. Premiums must be paid by cheque, DD, or digital payment (not cash)."
+      "q": "Is health insurance premium deductible in the new tax regime?",
+      "a": "No. Section 80D is exclusively an old regime benefit. Under the new tax regime, all Chapter VI-A deductions — including 80C, 80D, 80E, NPS 80CCD(1B) — are surrendered. If you are in the new regime and pay ₹50,000+ in health insurance premiums (especially for senior citizen parents), you receive zero tax deduction on those premiums. However, the insurance coverage itself is independent of the tax deduction — health insurance is valuable regardless of the tax regime. Use the New vs Old Regime Calculator to check if your 80D + 80C combined deductions justify switching to old regime."
     },
     {
-      "q": "Is the Section 80D Calculator free?",
-      "a": "Yes, the Section 80D Calculator on CalcPhi is completely free with no registration required."
+      "q": "Can I pay health insurance premium in cash and still claim 80D?",
+      "a": "Only partially. Health insurance premiums must be paid by non-cash modes (cheque, bank transfer, UPI, debit/credit card) to qualify for 80D. Cash payments for premiums are explicitly excluded. Exception: preventive health check-up expenses (up to ₹5,000 within the overall limit) can be paid by cash and still qualify. Always pay insurance premiums via traceable electronic modes. If you paid a premium in cash, that amount is not deductible — even if within limits."
     },
     {
-      "q": "Are my inputs stored?",
-      "a": "No. All calculations run in your browser. We do not store any financial data."
+      "q": "Does my employer's group health insurance qualify for 80D?",
+      "a": "No. Group health insurance provided by your employer — where the company pays the premium — does not qualify for your personal 80D deduction. It is the employer's expenditure, not yours. However, if you make any personal payment toward a group plan top-up or additional individual policy out of your own pocket, those personal premium payments qualify for 80D. Check your payslip: if any health insurance premium is deducted from your salary (i.e., you are paying it), that portion may qualify. If the company pays the entire premium as a benefit, you have zero 80D from that policy."
     },
     {
-      "q": "Can I use the Section 80D Calculator on mobile?",
-      "a": "Yes. CalcPhi is fully mobile-optimised and works on all modern smartphones."
-    }
-  ],
-  "examples": [
-    {
-      "heading": "Family floater + senior citizen parents premium",
-      "text": "Paying ₹20,000 for a family floater (self, spouse, children) and ₹35,000 for senior citizen parents gives 80D deduction of ₹20,000 + ₹35,000 = ₹55,000. At 20% tax slab, this saves ₹11,440 in tax (with cess)."
+      "q": "What is the preventive health checkup deduction under 80D?",
+      "a": "Up to ₹5,000 for preventive health check-ups (master health checks, full-body screenings) is deductible under Section 80D — within the applicable overall limit for the relevant category (not an additional ₹5,000 over and above). This means if your self-category limit is ₹25,000 and you paid ₹22,000 in insurance premium + ₹3,000 for a health checkup, total 80D claim = ₹25,000 (the checkup fills the remaining ₹3,000). Uniquely, preventive checkup payments can be in cash (unlike insurance premiums which must be non-cash). Collect and retain receipts from diagnostic centres or hospitals."
     },
     {
-      "heading": "Self senior citizen — maximum deduction",
-      "text": "A senior citizen taxpayer paying ₹50,000 own premium + ₹50,000 for senior citizen parents claims maximum ₹1 lakh deduction under 80D, saving up to ₹31,200 at the 30% slab."
+      "q": "Can both me and my parents claim 80D independently?",
+      "a": "Yes, in two scenarios. If parents are taxpayers themselves and pay their own health insurance premiums: they claim 80D in their own ITR (₹25,000 or ₹50,000 limit based on their age). If the taxpayer pays the parent's premium: the taxpayer claims the parent deduction in their ITR. The two cannot both claim the same premium — whichever person actually pays the premium is the one who claims it. This gives families planning opportunities: if the senior citizen parent is also filing ITR, it may be more tax-efficient for the parent to pay their own premium (claiming the ₹50,000 senior limit at their slab rate) rather than the taxpayer paying it (also ₹50,000 limit at the taxpayer's slab rate). The saving is the same amount of deduction × whoever's slab rate is higher."
+    },
+    {
+      "q": "What documents do I need to claim 80D?",
+      "a": "For claiming 80D in ITR: insurance premium receipt or policy renewal notice showing premium paid and date of payment; bank statement or UPI transaction showing non-cash payment; for preventive checkup: diagnostic centre receipt (cash payments accepted). You do not need to attach these to the ITR — ITRs are self-assessment. However, keep them for 6 years in case of a scrutiny assessment or notice. Your Form 16 (if employer deducts TDS considering your 80D declaration via Form 12BB) will reference the declared amount — ensure your actual payment matches what you declared. Discrepancy between declaration and actual payment does not trigger notice automatically, but it affects TDS computation."
     }
   ],
   "related": [
     {
+      "title": "Section 80C Calculator",
+      "url": "/india/section-80c-calculator/",
+      "desc": "Combine 80C with 80D for maximum old-regime deductions"
+    },
+    {
+      "title": "New vs Old Tax Regime Calculator",
+      "url": "/india/new-vs-old-regime-calculator/",
+      "desc": "Check if your combined 80C + 80D stack justifies the old regime"
+    },
+    {
       "title": "Income Tax Calculator",
-      "url": "/india/income-tax-calculator/"
-    },
-    {
-      "title": "Health Insurance Calculator",
-      "url": "/india/health-insurance-calculator/"
-    },
-    {
-      "title": "New vs Old Tax Regime",
-      "url": "/india/new-vs-old-regime-calculator/"
+      "url": "/india/income-tax-calculator/",
+      "desc": "Compute full tax liability after applying 80D and all other deductions"
     }
   ]
 }

@@ -1,113 +1,124 @@
 {
   "id": "tds-on-salary",
   "schema": {
-    "appName": "TDS on Salary Calculator India 2026-27",
-    "appDescription": "Calculate monthly TDS deducted from salary under Section 192. See annual tax, monthly TDS, and net in-hand salary for FY 2026-27."
+    "appName": "TDS on Salary Calculator India FY 2026-27 — Monthly Deduction Under Section 192",
+    "appDescription": "Calculate monthly TDS deducted from salary under Section 192 for FY 2026-27. New regime default. Shows annual tax, monthly TDS, and estimated net in-hand salary."
   },
   "inputs": [
     {
       "id": "tos-salary",
-      "label": "Monthly Basic + DA (₹)",
-      "min": 10000,
-      "max": 1000000,
+      "label": "Monthly Gross Salary (₹)",
+      "min": 0,
+      "max": 10000000,
       "step": 1000,
-      "value": 80000
+      "value": 80000,
+      "hint": "Before tax but after PF deduction"
     },
     {
       "id": "tos-other",
-      "label": "Other Allowances per Month (₹)",
+      "label": "Monthly Other Income (₹)",
       "min": 0,
-      "max": 500000,
+      "max": 1000000,
       "step": 1000,
       "value": 20000,
-      "hint": "HRA, special allowance, etc."
+      "hint": "Rental income, interest, etc."
     }
   ],
   "outputs": [
+    { "id": "tos-annual-income", "label": "Annual Taxable Income" },
+    { "id": "tos-annual-tax", "label": "Annual Tax Liability" },
+    { "id": "tos-monthly-tds", "label": "Monthly TDS Deduction", "highlight": true },
+    { "id": "tos-in-hand", "label": "Estimated Net Monthly In-Hand" }
+  ],
+  "articleSections": [
     {
-      "id": "tos-annual-income",
-      "label": "Annual Gross Income"
+      "id": "tos-how-it-works",
+      "heading": "How Employers Calculate Monthly TDS on Salary — the Section 192 Formula",
+      "body": "<p>Under Section 192, your employer must deduct TDS from your salary. The calculation is done in four steps at the start of each financial year:</p><ol><li><strong>Estimate full-year gross income:</strong> Monthly salary × 12 + expected variable pay/bonuses + all taxable allowances.</li><li><strong>Apply regime-specific deductions:</strong> New regime (default) → subtract ₹75,000 standard deduction only. Old regime (if declared via Form 12BB) → subtract ₹50,000 SD + all declared investments and exemptions (80C, HRA, home loan interest, 80D, NPS).</li><li><strong>Compute annual tax:</strong> Apply FY 2026-27 slabs to taxable income. Apply Section 87A rebate if income ≤ ₹12L (new regime) or net taxable income ≤ ₹5L (old regime). Add 4% cess.</li><li><strong>Divide by 12:</strong> Monthly TDS = Annual tax ÷ 12. Deducted each month and deposited with the government by the 7th of the following month.</li></ol><p>The employer recalculates whenever inputs change: mid-year bonus paid, Form 12BB updated, or regime switch declared. A large December bonus causes the employer to recalculate annual income with the bonus included — all remaining tax for the year is divided across January, February, and March, producing a visible spike in TDS in the last quarter.</p><p><strong>New regime is default from FY 2024-25:</strong> If you submit no Form 12BB or regime declaration, your employer defaults to the new regime. If you want old regime TDS (to factor in HRA, home loan, 80C), you must explicitly opt in by submitting Form 12BB with investment declarations before the first payroll run of the financial year.</p><p><strong>What salary TDS does NOT cover:</strong> Freelance/consulting income, rental income, capital gains, FD interest. If you have any of these, the resulting tax must be paid as advance tax quarterly — salary TDS from your employer does not cover non-salary income.</p>"
     },
     {
-      "id": "tos-annual-tax",
-      "label": "Annual Tax (New Regime)"
+      "id": "tos-scenarios",
+      "heading": "Three Salary TDS Scenarios — Zero-Tax Employee, Mid-Year Bonus Spike, and Rental Income Gap",
+      "body": "<h3>Scenario 1: Anjali, ₹1L/month salary, new regime — zero TDS all year</h3><p>Anjali earns ₹1,00,000/month gross. No other income. New regime: annual income = ₹12L. Standard deduction: ₹75,000. Taxable income = ₹11,25,000. Tax: ₹20,000 (5% on ₹4–8L) + ₹32,500 (10% on ₹8–11.25L) = ₹52,500. Section 87A rebate: income ≤ ₹12L → rebate ₹60,000 > tax. <strong>Annual tax = ₹0. Monthly TDS = ₹0.</strong> Anjali receives her full ₹1L each month (before PF and other deductions). The 87A rebate in practice: at ₹12L income, zero income tax and zero TDS.</p><h3>Scenario 2: Kartik, ₹1.5L/month + ₹3L December bonus — the TDS spike</h3><p>Kartik's monthly salary: ₹1,50,000. Annual estimate (April): ₹18L. New regime. Taxable = ₹18L − ₹75K = ₹17.25L. Annual tax: ₹20K + ₹40K + ₹60K + 20% on ₹1.25L = ₹25K = ₹1,45,000. Cess: ₹5,800. Annual tax: ₹1,50,800. Monthly TDS (April–November): ₹12,567.</p><p>In December, Kartik receives ₹3L performance bonus. New annual income: ₹21L. Taxable = ₹21L − ₹75K = ₹20.25L. Tax: ₹20K + ₹40K + ₹60K + ₹80K + 25% on ₹25K = ₹6,250 = ₹2,06,250. Cess: ₹8,250. New annual tax: ₹2,14,500. TDS deducted April–November (8 months): ₹12,567 × 8 = ₹1,00,536. Remaining: ₹2,14,500 − ₹1,00,536 = ₹1,13,964. Monthly TDS for December–March (4 months, with bonus paid in December): ≈ ₹28,491. Kartik sees monthly TDS roughly double after the bonus — this is correct, not an error.</p><h3>Scenario 3: Meghna, ₹1.2L/month salary + ₹30,000/month rental income</h3><p>Meghna earns ₹1.2L/month (₹14.4L annual) + ₹30,000/month rental income (₹3.6L annual). New regime. Salary TDS: taxable from salary = ₹14.4L − ₹75K = ₹13.65L. Annual salary tax: ₹20K + ₹40K + 15% on ₹1.65L = ₹24,750 = ₹84,750. Cess: ₹3,390. Monthly TDS on salary: ₹7,345. Her employer deducts this amount.</p><p>But rental income (₹3.6L) is also taxable. Total taxable income: ₹13.65L (salary) + ₹3.6L (rent) = ₹17.25L. Additional tax on rental portion: tax at 20% on ₹1.25L bracket (₹16–17.25L) = ₹25,000. Cess: ₹1,000. Rental tax ≈ ₹26,000. This must be paid via advance tax — 15% by 15 June, 45% cumulative by 15 September, etc. If Meghna ignores advance tax, Section 234B interest accrues at 1% per month from April 1 of the assessment year.</p>"
     },
     {
-      "id": "tos-monthly-tds",
-      "label": "Monthly TDS Deduction",
-      "highlight": true
+      "id": "tos-rules",
+      "heading": "Form 12BB, Proof of Investment, and Section 192 Regime Declaration Rules",
+      "body": "<p><strong>Form 12BB — the employee's declaration document:</strong> Salaried employees submit Form 12BB to their employer to claim exemptions and deductions for TDS purposes. Sections: HRA claim (landlord PAN required if annual rent exceeds ₹1L); LTA; home loan interest under Section 24(b); Chapter VI-A deductions (80C, 80D, NPS 80CCD(1B), 80E, 80G). The employer uses these declarations to reduce monthly TDS. Important: Form 12BB is a declaration, not verified proof. Over-declaring (claiming deductions you will not make) leads to under-deducted TDS — you will pay the shortfall with interest at ITR time.</p><p><strong>Proof of investment requirement:</strong> Most employers require submission of actual investment proof by January–February. Documents: PPF passbook, ELSS purchase statement, LIC premium receipt, home loan interest certificate, rent receipts. If proofs are not submitted, employers reverse the declared deduction for the remaining months and deduct extra TDS in the last 2 months — causing a visible spike that many employees mistake for an error.</p><p><strong>Regime choice and its consequences:</strong> New regime is default. To opt for old regime: submit a written declaration or Form 12BB to HR before April payroll. You can change this at ITR filing time — your employer declaration does not bind your ITR choice. If you switch to old regime at ITR after employer deducted TDS at new regime, you will claim a refund (old-regime deductions reduce tax below TDS deducted). Switching from old regime to new at ITR filing also works — but you lose old-regime deductions entirely.</p><p><strong>Multiple employers in a year:</strong> When joining a new employer mid-year, the new employer calculates TDS only on their own payments. They do not know about previous employer salary unless you inform them via Form 12B. If combined income pushes you to a higher slab, the new employer's TDS is insufficient. Submit Form 12B (with previous salary and TDS details) to the new employer to enable correct computation.</p><p><strong>Section 192A — EPF premature withdrawal TDS:</strong> TDS at 10% applies on EPF withdrawals before 5 years of continuous service if amount exceeds ₹50,000 (verify current threshold at incometax.gov.in). Without PAN: 20% TDS. Withdrawals after 5 years of continuous service are fully exempt.</p>"
     },
     {
-      "id": "tos-in-hand",
-      "label": "Net Monthly In-Hand"
+      "id": "tos-mistakes",
+      "heading": "Common Salary TDS Mistakes — Over-Declaration, Job-Change Traps, and Unplanned Bonuses",
+      "body": "<p><strong>Declaring investments in April that are never made.</strong> If you declare ₹1.5L in 80C to reduce TDS but invest only ₹60,000 by March, your TDS is under-deducted by roughly ₹13,500–₹18,000 (30% slab on ₹90,000 gap). Your employer will catch this during proof collection (January–February) and deduct the shortfall from remaining months — or you will pay it at ITR filing with Section 234B/234C interest. Only declare what you will actually invest.</p><p><strong>Not informing the second employer of income from the first in a job-change year.</strong> The new employer calculates TDS only on the salary they pay you. If combined income from both employers (say, ₹8L from Employer A + ₹10L from Employer B = ₹18L) is taxed at a higher slab than each employer assumes individually, the new employer's TDS is insufficient. Submit Form 12B with previous employer's salary and TDS when you join the new company. Otherwise, face a large demand at ITR time.</p><p><strong>Treating TDS as final tax settlement and skipping ITR.</strong> TDS from salary is an advance tax credit — not a receipt for settled tax. You must still file an ITR to: claim any refund, carry forward capital losses, declare income from other sources, and comply with mandatory filing requirements (income above basic exemption limit). Many salaried employees skip ITR assuming TDS handled everything — this can mean missing refunds or attracting late filing fees.</p><p><strong>Not accounting for the annual bonus in TDS planning.</strong> If your employer typically pays a performance bonus in January, plan for increased TDS from February–March. Check your December pay slip carefully — if the bonus calculation is recalibrated, you may owe a large TDS adjustment in the last 2 months. Better to save the equivalent amount proactively than to be caught short when the bonus payment increases your apparent income.</p>"
     }
   ],
   "howToSteps": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the TDS on Salary Calculator. All inputs have smart defaults."
+      "name": "Enter monthly gross salary",
+      "text": "Use the gross salary before TDS and PF deductions, inclusive of all taxable allowances. Do not use CTC — use the monthly gross from your payslip."
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time as you type — no submit button needed."
+      "name": "Add other income if applicable",
+      "text": "Enter estimated monthly rental income, interest, or freelance income. This is included for total taxable income but typically is not covered by employer TDS — you pay advance tax on these separately."
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown table to see how your numbers change over time."
+      "name": "Compare to your actual payslip TDS",
+      "text": "The calculator uses the new regime default. If your actual TDS is lower, your employer has Form 12BB deductions reducing it. If higher, a mid-year recalculation may be in progress."
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust the inputs to compare different scenarios and find the best option for your situation."
+      "name": "Plan advance tax on non-salary income",
+      "text": "If other income creates a net tax obligation exceeding ₹10,000/year after TDS credits, you need quarterly advance tax payments. Use the Advance Tax Calculator to determine instalment amounts."
     }
   ],
   "faq": [
     {
-      "q": "How is TDS on salary calculated in India?",
-      "a": "Your employer calculates expected annual income, applies applicable deductions (based on your investment declaration), computes annual tax under the selected regime, and divides by 12 to arrive at monthly TDS. The employer adjusts TDS in later months if actual investments differ."
+      "q": "How is TDS on salary calculated for FY 2026-27?",
+      "a": "Section 192 TDS calculation: (1) Estimate annual gross income. (2) Apply regime: new regime → deduct ₹75,000 standard deduction only; old regime → deduct ₹50,000 SD + Form 12BB declared amounts (80C ₹1.5L, HRA, home loan interest, 80D etc.). (3) Compute annual tax under FY 2026-27 slabs. New regime: ₹4–8L 5%; ₹8–12L 10%; ₹12–16L 15%; ₹16–20L 20%; ₹20–24L 25%; above ₹24L 30%. Section 87A rebate: income ≤ ₹12L → zero tax. (4) Add 4% cess. (5) Monthly TDS = annual tax ÷ 12. Employer recalculates when bonus is paid or declarations change."
     },
     {
-      "q": "What is Form 16 and why is it important?",
-      "a": "Form 16 is the TDS certificate issued by employers annually by 15 June. It contains salary details (Part A from TRACES) and salary computation with deductions (Part B). It's the key document for filing your ITR and serves as proof of TDS payment."
+      "q": "Can I change my tax regime after salary TDS has been deducted?",
+      "a": "Yes. Even if your employer deducted TDS under the new regime (the default), you can choose the old regime when filing your ITR. Enter old-regime deductions (80C, HRA, 80D, home loan interest) in the ITR; if old-regime tax is lower than TDS already deducted, claim the excess as a refund. The employer declaration does not bind your ITR choice for salaried employees. Important exception: self-employed individuals with business income who chose new regime cannot revert to old regime after opting in — the one-way restriction applies only to taxpayers with business income."
     },
     {
-      "q": "Can I reduce TDS on salary?",
-      "a": "Yes. Submit Form 12BB to your employer with investment declarations — PPF, ELSS, LIC premiums (80C), health insurance (80D), HRA details, home loan interest. The employer reduces TDS accordingly. Declare accurately — under-declaration leads to underpaid TDS."
+      "q": "What is Form 12BB and why does it matter?",
+      "a": "Form 12BB is the employee's declaration to the employer for TDS purposes. It covers: HRA exemption (landlord details, PAN if annual rent above ₹1L); LTA; home loan interest under Section 24(b); Chapter VI-A deductions (80C up to ₹1.5L, 80D, NPS 80CCD(1B), 80E, 80G). Without Form 12BB, the employer deducts TDS on full salary minus only ₹75,000 standard deduction (new regime). Submit at the start of the financial year (April); update mid-year if circumstances change; submit investment proofs by February."
     },
     {
-      "q": "Is the TDS on Salary Calculator free?",
-      "a": "Yes, the TDS on Salary Calculator on CalcPhi is completely free with no registration required."
+      "q": "What is Form 16 and how do I use it for ITR filing?",
+      "a": "Form 16 is the TDS certificate from your employer, issued by 15 June each year. Part A: employer/employee details, total salary paid, total TDS deducted. Part B: salary breakup, deductions claimed under Chapter VI-A, taxable income. Use Form 16 to: verify employer TDS matches your payslips and Form 26AS; pre-fill your ITR. Multiple employers in a year = multiple Form 16s — combine all income and recompute tax on total income in ITR. The individual Form 16 computation may be wrong if the employer did not account for other-employer income."
     },
     {
-      "q": "Are my inputs stored?",
-      "a": "No. All calculations run in your browser. We do not store any financial data."
+      "q": "Why did my TDS spike in January or February?",
+      "a": "Three common reasons: (1) Investment proof deadline — if you declared 80C/other investments in April but did not submit proofs by January, your employer reverses the deduction. Shortfall TDS is divided over remaining months. (2) Performance bonus in December/January — employer recalculates annual income including the bonus and spreads remaining tax across the last few months. (3) Mid-year salary revision — backdated increment raises the annual income estimate. All of these are correct; the employer is ensuring the annual tax is fully covered by March 31."
     },
     {
-      "q": "Can I use the TDS on Salary Calculator on mobile?",
-      "a": "Yes. CalcPhi is fully mobile-optimised and works on all modern smartphones."
-    }
-  ],
-  "examples": [
-    {
-      "heading": "₹1 lakh/month salary — TDS calculation",
-      "text": "For ₹1 lakh/month gross salary (₹12 lakh annual), new regime tax after ₹75,000 standard deduction is on ₹11.25 lakh = ₹86,250. Monthly TDS = ₹7,188. Net in-hand ≈ ₹92,812/month."
+      "q": "Is TDS deducted when I have no tax liability at ₹12L salary?",
+      "a": "No. At ₹12L annual income under the new regime, standard deduction reduces taxable income to ₹11.25L. Tax computed = ₹52,500. Section 87A rebate applies (income ≤ ₹12L): rebate of ₹60,000 exceeds the tax. Final tax = ₹0. Monthly TDS = ₹0. Your employer automatically applies this rebate in the TDS computation — no action required. You receive your full monthly salary (before PF and other statutory deductions) without any income tax deduction."
     },
     {
-      "heading": "₹2 lakh/month salary — 30% bracket",
-      "text": "₹2 lakh/month (₹24 lakh annual) under new regime: tax on ₹23.25 lakh ≈ ₹4,32,500. Monthly TDS = ₹36,042. Net in-hand ≈ ₹1,63,958 before other deductions like PF, professional tax."
+      "q": "What should I do if TDS deducted is more than my actual tax liability?",
+      "a": "File your ITR and claim a refund. The ITR calculation: actual tax payable minus total TDS credit = net refund. The excess TDS is credited to your pre-validated bank account (linked to PAN on the income tax portal). Refunds typically arrive 30–60 days after ITR processing. Track at the income tax portal under 'Refund Status.' Refunds are not automatic — you must file the ITR to claim them. Filing early (before July 31, the ITR deadline) results in faster refund processing."
+    },
+    {
+      "q": "How is TDS calculated when I have a bonus mid-year?",
+      "a": "When a bonus is paid, the employer recalculates annual tax: (old monthly salary × 12) + bonus = revised annual income. New annual tax is computed on this revised income. TDS already deducted in prior months is subtracted. The balance is divided across the remaining months of the financial year. Example: ₹1.5L/month salary (₹18L annual, monthly TDS ₹12,567). ₹3L bonus in December. New annual income = ₹21L. New annual tax = ₹2,14,500. TDS already deducted (8 months × ₹12,567 = ₹1,00,536). Remaining: ₹1,13,964 divided over 4 months = ₹28,491/month. The December–March TDS roughly doubles. This is expected and correct."
     }
   ],
   "related": [
     {
-      "title": "CTC to In-Hand Calculator",
-      "url": "/india/ctc-to-in-hand-calculator/"
+      "title": "New vs Old Tax Regime Calculator",
+      "url": "/india/new-vs-old-regime-calculator/",
+      "desc": "Decide your regime before submitting Form 12BB to your employer"
     },
     {
-      "title": "Income Tax Calculator",
-      "url": "/india/income-tax-calculator/"
+      "title": "Advance Tax Calculator",
+      "url": "/india/advance-tax-calculator/",
+      "desc": "Plan quarterly advance tax on rental or other income not covered by salary TDS"
     },
     {
-      "title": "New vs Old Tax Regime",
-      "url": "/india/new-vs-old-regime-calculator/"
+      "title": "Section 80C Calculator",
+      "url": "/india/section-80c-calculator/",
+      "desc": "Optimise your 80C declarations in Form 12BB to reduce TDS under old regime"
     }
   ]
 }

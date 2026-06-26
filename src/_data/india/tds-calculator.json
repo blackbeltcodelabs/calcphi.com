@@ -1,132 +1,127 @@
 {
   "id": "tds-calculator",
   "schema": {
-    "appName": "TDS Calculator India 2026-27",
-    "appDescription": "Calculate TDS (Tax Deducted at Source) on income payments, contracts, professional fees, rent, and more. Section-wise TDS rates."
+    "appName": "TDS Calculator India FY 2026-27 — Section-Wise TDS Rates",
+    "appDescription": "Calculate TDS on professional fees, rent, contractor payments, commission, and interest. Section 194J (10%), 194I, 194C, 194H, 194A rates. Verify thresholds at incometax.gov.in."
   },
   "inputs": [
     {
       "id": "tds-income",
-      "label": "Payment Amount (\u20b9)",
+      "label": "Payment Amount (₹)",
       "min": 0,
       "max": 100000000,
       "step": 1000,
-      "value": 100000,
-      "hint": "Gross payment before TDS"
+      "value": 100000
     },
     {
       "id": "tds-type",
       "label": "Payment Type",
       "type": "select",
       "options": [
-        {
-          "value": "salary",
-          "label": "Salary (Section 192)"
-        },
-        {
-          "value": "professional",
-          "label": "Professional/Technical Fees (194J) \u2014 10%"
-        },
-        {
-          "value": "rent",
-          "label": "Rent \u2014 Plant/Machinery (194I) \u2014 2%"
-        },
-        {
-          "value": "rent-property",
-          "label": "Rent \u2014 Property (194IB) \u2014 5%"
-        },
-        {
-          "value": "contractor",
-          "label": "Contractor/Sub-contractor (194C) \u2014 1%"
-        },
-        {
-          "value": "commission",
-          "label": "Commission/Brokerage (194H) \u2014 5%"
-        },
-        {
-          "value": "interest",
-          "label": "Interest other than bank (194A) \u2014 10%"
-        }
+        { "value": "salary", "label": "Salary (Section 192)" },
+        { "value": "professional", "label": "Professional Fees (Section 194J)" },
+        { "value": "rent", "label": "Rent — Land/Building/Furniture (Section 194I)" },
+        { "value": "rent-property", "label": "Rent — Paid by Individual (Section 194IB)" },
+        { "value": "contractor", "label": "Contractor Payment (Section 194C)" },
+        { "value": "commission", "label": "Commission / Brokerage (Section 194H)" },
+        { "value": "interest", "label": "Interest (Section 194A)" }
       ]
     }
   ],
   "outputs": [
+    { "id": "tds-amount", "label": "TDS Amount", "highlight": true },
+    { "id": "tds-net", "label": "Net Payment After TDS" },
+    { "id": "tds-rate", "label": "TDS Rate Applied" }
+  ],
+  "articleSections": [
     {
-      "id": "tds-amount",
-      "label": "TDS Amount",
-      "highlight": true
+      "id": "tds-how-it-works",
+      "heading": "How TDS Works — Deduction, Deposit, and Credit Cycle Under the Income Tax Act",
+      "body": "<p>TDS (Tax Deducted at Source) is a pay-as-you-earn mechanism. The person making a payment (the deductor) deducts a percentage of the amount as tax before paying the recipient, then deposits that amount with the government. The recipient (deductee) receives the net amount but gets full credit for the TDS deducted when filing their ITR — reducing their final tax liability by that amount.</p><p>The cycle: (1) Deductor deducts TDS at the prescribed rate on the payment. (2) Deductor deposits TDS with the government by the 7th of the following month (30 April for March deductions). (3) Deductor files quarterly TDS returns (Form 24Q for salary, 26Q for others). (4) TDS credit appears in the deductee's Form 26AS and AIS. (5) Deductee claims TDS credit in ITR, reducing the remaining tax due.</p><p><strong>Who must deduct TDS:</strong> Businesses, companies, firms, and individuals/HUFs whose accounts are subject to audit in the preceding year must deduct TDS on specified payments. Individuals making rent payments above ₹50,000/month must deduct under Section 194IB regardless of audit status. If the wrong amount is deducted, interest and penalties apply to the deductor — not the deductee.</p><p><strong>TDS does not equal final tax:</strong> If your income is below the taxable threshold, file Form 15G (below 60 years) or Form 15H (senior citizens) with the payer. On receiving the form, the bank or payer does not deduct TDS on qualifying payments. If TDS has already been deducted and your income is not taxable, claim a refund in your ITR.</p><p><strong>TDS on GST:</strong> TDS is deducted on the base amount only — not on the GST component — when GST is separately charged on the invoice and the recipient's GST registration number is mentioned. Invoice of ₹1L base + ₹18K GST = ₹1.18L total. TDS under Section 194J (10%): ₹10,000 on ₹1L base only. Net payment to recipient: ₹1.08L.</p>"
     },
     {
-      "id": "tds-net",
-      "label": "Net Payment After TDS"
+      "id": "tds-scenarios",
+      "heading": "Three TDS Deduction Examples — Professional Services, Contractor Payment, and Rent",
+      "body": "<h3>Scenario 1: Harsha, Delhi startup, pays ₹80,000 to a software consultant</h3><p>Harsha's company pays ₹80,000 to Pradeep for software development services. This is a professional fee under Section 194J. The threshold for 194J deduction (verify current): ₹30,000 per year from the same deductee. Since ₹80,000 exceeds ₹30,000, TDS applies.</p><p>Rate: 10% (Section 194J professional fees). TDS = ₹8,000. Net payment to Pradeep: ₹72,000. Harsha deposits ₹8,000 with the government by the 7th of the following month.</p><p>Pradeep's ITR: gross income ₹80,000 from professional fees. Form 26AS shows ₹8,000 TDS credit. If Pradeep's total tax liability for the year on all income is ₹20,000, he pays ₹12,000 more at filing time — the ₹8,000 already deducted reduces his cash outflow.</p><h3>Scenario 2: Divya, building contractor, receives ₹5L from a factory — Section 194C</h3><p>A manufacturing company pays Divya ₹5L for civil construction work. Section 194C governs contractor payments. Threshold (verify current): ₹30,000 single payment or ₹1,00,000 aggregate per year from the same deductee. Rate: 1% if contractor is individual/HUF (Divya), 2% if company or firm.</p><p>TDS = 1% × ₹5,00,000 = ₹5,000. Net payment: ₹4,95,000. Divya claims ₹5,000 TDS credit in her ITR.</p><p>Note: if Divya sub-contracts part of the work, she becomes a deductor and must deduct TDS on payments to her sub-contractors above the threshold. The TDS chain flows through the supply chain.</p><h3>Scenario 3: Srinivas, landlord, receives ₹60,000/month rent from a company — Section 194I</h3><p>Srinivas rents a commercial property for ₹60,000/month to a company. Section 194I applies since annual rent (₹7.2L) exceeds ₹2,40,000 (verify current threshold). Rate: 10% on rent for land/building/furniture. Monthly TDS: 10% × ₹60,000 = ₹6,000. The company pays Srinivas ₹54,000 net and deposits ₹6,000 as TDS. Annual TDS: ₹72,000. Srinivas claims all ₹72,000 as TDS credit in his ITR. If Srinivas's total tax is ₹60,000, he gets a ₹12,000 refund.</p>"
     },
     {
-      "id": "tds-rate",
-      "label": "Applicable TDS Rate"
+      "id": "tds-rules",
+      "heading": "TDS Section Reference — Rates, Thresholds, and Key Rules for Common Payment Types",
+      "body": "<p>The following rates reflect current law — thresholds are frequently revised by Finance Acts. Verify current thresholds at incometax.gov.in before deducting.</p><table><thead><tr><th>Section</th><th>Payment Type</th><th>Rate</th><th>Key Threshold (verify current)</th></tr></thead><tbody><tr><td>192</td><td>Salary</td><td>Slab rate</td><td>Income above basic exemption limit</td></tr><tr><td>194A</td><td>Interest (non-bank / bank)</td><td>10%</td><td>₹40,000/year; ₹50K senior citizens from banks</td></tr><tr><td>194C</td><td>Contractor — individual/HUF</td><td>1%</td><td>₹30,000 single / ₹1L aggregate per year</td></tr><tr><td>194C</td><td>Contractor — company/firm</td><td>2%</td><td>₹30,000 single / ₹1L aggregate per year</td></tr><tr><td>194H</td><td>Commission / brokerage</td><td>5%</td><td>₹15,000/year (verify current)</td></tr><tr><td>194I</td><td>Rent — land/building/furniture</td><td>10%</td><td>₹2,40,000/year (verify current)</td></tr><tr><td>194I</td><td>Rent — plant and machinery</td><td>2%</td><td>₹2,40,000/year (verify current)</td></tr><tr><td>194IB</td><td>Rent by individual/HUF (&gt;₹50K/month)</td><td>5%</td><td>₹50,000/month</td></tr><tr><td>194J</td><td>Professional fees</td><td>10%</td><td>₹30,000/year (verify current)</td></tr><tr><td>194J</td><td>Technical services fees</td><td>2%</td><td>₹30,000/year (verify current)</td></tr><tr><td>194M</td><td>High-value contractor/professional by individual</td><td>5%</td><td>Above ₹50L/year (verify current)</td></tr></tbody></table><p><strong>Lower or nil TDS certificate (Section 197):</strong> Recipients who expect actual tax liability below what TDS would deduct can apply to the Assessing Officer for a certificate authorising lower/nil TDS. The deductor must deduct at the reduced rate specified in the certificate. Useful for businesses with large losses or credits.</p><p><strong>TDS return deadlines:</strong> Quarterly returns due: Q1 by 31 July; Q2 by 31 October; Q3 by 31 January; Q4 by 31 May. Late filing: ₹200/day penalty. Errors in PAN matching: 20% TDS rate applies to the payment.</p><p><strong>TDS certificates to deductee:</strong> Form 16 (salary TDS) by 15 June; Form 16A (non-salary) by 15 days from TDS return due date. Deductees need these to verify Form 26AS and file their ITR accurately.</p>"
+    },
+    {
+      "id": "tds-mistakes",
+      "heading": "Common TDS Mistakes — Missing Aggregate Thresholds, Wrong Sections, and PAN Failures",
+      "body": "<p><strong>Not deducting TDS because the single payment is small, ignoring the aggregate threshold.</strong> Section 194C has two triggers: ₹30,000 per single payment OR ₹1,00,000 aggregate from the same contractor in a year. Four payments of ₹25,000 each across the year trigger TDS on the third or fourth payment. Many deductors only track single payments and miss the aggregate threshold, creating a tax demand with interest.</p><p><strong>Deducting TDS at 10% on technical service fees that should attract only 2%.</strong> Finance Act 2020 bifurcated Section 194J: professional services remain at 10%, but technical services (call centres, IT support, maintenance) dropped to 2%. Applying 10% to all 194J payments over-deducts from technical service providers — they cannot recover the excess in the year of deduction and must wait for an ITR refund, hurting their working capital.</p><p><strong>Deducting TDS on the GST amount.</strong> TDS is calculated on the base amount only, not on GST charged separately. The CBDT has clarified that TDS is not applicable on the GST component if GST is indicated separately on the invoice and the supplier's GST registration number is quoted. Over-deducting on the gross invoice reduces the supplier's net payment more than required.</p><p><strong>Mismatching PAN at deduction time.</strong> If the deductor uses the wrong PAN or a supplier declines to furnish PAN, the TDS rate jumps to 20% under Section 206AA. Always collect and verify PAN before the first payment. Many small vendors are unaware their missing PAN costs them an extra 10–15% net income — inform them proactively.</p>"
     }
   ],
   "howToSteps": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the TDS Calculator. All inputs have smart defaults."
+      "name": "Enter the gross payment amount",
+      "text": "Enter the total payment before TDS deduction. For professional fees where GST is separately charged, enter the base amount only — TDS is on base, not on GST."
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time as you type \u2014 no submit button needed."
+      "name": "Select the payment type",
+      "text": "Choose the correct TDS section based on the nature of payment. If unsure, verify at incometax.gov.in — applying the wrong section means the wrong rate and potential penalties."
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown table to see how your numbers change over time."
+      "name": "Check threshold applicability",
+      "text": "TDS applies only if the payment exceeds the section-specific threshold. The calculator shows TDS regardless; check manually if your payment is near the threshold limit."
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust the inputs to compare different scenarios and find the best option for your situation."
+      "name": "Note the net payment and deposit TDS",
+      "text": "Pay the net amount to the recipient. Deposit TDS by the 7th of the following month (30 April for March). File quarterly TDS returns to avoid ₹200/day late filing penalty."
     }
   ],
   "faq": [
     {
-      "q": "What is TDS and who deducts it?",
-      "a": "TDS (Tax Deducted at Source) is tax withheld by the payer before making a payment. Banks deduct TDS on interest, employers on salary, and businesses on contractor/professional payments. The deductor deposits TDS with the government and the deductee gets credit for it in their tax return."
+      "q": "What is TDS and how does it work?",
+      "a": "TDS (Tax Deducted at Source) is a mechanism under the Income Tax Act where the payer deducts a percentage of a payment as tax and deposits it with the government. The recipient receives the net amount and claims the TDS deducted as a credit when filing their ITR — reducing final tax liability. If TDS exceeds actual tax, the difference is refunded. TDS covers salary (Section 192), professional fees (194J), rent (194I/194IB), contractor payments (194C), commission (194H), and interest (194A) among others. Deductors must file quarterly returns and issue TDS certificates (Form 16 for salary, Form 16A for others)."
     },
     {
-      "q": "What is the TDS rate on professional fees in 2026-27?",
-      "a": "TDS on professional/technical fees (Section 194J) is 10% for professionals and 2% for technical services. This applies when the payment exceeds \u20b930,000 in a financial year. Freelancers and consultants receiving professional income will have 10% TDS deducted."
+      "q": "What is the TDS rate on professional fees under Section 194J?",
+      "a": "Section 194J TDS rates: 10% on professional services (doctors, lawyers, architects, accountants, consultants); 2% on fees for technical services (IT support, call centres, technical maintenance) — distinction introduced by Finance Act 2020. Threshold (verify current at incometax.gov.in): ₹30,000 per year from the same payee. TDS applies to base amount, not GST charged separately. If the payee does not furnish PAN, TDS rate rises to 20% under Section 206AA."
     },
     {
-      "q": "How do I check TDS credited to my account?",
-      "a": "TDS credit is visible in your Form 26AS and AIS (Annual Information Statement) on the Income Tax portal. Any mismatch between TDS deducted and Form 26AS must be resolved before filing your ITR to avoid tax demand notices."
+      "q": "What is the TDS rate on rent in India?",
+      "a": "Two sections: Section 194I (deductors who are businesses or audited individuals): 10% on rent for land, building, and furniture; 2% on plant and machinery. Threshold: ₹2,40,000/year (verify current at incometax.gov.in). Section 194IB (individuals and HUFs not subject to audit, paying rent above ₹50,000/month): 5% on one month's rent, deducted once a year at end of tenancy or in March. 194IB is a once-a-year deduction, not monthly."
     },
     {
-      "q": "Is the TDS Calculator free?",
-      "a": "Yes, the TDS Calculator on CalcPhi is completely free with no registration required."
+      "q": "How do I claim TDS refund?",
+      "a": "File your ITR and claim refund. Steps: (1) In ITR, enter total income and compute actual tax. (2) Under 'Tax Paid', enter TDS as shown in Form 26AS/AIS. (3) Excess TDS appears as a refund — the department credits it to your pre-validated bank account. Refunds typically arrive 30–60 days after ITR processing. Track at tin.tin.nsdl.com or the income tax e-filing portal. Refunds are not automatic — you must file the ITR to trigger the refund."
     },
     {
-      "q": "Are my inputs stored?",
-      "a": "No. All calculations run in your browser. We do not store any financial data."
+      "q": "What is Form 15G and Form 15H for TDS?",
+      "a": "Form 15G (individuals below 60 years) and Form 15H (senior citizens aged 60+) are declarations submitted to deductors — typically banks — stating that income is below the taxable limit and no TDS should be deducted. Eligibility: tax on total income must be nil; income must not exceed basic exemption limit. Must be submitted at the start of each financial year. Used primarily to avoid TDS on FD interest, dividends, and rent (194I). False declarations attract penalty under Section 277."
     },
     {
-      "q": "Can I use the TDS Calculator on mobile?",
-      "a": "Yes. CalcPhi is fully mobile-optimised and works on all modern smartphones."
-    }
-  ],
-  "examples": [
-    {
-      "heading": "Freelancer invoicing \u20b91 lakh for professional services",
-      "text": "A freelancer billing \u20b91 lakh for professional services has \u20b910,000 TDS deducted (10% under 194J). The client pays \u20b990,000 net. The freelancer claims \u20b910,000 TDS credit while filing ITR and gets a refund if their actual tax liability is lower."
+      "q": "What happens if TDS is not deducted when required?",
+      "a": "Consequences for the deductor: (1) Disallowance — 30% of the payment is disallowed as a business expense under Section 40(a)(ia) if TDS was not deducted. (2) Interest — 1% per month from the date TDS was deductible to actual deduction; 1.5% per month from deduction date to deposit date. (3) Penalty — equal to TDS amount under Section 271C. (4) Prosecution in serious cases. The deductee is not penalised for the deductor's failure — but a mismatch notice may follow if their income exceeds what appears in Form 26AS."
     },
     {
-      "heading": "Rent payment of \u20b950,000/month",
-      "text": "For monthly rent above \u20b950,000, the tenant must deduct 5% TDS (Section 194IB) in the last month or when vacating. On \u20b96 lakh annual rent: TDS = \u20b930,000, deposited once using Form 26QC."
+      "q": "What is the difference between TDS and TCS?",
+      "a": "TDS (Tax Deducted at Source): deducted by buyer/payer on specified payments — salary, rent, professional fees, contractor payments. TCS (Tax Collected at Source): collected by seller on specified goods/services — liquor, timber, minerals, foreign remittances under LRS (Liberalised Remittance Scheme), and sale of goods above ₹50L (verify current rates). TDS: payer reduces the amount paid. TCS: seller adds to sale price and deposits it. Both appear as credits in Form 26AS and reduce tax liability in the ITR."
+    },
+    {
+      "q": "Does TDS apply when a company pays a freelancer through Razorpay or similar gateways?",
+      "a": "The obligation to deduct TDS rests on the payer, not the payment gateway. If an Indian company (or audited individual) pays a freelancer for professional services above ₹30,000/year, Section 194J TDS (10%) applies regardless of whether payment is via bank transfer, Razorpay, or any other channel. The payment platform is the conduit, not the deductor. Exception: certain e-commerce operators (like Amazon sellers' disbursements) where the platform itself is designated as TDS deductor. For cross-border payments to non-residents, Section 195 may apply with different rates — consult a CA for international payment structures."
     }
   ],
   "related": [
     {
-      "title": "Advance Tax Calculator",
-      "url": "/india/advance-tax-calculator/"
+      "title": "TDS on Salary Calculator",
+      "url": "/india/tds-on-salary-calculator/",
+      "desc": "Calculate monthly TDS from your employer under Section 192"
     },
     {
-      "title": "TDS on Salary Calculator",
-      "url": "/india/tds-on-salary-calculator/"
+      "title": "Advance Tax Calculator",
+      "url": "/india/advance-tax-calculator/",
+      "desc": "Plan quarterly self-payment on income not covered by TDS"
+    },
+    {
+      "title": "Income Tax Calculator",
+      "url": "/india/income-tax-calculator/",
+      "desc": "Compute full-year tax liability to check against TDS credits"
     }
   ]
 }

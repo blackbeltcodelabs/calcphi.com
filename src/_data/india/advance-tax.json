@@ -1,18 +1,17 @@
 {
   "id": "advance-tax",
   "schema": {
-    "appName": "Advance Tax Calculator India 2026-27",
-    "appDescription": "Calculate advance tax liability and quarterly instalments for FY 2026-27. For self-employed, freelancers, and salaried with additional income."
+    "appName": "Advance Tax Calculator India FY 2026-27 — Quarterly Instalment Schedule",
+    "appDescription": "Calculate advance tax liability and quarterly instalments for FY 2026-27. Due dates: 15 June (15%), 15 Sep (45% cumulative), 15 Dec (75%), 15 Mar (100%). Section 234B/234C interest explained."
   },
   "inputs": [
     {
       "id": "at-income",
-      "label": "Total Annual Income (₹)",
+      "label": "Estimated Annual Income (₹)",
       "min": 0,
       "max": 100000000,
       "step": 10000,
-      "value": 1500000,
-      "hint": "Gross income for FY 2026-27"
+      "value": 1500000
     },
     {
       "id": "at-paid",
@@ -21,102 +20,106 @@
       "max": 10000000,
       "step": 1000,
       "value": 0,
-      "hint": "TDS deducted by employer/bank"
+      "hint": "TDS from employer, bank interest, etc."
     }
   ],
   "outputs": [
+    { "id": "at-annual-tax", "label": "Total Annual Tax", "highlight": true },
+    { "id": "at-q1", "label": "Q1 Payment by 15 Jun (15%)" },
+    { "id": "at-q2", "label": "Q2 Payment by 15 Sep (30%)" },
+    { "id": "at-q3", "label": "Q3 Payment by 15 Dec (30%)" },
+    { "id": "at-q4", "label": "Q4 Payment by 15 Mar (25%)" },
+    { "id": "at-balance", "label": "Balance at ITR Filing" }
+  ],
+  "articleSections": [
     {
-      "id": "at-annual-tax",
-      "label": "Annual Tax Liability",
-      "highlight": true
+      "id": "at-how-it-works",
+      "heading": "How Advance Tax Works — the ₹10,000 Threshold, Quarterly Schedule, and Section 234 Interest",
+      "body": "<p>Advance tax requires taxpayers to pre-pay income tax in instalments during the financial year rather than as a lump sum at ITR filing. The obligation arises when total tax liability (after TDS credits) exceeds ₹10,000 for the year. Salaried employees with only salary income rarely need advance tax — employer TDS covers them. But advance tax becomes necessary for: freelancers and consultants, business owners, investors with capital gains, landlords with rental income, and anyone with significant interest or dividend income not fully covered by TDS.</p><p><strong>Quarterly schedule — cumulative percentages:</strong></p><table><thead><tr><th>Instalment</th><th>Due Date</th><th>Cumulative % to Pay</th><th>Incremental Amount</th></tr></thead><tbody><tr><td>Q1</td><td>15 June 2026</td><td>15%</td><td>15% of net annual tax</td></tr><tr><td>Q2</td><td>15 September 2026</td><td>45%</td><td>30% of net annual tax</td></tr><tr><td>Q3</td><td>15 December 2026</td><td>75%</td><td>30% of net annual tax</td></tr><tr><td>Q4</td><td>15 March 2027</td><td>100%</td><td>25% of net annual tax</td></tr></tbody></table><p>These are cumulative percentages of the total annual liability. If you pay nothing by June and 45% by September: Section 234C interest accrues on the Q1 shortfall (15% that was due by June) for 3 months at 1% per month. Missing Q1 entirely costs roughly 3% × Q1 due amount.</p><p><strong>Section 234C — quarterly shortfall interest:</strong> Rate: 1% per month (or part month) on shortfall at each due date, for 3 months. Example: annual net tax ₹3L. Q1 due: ₹45,000 (15%). Pay nothing: interest = 1% × ₹45,000 × 3 = ₹1,350. Q2 due: cumulative ₹1,35,000. Pay only ₹45,000 by September: shortfall ₹90,000 × 1% × 3 = ₹2,700. Q4 exception: no Section 234C interest applies if 100% of estimated tax is paid by 15 March — Q4 is penalty-free for shortfalls if fully paid on time.</p><p><strong>Section 234B — overall under-payment interest:</strong> If less than 90% of total tax is paid by March 31 (through TDS + advance tax), Section 234B interest applies at 1% per month from April 1 of the assessment year until actual payment date. This is potentially much larger than 234C — on a ₹5L tax liability with only ₹2L paid by March 31, Section 234B runs on ₹2.5L (₹5L × 90% = ₹4.5L required, ₹2L paid, shortfall ₹2.5L) at 1%/month. Ensure 90% of tax is paid by March 31 to eliminate Section 234B entirely.</p>"
     },
     {
-      "id": "at-q1",
-      "label": "Q1 Instalment (by 15 Jun) — 15%"
+      "id": "at-scenarios",
+      "heading": "Three Advance Tax Situations — Freelancer Annual Plan, Capital Gains Mid-Year, and the Q4 True-Up",
+      "body": "<h3>Scenario 1: Ramesh, full-time freelance consultant, ₹25L projected income</h3><p>Ramesh earns ₹25L from consulting clients who deduct TDS at 10% (Section 194J) = approximately ₹2.5L TDS. New regime: taxable income = ₹25L − ₹75K SD = ₹24.25L. Annual tax: ₹20K + ₹40K + ₹60K + ₹80K + ₹1,00,000 + 30% on ₹25K (₹7,500) = ₹3,07,500. Cess: ₹12,300. Total: ₹3,19,800. Net advance tax (after ₹2.5L TDS): ₹69,800.</p><p>Q1 (15 June): 15% × ₹69,800 = ₹10,470. Q2 (15 Sep): 30% × ₹69,800 = ₹20,940. Q3 (15 Dec): 30% × ₹69,800 = ₹20,940. Q4 (15 Mar): 25% × ₹69,800 = ₹17,450. Payments via Challan 280 (code 100, Advance Tax) at incometax.gov.in. TDS credits (₹2.5L) are claimed in the ITR to reduce final liability.</p><h3>Scenario 2: Lakshmi, salaried employee + property sale in August — surprise advance tax</h3><p>Lakshmi is salaried at ₹12L/year. Employer TDS covers her salary (87A rebate = zero tax). In August 2026, she sells a flat for ₹85L (bought 2019 for ₹40L). LTCG: ₹45L. She opts for 12.5% without indexation (Finance Act 2024 transitional option). LTCG tax: ₹45L × 12.5% = ₹5.625L.</p><p>This capital gain creates an advance tax obligation. Q2 cumulative (45% of ₹5.625L): ₹2.53L — due by 15 September 2026. Q3 cumulative (75%): ₹4.22L — due by 15 December 2026. Missing Q2: Section 234C interest on ₹2.53L × 1% × 3 months = ₹7,597. Lakshmi had no advance tax history because salary TDS covered her. She must pay advance tax immediately after the property sale to avoid accumulating 234C interest across Q2, Q3, and Q4.</p><h3>Scenario 3: Sundar, variable income — using the Q4 provision</h3><p>Sundar runs a digital agency. He conservatively pays Q1 (₹30,000) and Q2 (₹60,000) based on low estimates. By December he realises annual income = ₹30L. Tax: ≈₹4.75L (new regime, after SD). TDS from some clients: ₹50,000. Net advance tax: ₹4.25L. Paid so far: ₹90,000.</p><p>Q3 (15 December): Pay ₹2.2875L (₹4.25L × 75% = ₹3.1875L cumulative, minus ₹90K already paid = ₹2.2875L). Q4 (15 March): Remaining ₹1.0625L (₹4.25L × 25%). Section 234C interest: Q1 shortfall (actual Q1 15% = ₹63,750; paid ₹30,000; shortfall ₹33,750 × 1% × 3 = ₹1,012). Q2 shortfall similar. Total 234C: approximately ₹3,000–₹5,000. Far less than the late filing penalties or Section 234B that would result from not paying at all. The Q4 provision only eliminates 234C for the Q4 instalment itself — Q1/Q2/Q3 shortfalls still attract 234C.</p>"
     },
     {
-      "id": "at-q2",
-      "label": "Q2 Instalment (by 15 Sep) — 30%"
+      "id": "at-rules",
+      "heading": "Advance Tax Rules — Who Must Pay, Senior Citizens Exception, Capital Gains Relief, and Payment Method",
+      "body": "<p><strong>Who must pay advance tax:</strong> Any individual, firm, company, or other taxpayer with estimated tax liability exceeding ₹10,000 after TDS credits for the year. Self-employed individuals, freelancers, business owners, and investors with capital gains or rental income almost always exceed ₹10,000 net tax.</p><p><strong>Senior citizen exception (Section 207):</strong> Individuals aged 60 years or more who do NOT have income from business or profession are exempt from advance tax. They can pay the full tax at ITR filing as self-assessment tax without Section 234C penalties. Important: Section 234B can still apply to senior citizens if 90% of total tax (not covered by TDS) is not paid by March 31. Senior citizens with large unhindered income (capital gains, rental) should check their 234B exposure.</p><p><strong>Capital gains relief (Proviso to Section 234C):</strong> If advance tax shortfall arises because of capital gains or casual income (hard to predict at year start), Section 234C interest is waived provided the entire remaining tax is paid in the next instalment. Sell equity in July: include in Q2 advance tax (15 September). Sell after 15 December: include in Q4 payment (15 March) — Q4 is already penalty-free. Section 234B still applies to the overall shortfall from April 1 of the assessment year.</p><p><strong>How to pay advance tax:</strong> Via income tax portal → e-Pay Tax → Challan 280 → Select 'Advance Tax' (code 100) — NOT 'Self-Assessment Tax' (code 300). Choose assessment year AY 2027-28 for FY 2026-27 payments. Select income head. Complete payment via net banking, UPI, or debit card. Save the challan receipt with BSR code and serial number — enter all advance tax challans in Schedule IT of your ITR.</p><p><strong>Revised estimate at each quarter:</strong> Advance tax is based on estimated income. Update estimates at each instalment date as actual income becomes clearer. If income comes in below the estimate, reduce subsequent instalments — overpaying advance tax creates a refund at ITR filing, which is acceptable (no penalty for overpayment). Estimate revision at Q3 (December) is the most important — by then 9 months of actual data are available.</p>"
     },
     {
-      "id": "at-q3",
-      "label": "Q3 Instalment (by 15 Dec) — 30%"
-    },
-    {
-      "id": "at-q4",
-      "label": "Q4 Instalment (by 15 Mar) — 25%"
-    },
-    {
-      "id": "at-balance",
-      "label": "Balance Due After TDS"
+      "id": "at-mistakes",
+      "heading": "Common Advance Tax Mistakes — Ignoring Capital Gains, Wrong Challan Code, and 234B Confusion",
+      "body": "<p><strong>Not paying advance tax after a large capital gains event.</strong> Selling equity in August (Q2 period) creates a Q2 advance tax obligation — 45% cumulative must be paid by 15 September. Many investors miss this because their only prior experience is salary TDS, which is handled by the employer. If you sell ₹10L in equity (LTCG ₹3.75L after ₹1.25L exemption, tax ₹46,875), pay at least 45% = ₹21,094 by September 15 to avoid 234C interest for the Q2 period.</p><p><strong>Paying advance tax under 'Self-Assessment Tax' (code 300) instead of 'Advance Tax' (code 100).</strong> The income tax portal accepts both, but the challan code determines when the payment is credited. Self-assessment tax paid in November is treated as payment on the ITR filing date (for Section 234B calculation), not November. Advance tax paid in November is credited on November's date. Using code 300 for mid-year payments means you pay Section 234B interest as if you paid on the filing date — a significant difference. Always use code 100 for advance tax payments during the financial year.</p><p><strong>Assuming Section 234C is the only advance tax risk.</strong> Section 234B — triggered when less than 90% of total tax is paid before March 31 — is often much larger than quarterly 234C shortfalls. On a ₹5L tax liability with ₹1L TDS and ₹1L advance tax (₹2L total = 40% of liability), Section 234B applies to the 50% shortfall (₹2.5L) at 1% per month from April 1 = ₹25,000 for 10 months of delay. Prioritise paying 90% of total estimated tax by March 31 to eliminate 234B entirely.</p><p><strong>Not recalculating TDS credits mid-year before Q3 instalment.</strong> If your employer increases TDS due to a bonus or salary revision, or your bank deducts more TDS on FD interest mid-year, these credits reduce your net advance tax obligation. Many people overpay advance tax because they used April estimates for TDS credits that have grown significantly by December. Download your Form 26AS mid-year (before Q3) to see actual TDS credited so far, then recalculate the net advance tax balance.</p>"
     }
   ],
   "howToSteps": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the Advance Tax Calculator. All inputs have smart defaults."
+      "name": "Estimate your annual income",
+      "text": "Include all income sources: salary, freelance/business income, rental income, interest, and expected capital gains from planned asset sales. Use conservative estimates — you can catch up in Q3/Q4 without penalty on Q4 shortfall."
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time as you type — no submit button needed."
+      "name": "Enter TDS already deducted",
+      "text": "Enter total TDS you expect to be deducted during the year: employer TDS from payslips, bank TDS on FD interest, TDS from clients. Check Form 26AS mid-year for actual credits. Advance tax is the balance after these credits."
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown table to see how your numbers change over time."
+      "name": "Pay via Challan 280 (code 100)",
+      "text": "At incometax.gov.in → e-Pay Tax → Income Tax → Advance Tax (code 100). Choose AY 2027-28 for FY 2026-27 payments. Save the challan receipt with BSR code — enter all challans in Schedule IT of your ITR."
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust the inputs to compare different scenarios and find the best option for your situation."
+      "name": "Recalculate at Q3 (December)",
+      "text": "By December you have 9 months of actual income data. Revise your estimate and adjust Q3 and Q4 payments. Ensure cumulative 90% of tax is paid by March 31 to avoid Section 234B interest."
     }
   ],
   "faq": [
     {
-      "q": "Who must pay advance tax in India?",
-      "a": "Anyone with total tax liability above ₹10,000 after TDS must pay advance tax. This includes self-employed individuals, freelancers, traders, professionals, and salaried employees with significant non-salary income (rental, capital gains, interest)."
+      "q": "Who needs to pay advance tax in India?",
+      "a": "Any individual, firm, or company whose estimated tax liability exceeds ₹10,000 after TDS credits for the financial year must pay advance tax. Salaried employees with only salary income are typically exempt in practice (employer TDS covers them). Advance tax is required for: self-employed individuals, freelancers, business owners, investors with capital gains, landlords with rental income not fully covered by TDS, and salaried employees with significant other income. Senior citizens (60+) with no business/professional income are exempt under Section 207."
     },
     {
       "q": "What are the advance tax due dates for FY 2026-27?",
-      "a": "Q1: 15 June 2026 (15% of liability), Q2: 15 September 2026 (30%), Q3: 15 December 2026 (30%), Q4: 15 March 2027 (25%). Senior citizens with no business income are exempt."
+      "a": "FY 2026-27 advance tax due dates: 15 June 2026 — pay 15% of estimated net annual tax. 15 September 2026 — cumulative 45% paid (pay additional 30%). 15 December 2026 — cumulative 75% paid (pay additional 30%). 15 March 2027 — 100% paid (pay remaining 25%). Net annual tax = total annual tax minus TDS credits. Payments go to Challan 280 (code 100 — Advance Tax) at incometax.gov.in. Missing any due date triggers Section 234C interest (1% per month for 3 months on shortfall at each quarter)."
     },
     {
-      "q": "What interest applies for missing advance tax deadlines?",
-      "a": "Missing advance tax instalments attracts interest under Section 234B (1% per month on unpaid tax) and Section 234C (1% per month on instalment shortfall). This interest is calculated at the time of filing your ITR."
+      "q": "What is Section 234C interest on advance tax?",
+      "a": "Section 234C charges interest on quarterly advance tax shortfalls. Rate: 1% per month (or part month) on the shortfall at each due date, for 3 months. Example: annual net tax ₹3L. Q1 (15 June) — 15% = ₹45,000 due. Pay nothing: 234C = 1% × ₹45,000 × 3 = ₹1,350. Q2 (15 Sep) — cumulative 45% = ₹1,35,000. Pay only ₹45,000 total: shortfall ₹90,000 × 1% × 3 = ₹2,700. Q4 exception: no 234C if 100% is paid by 15 March — Q4 shortfall is penalty-free if fully paid on time."
     },
     {
-      "q": "Is the Advance Tax Calculator free?",
-      "a": "Yes, the Advance Tax Calculator on CalcPhi is completely free with no registration required."
+      "q": "What is the difference between Section 234B and Section 234C?",
+      "a": "Section 234C: quarterly interest on advance tax shortfalls at each instalment date (15 Jun, 15 Sep, 15 Dec). Rate: 1% per month for 3 months on shortfall. Section 234B: overall interest on failure to pay 90% of total tax before March 31 through TDS + advance tax combined. Rate: 1% per month from April 1 of assessment year until actual payment. Section 234B is often larger. On ₹5L total tax with only ₹2L paid by March 31: Section 234B applies to ₹2.5L (₹5L×90%=₹4.5L required minus ₹2L paid = ₹2.5L shortfall) at 1%/month. Paying 90% of tax by March 31 eliminates 234B entirely."
     },
     {
-      "q": "Are my inputs stored?",
-      "a": "No. All calculations run in your browser. We do not store any financial data."
+      "q": "Do I need to pay advance tax on capital gains from stock sales?",
+      "a": "Yes. Capital gains create an advance tax obligation if total net tax exceeds ₹10,000. However, Section 234C provides relief for capital gains that are hard to predict: if you pay the entire capital gains tax in the next instalment after the gain, 234C interest is waived for that shortfall. Sell equity in June: include in Q2 advance tax (due 15 September). Sell in October: include in Q3 (due 15 December). Sell after 15 December: include in Q4 (15 March) — Q4 is 234C-free. Section 234B still applies if 90% of total tax (including capital gains) is not paid by March 31."
     },
     {
-      "q": "Can I use the Advance Tax Calculator on mobile?",
-      "a": "Yes. CalcPhi is fully mobile-optimised and works on all modern smartphones."
-    }
-  ],
-  "examples": [
-    {
-      "heading": "Freelancer with ₹15 lakh annual income",
-      "text": "A freelancer earning ₹15 lakh in FY 2026-27 with no TDS has a tax liability of approximately ₹1.95 lakh under the new regime. Q1 payment (15 June) is ₹29,250; Q2 (15 Sep) ₹58,500; Q3 (15 Dec) ₹58,500; Q4 (15 Mar) ₹48,750."
+      "q": "How do I pay advance tax in India?",
+      "a": "Via the income tax portal: (1) Go to incometax.gov.in → e-Pay Tax. (2) Select Income Tax. (3) Choose Advance Tax — code 100 (NOT code 300 which is self-assessment tax). (4) Assessment year: AY 2027-28 for FY 2026-27. (5) Enter income head details. (6) Complete payment via net banking, UPI, or debit card. (7) Save the challan — note BSR code and serial number. Enter all advance tax challans in Schedule IT of your ITR. Also payable at authorised bank branches via physical Challan 280."
     },
     {
-      "heading": "Salaried employee with rental income",
-      "text": "A salaried employee whose employer deducts ₹80,000 TDS but earns ₹60,000 additional rental income may owe advance tax. Net tax after TDS is calculated, and 4 instalments are due if liability exceeds ₹10,000."
+      "q": "Are senior citizens exempt from advance tax?",
+      "a": "Yes, with a condition. Section 207 exempts senior citizens (age 60+ at any time during the financial year) from advance tax — but only if they do NOT have income from business or profession. Senior citizens with only pension, rental income, interest, dividends, or capital gains are exempt and can pay all tax at ITR filing as self-assessment tax with no Section 234C penalties. However, Section 234B can still apply if 90% of total tax is not covered by TDS by March 31. Senior citizens with large taxable income not covered by TDS (e.g., large FD interest or property sales) should check their Section 234B exposure."
+    },
+    {
+      "q": "What happens if I overpay advance tax?",
+      "a": "Overpaid advance tax becomes a refund when you file your ITR. The ITR calculation: total tax payable minus total tax paid (TDS + advance tax) = refund. The IT department credits the refund to your pre-validated bank account (linked to PAN on the income tax portal) after ITR processing. Refunds typically arrive 30–60 days after processing. No penalty for overpayment. Section 244A: if the refund is delayed beyond a specified period, the government pays interest on the refund. Ensure your ITR bank account details are correct and the account is pre-validated on the portal to receive the refund."
     }
   ],
   "related": [
     {
-      "title": "Income Tax Calculator",
-      "url": "/india/income-tax-calculator/"
-    },
-    {
-      "title": "New vs Old Tax Regime",
-      "url": "/india/new-vs-old-regime-calculator/"
-    },
-    {
       "title": "TDS on Salary Calculator",
-      "url": "/india/tds-on-salary-calculator/"
+      "url": "/india/tds-on-salary-calculator/",
+      "desc": "Confirm employer TDS covers salary so advance tax is only on other income"
+    },
+    {
+      "title": "Capital Gains Calculator",
+      "url": "/india/capital-gains-calculator/",
+      "desc": "Estimate capital gains tax after stock or property sales to plan advance tax"
+    },
+    {
+      "title": "New vs Old Tax Regime Calculator",
+      "url": "/india/new-vs-old-regime-calculator/",
+      "desc": "Know your annual tax liability before computing advance tax instalments"
     }
   ]
 }

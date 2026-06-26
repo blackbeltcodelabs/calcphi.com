@@ -1,13 +1,13 @@
 {
   "id": "section-80c",
   "schema": {
-    "appName": "Section 80C Deduction Calculator",
-    "appDescription": "Calculate your Section 80C deductions and tax savings. Plan PPF, ELSS, LIC, EPF, and other 80C investments to claim the full ₹1.5 lakh limit."
+    "appName": "Section 80C Deduction Calculator India — Maximise ₹1.5 Lakh Limit",
+    "appDescription": "Calculate Section 80C tax savings from ELSS, PPF, LIC, EPF, NSC, home loan principal. Old regime only. ₹1.5L limit unchanged since FY 2014-15. Shows tax saved at your slab rate."
   },
   "inputs": [
     {
       "id": "s80c-income",
-      "label": "Annual Taxable Income (₹)",
+      "label": "Annual Gross Income (₹)",
       "min": 0,
       "max": 100000000,
       "step": 10000,
@@ -15,10 +15,10 @@
     },
     {
       "id": "s80c-elss",
-      "label": "ELSS / Mutual Funds (₹)",
+      "label": "ELSS Investment (₹)",
       "min": 0,
       "max": 150000,
-      "step": 1000,
+      "step": 5000,
       "value": 50000
     },
     {
@@ -26,15 +26,15 @@
       "label": "PPF Contribution (₹)",
       "min": 0,
       "max": 150000,
-      "step": 500,
+      "step": 5000,
       "value": 50000
     },
     {
       "id": "s80c-lic",
-      "label": "LIC Premium (₹)",
+      "label": "LIC / Insurance Premium (₹)",
       "min": 0,
       "max": 150000,
-      "step": 1000,
+      "step": 5000,
       "value": 25000
     },
     {
@@ -42,99 +42,112 @@
       "label": "EPF Employee Contribution (₹)",
       "min": 0,
       "max": 150000,
-      "step": 1000,
+      "step": 5000,
       "value": 25000
     },
     {
       "id": "s80c-other",
-      "label": "Other 80C (NSC, SCSS, tuition fees) (₹)",
+      "label": "Other 80C (NSC, tax-saver FD, home loan principal, tuition) (₹)",
       "min": 0,
       "max": 150000,
-      "step": 1000,
+      "step": 5000,
       "value": 0
     }
   ],
   "outputs": [
+    { "id": "s80c-total", "label": "Total 80C Invested" },
+    { "id": "s80c-tax-saved", "label": "Tax Saved", "highlight": true },
+    { "id": "s80c-remaining", "label": "Remaining 80C Headroom" }
+  ],
+  "articleSections": [
     {
-      "id": "s80c-total",
-      "label": "Total 80C Claimed"
+      "id": "s80c-how-it-works",
+      "heading": "How Section 80C Works — the ₹1.5L Limit, Eligible Instruments, and Old Regime Only Rule",
+      "body": "<p>Section 80C of the Income Tax Act allows a deduction of up to ₹1,50,000 per financial year from taxable income. The limit applies to the total of all eligible investments combined — not ₹1.5L per instrument. This limit has remained unchanged since FY 2014-15, and despite repeated calls to revise it, Budget 2026 made no change. At the 30% slab, the maximum tax saving from full 80C utilisation: ₹1,50,000 × 30% × 1.04 (cess) = <strong>₹46,800</strong>. At 20% slab: ₹31,200. At 15% slab (new regime at ₹12–16L income): 80C is not available in the new regime at all.</p><p><strong>Key eligibility rule: old regime only.</strong> Section 80C deductions are available exclusively under the old income tax regime. If you choose the new regime, you cannot claim 80C — but the underlying investments (PPF, ELSS, EPF) still grow and may have tax advantages on maturity or redemption (PPF maturity is fully tax-free; ELSS redemption attracts LTCG at 12.5% above ₹1.25L).</p><p><strong>Eligible instruments under Section 80C (partial list):</strong></p><ul><li><strong>EPF (Employee Provident Fund):</strong> Employee contribution (not employer contribution) — deducted from salary automatically, typically 12% of basic pay. Most salaried employees already have ₹30,000–₹1,00,000/year of 80C used via EPF before any additional investment.</li><li><strong>PPF (Public Provident Fund):</strong> Sovereign-backed, 15-year tenure, interest rate notified quarterly. Interest earned and maturity proceeds are tax-free.</li><li><strong>ELSS (Equity Linked Savings Scheme):</strong> Equity mutual funds with 3-year lock-in (shortest of all 80C options). Market-linked returns; LTCG on redemption taxed at 12.5% above ₹1.25L.</li><li><strong>LIC and life insurance premiums:</strong> Deductible only if sum assured ≥ 10× annual premium (for policies issued after 1 April 2012). Traditional endowment plans have high cost; term insurance premiums qualify but are low compared to ₹1.5L limit.</li><li><strong>NSC (National Savings Certificate):</strong> Post office instrument, 5-year tenure, fixed interest. Interest accrued each year is treated as reinvested and also qualifies as 80C (in the year of accrual).</li><li><strong>5-Year Tax-Saver Fixed Deposit:</strong> Scheduled bank FDs with 5-year lock-in. FD interest is taxable at slab rate. Only the principal investment qualifies under 80C.</li><li><strong>Home loan principal repayment:</strong> Repayment of principal on a home loan (for property under construction or bought) qualifies under 80C within the ₹1.5L limit.</li><li><strong>Tuition fees:</strong> Full-time education tuition fees for up to 2 dependent children at recognised educational institutions. Does not include admission fees, development fees, or hostel charges.</li><li><strong>SCSS, Sukanya Samriddhi, NPS Tier 1:</strong> Senior Citizens Savings Scheme, Sukanya Samriddhi Yojana, and NPS Tier 1 contributions also qualify under 80C.</li></ul>"
     },
     {
-      "id": "s80c-tax-saved",
-      "label": "Tax Saved",
-      "highlight": true
+      "id": "s80c-scenarios",
+      "heading": "Three 80C Investment Decisions — EPF Coverage, ELSS vs PPF Choice, and the Last-Minute Rush",
+      "body": "<h3>Scenario 1: Divya, ₹10L salary, already at 80C limit via EPF — no action needed</h3><p>Divya earns ₹10L/year with basic salary ₹5L. EPF employee contribution: 12% of basic = ₹60,000. She also contributes ₹90,000 to PPF voluntarily. Total 80C = ₹60K (EPF) + ₹90K (PPF) = ₹1,50,000. She has used the entire ₹1.5L limit without any ELSS or LIC.</p><p>Old regime tax on Divya's income (after SD ₹50K + 80C ₹1.5L = ₹2L total deductions): taxable = ₹10L − ₹2L = ₹8L. Tax: ₹12,500 (5% on ₹2.5–5L) + ₹60,000 (20% on ₹5–8L) = ₹72,500. Cess: ₹2,900. Old regime: ₹75,400. New regime at ₹10L: taxable ₹9.25L → tax = ₹20K (5% on ₹4–8L) + ₹12,500 (10% on ₹8–9.25L) = ₹32,500. Cess: ₹1,300. New regime: ₹33,800. New regime saves ₹41,600! Key insight: even if old regime delivers ₹46,800 in 80C savings, the new regime at this income level is still ₹41,600 cheaper in absolute terms. Check the new vs old regime calculator before assuming old regime + 80C is the better choice.</p><h3>Scenario 2: Rohan, ₹18L income, ₹50K EPF — should he choose ELSS or PPF for the remaining ₹1L?</h3><p>Rohan has ₹50,000 in automatic EPF. He has ₹1L of headroom left in 80C. He can choose between ELSS (equity, 3-year lock-in) and PPF (15-year lock-in).</p><p><strong>Tax saving from either:</strong> ₹1,00,000 × 30% (slab at ₹18L old regime) × 1.04 = ₹31,200. Same tax saving regardless of instrument. The difference: ELSS expects to match or beat equity market returns (historical large-cap CAGR 12–14%), 3-year lock-in, LTCG at 12.5% on gains above ₹1.25L on redemption. PPF earns a notified rate (verify current at nsiindia.gov.in), 15-year tenure, fully tax-free on maturity including interest. Rohan is 35 years old and wants retirement corpus — PPF for the stable/tax-free portion, ELSS for the growth portion. Split ₹50K each if he wants both.</p><h3>Scenario 3: Meera, last-minute March rush — what she can still invest in by March 31</h3><p>Meera reaches March with only ₹60,000 invested in 80C so far (EPF ₹60K). She realises she has ₹90K of headroom and 2 weeks left before March 31. Options available instantly: ELSS (mutual fund purchase via app — same-day units allotted); PPF (online transfer to PPF account — investment date is the date of transfer). NOT usable in last 2 weeks: 5-year FD (bank processing takes time), NSC (post office, offline form), LIC premium if due date has passed.</p><p>Meera transfers ₹90,000 to her PPF account on March 28. This qualifies for FY 2026-27 80C deduction. Tax saved: ₹90,000 × 20% (Meera's slab in old regime) × 1.04 = ₹18,720. PPF contribution earns the notified interest from April 1 onward on the full deposit. One caveat: PPF deposits earn interest on the balance for the full month only if deposited on or before the 5th of the month. March 28 means she earns interest from April 1 — no loss of PPF interest since FY ends March 31.</p>"
     },
     {
-      "id": "s80c-remaining",
-      "label": "Remaining 80C Limit"
+      "id": "s80c-rules",
+      "heading": "80C Instrument Comparison — Lock-In, Return Type, Tax on Maturity, and Liquidity",
+      "body": "<p>All instruments below qualify for Section 80C deduction up to ₹1.5L combined. Selection depends on goals, time horizon, and liquidity needs:</p><table><thead><tr><th>Instrument</th><th>Lock-in</th><th>Return</th><th>Tax on Maturity / Redemption</th><th>Liquidity</th></tr></thead><tbody><tr><td>ELSS</td><td>3 years</td><td>Market (equity)</td><td>LTCG 12.5% above ₹1.25L</td><td>Good (post lock-in)</td></tr><tr><td>PPF</td><td>15 years</td><td>Notified rate (verify)</td><td>Tax-free</td><td>Low (partial withdrawal after 7 years)</td></tr><tr><td>EPF</td><td>Until retirement (5y+ for withdrawal)</td><td>Notified rate (verify)</td><td>Tax-free (5+ years service)</td><td>Very low</td></tr><tr><td>NSC</td><td>5 years</td><td>Fixed (verify current)</td><td>Interest taxable at slab; principal tax-free</td><td>No early exit</td></tr><tr><td>5-Year FD</td><td>5 years</td><td>Fixed bank rate</td><td>Interest taxable at slab rate</td><td>No premature withdrawal</td></tr><tr><td>LIC premium</td><td>Policy term</td><td>Guaranteed + bonus</td><td>Generally tax-free (verify per policy)</td><td>Surrender value after 3 years</td></tr><tr><td>Home loan principal</td><td>N/A (auto)</td><td>N/A</td><td>N/A</td><td>N/A</td></tr><tr><td>Sukanya Samriddhi</td><td>21 years or marriage</td><td>Notified rate (verify)</td><td>Tax-free</td><td>None except medical/marriage</td></tr></tbody></table><p><strong>Section 80CCC and 80CCD(1) also count within the ₹1.5L limit:</strong> NPS Tier 1 contributions by employee (80CCD(1)) and annuity/pension fund contributions (80CCC) are part of the ₹1.5L total. Separate additional deduction: Section 80CCD(1B) allows ₹50,000 additional NPS contribution OVER AND ABOVE the ₹1.5L limit — this is exclusive to NPS and is the only 80C-adjacent deduction that expands the cap.</p><p><strong>Home loan principal — important limitation:</strong> If you sell the property within 5 years of possession, the 80C deduction previously claimed on principal repayment is reversed and added back to income in the year of sale. This reversal applies only to home loan principal 80C claims — not to ELSS, PPF, or other instruments.</p>"
+    },
+    {
+      "id": "s80c-mistakes",
+      "heading": "Common 80C Mistakes — Double-Counting EPF, LIC Over-Reliance, and Old Regime vs New Regime Confusion",
+      "body": "<p><strong>Not counting EPF employee contribution towards the ₹1.5L limit and over-investing.</strong> EPF employee contribution is one of the most common omissions in 80C planning. Most salaried employees with basic pay above ₹12,500/month have EPF contributions automatically counted toward 80C. Someone with ₹5L basic salary has ₹60,000 in EPF already using 40% of the ₹1.5L limit before any additional investment. Always check payslip EPF deductions first — many people invest an extra ₹1.5L in ELSS on top of ₹80,000+ in EPF, clipping at ₹1.5L total while believing they invested ₹2.3L in 80C eligible instruments.</p><p><strong>Investing heavily in LIC for tax saving without comparing actual insurance value.</strong> Traditional LIC endowment and money-back plans have high costs (commissions, mortality charges) and relatively low returns compared to term insurance + ELSS. A ₹1L annual LIC premium may give ₹25L sum assured on a traditional plan — at ₹200/month term premium you can get the same ₹25L cover, using the rest of the ₹1L for ELSS. The tax saving is identical (₹1L × slab rate), but the investment efficiency is very different. Use LIC primarily if your specific insurance coverage needs it — not purely for tax.</p><p><strong>Claiming 80C in the new regime.</strong> Section 80C is not available in the new income tax regime. Choosing the new regime means giving up 80C, 80D, HRA, and all other Chapter VI-A deductions. If you file ITR under the new regime but try to claim 80C deductions, the ITR system will reject or recalculate, and any resulting refund from an incorrect claim could trigger a notice. Switch to old regime explicitly if 80C and other deductions justify it — and use the new vs old regime calculator to verify they actually do before switching.</p><p><strong>Treating ₹1.5L as the maximum and not using 80CCD(1B) additionally.</strong> Section 80CCD(1B) allows an additional ₹50,000 deduction for NPS Tier 1 contributions — this is ABOVE the ₹1.5L 80C limit, not within it. An investor who maximises 80C at ₹1.5L and also contributes ₹50,000 to NPS under 80CCD(1B) saves tax on ₹2,00,000 total. At 30% slab: ₹62,400 in tax savings. Many people know about 80C but miss this additional NPS deduction entirely.</p>"
     }
   ],
   "howToSteps": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the Section 80C Calculator. All inputs have smart defaults."
+      "name": "Enter your gross income and EPF first",
+      "text": "Enter EPF employee contribution from your payslip before adding other investments. Most salaried employees already have ₹30,000–₹90,000 of 80C used via EPF automatically."
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time as you type — no submit button needed."
+      "name": "Add other 80C investments",
+      "text": "Add PPF, ELSS, LIC premiums, and other qualifying investments. The calculator shows the combined total and how much headroom remains under the ₹1.5L limit."
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown table to see how your numbers change over time."
+      "name": "Check if old regime is actually better",
+      "text": "The 80C deduction only matters if you are in the old regime. Use the New vs Old Regime Calculator to verify that old regime tax (with 80C and other deductions) is actually lower than new regime tax before investing for tax saving."
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust the inputs to compare different scenarios and find the best option for your situation."
+      "name": "Review the tax saved output",
+      "text": "Tax saved = 80C deduction × your marginal slab rate × 1.04 (cess). This is the actual cash saving in the current year. Compare this against investment returns and liquidity needs to choose instruments optimally."
     }
   ],
   "faq": [
     {
-      "q": "What is the maximum Section 80C deduction?",
-      "a": "The maximum deduction under Section 80C is ₹1,50,000 per financial year. This limit has not changed since FY 2014-15. Investments beyond ₹1.5 lakh get no additional 80C benefit, though they may still be worthwhile as investments."
+      "q": "What is the Section 80C deduction limit for FY 2026-27?",
+      "a": "The Section 80C deduction limit is ₹1,50,000 per financial year — unchanged since FY 2014-15. It applies to the combined total of all eligible investments: EPF, PPF, ELSS, LIC premiums, NSC, 5-year tax-saver FD, home loan principal, tuition fees for 2 children, Sukanya Samriddhi, NPS Tier 1 (80CCD(1)). Tax saved: ₹1.5L × 30% × 1.04 cess = ₹46,800 at the 30% slab; ₹31,200 at 20%; ₹15,600 at 10%. Critical: Section 80C is available only under the old tax regime. New regime: 80C deductions are not available."
     },
     {
-      "q": "Which investments qualify for Section 80C?",
-      "a": "Eligible investments: EPF/VPF contributions, PPF, ELSS mutual funds, NSC, 5-year tax-saver FD, SSY (Sukanya Samriddhi), SCSS, life insurance premiums (LIC etc.), home loan principal repayment, children's tuition fees (up to 2 children), NPS employee contribution (within limit)."
+      "q": "Is EPF employee contribution included in the ₹1.5L 80C limit?",
+      "a": "Yes. EPF employee contribution (typically 12% of basic salary) counts toward Section 80C and is part of the ₹1.5L combined limit. If your basic salary is ₹6L/year, your EPF employee contribution = ₹72,000, leaving ₹78,000 of 80C headroom. Employer contribution to EPF does NOT count for your 80C — only the employee portion. Check your payslip for the EPF deduction line to know how much of your 80C limit is already used before making additional investments."
     },
     {
-      "q": "Is Section 80C available under the new tax regime?",
-      "a": "No. Section 80C deductions are not available under the new tax regime introduced from FY 2020-21. If you opt for the new regime, investments like PPF, ELSS, and LIC premiums still grow but you cannot claim them as deductions."
+      "q": "Which 80C investment is best — ELSS, PPF, or LIC?",
+      "a": "Depends on your goals and risk tolerance. ELSS: highest expected return (equity market), shortest lock-in (3 years), LTCG on gains above ₹1.25L at 12.5%. Best for long-term wealth creation with some flexibility. PPF: sovereign-backed, tax-free on maturity, 15-year tenure. Best for risk-averse investors and tax-free retirement corpus. LIC endowment: poor insurance coverage per rupee, moderate returns, but useful if you need bundled insurance + savings. As pure tax-saving instruments: ELSS wins on flexibility and expected returns; PPF wins on safety and complete tax-free maturity. Never buy LIC purely for tax saving — buy it only if the insurance component is genuinely needed."
     },
     {
-      "q": "Is the Section 80C Calculator free?",
-      "a": "Yes, the Section 80C Calculator on CalcPhi is completely free with no registration required."
+      "q": "Can I claim Section 80C in the new tax regime?",
+      "a": "No. Section 80C deductions are not available under the new income tax regime. Choosing the new regime means all Chapter VI-A deductions — including 80C, 80D, 80E, 80G, and NPS 80CCD(1B) — are surrendered. However, underlying investments like PPF, ELSS, and EPF still grow and have their own tax treatment on maturity (PPF and EPF maturity proceeds are tax-free; ELSS gains above ₹1.25L are taxed at LTCG 12.5%). The deduction from current-year income is the only thing lost, not the investment returns."
     },
     {
-      "q": "Are my inputs stored?",
-      "a": "No. All calculations run in your browser. We do not store any financial data."
+      "q": "What is Section 80CCD(1B) and how is it different from 80C?",
+      "a": "Section 80CCD(1B) provides an additional ₹50,000 deduction for voluntary NPS Tier 1 contributions — this is OVER AND ABOVE the ₹1.5L Section 80C limit. Together, 80C + 80CCD(1B) allows up to ₹2,00,000 in deductions from the same two sections (₹1.5L from 80C + ₹50K from 80CCD(1B)). At 30% slab: combined tax saving = ₹62,400. NPS Tier 1 also allows employer contributions under 80CCD(2) — also available in the new regime, unlike 80C. 80CCD(1B) is available only under the old regime."
     },
     {
-      "q": "Can I use the Section 80C Calculator on mobile?",
-      "a": "Yes. CalcPhi is fully mobile-optimised and works on all modern smartphones."
-    }
-  ],
-  "examples": [
-    {
-      "heading": "Maximising 80C deduction at ₹15 lakh income",
-      "text": "For ₹15 lakh income at the 20% slab, claiming full ₹1.5 lakh under 80C saves ₹31,200 in tax (including 4% cess). The best mix: ELSS (returns + tax efficiency), EPF (guaranteed), and PPF (risk-free, compounding)."
+      "q": "What is the last date to invest in 80C for FY 2026-27?",
+      "a": "March 31, 2027 — investments must be made by this date to qualify for FY 2026-27 (AY 2027-28) 80C deduction. For ELSS and PPF: online investments on March 31 are typically accepted (same-day units for ELSS; transfer date for PPF). For NSC and post office schemes: the certificate or passbook issue date counts. For LIC premiums: the premium due date and payment date — premiums paid before March 31 for policies due in the year qualify. For EPF: automatic payroll deductions through March. Start investing by February to avoid last-minute failures due to server load on NSDL/PPF portals in March."
     },
     {
-      "heading": "Partial 80C utilisation — ₹80,000 invested",
-      "text": "If you've invested ₹80,000 in 80C instruments, you still have ₹70,000 of unutilised limit. Consider PPF top-up before 31 March to maximise deduction and avoid leaving tax savings on the table."
+      "q": "Can home loan principal repayment be claimed under 80C?",
+      "a": "Yes. Principal repayment on a home loan for a property bought or under construction qualifies under Section 80C within the ₹1.5L limit. Registration and stamp duty paid on purchase of property also qualifies (in the year of payment). Important caveat: if the property is sold within 5 years of possession, all 80C deductions claimed for principal repayment in prior years are reversed — added back to income in the year of sale. This reversal is specific to home loan principal 80C claims; PPF, ELSS, and other instruments do not face this reversal risk."
+    },
+    {
+      "q": "If I invest more than ₹1.5L in 80C eligible instruments, what happens?",
+      "a": "Only ₹1,50,000 is deductible regardless of how much you invest. If you invest ₹2L in PPF + ELSS + EPF combined, the deduction is capped at ₹1.5L. The excess ₹50,000 does not give additional tax saving in Section 80C — but the investment itself still grows (PPF interest, ELSS returns) and is not wasted. To claim more than ₹1.5L in tax-saving deductions, use Section 80CCD(1B) for an additional ₹50,000 in NPS Tier 1 contributions, Section 80D for health insurance premiums, and Section 24(b) for home loan interest — these are separate from the 80C ₹1.5L cap."
     }
   ],
   "related": [
     {
-      "title": "PPF Calculator",
-      "url": "/india/ppf-calculator/"
+      "title": "Section 80D Calculator",
+      "url": "/india/section-80d-calculator/",
+      "desc": "Add health insurance deduction on top of 80C under old regime"
+    },
+    {
+      "title": "New vs Old Tax Regime Calculator",
+      "url": "/india/new-vs-old-regime-calculator/",
+      "desc": "Verify old regime actually saves more before investing for 80C"
     },
     {
       "title": "ELSS Calculator",
-      "url": "/india/elss-calculator/"
-    },
-    {
-      "title": "New vs Old Tax Regime",
-      "url": "/india/new-vs-old-regime-calculator/"
+      "url": "/india/elss-calculator/",
+      "desc": "Model post-LTCG-tax returns on your ELSS investments"
     }
   ]
 }

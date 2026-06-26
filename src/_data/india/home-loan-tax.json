@@ -1,13 +1,13 @@
 {
   "id": "home-loan-tax",
   "schema": {
-    "appName": "Home Loan Tax Benefit Calculator India 2026",
-    "appDescription": "Calculate income tax savings from home loan interest (Section 24B) and principal repayment (Section 80C) deductions."
+    "appName": "Home Loan Tax Benefit Calculator India 2026-27 — Section 24(b) & 80C",
+    "appDescription": "Calculate income tax savings from home loan interest (Section 24b up to ₹2L/year) and principal repayment (Section 80C within ₹1.5L). Old regime only. New regime: zero home loan tax benefit."
   },
   "inputs": [
     {
       "id": "hlt-income",
-      "label": "Annual Taxable Income (₹)",
+      "label": "Annual Gross Income (₹)",
       "min": 0,
       "max": 100000000,
       "step": 10000,
@@ -17,106 +17,116 @@
       "id": "hlt-interest",
       "label": "Annual Home Loan Interest Paid (₹)",
       "min": 0,
-      "max": 5000000,
-      "step": 10000,
+      "max": 500000,
+      "step": 5000,
       "value": 200000,
-      "hint": "From loan statement"
+      "hint": "Section 24(b): max ₹2L for self-occupied"
     },
     {
       "id": "hlt-principal",
       "label": "Annual Principal Repaid (₹)",
       "min": 0,
-      "max": 2000000,
-      "step": 10000,
+      "max": 150000,
+      "step": 5000,
       "value": 100000,
-      "hint": "From loan statement — counts towards 80C"
+      "hint": "Section 80C: within ₹1.5L combined limit"
     }
   ],
   "outputs": [
+    { "id": "hlt-interest-ded", "label": "Interest Deduction — Section 24(b)" },
+    { "id": "hlt-principal-ded", "label": "Principal Deduction — Section 80C" },
+    { "id": "hlt-total-saved", "label": "Total Annual Tax Saving", "highlight": true },
+    { "id": "hlt-effective-rate", "label": "Effective Interest Rate After Tax" }
+  ],
+  "articleSections": [
     {
-      "id": "hlt-interest-ded",
-      "label": "Interest Deduction (Sec 24B)"
+      "id": "hlt-how-it-works",
+      "heading": "How Home Loan Tax Benefits Work — Section 24(b) and Section 80C Under the Old Regime",
+      "body": "<p>A home loan provides two separate income tax deductions under the old regime — interest and principal — under two different sections of the Income Tax Act:</p><p><strong>Section 24(b) — Interest Deduction:</strong> Interest paid on a home loan for a self-occupied property is deductible up to <strong>₹2,00,000 per year</strong>. If you have let-out property (rented or deemed rented), there is no cap on interest deduction under Section 24(b), but the set-off of loss from house property against other income is restricted to ₹2L in any financial year (carry forward: 8 years against future house property income only).</p><p><strong>Section 80C — Principal Repayment:</strong> The principal portion of the EMI repaid during the year qualifies as a Section 80C deduction — within the combined ₹1,50,000 limit shared with PPF, ELSS, LIC, EPF, and other 80C instruments. Stamp duty and registration charges paid at the time of purchase also qualify in the year of payment.</p><p><strong>Critical caveat — New Regime:</strong> Neither Section 24(b) interest nor Section 80C principal deduction is available under the new tax regime. If you choose the new regime, you pay full tax on your salary without any home loan benefit. This is one of the most important inputs for the new vs old regime comparison — home loan tax savings of ₹62,400/year (₹2L at 30%) can often tip the calculation toward the old regime.</p><p><strong>Worked example — ₹50L home loan at 8.5% for 20 years:</strong></p><ul><li>Year 1 EMI: ₹43,391/month. Interest component: ~₹35,000/month (Year 1 interest ≈ ₹4.2L). Principal: ~₹8,391/month (Year 1 principal ≈ ₹1L)</li><li>Section 24(b) deduction: ₹2L (capped — actual interest ₹4.2L, only ₹2L deductible for self-occupied)</li><li>Section 80C from principal: ₹1L (if 80C headroom exists after EPF and other instruments)</li><li>Total deduction: ₹3L. Tax saved at 30% slab: ₹3L × 30% × 1.04 = <strong>₹93,600/year</strong></li><li>Effective annual interest cost: ₹4.2L − ₹62,400 (24(b) tax saving) = ₹3.58L. Effective interest rate: ₹3.58L ÷ ₹50L ≈ 7.15% (vs stated 8.5%)</li></ul>"
     },
     {
-      "id": "hlt-principal-ded",
-      "label": "Principal Deduction (80C)"
+      "id": "hlt-scenarios",
+      "heading": "Three Home Loan Tax Scenarios — First-Year Buyer, Joint Loan, and Under-Construction Property",
+      "body": "<h3>Scenario 1: Vikram, 35, ₹45L home loan at 8.7% — maximising deductions in Year 1</h3><p>Vikram earns ₹18L and takes a ₹45L home loan for a self-occupied flat. Year 1 interest: approximately ₹3.9L. Year 1 principal: approximately ₹90,000. He already has ₹60,000 EPF in 80C.</p><p>Section 24(b): Actual interest ₹3.9L, deduction capped at ₹2L. Tax saved: ₹2L × 30% × 1.04 = ₹62,400. Section 80C from principal: ₹90,000. EPF already: ₹60,000. Total 80C = ₹1,50,000 (exactly at limit). Additional tax saved on ₹90K principal within 80C: ₹90,000 × 30% × 1.04 = ₹28,080. Total annual tax saving: ₹62,400 + ₹28,080 = <strong>₹90,480</strong>. Vikram's monthly EMI = ₹39,500. Post-tax effective monthly cost = ₹39,500 − (₹90,480 ÷ 12) = ₹39,500 − ₹7,540 = <strong>₹31,960</strong>. The tax benefit reduces his effective EMI by 19%.</p><h3>Scenario 2: Kavitha and Suresh, joint home loan — double deduction strategy</h3><p>Kavitha (₹15L income) and Suresh (₹14L income), both in 30% slab, take a joint ₹80L home loan for a property they co-own equally. Year 1 total interest: ₹6.9L. Each claims 50% interest = ₹3.45L each, deductible up to ₹2L each under Section 24(b).</p><p>Kavitha's 24(b) deduction: ₹2L. Tax saved: ₹62,400. Suresh's 24(b) deduction: ₹2L. Tax saved: ₹62,400. Combined 24(b) tax saving: <strong>₹1,24,800/year</strong>. Additionally, each can claim their 50% share of principal (₹50,000 each if annual principal = ₹1L) within their respective 80C limits. Joint loan = joint ownership = double Section 24(b) deductions.</p><p>Key condition: both must be co-owners (name on the property title deed) AND co-borrowers (name on the loan agreement). If Suresh is a co-borrower but not a co-owner, he cannot claim 24(b). If Kavitha is a co-owner but not a co-borrower, she cannot claim. Both conditions must be met for each person to claim independently.</p><h3>Scenario 3: Deepa, under-construction property — pre-construction interest treatment</h3><p>Deepa books an under-construction flat in April 2023 (FY 2023-24). Loan disbursed: ₹40L. Construction completes and she takes possession in April 2025 (FY 2025-26). During FY 2023-24 and FY 2024-25, she pays pre-EMI interest of ₹3.5L and ₹3.4L = ₹6.9L total pre-construction interest.</p><p>Treatment: Pre-construction interest is NOT deductible in the year paid. Once possession is taken (April 2025), the total pre-construction interest (₹6.9L) is deductible in 5 equal instalments starting FY 2025-26: ₹6.9L ÷ 5 = ₹1,38,000/year. This pre-construction instalment is claimed WITHIN the ₹2L Section 24(b) cap — not in addition to it. In FY 2025-26: post-possession interest (say ₹3.5L) + pre-construction instalment ₹1.38L = ₹4.88L total interest; deductible: ₹2L cap. The pre-construction instalment simply adds to the interest figure competing for the same ₹2L ceiling.</p>"
     },
     {
-      "id": "hlt-total-saved",
-      "label": "Total Tax Saved",
-      "highlight": true
+      "id": "hlt-rules",
+      "heading": "Section 24(b) Rules — Self-Occupied vs Let-Out, Completion Timeline, and Loss Carry Forward",
+      "body": "<p><strong>Self-occupied property (SOP):</strong> Section 24(b) deduction capped at ₹2,00,000/year. From FY 2019-20, a taxpayer can declare up to 2 properties as self-occupied (the notional rent provision for a second property was removed). If you own 2 properties and live in one, both can be treated as self-occupied and both home loans get the ₹2L interest deduction each (independently).</p><p><strong>Let-out property (LOP):</strong> No cap on interest deduction — deduct actual interest paid. However, if interest exceeds rental income, the resulting loss (from house property income) can be set off against other income (salary, etc.) only up to ₹2L per year. Excess loss is carried forward for 8 years and can only be set off against future house property income (not salary).</p><p><strong>Completion requirement:</strong> The interest deduction under Section 24(b) is available only if the property is completed within 5 years from the end of the financial year in which the loan was taken. If construction is not completed within this period: the deduction is reduced to only ₹30,000/year (not ₹2L). This 5-year rule catches buyers of stalled real estate projects who took loans expecting delivery within 5 years.</p><p><strong>Section 80C — home loan principal conditions:</strong> Principal repayment qualifies under 80C only for a property that is purchased or under construction. It does not apply to loan against property (LAP), home improvement loans, or plot loans. Important: if the property is sold within 5 years of possession, all 80C deductions claimed for principal repayment are reversed — added back to income in the year of sale. This reversal does not apply to the Section 24(b) interest deductions.</p><p><strong>80EEA — first-time buyer additional deduction (verify if still active):</strong> An additional ₹1,50,000 deduction for first-time home buyers (Section 80EEA) was available for loans sanctioned between April 2019 and March 2022 (extended last in Budget 2021). Verify if this extension has been renewed for FY 2026-27 — as of the last available information, this benefit may have lapsed. Check incometax.gov.in for current status before claiming.</p><p><strong>HRA and home loan interest simultaneously:</strong> If you live in a rented house (claiming HRA) while also owning another property (with a home loan), you can claim both HRA exemption (on the rented house) and Section 24(b) interest (on the owned home loan). The IT department allows this if the rented and owned properties are in different cities, or if you can demonstrate genuine necessity to rent. Document this clearly if claiming both.</p>"
     },
     {
-      "id": "hlt-effective-rate",
-      "label": "Effective Tax Slab Applied"
+      "id": "hlt-mistakes",
+      "heading": "Home Loan Tax Mistakes — Assuming New Regime Has Benefits, Missing Joint Deductions, and Pre-Construction Errors",
+      "body": "<p><strong>Choosing the new regime while expecting home loan tax benefits.</strong> The new regime allows no Section 24(b) interest deduction and no Section 80C principal deduction. A taxpayer who chose the new regime and then tries to claim home loan deductions at ITR filing will find these lines disabled. The home loan tax benefit is one of the strongest reasons to consider the old regime — ₹62,400/year at 30% slab purely from the ₹2L interest deduction. Always run the new vs old regime comparison factoring in your actual home loan interest before choosing the regime for the year.</p><p><strong>Not claiming the full ₹2L interest deduction because actual interest is more than ₹2L.</strong> The ₹2L cap for self-occupied property means even if you pay ₹4L in interest, only ₹2L is deductible. Many taxpayers see ₹4L on their bank's interest certificate and do not claim anything because they think the cap makes it not worth it. The ₹2L IS claimable — always claim it even when actual interest far exceeds the cap.</p><p><strong>Forgetting that pre-construction interest is deductible after possession in 5 equal instalments.</strong> Taxpayers who buy under-construction properties often think the interest paid during construction is permanently lost. It is not — it is deductible in 5 equal annual instalments starting the year of possession, within the same ₹2L cap. In large-ticket Mumbai/Bengaluru under-construction purchases with 3-4 years of pre-EMI, this can add ₹80,000–₹1,20,000/year of additional interest deduction (competing with post-possession interest for the ₹2L cap).</p><p><strong>Claiming principal repayment 80C and then selling the property within 5 years.</strong> If you sell the home within 5 years of taking possession, all 80C deductions previously claimed for principal repayment are reversed and added to income in the year of sale. This is a significant tax shock — a seller who claimed ₹90,000/year in principal 80C for 4 years would see ₹3,60,000 added back to income in the year of sale. Factor this reversal risk into the decision to sell property within 5 years of possession.</p>"
     }
   ],
   "howToSteps": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the inputs for the Home Loan Tax Benefit Calculator."
+      "name": "Enter annual home loan interest paid",
+      "text": "Get the interest component from your bank's Annual Interest Certificate (sent by your lender typically in April). For self-occupied property, the maximum deductible under Section 24(b) is ₹2L. Enter the actual interest paid — the calculator applies the cap."
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time."
+      "name": "Enter annual principal repaid",
+      "text": "From the same bank certificate or amortisation schedule. Enter only the amount within your 80C headroom — if you already have EPF, PPF, or other 80C investments using the ₹1.5L limit, only the remaining headroom from principal repayment is deductible. Enter the actual principal paid; the calculator shows the deductible amount."
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year table."
+      "name": "Check your regime choice",
+      "text": "Both deductions apply only under the old tax regime. If you are in the new regime, total tax saving = ₹0 from the home loan. Use the New vs Old Regime Calculator to verify the old regime is actually worth it before proceeding."
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust inputs to compare options."
+      "name": "Note effective interest rate",
+      "text": "The effective interest rate after tax is your real cost of the home loan. At 30% slab with full ₹2L 24(b) deduction on a ₹50L loan at 8.5%: effective rate drops to approximately 7.15%. This is the number that makes home loans more attractive than the stated rate implies."
     }
   ],
   "faq": [
     {
-      "q": "What are the home loan tax benefits in India 2026?",
-      "a": "Two deductions: (1) Section 24(B): up to ₹2 lakh per year on home loan interest for self-occupied property. (2) Section 80C: principal repayment (including stamp duty) counts towards ₹1.5 lakh limit. Both available only under the old tax regime. New regime: no home loan tax benefits (except employer NPS)."
+      "q": "What is the maximum home loan interest deduction under Section 24(b)?",
+      "a": "Section 24(b) deduction limit: ₹2,00,000 per year for a self-occupied property. For let-out (rented) property: no ceiling — actual interest paid is deductible, but the resulting loss from house property can be set off against other income only up to ₹2L/year (excess carried forward 8 years). Condition: construction must be completed within 5 years from end of the year in which loan was taken — otherwise limit drops to ₹30,000/year. Available only under the old tax regime; no home loan interest deduction exists under the new regime."
     },
     {
-      "q": "Can I claim both Section 24 and Section 80C for home loan?",
-      "a": "Yes. Section 24(B) for interest (up to ₹2 lakh) and 80C for principal repayment (within ₹1.5 lakh limit) are separate deductions. However, 80C limit is shared with PPF, ELSS, LIC, and other eligible investments. Claim both to maximise tax savings."
+      "q": "Can I claim both Section 24(b) and Section 80C on the same home loan?",
+      "a": "Yes. These are independent deductions from different sections: Section 24(b) covers interest paid (up to ₹2L for self-occupied), Section 80C covers principal repaid (within ₹1.5L combined limit). On a ₹50L loan: Year 1 interest ≈ ₹4.2L (₹2L deductible under 24(b)), Year 1 principal ≈ ₹1L (within 80C limit if headroom exists). Together: deduct ₹3L from income. At 30% slab: ₹3L × 30% × 1.04 = ₹93,600 annual tax saving. Both are available only under the old regime."
     },
     {
-      "q": "Is home loan tax benefit available on second home?",
-      "a": "For a second self-occupied home: no deduction under Section 24(B) — notional rent is taxable. If the second home is let out, entire interest is deductible (no ₹2 lakh cap). This makes a let-out second property more tax-efficient than a self-occupied second home."
+      "q": "Is home loan tax benefit available under the new tax regime?",
+      "a": "No. Neither Section 24(b) interest deduction nor Section 80C principal deduction is available under the new tax regime. This is one of the most significant distinctions between the two regimes for home loan borrowers. A taxpayer with ₹2L in home loan interest and ₹1L in principal repayment saves ₹93,600/year under old regime (30% slab) and ₹0 under new regime. This ₹93,600 annual difference must be weighed against the new regime's lower slab rates when choosing between regimes."
     },
     {
-      "q": "Is the Home Loan Tax Benefit Calculator free?",
-      "a": "Yes, completely free on CalcPhi."
+      "q": "Can joint home loan borrowers both claim Section 24(b) deduction?",
+      "a": "Yes, provided both are co-owners of the property AND co-borrowers on the loan. Each co-borrower can independently claim Section 24(b) interest deduction up to ₹2L/year and Section 80C principal within their respective ₹1.5L limits. On a joint loan where both co-borrowers are at 30% slab, total 24(b) saving = ₹1,24,800/year (₹62,400 each). Condition: the property title deed must list both as owners. A co-borrower who is not a co-owner cannot claim. A co-owner who is not a co-borrower also cannot claim."
     },
     {
-      "q": "Are my inputs stored?",
-      "a": "No. Calculations run in your browser."
+      "q": "How is pre-construction period interest treated for tax?",
+      "a": "Interest paid during the construction period (before possession) is not deductible in the year paid. After possession, the total pre-construction interest is divided by 5 and claimed as an annual deduction over 5 consecutive years from the year of possession. This instalment is included within the Section 24(b) cap (₹2L for self-occupied) — not in addition to it. If Year 1 post-possession interest is ₹2.5L and the pre-construction instalment is ₹1L, total interest competing for the ₹2L cap is ₹3.5L — only ₹2L is deductible. Pre-construction interest does not have a separate limit."
     },
     {
-      "q": "Is it mobile-friendly?",
-      "a": "Yes. Works on all smartphones."
-    }
-  ],
-  "examples": [
-    {
-      "heading": "₹30 lakh home loan — tax savings over 20 years",
-      "text": "In early years: interest component is high. Year 1 interest ≈ ₹2.55 lakh. Deduction capped at ₹2 lakh. At 20% slab: tax saved on interest = ₹41,600. Principal ₹44,000 adds to 80C. Total annual saving ≈ ₹50,000."
+      "q": "Can I claim home loan interest and HRA at the same time?",
+      "a": "Yes, in specific circumstances. If you live in a rented house (paying rent, eligible for HRA exemption) while owning a separate property with a home loan, you can claim both HRA exemption on the rent paid and Section 24(b) interest on the home loan. Common scenario: you work in Mumbai (rented apartment) and own a property in Pune (home loan). The IT department generally permits both claims if the owned and rented properties are in different cities, or if you can demonstrate a genuine reason for not living in your owned property. Both claims together require careful documentation in case of scrutiny."
     },
     {
-      "heading": "Joint home loan — double tax benefit",
-      "text": "Husband and wife as co-borrowers can each claim Section 24B deduction (₹2 lakh each = ₹4 lakh combined) and 80C deduction on principal. Combined tax saving at 20% each = ₹1,66,400/year on ₹4 lakh interest. Joint loans maximise tax benefits."
+      "q": "What happens to the 80C principal repayment deduction if I sell the house?",
+      "a": "If you sell the property within 5 years of possession, all Section 80C deductions previously claimed for principal repayment in those years are reversed — added back to your income in the year of sale. Example: claimed ₹90,000/year in principal 80C for 4 years = ₹3,60,000. If property sold in Year 5 of possession (within 5 years): ₹3,60,000 is added to income in the sale year. At 30% slab, tax impact = ₹1,11,456 — on top of capital gains tax from the sale. This reversal applies only to Section 80C principal claims, not to Section 24(b) interest deductions, which are not reversed."
+    },
+    {
+      "q": "Is stamp duty and registration fee deductible under Section 80C?",
+      "a": "Yes. Stamp duty and registration charges paid at the time of property purchase qualify under Section 80C, within the ₹1.5L combined limit. The deduction is available only in the year in which the stamp duty and registration are paid. This is a one-time benefit available at purchase — useful for buyers who have 80C headroom in the year of property registration. Same 5-year reversal rule applies: if property is sold within 5 years of possession, this 80C claim is also reversed and added back to income in the sale year."
     }
   ],
   "related": [
     {
-      "title": "Home Loan EMI",
-      "url": "/india/home-loan-emi-calculator/"
+      "title": "Home Loan EMI Calculator",
+      "url": "/india/home-loan-emi-calculator/",
+      "desc": "See the interest and principal breakdown in each EMI for Section 24(b) and 80C claims"
     },
     {
-      "title": "Section 80C",
-      "url": "/india/section-80c-calculator/"
+      "title": "Section 80C Calculator",
+      "url": "/india/section-80c-calculator/",
+      "desc": "Check your total 80C position including home loan principal"
     },
     {
-      "title": "Income Tax Calculator",
-      "url": "/india/income-tax-calculator/"
+      "title": "New vs Old Tax Regime Calculator",
+      "url": "/india/new-vs-old-regime-calculator/",
+      "desc": "Verify that home loan deductions tip the calculation toward old regime"
     }
   ]
 }

@@ -1,13 +1,13 @@
 {
   "id": "gst-calculator",
   "schema": {
-    "appName": "GST Calculator India 2026",
-    "appDescription": "Calculate GST (Goods and Services Tax) on any amount. Add GST to base price or extract GST from GST-inclusive price. All slab rates covered."
+    "appName": "GST Calculator India — GST 2.0 Rates 2025-26",
+    "appDescription": "Calculate GST under the new GST 2.0 structure effective 22 September 2025. Old 12% and 28% slabs abolished. New: 0%, 5%, 18%, 40%. CGST + SGST breakdown. Verify at cbic.gov.in."
   },
   "inputs": [
     {
       "id": "gst-amount",
-      "label": "Base Amount (\u20b9)",
+      "label": "Base Amount (₹)",
       "min": 0,
       "max": 100000000,
       "step": 100,
@@ -16,113 +16,106 @@
     },
     {
       "id": "gst-rate",
-      "label": "GST Rate",
+      "label": "GST Rate (GST 2.0)",
       "type": "select",
       "options": [
-        {
-          "value": "5",
-          "label": "5%"
-        },
-        {
-          "value": "12",
-          "label": "12%"
-        },
-        {
-          "value": "18",
-          "label": "18%"
-        },
-        {
-          "value": "28",
-          "label": "28%"
-        },
-        {
-          "value": "0",
-          "label": "0% (Exempt)"
-        }
+        { "value": "5", "label": "5% — Essentials & common goods" },
+        { "value": "18", "label": "18% — Standard rate (services, consumer goods)" },
+        { "value": "40", "label": "40% — Luxury/sin goods" },
+        { "value": "0", "label": "0% — Exempt (essentials, insurance, healthcare)" }
       ]
     }
   ],
   "outputs": [
+    { "id": "gst-tax", "label": "GST Amount", "highlight": true },
+    { "id": "gst-total", "label": "Total Amount (with GST)" },
+    { "id": "gst-cgst", "label": "CGST (Central)" },
+    { "id": "gst-sgst", "label": "SGST/UTGST (State)" }
+  ],
+  "articleSections": [
     {
-      "id": "gst-tax",
-      "label": "GST Amount",
-      "highlight": true
+      "id": "gst-how-it-works",
+      "heading": "GST 2.0 — How the New Four-Slab Structure Works (Effective 22 September 2025)",
+      "body": "<p>The 56th GST Council meeting on 22 September 2025 replaced India's original five-slab GST structure (0%, 5%, 12%, 18%, 28%) with a rationalised four-slab system. The 12% and 28% slabs are abolished for most goods. The changes reduce the tax burden on consumer goods and simplify compliance, while maintaining revenue through a 40% tier for true luxury and demerit goods.</p><p><strong>GST 2.0 — four standard tiers:</strong></p><table><thead><tr><th>Rate</th><th>What it covers</th></tr></thead><tbody><tr><td><strong>0% (Nil/Exempt)</strong></td><td>Fresh and unbranded food essentials, UHT milk, paneer, Indian breads (roti, chapati, naan), 33 notified life-saving drugs, education services, healthcare services, books and newspapers. <strong>NEW from 22 Sept 2025:</strong> individual life insurance premiums and individual health insurance premiums — both newly exempt (previously 18% GST).</td></tr><tr><td><strong>5%</strong></td><td>Most daily-use essentials and common goods. Includes most items formerly in the 12% slab. Also newly at 5%: soap, shampoo, toothpaste, and other daily-use toiletries (moved from 18%). Economy class air travel, railway transport. Packaged food staples. Essential medicines and pharmaceuticals.</td></tr><tr><td><strong>18%</strong></td><td>Standard rate — applies to most goods and services. Most items formerly in the 28% slab now taxed at 18%: passenger cars, SUVs, air conditioners, televisions, consumer appliances, mobile phones. Financial services (banking, lending, insurance services), IT services, telecom, software. Restaurants (verify current restaurant classification at cbic.gov.in — rates have been revised). Cement, paints, capital goods.</td></tr><tr><td><strong>40%</strong></td><td>Luxury and demerit goods — the new top tier. Includes genuine luxury goods (high-value watches, designer goods), private jets and helicopters, high-end spirits and wines, certain entertainment and casino services. <strong>Important: tobacco, cigarettes, beedis, and pan masala are NOT yet at 40%</strong> — they remain under the old 28% + Compensation Cess arrangement. See note below.</td></tr></tbody></table><p><strong>Special rates (unchanged by GST 2.0):</strong></p><ul><li><strong>Gold: 3%</strong> (plus 5% on making charges)</li><li><strong>Gems and jewellery (cut/polished diamonds, precious stones): 0.25%</strong></li><li><strong>Under-construction residential property: 5%</strong> (with no ITC; until Occupation Certificate)</li><li><strong>Affordable housing under construction: 1%</strong></li></ul><p><strong>Tobacco — transitional arrangement:</strong> Cigarettes, beedis, pan masala, gutkha, and other tobacco products do NOT yet move to 40%. These continue under the old 28% GST + Compensation Cess regime until the GST compensation loan repayment obligation of states is discharged. A subsequent GST Council notification will formally move these to 40%. The transition timeline is linked to state compensation loan repayments — expected but not yet concluded as of June 2026. <strong>Apply 28% + Compensation Cess</strong> to tobacco products until the official gazette notification appears at cbic.gov.in.</p><p><strong>CGST and SGST split:</strong> For intra-state supply, total GST is split equally: CGST (to Centre) + SGST (to state). At 18%: CGST 9% + SGST 9%. At 40%: CGST 20% + SGST 20%. For inter-state supply: IGST = full rate. UTGST replaces SGST for Union Territories.</p><p><strong>Input Tax Credit (ITC — unchanged by GST 2.0):</strong> GST-registered businesses can set off GST paid on business inputs against output GST liability. ITC not available for: personal consumption, blocked credits under Section 17(5) (food/beverages for personal consumption, personal motor vehicles, club memberships), or when the supplier has not filed GSTR-1.</p><p><strong>Verification is mandatory:</strong> The GST 2.0 reclassification is comprehensive — specific HSN/SAC codes may have moved across tiers. Always verify the current rate for a specific good or service at cbic.gov.in using the HSN/SAC code before invoicing. The tier descriptions above are directional; the gazette notification and CBIC rate schedule are authoritative.</p>"
     },
     {
-      "id": "gst-total",
-      "label": "Total Amount (with GST)"
+      "id": "gst-scenarios",
+      "heading": "Three GST 2.0 Calculations — Service Invoice at 18%, Consumer Durable (Old 28% → Now 18%), and Luxury Goods at 40%",
+      "body": "<h3>Scenario 1: Prathap, IT consultant, invoices ₹1,20,000 for software development</h3><p>Prathap is GST-registered. Client is in the same state (Maharashtra). IT and software services: 18% (unchanged under GST 2.0 — services remain at 18%).</p><p>GST: CGST 9% = ₹10,800. SGST 9% = ₹10,800. Total GST: ₹21,600. Invoice total: ₹1,41,600. Prathap deposits ₹21,600 after deducting ITC on inputs. B2B client claims ₹21,600 as ITC — no net GST cost to the business.</p><p>TDS: client deducts 10% under Section 194J on the ₹1,20,000 base (not on GST component, when GST is separately stated). This scenario is completely unchanged by GST 2.0 — services remain at 18%.</p><h3>Scenario 2: Aryan buys a 1.5-ton split AC — the old 28% rate becomes 18%</h3><p><strong>Before 22 September 2025 (old rate):</strong> Split AC at ₹45,000 base. GST 28%: ₹12,600. Invoice: ₹57,600.</p><p><strong>After 22 September 2025 (GST 2.0):</strong> Same AC. GST 18%: CGST 9% = ₹4,050. SGST 9% = ₹4,050. Total GST: ₹8,100. Invoice: ₹53,100. <strong>Consumer saving: ₹4,500 per unit</strong> — the direct benefit of the 28%→18% shift for consumer durables.</p><p>Other items moved from 28% to 18% under GST 2.0: televisions (above 32 inches), washing machines, refrigerators, most passenger cars and SUVs (mid-segment), consumer appliances. The net effect across most consumer electronics and appliances is a 10-percentage-point GST rate reduction, translating to 7–8% lower effective price for end consumers.</p><h3>Scenario 3: Meera buys a high-value luxury watch — the new 40% tier</h3><p>Meera purchases a luxury watch priced at ₹8,00,000 (ex-duty). The watch falls under a luxury goods HSN code now in the 40% tier under GST 2.0 (verify specific HSN at cbic.gov.in).</p><p>GST at 40%: CGST 20% × ₹8,00,000 = ₹1,60,000. SGST 20% × ₹8,00,000 = ₹1,60,000. Total GST: ₹3,20,000. Invoice total: ₹11,20,000.</p><p>Under the old regime, this item may have attracted 28% GST (₹2,24,000) plus Compensation Cess. Under GST 2.0, the 40% is a unified rate — for items that have completed the GST 2.0 transition, there is no separate cess layer in addition to the 40%. The total effective rate is 40%, applied as CGST 20% + SGST 20% for intra-state transactions.</p>"
     },
     {
-      "id": "gst-cgst",
-      "label": "CGST (Central)"
+      "id": "gst-rules",
+      "heading": "GST Registration, Returns, Composition Scheme, and GST 2.0 Transition Compliance",
+      "body": "<p><strong>GST registration thresholds (verify current at gst.gov.in):</strong> Mandatory for annual turnover above ₹40L for goods (₹20L for special category states); ₹20L for service providers (₹10L for special category states). E-commerce sellers: register regardless of turnover. These thresholds are unchanged by GST 2.0 — verify current figures as the GST Council has previously revised them.</p><p><strong>HSN/SAC reclassification compliance:</strong> The GST 2.0 reform involved comprehensive reclassification. Businesses must update GST rate masters in ERP/accounting systems after 22 September 2025. Applying the old 12% or 28% rates after the effective date generates incorrect invoices and may constitute short or excess collection of GST. CBIC has published an updated rate notification — cross-reference all active HSN/SAC codes at cbic.gov.in.</p><p><strong>Insurance premium GST exemption from 22 September 2025:</strong> Individual life insurance and health insurance premiums are now 0% GST. Insurers must update billing systems. Policyholders renewing after 22 September 2025 should see 0% GST on their premium notice. If an insurer's system still shows 18%, the renewal may have been processed before the effective date or the system has not been updated — raise a query with the insurer.</p><p><strong>Composition Scheme (unchanged by GST 2.0):</strong> Eligible businesses (below turnover threshold — verify at gst.gov.in) can pay flat rates: 1% for traders/manufacturers, 5% for restaurants, 6% for service providers. Cannot collect GST from customers, issue tax invoices, claim ITC, or supply inter-state. Suitable for small B2C businesses with local customers.</p><p><strong>GST returns (unchanged by GST 2.0):</strong> GSTR-1 (outward supply details — monthly or quarterly), GSTR-3B (monthly summary and payment), GSTR-9 (annual return). Late filing: ₹200/day. Interest: 18% per annum on delayed tax payment. ITC claims in GSTR-3B must match GSTR-2B (auto-populated from suppliers' GSTR-1). Suppliers who haven't filed GSTR-1 will not appear in GSTR-2B — ITC cannot be claimed for those purchases even if payment was made.</p><p><strong>Tobacco products — what to invoice until further notice:</strong> Cigarettes, beedis, pan masala, and tobacco products continue under the old 28% + Compensation Cess structure. Do not apply the new 40% rate to these products. Watch for a formal GST Council notification or CBIC circular — this will be issued when the state compensation loan repayment is complete. The anticipated move to 40% (without the cess) will significantly simplify tobacco GST compliance but is not yet effective.</p>"
     },
     {
-      "id": "gst-sgst",
-      "label": "SGST/UTGST (State)"
+      "id": "gst-mistakes",
+      "heading": "GST 2.0 Compliance Mistakes — Old Rates After Sept 2025, Tobacco Error, and Insurance Billing",
+      "body": "<p><strong>Continuing to apply 12% or 28% rates after 22 September 2025.</strong> The 12% slab is abolished and the 28% slab is abolished for most goods. Businesses with pre-configured GST rate masters in accounting software must update these immediately. A supplier who raises a 12% invoice for an item now reclassified to 5% has over-collected tax — the over-collected amount must be deposited (not refunded as credit to the customer) and the customer cannot claim ITC on the inflated rate. Conduct a full review of your GST rate master against the revised CBIC notification before invoicing any goods after 22 September 2025.</p><p><strong>Applying 40% to tobacco before the official notification.</strong> This is the most critical transition error. Tobacco products are explicitly preserved in the 28% + Compensation Cess arrangement until the state compensation obligation is cleared. Applying 40% to cigarettes or tobacco products creates an incorrect invoice that does not match the applicable rate — neither the tax authority nor the buyer's ITC system will accept it correctly. Confirm tobacco rates at cbic.gov.in and only apply 40% after the formal gazette notification.</p><p><strong>Not updating insurance premium invoicing to reflect the 0% exemption.</strong> From 22 September 2025, individual life and health insurance premiums attract 0% GST. Insurance companies that continue to bill 18% on premiums after this date are over-collecting tax. Policyholders should check renewal invoices from Q4 2025 onward — an 18% GST charge on a post-September individual policy renewal is incorrect. Raise a dispute with the insurer if this occurs; the overpaid GST cannot be claimed as ITC by the individual policyholder and represents a direct out-of-pocket loss.</p><p><strong>Claiming ITC on blocked categories at the new 40% tier.</strong> The 40% rate applies to luxury goods. ITC remains blocked under Section 17(5) for personal motor vehicles, food and beverages for personal consumption, and club memberships — regardless of the GST rate. A business that buys a 40%-rated luxury good for personal use cannot claim the 40% GST as ITC. The rate tier does not change the ITC eligibility rules. Verify whether a purchase is for business or personal use before claiming ITC on high-value 40% tier purchases.</p>"
     }
   ],
   "howToSteps": [
     {
-      "name": "Enter your details",
-      "text": "Fill in the input fields for the GST Calculator. All inputs have smart defaults."
+      "name": "Enter the base amount",
+      "text": "Enter the price before GST (exclusive amount). To extract GST from an inclusive price: base = inclusive ÷ (1 + rate). At 18%: ₹11,800 ÷ 1.18 = ₹10,000 base. At 5%: ₹10,500 ÷ 1.05 = ₹10,000. At 40%: ₹14,000 ÷ 1.40 = ₹10,000."
     },
     {
-      "name": "View instant results",
-      "text": "Results update in real time as you type \u2014 no submit button needed."
+      "name": "Select the GST 2.0 rate",
+      "text": "Use the new GST 2.0 slabs (0%, 5%, 18%, 40%). If your item was previously at 12% or 28%, look up its current rate at cbic.gov.in using the HSN code. Do not apply old rates after 22 September 2025."
     },
     {
-      "name": "Explore breakdown",
-      "text": "Open the year-by-year breakdown table to see how your numbers change over time."
+      "name": "Check CGST + SGST for intra-state invoices",
+      "text": "Total GST is split equally into CGST and SGST for intra-state transactions. At 18%: CGST 9% + SGST 9%. At 40%: CGST 20% + SGST 20%. For inter-state transactions, use IGST = full rate (no CGST/SGST split)."
     },
     {
-      "name": "Compare scenarios",
-      "text": "Adjust the inputs to compare different scenarios and find the best option for your situation."
+      "name": "Handle special cases separately",
+      "text": "Tobacco: apply old 28% + Compensation Cess (not 40%). Insurance premiums: 0% (exempt from 22 Sept 2025). Gold: 3%. Under-construction property: 5%. Verify all special items against the latest CBIC notification."
     }
   ],
   "faq": [
     {
-      "q": "What are the GST slab rates in India 2026?",
-      "a": "GST has 4 main slabs: 5% (essential goods, basic food items, transport), 12% (processed food, mobiles, medicines), 18% (most services, electronics, restaurants), 28% (luxury goods, cars, tobacco). Basic food items like fresh vegetables, unprocessed grains, and milk are exempt (0%)."
+      "q": "What are the new GST rates under GST 2.0 (2025)?",
+      "a": "The 56th GST Council (22 September 2025) abolished the 12% and 28% slabs and introduced a four-tier system: 0% (nil/exempt — fresh food essentials, healthcare, education, and new: individual life and health insurance premiums); 5% (daily-use essentials and common goods — most former-12% items, plus soap/shampoo/toothpaste moved from 18%); 18% (standard rate — services, former-28% consumer goods like cars, ACs, TVs, appliances now at 18%); 40% (luxury/sin goods). Special rates: gold 3%, gems 0.25%. Tobacco continues under old 28% + Compensation Cess until further notification. Verify specific HSN/SAC classifications at cbic.gov.in."
     },
     {
-      "q": "What is the difference between CGST and SGST?",
-      "a": "GST is a dual tax: CGST (Central GST) collected by the Centre and SGST (State GST) collected by the state. Each is half the total GST rate. For 18% GST, CGST = 9% and SGST = 9%. For interstate transactions, IGST (Integrated GST) applies instead."
+      "q": "Is the 12% GST slab still applicable after September 2025?",
+      "a": "No. The 12% GST slab was abolished effective 22 September 2025. Most goods formerly at 12% have moved to 5%. Some items may have moved to 18% — verify specific HSN codes at cbic.gov.in. Businesses must update their accounting systems to remove 12% from the GST rate master. Invoices raised after 22 September 2025 at 12% are incorrect for items that have been reclassified. The only valid standard GST rates after GST 2.0 are 0%, 5%, 18%, and 40% (plus the transitional tobacco arrangement and special rates for gold/gems)."
     },
     {
-      "q": "Do I need to register for GST?",
-      "a": "GST registration is mandatory for businesses with annual turnover above \u20b940 lakh (\u20b920 lakh for special category states). Service providers must register above \u20b920 lakh turnover. E-commerce sellers must register regardless of turnover."
+      "q": "What GST rate applies to passenger cars and SUVs after GST 2.0?",
+      "a": "Most passenger cars and mid-segment SUVs moved from 28% to 18% under GST 2.0 (effective 22 September 2025). This saves approximately ₹1L GST on a ₹10L vehicle. Luxury and high-end vehicles may be in the 40% tier — verify the specific model's HSN classification at cbic.gov.in or with the dealer. The Compensation Cess applicability on vehicles after GST 2.0 should also be confirmed — the cess transition timeline for vehicles may parallel the tobacco arrangement. Always verify the total on-road price breakup with the dealer before purchase."
     },
     {
-      "q": "Is the GST Calculator free?",
-      "a": "Yes, the GST Calculator on CalcPhi is completely free with no registration required."
+      "q": "Is health insurance GST-free under GST 2.0?",
+      "a": "Yes. Individual life insurance and individual health insurance premiums are exempt (0% GST) from 22 September 2025 under GST 2.0. Previously taxed at 18% — a ₹4,500 tax on a ₹25,000 annual premium. Policy renewals after 22 September 2025 should show 0% GST on the premium invoice. Group health insurance policies (employer-provided) — verify current classification at cbic.gov.in as the treatment of group policies may differ. If your insurer continues billing 18% on renewals after the effective date, query the insurer — either the invoice relates to a pre-September billing period or the system is outdated."
     },
     {
-      "q": "Are my inputs stored?",
-      "a": "No. All calculations run in your browser. We do not store any financial data."
+      "q": "What products are in the new 40% GST tier?",
+      "a": "The 40% slab covers genuine luxury and demerit goods: high-value luxury watches and accessories, private jets and helicopters, high-end spirits and wines, certain entertainment and casino services, and other notified luxury goods. Tobacco products (cigarettes, beedis, pan masala, gutkha) do NOT yet move to 40% — they remain under the old 28% + Compensation Cess arrangement pending the clearing of state compensation loans. The 40% rate is a unified rate (no additional cess, unlike the old 28% + cess structure). Verify specific product classifications in the CBIC gazette notification."
     },
     {
-      "q": "Can I use the GST Calculator on mobile?",
-      "a": "Yes. CalcPhi is fully mobile-optimised and works on all modern smartphones."
-    }
-  ],
-  "examples": [
-    {
-      "heading": "Restaurant bill calculation (18% GST)",
-      "text": "A restaurant bill of \u20b92,000 attracts 18% GST = \u20b9360 (CGST \u20b9180 + SGST \u20b9180). Total payable: \u20b92,360. AC restaurants charge 18%; non-AC restaurants up to \u20b97,500 turnover threshold charge 5% GST."
+      "q": "What is the difference between CGST, SGST, and IGST?",
+      "a": "GST is a dual tax. For intra-state supply (same state): CGST (to Centre) + SGST (to state) = total GST, split equally. At 18%: CGST 9% + SGST 9%. At 40%: CGST 20% + SGST 20%. For inter-state supply: IGST = full GST rate, collected by Centre and apportioned to destination state. UTGST replaces SGST for Union Territories. Always use the correct levy on your invoice — intra-state: CGST + SGST; inter-state: IGST only. Never show both CGST/SGST and IGST on the same invoice."
     },
     {
-      "heading": "Construction service (18% GST)",
-      "text": "Construction service costing \u20b910 lakh attracts 18% GST = \u20b91.8 lakh. Total invoice: \u20b911.8 lakh. Note: affordable housing (under \u20b945 lakh) attracts concessional 1% GST under specified schemes."
+      "q": "How do I extract the base price from a GST-inclusive amount?",
+      "a": "Reverse GST formula: Base = GST-inclusive price ÷ (1 + GST rate ÷ 100). GST amount = inclusive price × rate ÷ (100 + rate). Examples under GST 2.0: At 18%: ₹11,800 inclusive → base = ₹11,800 ÷ 1.18 = ₹10,000; GST = ₹1,800. At 5%: ₹10,500 inclusive → base = ₹10,000; GST = ₹500. At 40%: ₹14,000 inclusive → base = ₹10,000; GST = ₹4,000. At 0%: no GST — inclusive = base."
+    },
+    {
+      "q": "Do GST registration thresholds change under GST 2.0?",
+      "a": "No. GST registration thresholds are unchanged by GST 2.0: ₹40L annual turnover for goods (₹20L for special category states); ₹20L for service providers (₹10L for special category states). E-commerce sellers and aggregators must register regardless of turnover. These thresholds have been revised by the GST Council in past years — verify current thresholds at gst.gov.in before assuming the figures above are current for your registration year."
     }
   ],
   "related": [
     {
       "title": "TDS Calculator",
-      "url": "/india/tds-calculator/"
+      "url": "/india/tds-calculator/",
+      "desc": "Calculate TDS deducted on the same business payments where GST applies"
     },
     {
       "title": "Income Tax Calculator",
-      "url": "/india/income-tax-calculator/"
+      "url": "/india/income-tax-calculator/",
+      "desc": "Compute direct tax liability alongside GST compliance"
     }
   ]
 }
