@@ -6,7 +6,7 @@ eleventyExcludeFromCollections: true
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   {%- for page in collections.all | reverse %}
-  {%- if page.url and not page.data.eleventyExcludeFromCollections and not page.url.startsWith("/about/authors") %}
+  {%- if page.url and not page.data.eleventyExcludeFromCollections and not page.url.startsWith("/about/authors") and not page.url.endsWith("404.html") %}
   <url>
     <loc>{{ site.url }}{{ page.url }}</loc>
     <lastmod>{{ (page.data.dateModified or page.data.datePublished or page.date) | dateIso }}</lastmod>
