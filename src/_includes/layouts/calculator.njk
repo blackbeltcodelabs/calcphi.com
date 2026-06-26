@@ -35,9 +35,9 @@ layout: layouts/base.njk
       "datePublished": "{{ datePublished | default(dateModified) }}",
       "dateModified": "{{ dateModified }}",
       "author": {
-        "@type": "Person",
-        "name": "{{ author }}",
-        "url": "https://www.calcphi.com{{ authorUrl }}"
+        "@type": "Organization",
+        "name": "CalcPhi",
+        "url": "https://www.calcphi.com"
       },
       "publisher": {
         "@type": "Organization",
@@ -74,9 +74,8 @@ layout: layouts/base.njk
       <h1 class="calc-page__h1">{{ h1 }}</h1>
       <div class="page-meta">
         <span>Last updated: <time datetime="{{ dateModified }}">{{ dateModified | dateDisplay }}</time></span>
-        {% if author %}
-        <span>Reviewed by <a href="{{ authorUrl }}">{{ author }}</a></span>
-        {% endif %}
+        <span>By the CalcPhi Editorial Team</span>
+        <span>Figures verified against official sources (RBI, SEBI, Income Tax Department, Ministry of Finance)</span>
       </div>
 
       <!-- Definition block -->

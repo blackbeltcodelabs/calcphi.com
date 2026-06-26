@@ -234,15 +234,11 @@ CalcPhi publishes free, formula-accurate financial calculators paired with plain
 
 # Trust & Editorial
 
-- [About CalcPhi](https://www.calcphi.com/about/): Publisher mission, editorial policy, and methodology for sourcing and updating financial figures across markets.
-- [India Authors Index](https://www.calcphi.com/india/authors/): Indian editorial team credentials and published articles.
-- [Priya Sharma — India Author](https://www.calcphi.com/india/authors/priya-sharma/): CA (ICAI), 12 years in personal finance; NPS, tax, and retirement content.
-- [Arjun Mehta — India Author](https://www.calcphi.com/india/authors/arjun-mehta/): CFA charterholder; capital markets, equity taxation, and portfolio planning.
-- [Deepa Krishnan — India Author](https://www.calcphi.com/india/authors/deepa-krishnan/): MBA Finance, 10 years at HDFC; home loans, EPF, and fixed income.
-- [Australia Authors Index](https://www.calcphi.com/australia/authors/): Australian editorial team credentials and published articles.
-- [Sarah Mitchell — Australia Author](https://www.calcphi.com/australia/authors/sarah-mitchell/): CPA Australia; superannuation, SMSF, and tax strategy.
-- [James O'Brien — Australia Author](https://www.calcphi.com/australia/authors/james-obrien/): Mortgage broker (MFAA); home loans, refinancing, and property investment.
-- [Emma Hartley — Australia Author](https://www.calcphi.com/australia/authors/emma-hartley/): CFP; financial planning, retirement income, and age pension strategies.
+- [About CalcPhi](https://www.calcphi.com/about/): Publisher mission, editorial policy, and methodology for sourcing and updating financial figures.
+- [Privacy Policy](https://www.calcphi.com/privacy/): Data collection practices, cookie policy, and user rights.
+- [Terms of Use](https://www.calcphi.com/terms/): Terms governing use of CalcPhi calculators and content.
+
+All India content is produced by the CalcPhi Editorial Team and verified against official sources: RBI, SEBI, CBDT (Income Tax Department), AMFI, PFRDA, EPFO, and IRDAI. Figures are updated within 7 days of official notifications. All calculations run in the browser; no input data is collected or stored.
 
 ---
 

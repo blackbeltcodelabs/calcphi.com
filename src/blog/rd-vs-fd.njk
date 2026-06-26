@@ -26,11 +26,7 @@ breadcrumbs:
       "url": "https://www.calcphi.com/india/blog/rd-vs-fd/",
       "datePublished": "2026-03-07",
       "dateModified": "2026-05-14",
-      "author": {
-        "@type": "Person",
-        "name": "Deepa Krishnan",
-        "url": "https://www.calcphi.com/india/authors/deepa-krishnan/"
-      },
+      "author": {"@type": "Organization", "name": "CalcPhi", "url": "https://www.calcphi.com"},
       "publisher": {
         "@type": "Organization",
         "name": "CalcPhi",
@@ -110,7 +106,7 @@ breadcrumbs:
     <div class="article-dateline">
       <span class="article-dateline__item"><span class="article-dateline__label">Published</span> · <span class="article-dateline__label">Last updated {{ dateModified | dateDisplay }}</span></span>
       <span class="article-dateline__sep">·</span>
-      <span class="article-dateline__item">{% set author = authors[authorId] %}By <a href="{{ author.url }}">{{ author.name }}</a><svg class="verified-badge" aria-label="Verified author" title="Verified" viewBox="0 0 20 20" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#1d9bf0"/><path d="M6 10.5l2.5 2.5L14 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>, {{ author.credentials }}</span>
+      <span class="article-dateline__item">By the CalcPhi Editorial Team</span>
     </div>
 
     <div class="blog-article__feature">
@@ -292,20 +288,11 @@ breadcrumbs:
     <div class="blog-article__disclaimer">
       <p><strong>Disclaimer:</strong> This article is for educational and informational purposes only. The interest rates mentioned reflect publicly available rates as of May 2026 and are subject to change by individual banks at any time. CalcPhi calculators are estimation tools — they do not constitute financial advice. Please consult a qualified financial advisor or SEBI-registered investment advisor before making investment decisions.</p>
     </div>
-
     <div class="author-bio-card">
-      <a href="{{ author.url }}" class="author-bio-card__img-link" aria-label="{{ author.name }}">
-        <img src="{{ author.image }}" alt="{{ author.name }}, {{ author.credentials }}" class="author-bio-card__photo" width="80" height="80" loading="lazy">
-      </a>
       <div class="author-bio-card__body">
         <p class="author-bio-card__label">Written &amp; verified by</p>
-        <p class="author-bio-card__name">
-          <a href="{{ author.url }}">{{ author.name }}</a><svg class="verified-badge" aria-label="Verified author" title="Verified" viewBox="0 0 20 20" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#1d9bf0"/><path d="M6 10.5l2.5 2.5L14 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span class="author-bio-card__creds">{{ author.credentials }}</span>
-        </p>
-        <p class="author-bio-card__title">{{ author.title }}</p>
-        <p class="author-bio-card__bio">{{ author.shortBio }}</p>
-        <a href="{{ author.url }}" class="author-bio-card__profile-link">View full profile →</a>
+        <p class="author-bio-card__name">CalcPhi Editorial Team</p>
+        <p class="author-bio-card__bio">Figures verified against official sources (RBI, SEBI, Income Tax Department, Ministry of Finance).</p>
       </div>
     </div>
   </div>

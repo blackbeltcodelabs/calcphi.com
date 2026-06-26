@@ -1,117 +1,17 @@
 ---
-layout: layouts/base.njk
 permalink: /india/authors/
-title: "India Financial Experts & Authors – CalcPhi"
-description: "Meet CalcPhi's India editorial team — CFA charterholders, ICAI Chartered Accountants, and CFPs who verify every India calculator formula and write our financial guides."
-breadcrumbs:
-  - name: Home
-    url: /
-  - name: India
-    url: /india/
-  - name: Our Authors
+eleventyExcludeFromCollections: true
 ---
-
-<main id="main-content">
-
-  <div class="authors-page-header">
-    <div class="authors-page-header__inner">
-      <p class="authors-page-header__eyebrow">India Editorial Team</p>
-      <h1>India Financial Experts</h1>
-      <p class="authors-page-header__sub">Every India calculator and article on CalcPhi is written and independently verified by a qualified Indian financial professional — CFA, CA, or CFP — with direct knowledge of SEBI, CBDT, AMFI, PFRDA, and RBI regulations.</p>
-
-      <div class="authors-trust-bar">
-        <div class="authors-trust-badge">
-          <span class="authors-trust-badge__icon">◆</span>
-          CFA Institute
-        </div>
-        <div class="authors-trust-badge">
-          <span class="authors-trust-badge__icon">◆</span>
-          ICAI Certified CA
-        </div>
-        <div class="authors-trust-badge">
-          <span class="authors-trust-badge__icon">◆</span>
-          CFP Board
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="authors-list-wrap">
-    <div class="authors-list">
-      {% for key, author in authors %}
-      {% if author.market == "india" %}
-      <article class="author-row">
-        <a href="{{ author.url }}" class="author-row__photo-link">
-          {% authorImage author.image, author.name + ", " + author.title + " at CalcPhi", 160, "author-row__photo", "lazy" %}
-          <span class="author-row__cred-badge">{{ author.credentials }}</span>
-        </a>
-        <div class="author-row__content">
-          <div class="author-row__header">
-            <div class="author-row__identity">
-              <h2><a href="{{ author.url }}">{{ author.name }}</a><svg class="verified-badge" aria-label="Verified author" title="Verified" viewBox="0 0 20 20" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#1d9bf0"/><path d="M6 10.5l2.5 2.5L14 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></h2>
-              <p class="author-row__title">{{ author.title }}</p>
-            </div>
-            <a href="{{ author.url }}" class="author-row__btn">View Profile →</a>
-          </div>
-          <p class="author-row__bio">{{ author.shortBio }}</p>
-          <div class="author-row__footer">
-            <div class="author-row__tags">
-              {% for skill in author.expertise | slice(0, 4) %}
-              <span class="author-row__tag">{{ skill }}</span>
-              {% endfor %}
-            </div>
-            <div class="author-row__articles-count">
-              <span>{{ author.articles | length }} article{% if author.articles | length != 1 %}s{% endif %} published</span>
-            </div>
-          </div>
-        </div>
-      </article>
-      {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-
-  <div class="editorial-pledge">
-    <div class="editorial-pledge__inner">
-      <div class="editorial-pledge__heading">
-        <p class="authors-page-header__eyebrow">Our Standards</p>
-        <h2>The CalcPhi India Editorial Pledge</h2>
-        <p>Every formula and regulatory figure is cross-checked against CBDT notifications, AMFI data, RBI circulars, PFRDA guidelines, or SEBI publications. Rates are updated within 7 days of any official notification.</p>
-      </div>
-      <div class="editorial-pledge__grid">
-        <div class="editorial-pledge__item">
-          <span class="editorial-pledge__num">01</span>
-          <h3>SEBI & CBDT Verified</h3>
-          <p>All investment and tax content is verified against current SEBI and CBDT guidelines before publication.</p>
-        </div>
-        <div class="editorial-pledge__item">
-          <span class="editorial-pledge__num">02</span>
-          <h3>AMFI & RBI Data</h3>
-          <p>Mutual fund return data uses AMFI-published NAVs. FD and interest rate data is sourced from RBI circulars.</p>
-        </div>
-        <div class="editorial-pledge__item">
-          <span class="editorial-pledge__num">03</span>
-          <h3>Updated Within 7 Days</h3>
-          <p>When tax slabs, interest rates, or scheme rules change, affected pages are updated within 7 days of official notification.</p>
-        </div>
-        <div class="editorial-pledge__item">
-          <span class="editorial-pledge__num">04</span>
-          <h3>Editorial Independence</h3>
-          <p>No calculator result or recommendation is influenced by advertising or affiliate relationships. Accuracy only.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div style="max-width:860px;margin:2rem auto;padding:1.5rem 2rem;background:var(--bg-2);border:1px solid var(--color-border);border-radius:var(--r-md);">
-    <h2 style="font-size:1.1rem;margin-bottom:1rem;">Our Editorial Standards</h2>
-    <p>Every calculator and article on CalcPhi India is produced by qualified finance professionals with direct experience in Indian taxation, mutual funds, insurance, and financial planning. Our team holds credentials from ICAI, SEBI-registered investment advisory bodies, CFA Institute, and the CFP Board.</p>
-    <p>All tax slabs, deduction limits, and regulatory thresholds are sourced directly from CBDT notifications, SEBI circulars, RBI master directions, and IRDAI regulations. We update figures within 48 hours of a Budget announcement, Finance Ministry circular, or MPC rate decision.</p>
-    <h3 style="font-size:1rem;margin:1rem 0 0.5rem;">What "Verified Content" means on CalcPhi</h3>
-    <p>Each article carries a byline from the qualified professional who researched and wrote it. A second team member — equally qualified — reviews every article for factual accuracy before publication. This two-step verification process covers calculator logic, regulatory citations, and numerical examples.</p>
-    <h3 style="font-size:1rem;margin:1rem 0 0.5rem;">No sponsored conclusions</h3>
-    <p>CalcPhi accepts display advertising, but our editorial content is completely independent. No financial product provider influences how we compare investment options, explain tax regimes, or present regulatory information. If a rule has a catch, we explain it. Our credibility with Indian salaried readers depends entirely on accuracy and candour.</p>
-    <p>Questions about our editorial team or verification process? <a href="/contact/">Contact us</a>.</p>
-  </div>
-
-</main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Redirecting… | CalcPhi</title>
+<meta http-equiv="refresh" content="0;url=/about/">
+<link rel="canonical" href="https://www.calcphi.com/about/">
+</head>
+<body>
+<p>Redirecting to <a href="/about/">About CalcPhi</a>…</p>
+<script>window.location.replace("/about/");</script>
+</body>
+</html>
